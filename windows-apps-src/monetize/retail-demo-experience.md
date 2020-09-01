@@ -1,23 +1,23 @@
 ---
-title: Agregar características de demostración comercial (RDX) a la aplicación
+title: Agregar características de prueba comercial (RDX) a la aplicación
 description: Prepare la aplicación para el modo de demostración comercial, ayudando a exhibir su aplicación en el piso de ventas minoristas.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.date: 10/02/2018
 ms.topic: article
-keywords: windows 10, uwp, aplicación de demostración comercial
+keywords: aplicación de demostración comercial de Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5be39760ee2b8837cfb9b0809a354262e790970b
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.openlocfilehash: 39f1cb7439c02f215824c6c632fb2e2fc6afdb39
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73052001"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164539"
 ---
-# <a name="add-retail-demo-rdx-features-to-your-app"></a>Agregar características de demostración comercial (RDX) a la aplicación
+# <a name="add-retail-demo-rdx-features-to-your-app"></a>Agregar características de prueba comercial (RDX) a la aplicación
 
 Incluye un modo de prueba comercial en la aplicación de Windows para que los clientes que prueben equipos PC y dispositivos en la zona de ventas puedan comenzar de inmediato.
 
-Cuando los clientes están en una tienda, esperan poder probar demostraciones de equipos y dispositivos. A menudo, emplean un fragmento considerable de su tiempo jugando con las aplicaciones a través de la [experiencia de demostración comercial (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
+Cuando los clientes están en una tienda, esperan poder probar demostraciones de equipos y dispositivos. A menudo, emplean un fragmento considerable de su tiempo jugando con las aplicaciones a través de la [experiencia de demostración comercial (RDX)](/windows-hardware/customize/desktop/retail-demo-experience).
 
 Puede configurar la aplicación para proporcionar diferentes experiencias en los modos _normal_ o _comercial_ . Por ejemplo, si la aplicación se inicia con un proceso de instalación, puede omitirla en modo comercial y rellenar previamente la aplicación con los datos de ejemplo y la configuración predeterminada para que puedan saltarse de inmediato.
 
@@ -45,11 +45,11 @@ Se puede usar como una lista de comprobación para ayudarle a preparar el proces
 
 Las aplicaciones compatibles con RDX que no cumplan estos requisitos críticos se quitarán de todos los dispositivos de demostración de venta directa lo antes posible.
 
-* **No pida información de identificación personal (PII)** . Esto incluye la información de inicio de sesión, la información de cuenta de Microsoft o los detalles de contacto.
+* **No pida información de identificación personal (PII)**. Esto incluye la información de inicio de sesión, la información de cuenta de Microsoft o los detalles de contacto.
 
 * **Experiencia sin errores**. La aplicación debe ejecutarse sin errores. Además, no deben mostrarse mensajes emergentes o notificaciones de error a los clientes que usan los dispositivos de demostración comercial. Los errores reflejan negativamente en la propia aplicación, en la marca, en la marca del dispositivo, en la marca de manufacturer's del dispositivo y en la marca de Microsoft.
 
-* Las **aplicaciones de pago deben tener un modo de prueba**. La aplicación debe ser gratuita o incluir un [modo de prueba](https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Los clientes no esperan tener que pagar por una experiencia en una tienda comercial.
+* Las **aplicaciones de pago deben tener un modo de prueba**. La aplicación debe ser gratuita o incluir un [modo de prueba](./exclude-or-limit-features-in-a-trial-version-of-your-app.md). Los clientes no esperan tener que pagar por una experiencia en una tienda comercial.
 
 ### <a name="high-priority-requirements"></a>Requisitos de alta prioridad
 
@@ -76,7 +76,7 @@ Es posible que el equipo de la tienda comercial de Windows se ponga en contacto 
 ## <a name="retailinfo-api-preparing-your-code-for-demo-mode"></a>RetailInfo API: preparación del código para el modo de demostración
 
 ### <a name="isdemomodeenabled"></a>IsDemoModeEnabled
-La propiedad [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) de la clase de utilidad [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) , que forma parte del espacio de nombres [Windows. System. Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) en el SDK de Windows 10, se usa como un indicador booleano para especificar la ruta de acceso de código en la que se ejecuta la aplicación: la _normal_ o el modo de _venta directa_ .
+La propiedad [**IsDemoModeEnabled**](/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) de la clase de utilidad [**RetailInfo**](/uwp/api/Windows.System.Profile.RetailInfo) , que forma parte de la [Windows.SysTEM. ](/uwp/api/windows.system.profile) Espacio de nombres de perfil en el SDK de Windows 10, se usa como un indicador booleano para especificar la ruta de acceso del código en la que se ejecuta la aplicación: el modo _normal_ o el modo _comercial_ .
 
 ``` csharp
 using Windows.Storage;
@@ -129,7 +129,7 @@ if (Windows.System.Profile.retailInfo.isDemoModeEnabled) {
 
 ### <a name="retailinfoproperties"></a>RetailInfo. Properties
 
-Cuando [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) devuelve "true", puedes consultar un conjunto de propiedades sobre el dispositivo mediante el uso de [**RetailInfo.Properties**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.properties) para crear una experiencia de demostración comercial más personalizada. Estas propiedades incluyen [**ManufacturerName**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.manufacturername), [**Screensize**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.screensize), [**Memory**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.memory), etcétera.
+Cuando [**IsDemoModeEnabled**](/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) devuelve true, puede consultar un conjunto de propiedades sobre el dispositivo mediante [**RetailInfo. Properties**](/uwp/api/windows.system.profile.retailinfo.properties) para crear una experiencia de demostración comercial más personalizada. Estas propiedades incluyen [**ManufacturerName**](/uwp/api/windows.system.profile.knownretailinfoproperties.manufacturername), [**Screensize**](/uwp/api/windows.system.profile.knownretailinfoproperties.screensize), [**Memory**](/uwp/api/windows.system.profile.knownretailinfoproperties.memory), etcétera.
 
 ```csharp
 using Windows.UI.Xaml.Controls;
@@ -232,14 +232,14 @@ namespace Windows.System.Profile
 La limpieza comienza dos minutos después de que un comprador deja de interactuar con el dispositivo. La demostración comercial se reproduce y Windows comienza a restablecer los datos de ejemplo de los contactos, las fotografías y otras aplicaciones. En función del dispositivo, esto podría tardar entre 1-5 minutos en restablecer todo de nuevo a normal. Esto garantiza que todos los clientes de la tienda de venta directa pueden hacer frente a un dispositivo y tener la misma experiencia al interactuar con el dispositivo.
 
 Paso 1: limpieza
-* Se cierran todas las aplicaciones de Win32 y de la Store.
+* Se cierran todas las aplicaciones de Win32 y de la Tienda.
 * Se eliminan todos los archivos que se encuentran en carpetas conocidas como __Imágenes__, __Vídeos__, __Música__, __Documentos__, __Imágenes guardadas__, __Álbum de cámara__, __Escritorio__ y __Descargas__.
 * Se eliminan los estados de itinerancia estructurados y no estructurados.
 * Se eliminan los estados locales estructurados.
 
 Paso 2: configuración
 * Para dispositivos sin conexión: las carpetas permanecen vacías
-* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de Microsoft Store
+* En el caso de los dispositivos en línea: los recursos de demostración comercial se pueden insertar en el dispositivo desde el Microsoft Store
 
 ### <a name="store-data-across-user-sessions"></a>Almacenar datos entre sesiones de usuario
 
@@ -247,7 +247,7 @@ Para almacenar datos en las sesiones de usuario, puede almacenar información en
 
 ### <a name="customize-the-cleanup-process"></a>Personalizar el proceso de limpieza
 
-Para personalizar el proceso de limpieza, implemente el `Microsoft-RetailDemo-Cleanup` App Service en la aplicación.
+Para personalizar el proceso de limpieza, implemente `Microsoft-RetailDemo-Cleanup` App Service en la aplicación.
 
 Los escenarios en los que se necesita una lógica de limpieza personalizada incluyen la ejecución de una amplia configuración, la descarga y el almacenamiento en caché de los datos, o no la eliminación de los datos de *LocalState* .
 
@@ -359,7 +359,7 @@ namespace MyCompany.MyApp
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Almacenar y recuperar datos de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [Cómo crear y usar un servicio de aplicaciones](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
-* [Localizar el contenido de la aplicación](https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal)
-* [Experiencia de demostración comercial (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)
+* [Almacenar y recuperar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md)
+* [Cómo crear y consumir un servicio de aplicaciones](../launch-resume/how-to-create-and-consume-an-app-service.md)
+* [Localización de contenido de la aplicación](../design/globalizing/globalizing-portal.md)
+* [Experiencia de demostración comercial (RDX)](/windows-hardware/customize/desktop/retail-demo-experience)

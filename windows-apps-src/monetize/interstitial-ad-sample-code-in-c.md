@@ -4,30 +4,30 @@ description: Aprende a iniciar un anuncio intersticial con C#.
 title: Código de ejemplo de anuncios intersticiales en C#
 ms.date: 02/18/2020
 ms.topic: article
-keywords: Windows 10, UWP, anuncios, publicidad, intersticial, c#, código de muestra, ads, advertising, interstitial, sample code
+keywords: Windows 10, UWP, ADS, Advertising, intersticial, c#, código de ejemplo
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d908151e30510977669f2bc101575754a946560
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 18e38e9b672b5e96733131c33b3a632cd7a95aeb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507049"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164599"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>Código de ejemplo de ad intersticial en C\# #  
 
 >[!WARNING]
 > A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-En este tema se proporciona un código de muestra completo para una aplicación básica para la Plataforma universal de Windows (UWP) en C# y XAML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
+En este tema se proporciona el código de ejemplo completo para una aplicación básica de C# y Plataforma universal de Windows XAML (UWP) que muestra un anuncio de vídeo intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
 ## <a name="code-example"></a>Ejemplo de código
 
-En esta sección se muestra el contenido de los archivos MainPage.xaml y MainPage.xaml.cs en una aplicación básica que muestra un anuncio intersticial. Para usar estos ejemplos, copia el código en un proyecto de **aplicación vacía (Windows universal)** de Visual C# en Visual Studio.
+En esta sección se muestra el contenido de los archivos MainPage.xaml y MainPage.xaml.cs en una aplicación básica que muestra un anuncio intersticial. Para usar estos ejemplos, copie el código en un proyecto de **aplicación vacía de Visual C# (Windows universal)** en Visual Studio.
 
-Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Reemplace los valores de los campos ```myAppId``` y ```myAdUnitId``` por los valores activos del centro de Partners antes de enviar la aplicación a la tienda. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Reemplace los valores de los ```myAppId``` ```myAdUnitId``` campos y por los valores activos del centro de Partners antes de enviar la aplicación a la tienda. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
 > [!NOTE]
-> Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **AdType.Display** al primer parámetro del método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) en lugar de **AdType.Video**. Para obtener más información, consulta [Anuncios intersticiales](interstitial-ads.md).
+> Para modificar este ejemplo para mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pase el valor **AdType. display** al primer parámetro del método [RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) en lugar de **AdType. video**. Para obtener más información, consulta [Anuncios intersticiales](interstitial-ads.md).
 
 ### <a name="mainpagexaml"></a>MainPage.xaml
 
@@ -42,5 +42,5 @@ Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar 
  
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
+* [Ejemplos de publicidad de GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
  

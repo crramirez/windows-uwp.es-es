@@ -1,11 +1,11 @@
 ---
 Description: Diseñe la aplicación para que tenga un aspecto correcto y funcione bien en realidad mixta.
-title: Diseñar para realidad mixta
+title: Diseño para la realidad mixta
 ms.assetid: ''
 label: Designing for Mixed Reality
 template: detail.hbs
 isNew: true
-keywords: Realidad mixta, HoloLens, realidad aumentada, mirada, voz, controlador
+keywords: Realidad mixta, Hololens, realidad aumentada, mira fijamente, voz, controlador
 ms.date: 02/05/2018
 ms.topic: article
 pm-contact: chigy
@@ -13,129 +13,129 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 5aaa5b5a51ab2aea863fece8fb466f274a00ace3
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c0b1ae069959e74239234ae5c9ba409fe7a65f23
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684250"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165979"
 ---
-# <a name="designing-for-mixed-reality"></a>Diseñar para realidad mixta
+# <a name="designing-for-mixed-reality"></a>Diseño para la realidad mixta
 
-Diseña tu aplicación para que se vea bien en realidad mixta y provecha los nuevos métodos de entrada.
+Diseña tu aplicación para que tenga un buen aspecto en realidad mixta y aprovecha los nuevos métodos de entrada.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
-La [realidad mixta](https://developer.microsoft.com/windows/mixed-reality/mixed_reality) es el resultado de fusionar el mundo físico con el mundo digital. El espectro de experiencias con realidad mixta incluye, por un lado, dispositivos como HoloLens (un dispositivo que mezcla contenido generado por equipos con el mundo real) y, por otro lado, una vista completamente envolvente de realidad virtual (tal y como se ve con unos cascos de Windows Mixed Reality). Consulta [Tipos de aplicaciones de realidad mixta](https://developer.microsoft.com/windows/mixed-reality/types_of_mixed_reality_apps) para tener ejemplos sobre cómo varían las experiencias.
+La [realidad mixta](https://developer.microsoft.com/windows/mixed-reality/mixed_reality) es el resultado de mezclar el mundo físico con el mundo digital. El espectro de experiencias de realidad mixta incluye en un dispositivo extremo, como HoloLens (un dispositivo que combina contenido generado por el equipo con el mundo real) y, en el otro, una vista totalmente envolvente de la realidad virtual (como se ve con un casco de la realidad mixta de Windows). Vea [tipos de aplicaciones de realidad mixta](https://developer.microsoft.com/windows/mixed-reality/types_of_mixed_reality_apps) para ver ejemplos de cómo variarán las experiencias.
 
-Casi todas las actuales aplicaciones para UWP se ejecutarán en el entorno de realidad mixta como aplicaciones 2D sin ningún cambio, aunque la experiencia del usuario podría mejorar si se siguiesen algunas de las directrices recogidas en este tema.
+Casi todas las aplicaciones UWP existentes se ejecutarán en el entorno de realidad mixta como aplicaciones 2D sin cambios, aunque la experiencia del usuario se puede mejorar siguiendo algunas de las instrucciones de este tema.
 
 ![Vista de realidad mixta](images/MR-01.png)
 
-Tanto HoloLens como los cascos de Windows Mixed Reality son compatibles con aplicaciones que se ejecutan en la plataforma UWP y admiten dos tipos diferentes de experiencia. 
+Los auriculares HoloLens y Windows Mixed Reality admiten aplicaciones que se ejecutan en la plataforma UWP y ambos admiten dos tipos distintos de experiencia. 
 
-### <a name="2d-vs-immersive-experience"></a>2D frente a la experiencia envolvente
+### <a name="2d-vs-immersive-experience"></a>Experiencia en 2D frente a la experiencia envolvente
 
-Una aplicación envolvente ocupa toda la pantalla visible para el usuario y la coloca en el centro de una vista creada por la aplicación. Por ejemplo, un juego envolvente podría llevar al usuario a la superficie de un planeta alienígena o una aplicación turística podría llevar al usuario a un pueblo de América del Sur. Crear una aplicación envolvente requiere gráficos 3D o vídeos estereográficos capturados. Las aplicaciones envolventes suelen desarrollarse a partir de un motor de juego de terceros, como Unity o bien con DirectX.
+Una aplicación envolvente usa toda la presentación visible para el usuario y la coloca en el centro de una vista creada por la aplicación. Por ejemplo, un juego envolvente podría poner al usuario en la superficie de un planeta extranjero, o una aplicación de guía de paseo podría poner al usuario en un pueblo de Sudamérica. La creación de una aplicación envolvente requiere gráficos 3D o vídeo Stereographic capturado. Las aplicaciones envolventes se suelen desarrollar con un motor de juegos de terceros, como Unity o con DirectX.
 
-Si vas a crear aplicaciones envolventes, conviene que visites el [Centro de desarrollo de Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) para obtener más información.
+Si va a crear aplicaciones envolventes, visite el [centro de desarrollo de la realidad mixta de Windows](https://developer.microsoft.com/mixed-reality) para obtener más información.
 
-Una aplicación 2D se ejecuta como una ventana tradicional plana dentro de la vista del usuario. En HoloLens, esto da lugar a una vista anclada a la pared o a un punto en el espacio en la propia sala de estar u oficina reales del usuario. En unos cascos de Windows Mixed Reality, la aplicación está anclada a una pared en la [casa de realidad mixta](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home) (en ocasiones llamada la *casa sobre el acantilado*).
+Una aplicación 2D se ejecuta como una ventana plana tradicional dentro de la vista del usuario. En HoloLens, es decir, una vista anclada a la pared o un punto en el espacio de los usuarios en la sala de reuniones o la oficina del mundo real. En un casco de realidad mixta de Windows, la aplicación está anclada a una pared en la [Página principal de realidad mixta](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home) (a veces denominada *casa del acantilado*).
 
-![Varias aplicaciones ejecutándose en realidad mixta](images/MR-multiple.png)
-
-
-Estas aplicaciones 2D no ocupan toda la vista sino que están dentro de ella. Pueden existir varias aplicaciones 2D a la vez en el entorno.
-
-El resto de este tema describe las consideraciones del diseño en cuanto a la experiencia 2D.
-
-## <a name="launching-2d-apps"></a>Iniciar aplicaciones 2D
-
-![Menú de inicio de realidad mixta](images/MR-start-options.png)
-
-Todas las aplicaciones se inician desde el menú Inicio, pero también es posible crear un objeto 3D para que actúe como un selector de aplicaciones. Consulta [este vídeo](https://www.youtube.com/watch?v=TxIslHsEXno) para obtener más información.
-
-## <a name="the-2d-app-input-overview"></a>Introducción a la entrada de aplicaciones 2D
-
-Las plataformas HoloLens y de realidad mixta admiten teclados y dispositivos de mouse. Puedes emparejar un teclado y un mouse directamente con HoloLens por Bluetooth. Las aplicaciones de realidad mixta son compatibles con el mouse y teclado conectados al equipo host. Ambos pueden ser útiles en situaciones en las que se necesite un nivel preciso de control.
-
-También son compatibles con otros métodos de entrada más naturales y estos pueden ser especialmente útiles cuando el usuario no está sentado en un escritorio con un teclado real frente a él, o cuando se necesita un control preciso.
-
-Sin ninguna codificación ni hardware adicionales, las aplicaciones usarán la función de la mirada -el vector que tu usuario esté viendo- como un puntero del mouse trabajando con aplicaciones 2D. Se implementa como si el puntero del mouse estuviese sobre algo en la escena virtual.
-
-En una interacción típica, tu usuario mirará un control en tu aplicación y hará que este resalte. El usuario activará una acción, ya sea con un gesto (en HoloLens), un controlador o un comando de voz. Si el usuario selecciona un campo de entrada de texto, aparecerá el teclado del software. 
+![Varias aplicaciones que se ejecutan en realidad mixta](images/MR-multiple.png)
 
 
-![El teclado emergente en realidad mixta](images/MR-keyboard.png)
+Estas aplicaciones 2D no asumen toda la vista: se colocan en ella. Puede haber varias aplicaciones 2D en el entorno a la vez.
 
-Es importante tener en cuenta que todas estas interacciones tendrán lugar automáticamente sin ninguna codificación adicional por tu parte. Todo ello se debe al hecho de llevar a cabo la ejecución en la plataforma UWP. La entrada desde HoloLens y cascos de realidad mixta aparecerá como entrada táctil en la aplicación 2D. Esto significa que muchas aplicaciones para UWP se ejecutarán y usarán en realidad mixta de manera predeterminada. 
+En el resto de este tema se describen las consideraciones de diseño para la experiencia 2D.
 
-Dicho esto, con algo más de trabajo, la experiencia puede mejorarse de forma significativa. Por ejemplo, el [control de voz](https://developer.microsoft.com/windows/mixed-reality/voice_design) puede ser especialmente eficaz. Los entornos de HoloLens y de realidad mixta son compatibles con comandos de voz para iniciar e interactuar con aplicaciones, y el hecho de incluir soporte de voz aparecerá como una extensión natural de este enfoque. Consulta las [interacciones de voz]( https://docs.microsoft.com/windows/uwp/design/input/speech-interactions) para obtener más información sobre cómo agregar soporte de voz a tu aplicación para UWP. 
+## <a name="launching-2d-apps"></a>Inicio de aplicaciones 2D
+
+![Menú Inicio de realidad mixta](images/MR-start-options.png)
+
+Todas las aplicaciones se inician desde el menú Inicio, pero también es posible crear un objeto 3D para que actúe como un iniciador de aplicaciones. Vea [este vídeo](https://www.youtube.com/watch?v=TxIslHsEXno) para obtener más información.
+
+## <a name="the-2d-app-input-overview"></a>Introducción a la entrada de la aplicación 2D
+
+Los teclados y ratones se admiten en las plataformas HoloLens y Mixed Reality. Puede emparejar un teclado y un mouse directamente con HoloLens a través de Bluetooth. Las aplicaciones de realidad mixta admiten el mouse y el teclado conectados al equipo host. Ambos pueden ser útiles en situaciones en las que es necesario un nivel de control preciso.
+
+También se admiten otros métodos de entrada, más naturales, y pueden ser especialmente útiles cuando el usuario no está sentado en un escritorio con un teclado real delante o cuando se necesita un control preciso.
+
+Sin ningún hardware o codificación adicional, las aplicaciones usarán fijamente: el vector que busca el usuario, como puntero del mouse al trabajar con aplicaciones 2D. Se implementa como si el puntero del mouse se desplace sobre algo de la escena virtual.
+
+En una interacción típica, el usuario observará un control en la aplicación, lo que hará que se resalte. El usuario iniciará una acción, mediante un gesto (en HoloLens) o un contratador, o bien proporcionando un comando de voz. Si el usuario selecciona un campo de entrada de texto, aparecerá el teclado del software. 
+
+
+![Teclado emergente en realidad mixta](images/MR-keyboard.png)
+
+Es importante tener en cuenta que todas estas interacciones se realizarán automáticamente sin codificación adicional por su parte, como consecuencia de la ejecución en la plataforma de UWP. La entrada de los auriculares HoloLens y de realidad mixta aparecerá como entrada táctil en la aplicación 2D. Esto significa que muchas aplicaciones de UWP se ejecutarán y se podrán usar en la realidad mixta de forma predeterminada. 
+
+Dicho esto, con algún trabajo adicional, la experiencia puede mejorar en gran medida. Por ejemplo, el [control de voz](https://developer.microsoft.com/windows/mixed-reality/voice_design) puede ser especialmente eficaz. Tanto HoloLens como entornos de realidad mixta admiten comandos de voz para iniciar e interactuar con aplicaciones, y la compatibilidad con voz aparecerá como una extensión natural de este enfoque. Consulte [interacciones de voz]( ../input/speech-interactions.md) para más información sobre cómo agregar compatibilidad con voz a la aplicación para UWP. 
 
 
 ### <a name="selecting-the-right-controller"></a>Seleccionar el controlador adecuado
 
 ![Controladores de movimiento de realidad mixta](images/MR-controllers.png)
 
-Se han diseñado novedosos métodos de entrada especialmente para usarlos con realidad mixta, en particular:
+Varios métodos de entrada nuevos se han diseñado especialmente para su uso con la realidad mixta, en concreto:
 
-* [Gestos con las manos](https://developer.microsoft.com/windows/mixed-reality/gestures) (solo HoloLens, pero solo se usan para iniciar aplicaciones 2D)
-* [Soporte de controlador para juegos](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (ambos entornos)
-* [Dispositivo de control de presentaciones](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (solo HoloLens)
-* [Controladores de movimiento](https://docs.microsoft.com/windows/mixed-reality/motion-controllers) (solo dispositivos de realidad mixta, mostrados anteriormente)
+* [Gestos de mano](https://developer.microsoft.com/windows/mixed-reality/gestures) (solo HoloLens, pero solo se usa para iniciar aplicaciones 2D)
+* [Compatibilidad con el controlador de juegos](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (ambos entornos)
+* [Dispositivo de clic](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (solo HoloLens)
+* [Controladores de movimiento](/windows/mixed-reality/motion-controllers) (solo dispositivos de realidad mixta, mostrados anteriormente).
 
-Estos controladores hacen que interactuar con objetos virtuales parezca natural y preciso. Algunas de las interacciones que consigues de forma gratuita. Por ejemplo, el gesto de selección de HoloLens o al hacer clic en la tecla o el desencadenador de Windows del controlador de movimiento generará la respuesta de entrada que cabría esperar, de nuevo, sin necesidad de codificación por su parte.
+Estos controladores hacen que la interacción con objetos virtuales parezca natural y precisa. Algunas de las interacciones que obtendrá de forma gratuita. Por ejemplo, el gesto de selección de HoloLens o al hacer clic en la tecla o el desencadenador de Windows del controlador de movimiento generará la respuesta de entrada que cabría esperar, de nuevo, sin necesidad de codificación por su parte.
 
-En otras ocasiones querrás agregar código para aprovechar la información adicional y las entradas disponibles. Por ejemplo, los controladores de movimiento pueden usarse para manipular los objetos con un nivel preciso de control, si escribes código que tenga en cuenta su posición y pulsaciones de botones.
+En otras ocasiones, querrá agregar código para aprovechar las ventajas de la información adicional y las entradas que están disponibles. Por ejemplo, los controladores de movimiento se pueden usar para manipular objetos con un nivel de control fino, si escribe código que tenga en cuenta la posición y las pulsaciones de botones.
 
 > [!NOTE]
-> En resumen, los principios fundamentales siempre deben ser proporcionar al usuario un método de entrada lo más natural y en armonía posible.
+> En Resumen: la entidad de seguridad de GUID debe ser proporcionar siempre al usuario como un método de entrada natural y sin problemas como sea posible.
 
 
-## <a name="2d-app-design-considerations-functionality"></a>Consideraciones del diseño de aplicaciones 2D: funcionalidad
+## <a name="2d-app-design-considerations-functionality"></a>consideraciones sobre el diseño de aplicaciones en 2D: funcionalidad
 
-Deberás tener varias cosas en cuenta en el momento de crear una aplicación para UWP que se usará potencialmente en una plataforma de realidad mixta.
+Al crear una aplicación para UWP que se usará potencialmente en una plataforma de realidad mixta, hay varios aspectos que hay que tener en cuenta.
 
-* Puede que las funciones de arrastrar y soltar no funcionen correctamente cuando se usen con los controladores de movimiento, controladores para juegos o gestos. Si tu aplicación depende en gran medida de las funciones de arrastrar y soltar, deberás proporcionar un método alternativo que sea compatible con estas acciones, como presentar un cuadro de diálogo que confirme si los objetos se mueven a una nueva ubicación.
+* La operación de arrastrar y colocar no funciona bien cuando se usa con controladores de movimiento, controladores de juegos o gestos. Si su aplicación depende en gran medida de arrastrar y colocar, deberá proporcionar un método alternativo para admitir esta acción, como presentar un cuadro de diálogo que confirma si los objetos se van a pasar a una nueva ubicación.
 
-* Ten en cuenta cómo cambia el sonido. Si la aplicación genera efectos de sonido, el origen del sonido aparecerá como ubicación anclada de tu aplicación en el mundo virtual. Cuando el usuario se desplace fuera de la aplicación, el sonido disminuirá. Consulta [Sonido espacial](https://docs.microsoft.com/windows/mixed-reality/spatial-sound) para obtener más información.
+* Tenga en cuenta cómo cambia el sonido. Si la aplicación genera efectos de sonido, el origen del sonido parecerá ser la ubicación anclada de la aplicación en el mundo virtual. Cuando el usuario sale de la aplicación, el sonido disminuirá. Consulte [sonido espacial](/windows/mixed-reality/spatial-sound) para obtener más información.
 
-* Ten en cuenta el campo de visión y proporciona prestaciones. No todos los dispositivos proporcionarán un campo de visión tan grande como el monitor del ordenador. Consulta [Fotograma holográfico](https://developer.microsoft.com/windows/mixed-reality/holographic_frame) para obtener información detallada. Además, el usuario puede estar a cierta distancia de una aplicación en ejecución. Es decir, puede que la aplicación aparezca anclada a la pared en una ubicación diferente en el mundo (real o virtual). Puede que tu aplicación necesite llamar la atención de los usuarios, o bien ten en cuenta que la vista completa no siempre estará visible. Las notificaciones del sistema están disponibles, pero otra forma de conseguir la atención del usuario podría ser generar un sonido o una alerta [hablada](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cs/Scenario_SynthesizeText.xaml.cs).
+* Tenga en cuenta el campo de vista y proporcione prestaciones. No todos los dispositivos proporcionarán un campo de vista tan grande como monitor del equipo. Consulte el [marco holográfica](https://developer.microsoft.com/windows/mixed-reality/holographic_frame) para obtener detalles completos. Además, el usuario puede estar lejos de una aplicación en ejecución. Es decir, la aplicación puede aparecer anclada a la pared en una ubicación diferente del mundo (real o virtual). Es posible que la aplicación necesite tener la atención de los usuarios o tener en cuenta que toda la vista no es visible en todo momento. Las notificaciones del sistema están disponibles, pero otra manera de obtener la atención del usuario puede ser generar una alerta de sonido o de [voz](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cs/Scenario_SynthesizeText.xaml.cs) .
 
-* Una aplicación 2D recibe automáticamente una [barra de la aplicación](https://developer.microsoft.com/windows/mixed-reality/app_bar_and_bounding_box) para dejar que el usuario se mueva y escale por el entorno virtual. Puede cambiarse el tamaño vertical de las vistas o bien cambiar el tamaño mantenimiento la misma relación de aspecto.
-
-
-## <a name="2d-app-design-considerations-uiux"></a>Consideraciones del diseño de aplicaciones 2D: interfaz del usuario/experiencia del usuario
-
-* Controles de XAML que implementan el [sistema Fluent Design](https://docs.microsoft.com/windows/uwp/design/fluent-design-system/) como la [vista de navegación](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview) y los efectos como [Acrylic](https://docs.microsoft.com/windows/uwp/design/style/acrylic) funcionan especialmente bien en aplicaciones 2D de realidad mixta.
-
-* Comprueba el tamaño del texto y de Windows de tu aplicación en un dispositivo de realidad mixta o al menos en el simulador de realidad mixta. Tu aplicación tendrá un tamaño de Windows predeterminado de 480 x 853 píxeles efectivos. Usa un tamaño de fuente más grande (se recomienda un tamaño de aproximadamente 32) y lee [Actualizar tu aplicación universal existente para HoloLens](https://developer.microsoft.com/windows/mixed-reality/updating_your_existing_universal_app_for_hololens). El artículo [Tipografía](https://developer.microsoft.com/windows/mixed-reality/typography) trata este tema en detalle. Cuando trabajes en Visual Studio, dispondrás de una configuración de editor de diseño XAML para una aplicación 2D HoloLens de 57" que te proporcionará una vista con la escala y las dimensiones correctas. 
-
-![El texto que se muestre en las aplicaciones de realidad mixta debe ser grande.](images/MR-text.png)
-
-* [Tu mirada es tu mouse](https://developer.microsoft.com/windows/mixed-reality/gaze_targeting). Cuando el usuario mire algo, actuará como un evento **activable con entrada táctil**, por lo tanto, con tan solo mirar un objeto, podría activarse un elemento emergente involuntario u otra interacción no deseada. Puede que tengas que detectar si la aplicación se está ejecutando en realidad mixta y cambiar este comportamiento. Consulta **Soporte para tiempo de ejecución** a continuación. 
-
-* Cuando un usuario mire algo o apunte con un controlador de movimiento, tendrá lugar un evento **activable con entrada táctil**. Se trata de un **PointerPoint** donde **PointerType** es **Touch**, pero **IsInContact** es **false**. Cuando tenga lugar algún formulario de confirmación (por ejemplo, cuando se presione un botón controlador para juegos, se presione un control para presentación, se presione un gatillo controlador de movimiento o el reconocimiento de voz se dirija a "Seleccionar"), tendrá lugar una **presión táctil**, donde **PointerPoint** tendrá **IsInContact** convertido en **true**. Consulta [Interacciones táctiles](https://docs.microsoft.com/windows/uwp/design/input/touch-interactions) para obtener más información sobre estos eventos de entrada.
-
-* Recuerda que la mirada no es tan precisa como señalar con el mouse. Los objetivos o botones del mouse más pequeños podrían frustrar a tus usuarios, así que cambia el tamaño de los controles según corresponda. Si se han diseñado para la función táctil, funcionarán en realidad mixta, pero puedes decidir aumentar el tamaño de algunos botones en tiempo de ejecución. Consulta [Actualizar tu aplicación universal existente para Hololens](https://developer.microsoft.com/windows/mixed-reality/updating_your_existing_universal_app_for_hololens).
-
-* HoloLens define el color negro como la ausencia de luz. Simplemente no se representa y permite así que se muestre el "mundo real". Tu aplicación no debería usar el negro si esto causa confusión. En unos cascos de realidad mixta, el negro es negro.
-
-* HoloLens no admite temas de color en las aplicaciones y predetermina el azul para garantizar la mejor experiencia para los usuarios. Para obtener más información sobre la selección de colores, debes consultar [este tema](https://developer.microsoft.com/windows/mixed-reality/color,_light_and_materials) que trata el uso del color y el material en diseños de realidad mixta.
+* A una aplicación de 2D se le asigna automáticamente una [barra de aplicación](https://developer.microsoft.com/windows/mixed-reality/app_bar_and_bounding_box)  para que el usuario pueda moverla y escalarla en el entorno virtual. Se puede cambiar el tamaño de las vistas verticalmente o cambiar su tamaño manteniendo la misma relación de aspecto.
 
 
-## <a name="other-points-to-consider"></a>Otros puntos que considerar
+## <a name="2d-app-design-considerations-uiux"></a>consideraciones sobre el diseño de aplicaciones en 2D: UI/UX
 
-* Aunque el [puente de dispositivo de escritorio](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) puede ayudarte a llevar aplicaciones de escritorio existentes (Win32) a Windows 10 y a la Microsoft Store, no puede crear aplicaciones que se ejecuten en HoloLens o en realidad mixta en este momento.
+* Los controles XAML que implementan el [sistema de diseño fluida](/windows/uwp/design/fluent-design-system/) , como la [vista de navegación](../controls-and-patterns/navigationview.md), y efectos como [acrílico](../style/acrylic.md) funcionan especialmente bien en aplicaciones de realidad mixta 2D.
+
+* Pruebe el tamaño de Windows y el texto de la aplicación en un dispositivo de realidad mixta o, al menos, en el simulador de realidad mixta. La aplicación tendrá un tamaño de Windows predeterminado de 853x480 píxeles efectivos. Use tamaños de fuente mayores (se recomienda un tamaño de punto de aproximadamente 32) y lea [actualización de la aplicación universal existente para Hololens](https://developer.microsoft.com/windows/mixed-reality/updating_your_existing_universal_app_for_hololens). En la [tipografía](https://developer.microsoft.com/windows/mixed-reality/typography) del artículo se trata en detalle este tema. Al trabajar en Visual Studio, hay una configuración de editor de diseño XAML para una aplicación de 57 "HoloLens 2D que proporciona una vista con la escala y las dimensiones correctas. 
+
+![El texto que se muestra en las aplicaciones de realidad mixta debe ser grande.](images/MR-text.png)
+
+* [Su mirada es el mouse](https://developer.microsoft.com/windows/mixed-reality/gaze_targeting). Cuando el usuario mira algo, actúa como un evento **Touch Hover** , por lo que simplemente examinar un objeto puede desencadenar una interacción emergente involuntaria u otra interacción no deseada. Es posible que necesite detectar si la aplicación se está ejecutando actualmente en la realidad mixta y cambiar este comportamiento. Vea **compatibilidad con tiempo de ejecución**, a continuación. 
+
+* Cuando un usuario mira algo o apunta con un controlador de movimiento, se producirá un evento de **desplazamiento táctil** . Se compone de un **PointerPoint** donde **PointerType** es **Touch**, pero **IsInContact** es **false**. Cuando se produce alguna forma de confirmación (por ejemplo, se presiona un botón A un botón, se presiona un dispositivo de clic, se presiona un desencadenador de control de movimiento o se "selecciona" la cabeza de reconocimiento de voz), se produce una **pulsación táctil** , con el **PointerPoint** que tiene **IsInContact** de ser **true**. Consulte [interacciones táctiles](../input/touch-interactions.md) para obtener más información sobre estos eventos de entrada.
+
+* Recuerde que la mirada no es tan precisa como el puntero del mouse. Los botones o los destinos del mouse más pequeños pueden causar frustración a los usuarios, por lo que cambiar el tamaño de los controles en consecuencia. Si están diseñados para tocar, funcionarán en una realidad mixta, pero puede que decida ampliar algunos botones en tiempo de ejecución. Consulte [actualización de la aplicación universal existente para Hololens](https://developer.microsoft.com/windows/mixed-reality/updating_your_existing_universal_app_for_hololens).
+
+* HoloLens define el color negro como ausencia de luz. Simplemente no se representa, lo que permite que el mundo real se muestre. La aplicación no debe usar negro Si esto causará confusión. En un casco de realidad mixta, el negro es negro.
+
+* HoloLens no admite temas de color en las aplicaciones y su valor predeterminado es azul para garantizar la mejor experiencia para los usuarios. Para obtener más consejos sobre la selección de colores, debe consultar [este tema](https://developer.microsoft.com/windows/mixed-reality/color,_light_and_materials) , en el que se explica el uso de color y material en los diseños de realidad mixta.
+
+
+## <a name="other-points-to-consider"></a>Otros puntos a tener en cuenta
+
+* Aunque el [puente de escritorio](/windows/msix/desktop/source-code-overview) puede ayudar a realizar aplicaciones de escritorio existentes (Win32) en Windows 10 y en el Microsoft Store, no puede crear aplicaciones que se ejecuten en HoloLens o en realidad mixta en este momento.
 
 
 
 
-## <a name="runtime-support"></a>Soporte para tiempo de ejecución
+## <a name="runtime-support"></a>Compatibilidad con el tiempo de ejecución
 
-Es posible que tu aplicación determine si se está ejecutando en un dispositivo de realidad mixta en tiempo de ejecución y aprovecharlo como una oportunidad para cambiar el tamaño de los controles o, de otro modo, optimizar la aplicación para su uso en unos cascos.
+Es posible que la aplicación determine si se está ejecutando en un dispositivo de realidad mixta en tiempo de ejecución, y usarlo como una oportunidad para cambiar el tamaño de los controles u otras maneras de optimizar la aplicación para su uso en un casco.
 
-He aquí un breve fragmento de código que cambia de tamaño el texto dentro de un control TextBlock de XAML únicamente si se usa la aplicación en un dispositivo de realidad mixta.
+A continuación se muestra una breve parte del código que cambia el tamaño del texto dentro de un control TextBlock de XAML solo si la aplicación se usa en un dispositivo de realidad mixta.
 
 ```csharp
 
@@ -166,6 +166,4 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
 * [Limitaciones actuales de las aplicaciones que usan las API del shell](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
 * [Compilación de aplicaciones 2D](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
 * [HoloLens: creación de aplicaciones para UWP en 2D para Microsoft HoloLens](https://channel9.msdn.com/Events/Build/2016/B854)
-* [XAML condicional](https://docs.microsoft.com/windows/uwp/debug-test-perf/conditional-xaml)
-
-
+* [XAML condicional](../../debug-test-perf/conditional-xaml.md)

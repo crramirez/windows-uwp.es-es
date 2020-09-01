@@ -6,19 +6,19 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, control de errores, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bbd892f47f0191455df3b235bdb5125a45ea4fc
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: f6567432714fb68618510923e49f2467daefdc54
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970253"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167689"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Tutorial de control de errores en JavaScript
 
 >[!WARNING]
 > A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-En este tutorial se muestra cómo detectar errores relacionados con ad en la aplicación de JavaScript. En este tutorial se usa un [control AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un banner, pero los conceptos generales de también se aplican a los anuncios intersticiales y a los anuncios nativos.
+En este tutorial se muestra cómo detectar errores relacionados con ad en la aplicación de JavaScript. En este tutorial se usa un [control AdControl](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un banner, pero los conceptos generales de también se aplican a los anuncios intersticiales y a los anuncios nativos.
 
 En estos ejemplos se supone que tiene una aplicación de JavaScript que contiene una **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md). Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios en banner a una aplicación JavaScript o HTML, consulta los [ejemplos de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 

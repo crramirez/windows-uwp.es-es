@@ -1,29 +1,29 @@
 ---
-title: Conectar dispositivos a través de sesiones remotas
-description: Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota.
+title: Conectar dispositivos mediante sesiones remotas
+description: Crea experiencias compartidas entre varios dispositivos uniéndolos en una sesión remota.
 ms.assetid: 1c8dba9f-c933-4e85-829e-13ad784dd3e2
 ms.date: 06/28/2017
 ms.topic: article
-keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma
+keywords: Windows 10, UWP, dispositivos conectados, sistemas remotos, Roma, proyecto Roma
 ms.localizationpriority: medium
-ms.openlocfilehash: 4787b6c14408dc8ee35e26764caafc5b6e7fbdc9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f88f44d26c3a6f4971422074e855ffca53935c7f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371887"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164829"
 ---
-# <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos a través de sesiones remotas
+# <a name="connect-devices-through-remote-sessions"></a>Conectar dispositivos mediante sesiones remotas
 
-La característica Sesiones remotas permite que una aplicación se conecte con otros dispositivos a través de una sesión, ya sea para mensajes de la aplicación explícitos o para intercambio asincrónico de datos administrados por el sistema, como la **[SpatialEntityStore](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialentitystore)** para uso compartido holográfico entre dispositivos Windows Holographic.
+La característica de sesiones remotas permite a una aplicación conectarse a otros dispositivos a través de una sesión, ya sea para la mensajería de aplicación explícita o para el intercambio asincrónico de datos administrados por el sistema, como **[SpatialEntityStore](/uwp/api/windows.perception.spatial.spatialentitystore)** para el uso compartido de Holographic entre dispositivos Windows Holographic.
 
-Las sesiones remotas se pueden crear por cualquier dispositivo Windows y cualquier dispositivo Windows puede solicitar unirse (aunque las sesiones pueden tener visibilidad de solo invitación), incluidos los dispositivos en los que otros usuarios han iniciado sesión. Esta guía proporciona código de ejemplo básico para todos los escenarios principales que usan sesiones remotas. Este código se puede incorporar en un proyecto de aplicación existente y modificarse según sea necesario. Para una implementación integral, consulta la [aplicación de ejemplo de juego de preguntas](https://github.com/microsoft/Windows-appsample-remote-system-sessions)).
+Las sesiones remotas se pueden crear en cualquier dispositivo de Windows y cualquier dispositivo de Windows puede solicitar unirse (aunque las sesiones pueden tener visibilidad solo de invitación), incluidos los dispositivos que han iniciado sesión otros usuarios. En esta guía se proporciona código de ejemplo básico para todos los escenarios principales que hacen uso de sesiones remotas. Este código se puede incorporar a un proyecto de aplicación existente y modificar según sea necesario. Para una implementación de un extremo a otro, consulte la [aplicación de ejemplo juego de quiz](https://github.com/microsoft/Windows-appsample-remote-system-sessions)).
 
 ## <a name="preliminary-setup"></a>Configuración preliminar
 
 ### <a name="add-the-remotesystem-capability"></a>Agregar la funcionalidad remoteSystem
 
-Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, debes agregar la funcionalidad `remoteSystem` al manifiesto del paquete de la aplicación. Si quieres usar el diseñador de manifiestos del paquete para agregarla, selecciona **Sistema remoto** en la pestaña **Funcionalidades**, o bien puedes agregar manualmente la siguiente línea al archivo _Package.appxmanifest_ del proyecto.
+Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, debes agregar la funcionalidad `remoteSystem` al manifiesto del paquete de la aplicación. Puede usar el diseñador de manifiestos de paquete para agregarlo seleccionando **sistema remoto** en la pestaña **capacidades** , o puede Agregar manualmente la siguiente línea al archivo _Package. appxmanifest_ del proyecto.
 
 ``` xml
 <Capabilities>
@@ -31,8 +31,8 @@ Para que la aplicación pueda iniciar una aplicación en un dispositivo remoto, 
 </Capabilities>
 ```
 
-### <a name="enable-cross-user-discovering-on-the-device"></a>Habilitar la detección entre usuarios en el dispositivo
-Sesiones remotas está orientada a la conexión de varios usuarios diferentes, por lo que los dispositivos implicados deberán tener la configuración de uso compartido entre usuarios. Se trata de una configuración del sistema que se puede consultar con un método estático en la clase **RemoteSystem**:
+### <a name="enable-cross-user-discovering-on-the-device"></a>Habilitar la detección de usuarios cruzados en el dispositivo
+Las sesiones remotas están orientadas a la conexión de varios usuarios diferentes, por lo que los dispositivos implicados deberán tener habilitado el uso compartido entre usuarios. Se trata de una configuración del sistema que se puede consultar con un método estático en la clase **RemoteSystem** :
 
 ```csharp
 if (!RemoteSystem.IsAuthorizationKindEnabled(RemoteSystemAuthorizationKind.Anonymous)) {
@@ -42,12 +42,12 @@ if (!RemoteSystem.IsAuthorizationKindEnabled(RemoteSystemAuthorizationKind.Anony
 }
 ```
 
-Para cambiar esta configuración, el usuario debe abrir la aplicación **Configuración**. En el menú **Sistema** > **Experiencias compartidas** > **Compartir entre dispositivos**, hay un cuadro desplegable donde el usuario puede especificar con qué dispositivos puede compartir su sistema.
+Para cambiar esta configuración, el usuario debe abrir la aplicación de **configuración** . En el **System**  >  menú recursos**compartidos de experiencias compartidas**en  >  **varios dispositivos** , hay un cuadro desplegable en el que el usuario puede especificar los dispositivos con los que el sistema puede compartir.
 
-![página de configuración de experiencias compartidas](images/shared-experiences-settings.png)
+![Página de configuración de experiencias compartidas](images/shared-experiences-settings.png)
 
 ### <a name="include-the-necessary-namespaces"></a>Incluir los espacios de nombres necesarios
-Para usar todos los fragmentos de código de esta guía, necesitarás las siguientes instrucciones `using` en los archivos de clase.
+Para usar todos los fragmentos de código de esta guía, necesitará las siguientes `using` instrucciones en los archivos de clase.
 
 ```csharp
 using System.Runtime.Serialization.Json;
@@ -57,7 +57,7 @@ using Windows.System.RemoteSystems;
 
 ## <a name="create-a-remote-session"></a>Crear una sesión remota
 
-Para crear una instancia de sesión remota, debes comenzar con un objeto **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** . Usa el marco siguiente para crear una nueva sesión y controlar solicitudes de unión de otros dispositivos.
+Para crear una instancia de sesión remota, debe empezar con un objeto **[RemoteSystemSessionController](/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** . Use el siguiente marco de trabajo para crear una nueva sesión y controlar las solicitudes de combinación desde otros dispositivos.
 
 ```csharp
 public async void CreateSession() {
@@ -103,11 +103,11 @@ public async void CreateSession() {
 }
 ```
 
-### <a name="make-a-remote-session-invite-only"></a>Crear una sesión remota solo de invitación
+### <a name="make-a-remote-session-invite-only"></a>Hacer una sesión remota de solo invitación
 
-Si deseas que la sesión remota se detecte públicamente, puedes hacerla solo de invitación. Solo los dispositivos que reciben una invitación podrán enviar solicitudes de unión. 
+Si quiere evitar que la sesión remota se pueda detectar de forma pública, puede hacer que sea de solo invitación. Solo los dispositivos que reciben una invitación podrán enviar solicitudes de combinación. 
 
-El procedimiento es básicamente el mismo que el anterior, pero al construir la instancia **[RemoteSystemSessionController](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** , pasarás un objeto **[RemoteSystemSessionOptions](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.RemoteSystemSessionOptions)** configurado.
+El procedimiento es básicamente el mismo que el anterior, pero al construir la instancia de **[RemoteSystemSessionController](/uwp/api/windows.system.remotesystems.remotesystemsessioncontroller)** , pasará un objeto **[RemoteSystemSessionOptions](/uwp/api/windows.system.remotesystems.RemoteSystemSessionOptions)** configurado.
 
 ```csharp
 // define the session options with the invite-only designation
@@ -120,7 +120,7 @@ RemoteSystemSessionController manager = new RemoteSystemSessionController("Bob's
 //...
 ```
 
-Para enviar una invitación, debes tener una referencia para el sistema remoto receptor (adquirida a través de la detección del sistema remoto normal). Solo tienes que pasar esta referencia al método **[SendInvitationAsync](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession.sendinvitationasync)** del objeto de la sesión. Todos los participantes de una sesión tienen una referencia a la sesión remota (consulta la sección siguiente), por lo que cualquier participante puede enviar una invitación.
+Para enviar una invitación, debe tener una referencia al sistema remoto receptor (adquirido a través de la detección de sistemas remotos normal). Simplemente pase esta referencia en el método **[SendInvitationAsync](/uwp/api/windows.system.remotesystems.remotesystemsession.sendinvitationasync)** del objeto de sesión. Todos los participantes de una sesión tienen una referencia a la sesión remota (consulte la siguiente sección), por lo que cualquier participante puede enviar una invitación.
 
 ```csharp
 // "currentSession" is a reference to a RemoteSystemSession.
@@ -130,7 +130,7 @@ currentSession.SendInvitationAsync(guestSystem);
 
 ## <a name="discover-and-join-a-remote-session"></a>Detectar y unirse a una sesión remota
 
-El proceso de detección de sesiones remotas se controla mediante la clase **[RemoteSystemSessionWatcher](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionwatcher)** y es similar a detectar sistemas remotos individuales.
+El proceso de detección de sesiones remotas se controla mediante la clase **[RemoteSystemSessionWatcher](/uwp/api/windows.system.remotesystems.remotesystemsessionwatcher)** y es similar a la detección de sistemas remotos individuales.
 
 ```csharp
 public void DiscoverSessions() {
@@ -156,7 +156,7 @@ public void DiscoverSessions() {
 }
 ```
 
-Cuando se obtiene una instancia **[RemoteSystemSessionInfo](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessioninfo)** , se puede usar para emitir una solicitud de unión al dispositivo que controla la sesión correspondiente. Una solicitud de unión aceptada devolverá asincrónicamente un objeto **[RemoteSystemSessionJoinResult](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionjoinresult)** que contiene una referencia a la sesión unida.
+Cuando se obtiene una instancia de **[RemoteSystemSessionInfo](/uwp/api/windows.system.remotesystems.remotesystemsessioninfo)** , se puede usar para emitir una solicitud de combinación al dispositivo que controla la sesión correspondiente. Una solicitud de combinación aceptada devolverá de forma asincrónica un objeto **[RemoteSystemSessionJoinResult](/uwp/api/windows.system.remotesystems.remotesystemsessionjoinresult)** que contenga una referencia a la sesión combinada.
 
 ```csharp
 public async void JoinSession(RemoteSystemSessionInfo sessionInfo) {
@@ -189,16 +189,16 @@ public async void JoinSession(RemoteSystemSessionInfo sessionInfo) {
 }
 ```
 
-Un dispositivo se puede unir a varias sesiones al mismo tiempo. Por este motivo, puede que sea adecuado separar la funcionalidad de unión de la interacción real con cada sesión. Siempre que se mantenga una referencia a la instancia **[RemoteSystemSession](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession)** en la aplicación, se puede intentar la comunicación a través de esa sesión.
+Un dispositivo puede unirse a varias sesiones al mismo tiempo. Por esta razón, puede ser conveniente separar la funcionalidad de combinación de la interacción real con cada sesión. Siempre que se mantenga una referencia a la instancia de **[RemoteSystemSession](/uwp/api/windows.system.remotesystems.remotesystemsession)** en la aplicación, se puede intentar la comunicación en esa sesión.
 
 ## <a name="share-messages-and-data-through-a-remote-session"></a>Compartir mensajes y datos a través de una sesión remota
 
-### <a name="receive-messages"></a>Recibir mensajes
+### <a name="receive-messages"></a>Recepción de mensajes
 
-Puede intercambiar mensajes y datos con otros dispositivos participantes en la sesión mediante el uso de una instancia de **[RemoteSystemSessionMessageChannel](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionmessagechannel)** , que representa un canal de comunicación único para toda la sesión. En cuanto se inicializa, empieza a escuchar mensajes entrantes.
+Puede intercambiar mensajes y datos con otros dispositivos participantes en la sesión mediante una instancia de **[RemoteSystemSessionMessageChannel](/uwp/api/windows.system.remotesystems.remotesystemsessionmessagechannel)** , que representa un canal de comunicación de una sola sesión. En cuanto se inicializa, empieza a escuchar los mensajes entrantes.
 
 >[!NOTE]
->Los mensajes se deben serializar y deserializar de matrices de bytes tras el envío y la recepción. Esta funcionalidad se incluye en los siguientes ejemplos, pero se puede implementar por separado para lograr una mejor modularidad de código. Consulta la [aplicación de muestra](https://github.com/microsoft/Windows-appsample-remote-system-sessions) para ver un ejemplo de esto.
+>Los mensajes se deben serializar y deserializar desde las matrices de bytes tras el envío y la recepción. Esta funcionalidad se incluye en los ejemplos siguientes, pero se puede implementar por separado para mejorar la modularidad del código. Consulte la [aplicación de ejemplo](https://github.com/microsoft/Windows-appsample-remote-system-sessions)) para obtener un ejemplo de esto.
 
 ```csharp
 public async void StartReceivingMessages() {
@@ -230,7 +230,7 @@ public async void StartReceivingMessages() {
 }
 ```
 
-### <a name="send-messages"></a>Enviar mensajes
+### <a name="send-messages"></a>Envío de mensajes
 
 Cuando se establece el canal, el envío de un mensaje a todos los participantes de la sesión es sencillo.
 
@@ -252,7 +252,7 @@ public async void SendMessageToAllParticipantsAsync(RemoteSystemSessionMessageCh
 }
 ```
 
-Para enviar un mensaje únicamente a determinados participantes, debe iniciar primero un proceso de detección para adquirir referencias para los sistemas remotos que participan en la sesión. Esto es similar al proceso de detectar sistemas remotos fuera de una sesión. Usa una instancia **[RemoteSystemSessionParticipantWatcher](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsessionparticipantwatcher)** para buscar los dispositivos participantes de una sesión.
+Para enviar un mensaje solo a determinados participantes, primero debe iniciar un proceso de detección para adquirir las referencias a los sistemas remotos que participan en la sesión. Esto es similar al proceso de detección de sistemas remotos fuera de una sesión. Use una instancia de **[RemoteSystemSessionParticipantWatcher](/uwp/api/windows.system.remotesystems.remotesystemsessionparticipantwatcher)** para buscar los dispositivos de participante de una sesión.
 
 ```csharp
 public void WatchForParticipants() {
@@ -278,9 +278,9 @@ public void WatchForParticipants() {
 }
 ```
 
-Cuando se obtiene una lista de referencias a los participantes de una sesión, puedes enviar un mensaje a un conjunto de ellos.
+Cuando se obtiene una lista de referencias a los participantes de la sesión, puede enviar un mensaje a cualquier conjunto de ellos.
 
-Para enviar un mensaje a un único participante (idealmente seleccionado en la pantalla por el usuario), solo tienes que pasar la referencia a un método similar al siguiente.
+Para enviar un mensaje a un solo participante (lo ideal es que el usuario lo seleccione en pantalla), simplemente pase la referencia a un método como el siguiente.
 
 ```csharp
 public async void SendMessageToParticipantAsync(RemoteSystemSessionMessageChannel messageChannel, RemoteSystemSessionParticipant participant, object value) {
@@ -300,7 +300,7 @@ public async void SendMessageToParticipantAsync(RemoteSystemSessionMessageChanne
 }
 ```
 
-Para enviar un mensaje a varios participantes (idealmente seleccionado en la pantalla por el usuario), agrégalos a un objeto de lista y pasa la lista en un método similar al siguiente.
+Para enviar un mensaje a varios participantes (idealmente, seleccionado en pantalla por el usuario), agréguelos a un objeto de lista y pase la lista a un método similar al siguiente.
 
 ```csharp
 public async void SendMessageToListAsync(RemoteSystemSessionMessageChannel messageChannel, IReadOnlyList<RemoteSystemSessionParticipant> myTeam, object value){
@@ -321,5 +321,5 @@ public async void SendMessageToListAsync(RemoteSystemSessionMessageChannel messa
 ```
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Las aplicaciones conectadas y los dispositivos (proyecto Roma)](connected-apps-and-devices.md)
-* [Referencia de API de sistemas remoto](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)
+* [Aplicaciones y dispositivos conectados (Proyecto Roma)](connected-apps-and-devices.md)
+* [Referencia de API de sistemas remotos](/uwp/api/Windows.System.RemoteSystems)

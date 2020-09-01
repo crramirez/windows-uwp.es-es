@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: bbb40dc9fa65515a2b01d7a2c92145b27e04f075
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bcb82280d80467157faa8aa5195ad7b9d9a7336b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372563"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167219"
 ---
 # <a name="fingerprint-biometrics"></a>Biometría de huellas digitales
 
 
 
 
-En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP). La inclusión de una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta aumenta la seguridad de la aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase [**UserConsentVerifier**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier) del espacio de nombres [**Windows.Security.Credentials.UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI).
+En este artículo se explica cómo agregar la opción de biometría de huellas digitales en la aplicación para la Plataforma universal de Windows (UWP). La inclusión de una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta aumenta la seguridad de la aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase [**UserConsentVerifier**](/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier) del espacio de nombres [**Windows.Security.Credentials.UI**](/uwp/api/Windows.Security.Credentials.UI).
 
 ## <a name="check-the-device-for-a-fingerprint-reader"></a>Comprueba si el dispositivo tiene un lector de huellas digitales
 
 
-Para saber si el dispositivo tiene un lector de huellas digitales, llama al método [**UserConsentVerifier.CheckAvailabilityAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.checkavailabilityasync). Incluso si un dispositivo admite la autenticación con huellas digitales, es recomendable que la aplicación proporcione a los usuarios la opción para habilitarla o deshabilitarla en la configuración.
+Para saber si el dispositivo tiene un lector de huellas digitales, llama al método [**UserConsentVerifier.CheckAvailabilityAsync**](/uwp/api/windows.security.credentials.ui.userconsentverifier.checkavailabilityasync). Incluso si un dispositivo admite la autenticación con huellas digitales, es recomendable que la aplicación proporcione a los usuarios la opción para habilitarla o deshabilitarla en la configuración.
 
 ```cs
 public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
@@ -70,9 +70,9 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 ## <a name="request-consent-and-return-results"></a>Solicitar consentimiento y devolver resultados
 
 
-Para solicitar el consentimiento del usuario mediante un examen de huellas digitales, llama al método [**UserConsentVerifier.RequestVerificationAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync). Para que la autenticación con huella digital funcione, el usuario debe haber agregado anteriormente una "firma" con huella digital a la base de datos de huellas digitales.
+Para solicitar el consentimiento del usuario mediante un examen de huellas digitales, llama al método [**UserConsentVerifier.RequestVerificationAsync**](/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync). Para que la autenticación con huella digital funcione, el usuario debe haber agregado anteriormente una "firma" con huella digital a la base de datos de huellas digitales.
 
-Cuando se llama al método [**UserConsentVerifier.RequestVerificationAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync), se le muestra al usuario un diálogo modal que solicita un examen de la huella digital. Puedes incluir un mensaje en el método **UserConsentVerifier.RequestVerificationAsync** que se mostrará al usuario como parte del diálogo modal, tal como se muestra en la siguiente imagen.
+Cuando se llama al método [**UserConsentVerifier.RequestVerificationAsync**](/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync), se le muestra al usuario un diálogo modal que solicita un examen de la huella digital. Puedes incluir un mensaje en el método **UserConsentVerifier.RequestVerificationAsync** que se mostrará al usuario como parte del diálogo modal, tal como se muestra en la siguiente imagen.
 
 ```cs
 private async System.Threading.Tasks.Task<string> RequestConsent(string userMessage)

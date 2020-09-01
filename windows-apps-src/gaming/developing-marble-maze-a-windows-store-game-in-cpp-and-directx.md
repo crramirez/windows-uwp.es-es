@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, ejemplo, DirectX, 3D
 ms.localizationpriority: medium
-ms.openlocfilehash: d2c0c630090c178a54a0452ab3cc430ffee4a176
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 155bd4bce77cd976cfab11ca4c5c8f184c562912
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409504"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165339"
 ---
 # <a name="developing-marble-mazemdasha-universal-windows-platform-uwp-game-built-with-c-for-directx"></a>Desarrollo de un juego de *Marble Maze* &mdash; a plataforma universal de Windows (UWP) creado con C++ para DirectX
 
@@ -21,7 +21,7 @@ En este tema se describe cómo utilizar DirectX y C++ para crear un juego de Pla
 > Para descargar el código fuente de *Marble Maze* , consulte el [ejemplo en github](https://github.com/microsoft/Windows-appsample-marble-maze).
 
 > [!IMPORTANT]
-> *Marble Maze* muestra los patrones de diseño que consideramos prácticas recomendadas para la creación de juegos para UWP. Puedes modificar muchos de los detalles de implementación para que se adapten a tus procedimientos y a los requisitos únicos del juego que desarrolles. No dudes en usar diferentes técnicas o bibliotecas si se adaptan mejor a lo que necesitas. (Sin embargo, asegúrese siempre de que el código pasa el kit para la [certificación de aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)). Cuando consideramos que una implementación se usa aquí para ser esencial para el desarrollo de juegos correctamente, lo resaltamos en esta documentación.
+> *Marble Maze* muestra los patrones de diseño que consideramos prácticas recomendadas para la creación de juegos para UWP. Puedes modificar muchos de los detalles de implementación para que se adapten a tus procedimientos y a los requisitos únicos del juego que desarrolles. No dudes en usar diferentes técnicas o bibliotecas si se adaptan mejor a lo que necesitas. (Sin embargo, asegúrese siempre de que el código pasa el kit para la [certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md)). Cuando consideramos que una implementación se usa aquí para ser esencial para el desarrollo de juegos correctamente, lo resaltamos en esta documentación.
 
 ## <a name="introducing-marble-maze"></a>Presentación de *Marble Maze*
 
@@ -35,7 +35,7 @@ Hemos elegido *Marble Maze* porque es relativamente básico, pero sigue mostrand
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   Windows 10 Creators Update
+-   Windows 10 Creators Update
 -   [Microsoft Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 -   Conocimientos de programación de C++
 -   Familiaridad con DirectX y terminología de DirectX
@@ -52,9 +52,9 @@ En el documento [Tutorial: creación de un juego de UWP sencillo con DirectX](tu
 Esta documentación enseña a:
 
 -   Usar la API de Windows Runtime y DirectX para crear un juego para UWP.
--   Use [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) y [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) para trabajar con contenido visual como modelos, texturas, sombreadores de vértices y píxeles y superposiciones 2D.
+-   Use [Direct3D](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) y [Direct2D](/windows/desktop/Direct2D/direct2d-portal) para trabajar con contenido visual como modelos, texturas, sombreadores de vértices y píxeles y superposiciones 2D.
 -   Integre mecanismos de entrada como Touch, acelerómetro y el controlador Xbox One.
--   Usar [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal) para incorporar música y efectos de sonido.
+-   Usar [XAudio2](/windows/desktop/xaudio2/xaudio2-apis-portal) para incorporar música y efectos de sonido.
 
 ## <a name="what-this-documentation-does-not-cover"></a>Temas no incluidos en esta documentación
 
@@ -67,7 +67,7 @@ Esta documentación no contempla los siguientes aspectos del desarrollo de juego
 -   Preparar un juego para usarlo en otras partes del mundo.
 -   Cómo certificar y publicar el juego en el Microsoft Store.
 
-*Marble Maze* también usa la biblioteca de [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal) para trabajar con geometría 3D y realizar cálculos físicos, como colisiones. DirectXMath no se detalla en esta sección. Para obtener más información sobre cómo *Marble Maze* usa DirectXMath, consulte el código fuente.
+*Marble Maze* también usa la biblioteca de [DirectXMath](/windows/desktop/dxmath/directxmath-portal) para trabajar con geometría 3D y realizar cálculos físicos, como colisiones. DirectXMath no se detalla en esta sección. Para obtener más información sobre cómo *Marble Maze* usa DirectXMath, consulte el código fuente.
 
 Aunque *Marble Maze* proporciona muchos componentes reutilizables, no es un marco de desarrollo de juegos completo. Cuando consideramos que un componente de *Marble Maze* se puede volver a usar en el juego, lo resaltamos en la documentación.
 

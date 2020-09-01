@@ -4,16 +4,16 @@ description: Aprende a agregar controles de movimiento y vista tradicionales de 
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, juegos, controles, movimiento y vista
+keywords: Windows 10, UWP, juegos, movimiento y apariencia, controles
 ms.localizationpriority: medium
-ms.openlocfilehash: f1516ada043ac5e9d5c059f7cd2b91cb69a5eab1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ed17d38bfaa90956b22265d1dfc320bfcc13ede7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367852"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165129"
 ---
-# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de movimiento vistazo para juegos
+# <a name="span-iddev_gamingtutorial__adding_move-look_controls_to_your_directx_gamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Controles de movimiento y vista para juegos
 
 
 
@@ -145,28 +145,28 @@ Nuestro código contiene 4 grupos de campos privados. Revisemos la finalidad de 
 
 En primer lugar, definimos algunos campos útiles que almacenan la información actualizada acerca da la vista de la cámara.
 
--   **m\_posición** es la posición de la cámara (y, por tanto, la viewplane) en la escena 3D, utilizando las coordenadas de la escena.
--   **m\_pitch** es el tono de la cámara o su giro arriba-abajo alrededor del eje x del viewplane, en radianes.
--   **m\_guiñada** es la guiñada de la cámara o su giro izquierda-derecha alrededor del eje y del viewplane, en radianes.
+-   **la \_ posición m** es la posición de la cámara (y, por lo tanto, el viewplane) en la escena 3D, mediante coordenadas de la escena.
+-   **el \_ paso m** es el tono de la cámara o su giro vertical alrededor del eje x del viewplane, en radianes.
+-   **la \_ guiñada en m** es la guiñada de la cámara o la rotación izquierda en torno al eje y del viewplane, en radianes.
 
 Ahora, vamos a definir los campos que usamos para almacenar información sobre el estado y la posición de nuestros controladores. Primero definiremos los campos que necesitamos para el controlador de movimiento táctil. (No se necesita nada especial para la implementación para teclado del controlador de movimiento. Los eventos de teclado simplemente se leen con controladores específicos).
 
--   **m\_moveInUse** indica si el controlador de movimiento está en uso.
--   **m\_movePointerID** es el identificador único para el puntero de movimiento actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
--   **m\_moveFirstDown** es el punto en la pantalla donde el Reproductor tocadas primero el área de puntero de controlador de movimiento. Usaremos este valor más adelante para establecer una zona muerte y evitar que movimientos minúsculos hagan vibrar la vista.
--   **m\_movePointerPosition** es el punto en el Reproductor ha movido actualmente el puntero a la pantalla de. Se usa para determinar en qué dirección quería pasar examinando relacionada con el Reproductor **m\_moveFirstDown**.
--   **m\_moveCommand** es el último comando calculado para el controlador de movimiento: hasta abajo (hacia delante), (atrás), left o right.
+-   **m \_ moveInUse** indica si el controlador de movimiento está en uso.
+-   **m \_ movePointerID** es el identificador único para el puntero de movimiento actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
+-   **m \_ moveFirstDown** es el punto de la pantalla en el que el jugador toca por primera vez el área de puntero de controlador de movimiento. Usaremos este valor más adelante para establecer una zona muerte y evitar que movimientos minúsculos hagan vibrar la vista.
+-   **m \_ movePointerPosition** es el punto de la pantalla en el que el reproductor ha pasado actualmente el puntero. Se usa para determinar la dirección que el jugador deseaba desplace mediante el examen relativo a **m \_ moveFirstDown**.
+-   **m \_ moveCommand** es el comando calculado final para el controlador de movimiento: hacia arriba (hacia delante), hacia abajo (hacia atrás), a la izquierda o a la derecha.
 
 Ahora vamos a definir los campos que usaremos para el controlador de vista, tanto las implementaciones táctiles como las de mouse.
 
--   **m\_lookInUse** indica si el control Buscar está en uso.
--   **m\_lookPointerID** es el identificador único para el puntero de aspecto actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
--   **m\_lookLastPoint** es el último punto, en coordenadas de la escena, que se capturó en el fotograma anterior.
--   **m\_lookLastDelta** es la diferencia entre el representador actual calculada **m\_posición** y **m\_lookLastPoint**.
+-   **m \_ lookInUse** indica si el control de búsqueda está en uso.
+-   **m \_ lookPointerID** es el identificador único para el puntero de búsqueda actual. Lo usamos para diferenciar entre el puntero de vista y el puntero de movimiento cuando comprobamos el valor del id. de puntero.
+-   **m \_ lookLastPoint** es el último punto, en coordenadas de la escena, capturado en el fotograma anterior.
+-   **m \_ lookLastDelta** es la diferencia calculada entre la ** \_ posición m** actual y **m \_ lookLastPoint**.
 
 Finalmente definimos 6 valores booleanos para los 6 grados de movimiento, que usamos para indicar el estado actual de cada acción de movimiento direccional (activa o inactiva):
 
--   **m\_reenviar**, **m\_Atrás**, **m\_izquierdo**, **m\_derecho**, **m\_seguridad** y **m\_abajo**.
+-   **m \_ adelante**, **m \_ atrás**, **m \_ izquierda**, **m \_ **a la derecha, **m \_ arriba** y **m \_ abajo**.
 
 Usamos los 6 controladores de eventos para capturar los datos de entrada con los que actualizamos el estado de los controladores:
 
@@ -174,16 +174,16 @@ Usamos los 6 controladores de eventos para capturar los datos de entrada con los
 -   **OnPointerMoved**. El jugador movió el mouse con el puntero en nuestra pantalla de juego, o arrastró el puntero táctil en la pantalla.
 -   **OnPointerReleased**. El jugador soltó el botón izquierdo del mouse con el puntero en nuestra pantalla de juego, o dejó de tocar la pantalla.
 -   **OnKeyDown**. El jugador presionó una tecla.
--   **OnKeyUp**. El jugador liberó una tecla.
+-   **Onkeyup**. El jugador liberó una tecla.
 
 Y, por último, usamos estos métodos y propiedades para inicializar, acceder y actualizar la información de estado de los controladores.
 
--   **Initialize**. Nuestra aplicación llama a este controlador de eventos para inicializar los controles y adjuntarlos al objeto [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que describe nuestra ventana.
+-   **Inicializar**. Nuestra aplicación llama a este controlador de eventos para inicializar los controles y adjuntarlos al objeto [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) que describe nuestra ventana.
 -   **SetPosition**. Nuestra aplicación llama a este método para establecer las coordenadas (x, y y z) de nuestros controles en el espacio de la escena.
 -   **SetOrientation**. Nuestra aplicación llama a este método para establecer la rotación alrededor de los ejes X e Y de la cámara.
--   **obtener\_posición**. Nuestra aplicación accede a esta propiedad para obtener la posición actual de la cámara en el espacio de la escena. Puedes usar esta propiedad como forma de comunicar la posición actual de la cámara a la aplicación.
--   **get\_LookPoint**. Nuestra aplicación accede a esta propiedad para obtener el punto actual hacia el que apunta la cámara del controlador.
--   **Update**. Lee el estado de los controladores de movimiento y vista y actualiza la posición de la cámara. Llamas a este método continuamente desde el bucle principal de la aplicación para actualizar los datos del controlador de cámara y la posición de la cámara en el espacio de la escena.
+-   **obtener \_ Posición**. Nuestra aplicación accede a esta propiedad para obtener la posición actual de la cámara en el espacio de la escena. Puedes usar esta propiedad como forma de comunicar la posición actual de la cámara a la aplicación.
+-   **obtener \_ LookPoint**. Nuestra aplicación accede a esta propiedad para obtener el punto actual hacia el que apunta la cámara del controlador.
+-   **Actualizar**. Lee el estado de los controladores de movimiento y vista y actualiza la posición de la cámara. Llamas a este método continuamente desde el bucle principal de la aplicación para actualizar los datos del controlador de cámara y la posición de la cámara en el espacio de la escena.
 
 Ahora ya tenemos todos los componentes necesarios para implementar tus controles de movimiento y vista. Por tanto, intentemos combinar todas las piezas.
 
@@ -192,17 +192,17 @@ Ahora ya tenemos todos los componentes necesarios para implementar tus controles
 
 El distribuidor de eventos de Windows Runtime proporciona 5 eventos que queremos que controlen las instancias de la clase **MoveLookController**:
 
--   [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed)
--   [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved)
--   [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased)
--   [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup)
--   [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown)
+-   [**PointerPressed**](/uwp/api/windows.ui.core.corewindow.pointerpressed)
+-   [**PointerMoved**](/uwp/api/windows.ui.core.corewindow.pointermoved)
+-   [**PointerReleased**](/uwp/api/windows.ui.core.corewindow.pointerreleased)
+-   [**KeyUp**](/uwp/api/windows.ui.core.corewindow.keyup)
+-   [**KeyUp**](/uwp/api/windows.ui.core.corewindow.keydown)
 
-Estos eventos se implementan en el tipo [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Damos por sentado que tienes un objeto **CoreWindow** con el que trabajar. Si no sabes cómo obtener uno, consulta el tema sobre cómo [configurar una aplicación C++ para la Plataforma universal de Windows (UWP) para mostrar una vista DirectX](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10)).
+Estos eventos se implementan en el tipo [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow). Damos por sentado que tienes un objeto **CoreWindow** con el que trabajar. Si no sabes cómo obtener uno, consulta el tema sobre cómo [configurar una aplicación C++ para la Plataforma universal de Windows (UWP) para mostrar una vista DirectX](/previous-versions/windows/apps/hh465077(v=win.10)).
 
 Puesto que estos eventos se desencadenan mientras nuestra aplicación se ejecuta, los controladores actualizan la información del estado de los controladores definidos en nuestros campos privados.
 
-En primer lugar, rellenemos los controladores de eventos de puntero táctiles y de mouse. En el primer controlador de eventos, **OnPointerPressed()** , obtenemos las coordenadas x-y del puntero del [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que administra nuestra pantalla cuando el usuario hace clic o toca la pantalla en la región del controlador de vista.
+En primer lugar, rellenemos los controladores de eventos de puntero táctiles y de mouse. En el primer controlador de eventos, **OnPointerPressed()**, obtenemos las coordenadas x-y del puntero del [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) que administra nuestra pantalla cuando el usuario hace clic o toca la pantalla en la región del controlador de vista.
 
 **OnPointerPressed**
 
@@ -251,9 +251,9 @@ _In_ PointerEventArgs^ args)
 }
 ```
 
-Este controlador de eventos comprueba si el puntero es o no el mouse (esta muestra admite tanto mouse como toque) y si se encuentra en el área del controlador de movimiento. Si ambos criterios se cumplen, comprueba si el puntero se acaba de presionar, en concreto, si no está relacionado con este, haga clic en una anterior mover o buscar la entrada, las pruebas si **m\_moveInUse** es false. Si es así, el controlador captura el punto en el área de controlador de movimiento donde la prensa ha ocurrido y establece **m\_moveInUse** en true, para que cuando se llama a este controlador nuevo, no reemplazará la posición inicial del movimiento interacción de entrada del controlador. También actualiza el id. de puntero del controlador de movimiento a la id. del puntero actual.
+Este controlador de eventos comprueba si el puntero es o no el mouse (esta muestra admite tanto mouse como toque) y si se encuentra en el área del controlador de movimiento. Si ambos criterios son true, comprueba si el puntero se presionó, en concreto, si este clic no está relacionado con una entrada de movimiento o búsqueda anterior, probando si **m \_ moveInUse** es false. Si es así, el controlador captura el punto en el área del controlador de movimiento donde se ha producido la acción de presionar y establece **m \_ moveInUse** en true, de modo que cuando se llame de nuevo a este controlador, no se sobrescribirá la posición inicial de la interacción de entrada del controlador de movimiento. También actualiza el id. de puntero del controlador de movimiento a la id. del puntero actual.
 
-Si el puntero es el mouse o si el puntero táctil no se encuentra en el área del controlador de movimiento, debe estar en el área del controlador de vista. Establece **m\_lookLastPoint** a la posición actual, donde el usuario presiona el botón del mouse o tocadas y presiona, restablece el delta y actualiza el Id. de la apariencia del controlador del puntero al identificador de puntero actual. También establece el estado del controlador de vista en activo.
+Si el puntero es el mouse o si el puntero táctil no se encuentra en el área del controlador de movimiento, debe estar en el área del controlador de vista. Establece **m \_ lookLastPoint** en la posición actual donde el usuario presionó el botón del mouse o se toca y presionó, restablece la diferencia y actualiza el identificador del puntero del controlador de búsqueda al identificador del puntero actual. También establece el estado del controlador de vista en activo.
 
 **OnPointerMoved**
 
@@ -299,11 +299,11 @@ void MoveLookController::OnPointerMoved(
 
 El controlador de eventos **OnPointerMoved** se desencadena cada vez que se mueve el puntero; es decir, si se arrastra un puntero de la pantalla táctil o si el puntero del mouse se mueve mientras se presiona el botón izquierdo. Si el identificador del puntero es el mismo que el identificador del puntero del controlador de movimiento, se trata de un puntero de movimiento; de lo contrario, comprobamos si el puntero activo es el controlador de vista.
 
-Si es el controlador de movimiento, simplemente actualizamos la posición del puntero. Seguimos actualizándolo siempre que el evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) se siga desencadenando, porque queremos comparar la posición final con la primera que capturamos con el controlador de eventos **OnPointerPressed**.
+Si es el controlador de movimiento, simplemente actualizamos la posición del puntero. Seguimos actualizándolo siempre que el evento [**PointerMoved**](/uwp/api/windows.ui.core.corewindow.pointermoved) se siga desencadenando, porque queremos comparar la posición final con la primera que capturamos con el controlador de eventos **OnPointerPressed**.
 
 Si es el controlador de vista, las cosas se complican un poquito más. Necesitamos calcular un nuevo punto de vista y centrar la cámara en él, por lo que calculamos la diferencia entre el último punto de vista y la posición actual en pantalla y, a continuación, multiplicamos con nuestra escala de factores, que podemos ajustar para que los movimientos de vista parezcan más pequeños o más grandes en comparación con la distancia del movimiento en la pantalla. Usando este valor, calculamos el cabeceo y la guiñada.
 
-Por último, necesitamos desactivar los comportamientos de movimiento o vista cuando el jugador para de mover el mouse o de tocar la pantalla. Usamos **OnPointerReleased**, que cuando llamamos [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) se desencadena para establecer **m\_moveInUse** o **m\_lookInUse** en FALSE y desactivar el movimiento panorámico de cámara y para poner a cero el identificador de puntero.
+Por último, necesitamos desactivar los comportamientos de movimiento o vista cuando el jugador para de mover el mouse o de tocar la pantalla. Usamos **OnPointerReleased**, al que se llama cuando se activa [**PointerReleased**](/uwp/api/windows.ui.core.corewindow.pointerreleased) , para establecer **m \_ moveInUse** o **m \_ lookInUse** en false y desactivar el movimiento de la panorámica de la cámara, y para poner en cero el identificador de puntero.
 
 **OnPointerReleased**
 
@@ -384,7 +384,7 @@ Cuando la tecla se suelta, el controlador de eventos lo revierte a falso. Cuando
 
 Encadenemos ahora los eventos e inicialicemos todos los campos de estado de controladores.
 
-**inicializar**
+**Inicia**
 
 ```cpp
 void MoveLookController::Initialize( _In_ CoreWindow^ window )
@@ -424,7 +424,7 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-**Initialize** hace referencia a la instancia [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) de la aplicación como un parámetro y registra los controladores de eventos que desarrollamos en los eventos adecuados en **CoreWindow**. Inicializa los id. del puntero de movimiento y vista, establece el vector de comandos para nuestra implementación de movimiento en pantalla táctil en cero y establece que la cámara mire al frente cuando se inicia la aplicación.
+**Initialize** hace referencia a la instancia [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) de la aplicación como un parámetro y registra los controladores de eventos que desarrollamos en los eventos adecuados en **CoreWindow**. Inicializa los id. del puntero de movimiento y vista, establece el vector de comandos para nuestra implementación de movimiento en pantalla táctil en cero y establece que la cámara mire al frente cuando se inicia la aplicación.
 
 ## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>Obtención y configuración de la posición y la orientación de la cámara
 
@@ -470,7 +470,7 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 ## <a name="updating-the-controller-state-info"></a>Actualización de la información de estado del controlador
 
 
-Ahora, llevamos a cabo nuestros cálculos que convierten la información de coordenadas del puntero realiza un seguimiento en **m\_movePointerPosition** en la nueva información de coordenadas respectivo de nuestro sistema de coordenadas universales. Nuestra aplicación llamará a este método cada vez que actualicemos el bucle de la aplicación principal. Es aquí, por tanto, donde calculamos la información de la nueva posición del punto de vista que luego pasamos a la aplicación para actualizar la matriz de vista antes de proyectarla a la ventanilla.
+Ahora, realizamos los cálculos que convierten la información de coordenadas del puntero a la que se realiza el seguimiento en **m \_ movePointerPosition** en la nueva información de coordenadas correspondiente a nuestro sistema de coordenadas universal. Nuestra aplicación llamará a este método cada vez que actualicemos el bucle de la aplicación principal. Es aquí, por tanto, donde calculamos la información de la nueva posición del punto de vista que luego pasamos a la aplicación para actualizar la matriz de vista antes de proyectarla a la ventanilla.
 
 ```cpp
 void MoveLookController::Update(CoreWindow ^window)
@@ -557,7 +557,7 @@ Puesto que no queremos vibraciones cuando el jugador use nuestro controlador de 
 
 Cuando calculamos la velocidad, también traducimos las coordenadas recibidas de los controladores de movimiento y vista en el movimiento del punto de vista real que enviamos al método que calcula nuestra matriz de vista para la escena. En primer lugar, invertimos la coordenada x, porque si hacemos movemos haciendo clic o arrastramos hacia la izquierda o la derecha con el controlador de vista, el punto de vista rotará en la dirección opuesta en la escena, como una cámara giraría sobre su eje central. Luego, intercambiamos los ejes Y y Z, porque presionar una tecla arriba/abajo o realizar un movimiento táctil de arrastre (interpretado como un comportamiento en el eje Y) en el controlador de movimiento se traduciría en una acción de cámara que mueve el punto de vista dentro o fuera de la pantalla (eje Z).
 
-La posición final del punto de aspecto para el Reproductor es la última posición más la velocidad calculada, y esto es lo que se lee mediante el representador cuando llama a la **obtener\_posición** (probablemente durante la instalación para cada método marco). Después, restablecemos el comando de movimiento a cero.
+La posición final del punto de mira del jugador es la última posición más la velocidad calculada, y esto es lo que el representador Lee cuando llama al método **Get \_ Position** (lo más probable es que durante la configuración de cada fotograma). Después, restablecemos el comando de movimiento a cero.
 
 ## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Actualización de la matriz de vista con la nueva posición de cámara
 
@@ -575,14 +575,10 @@ myFirstPersonCamera->SetViewParameters(
                  ); 
 ```
 
-¡Enhorabuena! Has implementado controles básicos de movimiento y vista tanto para pantallas táctiles como para controles táctiles de entrada de teclado/mouse en tu juego.
+Felicidades. Has implementado controles básicos de movimiento y vista tanto para pantallas táctiles como para controles táctiles de entrada de teclado/mouse en tu juego.
 
 
 
  
 
  
-
-
-
-

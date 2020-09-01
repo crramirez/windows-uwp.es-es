@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 78b14023f61dd3f8c27bc31f5876407ff0ed0366
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7932636679a09834b982e2c320309b90c759c365
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371205"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167149"
 ---
 # <a name="macs-hashes-and-signatures"></a>MAC, hash y firmas
 
@@ -23,22 +23,22 @@ En este artículo se describe cómo se pueden utilizar los códigos de autentica
 ## <a name="message-authentication-codes-macs"></a>Códigos de autenticación de mensaje (MAC)
 
 
-El cifrado ayuda a impedir que personas no autorizadas puedan leer un mensaje, pero no evita que una persona pueda manipular el mensaje. La modificación de un mensaje, aunque produzca algo sin sentido, puede tener un impacto grave. Los códigos de autenticación de mensaje (MAC) ayudan a prevenir la manipulación de mensajes. Por ejemplo, considera el siguiente escenario:
+El cifrado ayuda a impedir que personas no autorizadas puedan leer un mensaje, pero no evita que una persona pueda manipular el mensaje. La modificación de un mensaje, aunque produzca algo sin sentido, puede tener un impacto grave. Los códigos de autenticación de mensaje (MAC) ayudan a prevenir la manipulación de mensajes. Por ejemplo, tenga en cuenta el siguiente caso:
 
 -   Roberto y Alicia comparten una clave secreta y se ponen de acuerdo para usar una función MAC.
 -   Roberto crea un mensaje y suministra el mensaje y la clave secreta a la función MAC para obtener un valor MAC.
--   Roberto envía el \[sin cifrar\] valoran mensaje y el equipo MAC a Alice a través de una red.
+-   Roberto envía el \[ mensaje sin cifrar \] y el valor Mac a Alice a través de una red.
 -   Alicia usa la clave secreta y el mensaje como entrada de la función MAC. Compara el valor MAC generado con el valor MAC enviado por Roberto. Si coinciden, significa que no se manipuló el mensaje durante el tránsito.
 
 Eva, que interceptó la conversación de Roberto y Alicia, no puede manipular el mensaje. Eva no tiene acceso a la clave privada y, por lo tanto, no puede crear un valor MAC que pueda hacer que el mensaje manipulado para Alicia parezca genuino.
 
 Crear un código de autenticación de mensaje solo garantiza que no se manipuló el mensaje original y, mediante una clave secreta compartida, que alguien con acceso a esa clave privada firmó el hash de mensaje.
 
-Puedes usar el [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para enumerar los algoritmos de MAC disponibles y generar una clave simétrica. Puedes usar métodos estáticos en la clase [**CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) para realizar el cifrado necesario para crear el valor MAC.
+Puedes usar el [**MacAlgorithmProvider**](/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para enumerar los algoritmos de MAC disponibles y generar una clave simétrica. Puedes usar métodos estáticos en la clase [**CryptographicEngine**](/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) para realizar el cifrado necesario para crear el valor MAC.
 
 Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. Aunque los MAC usan claves privadas para permitir que el destinatario de un mensaje compruebe que no se ha manipulado un mensaje durante la transmisión, las firmas usan un par de claves, la pública y la privada.
 
-Este código de ejemplo muestra cómo usar la clase [**MacAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para crear un código de autenticación de mensajes basado en hash (HMAC).
+Este código de ejemplo muestra cómo usar la clase [**MacAlgorithmProvider**](/uwp/api/Windows.Security.Cryptography.Core.MacAlgorithmProvider) para crear un código de autenticación de mensajes basado en hash (HMAC).
 
 ```cs
 using Windows.Security.Cryptography;
@@ -125,23 +125,23 @@ namespace SampleMacAlgorithmProvider
 }
 ```
 
-## <a name="hashes"></a>Hashes
+## <a name="hashes"></a>Códigos hash
 
 
 Una función hash criptográfica toma un bloque de datos de una longitud arbitraria y devuelve una cadena de bits de tamaño fijo. Las funciones hash se suelen usar al firmar datos. Como la mayoría de las operaciones de firma con clave pública requieren realizar cálculos intensivos, suele ser más eficiente firmar (cifrar) un hash de mensaje que firmar el mensaje original. El siguiente procedimiento representa un escenario frecuente (aunque simplificado):
 
 -   Roberto y Alicia comparten una clave secreta y se ponen de acuerdo para usar una función MAC.
 -   Roberto crea un mensaje y suministra el mensaje y la clave secreta a la función MAC para obtener un valor MAC.
--   Roberto envía el \[sin cifrar\] valoran mensaje y el equipo MAC a Alice a través de una red.
+-   Roberto envía el \[ mensaje sin cifrar \] y el valor Mac a Alice a través de una red.
 -   Alicia usa la clave secreta y el mensaje como entrada de la función MAC. Compara el valor MAC generado con el valor MAC enviado por Roberto. Si coinciden, significa que no se manipuló el mensaje durante el tránsito.
 
 Ten en cuenta que Alicia envió un mensaje sin cifrar. Lo que cifró fue el hash. Este procedimiento solo garantiza que no se manipuló el mensaje original y, mediante la clave pública de Alicia, que alguien con acceso a la clave privada de Alicia (probablemente Alicia) firmó el hash de mensaje.
 
-Puedes usar la clase [**HashAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.HashAlgorithmProvider) para enumerar los algoritmos hash disponibles y crear un valor [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash).
+Puedes usar la clase [**HashAlgorithmProvider**](/uwp/api/Windows.Security.Cryptography.Core.HashAlgorithmProvider) para enumerar los algoritmos hash disponibles y crear un valor [**CryptographicHash**](/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash).
 
 Las firmas digitales son el equivalente de clave pública a los códigos de autenticación de mensaje (MAC) de clave privada. A diferencia de los MAC, que usan claves privadas para permitir que el destinatario de un mensaje compruebe que el mensaje no se ha manipulado durante la transmisión, las firmas usan un par de claves, la pública y la privada.
 
-El objeto [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) puede usarse para aplicar el algoritmo hash a distintos datos repetidamente sin tener que recrear el objeto para cada uso. El método [**Append**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.append) agrega nuevos datos a un búfer para que se les aplique el algoritmo hash. El método [**GetValueAndReset**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.core.cryptographichash.getvalueandreset) aplica el algoritmo hash a los datos y restablece el objeto para otro uso. Esto se muestra en el siguiente ejemplo.
+El objeto [**CryptographicHash**](/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) puede usarse para aplicar el algoritmo hash a distintos datos repetidamente sin tener que recrear el objeto para cada uso. El método [**Append**](/uwp/api/windows.security.cryptography.core.cryptographichash.append) agrega nuevos datos a un búfer para que se les aplique el algoritmo hash. El método [**GetValueAndReset**](/uwp/api/windows.security.cryptography.core.cryptographichash.getvalueandreset) aplica el algoritmo hash a los datos y restablece el objeto para otro uso. Esto se muestra en el siguiente ejemplo.
 
 ```cs
 public void SampleReusableHash()
@@ -191,4 +191,4 @@ Pero como la mayoría de las operaciones de firma con clave pública requieren r
 
 La firma solo garantiza que no se manipuló el mensaje original y, mediante la clave pública del remitente, que alguien con acceso a la clave privada firmó el hash de mensaje.
 
-Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) para enumerar los algoritmos de firma disponibles y generar o importar un par de claves. Puedes usar métodos estáticos en la clase [**CryptographicHash**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) para firmar un mensaje o comprobar una firma.
+Puedes usar un objeto [**AsymmetricKeyAlgorithmProvider**](/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) para enumerar los algoritmos de firma disponibles y generar o importar un par de claves. Puedes usar métodos estáticos en la clase [**CryptographicHash**](/uwp/api/Windows.Security.Cryptography.Core.CryptographicHash) para firmar un mensaje o comprobar una firma.

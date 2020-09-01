@@ -8,12 +8,12 @@ ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4db3af0d2ec0ce1dbd0866f569ad9bf9b0392aa8
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 386920532f4598ee2d1519d292454b47c285555b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970570"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165839"
 ---
 # <a name="text-scaling"></a>Ajuste de escala de texto
 
@@ -100,7 +100,7 @@ Este es un fragmento de código de una aplicación de UWP básica que incluye un
 
 No especifique tamaños absolutos para los controles. Siempre que sea posible, permita a la plataforma cambiar el tamaño de los controles automáticamente según la configuración del usuario y del dispositivo.  
 
-En este fragmento de código del ejemplo anterior, usamos los `Auto` valores `*` de ancho y para un conjunto de columnas de la cuadrícula y permiten que la plataforma ajuste el diseño de la aplicación en función del tamaño de los elementos contenidos en la cuadrícula.
+En este fragmento de código del ejemplo anterior, usamos los `Auto` `*` valores de ancho y para un conjunto de columnas de la cuadrícula y permiten que la plataforma ajuste el diseño de la aplicación en función del tamaño de los elementos contenidos en la cuadrícula.
 
 ``` xaml
 <Grid.ColumnDefinitions>
@@ -116,7 +116,7 @@ Para asegurarse de que el diseño de la aplicación sea lo más flexible y adapt
 
 Si no especifica el ajuste de texto, la plataforma usa otros métodos para ajustar el diseño, incluido el recorte (vea el ejemplo anterior).
 
-Aquí, usamos las propiedades `AcceptsReturn` del `TextWrapping` cuadro de texto y para asegurarnos de que el diseño sea lo más flexible posible.
+Aquí, usamos las `AcceptsReturn` propiedades del `TextWrapping` cuadro de texto y para asegurarnos de que el diseño sea lo más flexible posible.
 
 ``` xaml
 <TextBox PlaceholderText="Type something here" 
@@ -133,7 +133,7 @@ Si el ajuste de texto no es el comportamiento preferido, la mayoría de los cont
 > [!NOTE]
 > Si necesita recortar el texto, recorte el final de la cadena, no el principio.
 
-En este ejemplo, se muestra cómo recortar el texto en un TextBlock mediante la propiedad [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) .
+En este ejemplo, se muestra cómo recortar el texto en un TextBlock mediante la propiedad [TextTrimming](/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) .
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -163,11 +163,11 @@ Aquí, agregamos una información sobre herramientas a un TextBlock que no admit
 
 Al usar iconos basados en fuentes para énfasis o decoración, deshabilite el escalado de estos caracteres.
 
-Establezca la propiedad [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) en `false` para la mayoría de los controles XAML.
+Establezca la propiedad [IsTextScaleFactorEnabled](/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) en `false` para la mayoría de los controles XAML.
 
 ### <a name="support-text-scaling-natively"></a>Compatibilidad de escala de texto de forma nativa
 
-Controle el evento del sistema [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings en el marco de trabajo y los controles personalizados. Este evento se desencadena cada vez que el usuario establece el factor de escala de texto en su sistema.
+Controle el evento del sistema [TextScaleFactorChanged](/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings en el marco de trabajo y los controles personalizados. Este evento se desencadena cada vez que el usuario establece el factor de escala de texto en su sistema.
 
 ## <a name="summary"></a>Resumen
 
@@ -177,5 +177,5 @@ En este tema se proporciona información general sobre la compatibilidad con el 
 
 ### <a name="api-reference"></a>Referencia de API
 
-- [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled)
-- [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged)
+- [IsTextScaleFactorEnabled](/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled)
+- [TextScaleFactorChanged](/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged)

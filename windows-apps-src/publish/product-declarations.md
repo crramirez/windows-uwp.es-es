@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47011a22353f26361a392690d857bde1fc180c03
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 9c4e8677a27128e6a33a844f5a887e921ca9ced3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79211011"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167369"
 ---
 # <a name="product-declarations"></a>Declaraciones de producto
 
@@ -21,7 +21,7 @@ En las secciones siguientes se describen algunas de las declaraciones y lo que d
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esta aplicación permite a los usuarios realizar compras, pero no usa el sistema de comercio de Microsoft Store.
 
-Para casi todos los envíos, debe dejar esta casilla desactivada, ya que las aplicaciones que ofrecen oportunidades para comprar elementos que se pueden consumir o usar dentro de la aplicación deben usar el Microsoft Store API de compras desde la aplicación para crear y enviar los complementos. Según el [acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearon y enviaron antes del 29 de junio de 2015, podían seguir ofreciendo funcionalidad de compra en la aplicación sin usar el motor de comercio de Microsoft, siempre y cuando la funcionalidad de compra cumpla con las [directivas de Microsoft Store](store-policies.md#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
+Para casi todos los envíos, debe dejar esta casilla desactivada, ya que las aplicaciones que ofrecen oportunidades para comprar elementos que se pueden consumir o usar dentro de la aplicación deben usar el Microsoft Store API de compras desde la aplicación para crear y enviar los complementos. Según el [acuerdo de desarrollador de aplicaciones](/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearon y enviaron antes del 29 de junio de 2015, podían seguir ofreciendo funcionalidad de compra en la aplicación sin usar el motor de comercio de Microsoft, siempre y cuando la funcionalidad de compra cumpla con las [directivas de Microsoft Store](store-policies.md#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Esta aplicación se ha probado y cumple las directrices de accesibilidad.
 
@@ -37,10 +37,10 @@ Solo debes activar la casilla si has realizado las acciones siguientes:
 
 Cuando declaras que tu aplicación es accesible, aceptas que será accesible para todos los clientes, incluidas las personas con discapacidades. Esto significa, por ejemplo, que probaste la aplicación con el modo de contraste alto y con el lector de pantalla, y que comprobaste correctamente las funciones de la interfaz de usuario con un teclado, la lupa y otras herramientas de accesibilidad.
 
-Para obtener más información, consulta [Accesibilidad](../design/accessibility/accessibility.md), [Pruebas de accesibilidad](../design/accessibility/accessibility-testing.md) y [Accesibilidad en la Tienda](../design/accessibility/accessibility-in-the-store.md).
+Para obtener más información, vea [accesibilidad](../design/accessibility/accessibility.md), [pruebas de accesibilidad](../design/accessibility/accessibility-testing.md)y [accesibilidad en la tienda](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> no enumere la aplicación como accesible a menos que la haya diseñado y probado específicamente para ello. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
+> No enumere la aplicación como accesible a menos que la haya diseñado y probado específicamente para ello. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
@@ -56,9 +56,9 @@ Esta casilla está activada de forma predeterminada para permitir que los datos 
 Si quieres impedir que los datos de la aplicación se incluyan en copias de seguridad automáticas, desactiva la casilla.
 
 
-## <a name="this-app-sends-kinect-data-to-external-services"></a>Esta aplicación envía datos de Kinect a los servicios externos. 
+## <a name="this-app-sends-kinect-data-to-external-services"></a>Esta aplicación envía datos de Kinect a servicios externos. 
 
-Si tu aplicación usa los datos de Kinect y los envía a cualquier servicio externo, debes marcar esta casilla.
+Si la aplicación usa datos de Kinect y lo envía a cualquier servicio externo, debe activar esta casilla.
 
 
 
@@ -67,7 +67,3 @@ Si tu aplicación usa los datos de Kinect y los envía a cualquier servicio exte
  
 
  
-
-
-
-

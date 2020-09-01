@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, UWP, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 91e3ae5b23b7429633053f4d4d876f02127d26e3
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 57d2f3729430faefc7db31cad6a0ac91ddaa2e02
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054425"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166369"
 ---
 # <a name="relation-based-animations"></a>Animaciones basadas en relaciones
 
@@ -46,9 +46,9 @@ Al generar la relación matemática de una expresión, hay varios componentes pr
 
 - Parámetros: valores que representan valores constantes o referencias a otros objetos de composición.
 - Operadores matemáticos: los operadores matemáticos más (+), menos (-), multiplicación (*), división (/) que se combinan con los parámetros para formar una ecuación. También se incluyen operadores condicionales como mayor que (>), igual (= =), operador ternario (condición? ifTrue: ifFalse), etc.
-- Funciones matemáticas: funciones o accesos directos basados en System. Numerics. Para obtener una lista completa de las funciones admitidas, vea [ExpressionAnimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation).
+- Funciones matemáticas: funciones o accesos directos basados en System. Numerics. Para obtener una lista completa de las funciones admitidas, vea [ExpressionAnimation](/uwp/api/Windows.UI.Composition.ExpressionAnimation).
 
-Las expresiones también admiten un conjunto de palabras clave: frases especiales que tienen un significado distinto solo dentro del sistema ExpressionAnimation. Estos se enumeran (junto con la lista completa de funciones matemáticas) en la documentación de [ExpressionAnimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation) .
+Las expresiones también admiten un conjunto de palabras clave: frases especiales que tienen un significado distinto solo dentro del sistema ExpressionAnimation. Estos se enumeran (junto con la lista completa de funciones matemáticas) en la documentación de [ExpressionAnimation](/uwp/api/Windows.UI.Composition.ExpressionAnimation) .
 
 ### <a name="creating-expressions-with-expressionbuilder"></a>Crear expresiones con ExpressionBuilder
 

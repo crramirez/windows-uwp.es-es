@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, uso, eventos personalizados, informes, telemetría, sesiones de usuario
 ms.localizationpriority: medium
-ms.openlocfilehash: bced71620b5e52e90b104a9a50d8fb774ba14228
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: d2839112d36822be5eb8297b838cdc38bab5c71b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846815"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167279"
 ---
 # <a name="usage-report"></a>Informe de uso
 
@@ -73,7 +73,7 @@ Al igual que con el gráfico de **sesiones de usuario** , una sesión de usuario
 
 El gráfico de **eventos personalizados** muestra el número total de repeticiones de los eventos personalizados que ha definido para la aplicación. Puede incluir varias repeticiones para el mismo cliente. Puede usar los filtros para seleccionar los eventos personalizados específicos para los que desea ver estos datos.
 
-Los eventos personalizados se implementan mediante el método [StoreServicesCustomEventLogger.Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) de [Microsoft Store Services SDK](../monetize/microsoft-store-services-sdk.md).
+Los eventos personalizados se implementan mediante el método [StoreServicesCustomEventLogger.Log](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) de [Microsoft Store Services SDK](../monetize/microsoft-store-services-sdk.md).
 
 Para obtener más información, consulte [registro de eventos personalizados para el centro de desarrollo](../monetize/log-custom-events-for-dev-center.md).
 

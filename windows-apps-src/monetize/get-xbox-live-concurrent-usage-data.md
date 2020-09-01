@@ -1,84 +1,84 @@
 ---
-description: Usa este método en la API de análisis de Microsoft Store para obtener datos de uso simultáneo de Xbox Live.
-title: Obtener datos de uso simultáneo de Xbox Live
+description: Use este método en la API de Microsoft Store Analytics para obtener datos de uso simultáneo de Xbox Live.
+title: Obtener datos de uso simultáneo de Xbox Live
 ms.date: 06/04/2018
 ms.topic: article
-keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, concurrent usage, uso simultáneo
+keywords: Windows 10, UWP, servicios de tienda, Microsoft Store API de análisis, análisis de Xbox Live, uso simultáneo
 ms.localizationpriority: medium
-ms.openlocfilehash: a1ceef92a533a230c2dca54a835578b56ceb809f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 9e8d36ce9336d5fc65a73a19233b8a1f0a05a8bf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321761"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167589"
 ---
-# <a name="get-xbox-live-concurrent-usage-data"></a>Obtener datos de uso simultáneo de Xbox Live
+# <a name="get-xbox-live-concurrent-usage-data"></a>Obtener datos de uso simultáneo de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de uso casi en tiempo real (con latencia de 5-15 minutos) sobre el número medio de clientes que juegan tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md) cada minuto, hora o día durante un intervalo de tiempo especificado. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Use este método en la API de Microsoft Store Analytics para obtener datos de uso casi en tiempo real (con una latencia de 5-15 minutos) sobre el número promedio de clientes que juegan su [juego habilitado para Xbox Live](/gaming/xbox-live/index.md) cada minuto, hora o día durante un intervalo de tiempo especificado. Esta información también está disponible en el [Informe de análisis de Xbox](../publish/xbox-analytics-report.md) del centro de Partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan los servicios de Xbox Live. Estos juegos deben pasar por el [proceso de aprobación del concepto](../gaming/concept-approval.md), que incluye juegos publicados por [asociados de Microsoft](/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [ ID@Xbox programa](/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados a través del [programa de creadores de Xbox Live](/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Si aún no lo ha hecho, complete todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) de la API de Microsoft Store Analytics.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud       |
+| Método | URI de solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
 
-### <a name="request-header"></a>Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de solicitud
 
-| Header        | Tipo   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
+| Authorization | string | Necesario. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 
-| Parámetro        | Tipo   |  Descripción      |  Requerido  
+| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de uso simultáneo de Xbox Live.  |  Sí  |
-| metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **concurrency**.  |  Sí  |
-| startDate | date | La fecha de inicio del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
-| endDate | date | Fecha de finalización del intervalo de fechas de los datos de uso simultáneo que se han de recuperar. Consulta la descripción de *aggregationLevel* para el comportamiento predeterminado. |  No  |
-| aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour** o **day**. Si no se especifica, el valor predeterminado es **día**. <p/><p/>Si no especificas *startDate* o *endDate*, el cuerpo de respuesta asigna de forma predeterminada los siguientes: <ul><li>**minute**: Los últimos 60 registros de datos disponibles.</li><li>**hora**: Los últimos 24 registros de datos disponibles.</li><li>**day**: Los últimos 7 registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Si el intervalo de tiempo solicitado es demasiado grande, se truncarán los registros. <ul><li>**minute**: Registros de hasta 1440 (24 horas de datos).</li><li>**hora**: Hasta 720 registros (30 días de datos).</li><li>**day**: Hasta 60 registros (60 días de datos).</li></ul>  |  No  |
+| applicationId | string | El [identificador de almacén](in-app-purchases-and-trials.md#store-ids) del juego para el que desea recuperar los datos de uso simultáneo de Xbox Live.  |  Sí  |
+| metricType | string | Cadena que especifica el tipo de datos de análisis de Xbox Live que se va a recuperar. Para este método, especifique la **simultaneidad**del valor.  |  Sí  |
+| startDate | date | Fecha de inicio del intervalo de fechas de datos de uso simultáneos que se va a recuperar. Vea la descripción de *aggregationLevel* para ver el comportamiento predeterminado. |  No  |
+| endDate | date | Fecha de finalización del intervalo de fechas de datos de uso simultáneos que se va a recuperar. Vea la descripción de *aggregationLevel* para ver el comportamiento predeterminado. |  No  |
+| aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: **minute**, **hour**o **Day**. Si no se especifica, el valor predeterminado es **día**. <p/><p/>Si no especifica *startDate* ni *EndDate*, el cuerpo de respuesta tiene como valor predeterminado el siguiente: <ul><li>**minute**: los últimos 60 registros de datos disponibles.</li><li>**hour**: los últimos 24 registros de datos disponibles.</li><li>**Day**: los 7 últimos registros de datos disponibles.</li></ul><p/>Los siguientes niveles de agregación tienen límites de tamaño en el número de registros que se pueden devolver. Los registros se truncarán si el intervalo de tiempo solicitado es demasiado grande. <ul><li>**minuto**: hasta 1440 registros (24 horas de datos).</li><li>**hora**: hasta 720 registros (30 días de datos).</li><li>**Day**: hasta 60 registros (60 días de datos).</li></ul>  |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra una solicitud para obtener datos de uso simultáneo para tu juego habilitado para Xbox Live. Esta solicitud recupera datos cada minuto entre el 1 de febrero de 2018 y el 2 de febrero de 2018. Sustituye el valor *applicationId* por el Id de Store del juego.
+En el ejemplo siguiente se muestra una solicitud para obtener datos de uso simultáneos para el juego habilitado para Xbox Live. Esta solicitud recupera los datos de cada minuto entre el 1 2018 de febrero y el 2 2018 de febrero. Reemplace el valor de *ApplicationID* por el identificador de almacén del juego.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics?applicationId=9NBLGGGZ5QDR&metrictype=concurrency&aggregationLevel=hour&startDate=2018-02-01&endData=2018-02-02 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Respuesta
+## <a name="response"></a>Response
 
-El cuerpo de respuesta contiene una matriz de objetos que contienen un conjunto de datos de uso simultáneo de un minuto, hora o día especificados. Cada objeto contiene los siguientes valores.
+El cuerpo de la respuesta contiene una matriz de objetos que contienen un conjunto de datos de uso simultáneo para un minuto, hora o día especificados. Cada objeto contiene los valores siguientes.
 
-| Valor      | Tipo   | Descripción                  |
+| Value      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Count      | número  | El promedio de clientes que reproducen tu juego habilitado para Xbox Live durante el minuto, hora o día especificados. <p/><p/>**Nota**&nbsp;&nbsp;Un valor de 0 indica que no hay usuarios simultáneos durante el intervalo especificado, o que se produjo un error durante la recopilación de datos de usuarios simultáneos para el juego durante el intervalo especificado. |
-| Fecha  | string | La fecha y la hora que especifica el minuto, hora o día durante el cual se han producido los datos de uso simultáneo.  |
-| SeriesName | string    | Este tiene siempre el valor **UserConcurrency**. |
+| Count      | number  | El número promedio de clientes que juegan su Xbox Live habilitada para el minuto, hora o día especificados. <p/><p/>**Nota:** &nbsp; &nbsp; Un valor de 0 indica que no había usuarios simultáneos durante el intervalo especificado o que se produjo un error al recopilar datos de usuario simultáneos para el juego durante el intervalo especificado. |
+| Date  | string | Fecha y hora que especifican el minuto, la hora o el día en que se produjeron los datos de uso simultáneos.  |
+| SeriesName | string    | Siempre tiene el valor **UserConcurrency**. |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
-En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo realizada para esta solicitud con adición de datos por minuto.
+En el ejemplo siguiente se muestra un cuerpo de respuesta JSON de ejemplo para esta solicitud con la agregación de datos por minuto.
 
 ```json
 [   {
@@ -107,10 +107,10 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)
-* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
-* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
-* [Obtener datos del centro de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
-* [Obtener datos de club de Xbox Live](get-xbox-live-club-data.md)
-* [Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Acceder a datos de análisis mediante servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)
+* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
+* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
+* [Obtener datos del concentrador de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
+* [Obtener datos del club de Xbox Live](get-xbox-live-club-data.md)
+* [Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)

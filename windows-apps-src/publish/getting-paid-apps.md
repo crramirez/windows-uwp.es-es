@@ -6,12 +6,12 @@ ms.date: 05/29/2020
 ms.topic: article
 keywords: Windows 10, UWP, pagos, ventas de aplicaciones, continuaciones de aplicaciones, pagos, gastos de tienda, retención de pago, porcentaje
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d42677aeda694e2fc8924cee1832b62d98b15e5
-ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
+ms.openlocfilehash: 5e2b67984c43d799f0f4e3a1c6662b57bdc6ae9d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746775"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167399"
 ---
 # <a name="getting-paid"></a>Recepción del pago
 Esta es una información importante sobre cómo recibir el pago de las aplicaciones, los complementos y los ingresos publicitarios.
@@ -24,16 +24,16 @@ Esta es una información importante sobre cómo recibir el pago de las aplicacio
 
 ## <a name="store-fee"></a>Honorarios de Store
 
-Cuando te [registras para obtener una cuenta de desarrollador](https://developer.microsoft.com/store/register), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). En este contrato se explica la relación entre usted y Microsoft como perteneciente a la venta de aplicaciones en el Microsoft Store, incluida la cuota de la tienda que Microsoft cobra por cada venta realizada.
+Cuando te [registras para obtener una cuenta de desarrollador](https://developer.microsoft.com/store/register), aceptas el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement). En este contrato se explica la relación entre usted y Microsoft como perteneciente a la venta de aplicaciones en el Microsoft Store, incluida la cuota de la tienda que Microsoft cobra por cada venta realizada.
 
-Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Revise siempre ese documento si tiene alguna pregunta.
+Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement). Revise siempre ese documento si tiene alguna pregunta.
 
 La cuota de la tienda se aplica a todas las ventas de aplicaciones recopiladas por el Microsoft Store, incluidos los complementos.
 
 
 ## <a name="price-tiers"></a>Franjas de precio
 
-Los niveles de precio seleccionados establecen el [precio de venta](set-and-schedule-app-pricing.md#base-price) en todos los países en los que elige distribuir la aplicación. También puede usar otras características de precios, como [elegir precios diferentes para distintos mercados](set-and-schedule-app-pricing.md#override-base-price-for-specific-markets) o [poner la aplicación en venta](put-apps-and-add-ons-on-sale.md).
+Los niveles de precio seleccionados establecen el [precio de venta](set-and-schedule-app-pricing.md#base-price) en todos los países en los que elige distribuir la aplicación. También puede usar otras características de precios, como  [elegir precios diferentes para distintos mercados](set-and-schedule-app-pricing.md#override-base-price-for-specific-markets) o [poner la aplicación en venta](put-apps-and-add-ons-on-sale.md).
 
 Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precio comienzan en los 0,99 USD, con incrementos adicionales (1,09 USD, 1,19 USD, etc.). Los incrementos entre las franjas de precio aumentan a medida que el precio es mayor.
 
@@ -72,7 +72,3 @@ Una vez que haya establecido el estado de la retención de pagos en **Activado**
  
 
  
-
-
-
-

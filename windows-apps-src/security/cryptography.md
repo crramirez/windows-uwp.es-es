@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: abe151bd78a0340b91aa1600ad34282b94b6d216
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d8a4ff658e05f9483dc8afbb6beb9f70f39676a0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372594"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167249"
 ---
 # <a name="cryptography"></a>Criptografía
 
@@ -34,10 +34,10 @@ En criptografía e infraestructura de clave pública (PKI) se suele utilizar la 
 | Aplicación de algoritmo hash                     | El proceso de convertir datos de longitud variable en un valor de longitud fijo, normalmente menor. Comparando los hash, puedes estar razonablemente seguro de que dos o más elementos de datos son iguales.            |
 | Firma                   | Hash cifrado de datos digitales que normalmente se utiliza para autenticar el remitente de los datos o para comprobar que no se han manipulado los datos durante la transmisión.                                               |
 | Algoritmo                   | Procedimiento paso a paso para cifrar datos.                                                                                                                                                         |
-| Key                         | Un número aleatorio o seudoaleatorio que se utiliza como entrada de un algoritmo criptográfico para cifrar y descifrar datos.                                                                                               |
+| Clave                         | Un número aleatorio o seudoaleatorio que se utiliza como entrada de un algoritmo criptográfico para cifrar y descifrar datos.                                                                                               |
 | Criptografía de clave simétrica  | Criptografía en la que se utiliza la misma clave para el cifrado y el descifrado. También se conoce como criptografía de clave secreta.                                                                                      |
 | Criptografía de clave asimétrica | Criptografía en la que se utilizan claves distintas (aunque relacionadas matemáticamente) para el cifrado y el descifrado. También se conoce como criptografía de clave pública.                                                          |
-| Codificación                    | El proceso de codificación de mensajes digitales, incluidos los certificados, para su transporte a través de una red.                                                                                                     |
+| Encoding                    | El proceso de codificación de mensajes digitales, incluidos los certificados, para su transporte a través de una red.                                                                                                     |
 | Proveedor de algoritmo          | Archivo DLL que implementa un algoritmo criptográfico.                                                                                                                                                      |
 | Proveedor de almacenamiento de claves        | Un contenedor para almacenar material de clave. Actualmente, las claves se pueden almacenar en software, tarjetas inteligentes o el módulo de plataforma segura (TPM).                                                                   |
 | Certificado X.509           | Un documento digital, normalmente emitido por una entidad de certificación, que permite a las partes interesadas comprobar la identidad de una persona, sistema o entidad.                                            |
@@ -93,7 +93,7 @@ La interfaz de programación de aplicaciones simplificada disponible para las ap
 
 ### <a name="cryptography-support"></a>Compatibilidad con funciones criptográficas
 
-Puedes realizar las siguientes tareas criptográficas. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core).
+Puedes realizar las siguientes tareas criptográficas. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.Core**](/uwp/api/Windows.Security.Cryptography.Core).
 
 -   Crear claves simétricas
 -   Realizar cifrado simétrico
@@ -104,21 +104,21 @@ Puedes realizar las siguientes tareas criptográficas. Para obtener más informa
 -   Contenido de hash
 -   Firmar contenido digitalmente
 
-El SDK también ofrece una interfaz simplificada para la protección de datos basada en contraseña. Puedes usarla para realizar las siguientes tareas. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection).
+El SDK también ofrece una interfaz simplificada para la protección de datos basada en contraseña. Puedes usarla para realizar las siguientes tareas. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.DataProtection**](/uwp/api/Windows.Security.Cryptography.DataProtection).
 
 -   Protección asincrónica de datos estáticos
 -   Protección asincrónica de un flujo de datos
 
 ### <a name="encoding-support"></a>Compatibilidad con la codificación
 
-Una aplicación puede codificar datos criptográficos para la transmisión a través de una red y descodificar datos recibidos de un origen de red. Para obtener más información, consulta los métodos estáticos disponibles en el espacio de nombres [**Windows.Security.Cryptography**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography).
+Una aplicación puede codificar datos criptográficos para la transmisión a través de una red y descodificar datos recibidos de un origen de red. Para obtener más información, consulta los métodos estáticos disponibles en el espacio de nombres [**Windows.Security.Cryptography**](/uwp/api/Windows.Security.Cryptography).
 
 ### <a name="pki-support"></a>Compatibilidad con PKI
 
-Las aplicaciones pueden realizar las siguientes tareas de PKI. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.Certificates**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates).
+Las aplicaciones pueden realizar las siguientes tareas de PKI. Para obtener más información, consulta el espacio de nombres [**Windows.Security.Cryptography.Certificates**](/uwp/api/Windows.Security.Cryptography.Certificates).
 
 -   Crear un certificado
--   Crear un certificado autofirmado
+-   Creación de un certificado autofirmado
 -   Instalar una respuesta de certificado
 -   Importar un certificado en formato PFX
 -   Utilizar claves y certificados de tarjeta inteligente (funcionalidades sharedUserCertificates)
@@ -142,10 +142,10 @@ En los siguientes artículos se ofrecen más detalles sobre los escenarios de se
 | Tema                                                                         | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Certificados](certificates.md)                                               | En este artículo se describe el uso de certificados en las aplicaciones para UWP. Los certificados digitales se usan en criptografía de clave pública para enlazar una clave pública a una persona, un equipo o una organización. Las identidades enlazadas suelen usarse para autenticar una entidad a otra. Por ejemplo, los certificados se suelen usar para autenticar un servidor web a un usuario y un usuario a un servidor web. Puedes crear solicitudes de certificados e instalar o importar certificados emitidos. También puedes inscribir un certificado en una jerarquía de certificados. |
-| [Claves criptográficas](cryptographic-keys.md)                                   | En este artículo se muestra cómo usar funciones de derivación de claves estándar para derivar claves y cómo cifrar contenido mediante claves simétricas y asimétricas.                                                                                                                                                                                                                                                                                                                                                                             |
-| [Protección de datos](data-protection.md)                                         | En este artículo se explica cómo usar la clase [DataProtectionProvider](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) en el espacio de nombres [Windows.Security.Cryptography.DataProtection](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) para cifrar y descifrar datos digitales en una aplicación para UWP.                                                                                                                                                                                                                  |
+| [Claves de cifrado](cryptographic-keys.md)                                   | En este artículo se muestra cómo usar funciones de derivación de claves estándar para derivar claves y cómo cifrar contenido mediante claves simétricas y asimétricas.                                                                                                                                                                                                                                                                                                                                                                             |
+| [Protección de datos](data-protection.md)                                         | En este artículo se explica cómo usar la clase [DataProtectionProvider](/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) en el espacio de nombres [Windows.Security.Cryptography.DataProtection](/uwp/api/Windows.Security.Cryptography.DataProtection) para cifrar y descifrar datos digitales en una aplicación para UWP.                                                                                                                                                                                                                  |
 | [MAC, hash y firmas](macs-hashes-and-signatures.md)               | En este artículo se describe cómo se pueden usar los códigos de autenticación de mensajes (MAC), los hash y las firmas en las aplicaciones para UWP para detectar mensajes manipulados.                                                                                                                                                                                                                                                                                                                                                                                |
-| [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md) | Usa esta información para determinar si la aplicación usa algún tipo de criptografía que impida que se muestre en la Microsoft Store.                                                                                                                                                                                                                                                                                                                                                                                            |
+| [Restricciones de exportación sobre la criptografía](export-restrictions-on-cryptography.md) | Use esta información para determinar si la aplicación usa la criptografía de forma que pueda impedir que se muestre en el Microsoft Store.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Tareas comunes de criptografía](common-cryptography-tasks.md)                     | En estos artículos se ofrece código de ejemplo para tareas comunes de criptografía de UWP, como crear números aleatorios, comparar búferes, convertir entre cadenas y datos binarios, copiar a matrices de bytes y desde ellas, y codificar y descodificar datos.                                                                                                                                                                                                                                                                                    |
 
  

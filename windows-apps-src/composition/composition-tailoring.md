@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 95a7355241f9ba4cc7b4bb743b78ac09169d65d9
-ms.sourcegitcommit: 2747d9266e1678fca96d3822ce47499ca91a2c70
+ms.openlocfilehash: 3d4aa82f70e9bad7a60a97b6b28f28f3dfd008c9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77213682"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166409"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>Personalización de efectos & experiencias con la interfaz de usuario de Windows
 
@@ -22,7 +22,7 @@ La personalización de la interfaz de usuario es una amplia categoría que abarc
 - Adaptación de la configuración de usuario para animaciones
 - Optimizar la interfaz de usuario para las capacidades de hardware dadas
 
-Aquí veremos cómo adaptar sus efectos y animaciones con la capa visual en las áreas anteriores, pero hay muchos otros medios para adaptar la aplicación a fin de garantizar una excelente experiencia del usuario final. Los documentos de orientación están disponibles en cómo [adaptar la interfaz de usuario](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design) para varios dispositivos y [crear una interfaz de usuario con capacidad de respuesta](/windows/uwp/design/layout/responsive-design).
+Aquí veremos cómo adaptar sus efectos y animaciones con la capa visual en las áreas anteriores, pero hay muchos otros medios para adaptar la aplicación a fin de garantizar una excelente experiencia del usuario final. Los documentos de orientación están disponibles en cómo [adaptar la interfaz de usuario](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) para varios dispositivos y [crear una interfaz de usuario con capacidad de respuesta](../design/layout/responsive-design.md).
 
 ## <a name="user-effects-settings"></a>Configuración de efectos de usuario
 
@@ -30,7 +30,7 @@ Los usuarios pueden personalizar su experiencia con Windows por diversos motivos
 
 ### <a name="transparency-effects-settings"></a>Configuración de efectos de transparencia
 
-Uno de estos efectos que los usuarios pueden personalizar es activar o desactivar los efectos de transparencia. Esto puede encontrarse en la aplicación de configuración, en Personalización > colores, o a través de la aplicación de configuración > la accesibilidad > presentación.
+Uno de estos efectos que los usuarios pueden personalizar es activar o desactivar los efectos de transparencia. Esto puede encontrarse en la aplicación de configuración, en personalización > colores, o a través de la aplicación de configuración > la accesibilidad > presentación.
 
 ![Opción de transparencia en configuración](images/tailoring-transparency-setting.png)
 
@@ -38,10 +38,10 @@ Cuando está activado, los efectos que utilicen la transparencia aparecerán de 
 
 Cuando está desactivada, el material acrílico se revierte automáticamente a un color sólido, ya que el pincel acrílico de XAML ha escuchado este evento de forma predeterminada. Aquí vemos que la aplicación de calculadora se revierte correctamente a un color sólido cuando no están habilitados los efectos de transparencia:
 
-Calculadora de ![con acrílico](images/tailoring-acrylic.png)
-![calculadora con la respuesta acrílico a la configuración de transparencia](images/tailoring-acrylic-fallback.png)
+![Calculadora con ](images/tailoring-acrylic.png)
+ ![ calculadora acrílico con la respuesta acrílico a la configuración de transparencia](images/tailoring-acrylic-fallback.png)
 
-Sin embargo, para cualquier efecto personalizado, la aplicación debe responder a la propiedad [UISettings. AdvancedEffectsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabled) o al evento [AdvancedEffectsEnabledChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) y desactivar el gráfico efecto/efecto para usar un efecto que no tenga transparencia. A continuación se muestra un ejemplo de esto:
+Sin embargo, para cualquier efecto personalizado, la aplicación debe responder a la propiedad [UISettings. AdvancedEffectsEnabled](/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabled) o al evento [AdvancedEffectsEnabledChanged](/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) y desactivar el gráfico efecto/efecto para usar un efecto que no tenga transparencia. A continuación se muestra un ejemplo de esto:
 
 ```cs
 public MainPage()
@@ -59,7 +59,7 @@ private void Uisettings_AdvancedEffectsEnabledChanged(UISettings sender, object 
 
 ## <a name="animations-settings"></a>Configuración de animaciones
 
-Del mismo modo, las aplicaciones deben escuchar y responder a la propiedad [UISettings. AnimationsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) para asegurarse de que las animaciones se activan o desactivan en función de la configuración de usuario en la configuración > facilitar el acceso > presentación.
+Del mismo modo, las aplicaciones deben escuchar y responder a la propiedad [UISettings. AnimationsEnabled](/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) para asegurarse de que las animaciones se activan o desactivan en función de la configuración de usuario en la configuración > facilitar el acceso > presentación.
 
 ![Opción de animaciones en configuración](images/tailoring-animations-setting.png)
 
@@ -118,11 +118,11 @@ Puede encontrar código de ejemplo completo en el [repositorio de github](https:
 
 En función de los comentarios de los métodos [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) y [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) proporcionados en la API de CompositionCapabilities, la aplicación puede optar por intercambiar efectos costosos o no admitidos para otros efectos de su elección que estén optimizados para el dispositivo. Se sabe que algunos efectos tienen un uso más intensivo de los recursos que otros y deben usarse con moderación, y otros efectos se pueden usar con mayor libertad. Sin embargo, para todos los efectos, se debe tener cuidado al encadenar y animar, ya que algunos escenarios o combinaciones pueden cambiar las características de rendimiento del gráfico de efectos. A continuación se muestra una regla de características de rendimiento Thumb para efectos individuales:
 
-- Los efectos que se sabe que tienen un alto impacto en el rendimiento son los siguientes: Desenfoque gausiano, máscara de sombra, BackDropBrush, HostBackDropBrush y visual de capa. No se recomiendan para dispositivos de Low [-End (nivel de características 9.1-9.3)](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)y deben usarse con prudencia en dispositivos de gama alta.
+- Los efectos que se sabe que tienen un alto impacto en el rendimiento son los siguientes: Desenfoque gausiano, máscara de sombra, BackDropBrush, HostBackDropBrush y visual de capa. No se recomiendan para dispositivos de Low [-End (nivel de características 9.1-9.3)](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)y deben usarse con prudencia en dispositivos de gama alta.
 - Entre los efectos con un impacto de rendimiento medio se incluyen la matriz de colores, ciertos efectos de mezcla BlendModes (luminosidad, color, saturación y matiz), SpotLight, SceneLightingEffect y (según el escenario) BorderEffect. Estos efectos pueden funcionar con ciertos escenarios en dispositivos de low-end, pero debe tener cuidado al encadenar y animar. Se recomienda restringir el uso a dos o menos y animar solo en las transiciones.
 - Todos los demás efectos tienen un bajo impacto en el rendimiento y funcionan en todos los escenarios razonables al animar y encadenar.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Técnicas de diseño con capacidad de respuesta de UWP](https://docs.microsoft.com/windows/uwp/design/layout/responsive-design)
-- [Personalización de dispositivos UWP](https://docs.microsoft.com/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+- [Técnicas de diseño con capacidad de respuesta de UWP](../design/layout/responsive-design.md)
+- [Personalización de dispositivos UWP](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md)

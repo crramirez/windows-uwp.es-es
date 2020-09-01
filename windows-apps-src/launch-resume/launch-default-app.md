@@ -6,21 +6,21 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 78faef0d6a6e02c43221d1d525adedd364dd6e34
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: ff40b506ef305ac4bc651864da34fe746f6229a3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493160"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164859"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar la aplicación predeterminada para un URI
 
 
 **API importantes**
 
-- [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
-- [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
-- [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
+- [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync)
+- [**PreferredApplicationPackageFamilyName**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
+- [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
 Aprende a iniciar la aplicación predeterminada de un identificador de recursos uniforme (URI). Los URI te permiten iniciar otra aplicación para realizar una tarea específica. En este tema también se proporciona una descripción general de los muchos esquemas de URI integrados en Windows. También puedes iniciar el URI personalizado. Para obtener más información sobre cómo registrar un esquema de URI personalizado y controlar la activación de URI, consulta [Administración de la activación de URI](handle-uri-activation.md).
 
@@ -30,7 +30,7 @@ En este tema se describen los siguientes esquemas de URI integrados en Windows:
 
 | Esquema de URI | Inicia |
 | ----------:|----------|
-|[bingmaps:, MS-Drive-to: y MS-Walk-to:](#maps-app-uri-schemes) | Aplicación Mapas |
+|[bingmaps:, MS-Drive-to: y MS-Walk-to: ](#maps-app-uri-schemes) | Aplicación Mapas |
 |[http](#http-uri-scheme) | Explorador web predeterminado |
 |[mailto](#email-uri-scheme) | Aplicación de correo electrónico predeterminada |
 |[ms-call:](#call-app-uri-scheme) |  Aplicación de llamada |
@@ -54,9 +54,9 @@ En general, la aplicación no puede seleccionar qué aplicación se inicia, sino
 
 ### <a name="call-launchuriasync-to-launch-a-uri"></a>Llamar a LaunchUriAsync para iniciar un URI
 
-Usa el método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) para iniciar un URI. Cuando llames a este método, tu aplicación debe ser la aplicación en primer plano; es decir, debe estar visible para el usuario. Este requisito permite asegurar que el usuario permanezca en control. Para cumplir este requisito, asegúrate de enlazar todos los inicios de URI directamente a la interfaz de usuario de la aplicación. El usuario siempre debe tener que realizar alguna acción para iniciar el URI. Si intentas iniciar un URI y tu aplicación no está en primer plano, se producirá un error en el inicio y se invocará a la devolución de llamada de error.
+Usa el método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) para iniciar un URI. Cuando llames a este método, tu aplicación debe ser la aplicación en primer plano; es decir, debe estar visible para el usuario. Este requisito permite asegurar que el usuario permanezca en control. Para cumplir este requisito, asegúrate de enlazar todos los inicios de URI directamente a la interfaz de usuario de la aplicación. El usuario siempre debe tener que realizar alguna acción para iniciar el URI. Si intentas iniciar un URI y tu aplicación no está en primer plano, se producirá un error en el inicio y se invocará a la devolución de llamada de error.
 
-Primero, crea un objeto [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) para que represente el URI, y luego pásalo al método [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Usa el resultado devuelto para ver si la llamada se realizó correctamente, como se muestra en el siguiente ejemplo.
+Primero, crea un objeto [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) para que represente el URI, y luego pásalo al método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync). Usa el resultado devuelto para ver si la llamada se realizó correctamente, como se muestra en el siguiente ejemplo.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -117,9 +117,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="set-remaining-view-preference"></a>Establecer las preferencias de visualización restantes
 
-Las aplicaciones de origen que llaman a [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) pueden solicitar permanecer en pantalla después de iniciarse un URI. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el URI. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También se puede usar **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después del inicio del URI y puede sustituirse por completo por la aplicación de destino. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
+Las aplicaciones de origen que llaman a [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) pueden solicitar permanecer en pantalla después de iniciarse un URI. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el URI. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También se puede usar **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después del inicio del URI y puede sustituirse por completo por la aplicación de destino. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
-**Nota:**    Windows tiene en cuenta varios factores diferentes cuando determina el tamaño de ventana final de la aplicación de origen, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Aunque establezcas la propiedad [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview), no se garantiza un comportamiento de ventanas específico para la aplicación de origen.
+**Nota:**    Windows tiene en cuenta varios factores diferentes cuando determina el tamaño de ventana final de la aplicación de origen, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en pantalla, la orientación de la pantalla, etc. Aunque establezcas la propiedad [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview), no se garantiza un comportamiento de ventanas específico para la aplicación de origen.
 
 ```cs
 // Set the desired remaining view.
@@ -167,7 +167,7 @@ Use los esquemas **bingmaps:**, **MS-Drive-to:** y **MS-Walk-to:** URI para [ini
 
 ![Ejemplo de la aplicación Mapas de Windows.](images/mapnyc.png)
 
-Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](launch-maps-app.md). Para usar el control de mapa en tu propia aplicación, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](https://docs.microsoft.com/windows/uwp/maps-and-location/display-maps).
+Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](launch-maps-app.md). Para usar el control de mapa en tu propia aplicación, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](../maps-and-location/display-maps.md).
 
 ### <a name="messaging-app-uri-scheme"></a>Esquema de URI de la aplicación Mensajes
 
@@ -189,7 +189,7 @@ Use el esquema **MS-tonepicker:** URI para elegir tonos, alarmas y tonos del sis
 |------------|---------|
 | ms-tonepicker: | Elige tonos, alarmas y tonos del sistema. |
 
-Los parámetros se pasan a través de una clase [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) a la API LaunchURI. Consulta [Elegir y guardar los tonos con el esquema URI ms-tonepicker](launch-ringtone-picker.md) para obtener más información.
+Los parámetros se pasan a través de una clase [ValueSet](/uwp/api/windows.foundation.collections.valueset) a la API LaunchURI. Consulta [Elegir y guardar los tonos con el esquema URI ms-tonepicker](launch-ringtone-picker.md) para obtener más información.
 
 ### <a name="nearby-numbers-app-uri-scheme"></a>Esquema de URI de la aplicación de números cercanos
 
@@ -197,7 +197,7 @@ Use el esquema **MS-yellowpage:** URI para iniciar la aplicación de números ce
 
 | Esquema de URI | Results |
 |------------|---------|
-| MS-yellowpage:? Input = \[ keyword \]&Method = \[ String o T9\] | Inicia la aplicación de números cercanos.<br>`input`hace referencia a la palabra clave que desea buscar.<br>`method`hace referencia al tipo de búsqueda (cadena o búsqueda T9).<br>Si `method`es `T9` (un tipo de teclado), `keyword` debe ser una cadena numérica que se asigna a las letras del teclado T9 que se van a buscar.<br>Si `method`es `String` , `keyword` es la palabra clave que se va a buscar. |
+| MS-yellowpage:? Input = \[ keyword \]&Method = \[ String o T9\] | Inicia la aplicación de números cercanos.<br>`input` hace referencia a la palabra clave que desea buscar.<br>`method` hace referencia al tipo de búsqueda (cadena o búsqueda T9).<br>Si `method`es `T9` (un tipo de teclado), `keyword` debe ser una cadena numérica que se asigna a las letras del teclado T9 que se van a buscar.<br>Si `method`es `String` , `keyword` es la palabra clave que se va a buscar. |
 
 ### <a name="people-app-uri-scheme"></a>Esquema de URI de la aplicación Contactos
 
@@ -207,8 +207,8 @@ Para obtener más información, consulta [Iniciar la aplicación Contactos](laun
 ### <a name="photos-app-uri-scheme"></a>Esquema de URI de aplicación de fotos
 
 Use el esquema **MS-Photos:** URI para iniciar la aplicación fotos para ver una imagen o editar un vídeo. Por ejemplo:  
-Para ver una imagen:`ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
-O bien, para editar un vídeo:`ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
+Para ver una imagen: `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
+O bien, para editar un vídeo: `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
 > [!NOTE]
 > Los URI para editar un vídeo o mostrar una imagen solo están disponibles en el escritorio.
@@ -216,9 +216,9 @@ O bien, para editar un vídeo:`ms-photos:videoedit?InputToken=123abc&Action=Trim
 | Esquema de URI |Results |
 |------------|--------|
 | MS-Photos: Viewer? fileName = {FILENAME} | Inicia la aplicación fotos para ver la imagen especificada donde {FILENAME} es un nombre de ruta de acceso completo. Por ejemplo: `c:\users\userName\Pictures\ImageToView.jpg` |
-| MS-Photos: videoedit? InputToken = {token de entrada} | Inicia la aplicación fotos en el modo de edición de vídeo para el archivo representado por el token de archivo. **InputToken** es obligatorio. Use [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para obtener un token para un archivo. |
+| MS-Photos: videoedit? InputToken = {token de entrada} | Inicia la aplicación fotos en el modo de edición de vídeo para el archivo representado por el token de archivo. **InputToken** es obligatorio. Use  [SharedStorageAccessManager](/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para obtener un token para un archivo. |
 | MS-Photos: videoedit? Acción = {Action} | Un parámetro que indica el modo de edición de vídeo en el que se va a abrir la aplicación de fotos, donde {Action} es uno de los siguientes: **slowmotion**, **FrameExtraction**, **Trim**, **View**y **Ink**. La **acción** es obligatoria. |
-| MS-Photos: videoedit? StartTime = {TimeSpan} | Parámetro opcional que especifica dónde empezar a reproducir el vídeo. `{timespan}`debe tener el formato `"hh:mm:ss.ffff"` . Si no se especifica, el valor predeterminado es.`00:00:00.0000` |
+| MS-Photos: videoedit? StartTime = {TimeSpan} | Parámetro opcional que especifica dónde empezar a reproducir el vídeo. `{timespan}` debe tener el formato `"hh:mm:ss.ffff"` . Si no se especifica, el valor predeterminado es. `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>Esquema de URI de la aplicación Configuración
 
@@ -244,4 +244,4 @@ Use el esquema de URI **msnweather:** para iniciar la aplicación meteorológica
 
 | Esquema de URI | Results |
 |------------|---------|
-| msnweather://Forecast? la = \[ latitud \]&lo = \[ longitud\] | Inicia la aplicación Weather en la página de previsión en función de las coordenadas geográficas de ubicación.<br>`latitude`hace referencia a la latitud de la ubicación.<br> `longitude`hace referencia a la longitud de la ubicación.<br> |
+| msnweather://Forecast? la = \[ latitud \]&lo = \[ longitud\] | Inicia la aplicación Weather en la página de previsión en función de las coordenadas geográficas de ubicación.<br>`latitude` hace referencia a la latitud de la ubicación.<br> `longitude` hace referencia a la longitud de la ubicación.<br> |

@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows 10, UWP, API de promociones de Microsoft Store, campañas de ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 560f9b545cc7c7b547e707bffb2b19904c36863b
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: 9b9cb30d2a87d93df1790fb42ad3b4b243f0f713
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846775"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164559"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Ejecutar campañas de ad mediante los servicios de almacenamiento
 
@@ -36,7 +36,7 @@ Antes de empezar a escribir código para llamar a la API de Microsoft Store prom
 
 * Antes de poder crear e iniciar correctamente una campaña de ad mediante esta API, primero debe [crear una campaña de pago de pago mediante la página **campañas de ad** del centro de Partners](../publish/create-an-ad-campaign-for-your-app.md), y debe agregar al menos un instrumento de pago en esta página. Después de hacerlo, podrá crear correctamente líneas de entrega facturable para campañas de ad mediante esta API. Las líneas de entrega de las campañas de ad que cree con esta API facturarán automáticamente el instrumento de pago predeterminado elegido en la página **campañas de ad** del centro de Partners.
 
-* Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
+* Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
 
 * Debe asociar una aplicación Azure AD a la cuenta del centro de Partners, recuperar el identificador de inquilino y el identificador de cliente de la aplicación y generar una clave. La aplicación Azure AD representa la aplicación o el servicio del que desea llamar a la API de promociones de Microsoft Store. Necesita el identificador de inquilino, el identificador de cliente y la clave para obtener un token de acceso de Azure AD para pasar a la API.
     > [!NOTE]
@@ -58,7 +58,7 @@ Para asociar una aplicación Azure AD a la cuenta del centro de Partners y recup
 
 Antes de llamar a cualquiera de los métodos de la API de Microsoft Store promociones, primero debe obtener un token de acceso Azure AD que pase al encabezado **Authorization** de cada método de la API. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
-Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
+Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](/azure/active-directory/azuread-dev/v1-oauth2-client-creds-grant-flow) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
 ```syntax
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -73,7 +73,7 @@ grant_type=client_credentials
 
 Para el valor de * \_ identificador de inquilino* en el URI de post y los parámetros de * \_ identificador de cliente* y * \_ secreto de cliente* , especifique el identificador de inquilino, el identificador de cliente y la clave de la aplicación que recuperó del centro de Partners en la sección anterior. Para el parámetro *resource*, tiene que especificar ```https://manage.devcenter.microsoft.com```.
 
-Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
+Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](/azure/active-directory/azuread-dev/v1-protocols-oauth-code#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-promotions-api" />
 

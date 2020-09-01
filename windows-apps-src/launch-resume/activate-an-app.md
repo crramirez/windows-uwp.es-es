@@ -11,22 +11,22 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 622fc4246c0ce8051135feab07295034b55a82e4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0c3aa86fd8eee3724e092799eea6d34f0b9d453b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370819"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164999"
 ---
 # <a name="handle-app-activation"></a>Controlar la activación de aplicaciones
 
-Obtenga información sobre cómo controlar la activación de la aplicación reemplazando la [ **Application.OnLaunched** ](/uwp/api/windows.ui.xaml.application.onlaunched) método.
+Obtenga información sobre cómo controlar la activación de la aplicación mediante la invalidación del método [**Application. onlaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) .
 
 ## <a name="override-the-launch-handler"></a>Invalidar el controlador de inicio
 
-Cuando se activa una aplicación, por cualquier motivo, el sistema envía el [ **CoreApplicationView.Activated** ](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) eventos. Para ver una lista de los tipos de activación, consulta la enumeración [**ActivationKind**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind).
+Cuando se activa una aplicación, por cualquier motivo, el sistema envía el evento [**CoreApplicationView. Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) . Para ver una lista de los tipos de activación, consulta la enumeración [**ActivationKind**](/uwp/api/Windows.ApplicationModel.Activation.ActivationKind).
 
-La clase [**Windows.UI.Xaml.Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) define los métodos que puedes invalidar para controlar los distintos tipos de activación. Varios de los tipos de activación tienen un método específico que puedes invalidar. Para los demás tipos de activación, invalida el método [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated).
+La clase [**Windows.UI.Xaml.Application**](/uwp/api/Windows.UI.Xaml.Application) define los métodos que puedes invalidar para controlar los distintos tipos de activación. Varios de los tipos de activación tienen un método específico que puedes invalidar. Para los demás tipos de activación, invalida el método [**OnActivated**](/uwp/api/windows.ui.xaml.application.onactivated).
 
 Define la clase de la aplicación.
 
@@ -37,10 +37,10 @@ Define la clase de la aplicación.
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 ```
 
-Invalida el método [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched). Este método se llama cada vez que el usuario inicia la aplicación. El parámetro [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) contiene el estado anterior de la aplicación y los argumentos de activación.
+Invalida el método [**OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched). Este método se llama cada vez que el usuario inicia la aplicación. El parámetro [**LaunchActivatedEventArgs**](/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) contiene el estado anterior de la aplicación y los argumentos de activación.
 
 > [!NOTE]
-> En Windows, iniciando una aplicación suspendida en lista de mosaico o una aplicación de inicio no llama a este método.
+> En Windows, el inicio de una aplicación suspendida desde el icono de inicio o la lista de aplicaciones no llama a este método.
 
 ```csharp
 using System;
@@ -187,7 +187,7 @@ void App::EnsurePageCreatedAndActivate()
 
 ## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>restaurar los datos de la aplicación si se suspendió y después finalizó
 
-Cuando el usuario cambia a la aplicación finalizada, el sistema envía el evento [**Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated), con el objeto [**Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) establecido en **Launch** y el objeto [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) establecido en **Terminated** o **ClosedByUser**. La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
+Cuando el usuario cambia a la aplicación finalizada, el sistema envía el evento [**Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated), con el objeto [**Kind**](/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) establecido en **Launch** y el objeto [**PreviousExecutionState**](/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) establecido en **Terminated** o **ClosedByUser**. La aplicación debe cargar sus datos de aplicación guardados y actualizar el contenido que muestra.
 
 ```csharp
 async protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -259,19 +259,19 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-Si el valor de [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez.
+Si el valor de [**PreviousExecutionState**](/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) es **NotRunning**, la aplicación no pudo guardar sus datos de aplicación correctamente y debe iniciarse desde cero, como si se estuviera iniciando por primera vez.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!NOTE]
-> Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puede comprobar el [ **LaunchActivatedEventArgs.TileId** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.tileid) propiedad para determinar si la aplicación se inicia desde un elemento principal o un icono secundario y, en función de esa información, decidir si debe presentar una nueva o reanudar la experiencia de la aplicación.
+> Las aplicaciones pueden omitir la inicialización si ya hay contenido establecido en la ventana actual. Puede comprobar la propiedad [**LaunchActivatedEventArgs. TileId**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.tileid) para determinar si la aplicación se inició desde un icono principal o secundario y, en función de esa información, decidir si debe presentar una experiencia de aplicación nueva o reanudar.
 
 ## <a name="important-apis"></a>API importantes
-* [Windows.ApplicationModel.Activation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation)
-* [Windows.UI.Xaml.Application](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application)
+* [Windows. ApplicationModel. Activation](/uwp/api/Windows.ApplicationModel.Activation)
+* [Windows.UI.Xaml.Application](/uwp/api/Windows.UI.Xaml.Application)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Controlar la suspensión de aplicaciones](suspend-an-app.md)
 * [Controlar la reanudación de aplicaciones](resume-an-app.md)
-* [Directrices para la aplicación, suspensión y reanudar](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [Directrices para suspender y reanudar una aplicación](./index.md)
 * [Ciclo de vida de la aplicación](app-lifecycle.md)

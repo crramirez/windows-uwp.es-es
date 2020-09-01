@@ -5,16 +5,16 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: overview
-ms.openlocfilehash: 59722f1f31364c464a8a763d28f3d15ef13609a8
-ms.sourcegitcommit: cfba95a96202c4250de845115d1b99361412a779
+ms.openlocfilehash: f5680bdc6502c4b917667e5a59084286b445063c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903292"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166739"
 ---
 # <a name="extend-traceprocessor"></a>Extender TraceProcessor
 
-Muchos tipos de datos de seguimiento tienen compatibilidad integrada en [TraceProcessor](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.traceprocessor), pero si tiene los otros proveedores que desea analizar (incluidos sus propios proveedores personalizados), esos datos también están disponibles desde el seguimiento en directo mientras se produce el procesamiento.
+Muchos tipos de datos de seguimiento tienen compatibilidad integrada en [TraceProcessor](/dotnet/api/microsoft.windows.eventtracing.traceprocessor), pero si tiene los otros proveedores que desea analizar (incluidos sus propios proveedores personalizados), esos datos también están disponibles desde el seguimiento en directo mientras se produce el procesamiento.
 
 > [!NOTE]
 > Esta parte de la API está en versión preliminar y en desarrollo activo. Puede cambiar en futuras versiones.
