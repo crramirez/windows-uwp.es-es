@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: Android en Windows, PWA, Android, Cordova, iónico, PhoneGap, aplicación web híbrida
 ms.date: 04/28/2020
-ms.openlocfilehash: c0ff9acf1d8e93e82f1db424d7a356c974988683
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 482fd02ed7b5d978d81ec52309006034f70b7e47
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255219"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163989"
 ---
 # <a name="get-started-developing-a-pwa-or-hybrid-web-app-for-android"></a>Introducción al desarrollo de una aplicación Web de PWA o híbrida para Android
 
@@ -61,7 +61,7 @@ Hay dos distribuciones populares de Cordova:
 
 Para empezar a crear una aplicación Web de PWA o híbrida con PhoneGap, primero debe instalar las siguientes herramientas:
 
-- Node. js para interactuar con el ecosistema iónico. [Descargue NodeJS para Windows](https://nodejs.org/en/) o siga la [Guía de instalación de NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2) con el subsistema de Windows para Linux (WSL). Puede que desee considerar la posibilidad de usar [node version Manager (NVM)](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2#install-nvm-nodejs-and-npm) si va a trabajar con varios proyectos y versión de NodeJS.
+- Node.js para interactuar con el ecosistema iónico. [Descargue NodeJS para Windows](https://nodejs.org/en/) o siga la [Guía de instalación de NodeJS](../nodejs/setup-on-wsl2.md) con el subsistema de Windows para Linux (WSL). Puede que desee considerar la posibilidad de usar [node version Manager (NVM)](../nodejs/setup-on-wsl2.md#install-nvm-nodejs-and-npm) si va a trabajar con varios proyectos y versión de NodeJS.
 
 Instale PhoneGap escribiendo lo siguiente en la línea de comandos:
 
@@ -82,7 +82,7 @@ Para crear un nuevo proyecto de PhoneGap, siga los pasos para [empezar.](https:/
 
 Para empezar a crear una aplicación Web de PWA o híbrida con iónico, primero debe instalar las siguientes herramientas:
 
-- Node. js para interactuar con el ecosistema iónico. [Descargue NodeJS para Windows](https://nodejs.org/en/) o siga la [Guía de instalación de NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2) con el subsistema de Windows para Linux (WSL). Puede que desee considerar la posibilidad de usar [node version Manager (NVM)](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2#install-nvm-nodejs-and-npm) si va a trabajar con varios proyectos y versión de NodeJS.
+- Node.js para interactuar con el ecosistema iónico. [Descargue NodeJS para Windows](https://nodejs.org/en/) o siga la [Guía de instalación de NodeJS](../nodejs/setup-on-wsl2.md) con el subsistema de Windows para Linux (WSL). Puede que desee considerar la posibilidad de usar [node version Manager (NVM)](../nodejs/setup-on-wsl2.md#install-nvm-nodejs-and-npm) si va a trabajar con varios proyectos y versión de NodeJS.
 
 - VS Code para escribir el código. [Descargue vs code para Windows](https://code.visualstudio.com/). También puede instalar la [extensión remota WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) si prefiere compilar la aplicación con una línea de comandos de Linux.
 
@@ -203,7 +203,7 @@ Para probar la aplicación de iónico en un emulador de dispositivos Android, de
 
 2. [Cree un dispositivo virtual Android (AVD)](https://developer.android.com/studio/run/managing-avds.html).
 
-3. Escriba el comando para el iónico para compilar e implementar la aplicación en `ionic cordova emulate [<platform>] [options]`el emulador:. En este caso, el comando debe ser:
+3. Escriba el comando para el iónico para compilar e implementar la aplicación en el emulador: `ionic cordova emulate [<platform>] [options]` . En este caso, el comando debe ser:
 
 ```bash
 ionic cordova emulate android --list
@@ -213,7 +213,7 @@ Vea el [emulador de Cordova](https://ionicframework.com/docs/cli/commands/cordov
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](https://docs.microsoft.com/dual-screen/android/)
+- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](/dual-screen/android/)
 
 - [Agregar exclusiones de Windows Defender para mejorar el rendimiento](defender-settings.md)
 

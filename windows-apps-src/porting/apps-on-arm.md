@@ -5,12 +5,12 @@ ms.date: 05/22/2020
 ms.topic: article
 keywords: Windows 10 s, siempre conectado, ARM, ARM64, emulación x86
 ms.localizationpriority: medium
-ms.openlocfilehash: 679afeb1915bfcb84445ca97453a884654249a0e
-ms.sourcegitcommit: 2aa82d60d7f9edf7ae7f9a550a8d044e2040c08a
+ms.openlocfilehash: 39ff5b2aa6c72feaeaea0a7a61100196c109257c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443352"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162299"
 ---
 # <a name="windows-10-on-arm"></a>Windows 10 en ARM
 Originalmente Windows 10 (como se diferenciaba de Windows 10 Mobile) solo podía ejecutarse en equipos con procesadores x86 y x64. Ahora, el escritorio de Windows 10 puede ejecutarse en equipos con tecnología de procesadores ARM64 con la actualización de Fall Creators o versiones más recientes. La naturaleza de ahorro de energía de la arquitectura de CPU de ARM permite que estos equipos tengan una duración de la batería de todo el día y soporte técnico para redes de datos móviles. Estos equipos proporcionarán una excelente compatibilidad con las aplicaciones y le permitirán ejecutar las aplicaciones Win32 existentes de x86 sin modificar. Para obtener más información o una demostración, consulte el [vídeo de Channel 9 para el equipo conectado siempre](https://channel9.msdn.com/Events/Build/2017/P4171).
@@ -59,5 +59,5 @@ Herramientas remotas para Visual Studio están disponibles para las aplicaciones
 ## <a name="related-topics"></a>Temas relacionados
 |Tema | Descripción |
 |-----|-----|
-|[Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)|Instrucciones para crear un controlador de ARM64. |
-| [Depuración de aplicaciones x86 en ARM](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64) | Instrucciones para depurar aplicaciones x86 en ARM. |
+|[Compilar controladores de ARM64 con el WDK](/windows-hardware/drivers/develop/building-arm64-drivers)|Instrucciones para crear un controlador de ARM64. |
+| [Depuración de aplicaciones x86 en ARM](/windows-hardware/drivers/debugger/debugging-arm64) | Instrucciones para depurar aplicaciones x86 en ARM. |

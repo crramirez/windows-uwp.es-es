@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c7775c2d6c9e579e14c9f607fa0a09b665dbb24b
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 44864a0743443d976456f73a3bae5041fd63770e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969766"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163469"
 ---
 # <a name="accessibility-checklist"></a>Lista de comprobación de accesibilidad
 
@@ -23,21 +23,21 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
 1. Establece el nombre accesible (obligatorio) y la descripción accesible (opcional) para los elementos de la interfaz de usuario interactivos y de contenido de la aplicación.
 
-    Un nombre accesible es una cadena de texto descriptiva y corta que un lector de pantalla usa para anunciar un elemento de la interfaz de usuario. Algunos elementos de la interfaz de usuario como [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) y [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) promueven su contenido de texto como el nombre accesible predeterminado; vea [información básica de accesibilidad](basic-accessibility-information.md#name_from_inner_text).
+    Un nombre accesible es una cadena de texto descriptiva y corta que un lector de pantalla usa para anunciar un elemento de la interfaz de usuario. Algunos elementos de la interfaz de usuario como [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) y [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) promueven su contenido de texto como el nombre accesible predeterminado; vea [información básica de accesibilidad](basic-accessibility-information.md#name_from_inner_text).
 
-    Debes establecer el nombre accesible de forma explícita para imágenes y otros controles que no promueven contenido de texto interno como nombre accesible implícito. Debes usar etiquetas para los elementos de formulario, de modo que el texto de la etiqueta se pueda usar como destino [**LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) en el modelo de Automatización de la interfaz de usuario de Microsoft para la correspondencia de etiquetas y entradas. Si quieres proporcionar a los usuarios más información sobre la interfaz de usuario que la que suele incluir el nombre accesible, las descripciones accesibles e información sobre herramientas ayudan a los usuarios a comprender la interfaz de usuario.
+    Debes establecer el nombre accesible de forma explícita para imágenes y otros controles que no promueven contenido de texto interno como nombre accesible implícito. Debes usar etiquetas para los elementos de formulario, de modo que el texto de la etiqueta se pueda usar como destino [**LabeledBy**](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) en el modelo de Automatización de la interfaz de usuario de Microsoft para la correspondencia de etiquetas y entradas. Si quieres proporcionar a los usuarios más información sobre la interfaz de usuario que la que suele incluir el nombre accesible, las descripciones accesibles e información sobre herramientas ayudan a los usuarios a comprender la interfaz de usuario.
 
     Para obtener más información, consulta [Nombre accesible](basic-accessibility-information.md#accessible_name) y [Descripción accesible](basic-accessibility-information.md).
 
 2. Implementar accesibilidad de teclado:
 
-    * Prueba el orden de los índices de tabulación para una interfaz de usuario. Si es necesario, ajusta el orden de los índices de texto, lo que puede requerir la activación o desactivación de determinados controles o la modificación de los valores predeterminados de [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) en algunos de los elementos de la interfaz de usuario.
+    * Prueba el orden de los índices de tabulación para una interfaz de usuario. Si es necesario, ajusta el orden de los índices de texto, lo que puede requerir la activación o desactivación de determinados controles o la modificación de los valores predeterminados de [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex) en algunos de los elementos de la interfaz de usuario.
     * Usa controles que admitan la navegación por teclas de dirección para elementos compuestos. En los controles predeterminados, la navegación por teclas de dirección suele venir implementada.
-    * Usa controles que admitan la activación del teclado. En los controles predeterminados, en especial aquellos que admiten el modelo [**Invoke**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IInvokeProvider) de automatización de la interfaz de usuario, la activación del teclado suele estar disponible; consulta la documentación de ese control.
+    * Usa controles que admitan la activación del teclado. En los controles predeterminados, en especial aquellos que admiten el modelo [**Invoke**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IInvokeProvider) de automatización de la interfaz de usuario, la activación del teclado suele estar disponible; consulta la documentación de ese control.
     * Define teclas de acceso o teclas de aceleración para partes específicas de la interfaz de usuario que admitan interacción.
-    * Para cualquier control personalizado que uses en la interfaz de usuario, comprueba que hayas implementado estos controles con la compatibilidad adecuada de [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para la activación y que hayas definido invalidaciones para controlar las teclas según sea necesario a fin de admitir teclas de activación, recorrido y acceso o aceleración.
+    * Para cualquier control personalizado que uses en la interfaz de usuario, comprueba que hayas implementado estos controles con la compatibilidad adecuada de [**AutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para la activación y que hayas definido invalidaciones para controlar las teclas según sea necesario a fin de admitir teclas de activación, recorrido y acceso o aceleración.
 
-    Para obtener más información, consulte [interacciones de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions).
+    Para obtener más información, consulte [interacciones de teclado](../input/keyboard-interactions.md).
 
 3. Asegurarse de que el texto es de tamaño legible
 
@@ -58,7 +58,7 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
 5. Ejecuta herramientas de accesibilidad, soluciona problemas notificados y comprueba la experiencia de lectura de pantalla.
 
-    Usa herramientas como [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) para comprobar el acceso mediante programación, ejecuta herramientas como [**AccChecker**](https://docs.microsoft.com/windows/desktop/WinAuto/ui-accessibility-checker) para descubrir errores comunes y comprueba la experiencia de lectura en pantalla con la característica Narrador.
+    Usa herramientas como [**Inspect**](/windows/desktop/WinAuto/inspect-objects) para comprobar el acceso mediante programación, ejecuta herramientas como [**AccChecker**](/windows/desktop/WinAuto/ui-accessibility-checker) para descubrir errores comunes y comprueba la experiencia de lectura en pantalla con la característica Narrador.
 
     Para obtener más información, vea [pruebas de accesibilidad](accessibility-testing.md).
 
@@ -75,5 +75,5 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 * [Requisitos de texto accesible](accessible-text-requirements.md)
 * [Ajuste de escala de texto](../input/text-scaling.md)
 * [Accesibilidad](accessibility.md)
-* [Diseño de accesibilidad](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
+* [Diseño de accesibilidad](./accessibility-overview.md)
 * [Prácticas que se deben evitar](practices-to-avoid.md)

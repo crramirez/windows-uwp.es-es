@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e410094f738860e71dadb960fccbdbc59306050
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 8af42f2d2ddeecffef914339e748acf05558b8ae
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234142"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163379"
 ---
 # <a name="accessibility"></a>Accesibilidad  
 
@@ -27,7 +27,7 @@ La accesibilidad es acerca de la creación de experiencias que hacen que la apli
 | [Diseño de software inclusivo](designing-inclusive-software.md) | Obtenga información sobre cómo desarrollar un diseño inclusivo con aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad. |
 | [Desarrollo de aplicaciones inclusivas de Windows](developing-inclusive-windows-apps.md) | Este artículo es una guía para el desarrollo de aplicaciones de Windows accesibles. |
 | [Pruebas de accesibilidad](accessibility-testing.md) | Procedimientos de prueba que deben seguirse para asegurarse de que la aplicación de Windows está accesible. |
-| [Accesibilidad en la Tienda](accessibility-in-the-store.md) | Describe los requisitos para declarar la aplicación de Windows como accesible en el Microsoft Store. |
+| [Accesibilidad en Store](accessibility-in-the-store.md) | Describe los requisitos para declarar la aplicación de Windows como accesible en el Microsoft Store. |
 | [Lista de comprobación de accesibilidad](accessibility-checklist.md) | Proporciona una lista de comprobación para ayudarle a asegurarse de que la aplicación de Windows esté accesible. |
 | [Exponer información básica de accesibilidad](basic-accessibility-information.md) | La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia. |
 | [Accesibilidad de teclado](keyboard-accessibility.md) | Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla. |
@@ -40,5 +40,5 @@ La accesibilidad es acerca de la creación de experiencias que hacen que la apli
 | [Interfaces y patrones de control](control-patterns-and-interfaces.md) | Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos. |
 
 ## <a name="related-topics"></a>Temas relacionados  
-* [**Windows. UI. Xaml. Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation) 
+* [**Windows. UI. Xaml. Automation**](/uwp/api/Windows.UI.Xaml.Automation) 
 * [Introducción a narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

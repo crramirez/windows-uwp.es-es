@@ -3,19 +3,19 @@ title: Convertir un servicio de aplicaciones para que se ejecute en el mismo pro
 description: Puedes convertir el código de servicio de aplicaciones que se ejecutaba en un proceso en segundo plano independiente en un código que se ejecute en el mismo proceso que el proveedor de servicios de aplicaciones.
 ms.date: 11/03/2017
 ms.topic: article
-keywords: Windows 10, uwp, servicio de aplicación
+keywords: Windows 10, UWP, App Service
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
-ms.openlocfilehash: 2de79a5c5090f9dbe070f56ee6b2afd73d78f05f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d1bdd8b72cafe3dd719f7ee1733e13e1531f8c7e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366345"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162719"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Convertir un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host
 
-Un [AppServiceConnection](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection) permite que otra aplicación reactive la aplicación en segundo plano e inicie una línea directa de comunicación con él.
+Un [AppServiceConnection](/uwp/api/windows.applicationmodel.appservice.appserviceconnection) permite que otra aplicación reactive la aplicación en segundo plano e inicie una línea directa de comunicación con él.
 
 Con la introducción App Services dentro del proceso, dos aplicaciones en ejecución en primer plano pueden tener una línea directa de comunicación a través de una conexión de App Services. App Services ahora puede ejecutarse en el mismo proceso que la aplicación en primer plano, lo que hace que la comunicación entre aplicaciones resulte mucho más sencilla y elimina la necesidad de separar el código de servicio en un proyecto independiente.
 
@@ -38,13 +38,13 @@ La conversión de un App Service de modelo fuera del proceso a un modelo dentro 
 >   </Applications>
 > ```
 
-Quitar el `EntryPoint` atributo desde el `<Extension>` elemento porque ahora [OnBackgroundActivated()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated) es el punto de entrada que se usará cuando se invoca el servicio de aplicación.
+Quite el `EntryPoint` atributo del `<Extension>` elemento porque Now [OnBackgroundActivated ()](/uwp/api/windows.ui.xaml.application.onbackgroundactivated) es el punto de entrada que se usará cuando se invoque App Service.
 
-El segundo cambio consiste en mover la lógica de servicio de su proyecto de tarea en segundo plano independiente a métodos que se puedan llamar desde **OnBackgroundActivated()** .
+El segundo cambio consiste en mover la lógica de servicio de su proyecto de tarea en segundo plano independiente a métodos que se puedan llamar desde **OnBackgroundActivated()**.
 
 Ahora, tu aplicación puede ejecutar directamente el Servicio de aplicaciones. Por ejemplo, en App.xaml.cs:
 
-[!NOTE] El código siguiente es diferente del que se proporcionaron para el ejemplo 1 (servicio de fuera de proceso). El código siguiente se proporciona únicamente por motivos ilustrativos y no debe usarse como parte del ejemplo 2 (servicio en curso).  Para continuar con la transición del artículo del ejemplo 1 (servicio de fuera de proceso) en el ejemplo 2 (servicio en proceso) seguirán utilizando el código proporcionado por el ejemplo 1 en lugar del código ilustrativo siguiente.
+[!NOTE] El código siguiente es diferente del proporcionado por el ejemplo 1 (servicio fuera de proceso). El código siguiente se proporciona solo con fines ilustrativos y no debe usarse como parte del ejemplo 2 (servicio in-Process).  Para continuar la transición del artículo del ejemplo 1 (servicio fuera de proceso) al ejemplo 2 (servicio en proceso), siga usando el código proporcionado por el ejemplo 1 en lugar del código ilustrativo a continuación.
 
 ``` cs
 using Windows.ApplicationModel.AppService;
@@ -97,8 +97,8 @@ sealed partial class App : Application
 }
 ```
 
-En el código anterior, el método `OnBackgroundActivated` controla la activación del servicio de aplicaciones. Se registran todos los eventos necesarios para la comunicación a través de [AppServiceConnection](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appservice.appserviceconnection) y se almacena el objeto de aplazamiento de la tarea para que se pueda marcar como completado cuando haya finalizado la comunicación entre las aplicaciones.
+En el código anterior, el método `OnBackgroundActivated` controla la activación del servicio de aplicaciones. Se registran todos los eventos necesarios para la comunicación a través de [AppServiceConnection](/uwp/api/windows.applicationmodel.appservice.appserviceconnection) y se almacena el objeto de aplazamiento de la tarea para que se pueda marcar como completado cuando haya finalizado la comunicación entre las aplicaciones.
 
-Cuando la aplicación recibe una solicitud y lee la clase [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) proporcionada para ver si las cadenas `Key` y `Value` están presentes. Si están presentes, a continuación, el servicio de aplicaciones devuelve un par de valores de cadena `Response` y `True` de nuevo a la aplicación en el otro lado de **AppServiceConnection**.
+Cuando la aplicación recibe una solicitud y lee la clase [ValueSet](/uwp/api/windows.foundation.collections.valueset) proporcionada para ver si las cadenas `Key` y `Value` están presentes. Si están presentes, a continuación, el servicio de aplicaciones devuelve un par de valores de cadena `Response` y `True` de nuevo a la aplicación en el otro lado de **AppServiceConnection**.
 
-Obtén más información sobre la conexión y la comunicación con otras aplicaciones en [Crear y consumir un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).
+Obtén más información sobre la conexión y la comunicación con otras aplicaciones en [Crear y consumir un servicio de aplicación](./how-to-create-and-consume-an-app-service.md?f=255&MSPPError=-2147217396).

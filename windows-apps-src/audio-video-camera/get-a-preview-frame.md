@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9963955649b98f226fbb81871b2ac391035ba41a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 235a5e06a8483599b8fbf29e866e990456c1f1f1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360888"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163949"
 ---
 # <a name="get-a-preview-frame"></a>Obtener un fotograma de vista previa
 
@@ -19,49 +19,45 @@ ms.locfileid: "66360888"
 En este tema se muestra cómo obtener un solo fotograma de vista previa de la secuencia de vista previa de captura multimedia.
 
 > [!NOTE] 
-> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para implementar la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. Para usar el código de este artículo, se presupone que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente y una clase [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) con una secuencia de vista previa de vídeo activa.
+> Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para implementar la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. En el código de este artículo se supone que la aplicación ya tiene una instancia de MediaCapture que se ha inicializado correctamente y que tiene un objeto [**CaptureElement**](/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) con una secuencia de vista previa de vídeo activa.
 
 Además de los espacios de nombres necesarios para realizar la captura multimedia básica, necesitarás el siguiente espacio de nombres para capturar un marco de vista previa.
 
 [!code-cs[PreviewFrameUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPreviewFrameUsing)]
 
-Al solicitar un marco de vista previa, puedes especificar el formato en el que quieres recibir el marco creando un objeto [**VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame) con el formato que quieras. En este ejemplo se crea un marco de vídeo que tiene la misma la resolución que la secuencia de vista previa; para ello, se ha de llamar al método [**VideoDeviceController.GetMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties) y se debe especificar la enumeración [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) para solicitar las propiedades de la secuencia de vista previa. El ancho y alto de la secuencia de vista previa se usa para crear el nuevo marco de vídeo.
+Al solicitar un marco de vista previa, puedes especificar el formato en el que quieres recibir el marco creando un objeto [**VideoFrame**](/uwp/api/Windows.Media.VideoFrame) con el formato que quieras. En este ejemplo se crea un marco de vídeo que tiene la misma la resolución que la secuencia de vista previa; para ello, se ha de llamar al método [**VideoDeviceController.GetMediaStreamProperties**](/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties) y se debe especificar la enumeración [**MediaStreamType.VideoPreview**](/uwp/api/Windows.Media.Capture.MediaStreamType) para solicitar las propiedades de la secuencia de vista previa. El ancho y alto de la secuencia de vista previa se usa para crear el nuevo marco de vídeo.
 
 [!code-cs[CreateFormatFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFormatFrame)]
 
-Si el objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) se inicializa y tiene una secuencia de vista previa activa, llama a [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) para obtener una secuencia de vista previa. Pasa el marco de vídeo creado en el último paso, para especificar el formato del marco devuelto.
+Si el objeto [**MediaCapture**](/uwp/api/Windows.Media.Capture.MediaCapture) se inicializa y tiene una secuencia de vista previa activa, llama a [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) para obtener una secuencia de vista previa. Pasa el marco de vídeo creado en el último paso, para especificar el formato del marco devuelto.
 
 [!code-cs[GetPreviewFrameAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewFrameAsync)]
 
-Consigue una representación de [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) del fotograma de vista previa mediante el acceso a la propiedad [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.softwarebitmap) del objeto [**VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame). Para obtener información sobre cómo guardar, cargar y modificar mapas de bits de software, consulta [Imágenes](imaging.md).
+Consigue una representación de [**SoftwareBitmap**](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) del fotograma de vista previa mediante el acceso a la propiedad [**SoftwareBitmap**](/uwp/api/windows.media.videoframe.softwarebitmap) del objeto [**VideoFrame**](/uwp/api/Windows.Media.VideoFrame). Para obtener información sobre cómo guardar, cargar y modificar mapas de bits de software, consulta [Imágenes](imaging.md).
 
 [!code-cs[GetPreviewBitmap](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewBitmap)]
 
-Asimismo, también puedes obtener una representación de [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) del fotograma de vista previa si quieres usar la imagen con las API de Direct3D.
+Asimismo, también puedes obtener una representación de [**IDirect3DSurface**](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) del fotograma de vista previa si quieres usar la imagen con las API de Direct3D.
 
 [!code-cs[GetPreviewSurface](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewSurface)]
 
 > [!IMPORTANT]
-> Es posible que la propiedad [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.softwarebitmap) o la propiedad [**Direct3DSurface**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.direct3dsurface) del valor devuelto de **VideoFrame** sea nula; todo depende de cómo hayas llamado a **GetPreviewFrameAsync** y del tipo de dispositivo en el que se ejecute la aplicación.
+> Es posible que la propiedad [**SoftwareBitmap**](/uwp/api/windows.media.videoframe.softwarebitmap) o la propiedad [**Direct3DSurface**](/uwp/api/windows.media.videoframe.direct3dsurface) del valor devuelto de **VideoFrame** sea nula; todo depende de cómo hayas llamado a **GetPreviewFrameAsync** y del tipo de dispositivo en el que se ejecute la aplicación.
 
-> - Si llamas a la sobrecarga de [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) que acepta un argumento **VideoFrame**, el valor de **VideoFrame** devuelto tendrá una propiedad **SoftwareBitmap** que no será nula y una propiedad **Direct3DSurface** que sí lo será.
-> - Si llamas a la sobrecarga de un método [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) que no tenga ningún argumento en un dispositivo que use una superficie de Direct3D para representar el marco internamente, la propiedad **Direct3DSurface** no será nula y la propiedad **SoftwareBitmap** sí lo será.
-> - Si llamas a la sobrecarga de un método [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) que no tenga ningún argumento en un dispositivo que no use una superficie de Direct3D para representar el marco internamente, la propiedad **SoftwareBitmap** no será nula y la propiedad **Direct3DSurface** sí lo será.
+> - Si llamas a la sobrecarga de [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) que acepta un argumento **VideoFrame**, el valor de **VideoFrame** devuelto tendrá una propiedad **SoftwareBitmap** que no será nula y una propiedad **Direct3DSurface** que sí lo será.
+> - Si llamas a la sobrecarga de un método [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) que no tenga ningún argumento en un dispositivo que use una superficie de Direct3D para representar el marco internamente, la propiedad **Direct3DSurface** no será nula y la propiedad **SoftwareBitmap** sí lo será.
+> - Si llamas a la sobrecarga de un método [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) que no tenga ningún argumento en un dispositivo que no use una superficie de Direct3D para representar el marco internamente, la propiedad **SoftwareBitmap** no será nula y la propiedad **Direct3DSurface** sí lo será.
 
 La aplicación debe comprobar siempre si hay un valor "null" antes de intentar operar con los objetos devueltos por las propiedades **SoftwareBitmap** o **Direct3DSurface**.
 
-Cuando hayas terminado con el marco de vista previa, asegúrate de llamar a su método [**Close**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.close) (previsto para Dispose en C#), para liberar los recursos usados por el marco. Igualmente, también puedes usar el patrón **using**, que elimina automáticamente el objeto.
+Cuando hayas terminado con el marco de vista previa, asegúrate de llamar a su método [**Close**](/uwp/api/windows.media.videoframe.close) (previsto para Dispose en C#), para liberar los recursos usados por el marco. Igualmente, también puedes usar el patrón **using**, que elimina automáticamente el objeto.
 
 [!code-cs[CleanUpPreviewFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpPreviewFrame)]
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
-
-
-
-

@@ -1,24 +1,24 @@
 ---
-title: Creación de un juego de DirectX Plataforma universal de Windows (UWP)
-description: En este conjunto de tutoriales, aprenderá a usar DirectX y [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) para crear el juego de ejemplo básico plataforma universal de Windows (UWP) denominado **Simple3DGameDX**.
+title: Crear un juego sencillo para la Plataforma universal de Windows (UWP) con DirectX
+description: En este conjunto de tutoriales, aprenderá a usar DirectX y [C++/WinRT](../cpp-and-winrt-apis/index.md) para crear el juego de ejemplo básico plataforma universal de Windows (UWP) denominado **Simple3DGameDX**.
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
 keywords: Juego de ejemplo de DirectX, juego de ejemplo, Plataforma universal de Windows (UWP), juego Direct3D 11
 ms.date: 06/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e3007cd79546cba8961000cb2aae44b0b0536fe
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 284aa821cc58a49f45bed3b0d7e28c20f9d19ba1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409574"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163029"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Crear un juego de Plataforma universal de Windows (UWP) simple con DirectX
 
-En este conjunto de tutoriales, aprenderá a usar DirectX y [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) para crear el juego de ejemplo básico plataforma universal de Windows (UWP) denominado **Simple3DGameDX**. El juego tiene lugar en una sencilla Galería de Disparos 3D de primera persona.
+En este conjunto de tutoriales, aprenderá a usar DirectX y [C++/WinRT](../cpp-and-winrt-apis/index.md) para crear el juego de ejemplo básico plataforma universal de Windows (UWP) denominado **Simple3DGameDX**. El juego tiene lugar en una sencilla Galería de Disparos 3D de primera persona.
 
 > [!NOTE]
-> El vínculo desde el que puede descargar el juego de ejemplo **Simple3DGameDX** es un [juego de ejemplo de Direct3D](/samples/microsoft/windows-universal-samples/simple3dgamedx/). El código fuente de C++/WinRT se encuentra en la carpeta denominada `cppwinrt` . Para obtener información sobre otras aplicaciones de ejemplo de UWP, consulte [obtener ejemplos de aplicaciones para UWP](/windows/uwp/get-started/get-uwp-app-samples).
+> El vínculo desde el que puede descargar el juego de ejemplo **Simple3DGameDX** es un [juego de ejemplo de Direct3D](/samples/microsoft/windows-universal-samples/simple3dgamedx/). El código fuente de C++/WinRT se encuentra en la carpeta denominada `cppwinrt` . Para obtener información sobre otras aplicaciones de ejemplo de UWP, consulte [obtener ejemplos de aplicaciones para UWP](../get-started/get-app-samples.md).
 
 Estos tutoriales cubren todas las partes principales de un juego, incluidos los procesos de carga de recursos como artes y mallas, la creación de un bucle principal del juego, la implementación de una canalización de representación simple y la adición de sonido y controles.
 
@@ -32,7 +32,7 @@ Para obtener información sobre los conceptos básicos y los componentes de un j
 
 Para este tutorial, debe estar familiarizado con estos temas.
 
-- [/WinRT de C++](/windows/uwp/cpp-and-winrt-apis/). C++/WinRT es una proyección moderna estándar de lenguaje C++ 17 para API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para proporcionarle acceso de primera clase a las API modernas de Windows.
+- [/WinRT de C++](../cpp-and-winrt-apis/index.md). C++/WinRT es una proyección moderna estándar de lenguaje C++ 17 para API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para proporcionarle acceso de primera clase a las API modernas de Windows.
 - Álgebra lineal básica y conceptos de física newtoniana.
 - Terminología básica de programación de gráficos.
 - Conceptos básicos de programación en Windows.

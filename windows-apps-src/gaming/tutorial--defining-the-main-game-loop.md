@@ -6,12 +6,12 @@ ms.date: 06/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, juegos, objeto principal
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a6d087be6df93ee6798c29147f7fd1c820bd225
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 497a1f0dc16308b4b9360aff958b94f04b6283ae
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409564"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162999"
 ---
 # <a name="define-the-main-game-object"></a>Definir el objeto principal del juego
 
@@ -249,7 +249,7 @@ Entre las funciones miembro públicas definidas por **Simple3DGame** se incluyen
 
 - **Inicializar**. Establece los valores iniciales de las variables globales e inicializa los objetos de juego. Esto se trata en la sección [inicialización e inicio del juego](#initialize-and-start-the-game) .
 - **LoadGame**. Inicializa un nuevo nivel y comienza a cargarlo.
-- **LoadLevelAsync**. Una corutina que inicializa el nivel y, a continuación, invoca otra corutina en el representador para cargar los recursos del nivel específico del dispositivo. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) (en contraposición a los métodos [**ID3D11DeviceContext**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**. Si no está familiarizado con la programación asincrónica, vea [simultaneidad y operaciones asincrónicas con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
+- **LoadLevelAsync**. Una corutina que inicializa el nivel y, a continuación, invoca otra corutina en el representador para cargar los recursos del nivel específico del dispositivo. Este método se ejecuta en otro subproceso; como consecuencia, solo se puede llamar a los métodos [**ID3D11Device**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) (en contraposición a los métodos [**ID3D11DeviceContext**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)) desde este subproceso. Los métodos de contexto de dispositivo se llaman en el método **FinalizeLoadLevel**. Si no está familiarizado con la programación asincrónica, vea [simultaneidad y operaciones asincrónicas con C++/WinRT](../cpp-and-winrt-apis/concurrency.md).
 - **FinalizeLoadLevel**. Finaliza cualquier tarea de carga de nivel que sea necesario realizar en el subproceso principal. Esto incluye cualquier llamada a métodos de contexto de dispositivo de Direct3D 11 ([**ID3D11DeviceContext**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)).
 - **StartLevel**. Inicia el juego para un nuevo nivel.
 - **PauseGame**. Pausa el juego.

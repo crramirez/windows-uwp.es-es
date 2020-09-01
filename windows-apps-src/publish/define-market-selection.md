@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, mercados, países, regiones
 ms.localizationpriority: medium
-ms.openlocfilehash: ed80d8ef727d3c9be276b295a504b8cc02b373aa
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 63650ad15f4a3083b4f500bc16591bb6bd8d8185
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234654"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162029"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
@@ -77,7 +77,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Bahamas</td>
-    <td>Bahréin</td>
+    <td>Baréin</td>
     <td>Bangladés</td>
     <td>Barbados</td>
   </tr>
@@ -102,7 +102,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Territorio Británico del Océano Índico</td>
     <td>Islas Vírgenes Británicas</td>
-    <td>Brunei</td>
+    <td>Brunéi</td>
     <td>Bulgaria</td>
   </tr>
   <tr>
@@ -124,10 +124,10 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Isla de Navidad</td>
   </tr>
   <tr>
-    <td>Islas Cocos (Keeling)</td>
+    <td>Islas Cocos</td>
     <td>Colombia</td>
-    <td>Comores</td>
-    <td>Congo (RDC)</td>
+    <td>Comoras</td>
+    <td>Congo</td>
   </tr>
   <tr>
     <td>Congo (RDC)</td>
@@ -161,7 +161,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Islas Feroe</td>
-    <td>Islas Fiji</td>
+    <td>Fiyi</td>
     <td>Finlandés</td>
     <td>Francés</td>
   </tr>
@@ -191,8 +191,8 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Guinea</td>
-    <td>Guinea-Bisáu</td>
-    <td>Guayana</td>
+    <td>Guinea-Bissau</td>
+    <td>Guyana</td>
     <td>Haití</td>
   </tr>
   <tr>
@@ -246,12 +246,12 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Macedonia del Norte</td>
     <td>Madagascar</td>
-    <td>Malaui</td>
+    <td>Malawi</td>
     <td>Malasia</td>
   </tr>
   <tr>
     <td>Maldivas</td>
-    <td>Malí</td>
+    <td>Mali</td>
     <td>Malta</td>
     <td>Islas Marshall</td>
   </tr>
@@ -299,7 +299,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Pakistán</td>
-    <td>Palaos</td>
+    <td>Palau</td>
     <td>Autoridad palestina</td>
     <td>Panamá</td>
   </tr>
@@ -354,13 +354,13 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Somalia</td>
     <td>Sudáfrica *</td>
-    <td>Georgia del Sur e Islas Sandwich del Sur</td>
+    <td>Islas Georgia del Sur y Sandwich del Sur</td>
     <td>Portugal</td>
   </tr>
   <tr>
     <td>Sri Lanka</td>
     <td>Surinam</td>
-    <td>Islas Svalbard y Jan Mayen</td>
+    <td>Svalbard y Jan Mayen</td>
     <td>Suazilandia</td>
   </tr>
   <tr>
@@ -422,7 +422,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
 
 ## <a name="price-considerations-for-specific-markets"></a>Consideraciones relativas a los precios para mercados concretos
 
-Los métodos de pago tales como tarjetas de regalo y la facturación de operador de telefonía móvil pueden ayudarte a aumentar las ventas de las aplicaciones de pago y las compras desde la aplicación en los mercados en los que el uso de las tarjetas de crédito es reducido. Debido a los elevados costos de activación de tales métodos de pago, se suma un ajuste de expansión comercial a los honorarios de la Tienda, deducido de los recibos netos para calcular las ganancias de la aplicación que se pagarán para las aplicaciones de pago y las transacciones de compra desde la aplicación en los países/regiones y con los métodos de pago indicados en las siguientes tablas. Puede que desees considerar si el ajuste de expansión comercial se aplica en un país/región en el que tu aplicación está disponible y tenerlo en cuenta para la estrategia de precios de mercado. Puedes encontrar más información sobre el ajuste de expansión comercial en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+Los métodos de pago tales como tarjetas de regalo y la facturación de operador de telefonía móvil pueden ayudarte a aumentar las ventas de las aplicaciones de pago y las compras desde la aplicación en los mercados en los que el uso de las tarjetas de crédito es reducido. Debido a los elevados costos de activación de tales métodos de pago, se suma un ajuste de expansión comercial a los honorarios de la Tienda, deducido de los recibos netos para calcular las ganancias de la aplicación que se pagarán para las aplicaciones de pago y las transacciones de compra desde la aplicación en los países/regiones y con los métodos de pago indicados en las siguientes tablas. Puede que desees considerar si el ajuste de expansión comercial se aplica en un país/región en el que tu aplicación está disponible y tenerlo en cuenta para la estrategia de precios de mercado. Puedes encontrar más información sobre el ajuste de expansión comercial en el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement).
 
 El ajuste de expansión comercial se aplicará a todas las transacciones procesadas para el país/región y los métodos de pago especificados a partir de la fecha efectiva. Esta información se actualizará mensualmente y se incluirán nuevos países/regiones y métodos de pago en un plazo de treinta (30) días a partir de la entrada en vigor del ajuste de expansión comercial para dicho país/región y método de pago.
 
@@ -430,47 +430,47 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 | País/región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
 |----------------------|-----------------|-------------------------------|----------------|
-| Argentina            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Australia            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Austria              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Bélgica              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Brasil               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Canadá               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Chile                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| China                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Colombia             | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Chequia              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Dinamarca              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Finlandia              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Francia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Alemania              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Grecia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| RAE de Hong Kong            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Hungría              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| India                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Irlanda              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Israel               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Italia                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Japón                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| México               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Países Bajos          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Polonia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Portugal             | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Rusia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Arabia Saudí         | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Singapur            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Eslovaquia             | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Sudáfrica         | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Corea del Sur          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| España                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Suecia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Suiza          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Taiwán               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Turquía               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Reino Unido       | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
-| Estados Unidos        | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Argentina            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Australia            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Austria              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Bélgica              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Brasil               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Canadá               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Chile                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| China                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Colombia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Chequia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Dinamarca              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Finlandia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Francia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Alemania              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Grecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| RAE de Hong Kong            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Hungría              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| India                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Irlanda              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Israel               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Italia                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Japón                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| México               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Países Bajos          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Polonia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Portugal             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Rusia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Arabia Saudí         | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Singapur            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Eslovaquia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Sudáfrica         | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Corea del Sur          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| España                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Suecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Suiza          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Taiwán               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Turquía               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Reino Unido       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Estados Unidos        | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 
  
 
@@ -523,7 +523,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Isla Bouvet</td>
     <td>Territorio Británico del Océano Índico</td>
     <td>Islas Vírgenes Británicas</td>
-    <td>Brunei</td>
+    <td>Brunéi</td>
   </tr>
   <tr>
     <td>Burkina Faso</td>
@@ -539,9 +539,9 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>Isla de Navidad</td>
-    <td>Islas Cocos (Keeling)</td>
-    <td>Comores</td>
-    <td>Congo (RDC)</td>
+    <td>Islas Cocos</td>
+    <td>Comoras</td>
+    <td>Congo</td>
   </tr>
   <tr>
     <td>Congo (RDC)</td>
@@ -564,7 +564,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   <tr>
     <td>Islas Malvinas</td>
     <td>Islas Feroe</td>
-    <td>Islas Fiji</td>
+    <td>Fiyi</td>
     <td>Guayana Francesa</td>
   </tr>
   <tr>
@@ -588,8 +588,8 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   <tr>
     <td>Guernsey</td>
     <td>Guinea</td>
-    <td>Guinea-Bisáu</td>
-    <td>Guayana</td>
+    <td>Guinea-Bissau</td>
+    <td>Guyana</td>
   </tr>
   <tr>
     <td>Haití</td>
@@ -617,9 +617,9 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>Madagascar</td>
-    <td>Malaui</td>
+    <td>Malawi</td>
     <td>Maldivas</td>
-    <td>Malí</td>
+    <td>Mali</td>
   </tr>
   <tr>
     <td>Islas Marshall</td>
@@ -658,7 +658,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Islas Marianas del Norte</td>
   </tr>
   <tr>
-    <td>Palaos</td>
+    <td>Palau</td>
     <td>Autoridad palestina</td>
     <td>Panamá</td>
     <td>Papúa Nueva Guinea</td>
@@ -694,9 +694,9 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Somalia</td>
   </tr>
   <tr>
-    <td>Georgia del Sur e Islas Sandwich del Sur</td>
+    <td>Islas Georgia del Sur y Sandwich del Sur</td>
     <td>Surinam</td>
-    <td>Islas Svalbard y Jan Mayen</td>
+    <td>Svalbard y Jan Mayen</td>
     <td>Suazilandia</td>
   </tr>
   <tr>

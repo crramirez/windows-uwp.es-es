@@ -4,24 +4,24 @@ description: En esta sección se muestra cómo trabajar con controladores para j
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, juegos, entrada
+keywords: Windows 10, UWP, juegos, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f1daac8bc94d49c501307728c1e966ba89435f9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0c9565f02356b776738bb325eb9a29e84582f4ad
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631670"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163099"
 ---
 # <a name="input-for-games"></a>Entrada para juegos
 
 En esta sección se describen los diferentes tipos de dispositivos de entrada que pueden usarse en juegos para la Plataforma universal de Windows (UWP) en Windows 10 y Xbox One, se muestra su uso básico y se recomiendan patrones y técnicas para la programación de entrada eficaz para juegos.
 
-> **Nota**    Existen otros tipos de dispositivos de entrada y están disponibles para usarse en juegos para UWP, como dispositivos de entrada personalizados que pueden ser específicos del juego o género. Dichos dispositivos y su programación no se analizan en esta sección. Para obtener información sobre las interfaces usadas para facilitar los dispositivos de entrada personalizados, consulta el espacio de nombres [Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom).
+> **Nota**    Existen otros tipos de dispositivos de entrada y están disponibles para usarse en juegos para UWP, como dispositivos de entrada personalizados que pueden ser específicos del juego o género. Dichos dispositivos y su programación no se analizan en esta sección. Para obtener información sobre las interfaces usadas para facilitar los dispositivos de entrada personalizados, consulta el espacio de nombres [Windows.Gaming.Input.Custom](/uwp/api/windows.gaming.input.custom).
 
 ## <a name="gaming-input-devices"></a>Dispositivos de entrada de juegos
 
-Los dispositivos de entrada de juegos son compatibles con aplicaciones y juegos para UWP para Windows 10 y Xbox One en el espacio de nombres [Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input).
+Los dispositivos de entrada de juegos son compatibles con aplicaciones y juegos para UWP para Windows 10 y Xbox One en el espacio de nombres [Windows.Gaming.Input](/uwp/api/windows.gaming.input).
 
 ### <a name="gamepads"></a>Controladores para juegos
 
@@ -41,25 +41,25 @@ Los volantes son dispositivos de entrada que se asemejan mucho a una cabina carr
 
 Para obtener información sobre cómo usar los volantes en tu juego para UWP, consulta [Racing Wheel and force feedback (Volante y retroalimentación de fuerza)](racing-wheel-and-force-feedback.md).
 
-### <a name="flight-sticks"></a>Palancas de mandos
+### <a name="flight-sticks"></a>Palos de vuelos
 
-Las palancas de mandos son dispositivos de entrada de juegos que reproducen la sensación de las palancas de mandos que se encontrarían en un avión o cabina de nave espacial. Son el dispositivo de entrada perfecto para un control de vuelo rápido y preciso.
+Los palos son dispositivos de entrada de juegos que reproducen el funcionamiento de los palos que se encontrarían en un avión o en una cabina de espacio. Son el dispositivo de entrada perfecto para un control rápido y preciso del vuelo.
 
-Para más información sobre cómo usar las palancas de mandos en tu juego para UWP, consulta [Palanca de mandos](flight-stick.md).
+Para obtener más información sobre cómo usar los bastones en el juego de UWP, consulte la [caja de vuelo](flight-stick.md).
 
 ### <a name="raw-game-controllers"></a>Dispositivos de juego sin procesar
 
-Un dispositivo de juego sin procesar es una representación genérica de un dispositivo de juego, con entradas que se encuentran en muchos tipos diferentes de dispositivos de juego comunes. Estas entradas se exponen como matrices simples de botones, modificadores y ejes sin nombre. Con un dispositivo de juego sin procesar, puedes permitir a los clientes crear asignaciones de entrada personalizadas independientemente de qué tipo de controlador estén usando.
+Un dispositivo de juego sin formato es una representación genérica de un dispositivo de juego, con entradas que se encuentran en muchos tipos diferentes de dispositivos de juego comunes. Estas entradas se exponen como matrices simples de botones, modificadores y ejes sin nombre. Con un dispositivo de juego sin procesar, puede permitir que los clientes creen asignaciones de entrada personalizadas independientemente del tipo de controlador que estén usando.
 
-Para más información sobre cómo usar dispositivos de juego sin procesar en tu juego para UWP, consulta [Dispositivo de juego sin procesar](raw-game-controller.md).
+Para obtener más información sobre cómo usar dispositivos de juego sin procesar en el juego de UWP, consulta [dispositivo de juego sin formato](raw-game-controller.md).
 
-### <a name="ui-navigation-controllers"></a>Controladores de navegación de la interfaz de usuario
+### <a name="ui-navigation-controllers"></a>Controladores de navegación de IU
 
 Los controladores de navegación de la interfaz de usuario son dispositivos de entrada lógica que sirven para proporcionar un vocabulario común para los comandos de navegación de la interfaz de usuario que favorece una experiencia de usuario coherente entre los distintos juegos y dispositivos de entrada físicos. La interfaz de usuario de un juego debe usar las interfaces UINavigationController en lugar de las interfaces específicas de dispositivo.
 
 Para obtener información sobre cómo usar controladores de navegación de la interfaz de usuario en tu juego para UWP, consulta [Controlador de navegación de la interfaz de usuario](ui-navigation-controller.md).
 
-### <a name="headsets"></a>Auriculares
+### <a name="headsets"></a>Tubos de dirección
 
 Los auriculares son dispositivos de captura y reproducción de audio que se asocian con un usuario específico cuando se conecta a través de su dispositivo de entrada. Se usan habitualmente para el chat de voz de los juegos en línea, pero también pueden usarse para mejorar la inmersión o proporcionar características de juego tanto en los juegos en línea como sin conexión.
 
@@ -71,8 +71,8 @@ Cada dispositivo de entrada y sus auriculares conectados pueden asociarse con un
 
 Para obtener información sobre cómo administrar los usuarios y los dispositivos de entrada, consulta [Tracking users and their devices (Seguimiento de usuarios y sus dispositivos)](input-practices-for-games.md#tracking-users-and-their-devices).
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
-* [Prácticas recomendadas de entrada para juegos](input-practices-for-games.md)
-* [Espacio de nombres Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
-* [Espacio de nombres Windows.Gaming.Input.Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
+* [Procedimientos de entrada para juegos](input-practices-for-games.md)
+* [Espacio de nombres Windows. Gaming. Input](/uwp/api/windows.gaming.input)
+* [Espacio de nombres Windows. Gaming. Input. Custom](/uwp/api/windows.gaming.input.custom)

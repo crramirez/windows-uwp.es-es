@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4145fbc67c6788a1d742fb0db616ecbc719e4b34
-ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
+ms.openlocfilehash: e5ac10a1cc4e9feee609a56e5db6285284c41b98
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619319"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163699"
 ---
 # <a name="playready-encrypted-media-extension"></a>Encrypted Media Extension (EME) de PlayReady
 
@@ -34,7 +34,7 @@ En la siguiente lista se describen las nuevas características y los cambios rea
 -   Proporciona la adquisición proactiva de licencias no persistentes.
 -   Proporciona la adquisición de varias licencias en un mensaje.
 
-    Puedes usar un objeto PlayReady con varios identificadores de clave (id. de clave) como en Windows 8.1, o bien usar los [datos del modelo de descifrado de contenido (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) con varios id. de clave.
+    Puedes usar un objeto PlayReady con varios identificadores de clave (id. de clave) como en Windows 8.1, o bien usar los [datos del modelo de descifrado de contenido (CDMData)](/previous-versions/windows/apps/dn457361(v=ieb.10)) con varios id. de clave.
 
     > [!NOTE]
     > En Windows 10, se admiten varios identificadores de clave en &lt;Id. de clave&gt; en CDMData.
@@ -72,7 +72,7 @@ Para usar la tecnología DRM de hardware de PlayReady, la aplicación web de Jav
 En ocasiones algunos contenidos no son compatibles con DRM de hardware. El contenido Cocktail nunca se admite en DRM de hardware; si quieres reproducir este tipo de contenido debes desactivar DRM de hardware. Cierto DRM de hardware admitirá HEVC y otro no lo hará. Si quieres reproducir contenido HEVC y DRM de hardware no lo admite, también tendrás que desactivarlo.
 
 > [!NOTE]
-> Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware).
+> Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware).
 
 ## <a name="add-secure-stop-to-your-web-app"></a>Agregar la detención segura a aplicaciones web
 
@@ -262,13 +262,13 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 ```
 
 > [!NOTE]
-> Los datos `<SessionID>B64 encoded session ID</SessionID>` de detención segura en el ejemplo anterior pueden ser un asterisco (\*), que es un comodín para todas las sesiones de detención segura registradas. Es decir, la etiqueta **SessionID** puede ser una sesión concreta o un carácter comodín (\*) para seleccionar todas las sesiones de detención segura.
+> Los datos de detención segura `<SessionID>B64 encoded session ID</SessionID>` en el ejemplo anterior pueden ser un asterisco ( \* ), que es un comodín para todas las sesiones de detención segura registradas. Es decir, la etiqueta **SessionID** puede ser una sesión concreta o un carácter comodín ( \* ) para seleccionar todas las sesiones de detención segura.
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>Consideraciones de programación para Encrypted Media Extension
 
 En esta sección se enumeran las consideraciones de programación que debes tener en cuenta al crear aplicaciones para Windows 10 habilitadas para PlayReady.
 
-Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el ejemplo siguiente se asignan las *variables\_g msMediaKeys* y *g\_mediaKeySession* como variables globales, que se asignan a los objetos **msMediaKeys** y **MSMediaKeySession** de la función.
+Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el ejemplo siguiente se asignan las *variables \_ g msMediaKeys* y *g \_ mediaKeySession* como variables globales, que se asignan a los objetos **msMediaKeys** y **MSMediaKeySession** de la función.
 
 ``` syntax
 var g_msMediaKeys;
@@ -300,7 +300,3 @@ Para obtener más información, consulta las [aplicaciones de muestra](https://g
 
 ## <a name="see-also"></a>Vea también
 - [DRM de PlayReady](playready-client-sdk.md)
-
-
-
-

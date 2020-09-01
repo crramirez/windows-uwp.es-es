@@ -1,47 +1,47 @@
 ---
 title: Referencia de API de Fiddler de Device Portal
-description: Descubre cómo habilitar o deshabilitar el seguimiento de Fiddler mediante programación.
+description: Obtenga información sobre cómo habilitar y deshabilitar el seguimiento de red de Fiddler en DevKit mediante la API de REST del portal de dispositivos Xbox.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cbdae1084f96901e90f8237d71bd59bf2d4c592
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: f431adae41021432dfcfca6b4e79df5237fcb283
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240023"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163999"
 ---
 # <a name="fiddler-settings-api-reference"></a>Referencia de API de configuración de Fiddler   
 Puedes habilitar y deshabilitar el seguimiento de red de Fiddler en tu kit de desarrollo con esta API de REST.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si el seguimiento de Fiddler está habilitado
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Determinar si está habilitado el seguimiento de Fiddler
 
 **Solicitud**
 
-Puedes comprobar para ver si el seguimiento de Fiddler está habilitado en el dispositivo con la siguiente solicitud.
+Puede comprobar si el seguimiento de Fiddler está habilitado en el dispositivo mediante la solicitud siguiente.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 GET | /ext/fiddler
 
 
 **Parámetros de URI**
 
-- Ninguno
+- None
 
 **Encabezados de solicitud**
 
-- Ninguno
+- None
 
 **Cuerpo de la solicitud**   
 
-- Ninguno
+- None
 
 **Respuesta**   
 
-- Propiedad booleana IsProxyEnabled de JSON que especifica si el proxy está habilitado o no.
+- Propiedad JSON bool IsProxyEnabled que especifica si el proxy está habilitado o no.
 
 **Código de estado**
 
@@ -59,9 +59,9 @@ Código de estado HTTP      | Descripción
 
 Puedes habilitar el seguimiento de Fiddler para el kit de desarrollo con la siguiente solicitud.  Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
-EXPONER | /ext/fiddler
+POST | /ext/fiddler
 
 **Parámetros de URI**
 
@@ -76,7 +76,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguno
+- None
 
 **Cuerpo de la solicitud**
 
@@ -84,7 +84,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Respuesta**   
 
-- Ninguno  
+- None  
 
 **Código de estado**
 
@@ -102,25 +102,25 @@ Código de estado HTTP      | Descripción
 
 Puedes deshabilitar el seguimiento de Fiddler en el dispositivo con la siguiente solicitud. Ten en cuenta que será necesario reiniciar el dispositivo para que esto surta efecto.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
-SUPRIMIR | /ext/fiddler
+Delete | /ext/fiddler
 
 **Parámetros de URI**
 
-- Ninguno
+- None
 
 **Encabezados de solicitud**
 
-- Ninguno
+- None
 
 **Cuerpo de la solicitud**   
 
-- Ninguno
+- None
 
 **Respuesta**   
 
-- Ninguno 
+- None 
 
 **Código de estado**
 

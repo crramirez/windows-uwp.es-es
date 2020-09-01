@@ -6,28 +6,28 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, temporizador y subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c34f50d7b5abec28b11fc67a7e0515f07206060
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: a93b023120957f6335c14a4d40013f51e4e7be2a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970133"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164119"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Enviar un elemento de trabajo con un temporizador
 
 
 <b>API importantes</b>
 
--   [**Espacio de nombres Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
--   [**Espacio de nombres Windows.System.Threading**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
+-   [**Espacio de nombres Windows.UI.Core**](/uwp/api/Windows.UI.Core)
+-   [**Espacio de nombres Windows.System.Threading**](/uwp/api/Windows.System.Threading)
 
 Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador.
 
 ## <a name="create-a-single-shot-timer"></a>Crear un temporizador de único disparo
 
-Usa el método [**CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan).
+Usa el método [**CreateTimer**](/uwp/api/windows.system.threading.threadpooltimer.createtimer) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan).
 
-> **Nota:**    Puede usar [**CoreDispatcher. RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Nota:**    Puede usar [**CoreDispatcher. RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres minutos:
 
@@ -87,7 +87,7 @@ En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres mi
 
 ## <a name="provide-a-completion-handler"></a>Proporcionar un controlador de finalización
 
-Si es necesario, controla la cancelación y la finalización del elemento de trabajo con un [**TimerDestroyedHandler**](https://docs.microsoft.com/uwp/api/windows.system.threading.timerdestroyedhandler). Usa la sobrecarga [**CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) para enviar un lambda adicional. Este se ejecuta cuando se cancela el temporizador o cuando se completa el elemento de trabajo.
+Si es necesario, controla la cancelación y la finalización del elemento de trabajo con un [**TimerDestroyedHandler**](/uwp/api/windows.system.threading.timerdestroyedhandler). Usa la sobrecarga [**CreateTimer**](/uwp/api/windows.system.threading.threadpooltimer.createtimer) para enviar un lambda adicional. Este se ejecuta cuando se cancela el temporizador o cuando se completa el elemento de trabajo.
 
 En el siguiente ejemplo se crea un temporizador que envía el elemento de trabajo y llama a un método cuando finaliza el elemento de trabajo o cuando se cancela el temporizador:
 
@@ -207,7 +207,7 @@ En el siguiente ejemplo se crea un temporizador que envía el elemento de trabaj
 
 ## <a name="cancel-the-timer"></a>Cancelar el temporizador
 
-Si el temporizador sigue contando el tiempo restante pero ya no se necesita el elemento de trabajo, llama a [**Cancel**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.cancel). Se cancela el temporizador y el elemento de trabajo no se envía al grupo de subprocesos.
+Si el temporizador sigue contando el tiempo restante pero ya no se necesita el elemento de trabajo, llama a [**Cancel**](/uwp/api/windows.system.threading.threadpooltimer.cancel). Se cancela el temporizador y el elemento de trabajo no se envía al grupo de subprocesos.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -219,7 +219,7 @@ Si el temporizador sigue contando el tiempo restante pero ya no se necesita el e
 
 ## <a name="remarks"></a>Observaciones
 
-Las aplicaciones de la Plataforma universal de Windows (UWP) no pueden usar **Thread.Sleep** porque puede bloquear el subproceso de interfaz de usuario. En su lugar, puedes usar un [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) para crear un elemento de trabajo, y esto retrasará la tarea realizada por el elemento de trabajo sin bloquear el subproceso de interfaz de usuario.
+Las aplicaciones de la Plataforma universal de Windows (UWP) no pueden usar **Thread.Sleep** porque puede bloquear el subproceso de interfaz de usuario. En su lugar, puedes usar un [**ThreadPoolTimer**](/uwp/api/Windows.System.Threading.ThreadPoolTimer) para crear un elemento de trabajo, y esto retrasará la tarea realizada por el elemento de trabajo sin bloquear el subproceso de interfaz de usuario.
 
 Consulta la [muestra de grupo de subprocesos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Thread%20pool%20sample) para obtener una muestra de código completa de elementos de trabajo, elementos de trabajo de temporizador y elementos de trabajo periódicos. El ejemplo de código se escribió originalmente para Windows 8.1, pero el código se puede reutilizar en Windows 10.
 

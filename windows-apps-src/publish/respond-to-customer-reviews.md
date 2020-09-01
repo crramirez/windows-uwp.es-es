@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, respuesta, respuestas, revisar
 ms.localizationpriority: medium
-ms.openlocfilehash: b640fc56e1d95bc5fb3085e09960048a16633669
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 792d78b93a66b9dd7da2b2c69480bfbd324dd045
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259929"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161879"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
@@ -35,20 +35,20 @@ Al responder a la crítica de un cliente, debes seguir estas instrucciones. Se a
 > No podrá cambiar las respuestas que publique en la tienda (a menos que el cliente revise su revisión original), así que revise atentamente la respuesta. Si un cliente revisa la revisión original, la respuesta se quitará de la página de descripción de la tienda de la aplicación. A continuación, tiene la opción de enviar una nueva respuesta a la revisión revisada; para ello, seleccione **actualizar la respuesta**.
 
 -   Las respuestas no pueden tener más de 1000 caracteres.
--   No puedes ofrecer a los usuarios ningún tipo de compensación, incluidos productos de aplicaciones digitales, por cambiar la clasificación de la aplicación. Recuerda que no se permiten los intentos de manipular las clasificaciones en virtud del [Acuerdo de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+-   No puedes ofrecer a los usuarios ningún tipo de compensación, incluidos productos de aplicaciones digitales, por cambiar la clasificación de la aplicación. Recuerda que no se permiten los intentos de manipular las clasificaciones en virtud del [Acuerdo de desarrollador de aplicaciones](/legal/windows/agreements/app-developer-agreement).
 -   No incluyas ningún contenido de marketing ni anuncios en la respuesta. Recuerda que el revisor ya es tu cliente.
 -   No promuevas otras aplicaciones o servicios en la respuesta.
 -   La respuesta debe estar directamente relacionada con la aplicación y la crítica específicas. No se permite duplicar la misma respuesta para un gran número de usuarios si la respuesta preestablecida no aborda la misma pregunta.
 -   No incluyas comentarios irreverentes, agresivos, personales ni maliciosos en tu respuesta. Sé siempre educado y recuerda que los clientes que estén contentos serán probablemente los mayores promotores de tu aplicación.
 
 > [!NOTE]
-> Los clientes pueden notificar una respuesta inapropiada a una crítica por parte de un desarrollador a Microsoft. También pueden optar por no recibir respuestas de revisión por correo electrónico.
+> Los clientes pueden informar a Microsoft de una respuesta de revisión inadecuada de un desarrollador. También pueden optar por no recibir respuestas de revisión por correo electrónico.
 >
-> Microsoft se reserva el derecho a revocar un permiso de desarrollador para enviar respuestas por cualquier motivo, incluso si tus respuestas dan lugar a un número elevado de informes de respuesta inadecuados o si un número elevado de clientes opta por no recibir respuestas a valoraciones.
+> Microsoft conserva el derecho de revocar el permiso de un desarrollador para enviar respuestas por cualquier motivo, incluso si las respuestas solicitan un número inusualmente alto de informes de respuesta inadecuados, o si solicitan un número inusualmente alto de clientes para rechazar la recepción de respuestas de revisión.
 
-La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. Sin embargo, si una valoración sobre tu aplicación contiene lenguaje ofensivo, irreverente o abusivo, abre una [solicitud de soporte técnico](https://developer.microsoft.com/windows/support).
+La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. Sin embargo, si una revisión de la aplicación contiene lenguaje ofensivo, blasfemia o abusivo, abra una solicitud de [soporte técnico](https://developer.microsoft.com/windows/support).
 
 
-## <a name="use-customer-reviews-to-improve-your-app"></a>Usar las valoraciones de los clientes para mejorar la aplicación
+## <a name="use-customer-reviews-to-improve-your-app"></a>Usar las revisiones de clientes para mejorar la aplicación
 
 Escuchar y responder a los clientes es solo el primer paso. Tener en cuenta sus comentarios y actuar en consecuencia es también importante. Si realizas mejoras significativas, puedes presentarla en la Tienda con confianza [creando un nuevo envío](app-submissions.md) para actualizar la aplicación.

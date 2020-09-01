@@ -4,14 +4,14 @@ description: Se analiza el uso de efectos y elementos gráficos de mapas de bits
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, UWP, juegos, DirectX, 2d, gráficos
+keywords: Windows 10, UWP, juegos, DirectX, 2D, gráficos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e3a843c00d28d83157cf35a0bd9527be8c6b62f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4dfcb56eb225dafd204a2975b998d0d59253c4ef
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367356"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162929"
 ---
 # <a name="2d-graphics-for-directx-games"></a>Elementos gráficos 2D para juegos DirectX
 
@@ -21,9 +21,9 @@ Se analiza el uso de efectos y elementos gráficos de mapas de bits 2D y cómo u
 
 Los gráficos 2D son un subconjunto de gráficos 3D que se ocupan de los primitivos 2D o mapas de bits. De forma más general, no usan una coordenada Z del mismo modo en que lo haría un juego en 3D, dado que el juego suele limitarse al plano X-Y. A veces emplean técnicas de gráficos 3D para crear sus componentes visuales y, por lo general, son más sencillos de desarrollar. Si acabas de llegar al mundo de los juegos, un juego en 2D es el punto de partida ideal, y el desarrollo de gráficos 2D puede ser un buen entrenamiento para familiarizarte con DirectX.
 
-Puedes desarrollar gráficos para juegos en 2D en DirectX usando Direct2D o Direct3D, o alguna combinación. Muchas de las clases más útiles para desarrollar juegos en 2D se encuentran en Direct3D, como la clase [**Sprite**](https://docs.microsoft.com/windows/desktop/direct3d10/id3dx10sprite). Direct2D es un conjunto de API dirigidas principalmente a interfaces de usuario y aplicaciones que requieren soporte para dibujar primitivos (como formas de círculos, líneas y polígonos planos). Teniendo esto en cuenta, sigue proporcionando un conjunto potente y con buen rendimiento de clases y métodos para crear gráficos para juegos, especialmente al crear superposiciones, interfaces y pantallas de visualización frontal (HUD, del inglés heads-up display), o para crear diversos juegos en 2D, desde uno simple hasta uno con un nivel razonable de detalle. Sin embargo, el método más eficaz para crear juegos en 2D es usar elementos de ambas bibliotecas, y es la forma en que vamos a tratar el desarrollo de gráficos 2D en este tema.
+Puedes desarrollar gráficos para juegos en 2D en DirectX usando Direct2D o Direct3D, o alguna combinación. Muchas de las clases más útiles para desarrollar juegos en 2D se encuentran en Direct3D, como la clase [**Sprite**](/windows/desktop/direct3d10/id3dx10sprite). Direct2D es un conjunto de API dirigidas principalmente a interfaces de usuario y aplicaciones que requieren soporte para dibujar primitivos (como formas de círculos, líneas y polígonos planos). Teniendo esto en cuenta, sigue proporcionando un conjunto potente y con buen rendimiento de clases y métodos para crear gráficos para juegos, especialmente al crear superposiciones, interfaces y pantallas de visualización frontal (HUD, del inglés heads-up display), o para crear diversos juegos en 2D, desde uno simple hasta uno con un nivel razonable de detalle. Sin embargo, el método más eficaz para crear juegos en 2D es usar elementos de ambas bibliotecas, y es la forma en que vamos a tratar el desarrollo de gráficos 2D en este tema.
 
-## <a name="concepts-at-a-glance"></a>Breve explicación de conceptos
+## <a name="concepts-at-a-glance"></a>Conceptos de un vistazo
 
 
 Antes de la aparición de los gráficos 3D modernos y el hardware que los hace posibles, los juegos eran principalmente en 2D, y muchas de las técnicas para gráficos implicaban mover bloques de memoria, normalmente matrices de datos de color que se traducían o transformaban en píxeles en la pantalla con una relación 1:1.
@@ -32,7 +32,7 @@ En DirectX, los gráficos 2D son parte de la canalización 3D. La variedad de re
 
 A continuación presentamos varios conceptos básicos que deberías conocer al empezar a desarrollar gráficos 2D.
 
--   Coordenadas de píxeles y tramas. Un píxel es un único punto de una pantalla de trama. Tiene su propio par de coordenadas (x, y), que indica su ubicación en la pantalla. (El término "píxeles" se suelen usar indistintamente entre los píxeles físicos que componen la presentación y los elementos de memoria direccionable utilizados para contener los valores de color y alfa de los píxeles antes de enviarlos a la pantalla.) La trama se trata de las API como una cuadrícula rectangular de elementos de píxeles, que a menudo tiene una correspondencia 1:1 con la cuadrícula de píxeles físicos de una pantalla. Los sistemas de coordenadas de trama empiezan a contar desde la esquina superior izquierda, con el píxel en la posición (0, 0) en la esquina superior izquierda de la cuadrícula.
+-   Coordenadas de píxeles y tramas. Un píxel es un único punto de una pantalla de trama. Tiene su propio par de coordenadas (x, y), que indica su ubicación en la pantalla. (El término "píxel" se suele usar indistintamente para los píxeles físicos que conforman la pantalla y los elementos de memoria direccionables que se usan para contener los valores de color y alfa de los píxeles antes de enviarlos a la pantalla). La API trata la trama como una cuadrícula rectangular de elementos de píxeles, a menudo con una correspondencia 1:1 con la cuadrícula de píxeles físicos de una pantalla. Los sistemas de coordenadas de trama empiezan a contar desde la esquina superior izquierda, con el píxel en la posición (0, 0) en la esquina superior izquierda de la cuadrícula.
 -   Los gráficos de mapa de bits (en ocasiones denominados gráficos de trama) son elementos gráficos representados como una cuadrícula rectangular de valores de píxeles. Los sprites (matrices de píxeles calculadas con independencia de la trama) son un tipo de gráfico de mapa de bits, y normalmente se usan para los caracteres activos o los objetos animados que no forman parte del fondo de un juego. Las diferentes tramas de animación de un sprite se representan como colecciones de mapas de bits llamadas "hojas" o "lotes". Los fondos son objetos de mapa de bits de mayor tamaño con una resolución igual o mayor que la de la trama de pantalla, y a menudo actúan como telón de fondo para el campo de juego.
 -   Los gráficos vectoriales son gráficos que usan primitivos geométricos, como puntos, líneas, círculos y polígonos, para definir objetos 2D. En vez de con matrices de píxeles, se representan con las ecuaciones matemáticas que los definen en un espacio 2D. No tienen por qué tener una correspondencia 1:1 con la cuadrícula de píxeles de la pantalla, y es necesario transformarlos del sistema de coordenadas donde los representas al sistema de coordinadas de trama de la pantalla.
 -   Una traslación consiste en tomar un punto o un vértice y calcular su nueva ubicación en el mismo sistema de coordenadas.
@@ -56,6 +56,6 @@ Unas buenas ilustraciones serán tu activo más importante cuando se trate de ef
 ## <a name="reference"></a>Referencia
 
 
--   [Información general de Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-overview)
--   [Guía de inicio rápido de Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/getting-started-with-direct2d)
--   [Información general de interoperabilidad de Direct2D y Direct3D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-and-direct3d-interoperation-overview)
+-   [Introducción a Direct2D](/windows/desktop/Direct2D/direct2d-overview)
+-   [Inicio rápido de Direct2D](/windows/desktop/Direct2D/getting-started-with-direct2d)
+-   [Información general de interoperabilidad de Direct2D y Direct3D](/windows/desktop/Direct2D/direct2d-and-direct3d-interoperation-overview)

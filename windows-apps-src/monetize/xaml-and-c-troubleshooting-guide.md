@@ -4,14 +4,14 @@ description: Obtén información sobre las soluciones a problemas comunes de des
 title: Guía de solución de problemas de XAML y C#
 ms.date: 02/18/2020
 ms.topic: article
-keywords: windows 10, uwp, anuncios, publicidad, AdControl, solución de problemas, XAML, c#
+keywords: 'Windows 10, UWP, ADS, Advertising, AdControl, solución de problemas, XAML, c #'
 ms.localizationpriority: medium
-ms.openlocfilehash: ab8ba3930c13ffcb00d2cb9701a89cafe581b4ff
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 719e05d67d68627fcd631edfd6c688b17f8507bd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77506889"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164389"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guía de solución de problemas de XAML y C#
 
@@ -22,13 +22,13 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 * [XAML](#xaml)
   * [AdControl no aparece](#xaml-notappearing)
-  * [El cuadro negro parpadea y desaparece](#xaml-blackboxblinksdisappears)
-  * [Anuncios no actualizando](#xaml-adsnotrefreshing)
+  * [La caja negra parpadea y desaparece](#xaml-blackboxblinksdisappears)
+  * [Los anuncios no se actualizan](#xaml-adsnotrefreshing)
 
 * [C#](#csharp)
   * [AdControl no aparece](#csharp-adcontrolnotappearing)
-  * [El cuadro negro parpadea y desaparece](#csharp-blackboxblinksdisappears)
-  * [Anuncios no actualizando](#csharp-adsnotrefreshing)
+  * [La caja negra parpadea y desaparece](#csharp-blackboxblinksdisappears)
+  * [Los anuncios no se actualizan](#csharp-adsnotrefreshing)
 
 <span id="xaml"/>
 
@@ -48,7 +48,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
                   Width="728" Height="90" />
     ```
 
-3.  Comprueba las propiedades **Height** y **Width**. Estas deben establecerse en uno de los [tamaños de anuncio admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
+3.  Compruebe las propiedades de **alto** y **ancho** . Deben establecerse en uno de los [tamaños de anuncio admitidos para los anuncios de banner](supported-ad-sizes-for-banner-ads.md).
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -57,7 +57,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
                   Width="728" Height="90" />
     ```
 
-4.  Comprueba la posición de los elementos. [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) debe estar dentro del área visible.
+4.  Comprueba la posición de los elementos. [AdControl](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) debe estar dentro del área visible.
 
 5.  Comprueba la propiedad **Visibility**. La propiedad **Visibility** opcional no se debe establecer en contraída ni oculta. Esta propiedad puede establecerse en línea (como se muestra a continuación) o en una hoja de estilos externa.
 
@@ -82,7 +82,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 7.  Asegúrate de que **AdControl** no esté oculto en la ventanilla. **AdControl** debe ser visible para que los anuncios se muestren correctamente.
 
-8.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
+8.  Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para asegurarse de que el **control** está funcionando según lo previsto, use los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para **ApplicationID** y **AdUnitId**.
 
 <span id="xaml-blackboxblinksdisappears"/>
 
@@ -116,7 +116,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
     El error más común que provoca una caja negra es "No ad available". Este error significa que no hay ningún anuncio disponible para devolver desde la solicitud.
 
-3.  [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) se comporta con normalidad.
+3.  [AdControl](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) se comporta con normalidad.
 
     De manera predeterminada, **AdControl** se contraerá cuando no pueda mostrar un anuncio. Si otros elementos son elementos secundarios del mismo elemento principal, pueden moverse para rellenar el espacio de **AdControl** contraído y expandirse cuando se realice la siguiente solicitud.
 
@@ -124,7 +124,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 ### <a name="ads-not-refreshing"></a>Los anuncios no se actualizan
 
-1.  Comprueba la propiedad [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled). De manera predeterminada, esta propiedad opcional está establecida en **True**. Cuando se establece en **False**, debe usarse el método [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh) para recuperar otro anuncio.
+1.  Comprueba la propiedad [IsAutoRefreshEnabled](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled). De forma predeterminada, esta propiedad opcional está establecida en **true**. Cuando se establece en **false**, se debe usar el método [Refresh](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh) para recuperar otro anuncio.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -134,7 +134,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
                   IsAutoRefreshEnabled="True" />
     ```
 
-2.  Comprueba las llamadas al método **Refresh**. Al usar la actualización automática, **Refresh** no puede usarse para recuperar otro anuncio. Al usar la actualización manual, debe llamarse a **Refresh** solo después de un mínimo de 30 a 60 segundos, en función de la conexión de datos actual del dispositivo.
+2.  Compruebe las llamadas al método **Refresh** . Al usar la actualización automática, **Refresh** no puede usarse para recuperar otro anuncio. Al usar la actualización manual, se debe llamar a **Refresh** solo después de un mínimo de 30 a 60 segundos, en función de la conexión de datos actual del dispositivo.
 
     Los fragmentos de código siguientes muestran un ejemplo de uso del método **Refresh**. El primer fragmento es el marcado de interfaz de usuario de XAML.
 
@@ -219,7 +219,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 8.  Comprueba el elemento primario de **AdControl**. El elemento primario debe estar activo y visible.
 
-9. Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para garantizar que **AdControl** funcione según lo previsto, usa los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) tanto para **ApplicationId** como para **AdUnitId**.
+9. Los valores activos para **ApplicationId** y **AdUnitId** no deben probarse en el emulador. Para asegurarse de que el **control** está funcionando según lo previsto, use los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para **ApplicationID** y **AdUnitId**.
 
 <span id="csharp-blackboxblinksdisappears"/>
 
@@ -249,9 +249,9 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 ### <a name="ads-not-refreshing"></a>Los anuncios no se actualizan
 
-1.  Comprueba si la propiedad [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) de tu **AdControl** está establecida en false. Esta propiedad opcional está establecida en **true** de manera predeterminada. Cuando se establece en **false**, debe usarse el método **Refresh** para recuperar otro anuncio.
+1.  Comprueba si la propiedad [IsAutoRefreshEnabled](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) de tu **AdControl** está establecida en false. De forma predeterminada, esta propiedad opcional está establecida en **true**. Cuando se establece en **false**, se debe usar el método **Refresh** para recuperar otro anuncio.
 
-2.  Comprueba las llamadas al método [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx). Al usar la actualización automática (**IsAutoRefreshEnabled** es **true**), no puede usarse **Refresh** para recuperar otro anuncio. Al usar la actualización manual (**IsAutoRefreshEnabled** es **false**), debe llamarse a **Refresh** solo después de un mínimo de 30 a 60 segundos, en función de la conexión de datos actual del dispositivo.
+2.  Compruebe las llamadas al método [Refresh](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) . Al usar la actualización automática (**IsAutoRefreshEnabled** es **true**), no puede usarse **Refresh** para recuperar otro anuncio. Al usar la actualización manual (**IsAutoRefreshEnabled** es **false**), debe llamarse a **Refresh** solo después de un mínimo de 30 a 60 segundos, en función de la conexión de datos actual del dispositivo.
 
     En el ejemplo siguiente se muestra cómo llamar al método **Refresh**.
 

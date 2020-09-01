@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, latencia, dxgi, cadenas de intercambio, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 27ecce9d95d3c2e852b049e3cac9579850022df9
-ms.sourcegitcommit: d2aabe027a2fff8a624111a00864d8986711cae6
+ms.openlocfilehash: 41d11865daadacf8ff90971836cab7cd941c4182
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82880865"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163049"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reducir la latencia con cadenas de intercambio de DXGI 1.3
 
@@ -21,11 +21,11 @@ Usa DXGI 1.3 para reducir la latencia de fotogramas eficaz esperando a que la c
 
 Con la cadena de intercambio del modelo de volteo, los "giros" del búfer de reserva se ponen en cola cada vez que el juego llama a [**IDXGISwapChain::Present**](/windows/win32/api/dxgi/nf-dxgi-idxgiswapchain-present). Cuando el bucle de representación llama a Present(), el sistema bloquea el subproceso hasta que se termine de mostrar un fotograma anterior, lo que permite crear espacio para el nuevo fotograma antes de que se muestre realmente. Esto hace que haya más latencia entre el momento en el que el juego dibuja un fotograma y el momento en el que el sistema le permite mostrar dicho fotograma. Muchas veces, el sistema logrará un equilibrio estable en el que el juego siempre esté esperando casi un fotograma extra completo entre el momento en el que representa y el momento en que muestra cada fotograma. Lo mejor es esperar a que el sistema esté listo para aceptar un nuevo fotograma y, luego, representar el fotograma según los datos actuales y poner el fotograma inmediatamente en cola.
 
-Cree una cadena de intercambio que se va a esperar con la marca de la [**cadena\_\_de intercambio\_\_de DXGI\_indicador\_\_**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) de tiempo de espera de trama. Las cadenas de intercambio que se crean de este modo pueden informar al bucle de representación de cuándo está el sistema listo para aceptar un nuevo fotograma, lo que hace posible que el juego represente según los datos actuales y, luego, ponga el resultado directamente en la cola actual.
+Cree una cadena de intercambio que se va a esperar con la marca de la cadena de intercambio de DXGI indicador de tiempo de [** \_ \_ \_ \_ \_ \_ espera \_ de trama**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) . Las cadenas de intercambio que se crean de este modo pueden informar al bucle de representación de cuándo está el sistema listo para aceptar un nuevo fotograma, lo que hace posible que el juego represente según los datos actuales y, luego, ponga el resultado directamente en la cola actual.
 
 ## <a name="step-1-create-a-waitable-swap-chain"></a>Paso 1. Crear una cadena de intercambio de espera
 
-Especifique la marca de la [**cadena de intercambio\_de DXGI\_\_\_\_\_\_marcador**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) de tiempo de espera del marco de la cadena de intercambio al llamar a [**CreateSwapChainForCoreWindow**](/windows/win32/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow).
+Especifique la marca de la cadena de intercambio de DXGI marcador de tiempo de [** \_ \_ \_ \_ \_ \_ \_ espera del marco**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) de la cadena de intercambio al llamar a [**CreateSwapChainForCoreWindow**](/windows/win32/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow).
 
 ```cpp
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
@@ -141,7 +141,7 @@ Consulta los siguientes temas relacionados para obtener más información sobre 
 * [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](/windows/win32/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject)
 * [**WaitForSingleObjectEx**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex)
 * [**Windows.System.Threading**](/uwp/api/Windows.System.Threading)
-* [Programación asincrónica en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)
+* [Programación asincrónica en C++](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)
 * [Procesos y subprocesos](/windows/win32/procthread/processes-and-threads)
-* [Synchronization](/windows/win32/sync/synchronization)
+* [Sincronización](/windows/win32/sync/synchronization)
 * [Uso de objetos de evento (Windows)](/windows/win32/sync/using-event-objects)

@@ -5,12 +5,12 @@ ms.date: 05/03/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d4a4ab7664833308fe059e8bf07f68adea82b3e
-ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
+ms.openlocfilehash: 8a23758612b3c595f808fe2ffe4f38e558cf0740
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84262756"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163969"
 ---
 # <a name="enable-audio-playback-from-remote-bluetooth-connected-devices"></a>Habilitar la reproducción de audio desde dispositivos conectados por Bluetooth remotos
 
@@ -32,7 +32,7 @@ La clase [DeviceWatcher](/uwp/api/windows.devices.enumeration.devicewatcher) per
 
 El evento [DeviceWatcher. Added](/uwp/api/windows.devices.enumeration.devicewatcher.added) se genera para cada dispositivo que se conecta cuando se inicia el monitor de dispositivos, así como para cualquier dispositivo conectado mientras se ejecuta el monitor de dispositivos. El evento [DeviceWatcher. removed](/uwp/api/windows.devices.enumeration.devicewatcher.removed) se genera si se desconecta un dispositivo conectado previamente. 
 
-Llame a [DeviceWatcher. Start](/uwp/api/windows.devices.enumeration.devicewatcher.start) para empezar a supervisar los dispositivos conectados que admiten conexiones de reproducción de audio. En este ejemplo, se iniciará el administrador de dispositivos cuando se cargue el control de **cuadrícula** principal en la interfaz de usuario. Para obtener más información sobre el uso de **DeviceWatcher**, consulte [enumerar dispositivos](/windows/uwp/devices-sensors/enumerate-devices).
+Llame a [DeviceWatcher. Start](/uwp/api/windows.devices.enumeration.devicewatcher.start) para empezar a supervisar los dispositivos conectados que admiten conexiones de reproducción de audio. En este ejemplo, se iniciará el administrador de dispositivos cuando se cargue el control de **cuadrícula** principal en la interfaz de usuario. Para obtener más información sobre el uso de **DeviceWatcher**, consulte [enumerar dispositivos](../devices-sensors/enumerate-devices.md).
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioPlaybackConnectionExample/cs/MainPage.xaml.cs" id="snippet_MainGridLoaded":::
 
@@ -87,7 +87,3 @@ Debe controlar el caso en el que se quita un dispositivo mientras una conexión 
 
 
  
-
-
-
-

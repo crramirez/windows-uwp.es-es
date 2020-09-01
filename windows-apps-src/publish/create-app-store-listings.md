@@ -6,12 +6,12 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: Windows 10, UWP, lista, descripción, página de la tienda, notas de la versión, título
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e8ba40129197f77b2bbbd3950a6bcf214bae787
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 6124ea17d8c1c348e9093882df901c829f2cd90e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493028"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164199"
 ---
 # <a name="create-app-store-listings"></a>Creación de descripciones de la Tienda de aplicaciones
 
@@ -153,7 +153,7 @@ Si quieres proporcionar información adicional de copyright o marcas comerciales
 
 ### <a name="additional-license-terms"></a>Términos de licencia adicionales
 
-Deja este campo en blanco si quieres que la aplicación se licencie a los clientes en virtud de los términos establecidos en los **Términos de licencia de aplicaciones estándar** (a los que se vincula desde el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)).
+Deja este campo en blanco si quieres que la aplicación se licencie a los clientes en virtud de los términos establecidos en los **Términos de licencia de aplicaciones estándar** (a los que se vincula desde el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement)).
 
 Si los términos de licencia son diferentes a los **Términos de licencia de aplicaciones estándar**, escríbelos aquí.
 

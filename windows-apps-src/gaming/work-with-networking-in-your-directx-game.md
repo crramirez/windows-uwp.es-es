@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, redes, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b0dd6168d932d1c131ca6bcd4530795c6ed1ba3
-ms.sourcegitcommit: b408494ebe8489b9ba84fb8bfd893d90c8524020
+ms.openlocfilehash: 6d6d9d927c60cb74f1b19de607480e0811f47cbb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88576858"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162939"
 ---
 # <a name="networking-for-games"></a>Conexión en red de juegos
 
@@ -27,7 +27,7 @@ Para los juegos de punto a punto, la aplicación de cada jugador controla la ent
 
 Para juegos de un solo jugador, generalmente se usa un servicio o servidor web central para almacenar nombres de usuario, puntuaciones de juego y demás datos varios. En estos juegos, la velocidad y la latencia de las transferencias de red no son tan importantes dado que no afectan directamente la operación de juego.
 
-Las condiciones de la red pueden cambiar en cualquier momento. Por ello, los juegos que usan API de red deben controlar las excepciones de red que puedan producirse. Para obtener más información sobre el control de las excepciones de red, consulta [Conceptos básicos de redes](/windows/uwp/networking/networking-basics).
+Las condiciones de la red pueden cambiar en cualquier momento. Por ello, los juegos que usan API de red deben controlar las excepciones de red que puedan producirse. Para obtener más información sobre el control de las excepciones de red, consulta [Conceptos básicos de redes](../networking/networking-basics.md).
 
 Los firewall y proxy web son comunes y pueden afectar la capacidad de usar las características de red. Un juego que usa la red debe estar preparado para controlar correctamente los firewall y proxy.
 
@@ -362,7 +362,7 @@ using namespace Windows::Web::Http;
 * [Conectar a un recurso de red con un socket de secuencias](/previous-versions/windows/apps/jj150599(v=win.10))
 * [Conexión a servicios de red](/previous-versions/windows/apps/hh452976(v=win.10))
 * [Conexión a servicios web](/previous-versions/windows/apps/hh761504(v=win.10))
-* [Conceptos básicos de redes](/windows/uwp/networking/networking-basics)
+* [Conceptos básicos de redes](../networking/networking-basics.md)
 * [Procedimiento para configurar las funcionalidades de aislamiento de red](/previous-versions/windows/apps/hh770532(v=win.10))
 * [Cómo habilitar el aislamiento de red de bucle invertido y de depuración](/previous-versions/windows/apps/hh780593(v=win.10))
 

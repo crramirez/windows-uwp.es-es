@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ab10acab42ab3f03121a7c5a462cb651b0f3f31b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: dd1048ad0d3c5d542c5d7fb398261f3e29316396
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595570"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162619"
 ---
 # <a name="launch-the-people-app"></a>Iniciar la aplicación Contactos
 
-Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas.
+En este tema se describe el esquema de URI **ms-people:**. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas.
 
-## <a name="ms-people-uri-scheme-reference"></a>ms-people: Referencia de esquema URI
+## <a name="ms-people-uri-scheme-reference"></a>Referencia del esquema de URI ms-people:
 
 <table>
 <colgroup>
@@ -47,7 +47,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </div>
 <div>
 </div></td>
-<td align="left">ms-people:search?SearchString=&lt;contactsearchinfo&gt;</td>
+<td align="left">MS-People: buscar? SearchString = &lt; contactsearchinfo&gt;</td>
 </tr>
 <tr class="even">
 <td align="left">Se inicia en una tarjeta de contacto existente, si se encuentra el contacto. O bien, se inicia en una tarjeta de contacto temporal, si no se encuentra ningún contacto. Si no se proporciona ningún parámetro de entrada, se iniciará la aplicación Personas con una lista de contactos.
@@ -58,7 +58,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </div>
 <div> 
 </div></td>
-<td align="left">¿MS-viewcontact: las personas? ContactId =&lt;contactid&gt;&amp;AggregatedId =&lt;aggid&gt;&amp;PhoneNumber = &lt;phonenum&gt;&amp;correo electrónico =&lt;correo electrónico &gt; &amp;ContactName =&lt;nombre&gt;&amp;contacto =&lt;contactobj&gt;</td>
+<td align="left">MS-People: viewcontact? ContactId = &lt; ContactID &gt; &amp; AggregatedId = &lt; aggid &gt; &amp; PhoneNumber = &lt; phoneNum &gt; &amp; email = &lt; email &gt; &amp; ContactName = &lt; name &gt; &amp; Contact = &lt; contactobj&gt;</td>
 </tr>
 <tr class="odd">
 <td align="left">Se inicia en una página de guardado de contactos en la aplicación Contactos para guardar el contacto determinado con la dirección de correo electrónico o el número de teléfono proporcionados.
@@ -68,18 +68,18 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </div>
 <div>
 </div></td>
-<td align="left">ms-people:savetocontact?PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;</td>
+<td align="left">MS-People: savetocontact? PhoneNumber = &lt; phoneNum &gt; &amp; email = &lt; email &gt; &amp; ContactName = &lt; nombre&gt;</td>
 </tr>
 <tr class="even">
-<td align="left">Se inicia para agregar una página de contacto nueva en la aplicación Contactos para guardar el contacto determinado.
-<div class="alert"><p>Usa <a href="https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriForResultsAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_Windows_Foundation_Collections_ValueSet_">LaunchUriForResultsAsync</a> para abrir la página para guardar contacto nuevo. Con <strong>LaunchUriAsync</strong> solo se iniciará la página principal de la aplicación Contactos.</p>
+<td align="left">Se inicia en la página Agregar un nuevo contacto dentro de la aplicación People para guardar el contacto especificado.
+<div class="alert"><p>Use <a href="/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriForResultsAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_Windows_Foundation_Collections_ValueSet_">LaunchUriForResultsAsync</a> para abrir la página guardar nuevo contacto. El uso de <strong>LaunchUriAsync</strong> solo abrirá la Página principal de la aplicación People.</p>
 <p>Los parámetros distinguen mayúsculas de minúsculas.</p>
 <p>No importa el orden de los parámetros.</p>
 <p>Puede usar cualquier combinación de parámetros admitidos.</p>
 </div>
 <div>
 </div></td>
-<td align="left">ms-people:savecontacttask?PhoneNumber= &lt;phonenum&gt;&amp;Email=&lt;email&gt;&amp;ContactName=&lt;name&gt;</td>
+<td align="left">MS-People: savecontacttask? PhoneNumber = &lt; phoneNum &gt; &amp; email = &lt; email &gt; &amp; ContactName = &lt; nombre&gt;</td>
 </tr>
 </tbody>
 </table>
@@ -133,16 +133,16 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 <td align="left"><p>ms-people:viewcontact?ContactId={ContactId}</p></td>
 </tr>
 <tr class="even">
-<td align="left"><b>PhoneNumber</b></td>
+<td align="left"><b>Teléfono</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Número de teléfono del contacto.</p></td>
 <td align="left"><p>ms-people:viewcontact?PhoneNumber=%2014257069326</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><b>Email</b></td>
+<td align="left"><b>Correo electrónico</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Correo electrónico del contacto.</p></td>
-<td align="left"><p>ms-people:viewcontact?Email=johnsmith@contsco.com</p></td>
+<td align="left"><p>MS-People: viewcontact? Correo electrónico =johnsmith@contsco.com</p></td>
 </tr>
 <tr class="even">
 <td align="left"><b>ContactName</b></td>
@@ -151,7 +151,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 <td align="left"><p>ms-people:viewcontact?ContactName=John%20%Smith</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><b>Contact</b></td>
+<td align="left"><b>Contacto</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Objeto Contact.</p></td>
 <td align="left"><p>ms-people:viewcontact?Contact={Serialized Contact}</p></td>
@@ -176,27 +176,27 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><b>PhoneNumber</b></td>
+<td align="left"><b>Teléfono</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Número de teléfono del contacto.</p></td>
 <td align="left"><p>ms-people:savetocontact?PhoneNumber=%2014257069326</p></td>
 </tr>
 <tr class="even">
-<td align="left"><b>Email</b></td>
+<td align="left"><b>Correo electrónico</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Correo electrónico del contacto.</p></td>
-<td align="left"><p>ms-people:savetocontact?Email=johnsmith@contsco.com</p></td>
+<td align="left"><p>MS-People: savetocontact? Correo electrónico =johnsmith@contsco.com</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><b>ContactName</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Nombre del contacto.</p></td>
-<td align="left"><p>ms-people:savetocontact?Email=johnsmith@contsco.com&amp;ContactName= John%20%Smith</p></td>
+<td align="left"><p>MS-People: savetocontact? Email = johnsmith@contsco.com &amp; ContactName = John %20% Smith</p></td>
 </tr>
 </tbody>
 </table>
 
-## <a name="ms-peoplesavecontacttask-parameter-reference"></a>Referencia del parámetro ms-people:savecontacttask:
+## <a name="ms-peoplesavecontacttask-parameter-reference"></a>MS-People: savecontacttask: referencia de parámetros
 
 <table>
 <colgroup>
@@ -213,13 +213,13 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><b>Empresa</b></td>
+<td align="left"><b>Company</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Nombre de la compañía del contacto.</p></td>
 
 </tr>
 <tr class="even">
-<td align="left"><b>firstName</b></td>
+<td align="left"><b>Nombre</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Nombre del contacto.</p></td>
 </tr>
@@ -255,7 +255,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 
 </tr>
 <tr class="even">
-<td align="left"><b>homePhone</b></td>
+<td align="left"><b>HomePhone</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Teléfono particular del contacto.</p></td>
 </tr>
@@ -269,11 +269,11 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 <tr class="even">
 <td align="left"><b>Apellidos</b></td>
 <td align="left"><p>Opcional.</p>
-<p>Apellidos del contacto.</p></td>
+<p>Apellido del contacto.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><b>middleName</b></td>
+<td align="left"><b>Analiza</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Segundo nombre del contacto.</p></td>
 </tr>
@@ -285,13 +285,13 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </tr>
 
 <tr class="odd">
-<td align="left"><b>alias</b></td>
+<td align="left"><b>Deseado</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Alias del contacto.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>Notas de la</b></td>
+<td align="left"><b>Notas</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Notas acerca del contacto.</p></td>
 </tr>
@@ -321,7 +321,7 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Sitio Web</b></td>
+<td align="left"><b>Sitio web</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Sitio web del contacto.</p></td>
 </tr>
@@ -335,13 +335,13 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 <tr class="odd">
 <td align="left"><b>WorkAddressCountry</b></td>
 <td align="left"><p>Opcional.</p>
-<p>País de la dirección del trabajo.</p></td>
+<p>País de la dirección de trabajo.</p></td>
 </tr>
 
 <tr class="even">
 <td align="left"><b>WorkAddressState</b></td>
 <td align="left"><p>Opcional.</p>
-<p>Estado de la dirección del trabajo.</p></td>
+<p>Estado de la dirección de trabajo.</p></td>
 </tr>
 
 <tr class="odd">
@@ -353,17 +353,17 @@ Este tema se describe la **ms personas:** Esquema de URI. La aplicación puede u
 <tr class="even">
 <td align="left"><b>WorkAddressZipCode</b></td>
 <td align="left"><p>Opcional.</p>
-<p>Código postal de la dirección del trabajo.</p></td>
+<p>Código postal de la dirección de trabajo.</p></td>
 </tr>
 
 <tr class="odd">
-<td align="left"><b>Correo electrónico profesional</b></td>
+<td align="left"><b>WorkEmail</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Correo electrónico del trabajo del contacto.</p></td>
 </tr>
 
 <tr class="even">
-<td align="left"><b>Teléfono trabajo</b></td>
+<td align="left"><b>WorkPhone</b></td>
 <td align="left"><p>Opcional.</p>
 <p>Número de teléfono del trabajo del contacto.</p></td>
 </tr>

@@ -1,6 +1,6 @@
 ---
-title: Iluminación de XAML
-description: Los objetos de luz se usan junto con el objeto SceneLightingEffect para simular la reflexión e iluminación dinámicas.
+title: Iluminación XAML
+description: Los objetos de luz se usan junto con SceneLightingEffect para simular la iluminación dinámica y la reflectividad.
 ms.date: 06/28/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -10,31 +10,31 @@ dev_langs:
 - vb
 - cppcx
 - cppwinrt
-ms.openlocfilehash: 768509b3b22eef32e26d9e5423c00e2ee65f4b81
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 315427d2f9212cb9ecfec01e71ed9373deb5cfba
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318030"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163549"
 ---
-# <a name="xaml-lighting"></a>Iluminación de XAML
+# <a name="xaml-lighting"></a>Iluminación XAML
 
-[**CompositionLight** ](/uwp/api/Windows.UI.Composition.CompositionLight) objetos se usan junto con [ **SceneLightingEffect** ](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) para simular la iluminación dinámica y reflexión.
+Los objetos [**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight) se usan junto con [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) para simular la iluminación dinámica y la reflectividad.
 
-Puedes aplicar luces a [**elementos visuales**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) y [**elementos de interfaz de usuario**](/uwp/api/Windows.UI.Xaml.UIElement) de XAML.
+Puede aplicar luces a [**objetos visuales**](/uwp/api/Windows.UI.Composition.Visual) y XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement).
 
-## <a name="applying-lights-to-xaml-uielements"></a>Aplicar luces a elementos de interfaz de usuario de XAML
+## <a name="applying-lights-to-xaml-uielements"></a>Aplicar luces a UIElements XAML
 
-[**XamlLight** ](/uwp/api/windows.ui.xaml.media.xamllight) objetos se usan para aplicar [ **CompositionLights** ](/uwp/api/Windows.UI.Composition.CompositionLight) para mejorar dinámicamente elementos de IU de XAML. XamlLight proporciona métodos para dirigirse a UIElements o pinceles de XAML, aplicando las luces en árboles de UIElements, y ayudar a administrar la duración de CompositionLight recursos en función de si encuentra actualmente en usar.
+Los objetos [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) se usan para aplicar [**COMPOSITIONLIGHTS**](/uwp/api/Windows.UI.Composition.CompositionLight) a UIElements XAML de forma dinámica. XamlLight proporciona métodos para dirigirse a los pinceles de UIElements o XAML, aplicar luces a árboles de UIElements y ayudar a administrar la duración de los recursos de CompositionLight en función de si están en uso.
 
-- Si seleccionas un objeto **Brush** con un objeto XamlLight, la luz iluminará todas las partes de cualesquiera UIElements que usen dicho pincel.
-- Si seleccionas un **UIElement** con un objeto XamlLight, en ese caso la luz iluminará todo el UIElement y sus UIElement secundarios.
+- Si el destino es un **pincel** con un XamlLight, las partes de cualquier UIElements que use ese pincel estarán iluminadas por la luz.
+- Si el destino es un **UIElement** con un XamlLight, todo el UIElement y sus UIElements secundarios estarán iluminados por la luz.
 
-## <a name="creating-and-using-a-xamllight"></a>Crear y usar un objeto XamlLight
+## <a name="creating-and-using-a-xamllight"></a>Crear y usar XamlLight
 
-[**XamlLight** ](/uwp/api/windows.ui.xaml.media.xamllight) es una clase base que se puede usar para crear las luces personalizadas.
+[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) es una clase base que se puede usar para crear luces personalizadas.
 
-En este ejemplo se muestra la definición para un XamlLight personalizado que se aplica un foco multicolor destino UIElements y pinceles.
+En este ejemplo se muestra la definición de un XamlLight personalizado que aplica un foco multicolor a los UIElements y pinceles de destino.
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight
@@ -457,10 +457,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-A continuación, puede aplicar esta luz a cualquier elemento de IU XAML o pincel a ellos con poca. Este ejemplo muestra los diferentes usos posibles.
+Después, puede aplicar esta luz a cualquier UIElement o UIElement XAML para iluminarlas. Este ejemplo muestra diferentes usos posibles.
 
 > [!Important]
-> Para [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), quitar las dos repeticiones de `local:OrangeSpotLight.IsTarget="True"` desde el marcado siguiente. Ya se establecen las propiedades adjuntas en el código subyacente.
+> En el caso de [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md), quite las dos apariciones de del `local:OrangeSpotLight.IsTarget="True"` marcado siguiente. Las propiedades adjuntas ya están establecidas en el código subyacente.
 
 ```xaml
 <StackPanel Width="100">
@@ -489,13 +489,13 @@ A continuación, puede aplicar esta luz a cualquier elemento de IU XAML o pincel
 </StackPanel>
 ```
 
-Los resultados de este XAML tiene este aspecto.
+Los resultados de este XAML tienen el siguiente aspecto.
 
-![Ejemplos de elementos iluminación una luz de xaml](images/orange-spot-light.png)
+![Ejemplos de elementos con iluminación de XAML](images/orange-spot-light.png)
 
 > [!Important]
-> El establecimiento del objeto UIElement.Lights en el marcado, como se muestra en el ejemplo anterior, solo se admite para las aplicaciones con una versión mínima igual a Windows 10 Creators Update o una versión posterior. Para las aplicaciones que se dirigen a versiones anteriores, las luces se deben crear en el código subyacente.
+> Establecer UIElement. Lights en el marcado tal y como se muestra en el ejemplo anterior solo se admite para las aplicaciones con una versión mínima igual a Windows 10 Creators Update o posterior. En el caso de las aplicaciones que tienen como destino versiones anteriores, las luces deben crearse en el código subyacente.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples).
+* Ejemplos avanzados de interfaz de usuario y composición en [GitHub de WindowsUIDevLabs](https://github.com/microsoft/WindowsCompositionSamples).

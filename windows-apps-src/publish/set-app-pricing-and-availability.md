@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, precio, disponible, reconocible, evaluación gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
 ms.localizationpriority: medium
-ms.openlocfilehash: e9f516aeabae142c1975de2f9df343a43e642bab
-ms.sourcegitcommit: c0a859e4b8b46dea33e381ed5ae5197437902a41
+ms.openlocfilehash: 9956463471b310835aedf517817878d526cc810d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87120119"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164109"
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
@@ -23,7 +23,7 @@ La página **Precios y disponibilidad** del [proceso de envío de la aplicación
 
 El Microsoft Store llega a los clientes en más de 240 países y regiones de todo el mundo. De forma predeterminada, ofreceremos la aplicación en todos los mercados posibles. Si lo prefiere, puede elegir los mercados específicos en los que le gustaría ofrecer la aplicación. 
 
-Para obtener más información, consulte [definir la selección del mercado](define-pricing-and-market-selection.md).
+Para obtener más información, consulte [definir la selección del mercado](./define-market-selection.md).
 
 
 ## <a name="visibility"></a>Visibilidad
@@ -90,5 +90,3 @@ Para obtener más información, consulta [Opciones de licencias organizativas](o
 ## <a name="publish-date"></a>Fecha de publicación
 
 Anteriormente, la sección **publicar fecha** aparecía en esta página. Esta funcionalidad se puede encontrar ahora en la página [Opciones de envío](manage-submission-options.md) , en la sección Opciones de la suspensión de la **publicación** . (Tenga en cuenta que para controlar cuándo se debe publicar la aplicación en la tienda, se recomienda usar la sección [programación](configure-precise-release-scheduling.md) de la página **precios y disponibilidad** ).
-
-

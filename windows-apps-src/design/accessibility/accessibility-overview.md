@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 386ea9a5ea9b66b0756963da10f72c3dbed53ff9
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a790af10f6cfc06029e269dba4c984a041932239
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969660"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163439"
 ---
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad
 
@@ -43,7 +43,7 @@ Además, las funciones de plantilla, estilo y enlace de datos simplifican la imp
 
 ## <a name="ui-automation"></a>Automatización de la interfaz de usuario
 
-Compatibilidad de la accesibilidad viene principalmente de la compatibilidad integrada con el marco de trabajo de automatización de la interfaz de usuario de Microsoft. Esa compatibilidad se proporciona mediante clases base y el comportamiento integrado de la implementación de clases para los tipos de control, y una representación de la interfaz de la API del proveedor de la automatización de la interfaz de usuario. Cada clase de control usa los conceptos de automatización de la interfaz de usuario de automatización del mismo nivel y patrones de automatización que notifican del contenido y rol del control a los clientes de automatización de la interfaz de usuario. La automatización de la interfaz de usuario considera que la aplicación es una ventana de nivel superior y todo el contenido de esa ventana de aplicación se pone a disposición de un cliente de automatización de la interfaz de usuario a través del marco de trabajo de automatización de la interfaz de usuario. Para obtener más información sobre la automatización de la interfaz de usuario, consulta el tema [UI Automation Overview](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-uiautomationoverview) (Introducción a la automatización de la interfaz de usuario).
+Compatibilidad de la accesibilidad viene principalmente de la compatibilidad integrada con el marco de trabajo de automatización de la interfaz de usuario de Microsoft. Esa compatibilidad se proporciona mediante clases base y el comportamiento integrado de la implementación de clases para los tipos de control, y una representación de la interfaz de la API del proveedor de la automatización de la interfaz de usuario. Cada clase de control usa los conceptos de automatización de la interfaz de usuario de automatización del mismo nivel y patrones de automatización que notifican del contenido y rol del control a los clientes de automatización de la interfaz de usuario. La automatización de la interfaz de usuario considera que la aplicación es una ventana de nivel superior y todo el contenido de esa ventana de aplicación se pone a disposición de un cliente de automatización de la interfaz de usuario a través del marco de trabajo de automatización de la interfaz de usuario. Para obtener más información sobre la automatización de la interfaz de usuario, consulta el tema [UI Automation Overview](/windows/desktop/WinAuto/uiauto-uiautomationoverview) (Introducción a la automatización de la interfaz de usuario).
 
 <span id="Assistive_technology"/>
 <span id="assistive_technology"/>
@@ -85,7 +85,7 @@ Existen muchas otras propiedades de automatización disponibles (incluidas las p
 
 ## <a name="keyboard-support"></a>Compatibilidad con el teclado
 
-Para proporcionar una buena compatibilidad de teclado, debes asegurarte de que cada parte de tu aplicación pueda usarse con un teclado. Si tu aplicación usa principalmente los controles estándar y no usa ningún control personalizado, ya tienes la mayor parte del camino recorrido. El modelo de control básico de XAML proporciona compatibilidad de teclado integrada que incluye navegación mediante tabulación, entrada de texto y compatibilidad específica del control. Los elementos que funcionan como contenedores de diseño (como los paneles) usan el orden de diseño para establecer un orden de tabulación predeterminado. Ese orden suele ser el orden de tabulación correcto que se debe usar para una representación accesible de la interfaz de usuario. Si usas los controles [**ListBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) y [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) para mostrar los datos, estos proporcionan navegación integrada mediante teclas de dirección. O bien, si usas un control [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), este ya controla la tecla Entrar o la barra espaciadora para la activación de botones.
+Para proporcionar una buena compatibilidad de teclado, debes asegurarte de que cada parte de tu aplicación pueda usarse con un teclado. Si tu aplicación usa principalmente los controles estándar y no usa ningún control personalizado, ya tienes la mayor parte del camino recorrido. El modelo de control básico de XAML proporciona compatibilidad de teclado integrada que incluye navegación mediante tabulación, entrada de texto y compatibilidad específica del control. Los elementos que funcionan como contenedores de diseño (como los paneles) usan el orden de diseño para establecer un orden de tabulación predeterminado. Ese orden suele ser el orden de tabulación correcto que se debe usar para una representación accesible de la interfaz de usuario. Si usas los controles [**ListBox**](/uwp/api/Windows.UI.Xaml.Controls.ListBox) y [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView) para mostrar los datos, estos proporcionan navegación integrada mediante teclas de dirección. O bien, si usas un control [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button), este ya controla la tecla Entrar o la barra espaciadora para la activación de botones.
 
 Para más información acerca de todos los aspectos de la compatibilidad de teclado, incluido el orden de tabulación y la activación o la navegación basadas en teclas, consulta [Accesibilidad de teclado](keyboard-accessibility.md).
 
@@ -95,7 +95,7 @@ Para más información acerca de todos los aspectos de la compatibilidad de tecl
 
 ## <a name="media-and-captioning"></a>Contenido multimedia y subtítulos
 
-Normalmente muestras los medios audiovisuales a través de un objeto [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement). Puedes usar las API **MediaElement** para controlar la reproducción multimedia. Con fines de accesibilidad, proporciona controles que permitan que los usuarios reproduzcan, pongan en pausa y detengan los medios según sea necesario. En ocasiones, los medios incluyen componentes adicionales que tienen como propósito ofrecer accesibilidad, como los subtítulos o las pistas de audio alternativas que incluyen descripciones narrativas.
+Normalmente muestras los medios audiovisuales a través de un objeto [**MediaElement**](/uwp/api/Windows.UI.Xaml.Controls.MediaElement). Puedes usar las API **MediaElement** para controlar la reproducción multimedia. Con fines de accesibilidad, proporciona controles que permitan que los usuarios reproduzcan, pongan en pausa y detengan los medios según sea necesario. En ocasiones, los medios incluyen componentes adicionales que tienen como propósito ofrecer accesibilidad, como los subtítulos o las pistas de audio alternativas que incluyen descripciones narrativas.
 
 <span id="Accessible_text"/>
 <span id="accessible_text"/>
@@ -127,7 +127,7 @@ Cuando diseñes tus aplicaciones, ten en cuenta su uso por parte de personas con
 
 En muchos casos, puedes transmitir información esencial mediante el uso de múltiples técnicas a fin de ampliar tu público. Por ejemplo, puedes resaltar información usando tanto información de color como iconos para ayudar a los usuarios con daltonismo; además, puedes mostrar alertas visuales junto con efectos de sonido para ayudar a los usuarios con discapacidades auditivas.
 
-Si fuera necesario, puedes proporcionar elementos de interfaz de usuario alternativos y accesibles que quitan completamente las animaciones y los elementos que no son esenciales, y proporcionar otras simplificaciones para hacer que la experiencia del usuario sea más sencilla. El siguiente ejemplo de código muestra cómo presentar una instancia de [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) en lugar de otra según una configuración de usuario.
+Si fuera necesario, puedes proporcionar elementos de interfaz de usuario alternativos y accesibles que quitan completamente las animaciones y los elementos que no son esenciales, y proporcionar otras simplificaciones para hacer que la experiencia del usuario sea más sencilla. El siguiente ejemplo de código muestra cómo presentar una instancia de [**UserControl**](/uwp/api/Windows.UI.Xaml.Controls.UserControl) en lugar de otra según una configuración de usuario.
 
 XAML
 
@@ -192,7 +192,7 @@ Para obtener más información sobre las declaraciones de accesibilidad y la pub
 
 ## <a name="assistive-technology-support-in-custom-controls"></a>Compatibilidad con tecnologías de asistencia en controles personalizados
 
-Cuando crees un control personalizado, te recomendamos que también implementes o extiendas una o varias subclases de [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para proporcionar compatibilidad con accesibilidad. En algunos casos, siempre y cuando uses la misma clase del mismo nivel que usó la clase de control base, la compatibilidad de la automatización con tu clase derivada es adecuada en un nivel básico. De todos modos, debes probarlo. Y recuerda que la implementación de una clase del mismo nivel es un procedimiento recomendado para que esta pueda notificar correctamente el nombre de clase de tu nueva clase de control. La implementación de la automatización del mismo nivel personalizada conlleva algunos pasos. Para obtener más información, vea [elementos de automatización del mismo nivel](custom-automation-peers.md).
+Cuando crees un control personalizado, te recomendamos que también implementes o extiendas una o varias subclases de [**AutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para proporcionar compatibilidad con accesibilidad. En algunos casos, siempre y cuando uses la misma clase del mismo nivel que usó la clase de control base, la compatibilidad de la automatización con tu clase derivada es adecuada en un nivel básico. De todos modos, debes probarlo. Y recuerda que la implementación de una clase del mismo nivel es un procedimiento recomendado para que esta pueda notificar correctamente el nombre de clase de tu nueva clase de control. La implementación de la automatización del mismo nivel personalizada conlleva algunos pasos. Para obtener más información, consulta [Personalizar sistemas de automatización del mismo nivel](custom-automation-peers.md).
 
 <span id="Assistive_technology_support_in_apps_that_support_XAML___Microsoft_DirectX_interop"/>
 <span id="assistive_technology_support_in_apps_that_support_xaml___microsoft_directx_interop"/>
@@ -200,12 +200,12 @@ Cuando crees un control personalizado, te recomendamos que también implementes 
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Compatibilidad para tecnología de asistencia en aplicaciones que admiten la interoperabilidad XAML/Microsoft DirectX
 
-No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) o [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208.1%20Store%20app%20samples/%5BC%23%5D-Windows%208.1%20Store%20app%20samples/XAML%20SwapChainPanel%20DirectX%20interop%20sample) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
+No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) o [**SurfaceImageSource**](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208.1%20Store%20app%20samples/%5BC%23%5D-Windows%208.1%20Store%20app%20samples/XAML%20SwapChainPanel%20DirectX%20interop%20sample) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [**Windows. UI. Xaml. Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
-* [Diseño de accesibilidad](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
+* [**Windows. UI. Xaml. Automation**](/uwp/api/Windows.UI.Xaml.Automation)
+* [Diseño de accesibilidad]()
 * [Ejemplo de accesibilidad XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [Accesibilidad](accessibility.md)
 * [Introducción a narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

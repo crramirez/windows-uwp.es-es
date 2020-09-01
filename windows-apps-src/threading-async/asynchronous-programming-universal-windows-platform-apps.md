@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows 10, UWP, asincrónico
 ms.localizationpriority: medium
-ms.openlocfilehash: 77c3080728915ae9a288a57fe0200c43e7d119f3
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 8e7cdffd484c426faa9b877240f45f122ccc5ec4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729994"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161759"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 En este tema se describe la programación asincrónica en el Plataforma universal de Windows (UWP) y su representación en C#, Microsoft Visual Basic .NET, C++ y JavaScript.
@@ -21,7 +21,7 @@ Con la programación asincrónica puedes conseguir que tu aplicación responda c
 Para aquellos métodos que probablemente demanden mucho tiempo en completarse, debe usarse la programación asincrónica y no la excepción en Windows en UWP. JavaScript, C#, Visual Basic y C++ proporcionan compatibilidad con lenguajes para los métodos asincrónicos.
 
 ## <a name="asynchronous-programming-in-the-uwp"></a>Programación asincrónica en UWP
-Muchas características de UWP, como las API de [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) y las API de [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) , se exponen como API asincrónicas. Por Convención, los nombres de las API asincrónicas terminan en "Async" para indicar que parte de su ejecución es probable que se produzca después de que el control se devuelva al autor de la llamada.
+Muchas características de UWP, como las API de [**MediaCapture**](/uwp/api/Windows.Media.Capture.MediaCapture) y las API de [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) , se exponen como API asincrónicas. Por Convención, los nombres de las API asincrónicas terminan en "Async" para indicar que parte de su ejecución es probable que se produzca después de que el control se devuelva al autor de la llamada.
 
 Cuando uses API asincrónicas en tu aplicación de Plataforma universal de Windows (UWP), el código realizará llamadas de desbloqueo de manera coherente. Cuando implementes estos modelos asincrónicos en tus propias definiciones de API, los autores de las llamadas podrán comprender y usar tu código de manera predecible.
 
@@ -59,18 +59,18 @@ Un segmento típico de código escrito en C# o Visual Basic se ejecuta sincróni
 Con C++/WinRT, se usan corrutinas y el operador **co_await** . Para obtener más información y ejemplos de código, vea [programación asincrónica en C++/WinRT](../cpp-and-winrt-apis/concurrency.md).
 
 ## <a name="asynchronous-patterns-in-uwp-with-ccx"></a>Patrones asincrónicos en UWP con C++/CX
-En C++ / CX, la programación asincrónica se basa en la [**clase task**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class) y su [**método then**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class?view=vs-2017). La sintaxis es similar a la de las promesas de JavaScript. La **clase task** y sus tipos relacionados también proporcionan la funcionalidad para cancelación y administración del contexto del subproceso. Para obtener más información, vea [programación asincrónica en C++/CX](asynchronous-programming-in-cpp-universal-windows-platform-apps.md).
+En C++ / CX, la programación asincrónica se basa en la [**clase task**](/cpp/parallel/concrt/reference/task-class) y su [**método then**](/cpp/parallel/concrt/reference/task-class?view=vs-2017). La sintaxis es similar a la de las promesas de JavaScript. La **clase task** y sus tipos relacionados también proporcionan la funcionalidad para cancelación y administración del contexto del subproceso. Para obtener más información, vea [programación asincrónica en C++/CX](asynchronous-programming-in-cpp-universal-windows-platform-apps.md).
 
-La [**función\_Create Async**](https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) proporciona compatibilidad para generar API asincrónicas que se pueden usar desde JavaScript o cualquier otro lenguaje que admita UWP. Para obtener más información, consulte [crear operaciones asincrónicas en C++/CX](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps).
+La [** \_ función Create Async**](/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) proporciona compatibilidad para generar API asincrónicas que se pueden usar desde JavaScript o cualquier otro lenguaje que admita UWP. Para obtener más información, consulte [crear operaciones asincrónicas en C++/CX](/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps).
 
 ## <a name="asynchronous-patterns-in-uwp-using-javascript"></a>Modelos asincrónicos en UWP con JavaScript
 En JavaScript, la programación asincrónica sigue el estándar propuesto de [Common JS Promises/A](https://wiki.commonjs.org/wiki/Promises/A) haciendo que los métodos asincrónicos devuelvan objetos de promesa. Las promesas se usan tanto en UWP como en la biblioteca de Windows para JavaScript.
 
 Un objeto de promesa representa un valor que se entregará en el futuro. En UWP, obtienes un objeto de promesa de una función de fábrica que, convencionalmente, tiene un nombre que termina en "Async".
 
-En muchos casos, llamar a una función asincrónica es casi tan sencillo como llamar a una función convencional. La diferencia es que se usa el método [**then**](https://docs.microsoft.com/previous-versions/windows/apps/br229728(v=win.10)) o [**done**](https://docs.microsoft.com/previous-versions/windows/apps/hh701079(v=win.10)) para asignar los controladores para los resultados o los errores y para iniciar la operación.
+En muchos casos, llamar a una función asincrónica es casi tan sencillo como llamar a una función convencional. La diferencia es que se usa el método [**then**](/previous-versions/windows/apps/br229728(v=win.10)) o [**done**](/previous-versions/windows/apps/hh701079(v=win.10)) para asignar los controladores para los resultados o los errores y para iniciar la operación.
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Llamar a API asincrónicas en C# o Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md)
-* [Programación asincrónica con Async y Await (C# y Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh191443(v=vs.110))
-* [Escenarios de la característica de muestra Reversi: código asincrónico](https://docs.microsoft.com/previous-versions/windows/apps/jj712233(v=win.10))
+* [Programación asincrónica con Async y Await (C# y Visual Basic)](/previous-versions/visualstudio/visual-studio-2012/hh191443(v=vs.110))
+* [Escenarios de la característica de muestra Reversi: código asincrónico](/previous-versions/windows/apps/jj712233(v=win.10))

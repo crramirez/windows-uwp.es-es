@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo agregar compatibilidad de control 
 ms.date: 10/19/2017
 ms.topic: article
 keywords: Shell de Windows 10, UWP, Xbox, voz y voz habilitada
-ms.openlocfilehash: f51ec2c93a904893dc337545f634d04affde10fd
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: db846e906917f29781200f3c312f6dbd6e2b2dd1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685179"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161669"
 ---
 # <a name="using-speech-to-invoke-ui-elements"></a>Usar voz para invocar elementos de la interfaz de usuario
 
@@ -51,16 +51,16 @@ VES es un cliente de automatización de la interfaz de usuario y se basa en la i
 
 Todas las aplicaciones UWP tienen acceso al marco de automatización de la interfaz de usuario y pueden exponer información sobre la interfaz de usuario de forma independiente del marco de gráficos en el que se compilan (XAML, DirectX/Direct3D, Xamarin, etc.).  En algunos casos, como XAML, la mayor parte del trabajo se realiza mediante el marco, lo que reduce considerablemente el trabajo necesario para admitir narrador y VES.
 
-Para obtener más información sobre la automatización de la interfaz de usuario, vea [fundamentos de UI Automation](https://msdn.microsoft.com/library/ms753107(v=vs.110).aspx "Fundamentos de UI Automation").
+Para obtener más información sobre la automatización de la interfaz de usuario, vea [fundamentos de UI Automation](/dotnet/framework/ui-automation/ui-automation-fundamentals "Fundamentos de UI Automation").
 
 ## <a name="control-invocation-name"></a>Nombre de invocación de control ##
 VES emplea la siguiente heurística para determinar qué frase se debe registrar con el reconocedor de voz como el nombre del control (es decir, lo que el usuario debe hablar para invocar el control).  Esta es también la frase que se mostrará en la etiqueta de la sugerencia de voz.
 
 Origen de nombre por orden de prioridad:
 
-1. Si el elemento tiene una `LabeledBy` propiedad adjunta, VES usará el `AutomationProperties.Name` de esta etiqueta de texto.
-2. `AutomationProperties.Name` del elemento.  En XAML, el contenido de texto del control se usará como valor predeterminado para `AutomationProperties.Name`.
-3. Si el control es un ListItem o un botón, VES buscará el primer elemento secundario con un `AutomationProperties.Name`válido.
+1. Si el elemento tiene una `LabeledBy` propiedad adjunta, ves usará el `AutomationProperties.Name` de esta etiqueta de texto.
+2. `AutomationProperties.Name` del elemento.  En XAML, el contenido de texto del control se usará como valor predeterminado para `AutomationProperties.Name` .
+3. Si el control es un ListItem o un botón, VES buscará el primer elemento secundario con un válido `AutomationProperties.Name` .
 
 ## <a name="actionable-controls"></a>Controles accionables ##
 VES considera que un control es accionable si implementa uno de los siguientes patrones de control de automatización:
@@ -76,16 +76,16 @@ VES considera que un control es accionable si implementa uno de los siguientes p
 - **ScrollPattern** (p. ej., List): representa controles que actúan como contenedores desplazables para una colección de elementos secundarios.
 
 ## <a name="scrollable-containers"></a>Contenedores desplazables ##
-En el caso de los contenedores desplazables que admiten ScrollPattern, VES escuchará los comandos de voz como "desplazamiento a la izquierda", "desplazamiento a la derecha", etc. y llamará a Scroll con los parámetros adecuados cuando el usuario desencadene uno de estos comandos.  Los comandos de desplazamiento se insertan en función del valor de las propiedades `HorizontalScrollPercent` y `VerticalScrollPercent`.  Por ejemplo, si `HorizontalScrollPercent` es mayor que 0, se agregará "desplazamiento a la izquierda", si es inferior a 100, se agregará "desplazamiento a la derecha", y así sucesivamente.
+En el caso de los contenedores desplazables que admiten ScrollPattern, VES escuchará los comandos de voz como "desplazamiento a la izquierda", "desplazamiento a la derecha", etc. y llamará a Scroll con los parámetros adecuados cuando el usuario desencadene uno de estos comandos.  Los comandos scroll se insertan en función del valor de `HorizontalScrollPercent` las `VerticalScrollPercent` propiedades y.  Por ejemplo, si `HorizontalScrollPercent` es mayor que 0, se agregará "desplazamiento a la izquierda", si es inferior a 100, se agregará "desplazamiento a la derecha", y así sucesivamente.
 
 ## <a name="narrator-overlap"></a>Superposición de narrador ##
-La aplicación narrador también es un cliente de automatización de la interfaz de usuario y usa la propiedad `AutomationProperties.Name` como uno de los orígenes para el texto que lee para el elemento de la interfaz de usuario seleccionado actualmente.  Para proporcionar una mejor experiencia de accesibilidad, muchos desarrolladores de aplicaciones han recurrido a la sobrecarga de la propiedad `Name` con texto descriptivo largo con el objetivo de proporcionar más información y contexto cuando el narrador los Lee.  Sin embargo, esto provoca un conflicto entre las dos características: VES necesita frases cortas que coinciden o coinciden estrechamente con el texto visible del control, mientras que el narrador se beneficia de frases más largas y más descriptivas para proporcionar un mejor contexto.
+La aplicación narrador también es un cliente de automatización de la interfaz de usuario y usa la `AutomationProperties.Name` propiedad como uno de los orígenes para el texto que lee para el elemento de la interfaz de usuario seleccionado actualmente.  Para proporcionar una mejor experiencia de accesibilidad, muchos desarrolladores de aplicaciones han recurrido a la sobrecarga de la `Name` propiedad con texto descriptivo largo con el objetivo de proporcionar más información y contexto cuando el narrador los Lee.  Sin embargo, esto provoca un conflicto entre las dos características: VES necesita frases cortas que coinciden o coinciden estrechamente con el texto visible del control, mientras que el narrador se beneficia de frases más largas y más descriptivas para proporcionar un mejor contexto.
 
-Para resolver este error, a partir de Windows 10 Creators Update, el narrador se actualizó para ver también la propiedad `AutomationProperties.HelpText`.  Si esta propiedad no está vacía, el narrador hablará su contenido además de `AutomationProperties.Name`.  Si `HelpText` está vacío, el narrador solo leerá el contenido del nombre.  Esto permitirá que se usen cadenas más largas en el caso de que sea necesario, pero mantenga una frase más corta y sencilla de reconocimiento de voz en la propiedad `Name`.
+Para resolver este error, a partir de Windows 10 Creators Update, el narrador se actualizó para examinar también la `AutomationProperties.HelpText` propiedad.  Si esta propiedad no está vacía, el narrador hablará su contenido además de `AutomationProperties.Name` .  Si `HelpText` está vacío, el narrador solo leerá el contenido del nombre.  Esto permitirá que se usen cadenas más largas en el caso de que sea necesario, pero mantenga una frase más corta y sencilla de reconocimiento de voz en la `Name` propiedad.
 
 ![](images/ves_narrator.jpg)
 
-Para obtener más información, vea [propiedades de automatización para la compatibilidad con accesibilidad en la interfaz de usuario](https://msdn.microsoft.com/library/ff400332(vs.95).aspx "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario").
+Para obtener más información, vea [propiedades de automatización para la compatibilidad con accesibilidad en la interfaz de usuario](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario").
 
 ## <a name="active-listening-mode-alm"></a>Modo de escucha activo (ALM) ##
 ### <a name="entering-alm"></a>Escribir ALM ###
@@ -113,7 +113,7 @@ El sistema permanecerá en ALM mientras el usuario interactúa con la interfaz d
 Cuando en ALM el usuario puede interactuar con la interfaz de usuario mediante el uso de Voice.  Si la interfaz de usuario está configurada correctamente (con propiedades de nombre que coinciden con el texto visible), el uso de Voice para realizar acciones debe ser una experiencia natural y perfecta.  El usuario debe poder decir simplemente lo que ve en la pantalla.
 
 ## <a name="overlay-ui-on-xbox"></a>Interfaz de usuario de superposición en Xbox ##
-El nombre VES se deriva para un control puede ser diferente del texto visible real en la interfaz de usuario.  Esto puede deberse a que la propiedad `Name` del control o al elemento `LabeledBy` asociado se establece explícitamente en una cadena diferente.  O bien, el control no tiene texto GUI sino solo un icono o un elemento de imagen.
+El nombre VES se deriva para un control puede ser diferente del texto visible real en la interfaz de usuario.  Esto puede deberse a la `Name` propiedad del control o al elemento adjunto `LabeledBy` que se establece explícitamente en una cadena diferente.  O bien, el control no tiene texto GUI sino solo un icono o un elemento de imagen.
 
 En estos casos, los usuarios necesitan una manera de ver lo que debe decirse para invocar este tipo de control.  Por lo tanto, una vez en la escucha activa, las sugerencias de voz se pueden mostrar diciendo "Mostrar etiquetas".  Esto hace que las etiquetas de la sugerencia de voz aparezcan encima de cada control accionable.
 
@@ -148,7 +148,7 @@ En el caso de los controles desplazables, las sugerencias de voz para los comand
 
 ![](images/ves_scroll.png) 
 
-## <a name="disambiguation"></a>Desambiguación ##
+## <a name="disambiguation"></a>Anulación de ambigüedades ##
 Cuando varios elementos de la interfaz de usuario tienen el mismo nombre o el reconocedor de voz coincide con varios candidatos, VES entrará en modo de desambiguación.  En este modo, las etiquetas de la sugerencia de voz se mostrarán para los elementos implicados de forma que el usuario pueda seleccionar la adecuada. El usuario puede cancelar el modo de desambiguación diciendo "Cancelar".
 
 Por ejemplo:
@@ -209,16 +209,16 @@ En el ejemplo anterior se muestra el aspecto que tendrá la interfaz de usuario 
 
     ![](images/ves_alm_labels.png) 
 
-En el caso de `button1`, XAML rellena automáticamente la propiedad `AutomationProperties.Name` utilizando el texto del contenido de texto visible del control.  Este es el motivo por el que hay una etiqueta de sugerencia de voz, aunque no haya un conjunto de `AutomationProperties.Name` explícito.
+En el caso de `button1` , XAML rellena automáticamente la `AutomationProperties.Name` propiedad utilizando el texto del contenido de texto visible del control.  Este es el motivo por el que hay una etiqueta de sugerencia de voz, aunque no haya un `AutomationProperties.Name` conjunto explícito.
 
-Con `button2`, establecemos explícitamente el `AutomationProperties.Name` en un valor distinto del texto del control.
+Con `button2` , establecemos explícitamente `AutomationProperties.Name` en un valor distinto del texto del control.
 
-Con `comboBox`, usamos la propiedad `LabeledBy` para hacer referencia a `label1` como el origen de la `Name`de automatización y, en `label1`, establecemos la `AutomationProperties.Name` en una frase más natural que la que se representa en la pantalla ("día de la semana" en lugar de "Seleccionar día de la semana").
+Con `comboBox` , usamos la `LabeledBy` propiedad `label1` como referencia como el origen de la automatización `Name` y, en, `label1` establecemos en `AutomationProperties.Name` una frase más natural que lo que se representa en la pantalla ("día de la semana" en lugar de "Seleccionar día de la semana").
 
-Por último, con `button3`, VES toma el `Name` del primer elemento secundario, ya que `button3` mismo no tiene `AutomationProperties.Name` establecido.
+Por último, con `button3` , ves toma el `Name` del primer elemento secundario, ya que en `button3` sí mismo no tiene un `AutomationProperties.Name` conjunto.
 
-## <a name="see-also"></a>Consulta también
-- [Aspectos básicos de la automatización de la interfaz de usuario](https://msdn.microsoft.com/library/ms753107(v=vs.110).aspx "Fundamentos de UI Automation")
-- [Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario](https://msdn.microsoft.com/library/ff400332(vs.95).aspx "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario")
+## <a name="see-also"></a>Vea también
+- [Fundamentos de UI Automation](/dotnet/framework/ui-automation/ui-automation-fundamentals "Fundamentos de UI Automation")
+- [Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario")
 - [Preguntas más frecuentes](frequently-asked-questions.md)
 - [UWP en Xbox One](index.md)
