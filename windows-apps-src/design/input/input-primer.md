@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ef3adfd192acbef45ee341b133e4133e1f1ff586
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: dc220d1b5489faf96653472880dc06124c10b047
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968161"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173449"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -82,11 +82,11 @@ En Windows 10, la extensibilidad **Cortana** te permite controlar los comandos d
 
 Un comando de voz es una expresión única, definida en un archivo de definición de comando de voz (VCD), dirigida a una aplicación instalada a través de **Cortana**. Se puede iniciar la aplicación en primer o en segundo plano, según el nivel y la complejidad de la interacción. Por ejemplo, los comandos de voz que requieren más contexto o la entrada del usuario se administran mejor en primer plano, mientras que los comandos básicos se pueden controlar en segundo plano.
 
-Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** se convierta en un enlace entre tu aplicación y el usuario. En muchos casos, esto puede ahorrarle al usuario un tiempo y esfuerzo considerables. Para obtener más información, consulta las [Directrices para el diseño de Cortana](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines).
+Al integrar la funcionalidad básica de tu aplicación y ofrecer un punto de entrada central para que el usuario realice la mayoría de las tareas sin tener que abrir la aplicación directamente, se permite que **Cortana** se convierta en un enlace entre tu aplicación y el usuario. En muchos casos, esto puede ahorrarle al usuario un tiempo y esfuerzo considerables. Para obtener más información, consulta las [Directrices para el diseño de Cortana](/cortana/skills/cortana-design-guidelines).
 
 ### <a name="more-info"></a>Más información
 
-[Directrices de diseño de Cortana](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)
+[Directrices de diseño de Cortana](/cortana/skills/cortana-design-guidelines)
  
 
 ## <a name="speech"></a>Voz
@@ -135,14 +135,14 @@ La función de dictado normalmente se usa cuando una aplicación no necesita com
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
+[Directrices para el diseño de voz](./speech-interactions.md)
  
 
 ## <a name="pen"></a>Lápiz
 
 Un lápiz (o pluma) puede servir como un dispositivo señalador de precisión de píxeles (por ejemplo, un mouse) y es el dispositivo de entrada ideal para la entrada de lápiz digital.
 
-**Tenga en cuenta**  que hay dos tipos de dispositivos de lápiz: activo y pasivo.
+**Nota:**    Hay dos tipos de dispositivos de lápiz: activo y pasivo.
   -   Los lápices pasivos no contienen electrónica y emulan la entrada táctil de un dedo de forma eficaz. Requieren una pantalla de dispositivo básico que reconozca la entrada basada en la presión por contacto. Dado que los usuarios a menudo sitúan la mano a medida que escriben en la superficie de entrada, los datos de entrada pueden contaminarse debido a un rechazo de palma incorrecto.
   -   Los lápices activos contienen electrónica y pueden funcionar con pantallas de dispositivos complejos para proporcionar datos de entrada mucho más amplios (lo que incluye mantener el puntero sobre un elemento o los datos de proximidad) al sistema y a la aplicación. El rechazo de la palma es mucho más eficaz.
 
@@ -168,7 +168,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de lápiz](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
+[Directrices para el diseño de lápiz](./pen-and-stylus-interactions.md)
  
 
 ## <a name="touch"></a>Tocar
@@ -203,7 +203,7 @@ En general, la función táctil:
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de la función táctil](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction)
+[Directrices para el diseño de la función táctil](./touch-interactions.md)
  
 
 ## <a name="touchpad"></a>Panel táctil
@@ -227,14 +227,14 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de panel táctil](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
+[Directrices para el diseño de panel táctil](./touch-interactions.md)
  
 
-## <a name="keyboard"></a>Keyboard
+## <a name="keyboard"></a>Teclado
 
 Un teclado es el principal dispositivo de entrada de texto y, a menudo, resulta indispensable para personas con ciertas discapacidades o para los usuarios que lo consideran una manera más rápida y eficaz de interactuar con una aplicación.
 
-Con [Continuum para teléfonos](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), una nueva experiencia para dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y un teclado para que los teléfonos funcionen como un portátil.
+Con [Continuum para teléfonos](/windows-hardware/design/device-experiences/continuum-phone), una nueva experiencia para dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y un teclado para que los teléfonos funcionen como un portátil.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -256,7 +256,7 @@ El teclado en pantalla es un teclado de software visual que puedes usar en lugar
 
 El teclado táctil es un teclado de software visual que se usa para escribir texto con entrada táctil. El teclado táctil no reemplaza al teclado en pantalla, ya que se usa únicamente para escribir texto (no simula el teclado de hardware) y solo aparece cuando se hace foco en un campo editable o en otro control de texto editable. El teclado táctil no admite comandos de aplicación ni del sistema.
 
-**Tenga**  en cuenta que Osk tiene prioridad sobre el teclado táctil, que no se mostrará si el Osk está presente.
+**Nota:**    El OSK tiene prioridad sobre el teclado táctil, que no se mostrará si el OSK está presente.
 
 En general, un teclado:
 
@@ -267,7 +267,7 @@ En general, un teclado:
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
+[Directrices para el diseño de teclado](./keyboard-interactions.md)
  
 
 ## <a name="mouse"></a>Mouse
@@ -294,7 +294,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de mouse](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
+[Directrices para el diseño de mouse](./mouse-interactions.md)
  
 
 ## <a name="gesture"></a>Gesto
@@ -335,7 +335,7 @@ El controlador para juegos y controlador es un dispositivo muy especializado nor
 -   IoT
 -   Xbox
 
-![controller](images/input-interactions/icons-controller01.png)
+![controlador](images/input-interactions/icons-controller01.png)
 
 ### <a name="typical-usage"></a>Uso típico
 

@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, UWP, notificaciones del sistema, notificaciones interactivas, notificaciones de sistema adaptables, contenido del sistema, carga del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: bda62b76973adb7b6cfe068cdd9ca33b1a54454c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 97dd16d712dca3de69a98c608b7c8947ebbddfea
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970930"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173369"
 ---
 # <a name="toast-content"></a>Contenido de notificaciones del sistema
 
@@ -22,7 +22,7 @@ Las notificaciones del sistema interactivas y adaptables permiten crear notifica
 > **API importantes**: [paquete NuGet de notificaciones del kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8,1, consulte el [Catálogo de plantillas de notificaciones de sistema heredado](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)).
+> Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8,1, consulte el [Catálogo de plantillas de notificaciones de sistema heredado](/previous-versions/windows/apps/hh761494(v=win.10)).
 
 
 ## <a name="getting-started"></a>Introducción
@@ -303,7 +303,7 @@ ToastContent toastContent = new ToastContent()
 Para obtener más información sobre el uso de una barra de progreso, consulte la [barra de progreso del sistema](toast-progress-bar.md).
 
 
-## <a name="headers"></a>Encabezados
+## <a name="headers"></a>encabezados
 
 **Nuevo en Creators Update**: puede agrupar notificaciones en encabezados dentro del centro de actividades. Por ejemplo, puede agrupar los mensajes de un chat de grupo en un encabezado o agrupar las notificaciones de un tema común bajo un encabezado, o más.
 
@@ -318,7 +318,7 @@ Para obtener más información sobre el uso de encabezados, consulte los [encabe
 
 Este contenido adicional se especifica mediante Adaptive, en el que puede obtener más información leyendo la [documentación de iconos adaptables](create-adaptive-tiles.md).
 
-Tenga en cuenta que cualquier contenido adaptable debe estar contenido dentro de un [**AdaptiveGroup**](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/toast-schema#adaptivegroup). De lo contrario, no se representará mediante Adaptive.
+Tenga en cuenta que cualquier contenido adaptable debe estar contenido dentro de un [**AdaptiveGroup**](./toast-schema.md#adaptivegroup). De lo contrario, no se representará mediante Adaptive.
 
 
 ### <a name="columns-and-text-elements"></a>Columnas y elementos de texto

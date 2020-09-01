@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: uwp
 ms.technology: apps
 ms.date: 03/19/2020
-ms.openlocfilehash: b6cdab774389d4cbd41c53d6ca6a368eb182c339
-ms.sourcegitcommit: 4c7f1e5952ead9b9a71a8d13795d1771a5f3219e
+ms.openlocfilehash: 0f67795f57ba5a7af1fea54eac59e00b5664d6e8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80871018"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174549"
 ---
 # <a name="contribute-to-windows-docs-and-be-entered-to-win-some-swag"></a>Contribuya con Windows docs y escriba para ganar algunos swag
 
@@ -21,15 +21,15 @@ Si usa la documentación de Windows, considere la posibilidad de convertirse en 
 
 Esto es lo que debe hacer:
 
-1. Configure una [cuenta con GitHub](https://github.com/join), si aún no tiene una, y, a continuación, lea nuestra [Guía para colaboradores de docs](https://docs.microsoft.com/contribute/).
+1. Configure una [cuenta con GitHub](https://github.com/join), si aún no tiene una, y, a continuación, lea nuestra [Guía para colaboradores de docs](/contribute/).
 2. Lea el siguiente contenido de docs, que busca contenido que podría ser mejor:
-    - **Cree aplicaciones de escritorio** - [UWP](https://docs.microsoft.com/windows/uwp/), [Win32](https://docs.microsoft.com/windows/win32/), [WPF](https://docs.microsoft.com/dotnet/framework/wpf/), [Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/)
-    - **Biblioteca de interfaz de usuario de Windows** - [controles para aplicaciones UWP](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/), referencia de [API de controles](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls?view=winui-2.3)
-    - Guía de **compilación con windows** - [subsistema de Windows para Linux](https://docs.microsoft.com/windows/wsl/about), [Python](https://docs.microsoft.com/windows/python/), [NodeJS](https://docs.microsoft.com/windows/nodejs/), [Mac a Windows](https://docs.microsoft.com/windows/dev-environment/mac-to-windows)
-    - [Herramientas y controladores de - de desarrollo de hardware de](https://docs.microsoft.com/windows-hardware/drivers/) **Windows**
+    - **Compilar aplicaciones**  -  de escritorio [UWP](/windows/uwp/), [Win32](/windows/win32/), [WPF](/dotnet/framework/wpf/), [Windows Forms](/dotnet/framework/winforms/)
+    - Biblioteca de interfaz de **usuario de Windows**  -  [Controles para aplicaciones UWP](/windows/uwp/design/controls-and-patterns/), [referencia de API de controles](/uwp/api/microsoft.ui.xaml.controls?view=winui-2.3)
+    - **Compilar con Windows**  -  Guía [de Windows Subsystem for Linux](/windows/wsl/about), [Python](./python/index.yml), [NodeJS](./nodejs/index.yml), [Mac a Windows](./dev-environment/mac-to-windows.md)
+    - Desarrollador de hardware de **Windows**  -  [Herramientas y controladores](/windows-hardware/drivers/)
 3. Realice correcciones en una página de docs seleccionando el botón **Editar** en la parte superior de la página. Esto le llevará al archivo de origen de Markdown en GitHub.
 4. Una vez completados los cambios. Archivo su solicitud de incorporación de cambios (PR).
-5. Responda a la [publicación de@WindowsDocs concurso](https://twitter.com/WindowsDocs/status/1242088720209268736) con un vínculo a su solicitud de incorporación de mensajes.
+5. Responda al [ @WindowsDocs envío del concurso](https://twitter.com/WindowsDocs/status/1242088720209268736) con un vínculo a su solicitud de incorporación de precio.
 
 Gracias a nuestra comunidad de colaboradores.
 

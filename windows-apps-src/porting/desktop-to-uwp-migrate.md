@@ -5,12 +5,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c07a3bbff4b29d2b59ef7d6d8a5912ce3675a4e
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 2e13c656f02531d500a72aa74b2d3c5d6cc29aa4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730354"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174939"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>Traslado de una aplicación de escritorio a UWP
 
@@ -70,7 +70,7 @@ Use estas mismas herramientas para analizar el código. Descargue las herramient
 &nbsp;
 > [!VIDEO https://www.youtube-nocookie.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2]
 
-Si el código no es compatible con el estándar, tenga en cuenta otras formas de implementar ese código. Para empezar, abra el [Explorador de API de .net](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0). Puede usar ese explorador para revisar las API que están disponibles en el .NET Standard 2,0. Asegúrese de establecer el ámbito de la lista en el .NET Standard 2,0.
+Si el código no es compatible con el estándar, tenga en cuenta otras formas de implementar ese código. Para empezar, abra el [Explorador de API de .net](/dotnet/api/?view=netstandard-2.0). Puede usar ese explorador para revisar las API que están disponibles en el .NET Standard 2,0. Asegúrese de establecer el ámbito de la lista en el .NET Standard 2,0.
 
 ![opción dot net](images/desktop-to-uwp/dot-net-option.png)
 
@@ -112,7 +112,7 @@ public static ArrayList GetCustomerNames()
 }
 
 ```
-No obstante, podemos usar el [Explorador de API de .net](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) para buscar una alternativa. Las ``DbConnection`` ``DbCommand`` clases, y ``DbDataReader`` están disponibles en la .net Standard 2,0 para que se puedan usar en su lugar.  
+No obstante, podemos usar el [Explorador de API de .net](/dotnet/api/?view=netstandard-2.0) para buscar una alternativa. Las ``DbConnection`` ``DbCommand`` clases, y ``DbDataReader`` están disponibles en la .net Standard 2,0 para que se puedan usar en su lugar.  
 
 Esta versión revisada usa esas clases para obtener una lista de clientes, pero para crear una ``DbConnection`` clase, es necesario pasar un objeto de generador que se crea en la aplicación cliente.
 
@@ -216,7 +216,7 @@ public sealed partial class MainPage : Page
 }
 ```
 
-Para empezar a trabajar con UWP, vea [Qué es una aplicación de UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
+Para empezar a trabajar con UWP, vea [Qué es una aplicación de UWP](../get-started/universal-application-platform-guide.md).
 
 ### <a name="reach-ios-and-android-devices"></a>Llegar a dispositivos iOS y Android
 
@@ -239,7 +239,7 @@ Puede encontrar estas plantillas en el cuadro de diálogo **Agregar nuevo proyec
 ![Aplicaciones de Xamarin](images/desktop-to-uwp/xamarin-projects.png)
 
 >[!NOTE]
->Los proyectos multiplataforma son ideales para aplicaciones con poca funcionalidad específica de la plataforma. Puede usarlos para compilar una interfaz de usuario nativa basada en XAML que se ejecute en iOS, Android y Windows. Obtenga más información [aquí](https://docs.microsoft.com/xamarin/xamarin-forms/).
+>Los proyectos multiplataforma son ideales para aplicaciones con poca funcionalidad específica de la plataforma. Puede usarlos para compilar una interfaz de usuario nativa basada en XAML que se ejecute en iOS, Android y Windows. Obtenga más información [aquí](/xamarin/xamarin-forms/).
 
 A continuación, desde el proyecto de Android, iOS o multiplataforma, agregue una referencia al proyecto de biblioteca de clases.
 
@@ -278,7 +278,7 @@ public class MainActivity : ListActivity
 }
 ```
 
-Para empezar a trabajar con los proyectos de Android, iOS y multiplataforma, vea el [portal para desarrolladores de Xamarin](https://docs.microsoft.com/xamarin).
+Para empezar a trabajar con los proyectos de Android, iOS y multiplataforma, vea el [portal para desarrolladores de Xamarin](/xamarin).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -1,17 +1,17 @@
 ---
 title: Cómo desactivar el escalado
-description: Instrucciones para desactivar el factor de escala predeterminado.
+description: Obtenga información acerca de cómo desactivar el factor de escala predeterminado y hacer que la aplicación use las dimensiones reales del dispositivo 1910 x 1080 píxeles.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
 ms.localizationpriority: medium
-ms.openlocfilehash: 44688ff40792ba2ee72cbd1d96bae1ac59834efa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 404bdd9a4b25254c1941928dbfb0b548492f03a5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604750"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174709"
 ---
 # <a name="how-to-turn-off-scaling"></a>Cómo desactivar el escalado   
 De manera predeterminada, las aplicaciones adoptan una escala de 200 % para XAML y de 150 % para aplicaciones HTML. Es posible desactivar el factor de escala de forma predeterminado. Esto hará que la aplicación use las dimensiones en píxeles reales del dispositivo (1910 x 1080 píxeles).   
@@ -43,6 +43,6 @@ bool result = Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayo
 ## <a name="directxc"></a>DirectX/C++   
 Las aplicaciones DirectX/C++ no se escalan. El ajuste de escala automático solo se aplica a las aplicaciones HTML y XAML.  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Procedimientos recomendados para Xbox](tailoring-for-xbox.md)
 - [UWP en Xbox One](index.md)

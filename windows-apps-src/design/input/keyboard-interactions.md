@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 44cb122f70825df3ceef043d84e57cd077780749
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: f4f2e9e13f492dd9a38d737c0c86dd3b1e632279
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234706"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173489"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 
@@ -143,10 +143,10 @@ De forma predeterminada, los controles de UWP siguen estos comportamientos bási
 -   **Las teclas de tabulación** se desplazan entre los controles accionables/activos en el orden de tabulación.
 -   **MAYÚS + TAB** desplazar controles en el orden de tabulación inversa. Si el usuario ha navegado dentro del control mediante la tecla de dirección, el foco se establece en el último valor conocido dentro del control.
 -   **Las teclas de dirección** exponen "navegación interna" específica del control cuando el usuario escribe "navegación interna". las teclas de dirección no se desplazan fuera de un control. Estos son algunos ejemplos:
-    -   La tecla de dirección arriba/abajo mueve el foco dentro `ListView` de y`MenuFlyout`
-    -   Modificar los valores actualmente seleccionados para `Slider` y`RatingsControl`
-    -   Desplace el símbolo de intercalación dentro`TextBox`
-    -   Expandir o contraer elementos dentro de`TreeView`
+    -   La tecla de dirección arriba/abajo mueve el foco dentro `ListView` de y `MenuFlyout`
+    -   Modificar los valores actualmente seleccionados para `Slider` y `RatingsControl`
+    -   Desplace el símbolo de intercalación dentro `TextBox`
+    -   Expandir o contraer elementos dentro de `TreeView`
 
 Use estos comportamientos predeterminados para optimizar la navegación del teclado de la aplicación.
 
@@ -282,9 +282,9 @@ La tabla siguiente es una pequeña muestra de los métodos abreviados de teclado
 |--------------------------------------|--------------------------------------------------|
 | Seleccionar todo                           | Ctrl+A                                           |
 | Seleccionar continuamente                  | Mayús+Tecla de flecha                                  |
-| Save                                 | Ctrl+S                                           |
+| Guardar                                 | Ctrl+S                                           |
 | Buscar                                 | Ctrl+F                                           |
-| Print                                | Ctrl+P                                           |
+| Impresión                                | Ctrl+P                                           |
 | Copiar                                 | Ctrl+C                                           |
 | Cortar                                  | Ctrl+X                                           |
 | Pegar                                | Ctrl+V                                           |
@@ -306,9 +306,9 @@ Puede agrupar un conjunto de controles relacionados, o complementarios, en un "g
 #### <a name="arrow-key-navigation"></a>Navegación por la tecla de dirección
 
 Los usuarios esperan compatibilidad con la navegación por la tecla de dirección cuando hay un grupo de controles similares relacionados en una región de la interfaz de usuario:
--   `AppBarButtons`en un`CommandBar`
--   `ListItems`o `GridItems` dentro `ListView` o`GridView`
--   `Buttons`énfasis`ContentDialog`
+-   `AppBarButtons` en un `CommandBar`
+-   `ListItems` o `GridItems` dentro `ListView` o `GridView`
+-   `Buttons` énfasis `ContentDialog`
 
 Los controles de UWP admiten la navegación por teclas de flecha de forma predeterminada. En el caso de los diseños personalizados y los grupos de control, use `XYFocusKeyboardNavigation="Enabled"` para proporcionar un comportamiento similar.
 
@@ -345,9 +345,9 @@ Un ejemplo de comportamiento predeterminado de UWP en este caso es `ContentDialo
 
 En los casos en los que el diseño sigue un patrón de interfaz de usuario conocido para los grupos de control, la asignación de una única posición de tabulación al grupo puede mejorar la eficacia de la navegación para los usuarios.
 
-Ejemplos:
+Algunos ejemplos son:
 -   `RadioButtons`
--   Múltiplos `ListViews` que tienen el mismo aspecto y se comportan como un solo`ListView`
+-   Múltiplos `ListViews` que tienen el mismo aspecto y se comportan como un solo `ListView`
 -   Cualquier interfaz de usuario para buscar y comportarse como una cuadrícula de mosaicos (como los mosaicos del menú Inicio)
 
 #### <a name="specifying-control-group-behavior"></a>Especificar el comportamiento del grupo de control
@@ -511,7 +511,7 @@ Pruebe la aplicación con todos los dispositivos de entrada admitidos para asegu
 * [Identificación de dispositivos de entrada](identify-input-devices.md)
 * [Responder a la presencia del teclado táctil](respond-to-the-presence-of-the-touch-keyboard.md)
 * [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-* [Detalles del teclado del control NavigationView](/windows/uwp/design/controls-and-patterns/navigationview#hierarchical-navigation) 
+* [Detalles del teclado del control NavigationView](../controls-and-patterns/navigationview.md#hierarchical-navigation) 
 
 ## <a name="appendix"></a>Apéndice
 
@@ -537,7 +537,7 @@ El teclado táctil normalmente permanece visible mientras el usuario navega por 
 
 La siguiente es una lista de controles de no edición que pueden recibir el foco durante una sesión de entrada de texto con el teclado táctil sin por ello descartar el teclado. En lugar de renovar innecesariamente la interfaz de usuario y, posiblemente, desorientar al usuario, el teclado táctil permanece visible porque es probable que el usuario alterne entre estos controles y la entrada de texto con el teclado táctil.
 
--   Casilla
+-   Casilla de verificación
 -   Cuadro combinado
 -   Botón de selección
 -   Barra de desplazamiento

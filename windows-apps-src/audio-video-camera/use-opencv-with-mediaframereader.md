@@ -1,79 +1,75 @@
 ---
 ms.assetid: ''
-description: En este artículo se muestra cómo usar la Open Source Computer Vision Library (OpenCV) con la clase MediaFrameReader.
+description: En este artículo se muestra cómo usar la biblioteca de Computer Vision de código abierto (OpenCV) con la clase MediaFrameReader.
 title: Usar OpenCV con MediaFrameReader
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, openCV
+keywords: Windows 10, UWP, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: a6594898dff1bf5f2262034b10e262082335f1b2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2128313c48f8d279a23cf63278b3e853c00348e4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255953"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175659"
 ---
-# <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Usar la Open Source Computer Vision Library (OpenCV) con MediaFrameReader
+# <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Usar la biblioteca de Computer Vision de código abierto (OpenCV) con MediaFrameReader
 
-En este artículo se muestra cómo usar la Open Source Computer Vision Library (OpenCV), una biblioteca de código nativo que proporciona una amplia variedad de algoritmos de procesamiento de imágenes con la clase [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) que puede leer fotogramas multimedia de varias fuentes de forma simultánea. El código de ejemplo de este artículo te guía a través de la creación de una aplicación sencilla que obtiene los fotogramas de un sensor de color, desenfoca cada fotograma mediante la biblioteca de OpenCV y, luego, muestra la imagen procesada en un control **Image** XAML. 
+En este artículo se muestra cómo usar la biblioteca de Computer Vision de código abierto (OpenCV), una biblioteca de código nativo que proporciona una amplia variedad de algoritmos de procesamiento de imágenes, con la clase [**MediaFrameReader**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) que puede leer fotogramas multimedia de varios orígenes simulataneously. El código de ejemplo de este artículo le guía a través de la creación de una aplicación sencilla que obtiene fotogramas de un sensor de color, desenfoca cada fotograma mediante la biblioteca OpenCV y, a continuación, muestra la imagen procesada en un control de **imagen** XAML. 
 
 >[!NOTE]
 >OpenCV. win. Core y OpenCV. win. ImgProc no se actualizan con regularidad y no superan las comprobaciones de cumplimiento del almacén, por lo que estos paquetes solo están diseñados para la experimentación.
 
-Este artículo se basa en el contenido de los otros dos artículos:
+Este artículo se basa en el contenido de otros dos artículos:
 
-* [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md): en este artículo se ofrece información detallada sobre cómo usar **MediaFrameReader** para obtener fotogramas de uno o varios orígenes de fotogramas multimedia y describe, en detalles, la mayoría del código de muestra de este artículo. En concreto, **Procesar fotogramas multimedia con MediaFrameReader** ofrece la lista de códigos para una clase auxiliar, **FrameRenderer**, que controla la presentación de fotogramas multimedia en un elemento **Image** XAML. El código de muestra de este artículo usa también esta clase auxiliar.
+* [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md) : en este artículo se proporciona información detallada sobre el uso de **MediaFrameReader** para obtener fotogramas de uno o más orígenes de fotogramas multimedia y se describe, en detalle, la mayor parte del código de ejemplo de este artículo. En concreto, **procesar fotogramas multimedia con MediaFrameReader** proporciona la lista de código para una clase auxiliar, **FrameRenderer**, que controla la presentación de los fotogramas multimedia en un elemento de **imagen** XAML. En el código de ejemplo de este artículo se usa también esta clase auxiliar.
 
-* [Procesar mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md) : este artículo le guía a través de la creación de un componente de Windows Runtime de código nativo, **OpenCVBridge**, que ayuda a realizar la conversión entre el objeto **SoftwareBitmap** , usado por **MediaFrameReader**, y el tipo de **paspartú** usado por la biblioteca de OpenCV. El código de muestra de este artículo da por hecho que has seguido los pasos para agregar el componente **OpenCVBridge** a la solución de aplicación para UWP.
+* [Procesar mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md) : este artículo le guía a través de la creación de un componente de Windows Runtime de código nativo, **OpenCVBridge**, que ayuda a realizar la conversión entre el objeto **SoftwareBitmap** , usado por **MediaFrameReader**, y el tipo de **paspartú** usado por la biblioteca de OpenCV. En el código de ejemplo de este artículo se supone que ha seguido los pasos para agregar el componente **OpenCVBridge** a la solución de aplicación para UWP.
 
-Además de estos artículos, para ver y descargar una muestra de código completa e integral del escenario descrito en este artículo, consulta el [Fotogramas de Cámara+ Muestra de OpenCV](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraOpenCV) en el repositorio de GitHub de muestras universales de Windows.
+Además de estos artículos, para ver y descargar un ejemplo completo de trabajo de un extremo a otro del escenario que se describe en este artículo, consulte el [ejemplo Camera frames + OpenCV](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraOpenCV) en el repositorio de github de ejemplos de Windows universal.
 
-Para empezar a desarrollar rápidamente, puede incluir la biblioteca OpenCV en un proyecto de aplicación para UWP mediante el uso de paquetes NuGet, pero es posible que estos paquetes no pasen el proceso certficication de la aplicación al enviar la aplicación a la tienda, por lo que se recomienda descargar el OpenCV código fuente de la biblioteca y compilar los archivos binarios usted mismo antes de enviar la aplicación. Podrás encontrar información sobre el desarrollo con OpenCV en [https://opencv.org](https://opencv.org).
+Para empezar a desarrollar rápidamente, puede incluir la biblioteca OpenCV en un proyecto de aplicación para UWP mediante el uso de paquetes NuGet, pero es posible que estos paquetes no pasen el proceso de certficication de la aplicación al enviar la aplicación a la tienda, por lo que se recomienda descargar el código fuente de la biblioteca OpenCV y compilar los archivos binarios usted mismo antes de enviar la aplicación. Puede encontrar información sobre el desarrollo con OpenCV en [https://opencv.org](https://opencv.org)
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementar el componente de Windows Runtime nativo de OpenCVHelper
 Siga los pasos de [proceso de mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md) para crear el componente auxiliar de OpenCV Windows Runtime y agregue una referencia al proyecto de componente a la solución de aplicación para UWP.
 
-## <a name="find-available-frame-source-groups"></a>Buscar grupos de origen de fotogramas disponibles
-En primer lugar, debes encontrar un grupo de origen de fotogramas multimedia del que se obtendrán dichos fotogramas. Obtenga la lista de grupos de origen disponibles en el dispositivo actual llamando a **[MediaFrameSourceGroup.FindAllAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)** . A continuación, selecciona los grupos de origen que proporcionan los tipos de sensores necesarios para tu escenario de aplicación. Para este ejemplo, simplemente tenemos un grupo de origen que proporciona fotogramas desde una cámara RGB.
+## <a name="find-available-frame-source-groups"></a>Buscar grupos de orígenes de fotogramas disponibles
+En primer lugar, debe buscar un grupo de origen de fotogramas multimedia del que se obtendrán los fotogramas multimedia. Obtiene la lista de grupos de origen disponibles en el dispositivo actual llamando a **[MediaFrameSourceGroup. FindAllAsync](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)**. Después, seleccione los grupos de orígenes que proporcionan los tipos de sensor necesarios para el escenario de la aplicación. En este ejemplo, simplemente necesitamos un grupo de origen que proporcione fotogramas de una cámara RGB.
 
 [!code-cs[OpenCVFrameSourceGroups](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameSourceGroups)]
 
 ## <a name="initialize-the-mediacapture-object"></a>Inicializar el objeto MediaCapture
-Después, debes inicializar el objeto **MediaCapture** para usar el grupo de origen de fotogramas seleccionado en el paso anterior configurando la propiedad **[SourceGroup](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.SourceGroup)** de **MediaCaptureInitializationSettings**.
+A continuación, debe inicializar el objeto **MediaCapture** para usar el grupo de origen del marco seleccionado en el paso anterior estableciendo la propiedad **[SourceGroup](/uwp/api/windows.media.capture.mediacaptureinitializationsettings.SourceGroup)** de **MediaCaptureInitializationSettings**.
 
 > [!NOTE] 
-> La técnica usada por el componente OpenCVHelper, que se describe con detalle en [Procesar mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md), requiere que los datos de imagen residan en la memoria CPU, no en la memoria GPU. Por lo tanto, debes especificar **MemoryPreference.CPU** para el campo **[MemoryPreference](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.MemoryPreference)** de **MediaCaptureInitializationSettings**.
+> La técnica usada por el componente OpenCVHelper, que se describe en detalle en el [proceso mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md), requiere que los datos de la imagen residan en la memoria de la CPU, no en la memoria GPU. Por lo tanto, debe especificar **MemoryPreference. CPU** para el campo **[MemoryPreference](/uwp/api/windows.media.capture.mediacaptureinitializationsettings.MemoryPreference)** de **MediaCaptureInitializationSettings**.
 
-Una vez que el objeto **MediaCapture** se ha inicializado, obtén una referencia al origen de fotogramas RGB accediendo a la propiedad **[MediaCapture.FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)** .
+Una vez inicializado el objetos **mediacapture** , obtenga una referencia al origen de fotogramas RGB mediante el acceso a la propiedad **[MediaCapture. FrameSources](/uwp/api/windows.media.capture.mediacapture.FrameSources)** .
 
 [!code-cs[OpenCVInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVInitMediaCapture)]
 
 ## <a name="initialize-the-mediaframereader"></a>Inicializar MediaFrameReader
-Luego crea [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) para el origen de fotogramas RGB recuperado en el paso anterior. Para mantener una velocidad de fotogramas óptima, es posible que quieras procesar los fotogramas que tengan una resolución inferior a la resolución del sensor. En este ejemplo se proporciona el argumento opcional **[BitmapSize](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapsize)** al método **[MediaCapture.CreateFrameReaderAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** para solicitar que los fotogramas proporcionados por el lector de fotogramas cambien a 640 x 480 píxeles.
+A continuación, cree un [**MediaFrameReader**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) para el origen de fotogramas RGB recuperado en el paso anterior. Con el fin de mantener una buena velocidad de fotogramas, es posible que desee procesar fotogramas que tengan una resolución inferior a la resolución del sensor. En este ejemplo se proporciona el argumento **[BitmapSize](/uwp/api/windows.graphics.imaging.bitmapsize)** opcional al método **[MediaCapture. CreateFrameReaderAsync](/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** para solicitar que se cambie el tamaño de los fotogramas proporcionados por el lector de fotogramas a 640 x 480 píxeles.
 
-Después de crear el lector de fotogramas, registra un controlador para el evento **[FrameArrived](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.FrameArrived)** . Luego crea un nuevo objeto **[SoftwareBitmapSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource)** , que la clase auxiliar **FrameRenderer** usará para presentar la imagen procesada. Después llama al constructor para **FrameRenderer**. Inicialice la instancia de la clase **OpenCVHelper** definida en el componente de Windows Runtime OpenCVBridge. Esta clase auxiliar se usa en el controlador **FrameArrived** para procesar cada fotograma. Por último, inicia el lector de fotogramas llamando a **[StartAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.StartAsync)** .
+Después de crear el lector de fotogramas, registre un controlador para el evento **[FrameArrived](/uwp/api/windows.media.capture.frames.mediaframereader.FrameArrived)** . A continuación, cree un nuevo objeto **[SoftwareBitmapSource](/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource)** , que usará la clase auxiliar **FrameRenderer** para presentar la imagen procesada. A continuación, llame al constructor para **FrameRenderer**. Inicialice la instancia de la clase **OpenCVHelper** definida en el componente de Windows Runtime OpenCVBridge. Esta clase auxiliar se usa en el controlador **FrameArrived** para procesar cada fotograma. Por último, inicie el lector de fotogramas llamando a **[StartAsync](/uwp/api/windows.media.capture.frames.mediaframereader.StartAsync)**.
 
 [!code-cs[OpenCVFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameReader)]
 
 
 ## <a name="handle-the-framearrived-event"></a>Controlar el evento FrameArrived
-El evento **FrameArrived** se genera siempre que un nuevo fotograma esté disponible desde el lector de fotogramas. Llama a **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** para obtener el fotograma, si existe. Obtén **SoftwareBitmap** de **[MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)** . Ten en cuenta que la clase **CVHelper** usada en este ejemplo requiere imágenes para usar el formato de píxeles BRGA8 con valores alfa multiplicados previamente. Si el fotograma que pasó al evento tiene un formato distinto, convierte **SoftwareBitmap** en el formato correcto. Luego crea un **SoftwareBitmap** para usarse como el destino de la operación de desenfoque. Las propiedades de imagen de origen se usan como argumentos para que el constructor cree un mapa de bits con el formato que coincida. Llama al método **Desenfoque** de clase auxiliar para procesar el fotograma. Por último, pasa la imagen de salida de la operación de desenfoque a **PresentSoftwareBitmap**, el método de la clase auxiliar **FrameRenderer** que muestra la imagen en el control **Image** XAML con el que se inicializó.
+El evento **FrameArrived** se desencadena cuando un nuevo marco está disponible en el lector de fotogramas. Llame a **[TryAcquireLatestFrame](/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** para obtener el fotograma, si existe. Obtiene el **SoftwareBitmap** desde **[MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference)**. Tenga en cuenta que la clase **CVHelper** que se usa en este ejemplo requiere que las imágenes usen el formato de píxel BRGA8 con alfa premultiplicado. Si el marco que se pasa al evento tiene un formato diferente, convierta el **SoftwareBitmap** en el formato correcto. A continuación, cree un **SoftwareBitmap** que se usará como destino de la operación de desenfoque. Las propiedades de la imagen de origen se usan como argumentos en el constructor para crear un mapa de bits con formato coincidente. Llame al método **Blur** de la clase auxiliar para procesar el marco. Por último, pase la imagen de salida de la operación de desenfoque a **PresentSoftwareBitmap**, el método de la clase auxiliar **FrameRenderer** que muestra la imagen en el control de **imagen** XAML con el que se inicializó.
 
 [!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
 * [Procesamiento de mapas de bits de software con OpenCV](process-software-bitmaps-with-opencv.md)
-* [Ejemplo de fotogramas de la cámara](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
+* [Muestra de fotogramas de cámara](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
 * [Fotogramas de cámara + ejemplo de OpenCV](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraOpenCV)
  
 
  
-
-
-
-

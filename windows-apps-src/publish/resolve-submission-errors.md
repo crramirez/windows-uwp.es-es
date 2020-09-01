@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f67474905f4c689153af4dec22cf05f8399db535
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: cf2092291c4521a7ed9d32944e0ad4cb88f45a00
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258986"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174739"
 ---
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
-Si se producen errores después de enviar la aplicación a la Tienda, tienes que resolverlos para poder continuar el [proceso de certificación](the-app-certification-process.md). El mensaje de error indicará cuál es el problema y lo que probablemente tendrás que hacer para corregirlo. Aquí encontrarás información adicional que puede ayudarte a resolver estos errores.
+Si se producen errores después de enviar la aplicación a la tienda, debe resolverlas para continuar el [proceso de certificación](the-app-certification-process.md). El mensaje de error indicará cuál es el problema y lo que probablemente tendrás que hacer para corregirlo. Aquí encontrarás información adicional que puede ayudarte a resolver estos errores.
 
 ## <a name="uwp-apps"></a>Aplicaciones para UWP
 
@@ -25,7 +25,7 @@ Si se muestra un error de compilación, asegúrate de que eres capaz de generar 
 
 ## <a name="desktop-application"></a>Aplicación de escritorio
 
-Si tiene previsto enviar un paquete que contiene archivos binarios de Win32 y UWP, asegúrese de que crea ese paquete mediante el proyecto de empaquetado de Windows que está disponible en Visual Studio 2017 update 4 y versiones posteriores. Si crea el paquete mediante una plantilla de proyecto de UWP, es posible que no pueda enviar ese paquete al almacén o transferirlo a otros equipos. Aunque el paquete se publique correctamente, podría comportarse de maneras inesperadas en el equipo del usuario. Para obtener más información, consulte [empaquetar una aplicación con Visual Studio (puente de escritorio)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Si tiene previsto enviar un paquete que contiene archivos binarios de Win32 y UWP, asegúrese de que crea ese paquete mediante el proyecto de empaquetado de Windows que está disponible en Visual Studio 2017 update 4 y versiones posteriores. Si crea el paquete mediante una plantilla de proyecto de UWP, es posible que no pueda enviar ese paquete al almacén o transferirlo a otros equipos. Aunque el paquete se publique correctamente, podría comportarse de maneras inesperadas en el equipo del usuario. Para obtener más información, consulte [empaquetar una aplicación con Visual Studio (puente de escritorio)]( /windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8. x y versiones anteriores
 
@@ -52,12 +52,8 @@ Si aparece un error que dice **El nombre encontrado en el paquete no es uno de l
 - Si la aplicación ya tiene una identidad, puede significar que aún tienes que reservar el nombre que quieras usar en el paquete. En **Administración de aplicaciones**, haz clic en [Administrar nombres de la aplicación](manage-app-names.md). Escribe el nombre que te gustaría usar y haz clic en **Reservar nombre de aplicación**.
 
 > [!IMPORTANT]
->  Si el nombre que quieres usar no está disponible, es posible que otra aplicación ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre o si crees que tienes derecho a usarlo, [ponte en contacto con soporte técnico](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179).  
+>  Si el nombre que desea usar no está disponible, es posible que otra aplicación ya haya reservado ese nombre. Si la aplicación ya está publicada con ese nombre, o si cree que tiene el derecho de usarla, [póngase en contacto con el servicio de soporte técnico](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179).  
 
  
 
  
-
-
-
-

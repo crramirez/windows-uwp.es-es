@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b122aa6436e55c80276cdd684b7c10cc3c47d28
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.openlocfilehash: bf61935459d8b842a3d26fcfe546995427d98d3f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153712"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175699"
 ---
 # <a name="supported-codecs"></a>Códecs admitidos
 
-En este artículo se indican los códecs de audio, vídeo e imagen, así como la disponibilidad de formato de las aplicaciones para UWP de manera predeterminada para cada familia de dispositivos. Ten en cuenta que en estas tablas se indican los códecs que se incluyen con la instalación de Windows 10 para la familia de dispositivos especificada. Los usuarios y las aplicaciones pueden instalar códecs adicionales que puedan estar disponibles. Puedes hacer una consulta en tiempo de ejecución para obtener el conjunto de códecs disponibles actualmente para un dispositivo concreto. Para obtener más información, consulta [Consulta de los códecs instalados en un dispositivo](codec-query.md).
+En este artículo se enumeran el códec de audio, vídeo e imagen y la disponibilidad de formato de las aplicaciones UWP de forma predeterminada para cada familia de dispositivos. Tenga en cuenta que en estas tablas se enumeran los códecs que se incluyen con la instalación de Windows 10 para la familia de dispositivos especificada. Los usuarios y las aplicaciones pueden instalar códecs adicionales que pueden estar disponibles para su uso. Puede realizar consultas en tiempo de ejecución del conjunto de códecs que están disponibles actualmente para un dispositivo específico. Para obtener más información, consulte [consultar los códecs instalados en un dispositivo](codec-query.md).
 
 En las tablas siguientes, "D" indica compatibilidad con el descodificador y "E" con el codificador.
 
@@ -65,7 +65,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">HE-AAC v1/AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -80,7 +80,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">HE-AAC v2/eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -245,7 +245,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left">D/E</td>
 </tr>
 <tr class="odd">
-<td align="left">MP3.</td>
+<td align="left">MP3</td>
 <td align="left"></td>
 <td align="left">D/E</td>
 <td align="left"></td>
@@ -339,7 +339,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-### <a name="mobile"></a>Dispositivo móvil
+### <a name="mobile"></a>Móvil
 
 <table>
 <colgroup>
@@ -376,7 +376,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">HE-AAC v1/AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -391,7 +391,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">HE-AAC v2/eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -556,7 +556,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left">D/E</td>
 </tr>
 <tr class="odd">
-<td align="left">MP3.</td>
+<td align="left">MP3</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left"></td>
@@ -687,7 +687,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">HE-AAC v1/AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -702,7 +702,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">HE-AAC v2/eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -867,7 +867,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left">D/E</td>
 </tr>
 <tr class="odd">
-<td align="left">MP3.</td>
+<td align="left">MP3</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left"></td>
@@ -998,7 +998,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">HE-AAC v1/AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1013,7 +1013,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">HE-AAC v2/eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1178,7 +1178,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left">D/E</td>
 </tr>
 <tr class="odd">
-<td align="left">MP3.</td>
+<td align="left">MP3</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left"></td>
@@ -1309,7 +1309,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">HE-AAC v1/AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1324,7 +1324,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">HE-AAC v2/eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1489,7 +1489,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left">D/E</td>
 </tr>
 <tr class="odd">
-<td align="left">MP3.</td>
+<td align="left">MP3</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left"></td>
@@ -1812,7 +1812,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
  
 
-### <a name="mobile"></a>Dispositivo móvil
+### <a name="mobile"></a>Móvil
 
 <table>
 <colgroup>
@@ -2753,8 +2753,8 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 </tr>
 </table>
 
-<sup>1</sup> Se admiten imágenes DDS que usan compresión desde BC1 hasta BC5.  
-<sup>2</sup> Se admiten imágenes DNG con una vista integrada que no sea RAW.  
-<sup>3</sup> Solo se admiten determinados formatos de cámara RAW.  
+<sup>1</sup> se admiten imágenes de DDS con BC1 a través de la compresión BC5.  
+se admiten <sup>2</sup> imágenes DNG con una versión preliminar no sin procesar.  
+<sup>3</sup> solo se admiten determinados formatos RAW de cámara.  
 
-Para obtener más información acerca de los códecs de imágenes, consulta [Native WIC Codecs (Códecs WIC nativos)](https://docs.microsoft.com/windows/desktop/wic/native-wic-codecs).
+Para obtener más información acerca de los códecs de imágenes, consulta [Native WIC Codecs (Códecs WIC nativos)](/windows/desktop/wic/native-wic-codecs).

@@ -1,41 +1,41 @@
 ---
-title: Componentes Windows Runtime con C++/WinRT
-description: En este tema se muestra cómo usar [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para crear y utilizar un componente de Windows Runtime &mdash; un componente al que se puede llamar desde una aplicación universal de Windows compilada con cualquier lenguaje de Windows Runtime.
+title: Componentes de Windows Runtime con C++/WinRT
+description: En este tema se muestra cómo usar [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para crear y utilizar un componente de Windows Runtime &mdash; un componente al que se puede llamar desde una aplicación universal de Windows compilada con cualquier lenguaje de Windows Runtime.
 ms.date: 07/06/2020
 ms.topic: article
 keywords: Windows 10, UWP, Windows, Runtime, componente, componentes, Windows Runtime componente, WRC, C++/WinRT
 ms.localizationpriority: medium
-ms.openlocfilehash: e47175579fcfc5544587ff36baaaa653003c4c63
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 1f84158311ef789851c268e9e21dbf5317063370
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86494158"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174319"
 ---
-# <a name="windows-runtime-components-with-cwinrt"></a>Componentes Windows Runtime con C++/WinRT
+# <a name="windows-runtime-components-with-cwinrt"></a>Componentes de Windows Runtime con C++/WinRT
 
-En este tema se muestra cómo usar [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para crear y utilizar un componente de Windows Runtime &mdash; un componente al que se puede llamar desde una aplicación universal de Windows compilada con cualquier lenguaje de Windows Runtime.
+En este tema se muestra cómo usar [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para crear y utilizar un componente de Windows Runtime &mdash; un componente al que se puede llamar desde una aplicación universal de Windows compilada con cualquier lenguaje de Windows Runtime.
 
 Hay varias razones para compilar un componente de Windows Runtime en C++/WinRT.
 - Para disfrutar de las ventajas de rendimiento de C++ en operaciones complejas o de cálculo intensivo.
 - Para reutilizar el código de C++ estándar que ya está escrito y probado.
 - Para exponer la funcionalidad de Win32 en una aplicación Plataforma universal de Windows (UWP) escrita en, por ejemplo, C#.
 
-En general, cuando se crea el componente/WinRT de C++, se pueden usar los tipos de la biblioteca estándar de C++ y los tipos integrados, excepto en el límite de la interfaz binaria de aplicación (ABI), donde se pasan los datos hacia y desde el código de otro `.winmd` paquete. En la ABI, use tipos de Windows Runtime. Además, en el código de C++/WinRT, use tipos como Delegate y Event para implementar eventos que se puedan generar desde su componente y que se controlen en otro lenguaje. Vea [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para obtener más información acerca de c++/WinRT.
+En general, cuando se crea el componente/WinRT de C++, se pueden usar los tipos de la biblioteca estándar de C++ y los tipos integrados, excepto en el límite de la interfaz binaria de aplicación (ABI), donde se pasan los datos hacia y desde el código de otro `.winmd` paquete. En la ABI, use tipos de Windows Runtime. Además, en el código de C++/WinRT, use tipos como Delegate y Event para implementar eventos que se puedan generar desde su componente y que se controlen en otro lenguaje. Vea [c++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para obtener más información acerca de c++/WinRT.
 
 En el resto de este tema se explica cómo crear un componente de Windows Runtime en C++/WinRT y, a continuación, cómo consumirlo desde una aplicación.
 
 El Windows Runtime componente que se va a crear en este tema contiene una clase en tiempo de ejecución que representa una cuenta bancaria. En el tema también se muestra una aplicación principal que utiliza la clase de tiempo de ejecución de la cuenta bancaria y llama a una función para ajustar el saldo.
 
 > [!NOTE]
-> Para más información sobre cómo instalar y usar [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para más información sobre cómo instalar y usar [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 > [!IMPORTANT]
-> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis) y [Crear API con C++/WinRT ](/windows/uwp/cpp-and-winrt-apis/author-apis).
+> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](../cpp-and-winrt-apis/consume-apis.md) y [Crear API con C++/WinRT ](../cpp-and-winrt-apis/author-apis.md).
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Crear un componente de Windows Runtime (BankAccountWRC)
 
-Para empezar, crea un proyecto en Microsoft Visual Studio. Crea un proyecto **Componente de Windows Runtime (C++/WinRT)** y asígnale el nombre *BankAccountWRC* (de "componente de cuenta bancaria de Windows Runtime"). Asegúrese de que esté desactivada **la casilla colocar solución y proyecto en el mismo directorio** . Elija como destino la versión más reciente disponible de manera general (es decir, no en versión preliminar) de Windows SDK. Asignar el nombre *BankAccountWRC* al proyecto simplificará la experiencia con el resto de los pasos de este tema. 
+Para empezar, crea un proyecto en Microsoft Visual Studio. Crea un proyecto **Componente de Windows Runtime (C++/WinRT)** y asígnale el nombre *BankAccountWRC* (de "componente de cuenta bancaria de Windows Runtime"). Asegúrese de que la opción **Colocar la solución y el proyecto en el mismo directorio** esté desactivada. Elija como destino la versión más reciente disponible de manera general (es decir, no en versión preliminar) de Windows SDK. Asignar el nombre *BankAccountWRC* al proyecto simplificará la experiencia con el resto de los pasos de este tema. 
 
 No compile aún el proyecto.
 
@@ -139,4 +139,4 @@ Cada vez que haga clic en la ventana, incrementará el saldo del objeto de la cu
 
 Para agregar más funcionalidad, o nuevos tipos de Windows Runtime, al componente Windows Runtime de C++/WinRT, puede seguir los mismos patrones mostrados anteriormente. En primer lugar, use IDL para definir la funcionalidad que desea exponer. A continuación, compile el proyecto en Visual Studio para generar una implementación de código auxiliar. Y, a continuación, complete la implementación según corresponda. Los métodos, las propiedades y los eventos que se definen en IDL son visibles para la aplicación que utiliza el componente de Windows Runtime. Para obtener más información acerca de IDL, vea [Introducción a Lenguaje de definición de interfaz de Microsoft 3,0](/uwp/midl-3/intro).
 
-Para obtener un ejemplo de cómo agregar un evento a su componente de Windows Runtime, vea [crear eventos en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events).
+Para obtener un ejemplo de cómo agregar un evento a su componente de Windows Runtime, vea [crear eventos en C++/WinRT](../cpp-and-winrt-apis/author-events.md).

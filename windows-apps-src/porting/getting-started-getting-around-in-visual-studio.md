@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 58d3b59d8fdd1587a0bec8369a78863d0c3d4557
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 02a0b3c631d3ee85353eb0516d5c6d1aa511f77e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66358807"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174929"
 ---
 # <a name="getting-started-getting-around-in-visual-studio"></a>Introducción: Desplazamiento por Visual Studio
 
@@ -44,7 +44,7 @@ Haz lo mismo con el control **TextBlock**, de modo que se muestre así:
 
 ![diseño de la interfaz de usuario en visual studio](images/ios-to-uwp/vs-add-button-label.png)
 
-A diferencia de Xcode, que oculta la información de diseño y enlace en un archivo .xib o de guión gráfico, Visual Studio te anima a modificar los archivos XAML donde se guarda esta información en su lenguaje enriquecido, modificable y declarativo de estilo XML. Para obtener más información sobre el lenguaje XAML, consulta [Introducción a XAML](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview). Por ahora, todo lo que se muestra en el panel **Diseño** se define en el panel **XAML**. El panel **XAML** permite tener un control preciso cuando es necesario y, a medida que vayas acumulando conocimientos sobre este lenguaje, podrás desarrollar código de interfaz de usuario manualmente más rápido. No obstante, de momento solo nos centraremos en los paneles **Diseño** y **Propiedades**.
+A diferencia de Xcode, que oculta la información de diseño y enlace en un archivo .xib o de guión gráfico, Visual Studio te anima a modificar los archivos XAML donde se guarda esta información en su lenguaje enriquecido, modificable y declarativo de estilo XML. Para obtener más información sobre el lenguaje XAML, consulta [Introducción a XAML](../xaml-platform/xaml-overview.md). Por ahora, todo lo que se muestra en el panel **Diseño** se define en el panel **XAML**. El panel **XAML** permite tener un control preciso cuando es necesario y, a medida que vayas acumulando conocimientos sobre este lenguaje, podrás desarrollar código de interfaz de usuario manualmente más rápido. No obstante, de momento solo nos centraremos en los paneles **Diseño** y **Propiedades**.
 
 Vamos a cambiar los detalles del botón. Como ya sabrás, para cambiar el nombre del botón en Xcode, puedes cambiar el valor del campo **Título** en el panel de propiedades.
 
@@ -70,7 +70,7 @@ Visual Studio es similar. En la esquina superior derecha de **Propiedades** hay 
 
 ![lista de eventos del botón en visual studio](images/ios-to-uwp/vs-button-event.png)
 
-Para agregar código para el evento de clic del botón, primero selecciona el botón en el panel **Diseño**. A continuación, haz clic en el botón del rayo y haz doble clic en el cuadro vacío situado junto al nombre **Click**. Visual Studio, a continuación, agrega el evento "myButton\_haga clic en" a la **haga clic en** cuadro y, a continuación, agrega y muestra el controlador de eventos correspondiente en el archivo MainPage.xaml.cs, similar al siguiente.
+Para agregar código para el evento de clic del botón, primero selecciona el botón en el panel **Diseño**. A continuación, haz clic en el botón del rayo y haz doble clic en el cuadro vacío situado junto al nombre **Click**. A continuación, Visual Studio agrega el evento "myButton \_ click" al cuadro **click** y, a continuación, agrega y muestra el controlador de eventos correspondiente en el archivo mainpage.Xaml.CS, como se indica a continuación.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -98,7 +98,7 @@ En Visual Studio, no necesitas asociar el control, ya que esto se hace automáti
 
 ![ventana de propiedades de la etiqueta en visual studio](images/ios-to-uwp/vs-label-properties.png)
 
-A continuación, agregaremos código al evento Click del botón. Para ello, puntee en el archivo MainPage.xaml.cs y agregue el código siguiente a la myButton\_haga clic en el controlador de eventos.
+A continuación, agregaremos código al evento Click del botón. Para ello, puntee en el archivo MainPage.xaml.cs y agregue el código siguiente al \_ controlador de eventos Click de MyButton.
 
 ```csharp
 private void myButton_Click(object sender, RoutedEventArgs e)
@@ -124,5 +124,4 @@ Para salir de la aplicación, vuelve a Visual Studio, pulsa el menú **Depurar*
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Introducción: Controles comunes](getting-started-common-controls.md)
-
+[Introducción: controles comunes](getting-started-common-controls.md)

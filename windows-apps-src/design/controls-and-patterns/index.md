@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e6d91b5a4147237cd04b46dc5b69b8151fece9
-ms.sourcegitcommit: 6dd6d61c912daab2cc4defe5ba0cf717339f7765
+ms.openlocfilehash: 08471b8a04d37c34378b549b8534979a4188d7b8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978387"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173961"
 ---
 # <a name="controls-for-windows-apps"></a>Controles para aplicaciones de Windows
 
@@ -44,7 +44,7 @@ El marco XAML te permite personalizar la apariencia de tus aplicaciones de varia
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | Algunos controles solo están disponibles en la biblioteca de interfaz de usuario de Windows (WinUI), un paquete NuGet que contiene nuevos controles y características de interfaz de usuario. Para obtenerla, consulta la [introducción a la biblioteca de interfaz de usuario de Windows y las instrucciones de instalación](/uwp/toolkits/winui/).<br/>A partir de WinUI 2.2, el estilo predeterminado de muchos controles se actualizó para usar esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | Algunos controles solo están disponibles en la biblioteca de interfaz de usuario de Windows (WinUI), un paquete NuGet que contiene nuevos controles y características de interfaz de usuario. Para obtenerla, consulta la [introducción a la biblioteca de interfaz de usuario de Windows y las instrucciones de instalación](/uwp/toolkits/winui/).<br/>A partir de WinUI 2.2, el estilo predeterminado de muchos controles se actualizó para usar esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). |
 
 ## <a name="alphabetical-index"></a>Índice alfabético
 
@@ -79,7 +79,7 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 - [Imágenes y pinceles de imagen](images-imagebrushes.md)
 - [Controles de entrada manuscrita](inking-controls.md)
 - [Vista de lista](listview-and-gridview.md)
-- [Control de mapa](../../maps-and-location/controls-map.md)
+- [Control de mapa](../../maps-and-location/display-maps.md)
 - [Maestro/detalles](master-details.md) (patrón)
 - [Reproducción de multimedia](media-playback.md)
 - [Barra de menús](menus.md#create-a-menu-bar) ![Logotipo de WinUI](images/winui-logo-16x16.png)

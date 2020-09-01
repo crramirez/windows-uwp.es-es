@@ -1,16 +1,16 @@
 ---
 title: Referencia de API de Administración de usuarios de prueba de Xbox Live
-description: Obtén información sobre cómo tener acceso a las API de Administración de usuarios mediante programación.
+description: Obtenga información sobre cómo obtener o actualizar la lista de usuarios en la consola mediante la API de REST del portal de dispositivos Xbox.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: 52f333af73084ed14982b9d09b6770c8294980f7
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.openlocfilehash: 0f05bc84469585fc10bfff6a7f0d0f0976a0080d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74902526"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174679"
 ---
 # <a name="xbox-live-user-management"></a>Administración de usuarios de Xbox Live
 
@@ -26,11 +26,11 @@ Puedes obtener la lista de los usuarios en la consola o actualizar la lista al a
 
 **Parámetros de URI**
 
-* Ninguno
+* None
 
 **Encabezados de solicitud**
 
-* Ninguno
+* None
 
 **Cuerpo de la solicitud**
 
@@ -45,7 +45,7 @@ Las llamadas a PUT deben incluir una matriz JSON con la estructura siguiente:
   * SponsoredUser (opcional): bool que especifica si agregar un usuario patrocinado.
   * Delete (opcional): bool que especifica la eliminación de este usuario de la consola
 
-## <a name="response"></a>Respuesta
+## <a name="response"></a>Response
 
 **Cuerpo de respuesta**
 
@@ -62,7 +62,7 @@ Las llamadas a GET devolverán una matriz JSON con las propiedades siguientes:
   
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP   | Descripción     | 
 | ------------------ |-----------------|

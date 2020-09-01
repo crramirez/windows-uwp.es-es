@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Voz en Windows 10, voz, voz, conversación, Win32 Speech Apps, aplicaciones de voz para UWP, aplicaciones de voz de WPF, WinForms Speech apps
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 7ac8d782591ce8f3716e491714c4cbf241e80b6c
-ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
+ms.openlocfilehash: d810f08a2db60309e4528167bcb4bddc95d850c6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76726555"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174159"
 ---
 # <a name="speech-voice-and-conversation-in-windows-10"></a>Voz, voz y conversación en Windows 10
 
@@ -19,7 +19,7 @@ ms.locfileid: "76726555"
 
 La voz puede ser una forma eficaz, natural y agradable de que los usuarios puedan interactuar con las aplicaciones de Windows, complementar, o incluso reemplazar, experiencias de interacción tradicionales basadas en el mouse, teclado, toque, controlador o gestos.
 
-Las características basadas en voz como reconocimiento de voz, dictado, síntesis de voz (también conocida como texto a voz o TTS) y asistentes de voz de conversación (como Cortana o Alexa) pueden proporcionar experiencias de usuario accesibles e inclusivas que permiten a las personas usar las aplicaciones cuando otros dispositivos de entrada podrían no ser suficientes.
+Las características basadas en voz como reconocimiento de voz, dictado, síntesis de voz (también conocida como texto a voz o TTS) y asistentes de voz de conversación (como Cortana o Alexa) pueden proporcionar experiencias de usuario accesibles e inclusivas que permitan a los usuarios usar sus aplicaciones cuando otros dispositivos de entrada no sean suficientes.
 
 En esta página se proporciona información sobre cómo los distintos marcos de desarrollo de Windows proporcionan reconocimiento de voz, síntesis de voz y soporte de conversación para desarrolladores que crean aplicaciones de Windows.
 
@@ -33,17 +33,17 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       Cree aplicaciones habilitadas para voz en la plataforma moderna para aplicaciones y juegos de Windows 10, en cualquier dispositivo de Windows (incluidos PC, teléfonos, Xbox One, HoloLens, etc.) y publíquelos en el Microsoft Store.
 
-      [Interacciones de voz](https://docs.microsoft.com/windows/uwp/design/input/speech-interactions)
+      [Interacciones de voz](/windows/uwp/design/input/speech-interactions)
 
-      [Reconocimiento de voz](https://docs.microsoft.com/windows/uwp/design/input/speech-recognition)
+      [Reconocimiento de voz](/windows/uwp/design/input/speech-recognition)
 
-      [Dictado continuo](https://docs.microsoft.com/windows/uwp/design/input/enable-continuous-dictation)
+      [Dictado continuo](/windows/uwp/design/input/enable-continuous-dictation)
 
-      [Síntesis de voz](https://docs.microsoft.com/uwp/api/windows.media.speechsynthesis)
+      [Síntesis de voz](/uwp/api/windows.media.speechsynthesis)
 
-      [Agentes de conversación](https://docs.microsoft.com/uwp/api/windows.applicationmodel.conversationalagent)
+      [Agentes de conversación](/uwp/api/windows.applicationmodel.conversationalagent)
 
-      [Comandos de voz de Cortana](https://docs.microsoft.com/cortana/voice-commands/vcd)
+      [Comandos de voz de Cortana](/cortana/voice-commands/vcd)
    :::column-end:::
    :::column:::
       ![Aplicaciones de la plataforma Win32](images/platform-win32.png)
@@ -65,7 +65,7 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       Desarrolla aplicaciones y herramientas accesibles en la plataforma establecida para las aplicaciones de Windows administradas con un modelo de interfaz de usuario de XAML y .NET Framework.
 
-      [Guía de programación de System.Speech para .NET Framework](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
+      [Guía de programación de System.Speech para .NET Framework](/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
    :::column-end:::
    :::column:::
       ![Servicios de voz de Azure](images/platform-azure-speech.png)
@@ -74,13 +74,13 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       Diseñe, compile y pruebe sitios web accesibles con Azure Speech Services.
 
-      [Voz a texto](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
+      [Speech to Text](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
 
       [Texto a voz](https://azure.microsoft.com/services/cognitive-services/text-to-speech/)
       
       [Traducción de voz](https://azure.microsoft.com/services/cognitive-services/speech-translation/)
 
-      [Asistentes virtuales de primera voz](https://docs.microsoft.com/azure/cognitive-services/speech-service/voice-first-virtual-assistants)
+      [Asistentes virtuales de primera voz](/azure/cognitive-services/speech-service/voice-first-virtual-assistants)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -92,26 +92,26 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 :::row-end:::
 :::row:::
    :::column:::
-      [Agente de Microsoft](https://docs.microsoft.com/windows/win32/lwef/microsoft-agent)
+      [Agente de Microsoft](/windows/win32/lwef/microsoft-agent)
 
       [Kit de desarrollo de software de aplicaciones de Microsoft Speech (SASDK), versión 1,0](https://www.microsoft.com/download/details.aspx?id=2200)
    :::column-end:::
    :::column:::
-      [Microsoft Speech API (SAPI) 5,3](https://docs.microsoft.com/previous-versions/windows/desktop/ms723627(v=vs.85))
+      [Microsoft Speech API (SAPI) 5,3](/previous-versions/windows/desktop/ms723627(v=vs.85))
 
-      [Microsoft Speech API (SAPI) 5,4](https://docs.microsoft.com/previous-versions/windows/desktop/ee125663(v=vs.85))
+      [Microsoft Speech API (SAPI) 5,4](/previous-versions/windows/desktop/ee125663(v=vs.85))
 
-      [Control de reconocimiento de Bing Speech](https://docs.microsoft.com/previous-versions/bing/speech/dn434583(v%3dmsdn.10))
+      [Control de reconocimiento de Bing Speech](/previous-versions/bing/speech/dn434583(v=msdn.10))
    :::column-end:::
 :::row-end:::
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 Descarga y ejecuta ejemplos completos de Windows que muestren varias características y funcionalidades de accesibilidad.
 
 :::row:::
    :::column:::
-      [Explorador de ejemplo de código](https://docs.microsoft.com/samples/browse/?term=speech)
+      [Código de ejemplo de explorador](/samples/browse/?term=speech)
 
       El nuevo explorador de ejemplos (reemplaza a la galería de código de MSDN).
    :::column-end:::

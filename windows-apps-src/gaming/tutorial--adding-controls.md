@@ -6,19 +6,19 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: dfe864f0b8c16cce9cc8d413c41a4e3324cf2e9b
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 87a56c9213aabce23801f305d8a100f536f0889b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409664"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175239"
 ---
 # <a name="add-controls"></a>Agregar controles
 
 > [!NOTE]
 > Este tema forma parte de la serie de tutoriales de [creación de una plataforma universal de Windows sencilla (UWP) con DirectX](tutorial--create-your-first-uwp-directx-game.md) . El tema de ese vínculo establece el contexto de la serie.
 
-\[Se actualizó con aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN)\]
+\[ Se actualizó con aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN)\]
 
 Una buena Plataforma universal de Windows juego (UWP) admite una amplia variedad de interfaces. Un posible reproductor podría tener Windows 10 en una tableta sin botones físicos, un equipo con una controladora Xbox conectada o la plataforma de juegos de escritorio más reciente con un mouse y un teclado de juegos de alto rendimiento. En nuestro juego, los controles se implementan en la clase [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) . Esta clase agrega los tres tipos de entrada (mouse y teclado, táctil y controlador para juegos) a un solo controlador. El resultado final es un cierre de primera persona que usa los controles de movimiento y búsqueda estándar del género que funcionan con varios dispositivos.
 
@@ -30,11 +30,11 @@ Una buena Plataforma universal de Windows juego (UWP) admite una amplia variedad
 
 Llegados a este punto, tenemos un juego que representa, pero no se puede mover el jugador o captar los objetivos. Echaremos un vistazo a cómo nuestro juego implementa los controles de movimiento de la primera persona con el dedo para los siguientes tipos de entrada en nuestro juego DirectX de UWP.
 - Mouse y teclado
-- Entrada táctil
+- Tocar
 - Controlador para juegos
 
 >[!Note]
->Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](/windows/uwp/get-started/get-uwp-app-samples).
+>Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](../get-started/get-app-samples.md).
 
 ## <a name="common-control-behaviors"></a>Comportamientos de controles comunes
 
@@ -203,7 +203,7 @@ La entrada táctil de este juego usa tres zonas.
 ![cambiar el diseño de la vista táctil](images/simple-dx-game-controls-touchzones.png)
 
 Los siguientes comandos Resumen el comportamiento del control Touch.
-Datos proporcionados por el usuario | Acción
+Entrada de usuario | Acción
 :------- | :--------
 Cambiar rectángulo | La entrada táctil se convierte en un joystick virtual en el que el movimiento vertical se traducirá en el movimiento de posición hacia delante o hacia atrás y el movimiento horizontal se traducirá en el movimiento de la posición izquierda/derecha.
 Desencadenar rectángulo | Desencadene una esfera.
@@ -444,7 +444,7 @@ else if (pointerID == m_lookPointerID)
 
 Este juego tiene el siguiente diseño de control para el teclado y el mouse.
 
-Datos proporcionados por el usuario | Acción
+Entrada de usuario | Acción
 :------- | :--------
 W | Avanzar el reproductor
 A | Mueve el jugador a la izquierda
@@ -550,7 +550,7 @@ Para este juego, se agrega compatibilidad con el controlador de juegos mediante 
 
 Los siguientes son los controles del controlador para juegos.
 
-Datos proporcionados por el usuario | Acción
+Entrada de usuario | Acción
 :------- | :--------
 Stick analógico izquierdo | Movimiento del reproductor
 Stick analógico derecho | Cambiar la rotación (el tono y la guiñada) de la vista de cámara

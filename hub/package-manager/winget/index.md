@@ -4,12 +4,12 @@ description: La herramienta de línea de comandos winget permite a los desarroll
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b3f108de117fb937a7a670497a4a1a1d5810aca
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 4c918dccb2873f47a16669c195c47180e2129476
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334532"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168749"
 ---
 # <a name="use-the-winget-tool-to-install-and-manage-applications"></a>Uso de la herramienta winget para instalar y administrar aplicaciones
 
@@ -38,7 +38,7 @@ El comportamiento del instalador puede variar en función de si ejecutas **winge
 
 * Al ejecutar **winget** sin privilegios de administrador, es posible que algunas aplicaciones [requieran una elevación de privilegios](https://docs.microsoft.com/windows/security/identity-protection/user-account-control/) para instalarse. Cuando se ejecute el instalador, Windows te pedirá que [eleves los privilegios](https://docs.microsoft.com/windows/security/identity-protection/user-account-control). Si decides no elevar los privilegios, la aplicación no se instalará.  
 
-* Al ejecutar **winget** en un símbolo del sistema de administrador, no verás [peticiones de elevación](https://docs.microsoft.com/windows/security/identity-protection/user-account-control/how-user-account-control-works) si la aplicación lo requiere. Siempre debes tener cuidado al ejecutar el símbolo del sistema como administrador y solo instalar las aplicaciones en las que confíes.
+* Al ejecutar **winget** en un símbolo del sistema de administrador, no verás [peticiones de elevación](/windows/security/identity-protection/user-account-control/how-user-account-control-works) si la aplicación lo requiere. Siempre debes tener cuidado al ejecutar el símbolo del sistema como administrador y solo instalar las aplicaciones en las que confíes.
 
 ## <a name="use-winget"></a>Uso de winget
 

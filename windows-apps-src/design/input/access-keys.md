@@ -1,6 +1,6 @@
 ---
 Description: Obtenga información acerca de cómo mejorar la facilidad de uso y la accesibilidad de su aplicación de Windows al proporcionar una manera intuitiva de que los usuarios naveguen e interactúen rápidamente con la interfaz de usuario visible de una aplicación a través de un teclado en lugar de un dispositivo de puntero (como toque o mouse).
-title: Directrices de diseño de claves de acceso
+title: Directrices de diseño de las teclas de acceso
 label: Access keys design guidelines
 keywords: teclado, tecla de acceso, KeyTip, sugerencia de teclas, accesibilidad, navegación, foco, texto, entrada, interacción del usuario
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c0d5808c462beb72341fd83c6fc4c1cfc0178b2f
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ca8c21729f27e30e7703291c04a940301a3feb26
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970980"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173899"
 ---
 # <a name="access-keys"></a>Claves de acceso
 
@@ -25,7 +25,7 @@ Las claves de acceso son métodos abreviados de teclado que mejoran la facilidad
 Consulte el tema [teclas de aceleración](keyboard-accelerators.md) para obtener más información sobre cómo invocar acciones comunes en una aplicación Windows con métodos abreviados de teclado. 
 
 > [!NOTE]
-> Un teclado es indispensable para los usuarios con ciertas discapacidades (vea [accesibilidad del teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)) y también es una herramienta importante para los usuarios que lo prefieren como una forma más eficaz de interactuar con una aplicación.
+> Un teclado es indispensable para los usuarios con ciertas discapacidades (vea [accesibilidad del teclado](../accessibility/keyboard-accessibility.md)) y también es una herramienta importante para los usuarios que lo prefieren como una forma más eficaz de interactuar con una aplicación.
 
 La aplicación de Windows proporciona compatibilidad integrada en los controles de plataforma para las teclas de acceso basadas en teclado y los comentarios de la interfaz de usuario asociados a través de las indicaciones visuales denominadas sugerencias de teclas.
 
@@ -72,11 +72,11 @@ Por ejemplo, Microsoft Word proporciona dos ámbitos clave de acceso: un ámbito
 
 En las siguientes imágenes se muestran los dos ámbitos clave de acceso de Word. El primero muestra las claves de acceso principales que permiten al usuario seleccionar una pestaña y otros comandos de nivel superior, y el segundo muestra las claves de acceso secundarias para la pestaña Inicio.
 
-![Claves de acceso principales en claves](images/accesskeys/primary-access-keys-word.png)
-de acceso principal de Microsoft Word_en Microsoft Word_
+![Claves de acceso principales en claves de acceso principal de Microsoft Word ](images/accesskeys/primary-access-keys-word.png)
+ _en Microsoft Word_
 
-![Claves de acceso secundarias en](images/accesskeys/secondary-access-keys-word.png)
-_las claves de acceso secundarias de Microsoft Word en Microsoft Word_
+![Claves de acceso secundarias en ](images/accesskeys/secondary-access-keys-word.png)
+ _las claves de acceso secundarias de Microsoft Word en Microsoft Word_
 
 Se pueden duplicar las claves de acceso para los elementos de distintos ámbitos. En el ejemplo anterior, "2" es la clave de acceso para deshacer en el ámbito principal y también "cursiva" en el ámbito secundario.
 
@@ -241,7 +241,7 @@ Las claves de acceso localizadas se especifican en el archivo resources. resw de
 
 _Especifique la propiedad AccessKey especificada en el archivo resources. resw._
 
-Para obtener más información, consulte [traducir recursos](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)) de la interfaz de usuario
+Para obtener más información, consulte [traducir recursos](/previous-versions/windows/apps/hh965329(v=win.10)) de la interfaz de usuario
 
 ## <a name="key-tip-positioning"></a>Posición de la sugerencia de teclas
 
@@ -353,7 +353,7 @@ En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
 
 El marco XAML expone propiedades de automatización que permiten a los clientes de UI Automation detectar información sobre los elementos de la interfaz de usuario.
 
-Si especifica la propiedad AccessKey en un control UIElement o TextElement, puede usar la propiedad [AutomationProperties. AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey) para obtener este valor. Los clientes de accesibilidad, como narrador, leen el valor de esta propiedad cada vez que un elemento recibe el foco.
+Si especifica la propiedad AccessKey en un control UIElement o TextElement, puede usar la propiedad [AutomationProperties. AccessKey](/dotnet/api/system.windows.automation.automationproperties.accesskey) para obtener este valor. Los clientes de accesibilidad, como narrador, leen el valor de esta propiedad cada vez que un elemento recibe el foco.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -362,5 +362,3 @@ Si especifica la propiedad AccessKey en un control UIElement o TextElement, pued
 
 **Muestras**
 * [Galería de controles XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
-
-

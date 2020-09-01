@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f8afe892b7b8e91e72c1be7c655c8bc00998dd4
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: 0591b32671c7e1e74b47a41448f3b77b915a7dc7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094622"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174909"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Asignación del concepto de aplicaciones de Windows para desarrolladores de Android e iOS
 
@@ -180,7 +180,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 </tr>
 </tbody>
 </table>
-<h2 id="data">data</h2>
+<h2 id="data">Datos</h2>
 <table style="width:100%">
 <colgroup>
 <col width="20%" />
@@ -354,7 +354,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left"><strong>Optimización de la vista de lista.</strong> <br><br>Patrones integrados para ayudar en la optimización de las listas de datos, que con frecuencia tienen un rendimiento deficiente cuando se necesitan mostrar grandes cantidades de datos.</td>
 <td align="left">El patrón de diseño <strong>ViewHolder</strong> se usa para evitar varias de búsquedas de vistas, lo que permite usar elementos de interfaz de usuario reutilizables.</td>
 <td align="left">Se puede crear una variedad de optimizaciones para mejorar el rendimiento del objeto <strong>UITableView</strong>, no hay elementos integrados.</td>
-<td align="left">Puedes usar los controles <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview">ListView</a> y <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview">GridView</a>, que proporcionan <strong>virtualización de la interfaz de usuario</strong> en la configuración inicial. Esto ofrece una experiencia de movimiento panorámico y desplazamiento suaves, así como un tiempo de inicio más rápido. También puedes implementar los objetos <a href="https://docs.microsoft.com/dotnet/api/system.collections.ilist">IList</a> e <a href="https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a> en el origen de datos, lo que proporciona la <strong>virtualización de datos</strong> y mejora aún más el rendimiento.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview">Optimización de la interfaz de usuario de ListView y GridView</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization">Virtualización de datos de ListView y GridView</a></td>
+<td align="left">Puedes usar los controles <a href="/uwp/api/windows.ui.xaml.controls.listview">ListView</a> y <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview">GridView</a>, que proporcionan <strong>virtualización de la interfaz de usuario</strong> en la configuración inicial. Esto ofrece una experiencia de movimiento panorámico y desplazamiento suaves, así como un tiempo de inicio más rápido. También puedes implementar los objetos <a href="/dotnet/api/system.collections.ilist">IList</a> e <a href="https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a> en el origen de datos, lo que proporciona la <strong>virtualización de datos</strong> y mejora aún más el rendimiento.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview">Optimización de la interfaz de usuario de ListView y GridView</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization">Virtualización de datos de ListView y GridView</a></td>
 </tr>
 </tbody>
 </table>
@@ -482,7 +482,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Programación de notificaciones locales.</strong> <br><br>Notificaciones locales que tu aplicación envía en una hora programada.</td>
 <td align="left">Las notificaciones y acciones se definen mediante un objeto <strong>NotificationCompat.Builder</strong> y se pueden programar y controlar desde la aplicación mediante los objetos <strong>AlarmManager</strong> y <strong>BroadcastReceiver</strong>.</td>
-<td align="left">Las notificaciones locales se crean mediante <strong>UILocalNotification</strong>y se pueden programar con <b> UILocalNotification. scheduleLocalNotification:<strong>. | Puede programar una notificación del sistema mediante </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledToastNotification">ScheduledToastNotification</a><strong>. Puede enviar una notificación de icono desde la aplicación mediante la </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification">clase TileNotification</a> <strong> o programar una notificación de icono con <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledTileNotification">ScheduledTileNotification</a>.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts">Notificaciones del sistema interactivas y adaptables</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-sending-a-local-tile-notification">Enviar una notificación de icono local</a> | | </strong>Enviar notificaciones de envío.</b> Notificación que se envía desde un servidor de notificación de inserción y, opcionalmente, controlada desde la aplicación.</td>
+<td align="left">Las notificaciones locales se crean mediante <strong>UILocalNotification</strong>y se pueden programar con <b> UILocalNotification. scheduleLocalNotification:<strong>. | Puede programar una notificación del sistema mediante </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledToastNotification">ScheduledToastNotification</a><strong>. Puede enviar una notificación de icono desde la aplicación mediante la </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification">clase TileNotification</a> <strong> o programar una notificación de icono con <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledTileNotification">ScheduledTileNotification</a>.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts">Notificaciones del sistema interactivas y adaptables</a><br/><br/><a href="/windows/uwp/controls-and-patterns/tiles-and-notifications-sending-a-local-tile-notification">Enviar una notificación de icono local</a> | | </strong>Enviar notificaciones de envío.</b> Notificación que se envía desde un servidor de notificación de inserción y, opcionalmente, controlada desde la aplicación.</td>
 <td align="left"><strong>Google Cloud Messaging</strong> proporciona compatibilidad con las notificaciones de envío para Android.</td>
 </tr>
 </tbody>

@@ -11,12 +11,12 @@ metadata:
   ms.date: 11/08/2019
   ms.localizationpriority: medium
   uhfHeaderId: MSDocsHeader-WinDevCenter
-  ms.openlocfilehash: bbd56295c7a44c4d2c7d212f9e824dea6d5be64a
-  ms.sourcegitcommit: ad5a03ea01a3d825931a1abc40f472e88a41c04f
+  ms.openlocfilehash: bf966b78a2e1762778941ade5e1a1e1d684bb6b9
+  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/02/2020
-  ms.locfileid: "84303890"
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "89170579"
 highlightedContent:
   items:
   - title: Obtener Visual Studio y Windows SDK
@@ -24,30 +24,30 @@ highlightedContent:
     url: https://developer.microsoft.com/windows/downloads
   - title: Novedades para desarrolladores en la versión más reciente
     itemType: overview
-    url: https://docs.microsoft.com/windows/uwp/whats-new/windows-10-build-19041
+    url: /windows/uwp/whats-new/windows-10-build-19041
   - title: Únete al Programa Insider.
     itemType: overview
-    url: https://docs.microsoft.com/windows-insider
+    url: /windows-insider
   - title: Aprendizaje en línea para desarrolladores de aplicaciones de Windows
     itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?products=windows
+    url: /learn/browse/?products=windows
 productDirectory:
   title: Desarrollar para Windows
   items:
   - title: Aplicaciones de escritorio para Windows
     imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     links:
-    - url: /windows/apps/desktop/
+    - url: ./desktop/index.md
       text: Introducción
   - title: Biblioteca de interfaz de usuario de Windows (WinUI)
     imageSrc: images/logo-winui.svg
     links:
-    - url: /windows/apps/winui/
+    - url: ./winui/index.md
       text: Introducción
   - title: Subsistema de Windows para Linux, Terminal Windows, Python y otras herramientas
     imageSrc: https://docs.microsoft.com/media/logos/logo_linux-color.svg
     links:
-    - url: /windows/dev-environment/
+    - url: ../dev-environment/index.yml
       text: Introducción
 conceptualContent:
   title: Marcos y plataformas de aplicaciones
@@ -61,10 +61,10 @@ conceptualContent:
       url: /windows/uwp/get-started/
       itemType: get-started
     - text: Referencia para API, esquemas y mucho más
-      url: https://docs.microsoft.com/uwp/
+      url: /uwp/
       itemType: reference
     - text: Espacios de nombres de API
-      url: https://docs.microsoft.com/uwp/api/
+      url: /uwp/api/
       itemType: reference
     - text: Ejemplos
       url: https://github.com/Microsoft/Windows-universal-samples
@@ -72,16 +72,16 @@ conceptualContent:
   - title: Win32
     links:
     - text: Introducción
-      url: https://docs.microsoft.com/windows/win32/
+      url: /windows/win32/
       itemType: overview
     - text: Introducción
-      url: https://docs.microsoft.com/windows/win32/desktop-programming/
+      url: /windows/win32/desktop-programming/
       itemType: get-started
     - text: Referencia de API (por encabezado)
-      url: https://docs.microsoft.com/windows/win32/api/
+      url: /windows/win32/api/
       itemType: reference
     - text: Referencia de API (por característica)
-      url: https://docs.microsoft.com/windows/win32/apiindex/windows-api-list
+      url: /windows/win32/apiindex/windows-api-list
       itemType: reference
     - text: Ejemplos
       url: https://github.com/Microsoft/Windows-classic-samples
@@ -89,16 +89,16 @@ conceptualContent:
   - title: WPF
     links:
     - text: Introducción
-      url: https://docs.microsoft.com/dotnet/desktop-wpf/overview/?view=vs-2019
+      url: /dotnet/desktop-wpf/overview/?view=vs-2019
       itemType: overview
     - text: Introducción
-      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json&view=vs-2019
+      url: /visualstudio/get-started/csharp/tutorial-wpf?bc=%252fdotnet%252fbreadcrumb%252ftoc.json&toc=%252fdotnet%252fdesktop-wpf%252ftoc.json&view=vs-2019
       itemType: get-started
     - text: Referencia de API (.NET Core)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netcore-3.1
+      url: /dotnet/api/index?view=netcore-3.1
       itemType: reference
     - text: Referencia de API (.NET Framework)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netframework-4.8
+      url: /dotnet/api/index?view=netframework-4.8
       itemType: reference
     - text: Ejemplos
       url: https://github.com/Microsoft/WPF-Samples
@@ -106,29 +106,29 @@ conceptualContent:
   - title: Windows Forms
     links:
     - text: Introducción
-      url: https://docs.microsoft.com/dotnet/framework/winforms/
+      url: /dotnet/framework/winforms/
       itemType: overview
     - text: Introducción
-      url: https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms
+      url: /dotnet/framework/winforms/getting-started-with-windows-forms
       itemType: get-started
     - text: Referencia de API (.NET Core)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netcore-3.1
+      url: /dotnet/api/index?view=netcore-3.1
       itemType: reference
     - text: Referencia de API (.NET Framework)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netframework-4.8
+      url: /dotnet/api/index?view=netframework-4.8
       itemType: reference
 tools:
   title: Plataformas de dispositivos
   items:
   - title: Windows PCs
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: /windows/apps/desktop/
+    url: ./desktop/index.md
   - title: Realidad mixta y HoloLens
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: https://docs.microsoft.com/windows/mixed-reality/
+    url: /windows/mixed-reality/
   - title: Windows para IoT
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: https://docs.microsoft.com/windows/iot-core/windows-iot-core
+    url: /windows/iot-core/windows-iot-core
   - title: Xbox One
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
     url: https://www.xbox.com/developers
@@ -138,26 +138,26 @@ additionalContent:
     items:
     - title: Características de Windows para desarrolladores
       summary: Obtén información sobre cómo se admiten las características Windows en distintas plataformas de aplicaciones.
-      url: /windows/apps/features-and-technologies/
+      url: ./features-and-technologies.md
     - title: Agregar características de Windows 10 a la aplicación de escritorio
       summary: Mejora y moderniza tu aplicación de escritorio existente para usar las características más recientes de Windows 10.
-      url: /windows/apps/desktop/modernize
+      url: ./desktop/modernize/index.md
     - title: MSIX
       summary: Empaqueta e implementa cualquier aplicación de Windows con un formato de empaquetado moderno y universal.
-      url: https://docs.microsoft.com/windows/msix/
+      url: /windows/msix/
     - title: Desarrollo para dispositivos móviles
       summary: Explora los servicios Microsoft que te permiten crear aplicaciones móviles seguras y confiables basadas en la nube.
-      url: https://docs.microsoft.com/azure/mobile-apps/
+      url: /azure/mobile-apps/
     - title: Publicación en Microsoft Store
       summary: Usa el Centro de partners para publicar tus aplicaciones y juegos de Windows en Microsoft Store.
       url: /windows/uwp/publish/
     - title: Accesibilidad de la aplicación
       summary: Agrega accesibilidad en tus aplicaciones para que las puedan utilizar todos los usuarios, independientemente de sus capacidades.
-      url: /windows/apps/accessibility/
+      url: ./accessibility.md
     - title: Inteligencia artificial de Windows
       summary: Usa la IA de Windows para compilar soluciones inteligentes para problemas complejos en tus aplicaciones.
-      url: https://docs.microsoft.com/windows/ai/
+      url: /windows/ai/
     - title: Contenedores en Windows
       summary: Empaqueta tus aplicaciones con sus dependencias en entornos de Windows rápidos y completamente aislados.
-      url: https://docs.microsoft.com/virtualization/windowscontainers/
+      url: /virtualization/windowscontainers/
   footer: '[@WindowsDocs en Twitter](https://twitter.com/WindowsDocs) - [OneDevMinute en YouTube](https://aka.ms/OneDevMinute) - [Soporte técnico para desarrolladores de Windows](https://developer.microsoft.com/windows/support) - [Stack Overflow](https://stackoverflow.com/questions/tagged/windows)'

@@ -1,21 +1,21 @@
 ---
-title: Planeamiento de juegos para UWP
-description: Planeamiento de juegos para UWP.
+title: Planeación de juegos para UWP
+description: Consulte los artículos sobre la planeación de juegos para UWP, incluidas las tecnologías, la accesibilidad, la monetización y el empaquetado.
 ms.assetid: 25e104da-7b79-48b2-ae15-614ba41ca90c
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, Windows 10, uwp, UWP, game, juego, planning, planeamiento, accessibility, accesibilidad, cloud, nube, monetize, monetizar, package, paquete, technology, tecnología, concept, concepto, approval, aprobación
+keywords: Windows 10, UWP, juego, planeación, accesibilidad, nube, monetización, paquete, tecnología, concepto, aprobación
 ms.localizationpriority: medium
-ms.openlocfilehash: 47f613ff814788df947ee39590af0e01b7e3622f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 23f93fd0189a8f7128a09a5d76f62fa52b7081f3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653780"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175199"
 ---
-# <a name="planning-for-uwp-games"></a>Planeamiento de juegos para UWP
+# <a name="planning-for-uwp-games"></a>Planeación de juegos para UWP
 
-En esta sección se proporciona información sobre cómo planear tu juego para UWP.
+En esta sección se proporciona información sobre cómo planear el juego para UWP.
 
 <table>
 <colgroup>
@@ -30,28 +30,28 @@ En esta sección se proporciona información sobre cómo planear tu juego para U
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="game-development-platform-guide.md">Tecnologías de juegos</a></p></td>
-<td align="left"><p>Una lista de tecnologías que te ayudarán a desarrollar juegos.</p></td>
+<td align="left"><p><a href="game-development-platform-guide.md">Tecnologías de juego</a></p></td>
+<td align="left"><p>Una lista de tecnologías para ayudarle a desarrollar juegos.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="accessibility-for-games.md">Accesibilidad para juegos</a></p></td>
-<td align="left"><p>Aprende a hacer que los juegos sean más accesibles.</p></td>
+<td align="left"><p>Aprenda a hacer que los juegos sean más accesibles.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="cloud-for-games.md">En la nube para juegos</a></p></td>
-<td align="left"><p>Usa la nube para juegos.</p></td>
+<td align="left"><p><a href="cloud-for-games.md">Nube para juegos</a></p></td>
+<td align="left"><p>Usar la nube para juegos.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="monetization-for-games.md">Monetización para juegos</a></p></td>
-<td align="left"><p>Formas para monetizar tu juego.</p></td>
+<td align="left"><p>Formas de rentabilizar el juego.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="package-your-windows-store-directx-game.md">Empaqueta el juego</a></p></td>
-<td align="left"><p>Prepara el paquete del juego para Microsoft Store.</p></td>
+<td align="left"><p><a href="package-your-windows-store-directx-game.md">Empaquetar tu juego</a></p></td>
+<td align="left"><p>Prepare el paquete de juegos para el Microsoft Store.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="concept-approval.md">Aprobación de concepto</a></p></td>
-<td align="left"><p>Obtén la aprobación de tu concepto de juego.</p></td>
+<td align="left"><p><a href="concept-approval.md">Aprobación del concepto</a></p></td>
+<td align="left"><p>Consigue que tu concepto de juego esté aprobado.</p></td>
 </tr>
 </tbody>
 </table>

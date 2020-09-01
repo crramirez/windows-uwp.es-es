@@ -1,15 +1,15 @@
 ---
 title: 'Unity: Control de versiones del proyecto para UWP'
-description: Control de versiones del proyecto para UWP.
+description: Obtenga información sobre cómo usar el control de versiones con un juego de Unity para Xbox mediante el Plataforma universal de Windows (UWP).
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: b98fba394fb326d60451f07938504e99a92d764d
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 3e4d98892b9bd738eca788d166ef79f81ea1b047
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089491"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173749"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: Control de versiones del proyecto para UWP
 
@@ -49,21 +49,21 @@ Vamos a seleccionar unos cuantos archivos y carpetas diferentes de la carpeta **
 
 ![Directorio de compilación de UWP](images/uwp-build-directory.png)  
 
-## <a name="folders"></a>Folders  
+## <a name="folders"></a>Carpetas  
 
-`Assets` | ***incluyen*** | Contiene imágenes de Microsoft Store  
-***omitir*** `Data`   | | Donde Unity compila el proyecto en (escenas, sombreadores, scripts, Prefabs, etc.)  
-`Dependencies` | ***incluyen*** | Esta carpeta se creó para mantener todas las dependencias de UWP en (por ejemplo, XboxLiveSDK. dll).  
-`Properties` | ***incluyen*** | Contiene opciones más avanzadas que puede modificar el desarrollador  
-***omitir*** `Unprocessed` | | Contiene archivos de `.dll` y `.pdb` de Unity  
+`Assets` | ***Incluir*** | Contiene imágenes de Microsoft Store  
+`Data`   | ***Omitir*** | Donde Unity compila el proyecto en (escenas, sombreadores, scripts, Prefabs, etc.)  
+`Dependencies` | ***Incluir*** | Esta carpeta se creó para mantener todas las dependencias de UWP en (por ejemplo, XboxLiveSDK.dll)  
+`Properties` | ***Incluir*** | Contiene opciones más avanzadas que puede modificar el desarrollador  
+`Unprocessed` | ***Omitir*** | Contiene Unity `.dll` y `.pdb` archivos  
 
-## <a name="files"></a>Files  
+## <a name="files"></a>Archivos  
 
-`App.cs` | ***incluyen*** | Punto de entrada para la aplicación de UWP; se puede modificar y ampliar con otros archivos de código fuente.  
-`Package.appxmanifest` | ***incluyen*** | Archivo de origen del manifiesto del paquete de la aplicación para el paquete. msix o. appx  
-`project.json` | ***incluyen*** | Describe los paquetes de NuGet de los que depende el `*.csproj`  
-`ScrapyardPhoenix.csproj` | ***incluyen*** | Describe el destino de compilación de UWP; Si agrega dependencias adicionales al proyecto de UWP, este archivo `*.csproj` contendrá esa información.  
-***omitir*** `ScrapyardPhoenix.csproj.user` | | Este archivo contiene información de usuario local
+`App.cs` | ***Incluir*** | Punto de entrada para la aplicación de UWP; se puede modificar y ampliar con otros archivos de código fuente.  
+`Package.appxmanifest` | ***Incluir*** | Archivo de origen del manifiesto del paquete de la aplicación para el paquete. msix o. appx  
+`project.json` | ***Incluir*** | Describe los paquetes de NuGet `*.csproj` de los que depende  
+`ScrapyardPhoenix.csproj` | ***Incluir*** | Describe el destino de compilación de UWP; Si agrega dependencias adicionales al proyecto de UWP, este archivo contendrá `*.csproj` esa información.  
+`ScrapyardPhoenix.csproj.user` | ***Omitir*** | Este archivo contiene información de usuario local
 
 ## <a name="resulting-gitignore"></a>Archivo .gitignore resultante
 

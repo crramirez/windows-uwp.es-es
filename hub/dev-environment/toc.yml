@@ -60,21 +60,21 @@
             - name: Prueba en el dispositivo o emulador
               href: ../android/emulator.md
         - name: Introducción a C y C++
-          href: 'https://docs.microsoft.com/cpp/'
+          href: /cpp/
         - name: Introducción a C#
-          href: 'https://docs.microsoft.com/dotnet/csharp/'
+          href: /dotnet/csharp/
         - name: Introducción a Java en Azure
-          href: 'https://docs.microsoft.com/azure/developer/java/'
+          href: /azure/developer/java/
         - name: Introducción a PowerShell
-          href: 'https://docs.microsoft.com/powershell/'
+          href: /powershell/
         - name: Introducción a las bases de datos en WSL
-          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
+          href: /windows/wsl/tutorials/wsl-database
     - name: Herramientas y plataformas
       items:
         - name: Subsistema de Windows para Linux
-          href: 'https://docs.microsoft.com/windows/wsl/'
+          href: /windows/wsl/
         - name: Terminal Windows
-          href: 'https://docs.microsoft.com/windows/terminal/'
+          href: /windows/terminal/
         - name: Administrador de paquetes de Windows
           items:
             - name: Introducción
@@ -110,8 +110,8 @@
         - name: Código de VS
           href: 'https://code.visualstudio.com/docs'
         - name: Visual Studio
-          href: 'https://docs.microsoft.com/visualstudio/windows/?view=vs-2019'
+          href: /visualstudio/windows/?view=vs-2019
         - name: Azure
-          href: 'https://docs.microsoft.com/azure/?product=featured'
+          href: /azure/?product=featured
         - name: .NET
-          href: 'https://docs.microsoft.com/dotnet/'
+          href: /dotnet/

@@ -6,34 +6,34 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 55bf6360f09ba4ab6c7878543ecfa0c80c4558e3
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: 301a0a650f65d33b3ea3e4f091fbb623b9ebe53d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "72252313"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174269"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
-En este artículo se proporciona información adicional sobre las restricciones en Windows Runtime componentes escritos con código administrado. Amplía la información que se proporciona en los mensajes de error de [Winmdexp. exe (Windows Runtime herramienta de exportación de metadatos)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)y complementa la información sobre las restricciones que se proporcionan en [los componentes C# de Windows Runtime con y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
+En este artículo se proporciona información adicional sobre las restricciones en Windows Runtime componentes escritos con código administrado. Amplía la información que se proporciona en los mensajes de error de [Winmdexp.exe (Windows Runtime herramienta de exportación de metadatos)](/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)y complementa la información sobre las restricciones que se proporcionan en [los componentes de Windows Runtime con C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 En este artículo no se abarcan todos los errores. Los errores que se tratan aquí se agrupan por categoría general, y cada categoría incluye una tabla de mensajes de error relacionados. Busca el texto del mensaje (omitiendo valores específicos de marcadores de posición) o el número de mensaje. Si no encuentras la información que necesitas aquí, por favor, ayúdanos a mejorar la documentación con el botón de comentarios al final de este artículo. Incluye el mensaje del error. Como alternativa, puedes presentar un error en el sitio Web de Microsoft Connect.
 
 ## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>El mensaje de error para implementar la interfaz asincrónica proporciona un tipo incorrecto
 
-Los componentes de Windows Runtime administrados no pueden implementar las interfaces de Plataforma universal de Windows (UWP) que representan acciones u operaciones asincrónicas ([IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions/br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). En su lugar, .NET proporciona la clase [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime) para generar operaciones asincrónicas en Windows Runtime componentes. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET ya no incluye la clase AsyncInfoFactory.
+Los componentes de Windows Runtime administrados no pueden implementar las interfaces de plataforma universal de Windows (UWP) que representan acciones u operaciones asincrónicas ([IAsyncAction](/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress &lt; TProgress &gt; ](/previous-versions/br205784(v=vs.85)), [IAsyncOperation &lt; TResult &gt; ](/uwp/api/Windows.Foundation.IAsyncOperation_TResult_)o [IAsyncOperationWithProgress &lt; TResult, TProgress &gt; ](/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). En su lugar, .NET proporciona la clase [AsyncInfo](/dotnet/api/system.runtime.interopservices.windowsruntime) para generar operaciones asincrónicas en Windows Runtime componentes. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET ya no incluye la clase AsyncInfoFactory.
 
-| Número de error | Texto de mensaje|       
+| Número de error | Texto del mensaje|       
 |--------------|-------------|
-| WME1084      | El tipo '{0}' implementa Windows Runtime interfaz asincrónica '{1}'. Los tipos de Windows Runtime no pueden implementar interfaces asincrónicas. Usa la clase System.Runtime.InteropServices.WindowsRuntime.AsyncInfoFactory para generar las operaciones asincrónicas para exportar a Windows Runtime. |
+| WME1084      | El tipo ' {0} ' implementa Windows Runtime interfaz asincrónica ' {1} '. Los tipos de Windows Runtime no pueden implementar interfaces asincrónicas. Usa la clase System.Runtime.InteropServices.WindowsRuntime.AsyncInfoFactory para generar las operaciones asincrónicas para exportar a Windows Runtime. |
 
-> **Tenga en cuenta** los mensajes de error que hacen referencia al Windows Runtime usar una terminología antigua. Esta se denomina ahora Plataforma universal de Windows (UWP). Por ejemplo, los tipos de Windows Runtime ahora se denominan tipos UWP.
+> **Nota:**   Los mensajes de error que hacen referencia al Windows Runtime usar una terminología antigua. Esta se denomina ahora Plataforma universal de Windows (UWP). Por ejemplo, los tipos de Windows Runtime ahora se denominan tipos UWP.
 
 ## <a name="missing-references-to-mscorlibdll-or-systemruntimedll"></a>Referencias ausentes a mscorlib.dll o System.Runtime.dll
 
-Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la línea de comandos. Se recomienda usar la opción/Reference para incluir referencias a mscorlib. dll y System. Runtime. dll desde los ensamblados de referencia de .NET Framework Core, que se encuentran en "% ProgramFiles (x86)%\\ensamblados de referencia\\Microsoft\\Framework\\. NETCore\\v 4.5 "("% ProgramFiles%\\... " en un equipo de 32 bits).
+Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la línea de comandos. Se recomienda usar la opción/Reference para incluir referencias a mscorlib.dll y System.Runtime.dll de los ensamblados de referencia de .NET Framework Core, que se encuentran en "% ProgramFiles (x86)% \\ Reference assemblies \\ Microsoft \\ Framework \\ . NETCore \\ v 4.5 "("% ProgramFiles% \\ ... " en un equipo de 32 bits).
 
-| Número de error | Texto de mensaje                                                                                                                                     |
+| Número de error | Texto del mensaje                                                                                                                                     |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | WME1009      | No se ha hecho ninguna referencia a mscorlib.dll. Se requiere una referencia a estos metadatos para exportar correctamente.                               |
 | WME1090      | No se pudo determinar el ensamblado de referencia principal. Asegúrese de que mscorlib.dll y System.Runtime.dll se mencionan mediante el conmutador /reference. |
@@ -42,28 +42,28 @@ Este problema se produce únicamente cuando se utiliza Winmdexp.exe desde la lí
 
 En un componente de Windows Runtime escrito en código administrado, no se pueden exponer operadores sobrecargados en tipos públicos.
 
-> **Tenga en cuenta** en el mensaje de error, el operador se identifica mediante su nombre de metadatos, como OP\_suma, operación\_multiplicar, op\_Exclusive, op\_implícita (conversión implícita), etc.
+> **Nota:**   En el mensaje de error, el operador se identifica mediante su nombre de metadatos, como operación de \_ incorporación de operaciones, \_ multiplicación de operaciones, operador de operación \_ , operación \_ implícita (conversión implícita), etc.
 
-| Número de error | Texto de mensaje                                                                                          |
+| Número de error | Texto del mensaje                                                                                          |
 |--------------|-------------------------------------------------------------------------------------------------------|
-| WME1087      | '{0}' es una sobrecarga de operador. Los tipos administrados no pueden exponer sobrecargas de operadores en Windows Runtime. |
+| WME1087      | ' {0} ' es una sobrecarga de operador. Los tipos administrados no pueden exponer sobrecargas de operadores en Windows Runtime. |
 
 ## <a name="constructors-on-a-class-have-the-same-number-of-parameters"></a>Los constructores en una clase tienen el mismo número de parámetros
 
 En el UWP, una clase puede tener solo un constructor con un determinado número de parámetros. Por ejemplo, no puedes tener un constructor que tenga un único parámetro de tipo **String** y otro que tenga un único parámetro de tipo **int** (**Integer** en Visual Basic). La única solución alternativa es usar un número de parámetros diferente para cada constructor.
 
-| Número de error | Texto de mensaje                                                                                                                                            |
+| Número de error | Texto del mensaje                                                                                                                                            |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1099      | El tipo '{0}' tiene varios constructores con argumentos '{1}'. Los tipos de Windows Runtime no pueden tener varios constructores con el mismo número de argumentos. |
+| WME1099      | El tipo ' {0} ' tiene varios constructores con {1} argumentos ' '. Los tipos de Windows Runtime no pueden tener varios constructores con el mismo número de argumentos. |
 
 ## <a name="must-specify-a-default-for-overloads-that-have-the-same-number-of-parameters"></a>Debes especificar un valor predeterminado para las sobrecargas que tienen el mismo número de parámetros
 
 En la UWP los métodos sobrecargados pueden tener el mismo número de parámetros solo si se especifica una sobrecarga como sobrecarga predeterminada. Consulte "métodos sobrecargados" en [Windows Runtime componentes con C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
-| Número de error | Texto de mensaje                                                                                                                                                                      |
+| Número de error | Texto del mensaje                                                                                                                                                                      |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1059      | Varias sobrecargas de parámetros de {0}de '{1}.{2}' se representan con Windows. Foundation. Metadata. DefaultOverloadAttribute.                                                            |
-| WME1085      | Sobrecargas de parámetros de {0}de {1}.{2} debe tener exactamente un método especificado como sobrecarga predeterminada al decorarlo con Windows. Foundation. Metadata. DefaultOverloadAttribute. |
+| WME1059      | Las {0} sobrecargas de varios parámetros de ' {1} . {2} ' se representan con Windows. Foundation. Metadata. DefaultOverloadAttribute.                                                            |
+| WME1085      | Las {0} sobrecargas de parámetros de {1} . {2} deben tener exactamente un método especificado como sobrecarga predeterminada al decorarlo con Windows. Foundation. Metadata. DefaultOverloadAttribute. |
 
 ## <a name="namespace-errors-and-invalid-names-for-the-output-file"></a>Errores de espacio de nombres y nombres inválidos para el archivo de salida
 
@@ -85,26 +85,26 @@ Un tipo en un componente de Windows Runtime no puede tener un nombre idéntico a
 
  
 
-| Número de error | Texto de mensaje                                                                                                                                                                                                                                                                                                                                             |
+| Número de error | Texto del mensaje                                                                                                                                                                                                                                                                                                                                             |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME0006      | '{0}' no es un nombre de archivo winmd válido para este ensamblado. Todos los tipos dentro de un archivo de metadatos de Windows deben existir en un subespacio de nombres del espacio de nombres que se determina según el nombre de archivo. Los tipos que no existen en dicho subespacio de nombres no pueden localizarse en el tiempo de ejecución. En este ensamblado, el espacio de nombres comunes más pequeño que puede actuar como un nombre de archivo es '{1}'. |
+| WME0006      | ' {0} ' no es un nombre de archivo winmd válido para este ensamblado. Todos los tipos dentro de un archivo de metadatos de Windows deben existir en un subespacio de nombres del espacio de nombres que se determina según el nombre de archivo. Los tipos que no existen en dicho subespacio de nombres no pueden localizarse en el tiempo de ejecución. En este ensamblado, el espacio de nombres comunes más pequeño que puede actuar como un nombre de archivo es '{1}'. |
 | WME1042      | El módulo de entrada debe contener al menos un tipo público que se encuentre dentro de un espacio de nombres.                                                                                                                                                                                                                                                                   |
 | WME1043      | El módulo de entrada debe contener al menos un tipo público que se encuentre dentro de un espacio de nombres. Los únicos tipos que se encuentran dentro de espacios de nombres son privados.                                                                                                                                                                                                               |
-| WME1044      | Un tipo público tiene un espacio de nombres ('{1}') que no comparte ningún prefijo común con otros espacios de nombres ('{0}'). Todos los tipos dentro de un archivo de metadatos de Windows deben existir en un subespacio de nombres del espacio de nombres que se determina según el nombre de archivo.                                                                                                                              |
-| WME1067      | Los nombres de espacios de nombres no pueden diferenciarse solo por mayúsculas y minúsculas: '{0}', '{1}'.                                                                                                                                                                                                                                                                                                |
-| WME1068      | El tipo '{0}' no puede tener el mismo nombre que el espacio de nombres '{1}'.                                                                                                                                                                                                                                                                                                 |
+| WME1044      | Un tipo público tiene un espacio de nombres (' {1} ') que no comparte ningún prefijo común con otros espacios de nombres (' {0} '). Todos los tipos dentro de un archivo de metadatos de Windows deben existir en un subespacio de nombres del espacio de nombres que se determina según el nombre de archivo.                                                                                                                              |
+| WME1067      | Los nombres de espacios de nombres no pueden diferir solo en el caso: ' {0} ', ' {1} '.                                                                                                                                                                                                                                                                                                |
+| WME1068      | El tipo ' {0} ' no puede tener el mismo nombre que el espacio de nombres ' {1} '.                                                                                                                                                                                                                                                                                                 |
 
 ## <a name="exporting-types-that-arent-valid-universal-windows-platform-types"></a>Exportar tipos que no son tipos válidos de la Plataforma universal de Windows
 
-La interfaz pública de tu componente debe exponer solo los tipos UWP. Sin embargo, .NET proporciona asignaciones para varios tipos de uso frecuente que son ligeramente diferentes en .NET y UWP. Esto permite al desarrollador de .NET trabajar con tipos conocidos en lugar de aprender otros nuevos. Puede usar estos tipos .NET asignados en la interfaz pública de su componente. Vea "declarar tipos en componentes de Windows Runtime" y "pasar tipos de Plataforma universal de Windows a código administrado" en [Windows Runtime componentes C# con y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md), y [asignaciones de .net de tipos de Windows Runtime](net-framework-mappings-of-windows-runtime-types.md).
+La interfaz pública de tu componente debe exponer solo los tipos UWP. Sin embargo, .NET proporciona asignaciones para varios tipos de uso frecuente que son ligeramente diferentes en .NET y UWP. Esto permite al desarrollador de .NET trabajar con tipos conocidos en lugar de aprender otros nuevos. Puede usar estos tipos .NET asignados en la interfaz pública de su componente. Vea "declarar tipos en componentes de Windows Runtime" y "pasar tipos de Plataforma universal de Windows a código administrado" en [Windows Runtime componentes con C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md), y [asignaciones de .net de tipos de Windows Runtime](net-framework-mappings-of-windows-runtime-types.md).
 
-Muchas de estas asignaciones son interfaces. Por ejemplo, [IList&lt;T&gt;](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1) se asigna a la interfaz UWP [IVector&lt;T&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IVector_T_). Si usas List&lt;string&gt; (`List(Of String)` en Visual Basic) en lugar de IList&lt;string&gt; como tipo de parámetro, Winmdexp.exe proporciona una lista de alternativas que incluye todas las interfaces asignadas implementadas por List&lt;T&gt;. Si usas los tipos genéricos anidados, como List&lt;Dictionary&lt;int, string&gt;&gt; (List(Of Dictionary(Of Integer, String)) en Visual Basic), Winmdexp.exe ofrece opciones para cada nivel de anidación. Estas listas pueden ser bastante largas.
+Muchas de estas asignaciones son interfaces. Por ejemplo, [IList&lt;T&gt;](/dotnet/api/system.collections.generic.ilist-1) se asigna a la interfaz UWP [IVector&lt;T&gt;](/uwp/api/Windows.Foundation.Collections.IVector_T_). Si usas List&lt;string&gt; (`List(Of String)` en Visual Basic) en lugar de IList&lt;string&gt; como tipo de parámetro, Winmdexp.exe proporciona una lista de alternativas que incluye todas las interfaces asignadas implementadas por List&lt;T&gt;. Si usa tipos genéricos anidados, como List &lt; Dictionary &lt; int, String &gt; &gt; (List (of Dictionary (of Integer, string)) en Visual Basic), Winmdexp.exe ofrece opciones para cada nivel de anidamiento. Estas listas pueden ser bastante largas.
 
 En general, la mejor opción es la interfaz que más se asemeje al tipo. Por ejemplo, para Dictionary&lt;int, string&gt;, la mejor opción es probablemente IDictionary&lt;int, string&gt;.
 
-> **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+> **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
-> **Precaución**  Evita el uso de las interfaces no genéricas [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) o [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) si JavaScript usará tu componente. Estas interfaces se asignan a [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) y [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
+> **Precaución**  Evita el uso de las interfaces no genéricas [IList](/dotnet/api/system.collections.ilist) o [IEnumerable](/dotnet/api/system.collections.ienumerable) si JavaScript usará tu componente. Estas interfaces se asignan a [IBindableVector](/uwp/api/windows.ui.xaml.interop.ibindablevector) y [IBindableIterator](/uwp/api/windows.ui.xaml.interop.ibindableiterator), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
 
  
 
@@ -116,27 +116,27 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 <thead>
 <tr class="header">
 <th align="left">Número de error</th>
-<th align="left">Texto de mensaje</th>
+<th align="left">Texto del mensaje</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">WME1033</td>
-<td align="left">El método '{0}' tiene el parámetro '{1}' de tipo '{2}'. '{2}' no es un tipo de parámetro válido de Windows Runtime.</td>
+<td align="left">El método ' {0} ' tiene el parámetro ' {1} ' de tipo ' {2} '. '{2}' no es un tipo de parámetro válido de Windows Runtime.</td>
 </tr>
 <tr class="even">
 <td align="left">WME1038</td>
-<td align="left">El método '{0}' tiene un parámetro de tipo '{1}' en su signatura. Aunque este tipo no es un tipo válido de Windows Runtime, implementa interfaces que son tipos válidos de Windows Runtime. Considera la posibilidad de cambiar la firma de método para utilizar uno de los siguientes tipos en su lugar: '{2}'.</td>
+<td align="left">El método ' {0} ' tiene un parámetro de tipo ' {1} ' en su signatura. Aunque este tipo no es un tipo válido de Windows Runtime, implementa interfaces que son tipos válidos de Windows Runtime. Considera la posibilidad de cambiar la firma de método para utilizar uno de los siguientes tipos en su lugar: '{2}'.</td>
 </tr>
 <tr class="odd">
 <td align="left">WME1039</td>
-<td align="left"><p>El método '{0}' tiene un parámetro de tipo '{1}' en su signatura. Aunque este tipo genérico no es un tipo válido de Windows Runtime, el tipo o sus parámetros genéricos implementan interfaces que son tipos válidos de Windows Runtime. [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/]({2})</p>
-> **Nota:**  Por {2}, Winmdexp. exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System. Collections. Generic. List&lt;T&gt;' en la Signatura del método a uno de los siguientes tipos: ' System. Collections. Generic. IList&lt;T&gt;, System. Collections. Generic. IReadOnlyList&lt;T&gt;, System. Collections. Generic. IEnumerable&lt;T&gt;'.
+<td align="left"><p>El método ' {0} ' tiene un parámetro de tipo ' {1} ' en su signatura. Aunque este tipo genérico no es un tipo válido de Windows Runtime, el tipo o sus parámetros genéricos implementan interfaces que son tipos válidos de Windows Runtime. {2}</p>
+> **Nota:**  En {2} el caso de, Winmdexp.exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System. Collections. Generic. List &lt; t &gt; ' en la Signatura del método a uno de los siguientes tipos: ' System. Collections. Generic. IList &lt; t &gt; , System. Collections. Generic. IReadOnlyList &lt; T &gt; , System. Collections. Generic. IEnumerable &lt; t &gt; '".
 </td>
 </tr>
 <tr class="even">
 <td align="left">WME1040</td>
-<td align="left">El método '{0}' tiene un parámetro de tipo '{1}' en su signatura. En lugar de usar un tipo de tarea administrado, usa Windows.Foundation.IAsyncAction, Windows.Foundation.IAsyncOperation o una de las otras interfaces asincrónicas de Windows Runtime. El patrón await de .NET estándar también se aplica a estas interfaces. Por favor, consulta System.Runtime.InteropServices.WindowsRuntime.AsyncInfo para obtener más información acerca de la conversión de objetos de tareas administradas a interfaces asincrónicas de Windows Runtime.</td>
+<td align="left">El método ' {0} ' tiene un parámetro de tipo ' {1} ' en su signatura. En lugar de usar un tipo de tarea administrado, usa Windows.Foundation.IAsyncAction, Windows.Foundation.IAsyncOperation o una de las otras interfaces asincrónicas de Windows Runtime. El patrón await de .NET estándar también se aplica a estas interfaces. Por favor, consulta System.Runtime.InteropServices.WindowsRuntime.AsyncInfo para obtener más información acerca de la conversión de objetos de tareas administradas a interfaces asincrónicas de Windows Runtime.</td>
 </tr>
 </tbody>
 </table>
@@ -148,9 +148,9 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 
 En la UWP una estructura puede contener solo campos, y solo las estructuras pueden contener campos. Estos campos deben ser públicos. Los tipos de campos válidos incluyen tipos primitivos, estructuras y enumeraciones.
 
-| Número de error | Texto de mensaje                                                                                                                                                                                                                                                            |
+| Número de error | Texto del mensaje                                                                                                                                                                                                                                                            |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1060      | La estructura '{0}' tiene el campo '{1}' de tipo '{2}'. '{2}' no es un tipo de campo válido de Windows Runtime. Cada campo en una estructura de Windows Runtime solo puede ser UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Boolean, String, Enum o una estructura en sí mismo. |
+| WME1060      | La estructura ' {0} ' tiene el campo ' {1} ' de tipo ' {2} '. '{2}' no es un tipo de campo válido de Windows Runtime. Cada campo en una estructura de Windows Runtime solo puede ser UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Boolean, String, Enum o una estructura en sí mismo. |
 
  
 
@@ -159,31 +159,31 @@ En la UWP una estructura puede contener solo campos, y solo las estructuras pued
 
 En la UWP, las matrices en las signaturas de miembros deben ser unidimensionales con un límite inferior de 0 (cero). Los tipos de matrices anidadas como `myArray[][]` (`myArray()()` en Visual Basic) no están permitidos.
 
-> **Tenga en cuenta** esta restricción no se aplica a las matrices que se usan internamente en su implementación.
+> **Nota:**   Esta restricción no se aplica a las matrices que se usan internamente en su implementación.
 
  
 
-| Número de error | Texto de mensaje                                                                                                                                                     |
+| Número de error | Texto del mensaje                                                                                                                                                     |
 |--------------|--------------------|
-| WME1034      | El método '{0}' tiene una matriz de tipo '{1}' con un límite inferior distinto de cero en la firma. Las matrices de firmas de método de Windows Runtime deben tener un límite inferior de cero. |
-| WME1035      | El método '{0}' tiene una matriz multidimensional de tipo '{1}' en su signatura. Las matrices de firmas de método de Windows Runtime deben ser unidimensionales.                  |
-| WME1036      | El método '{0}' tiene una matriz anidada de tipo '{1}' en su signatura. Las matrices de firmas de método de Windows Runtime no pueden anidarse.                                    |
+| WME1034      | El método ' {0} ' tiene una matriz de tipo ' {1} ' con un límite inferior distinto de cero en la firma. Las matrices de firmas de método de Windows Runtime deben tener un límite inferior de cero. |
+| WME1035      | El método ' {0} ' tiene una matriz multidimensional de tipo ' {1} ' en su signatura. Las matrices de firmas de método de Windows Runtime deben ser unidimensionales.                  |
+| WME1036      | El método ' {0} ' tiene una matriz anidada de tipo ' {1} ' en su signatura. Las matrices de firmas de método de Windows Runtime no pueden anidarse.                                    |
 
  
 
 ## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>Los parámetros de matriz deben especificar si el contenido de la matriz es de lectura o escritura.
 
 
-En la UWP, los parámetros deben ser de solo lectura o de solo escritura. No se pueden marcar parámetros **ref** (**ByRef** sin el atributo [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute) en Visual Basic). Esto se aplica al contenido de las matrices, por lo que los parámetros de las matrices deben indicar si el contenido de la matriz es de solo lectura o solo escritura. La dirección es clara para los parámetros **out** (parámetro **ByRef** con el atributo OutAttribute en Visual Basic), pero los parámetros de matrices pasados por valor (ByVal en Visual Basic) deben estar marcados. Consulta [Pasar matrices a un componente de Windows Runtime](passing-arrays-to-a-windows-runtime-component.md).
+En la UWP, los parámetros deben ser de solo lectura o de solo escritura. No se pueden marcar parámetros **ref** (**ByRef** sin el atributo [OutAttribute](/dotnet/api/system.runtime.interopservices.outattribute) en Visual Basic). Esto se aplica al contenido de las matrices, por lo que los parámetros de las matrices deben indicar si el contenido de la matriz es de solo lectura o solo escritura. La dirección es clara para los parámetros **out** (parámetro **ByRef** con el atributo OutAttribute en Visual Basic), pero los parámetros de matrices pasados por valor (ByVal en Visual Basic) deben estar marcados. Consulta [Pasar matrices a un componente de Windows Runtime](passing-arrays-to-a-windows-runtime-component.md).
 
-| Número de error | Texto de mensaje         |
+| Número de error | Texto del mensaje         |
 |--------------|----------------------|
-| WME1101      | El método '{0}' tiene el parámetro '{1}', que es una matriz y tiene {2} y {3}. En Windows Runtime, los parámetros de la matriz de contenido deben ser o bien de lectura o bien de escritura. Quita uno de los atributos de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| WME1102      | El método '{0}' tiene un parámetro de salida '{1}' que es una matriz, pero que tiene {2}. En Windows Runtime, el contenido de las matrices de salida es modificable. Quita el atributo de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| WME1103      | El método '{0}' tiene el parámetro '{1}', que es una matriz y tiene System. Runtime. InteropServices. InAttribute o System. Runtime. InteropServices. OutAttribute. En Windows Runtime, los parámetros de la matriz deben tener {2} o {3}. Quita estos atributos o reemplázalos con el atributo de Windows Runtime apropiado si es necesario.                                                                                                                                                                                                                                                                                                                                                                                          |
-| WME1104      | El método '{0}' tiene el parámetro '{1}', que no es una matriz y tiene un {2} o un {3}. Windows Runtime no es compatible con parámetros que no son de matriz de marcado con {2} o {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| WME1105      | El método '{0}' tiene el parámetro '{1}' con System. Runtime. InteropServices. InAttribute o System. Runtime. InteropServices. OutAttribute. Windows Runtime no es compatible con parámetros de marcado con System.Runtime.InteropServices.InAttribute o System.Runtime.InteropServices.OutAttribute. Por favor, considera la posibilidad de quitar System.Runtime.InteropServices.InAttribute y reemplaza System.Runtime.InteropServices.OutAttribute por el modificador 'out' en su lugar. El método '{0}' tiene el parámetro '{1}' con System. Runtime. InteropServices. InAttribute o System. Runtime. InteropServices. OutAttribute. Windows Runtime solo es compatible con los parámetros ByRef de marcado con System.Runtime.InteropServices.OutAttribute y no es compatible con otros usos de estos atributos. |
-| WME1106      | El método '{0}' tiene el parámetro '{1}', que es una matriz. En Windows Runtime, el contenido de los parámetros de la matriz debe ser o bien de lectura o bien de escritura. Aplica o bien {2} o bien {3} a '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| WME1101      | El método ' {0} ' tiene el parámetro ' {1} ', que es una matriz y tiene los parámetros {2} y {3} . En Windows Runtime, los parámetros de la matriz de contenido deben ser o bien de lectura o bien de escritura. Quita uno de los atributos de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| WME1102      | El método ' {0} ' tiene un parámetro de salida ' {1} ' que es una matriz, pero tiene {2} . En Windows Runtime, el contenido de las matrices de salida es modificable. Quita el atributo de '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| WME1103      | El método ' {0} ' tiene el parámetro ' {1} ', que es una matriz y tiene System. Runtime. InteropServices. InAttribute o System. Runtime. InteropServices. OutAttribute. En Windows Runtime, los parámetros de la matriz deben tener {2} o {3}. Quita estos atributos o reemplázalos con el atributo de Windows Runtime apropiado si es necesario.                                                                                                                                                                                                                                                                                                                                                                                          |
+| WME1104      | El método ' {0} ' tiene el parámetro ' {1} ', que no es una matriz y tiene un {2} o un {3} . Windows Runtime no es compatible con parámetros que no son de matriz de marcado con {2} o {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| WME1105      | El método ' {0} ' tiene el parámetro ' {1} ' con System. Runtime. InteropServices. InAttribute o System. Runtime. InteropServices. OutAttribute. Windows Runtime no es compatible con parámetros de marcado con System.Runtime.InteropServices.InAttribute o System.Runtime.InteropServices.OutAttribute. Por favor, considera la posibilidad de quitar System.Runtime.InteropServices.InAttribute y reemplaza System.Runtime.InteropServices.OutAttribute por el modificador 'out' en su lugar. El método ' {0} ' tiene el parámetro ' {1} ' con System. Runtime. InteropServices. InAttribute o System. Runtime. InteropServices. OutAttribute. Windows Runtime solo es compatible con los parámetros ByRef de marcado con System.Runtime.InteropServices.OutAttribute y no es compatible con otros usos de estos atributos. |
+| WME1106      | El método ' {0} ' tiene el parámetro ' {1} ', que es una matriz. En Windows Runtime, el contenido de los parámetros de la matriz debe ser o bien de lectura o bien de escritura. Aplica o bien {2} o bien {3} a '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 ## <a name="member-with-a-parameter-named-value"></a>Miembro con un parámetro denominado "valor"
@@ -212,16 +212,16 @@ En el UWP, los valores devueltos se considera que son parámetros de salida y lo
 
 > **Nota**  Si cambias el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrás el error WME1091.
 
-El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute).
+El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute).
 
-| Número de error | Texto de mensaje |
+| Número de error | Texto del mensaje |
 |--------------|--------------|
-| WME1091 | El método '\{0} ' tiene el valor devuelto denominado '\{1} ', que es igual que un nombre de parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
-| WME1092 | El método '\{0} ' tiene un parámetro denominado '\{1} ', que es igual que el nombre del valor devuelto predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
+| WME1091 | El método ' \{ 0} ' tiene el valor devuelto con el nombre ' \{ 1} ', que es igual que un nombre de parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
+| WME1092 | El método ' \{ 0} ' tiene un parámetro denominado ' \{ 1} ' que es igual que el nombre del valor devuelto predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
 
 **Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Componentes de Windows Runtime con C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Winmdexp. exe (herramienta de exportación de metadatos de Windows Runtime)](https://docs.microsoft.com/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)
+* [Winmdexp.exe (Herramienta de exportación de metadatos de Windows Runtime)](/dotnet/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool)

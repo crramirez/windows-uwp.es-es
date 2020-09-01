@@ -1,18 +1,18 @@
 ---
 Description: Windows Inserte Notification Services (WNS) permite a los desarrolladores de terceros enviar notificaciones del sistema, iconos, distintivos y sin formato desde su propio servicio en la nube. Hay muchas maneras de enviar las notificaciones en función de las necesidades de la aplicación.
-title: Elección del tipo de canal de notificación de inserciones correcto
+title: Elegir el tipo adecuado de canal de notificación de inserción
 ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 502395d1daa698e1b05e40f355e65f074219e9a5
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 166abeb792e86fc44568a5ee29263262214657cf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970860"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173829"
 ---
-# <a name="choosing-the-right-push-notification-channel-type"></a>Elección del tipo de canal de notificación de inserciones correcto
+# <a name="choosing-the-right-push-notification-channel-type"></a>Elegir el tipo adecuado de canal de notificación de inserción
 
 En este artículo se tratan los tres tipos de canales de notificaciones de entrega de Windows (principales, secundarios y alternativos) que le ayudarán a ofrecer contenido a su aplicación. 
 
@@ -22,11 +22,11 @@ En este artículo se tratan los tres tipos de canales de notificaciones de entre
 
 Hay tres tipos de canales de inserciones que se pueden usar para enviar notificaciones a una aplicación de Windows. Son las siguientes: 
 
-[Canal principal](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) : el canal de instalación "tradicional". Cualquier aplicación de la tienda puede utilizarla para enviar notificaciones del sistema, de iconos, sin formato o de distintivo. [Obtenga más información aquí](windows-push-notification-services--wns--overview.md).
+[Canal principal](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) : el canal de instalación "tradicional". Cualquier aplicación de la tienda puede utilizarla para enviar notificaciones del sistema, de iconos, sin formato o de distintivo. [Obtenga más información aquí](windows-push-notification-services--wns--overview.md).
 
-[Canal de icono secundario](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) : se usa para enviar actualizaciones de iconos a un icono secundario. Solo se puede usar para enviar notificaciones de icono o distintivo a un icono secundario anclado en la pantalla Inicio del usuario.
+[Canal de icono secundario](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) : se usa para enviar actualizaciones de iconos a un icono secundario. Solo se puede usar para enviar notificaciones de icono o distintivo a un icono secundario anclado en la pantalla Inicio del usuario.
 
-[Canal alternativo](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) : un nuevo tipo de canal agregado en Creators Update. Permite que se envíen notificaciones sin procesar a cualquier aplicación de Windows, incluidas las que no están registradas en el almacén. 
+[Canal alternativo](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) : un nuevo tipo de canal agregado en Creators Update. Permite que se envíen notificaciones sin procesar a cualquier aplicación de Windows, incluidas las que no están registradas en el almacén. 
 
 > [!NOTE]
 > Independientemente del canal de inserciones que use, una vez que la aplicación se ejecute en el dispositivo, siempre podrá enviar notificaciones del sistema local, el icono o el distintivo. Puede enviar notificaciones locales desde los procesos de aplicación en primer plano o desde una tarea en segundo plano. 
@@ -167,11 +167,11 @@ En general, se recomienda usar el canal principal en la aplicación, con algunas
 
 * [Enviar una notificación de icono local](../tiles-and-notifications/sending-a-local-tile-notification.md)
 * [Notificaciones del sistema interactivas y adaptables](../tiles-and-notifications/adaptive-interactive-toasts.md)
-* [Inicio rápido: Envío de una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
-* [Cómo actualizar un distintivo mediante notificaciones de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [Cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [Cómo interceptar notificaciones para aplicaciones en ejecución](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [Directrices y lista de comprobación de notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Inicio rápido: Envío de una notificación de inserción](/previous-versions/windows/apps/hh868252(v=win.10))
+* [Cómo actualizar un distintivo mediante notificaciones de inserción](/previous-versions/windows/apps/hh465450(v=win.10))
+* [Cómo solicitar, crear y guardar un canal de notificación](/previous-versions/windows/apps/hh465412(v=win.10))
+* [Cómo interceptar notificaciones para aplicaciones en ejecución](/previous-versions/windows/apps/hh465450(v=win.10))
+* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](/previous-versions/windows/apps/hh465407(v=win.10))
+* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](/previous-versions/windows/apps/hh465435(v=win.10))
+* [Directrices y lista de comprobación de notificaciones de inserción](./windows-push-notification-services--wns--overview.md)
 * [Notificaciones sin procesar](raw-notification-overview.md)

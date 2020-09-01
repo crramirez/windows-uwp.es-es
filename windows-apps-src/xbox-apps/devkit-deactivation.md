@@ -1,17 +1,17 @@
 ---
 title: Desactivación del modo de desarrollador de Xbox One
-description: Cómo desactivar el modo de desarrollador.
+description: Si decide que ya no desea usar la consola para el desarrollo, siga estos pasos para desactivar el modo de desarrollador.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e7b96e3b8b0cd6f47fdd97008aa8d90dc032fc4
-ms.sourcegitcommit: bee98f7a468c97c707de76afc14e1707c25f74f4
+ms.openlocfilehash: 6e1629435151ca7f66ea5d2e4ef5c90e7336d4f8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531463"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174719"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Desactivación del modo de desarrollador de Xbox One
 
@@ -23,7 +23,7 @@ En primer lugar, vuelve a definir el modo comercial a la consola Xbox One.
 
 1. Abre **Dev Home**.
 
-2. Selecciona **Leave Dev Mode**.  La consola se reiniciará en modo comercial.  
+2. Seleccione **dejar el modo de desarrollo**.  La consola se reiniciará en modo comercial.  
 
    ![Salir del modo de desarrollador](images/devkit-deactivation-1.png)
 
@@ -31,19 +31,19 @@ Ahora puedes desactivar la consola mediante uno de los siguientes métodos.
 
 ## <a name="deactivate-your-console-using-the-dev-mode-activation-app"></a>Desactivar la consola con la aplicación Dev Mode Activation
 
-El método preferido de desactivar el modo de desarrollador en la consola es usar la aplicación **Dev Mode Activation**. 
+El método preferido para desactivar el modo de Desarrollador en la consola es usar la aplicación de **activación en modo de desarrollo** . 
 
-1. Desplázate a **Juegos y aplicaciones** > **Aplicaciones**.
+1. Vaya a **juegos &**  >  **aplicaciones aplicaciones**.
   
    ![Paso de activación 3](images/devkit-deactivation-5.png)    
    
 2.  Abre la aplicación Dev Mode Activation.
 
-3.  Selecciona **Desactivar**.
+3.  Seleccione **desactivar**.
   
     ![Desactivar la consola](images/deactivation-app.png)
 
-Consulta [Activación del modo de desarrollador de Xbox One](devkit-activation.md) para obtener más información sobre la aplicación **Dev Mode Activation**. 
+Consulte [activación del modo de desarrollador de Xbox One](devkit-activation.md) para más información sobre la aplicación de **activación en modo de desarrollo** . 
 
 ## <a name="reset-your-console"></a>Restablecer la consola
 
@@ -58,15 +58,15 @@ Para restablecer la consola, realiza los siguientes pasos:
 
 2.  Selecciona **Aplicaciones** y, a continuación, selecciona **Configuración**.
 
-3.  Ve a **Sistema** en el panel izquierdo y, a continuación, selecciona **Información de la consola** en el panel derecho.   
+3.  Vaya a **sistema** en el panel izquierdo y, a continuación, seleccione información de la **consola** en el panel derecho.   
    
     ![Información y actualizaciones de la consola](images/devkit-deactivation-2.png)  
     
-4.  Selecciona **Restablecer la consola**.
+4.  Seleccione **restablecer consola**.
     
     ![Restablecer la consola](images/devkit-deactivation-3.png)
     
-5.  A continuación, selecciona **Restablecer y quitar todo**. Esta opción restablece la consola a su estado comercial original.  Se eliminarán todas tus aplicaciones, juegos y datos guardados a nivel local. Ten en cuenta que, si eliges la otra opción, **Reset and keep my games & apps**, la consola no se quitará del programa para desarrolladores.  
+5.  A continuación, seleccione **restablecer y quitar todo**. Esta opción restablece la consola a su estado comercial original.  Se eliminarán todas tus aplicaciones, juegos y datos guardados a nivel local. Ten en cuenta que, si eliges la otra opción, **Reset and keep my games & apps**, la consola no se quitará del programa para desarrolladores.  
    
     ![Restablecer y quitar todo](images/devkit-deactivation-4.png)
 
@@ -78,12 +78,12 @@ Si no puede tener acceso a la consola por cualquier motivo, también puede desac
 
 2. Busca la consola que quieras desactivar en la lista de consolas, comparando el número de serie, el identificador de la consola o el identificador de dispositivo.  
 
-3. Haz clic en **Desactivar**.  
+3. Haga clic en **desactivar**.  
   
 ![Desactivar con el Centro de desarrollo](images/devkit-deactivation-6.png)
 
-Si anteriormente no has vuelto a definir el modo comercial a la consola Xbox One, hazlo ahora como se describe en [Cambiar al modo comercial](#switch-to-retail-mode).
+Si anteriormente no devolvió la consola Xbox One al modo de venta directa, hágalo ahora, tal como se describe en [cambiar al modo de venta directa](#switch-to-retail-mode).
 
 ## <a name="see-also"></a>Vea también
-- [Activación del modo de desarrollador de Xbox One](devkit-activation.md)
+- [Activación del modo de desarrollador de Xbox One](devkit-activation.md)
 - [UWP en Xbox One](index.md)

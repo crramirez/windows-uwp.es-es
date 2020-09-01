@@ -1,17 +1,17 @@
 ---
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Device Portal para Xbox
-description: Obtenga información sobre cómo habilitar el portal de dispositivos para Xbox One, que le proporciona acceso remoto a la consola de desarrollo de Xbox.
+description: Obtenga información sobre cómo habilitar el portal de dispositivos de Xbox para Xbox One, que le proporciona acceso remoto a la consola de desarrollo de Xbox.
 ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
-ms.openlocfilehash: 485cd9dc5a7ecb437cacf4a2c9c6eee57c3717f1
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: ed490b0474b919d4439e5b74b676d5974a3c6a30
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043487"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174789"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -43,17 +43,17 @@ En los pasos siguientes se muestra cómo habilitar el portal de dispositivos de 
 
 El portal de dispositivos de Xbox proporciona un conjunto de páginas estándar similar a lo que está disponible en el portal de dispositivos de Windows, así como varias páginas que son únicas. Para obtener descripciones detalladas de la primera, consulte [información general del portal de dispositivos de Windows](../debug-test-perf/device-portal.md). En las secciones siguientes se describen las páginas que son exclusivas del portal de dispositivos de Xbox.
 
-### <a name="home"></a>Página principal
+### <a name="home"></a>Inicio
 
 De forma similar a la página de **aplicaciones** del portal de dispositivos de Windows, la página **principal** del portal de dispositivos de Xbox muestra una lista de aplicaciones y juegos instalados en **mis juegos & aplicaciones**. Puede hacer clic en el nombre de un juego o una aplicación para ver más detalles sobre él, como el **nombre de familia del paquete**. En el menú desplegable **acciones** , puede realizar una acción en el juego o la aplicación, como **iniciarlo** .
 
 En **cuentas de prueba de Xbox Live**, puede administrar las cuentas asociadas a su Xbox. Puede Agregar usuarios y cuentas de invitado, crear nuevos usuarios, iniciar y cerrar la sesión de los usuarios y quitar cuentas.
 
-![Página principal](images/device-portal-xbox-16.png)
+![Inicio](images/device-portal-xbox-16.png)
 
 ### <a name="xbox-live-game-saves"></a>Xbox Live (juego guardado)
 
-Tanto el portal de dispositivos de Windows como el portal de dispositivos de Xbox tienen una página de **Xbox Live** . Sin embargo, el portal de dispositivos de Xbox tiene una sección única, **Xbox Live Game**Save, donde puede guardar los datos de los juegos instalados en la consola Xbox. Escriba el **ID. de configuración de servicio (SCID)** (consulte [configuración del servicio Xbox Live](https://docs.microsoft.com/gaming/xbox-live/xbox-live-service-configuration.md#get-your-ids) para obtener más información), **memberName (MSA)** y **nombre de familia de paquete (PFN)** asociados al guardado del título y el juego, busque el archivo de **entrada (. JSON o. xml)** y seleccione uno de los botones (**restablecer**, **importar**, **exportar**y **eliminar**) para manipular los datos guardados
+Tanto el portal de dispositivos de Windows como el portal de dispositivos de Xbox tienen una página de **Xbox Live** . Sin embargo, el portal de dispositivos de Xbox tiene una sección única, **Xbox Live Game**Save, donde puede guardar los datos de los juegos instalados en la consola Xbox. Escriba el **ID. de configuración de servicio (SCID)** (consulte [configuración del servicio Xbox Live](/gaming/xbox-live/xbox-live-service-configuration.md#get-your-ids) para obtener más información), **memberName (MSA)** y **nombre de familia de paquete (PFN)** asociados al guardado del título y el juego, busque el archivo de **entrada (. JSON o. xml)** y seleccione uno de los botones (**restablecer**, **importar**, **exportar**y **eliminar**) para manipular los datos guardados
 
 En la sección **generar** , puede generar datos ficticios y guardarlos en el archivo de entrada especificado. Simplemente escriba los **contenedores (el valor predeterminado es 2)**, los **BLOBs (valor predeterminado 3)** y **el tamaño del BLOB (el valor predeterminado es 1024)** y seleccione **generar**.
 
@@ -187,7 +187,7 @@ Un sensor de Kinect debe estar conectado a la consola para poder cambiar esta co
 
 Aquí puede cambiar el espacio aislado de Xbox Live en el que se encuentra el dispositivo. Escriba el nombre del espacio aislado en el cuadro y seleccione **cambiar**.
 
-### <a name="scratch"></a>Cero
+### <a name="scratch"></a>Borrador
 
 Se trata de un área de trabajo en blanco que puede personalizar para su gusto. Puede usar el menú (haga clic en el botón de menú de la parte superior izquierda) para agregar herramientas (seleccione **Agregar herramientas al área de trabajo**, luego las herramientas que desea agregar y, a continuación, **Agregar**). Tenga en cuenta que puede usar este menú para agregar herramientas a cualquier área de trabajo, así como administrar las propias áreas de trabajo.
 
@@ -199,7 +199,7 @@ En la página **datos de eventos del juego** , puede ver un gráfico en tiempo r
 
 ![Datos de eventos de juego](images/device-portal-xbox-22.PNG)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Introducción al Portal de dispositivos Windows](../debug-test-perf/device-portal.md)
-* [Referencia de API principal de Device Portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Referencia de API principal de Device Portal](../debug-test-perf/device-portal-api-core.md)

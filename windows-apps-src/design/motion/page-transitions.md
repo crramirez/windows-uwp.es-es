@@ -8,18 +8,18 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c77f99e170bdfe6689a9bfd4e8d8075ec2154d28
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: b1fc38f5224ae9627f4c793a800ab747cfa1c2b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094682"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173859"
 ---
 # <a name="page-transitions"></a>Transiciones de página
 
 Las transiciones de página navegan por los usuarios entre las páginas de una aplicación y proporcionan comentarios como la relación entre las páginas. Las transiciones de página ayudan a los usuarios a entender si están en la parte superior de una jerarquía de navegación, se mueven entre páginas relacionadas o navegan más en la jerarquía de la página.
 
-Se proporcionan dos animaciones diferentes para la navegación entre las páginas de una aplicación, la *actualización de páginas* y la *obtención de detalles*, y se representan mediante subclases de [**NavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo).
+Se proporcionan dos animaciones diferentes para la navegación entre las páginas de una aplicación, la *actualización de páginas* y la *obtención de detalles*, y se representan mediante subclases de [**NavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -45,7 +45,7 @@ Lo que se desea es que el usuario haya empezado a trabajar.
 
 ![animación de actualización de página](images/page-refresh.gif)
 
-La animación de actualización de página se representa mediante [**EntranceNavigationTransitionInfoClass**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo).
+La animación de actualización de página se representa mediante [**EntranceNavigationTransitionInfoClass**](/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo).
 
 ```csharp
 // Explicitly play the page refresh animation
@@ -53,7 +53,7 @@ myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
 
 ```
 
-**Nota**: un [**marco**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) usa automáticamente [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) para animar la navegación entre dos páginas. De forma predeterminada, la animación es la actualización de la página.
+**Nota**: un [**marco**](/uwp/api/windows.ui.xaml.controls.frame) usa automáticamente [**NavigationThemeTransition**](/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) para animar la navegación entre dos páginas. De forma predeterminada, la animación es la actualización de la página.
 
 ## <a name="drill"></a>Detalles
 
@@ -63,7 +63,7 @@ Lo que se desea es que el usuario haya profundizado en la aplicación.
 
 ![animación de obtención de detalles](images/drill.gif)
 
-La animación de obtención de detalles se representa mediante la clase [**DrillInNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) .
+La animación de obtención de detalles se representa mediante la clase [**DrillInNavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) .
 
 ```csharp
 // Play the drill in animation
@@ -86,7 +86,7 @@ myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { E
 
 ## <a name="suppress"></a>Suprimir
 
-Para evitar la reproducción de cualquier animación durante la navegación, use [**SuppressNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) en lugar de otros subtipos de **NavigationTransitionInfo** .
+Para evitar la reproducción de cualquier animación durante la navegación, use [**SuppressNavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) en lugar de otros subtipos de **NavigationTransitionInfo** .
 
 ```csharp
 // Suppress the default animation

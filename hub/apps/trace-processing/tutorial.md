@@ -5,12 +5,12 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 170a8c3084e180714a319d67dca2b6a5756ea474
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: ef4d3df6e5a5dd93dbcb2caadc8e3f299aad581c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629116"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173699"
 ---
 # <a name="access-trace-data"></a>Acceder a los datos de seguimiento
 
@@ -18,7 +18,7 @@ ms.locfileid: "77629116"
 
 Microsoft. Windows. EventTracing. Processing. All
 
-Este paquete le permite tener acceso a los datos de un archivo de seguimiento. Si aún no tiene un archivo de seguimiento, puede usar la [grabadora de rendimiento de Windows](https://docs.microsoft.com/windows-hardware/test/wpt/start-a-recording) para crear uno.
+Este paquete le permite tener acceso a los datos de un archivo de seguimiento. Si aún no tiene un archivo de seguimiento, puede usar la [grabadora de rendimiento de Windows](/windows-hardware/test/wpt/start-a-recording) para crear uno.
 
 En la siguiente aplicación de consola de ejemplo se muestra cómo obtener acceso a las líneas de comandos de todos los procesos contenidos en el seguimiento:
 
@@ -56,13 +56,13 @@ class Program
 
 ## <a name="using-traceprocessor"></a>Usar TraceProcessor
 
-Para procesar un seguimiento, llame a [TraceProcessor. Create](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.traceprocessor.create). La interfaz principal es [ITraceProcessor](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.itraceprocessor)y el uso de esta interfaz implica el siguiente patrón:
+Para procesar un seguimiento, llame a [TraceProcessor. Create](/dotnet/api/microsoft.windows.eventtracing.traceprocessor.create). La interfaz principal es [ITraceProcessor](/dotnet/api/microsoft.windows.eventtracing.itraceprocessor)y el uso de esta interfaz implica el siguiente patrón:
 
 1. En primer lugar, indique al procesador qué datos desea usar de un seguimiento.
 2. En segundo lugar, procese el seguimiento; etc
 3. Por último, acceda a los resultados.
 
-Indicando al procesador qué tipos de datos desea adelantar significa que no necesita dedicar tiempo a procesar grandes volúmenes de todos los tipos de datos de seguimiento posibles. En su lugar, [TraceProcessor](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.traceprocessor) simplemente realiza el trabajo necesario para proporcionar los tipos de datos específicos que solicite.
+Indicando al procesador qué tipos de datos desea adelantar significa que no necesita dedicar tiempo a procesar grandes volúmenes de todos los tipos de datos de seguimiento posibles. En su lugar, [TraceProcessor](/dotnet/api/microsoft.windows.eventtracing.traceprocessor) simplemente realiza el trabajo necesario para proporcionar los tipos de datos específicos que solicite.
 
 ## <a name="recommended-project-settings"></a>Configuración de proyecto recomendada
 
@@ -70,11 +70,11 @@ Hay un par de opciones de configuración del proyecto que se recomienda usar con
 
 1. Se recomienda ejecutar exe como 64 bits.
 
-    El valor predeterminado de Visual Studio para C# una nueva aplicación de consola de .NET Framework es cualquier CPU con preferencia de 32 bits activada. Es posible que el valor predeterminado de .NET Core ya tenga la configuración recomendada.
+    El valor predeterminado de Visual Studio para una nueva aplicación de consola de C# .NET Framework es cualquier CPU con preferencia de 32 bits activada. Es posible que el valor predeterminado de .NET Core ya tenga la configuración recomendada.
 
     El procesamiento de seguimiento puede consumir mucha memoria, especialmente con seguimientos más grandes, y se recomienda cambiar el destino de la plataforma a x64 (o deshabilitar la comprobación preferida de 32 bits) en exe que usan TraceProcessor. Para cambiar esta configuración, vea la pestaña compilar en propiedades del proyecto. Para cambiar esta configuración para todas las configuraciones, asegúrese de que la lista desplegable configuración está establecida en todas las configuraciones, en lugar del valor predeterminado de la configuración actual.
 
-2. Se recomienda usar NuGet con el modo de PackageReference de estilo más nuevo en lugar del modo packages. config anterior.
+2. Se recomienda usar NuGet con el modo de PackageReference de estilo más nuevo en lugar del modo de packages.config anterior.
 
     Para cambiar el valor predeterminado para los proyectos nuevos, vea herramientas, administrador de paquetes NuGet, configuración del administrador de paquetes, Administración de paquetes, formato de administración de paquetes predeterminado.
 
@@ -130,7 +130,7 @@ Un archivo. ETL puede capturar muchos tipos de datos en un seguimiento. Tenga en
 | seguimiento. UseStackTags()                      | Proporciona un asignador que agrupa pilas de un seguimiento en etiquetas de la pila, tal y como se especifica en un archivo de configuración XML.               | Columnas como etiqueta de pila y pila (etiquetas de marco)                     |
 | seguimiento. UseSymbols()                        | Proporciona la capacidad de cargar símbolos para un seguimiento.                                                                          | Configurar rutas de acceso de símbolos; Cargar símbolos                                 |
 | seguimiento. UseSyscalls()                       | Proporciona datos sobre llamadas syscall que se produjeron durante un seguimiento.                                                                 | Tabla llamadas syscall                                                       |
-| seguimiento. UseSystemMetadata()                 | Proporciona metadatos generales en todo el sistema a partir de un seguimiento.                                                                       | Pruebas de configuración                                                 |
+| seguimiento. UseSystemMetadata()                 | Proporciona metadatos generales en todo el sistema a partir de un seguimiento.                                                                       | Configuración del sistema                                                 |
 | seguimiento. UseSystemPowerSourceData()          | Proporciona datos de un seguimiento sobre la fuente de alimentación del sistema activa (AC frente a DC).                                                | Tabla de origen de alimentación del sistema                                            |
 | seguimiento. UseSystemSleepData()                | Proporciona datos de un seguimiento sobre el estado de energía general del sistema.                                                               | Tabla de transición de energía                                               |
 | seguimiento. UseTargetCpuIdleStates()            | Proporciona datos de un seguimiento sobre la CPU de destino C-States.                                                                      | Tabla de Estados de inactividad de CPU (cuando el tipo es destino)                          |
@@ -143,7 +143,7 @@ Un archivo. ETL puede capturar muchos tipos de datos en un seguimiento. Tenga en
 | seguimiento. UseWinINetData()                    | Proporciona datos de un seguimiento de la actividad de Internet a través de Windows Internet (WinINet).                                         | Descargar tabla de detalles                                               |
 | seguimiento. UseWorkingSetData()                 | Proporciona datos de un seguimiento sobre las páginas de memoria virtual que estaban en el espacio de trabajo para cada proceso o categoría de kernel. | Tabla de instantáneas de memoria virtual                                       |
 
-Vea también los métodos de extensión de [ITraceSource](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.itracesource) para todos los datos de seguimiento disponibles o examine el método disponible en "trace". se muestra con IntelliSense.
+Vea también los métodos de extensión de [ITraceSource](/dotnet/api/microsoft.windows.eventtracing.itracesource) para todos los datos de seguimiento disponibles o examine el método disponible en "trace". se muestra con IntelliSense.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

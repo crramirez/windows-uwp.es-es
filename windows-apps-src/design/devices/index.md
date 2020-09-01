@@ -8,12 +8,12 @@ keywords: dispositivo, entrada, interacción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 37b77e62f14418611047a3af49bd15ed4f8094b4
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 8a4d34db2b6782f3b660bb88e3b3a07f6e2d01b5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234876"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157049"
 ---
 #  <a name="ui-considerations-for-windows-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos Windows
 
@@ -131,7 +131,7 @@ Funcionalidades típicas del dispositivo
 
 Los más usados de todos los dispositivos informáticos, los teléfonos pueden hacer muchas cosas con la superficie de pantalla limitada y las entradas básicas. Los teléfonos están disponibles en una amplia variedad de tamaños; los teléfonos más grandes se denominan tabléfonos. Las experiencias de la aplicación en tabléfonos son similares a las de los teléfonos, pero debido a que la superficie de pantalla de los tabléfonos es mayor, se pueden producir algunos cambios clave en el consumo de contenido.
 
-Con Continuum para teléfonos, una nueva experiencia para dispositivos móviles Windows 10 compatibles, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN)).
+Con Continuum para teléfonos, una nueva experiencia para dispositivos móviles Windows 10 compatibles, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](/windows-hardware/design/device-experiences/continuum-phone)).
 
 Tamaños de pantalla
 -   Entre 4 y 5 pulgadas para teléfono

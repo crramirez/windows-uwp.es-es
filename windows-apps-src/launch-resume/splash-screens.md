@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09eadb8467725cbf40f3fb54d32741960fc89321
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 490f5f70efcd21fe2be5c909bcc409daf1feeeea
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371859"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175129"
 ---
 # <a name="splash-screens"></a>Pantallas de presentación
 
@@ -27,7 +27,7 @@ Esta pantalla de presentación se crea mediante la combinación de un color de f
 
 Una imagen sencilla con un color de fondo tiene un gran aspecto, independientemente del dispositivo en el que se ejecute la aplicación. Solo el tamaño del fondo cambia para compensar distintos tamaños de pantalla. Tu imagen siempre permanece intacta.
 
-Además, puedes usar la clase [**SplashScreen**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) para personalizar la experiencia de inicio de la aplicación. Puedes colocar una pantalla de presentación extendida, creada por ti, para permitir que la aplicación tenga más tiempo para completar tareas adicionales, como preparar la interfaz de usuario de la aplicación o finalizar las operaciones de red. También puedes usar la clase **SplashScreen** para que te notifique cuando se descarte la pantalla de presentación de modo que puedas iniciar las animaciones de entrada.
+Además, puedes usar la clase [**SplashScreen**](/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) para personalizar la experiencia de inicio de la aplicación. Puedes colocar una pantalla de presentación extendida, creada por ti, para permitir que la aplicación tenga más tiempo para completar tareas adicionales, como preparar la interfaz de usuario de la aplicación o finalizar las operaciones de red. También puedes usar la clase **SplashScreen** para que te notifique cuando se descarte la pantalla de presentación de modo que puedas iniciar las animaciones de entrada.
 
 | Tema | Descripción |
 |-------|-------------|

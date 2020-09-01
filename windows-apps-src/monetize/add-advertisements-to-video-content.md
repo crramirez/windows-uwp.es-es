@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, vídeo, Scheduler, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: b42c917a0532a015a789c8b4ac57d59c65804ce1
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 6baf26b083cce08557a9b09f2ba95d5ad889f4a4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970203"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175109"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anuncios en contenido de vídeo
 
@@ -73,7 +73,7 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
     > [!NOTE]
     > Esta línea se debe colocar en la `<head>` sección después de la inclusión de main.js; de lo contrario, se producirá un error al compilar el proyecto.
 
-6.  En el archivo main.js del proyecto, agrega código que cree un nuevo objeto **AdScheduler**. Pasa el objeto **MediaPlayer** que hospeda el contenido de vídeo. El código debe colocarse de forma que se ejecute después de [WinJS.UI.processAll](https://docs.microsoft.com/previous-versions/windows/apps/hh440975).
+6.  En el archivo main.js del proyecto, agrega código que cree un nuevo objeto **AdScheduler**. Pasa el objeto **MediaPlayer** que hospeda el contenido de vídeo. El código debe colocarse de forma que se ejecute después de [WinJS.UI.processAll](/previous-versions/windows/apps/hh440975).
 
     [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
 
@@ -81,7 +81,7 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
     * Si eres un asociado de Microsoft que ha recibido permiso para solicitar una programación de anuncios del servidor de anuncios de Microsoft, usa **requestSchedule** y especifica el identificador de aplicación y el identificador de unidad de anuncios que te haya proporcionado tu representante de Microsoft.
 
-        Este método toma la forma de una [promesa](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript), que es una construcción asincrónica donde se pasan dos punteros de función: un puntero a la función **alcompletar** para llamar a cuando la promesa se completa correctamente y un puntero para que la función **OnError** llame a si se produce un error. En la función **Alfinalizar** , inicie la reproducción del contenido de vídeo. El anuncio comenzará a reproducirse a la hora programada. En la función **OnError** , controle el error y, a continuación, inicie la reproducción del vídeo. El contenido de vídeo se reproducirá sin un anuncio. El argumento de la función **OnError** es un objeto que contiene los miembros siguientes.
+        Este método toma la forma de una [promesa](../threading-async/asynchronous-programming-universal-windows-platform-apps.md#asynchronous-patterns-in-uwp-using-javascript), que es una construcción asincrónica donde se pasan dos punteros de función: un puntero a la función **alcompletar** para llamar a cuando la promesa se completa correctamente y un puntero para que la función **OnError** llame a si se produce un error. En la función **Alfinalizar** , inicie la reproducción del contenido de vídeo. El anuncio comenzará a reproducirse a la hora programada. En la función **OnError** , controle el error y, a continuación, inicie la reproducción del vídeo. El contenido de vídeo se reproducirá sin un anuncio. El argumento de la función **OnError** es un objeto que contiene los miembros siguientes.
 
         [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet3)]
 
@@ -165,7 +165,7 @@ Este evento se desencadena cuando el contenido principal alcanza el final y tamb
 
 ### <a name="onerroroccurred"></a>onErrorOccurred  
 
-Este evento se desencadena cuando **AdScheduler** detecta un error. Para obtener más información sobre los valores del código de error, vea [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.errorcode).
+Este evento se desencadena cuando **AdScheduler** detecta un error. Para obtener más información sobre los valores del código de error, vea [ErrorCode](/uwp/api/microsoft.advertising.errorcode).
 
 ### <a name="onpodcountdown"></a>onPodCountdown
 

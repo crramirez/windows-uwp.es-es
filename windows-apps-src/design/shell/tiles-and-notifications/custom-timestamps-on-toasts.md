@@ -1,31 +1,31 @@
 ---
-Description: Obtenga información sobre cómo usar las marcas de tiempo personalizado en sus notificaciones del sistema.
 title: Marcas de tiempo personalizadas en notificaciones del sistema
+description: Obtenga información sobre cómo invalidar la marca de tiempo predeterminada en una notificación del sistema con una marca de tiempo personalizada que indique cuándo se generó el mensaje, la información y el contenido.
 label: Custom timestamps on toasts
 template: detail.hbs
 ms.date: 12/15/2017
 ms.topic: article
-keywords: windows 10, uwp, notificación del sistema, marca de tiempo personalizada, marca de tiempo, notificación, Centro de actividades
+keywords: Windows 10, UWP, notificación del sistema, marca de tiempo personalizada, marca de tiempo, notificación, centro de actividades
 ms.localizationpriority: medium
-ms.openlocfilehash: c18c32e1dcee5486ff6545a1db0ec8f0cd67bfae
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 11d9064d39d4e8ecd74229afc4eee325297f246b
+ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625820"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238310"
 ---
 # <a name="custom-timestamps-on-toasts"></a>Marcas de tiempo personalizadas en notificaciones del sistema
 
-De manera predeterminada, la marca de tiempo de las notificaciones del sistema (visibles en el Centro de actividades)se establece en el momento en que se envió la notificación.
+De forma predeterminada, la marca de tiempo en las notificaciones del sistema (visibles dentro del centro de actividades) se establece en el momento en que se envió la notificación.
 
 <img alt="Toast with custom timestamp" src="images/toast-customtimestamp.jpg" width="396"/>
 
-Opcionalmente, puedes invalidar la marca de tiempo con tu propia fecha y hora personalizadas, de manera que la marca de tiempo represente la hora en que realmente se creó el mensaje, la información o el contenido, en lugar de la hora en que se envió la notificación. Esto también garantiza que las notificaciones aparecen en el orden correcto en el Centro de actividades (que se ordenan por hora). Se recomienda que la mayoría de las aplicaciones especifiquen una marca de tiempo personalizada.
+Opcionalmente, puede invalidar la marca de tiempo con su propia fecha y hora personalizadas, de modo que la marca de tiempo represente la hora en que se creó realmente el mensaje/información/contenido, en lugar de la hora a la que se envió la notificación. Esto también garantiza que las notificaciones aparezcan en el orden correcto dentro del centro de actividades (que están ordenadas por tiempo). Se recomienda que la mayoría de las aplicaciones especifiquen una marca de tiempo personalizada.
 
 > [!IMPORTANT]
-> **Requiere Creators Update y 1.4.0 de biblioteca de notificaciones**: Debe ejecutar compilación 15063 o superior para ver las marcas de tiempo personalizado. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para asignar la marca de hora en el contenido de tu notificación del sistema.
+> **Requiere Creators Update y 1.4.0 de la biblioteca de notificaciones**: debe ejecutar la compilación 15063 o superior para ver las marcas de tiempo personalizadas. Debe usar la versión 1.4.0 o superior de la [biblioteca NuGet de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) de la comunidad de UWP para asignar la marca de tiempo en el contenido de la notificación del sistema.
 
-Para usar una marca de tiempo personalizada, solo tienes que asignar la propiedad **DisplayTimestamp** en tu **ToastContent**.
+Para usar una marca de tiempo personalizada, basta con asignar la propiedad **DisplayTimestamp** en **ToastContent**.
 
 ```csharp
 ToastContent toastContent = new ToastContent()
@@ -41,31 +41,31 @@ ToastContent toastContent = new ToastContent()
 </toast>
 ```
 
-Si usas XML, la fecha debe tener el formato en [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
+Si usa XML, la fecha debe tener el formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
 
 > [!NOTE]
-> Solo puedes usar 3 lugares decimales cómo máximo en los segundos (aunque en verdad, no hay ningún valor que proporcione nada tan detallado). Si proporcionas más, la carga no será válida y recibirás la notificación "Nueva notificación".
+> Solo puede usar como máximo 3 posiciones decimales en los segundos (aunque de forma realista no hay ningún valor para proporcionar todo lo que sea granular). Si proporciona más, la carga no será válida y recibirá la notificación "nueva notificación".
 
 
 ## <a name="usage-guidance"></a>Guía de uso
 
-En general, se recomienda que la mayoría de las aplicaciones especifiquen una marca de tiempo personalizada. Esto garantiza que la marca de tiempo de la notificación representa de forma precisa cuándo se generó el mensaje, la información o el contenido, con independencia de retrasos en la red, modo avión o el intervalo fijo de tareas periódicas en segundo plano.
+En general, se recomienda que la mayoría de las aplicaciones especifiquen una marca de tiempo personalizada. Esto garantiza que la marca de tiempo de la notificación representa con precisión cuándo se generó el mensaje/información/contenido, independientemente de los retrasos de la red, el modo de avión o el intervalo fijo de tareas en segundo plano periódicas.
 
-Por ejemplo, una aplicación nueva puede ejecutar una tarea en segundo plano cada 15 minutos que compruebe artículos nuevos y muestre notificaciones. Antes de las marcas de tiempo personalizadas, la marca de tiempo correspondía a cuando se generó la notificación del sistema (por lo tanto, siempre en intervalos de 15 minutos). Sin embargo, ahora la aplicación puede establecer la marca de tiempo en la hora en que el artículo se publicó realmente. De manera similar, las aplicaciones de correo electrónico y las de redes sociales pueden beneficiarse de esta característica si se usa un patrón similar de extracción periódica para sus notificaciones.
+Por ejemplo, una aplicación de noticias puede ejecutar una tarea en segundo plano cada 15 minutos, que busca nuevos artículos y muestra notificaciones. Antes de las marcas de tiempo personalizadas, la marca de tiempo se correspondía a cuando se generó la notificación del sistema (por lo tanto, siempre en intervalos de 15 minutos). Sin embargo, ahora la aplicación puede establecer la marca de tiempo en el momento en que se publicó el artículo. Del mismo modo, las aplicaciones de correo electrónico y las aplicaciones de red social pueden beneficiarse de esta característica si se usa un patrón similar de extracción periódica para sus notificaciones.
 
-Además, al proporcionar una marca de tiempo personalizada se garantiza que la marca de tiempo es correcta, incluso si el usuario se desconectó de Internet. Por ejemplo, cuando el usuario enciende su equipo y se ejecuta tu tarea en segundo plano, por fin puedes garantizar que la marca de tiempo de las notificaciones representa la hora en que se enviaron los mensajes, en lugar de la hora en que el usuario encendió su equipo.
+Además, si se proporciona una marca de tiempo personalizada, se asegura de que la marca de tiempo es correcta aunque el usuario se haya desconectado de Internet. Por ejemplo, cuando el usuario activa el equipo y se ejecuta la tarea en segundo plano, puede asegurarse de que la marca de tiempo de las notificaciones representa la hora a la que se enviaron los mensajes, en lugar de la hora en que el usuario encendió el equipo.
 
 
 ## <a name="default-timestamp"></a>Marca de tiempo predeterminada
 
-Si no proporcionas una marca de tiempo personalizada, usamos la hora en que se envió la notificación.
+Si no proporciona una marca de tiempo personalizada, usamos la hora a la que se envió la notificación.
 
-Si envías una notificación de inserción a través de WNS, usamos la hora en que el servidor WNS recibió la notificación (de modo que ninguna latencia en la entrega de la notificación en el dispositivo afectará a la marca de tiempo).
+Si ha enviado una notificación de envío a través de WNS, usamos el tiempo en el que el servidor WNS recibió la notificación (por lo que cualquier latencia en la entrega de la notificación al dispositivo no afectará a la marca de tiempo).
 
-Si has enviado una notificación local, usamos la hora en que la plataforma de notificaciones recibió la notificación (que debería ser inmediatamente).
+Si ha enviado una notificación local, usamos el momento en que la plataforma de notificación ha recibido la notificación (que debe ser inmediatamente).
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
 - [Enviar una notificación del sistema local](send-local-toast.md)
-- [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)
+- [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

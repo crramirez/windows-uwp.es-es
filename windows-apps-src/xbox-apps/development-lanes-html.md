@@ -1,17 +1,17 @@
 ---
 title: Desarrollo de juegos HTML en Xbox
-description: Desarrollo de juegos para UWP con HTML en Xbox.
+description: Obtenga información sobre el desarrollo de juegos de HTML 5 para el Plataforma universal de Windows (UWP) en Xbox One, incluido cómo crear aplicaciones web empaquetadas y hospedadas.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: afebfd089b80b7402929bd85ea482b86aca0e694
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7533332392a9f2a5a04fa23903d311eeab80a98f
+ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320215"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238250"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Llevar los juegos HTML a UWP en Xbox
 Xbox One es una excelente plataforma para juegos HTML 5. Los juegos HTML 5 se ejecutan en el motor del explorador [Edge](https://developer.microsoft.com/microsoft-edge). Edge es rápido y totalmente compatible con las características de HTML 5 y CSS 3, como WebGL y Canvas.
@@ -23,7 +23,7 @@ Los juegos HTML se encuentran en igualdad de condiciones respecto de cualquier o
 Xbox One se ejecuta en la Plataforma universal de Windows, lo que significa que, al igual que otros dispositivos de Microsoft, admite aplicaciones web hospedadas, que son aplicaciones que provienen completamente de un servidor. Para obtener más información, consulta [Aplicaciones web hospedadas](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm).
 
 
-Este vídeo profundiza más sobre las aplicaciones web empaquetadas y las aplicaciones web hospedadas en Xbox, incluyendo cómo crearlas.
+Este vídeo incluye más detalles sobre las aplicaciones web empaquetadas y Web Apps hospedadas en Xbox, incluida la forma de crearlas.
 </br>
 </br>
 <iframe src="https://channel9.msdn.com/Events/Xbox/App-Dev-on-Xbox/Web-Apps-on-Xbox/player#time=04m21s:paused" width="600" height="338" height="658.1199951171875" allowFullScreen frameBorder="0"></iframe>

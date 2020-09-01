@@ -8,12 +8,12 @@ keywords: lápiz, mouse, panel táctil, función táctil, puntero, entrada, inte
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 609f6f1ad33c3736d9ac99ec40cbbfe7ade9500a
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: f544b73e069827f3c680db45797081605ce41b63
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234827"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173459"
 ---
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 
@@ -24,9 +24,9 @@ Recibir, procesar y administrar los datos de entrada de los dispositivos señala
 > Si personaliza las experiencias de interacción en la aplicación Windows, los usuarios esperan que sean coherentes, intuitivas y reconocibles. Por estos motivos, se recomienda modelar las interacciones personalizadas en las que admiten los [controles de plataforma](../controls-and-patterns/controls-by-function.md). Los controles de plataforma proporcionan la experiencia de interacción del usuario completa de la aplicación Windows, incluidas las interacciones estándar, los efectos físicos animados, los comentarios visuales y la accesibilidad. 
 
 ## <a name="important-apis"></a>API importantes
-- [Windows.Devices.Input](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
-- [Windows.UI.Input](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
-- [Windows.UI.Xaml.Input](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
+- [Windows.Devices.Input](/uwp/api/Windows.Devices.Input)
+- [Windows.UI.Input](/uwp/api/Windows.UI.Core)
+- [Windows.UI.Xaml.Input](/uwp/api/Windows.UI.Input)
 
 ## <a name="pointers"></a>Punteros
 Normalmente, la mayoría de las experiencias de interacción implican al usuario que identifica el objeto con el que desea interactuar; para ello, apunta a ella a través de dispositivos de entrada como, por ejemplo, táctil, Mouse, lápiz/lápiz y Touchpad. Dado que los datos de HID sin procesar (HID) proporcionados por estos dispositivos de entrada incluyen muchas propiedades comunes, los datos se promueven y consolidan en una pila de entrada unificada y se exponen como datos de puntero independientes del dispositivo. Las aplicaciones de Windows pueden consumir estos datos sin preocuparse por el dispositivo de entrada que se está usando.
@@ -34,7 +34,7 @@ Normalmente, la mayoría de las experiencias de interacción implican al usuario
 > [!NOTE]
 > La información específica del dispositivo también se promueve de los datos de HID sin procesar, en caso de que la aplicación lo requiera.
 
-Cada punto de entrada (o contacto) de la pila de entrada se representa mediante un objeto de [**puntero**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.Pointer) expuesto a través del parámetro [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) en los diversos controladores de eventos de puntero. En el caso de una entrada de varios lápices o varias entradas táctiles, cada contacto se trata como un puntero de entrada único.
+Cada punto de entrada (o contacto) de la pila de entrada se representa mediante un objeto de [**puntero**](/uwp/api/Windows.UI.Xaml.Input.Pointer) expuesto a través del parámetro [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) en los diversos controladores de eventos de puntero. En el caso de una entrada de varios lápices o varias entradas táctiles, cada contacto se trata como un puntero de entrada único.
 
 ## <a name="pointer-events"></a>Eventos de puntero
 
@@ -43,7 +43,7 @@ Los eventos de puntero exponen información básica como el tipo de dispositivo 
 Las aplicaciones de Windows pueden escuchar los siguientes eventos de puntero:
 
 > [!NOTE]
-> Restrinja la entrada de puntero a un elemento específico de la interfaz de usuario mediante una llamada a [**CapturePointer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer) en ese elemento dentro de un controlador de eventos de puntero. Cuando un elemento captura un puntero, solo dicho objeto recibe eventos de entrada de puntero, incluso cuando el puntero se mueve fuera del área de límite del objeto. El [**IsInContact**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isincontact) (botón del mouse presionado, táctil o lápiz en contacto) debe ser true para que **CapturePointer** se realice correctamente.
+> Restrinja la entrada de puntero a un elemento específico de la interfaz de usuario mediante una llamada a  [**CapturePointer**](/uwp/api/windows.ui.xaml.uielement.capturepointer) en ese elemento dentro de un controlador de eventos de puntero. Cuando un elemento captura un puntero, solo dicho objeto recibe eventos de entrada de puntero, incluso cuando el puntero se mueve fuera del área de límite del objeto. El [**IsInContact**](/uwp/api/windows.ui.xaml.input.pointer.isincontact) (botón del mouse presionado, táctil o lápiz en contacto) debe ser true para que **CapturePointer** se realice correctamente.
 
 <table>
 <colgroup>
@@ -108,7 +108,7 @@ Las aplicaciones de Windows pueden escuchar los siguientes eventos de puntero:
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed"><strong>PointerPressed</strong></a></p></td>
 <td align="left"><p>Se produce cuando el puntero indica una acción de presión (como un toque, presionar el botón del mouse, presionar con el lápiz o presionar el botón de panel táctil) dentro del área límite de un elemento.</p>
-<p>Se debe llamar a <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer">CapturePointer</a> desde el controlador para este evento.</p></td>
+<p>Se debe llamar a <a href="/uwp/api/windows.ui.xaml.uielement.capturepointer">CapturePointer</a> desde el controlador para este evento.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased"><strong>PointerReleased</strong></a></p></td>
@@ -117,7 +117,7 @@ Las aplicaciones de Windows pueden escuchar los siguientes eventos de puntero:
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
 <td align="left"><p>Se produce cuando se gira la rueda del mouse.</p>
-<p>La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierda, rueda o derecha), se crea una asociación secundaria entre el puntero y ese botón a través del evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a> .</p></td>
+<p>La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierda, rueda o derecha), se crea una asociación secundaria entre el puntero y ese botón a través del evento <a href="/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a> .</p></td>
 </tr>
 </tbody>
 </table> 
@@ -132,9 +132,9 @@ Estos son algunos fragmentos de código de una aplicación de seguimiento de pun
 
 ### <a name="create-the-ui"></a>Creación de la interfaz de usuario
 
-En este ejemplo, usamos un [rectángulo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) ( `Target` ) como el objeto que consume la entrada del puntero. El color del destino cambia cuando cambia el estado del puntero.
+En este ejemplo, usamos un [rectángulo](/uwp/api/windows.ui.xaml.shapes.rectangle) ( `Target` ) como el objeto que consume la entrada del puntero. El color del destino cambia cuando cambia el estado del puntero.
 
-Los detalles de cada puntero se muestran en un [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) flotante que sigue el puntero a medida que se mueve. Los propios eventos de puntero se muestran en el [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) a la derecha del rectángulo.
+Los detalles de cada puntero se muestran en un [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) flotante que sigue el puntero a medida que se mueve. Los propios eventos de puntero se muestran en el [RichTextBlock](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) a la derecha del rectángulo.
 
 Este es el lenguaje XAML (XAML) de la interfaz de usuario en este ejemplo. 
 
@@ -191,9 +191,9 @@ Este es el lenguaje XAML (XAML) de la interfaz de usuario en este ejemplo.
 
 ### <a name="listen-for-pointer-events"></a>Escuchar eventos de puntero
 
-En la mayoría de los casos, es recomendable que obtengas la información del puntero mediante el elemento [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) del controlador de eventos.
+En la mayoría de los casos, es recomendable que obtengas la información del puntero mediante el elemento [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) del controlador de eventos.
 
-Si el argumento del evento no expone los detalles de puntero necesarios, puedes acceder a la información extendida de [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) que se expone a través de los métodos [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
+Si el argumento del evento no expone los detalles de puntero necesarios, puedes acceder a la información extendida de [**PointerPoint**](/uwp/api/Windows.UI.Input.PointerPoint) que se expone a través de los métodos [**GetCurrentPoint**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
 
 El código siguiente configura el objeto de diccionario global para realizar el seguimiento de cada puntero activo e identifica los distintos agentes de escucha de eventos de puntero para el objeto de destino.
 
@@ -237,10 +237,10 @@ public MainPage()
 
 Después, se usan comentarios de interfaz de usuario para mostrar controladores de eventos de puntero básicos.
 
--   Este controlador administra el evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) . Se agrega el evento al registro de eventos, se agrega el puntero al Diccionario de punteros activo y se muestran los detalles del puntero.
+-   Este controlador administra el evento [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) . Se agrega el evento al registro de eventos, se agrega el puntero al Diccionario de punteros activo y se muestran los detalles del puntero.
 
     > [!NOTE]
-    > Los eventos [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) no siempre se producen en pares. La aplicación debe escuchar y controlar cualquier evento que pueda concluir un puntero hacia abajo (como [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)y [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
+    > Los eventos [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) no siempre se producen en pares. La aplicación debe escuchar y controlar cualquier evento que pueda concluir un puntero hacia abajo (como [**PointerExited**](/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](/uwp/api/windows.ui.xaml.uielement.pointercanceled)y [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
 
 ```csharp
 /// <summary>
@@ -282,7 +282,7 @@ void Target_PointerPressed(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Este controlador administra el evento [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) . Se agrega el evento al registro de eventos, se agrega el puntero a la colección de punteros y se muestran los detalles del puntero.
+-   Este controlador administra el evento [**PointerEntered**](/uwp/api/windows.ui.xaml.uielement.pointerentered) . Se agrega el evento al registro de eventos, se agrega el puntero a la colección de punteros y se muestran los detalles del puntero.
 
 ```csharp
 /// <summary>
@@ -319,10 +319,10 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Este controlador administra el evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved) . Se agrega el evento al registro de eventos y se actualizan los detalles del puntero.
+-   Este controlador administra el evento [**PointerMoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved) . Se agrega el evento al registro de eventos y se actualizan los detalles del puntero.
 
     > [!Important]
-    > La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). El evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved).     
+    > La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed). El evento [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved).     
 
 ```csharp
 /// <summary>
@@ -369,7 +369,7 @@ private void Target_PointerMoved(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Este controlador administra el evento [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged) . Se agrega el evento al registro de eventos, se agrega el puntero a la matriz de punteros (si es necesario) y se muestran los detalles del puntero.
+-   Este controlador administra el evento [**PointerWheelChanged**](/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged) . Se agrega el evento al registro de eventos, se agrega el puntero a la matriz de punteros (si es necesario) y se muestran los detalles del puntero.
 
 ```csharp
 /// <summary>
@@ -399,7 +399,7 @@ private void Target_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Este controlador administra el evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) en el que se termina el contacto con el digitalizador. Se agrega el evento al registro de eventos, se quita el puntero de la colección de punteros y se actualizan los detalles del puntero.
+-   Este controlador administra el evento [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) en el que se termina el contacto con el digitalizador. Se agrega el evento al registro de eventos, se quita el puntero de la colección de punteros y se actualizan los detalles del puntero.
 
 ```csharp
 /// <summary>
@@ -451,7 +451,7 @@ void Target_PointerReleased(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Este controlador administra el evento [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) (cuando se mantiene el contacto con el digitalizador). Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
+-   Este controlador administra el evento [**PointerExited**](/uwp/api/windows.ui.xaml.uielement.pointerexited) (cuando se mantiene el contacto con el digitalizador). Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
 
 ```csharp
 /// <summary>
@@ -486,7 +486,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Este controlador administra el evento [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) . Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
+-   Este controlador administra el evento [**PointerCanceled**](/uwp/api/windows.ui.xaml.uielement.pointercanceled) . Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
 
 ```csharp
 /// <summary>
@@ -525,10 +525,10 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   Este controlador administra el evento [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) . Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
+-   Este controlador administra el evento [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost) . Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) puede producirse en lugar de [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased). La captura de puntero se puede perder por varias razones, como la interacción con el usuario, la captura mediante programación de otro puntero, la llamada a [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased).     
+    > [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost) puede producirse en lugar de [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased). La captura de puntero se puede perder por varias razones, como la interacción con el usuario, la captura mediante programación de otro puntero, la llamada a [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased).     
 
 ```csharp
 /// <summary>
@@ -569,9 +569,9 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>Obtener las propiedades del puntero
 
-Como se indicó anteriormente, debes obtener la información más extendida del puntero desde un objeto [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) obtenido a través de los métodos [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). En los fragmentos de código siguientes se muestra cómo.
+Como se indicó anteriormente, debes obtener la información más extendida del puntero desde un objeto [**Windows.UI.Input.PointerPoint**](/uwp/api/Windows.UI.Input.PointerPoint) obtenido a través de los métodos [**GetCurrentPoint**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). En los fragmentos de código siguientes se muestra cómo.
 
--   Primero, se crea un nuevo elemento [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para cada puntero.
+-   Primero, se crea un nuevo elemento [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para cada puntero.
 
 ```csharp
 /// <summary>
@@ -594,7 +594,7 @@ void CreateInfoPop(PointerPoint ptrPt)
 }
 ```
 
--   Después, se proporciona una manera de actualizar la información del puntero en un elemento [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) existente asociado con ese puntero.
+-   Después, se proporciona una manera de actualizar la información del puntero en un elemento [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) existente asociado con ese puntero.
 
 ```csharp
 /// <summary>
@@ -678,7 +678,7 @@ String QueryPointer(PointerPoint ptrPt)
 ## <a name="primary-pointer"></a>Puntero primario
 Algunos dispositivos de entrada, como un digitalizador táctil o un panel táctil, admiten más que el puntero único típico de un mouse o un lápiz (en la mayoría de los casos, ya que el Surface Hub admite dos entradas manuscritas). 
 
-Use la propiedad **[IsPrimary](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties.IsPrimary)** de solo lectura de la clase **[PointerPointerProperties](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties)** para identificar y diferenciar un puntero primario único (el puntero primario siempre es el primer puntero detectado durante una secuencia de entrada). 
+Use la propiedad **[IsPrimary](/uwp/api/windows.ui.input.pointerpointproperties.IsPrimary)** de solo lectura de la clase **[PointerPointerProperties](/uwp/api/windows.ui.input.pointerpointproperties)** para identificar y diferenciar un puntero primario único (el puntero primario siempre es el primer puntero detectado durante una secuencia de entrada). 
 
 Al identificar el puntero principal, puede usarlo para emular la entrada del mouse o del lápiz, personalizar las interacciones o proporcionar alguna otra funcionalidad o interfaz de usuario específica.
 
@@ -697,7 +697,7 @@ Esta aplicación concreta usa el color y la animación para resaltar el puntero 
 
 ### <a name="visual-feedback"></a>Información visual
 
-Definimos un **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)**, basado en un objeto de **[elipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** XAML, que resalta Dónde está cada puntero en el lienzo y usa un **[guion gráfico](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar la elipse que corresponde al puntero primario.
+Definimos un **[UserControl](/uwp/api/windows.ui.xaml.controls.usercontrol)**, basado en un objeto de **[elipse](/uwp/api/windows.ui.xaml.shapes.ellipse)** XAML, que resalta Dónde está cada puntero en el lienzo y usa un **[guion gráfico](/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar la elipse que corresponde al puntero primario.
 
 **Este es el código XAML:**
 
@@ -889,7 +889,7 @@ namespace UWP_Pointers
 ```
 
 ### <a name="create-the-ui"></a>Creación de la interfaz de usuario
-La interfaz de usuario de este ejemplo se limita al **[lienzo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas)** de entrada donde se realiza un seguimiento de los punteros y se representan los indicadores de puntero y la animación del puntero principal (si es aplicable), junto con una barra de encabezado que contiene un contador de puntero y un identificador de puntero principal.
+La interfaz de usuario de este ejemplo se limita al **[lienzo](/uwp/api/windows.ui.xaml.controls.canvas)** de entrada donde se realiza un seguimiento de los punteros y se representan los indicadores de puntero y la animación del puntero principal (si es aplicable), junto con una barra de encabezado que contiene un contador de puntero y un identificador de puntero principal.
 
 Este es el código MainPage. XAML:
 

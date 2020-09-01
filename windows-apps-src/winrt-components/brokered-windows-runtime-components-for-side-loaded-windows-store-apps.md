@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: a3e95eae10fb06135f0fed1b92f1717f5e5fdf4d
-ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
+ms.openlocfilehash: 5d36d1d47670023b2ee462ba9cd88449b2769079
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280285"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174329"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes de Windows Runtime asincrónicos para una aplicación para UWP cargada en paralelo
 
@@ -44,7 +44,7 @@ El componente de escritorio es un nuevo tipo de aplicación que se incorpora com
 
 **Contrato**
 
-El contrato entre la aplicación de prueba y el componente de escritorio se describe en términos del sistema de tipos de UWP. Esto implica declarar una o varias \# clases de C que pueden representar una UWP. Vea el tema de MSDN [creación de Windows Runtime componentes en c \# y Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br230301(v=vs.140)) para un requisito específico de la creación de Windows Runtime clase con c \# .
+El contrato entre la aplicación de prueba y el componente de escritorio se describe en términos del sistema de tipos de UWP. Esto implica declarar una o varias \# clases de C que pueden representar una UWP. Vea el tema de MSDN [creación de Windows Runtime componentes en c \# y Visual Basic](/previous-versions/windows/apps/br230301(v=vs.140)) para un requisito específico de la creación de Windows Runtime clase con c \# .
 
 >**Nota:**   En este momento, no se admiten enumeraciones en el contrato de componentes de Windows Runtime entre el componente de escritorio y la aplicación de carga.
 
@@ -106,7 +106,7 @@ Esto define una clase "EnterpriseServer" de la que se puede crear instancias des
 
 Para hacer esto en Visual Studio, haz clic con el botón derecho en el proyecto recién creado y selecciona "Descargar el proyecto", a continuación, haz clic otra vez con el botón derecho y selecciona "Editar EnterpriseServer.csproj" para abrir el archivo de proyecto, un archivo XML, para editarlo.
 
-En el archivo abierto, busque la \< etiqueta OutputType \> y cambie su valor a "winmdobj".
+En el archivo abierto, busca la etiqueta \<OutputType\> y cambia su valor a "winmdobj".
 
 **Paso 3:** Crear una regla de compilación que cree un archivo de metadatos de Windows de "referencia" (archivo .winmd), es decir, no tiene ninguna implementación.
 
@@ -179,7 +179,7 @@ Como se indicó anteriormente, la aplicación de prueba se crea como cualquier o
 
 La categoría es inProcessServer porque hay varias entradas en la categoría outOfProcessServer que no son aplicables a esta configuración de la aplicación. Ten en cuenta que el componente <Path> debe contener siempre clrhost.dll; sin embargo, esto **no** se aplica obligatoriamente y si se especifica un valor diferente, se producirá un error imprevisto.
 
-La sección <ActivatableClass> es la misma que una RuntimeClass que está realmente dentro del proceso, preferida por un componente de Windows Runtime en el paquete de la aplicación. <ActivatableClassAttribute>es un nuevo elemento y los atributos name = "DesktopApplicationPath" y Type = "String" son obligatorios e invariables. El atributo Value apunta a la ubicación donde se encuentra el archivo winmd de implementación del componente de escritorio (encontrarás más información sobre esto en la siguiente sección). Cada clase RuntimeClass preferida por el componente de escritorio debe tener su propio árbol de elementos <ActivatableClass>. ActivatableClassId debe coincidir con el nombre completo en el espacio de nombres de la RuntimeClass.
+La sección <ActivatableClass> es la misma que una RuntimeClass que está realmente dentro del proceso, preferida por un componente de Windows Runtime en el paquete de la aplicación. <ActivatableClassAttribute> es un nuevo elemento y los atributos name = "DesktopApplicationPath" y Type = "String" son obligatorios e invariables. El atributo Value apunta a la ubicación donde se encuentra el archivo winmd de implementación del componente de escritorio (encontrarás más información sobre esto en la siguiente sección). Cada clase RuntimeClass preferida por el componente de escritorio debe tener su propio árbol de elementos <ActivatableClass>. ActivatableClassId debe coincidir con el nombre completo en el espacio de nombres de la RuntimeClass.
 
 Como se indicó en la sección "Definición del contrato", se debe crear una referencia de proyecto al archivo winmd de referencia del componente de escritorio. El sistema de proyectos de Visual Studio normalmente crea una estructura de directorios de dos niveles con el mismo nombre. En el ejemplo, es EnterpriseIPCApplication \\ EnterpriseIPCApplication. El archivo de referencia **winmd** se copia manualmente a este directorio de segundo nivel y, a continuación, se usa el cuadro de diálogo Referencias de proyectos (haga clic en el botón **Examinar...** ) para ubicar y hacer referencia a este archivo **winmd**. Después, el espacio de nombres de nivel superior del componente de escritorio (por ejemplo, Fabrikam) debe aparecer como un nodo de nivel superior en la parte referencias del proyecto.
 
@@ -406,7 +406,7 @@ Normalmente solo se realizan otras referencias entre proyectos. Sin embargo, un 
 
 Las referencias anteriores son una mezcla cuidadosa de referencias fundamentales para el correcto funcionamiento de este servidor híbrido. El protocolo es abrir el archivo .csproj (como se describe en cómo editar el proyecto OutputType) y agregar las referencias según sea necesario.
 
-Cuando las referencias están correctamente configuradas, la siguiente tarea es implementar la funcionalidad del servidor. Vea el tema [prácticas recomendadas para la interoperabilidad con componentes de Windows Runtime (aplicaciones para UWP con C \# /VB/C + + y XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh750311(v=win.10)).
+Cuando las referencias están correctamente configuradas, la siguiente tarea es implementar la funcionalidad del servidor. Vea el tema [prácticas recomendadas para la interoperabilidad con componentes de Windows Runtime (aplicaciones para UWP con C \# /VB/C + + y XAML)](/previous-versions/windows/apps/hh750311(v=win.10)).
 La tarea consiste en crear un archivo DLL del componente de Windows Runtime que pueda llamar al código de escritorio como parte de la implementación. La muestra correspondiente incluye los principales patrones que se usan en Windows en tiempo de ejecución:
 
 -   Llamadas a métodos
@@ -476,7 +476,7 @@ Como el enfoque de IPC implica calcular referencias a las interfaces de Windows 
 
 **Crear el proxy en Visual Studio**
 
-El proceso de creación y registro de servidores proxy y códigos auxiliares para su uso dentro de un paquete de aplicación de UWP normal se describe en el tema [generar eventos en Windows Runtime componentes](https://docs.microsoft.com/previous-versions/windows/apps/dn169426(v=vs.140)).
+El proceso de creación y registro de servidores proxy y códigos auxiliares para su uso dentro de un paquete de aplicación de UWP normal se describe en el tema [generar eventos en Windows Runtime componentes](/previous-versions/windows/apps/dn169426(v=vs.140)).
 Los pasos que se describen en este artículo son más complicados que el proceso que se describe a continuación, porque implican registrar el proxy o el código auxiliar dentro del paquete de la aplicación (en lugar de registrarlo globalmente).
 
 **Paso 1:** Usa la solución para el proyecto de componente de escritorio para crear un proyecto de proxy/código auxiliar en Visual Studio:
@@ -577,7 +577,7 @@ La muestra ilustra cómo insertar retrasos de tiempo en el código usando las t�
 
 Cuando se realizan cambios en el servidor, hay que procurar que cualquier instancia que se ejecutara anteriormente ya no se ejecuta. En última instancia, COM se encargará de dar con esto en el proceso, pero el temporizador de resumen tardará más tiempo y reducirá la eficacia del desarrollo iterativo. En consecuencia, eliminar una instancia que se ejecutara anteriormente constituye un paso normal durante el desarrollo. Esto conlleva que el desarrollador lleve un seguimiento de la instancia de dllhost que hospeda el servidor.
 
-El proceso de servidor se puede detectar y eliminar mediante el Administrador de tareas o cualquier otra aplicación externa. La herramienta de línea de comandos **TaskList. exe** también se incluye y tiene una sintaxis flexible, por ejemplo:
+El proceso de servidor se puede detectar y eliminar mediante el Administrador de tareas o cualquier otra aplicación externa. También se incluye la herramienta de línea de comandos **TaskList.exe** y tiene una sintaxis flexible, por ejemplo:
 
   
  | **Comando** | **Acción** |
@@ -594,9 +594,8 @@ En la lista de módulos cargados de un servidor de Agente de sesiones debe figur
 
 -   [Entrega de aplicaciones Microsoft Store confiables y confiables](https://blogs.msdn.com/b/b8/archive/2012/05/17/delivering-reliable-and-trustworthy-metro-style-apps.aspx)
 
--   [Contratos y extensiones de aplicaciones (aplicaciones de la Tienda Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10))
+-   [Contratos y extensiones de aplicaciones (aplicaciones de la Tienda Windows)](/previous-versions/windows/apps/hh464906(v=win.10))
 
--   [Cómo instalar aplicaciones en Windows 10](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
+-   [Cómo instalar aplicaciones en Windows 10](../get-started/enable-your-device-for-development.md)
 
 -   [Implementación de aplicaciones para UWP en empresas](https://blogs.msdn.com/b/windowsstore/archive/2012/04/25/deploying-metro-style-apps-to-businesses.aspx)
-

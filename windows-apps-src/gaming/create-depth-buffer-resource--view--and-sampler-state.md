@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, Direct3D, búfer de profundidad
 ms.localizationpriority: medium
-ms.openlocfilehash: dfd45f620addcf7a3f6292ed2257bdfccc862cd3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0032d77bb8d572229ea77df736c807a0a85e9ecb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368892"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175379"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Crear recursos de dispositivo para búferes de profundidad
 
 
 
 
-Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra. Parte 1 de [Tutorial: Implementar los volúmenes de instantáneas con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Aprende cómo crear los recursos de dispositivo Direct3D necesarios para admitir la realización de pruebas de profundidad para volúmenes de sombra. Parte 1 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="resources-youll-need"></a>Recursos que necesitarás
 
@@ -38,7 +38,7 @@ Ten en cuenta que la creación de estos recursos debe incluirse en una rutina de
 ## <a name="check-feature-support"></a>Comprobar la compatibilidad de la característica
 
 
-Antes de crear el mapa de profundidad, llame a la [ **CheckFeatureSupport** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) método en el dispositivo Direct3D, solicitar **D3D11\_característica\_D3D9\_ SOMBRA\_soporte**y proporcione un [ **D3D11\_característica\_datos\_D3D9\_SOMBRA\_soporte** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d9_shadow_support) estructura.
+Antes de crear la asignación de profundidad, llame al método [**CheckFeatureSupport**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) en el dispositivo Direct3D, solicite ** \_ \_ \_ \_ compatibilidad con la característica de D3D11 de la característica D3D9 Shadow**y proporcione una estructura [**D3D11 de datos de \_ características D3D9 de \_ \_ \_ \_ compatibilidad con instantáneas**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d9_shadow_support) .
 
 ```cpp
 D3D11_FEATURE_DATA_D3D9_SHADOW_SUPPORT isD3D9ShadowSupported;
@@ -55,14 +55,14 @@ if (isD3D9ShadowSupported.SupportsDepthAsTextureWithLessEqualComparisonFilter)
 
 ```
 
-Si no se admite esta característica, no intente cargar los sombreadores compilados para nivel 4 del modelo de sombreador 9\_x que llaman a funciones de comparación de ejemplo. En muchos casos, la falta de compatibilidad para esta característica significa que la GPU es un dispositivo antiguo con un controlador que no está actualizado para admitir al menos WDDM 1.2. Si el dispositivo admite la característica de al menos nivel 10\_0, a continuación, se puede cargar un sombreador de comparación de ejemplo compilado para el modelo de sombreador 4\_0 en su lugar.
+Si no se admite esta característica, no intente cargar los sombreadores compilados para el modelo de sombreador 4 de nivel 9 \_ x que llaman a las funciones de comparación de ejemplo. En muchos casos, la falta de compatibilidad para esta característica significa que la GPU es un dispositivo antiguo con un controlador que no está actualizado para admitir al menos WDDM 1.2. Si el dispositivo admite al menos el nivel de característica 10 \_ 0, puede cargar en su lugar un sombreador de comparación de ejemplo compilado para el modelo de sombreador 4 \_ 0.
 
 ## <a name="create-depth-buffer"></a>Crear un búfer de profundidad
 
 
 Primero, intenta crear la asignación de profundidad con un formato de profundidad de más alta precisión. Debes configurar primero las propiedades de vista de recurso de sombreador coincidentes. Si la creación de recursos es errónea, por ejemplo debido a poca memoria en el dispositivo o a un formato que el hardware no admite, prueba un formato de menor precisión y cambiar las propiedades para que coincidan.
 
-Este paso es opcional si solo necesita un formato de profundidad de precisión baja, por ejemplo, al representar en el nivel de características de Direct3D 9 de resolución Media\_1 dispositivos.
+Este paso es opcional si solo necesita un formato de profundidad de baja precisión, por ejemplo, cuando se representa en dispositivos de nivel de característica de Direct3D de resolución media- \_ 1.
 
 ```cpp
 D3D11_TEXTURE2D_DESC shadowMapDesc;
@@ -82,7 +82,7 @@ HRESULT hr = pD3DDevice->CreateTexture2D(
     );
 ```
 
-Después crea las vistas de recurso. Establece el segmento de MIP en cero en la vista de galería de símbolos de profundidad y establece los niveles de MIP en 1 en la vista de recursos del sombreador. Ambos tienen una dimensión de textura de TEXTURE2D, y ambos deben usar una coincidencia [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format).
+Después crea las vistas de recurso. Establece el segmento de MIP en cero en la vista de galería de símbolos de profundidad y establece los niveles de MIP en 1 en la vista de recursos del sombreador. Ambos tienen una dimensión de textura de TEXTURE2D y ambos deben usar un formato de [**DXGI \_ **](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)coincidente.
 
 ```cpp
 D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc;
@@ -113,11 +113,11 @@ hr = pD3DDevice->CreateShaderResourceView(
 ## <a name="create-comparison-state"></a>Crear estado de comparación
 
 
-Ahora crea el objeto de estado de muestra de comparación. 9 de nivel de características\_1 solo es compatible con D3D11\_comparación\_menos\_igual. Las opciones de filtrado se explican con más profundidad en [Compatibilidad con mapas de sombras en una variedad de hardware](target-a-range-of-hardware.md) o simplemente puedes elegir el filtrado de puntos para asignaciones de instantáneas más rápidas.
+Ahora crea el objeto de estado de muestra de comparación. El nivel de característica 9 \_ 1 solo admite la comparación de D3D11 \_ \_ menos \_ igual. Las opciones de filtrado se explican con más profundidad en [Compatibilidad con mapas de sombras en una variedad de hardware](target-a-range-of-hardware.md) o simplemente puedes elegir el filtrado de puntos para asignaciones de instantáneas más rápidas.
 
-Tenga en cuenta que puede especificar el D3D11\_textura\_dirección\_modo de direccionamiento de borde y trabajará en el nivel de característica 9\_1 dispositivos. Esto se aplica a los sombreadores de píxeles que no prueban si el píxel está en el frustum de visualización de la luz antes de hacer la prueba de profundidad. Especificando 0 o 1 para cada borde, puedes controlar si los píxeles que se encuentran fuera del frustum de visualización de la luz aprueban o no la prueba de profundidad y, por lo tanto, si están iluminados o en sombra.
+Tenga en cuenta que puede especificar el \_ modo de dirección de borde de dirección de textura D3D11 \_ \_ y funcionará en dispositivos de nivel de característica 9 \_ 1. Esto se aplica a los sombreadores de píxeles que no prueban si el píxel está en el frustum de visualización de la luz antes de hacer la prueba de profundidad. Especificando 0 o 1 para cada borde, puedes controlar si los píxeles que se encuentran fuera del frustum de visualización de la luz aprueban o no la prueba de profundidad y, por lo tanto, si están iluminados o en sombra.
 
-En función de nivel 9\_1, los siguientes necesarios se deben establecer los valores: **MinLOD** se establece en cero, **MaxLOD** está establecido en **D3D11\_FLOAT32\_MAX**, y **MaxAnisotropy** se establece en cero.
+En el nivel de característica 9 \_ 1, se deben establecer los siguientes valores necesarios: **MinLOD** se establece en cero, **MaxLOD** se establece en **D3D11 \_ FLOAT32 \_ Max**y **MaxAnisotropy** se establece en cero.
 
 ```cpp
 D3D11_SAMPLER_DESC comparisonSamplerDesc;
@@ -152,7 +152,7 @@ DX::ThrowIfFailed(
 ## <a name="create-render-states"></a>Crear estados de representación
 
 
-Ahora crea un estado de representación que puedas usar para habilitar la selección de la cara anterior. Tenga en cuenta ese nivel de característica 9\_1 dispositivos requieren **DepthClipEnable** establecido en **true**.
+Ahora crea un estado de representación que puedas usar para habilitar la selección de la cara anterior. Tenga en cuenta que los dispositivos de nivel de característica 9 \_ 1 requieren que **DepthClipEnable** esté establecido en **true**.
 
 ```cpp
 D3D11_RASTERIZER_DESC drawingRenderStateDesc;
@@ -261,7 +261,3 @@ En la parte siguiente de este tutorial, aprenderás a crear la asignación de in
  
 
  
-
-
-
-

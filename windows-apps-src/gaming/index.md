@@ -6,12 +6,12 @@ ms.date: 10/17/2019
 ms.topic: article
 keywords: windows 10, uwp, games, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: db551135fab4e29b49b3031ad3338fa9a2e58379
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: b1a4f741a8050e1b78c64f8a3594ae3d9ec4854b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72548394"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175279"
 ---
 # <a name="game-programming"></a>Programación de juegos
 
@@ -28,7 +28,7 @@ Para información sobre el desarrollo de juegos para UWP con DirectX, consulta [
 
 Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo de juegos, te recomendamos que estés familiarizado con estos temas.
 
-- [C++/WinRT ](/windows/uwp/cpp-and-winrt-apis/index) es la proyección del lenguaje que se recomienda para desarrollar juegos para UWP con DirectX. C++/WinRT es una proyección del lenguaje C++ 17 moderna y estándar para API de Windows Runtime (WinRT). Sustituye a Microsoft C++ con Component Extensions (C++/CX). Para obtener un ejemplo de código, mediante C++/WinRT para llamar a las API de DirectX, consulta [Lista del código fuente completo de una aplicación de Direct2D mínima](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application).
+- [C++/WinRT ](../cpp-and-winrt-apis/index.md) es la proyección del lenguaje que se recomienda para desarrollar juegos para UWP con DirectX. C++/WinRT es una proyección del lenguaje C++ 17 moderna y estándar para API de Windows Runtime (WinRT). Sustituye a Microsoft C++ con Component Extensions (C++/CX). Para obtener un ejemplo de código, mediante C++/WinRT para llamar a las API de DirectX, consulta [Lista del código fuente completo de una aplicación de Direct2D mínima](../cpp-and-winrt-apis/consume-com.md#full-source-code-listing-of-a-minimal-direct2d-application).
 - Terminología básica de programación de gráficos.
 - Conceptos básicos de programación en Windows.
 - Conocimiento básico de las API de Direct3D 9 (o posterior).

@@ -6,17 +6,17 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b5b5678ad1a0666e6f008a2ec69ba63c35441edf
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: b44e4ba86ab96474d4770c32024b8edc5641c396
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493520"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174289"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Generación de eventos en componentes de Windows Runtime
 
 > [!NOTE]
-> Para obtener más información sobre la generación de eventos en un componente Windows Runtime de [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) , vea [crear eventos en c++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events).
+> Para obtener más información sobre la generación de eventos en un componente Windows Runtime de [c++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) , vea [crear eventos en c++/WinRT](../cpp-and-winrt-apis/author-events.md).
 
 Si el componente de Windows Runtime genera un evento de un tipo delegado definido por el usuario en un subproceso en segundo plano (subproceso de trabajo) y desea que JavaScript pueda recibir el evento, puede implementarlo y/o generarlo de alguna de estas maneras.
 
@@ -26,7 +26,7 @@ Si el componente de Windows Runtime genera un evento de un tipo delegado definid
 
 Si solo se genera un evento en un subproceso en segundo plano sin usar una de estas opciones, un cliente de JavaScript no recibirá el evento.
 
-## <a name="background"></a>Información previa
+## <a name="background"></a>Fondo
 
 Todos los componentes y aplicaciones de Windows Runtime son fundamentalmente objetos COM, independientemente del lenguaje que se usa para crearlos. En la API de Windows, la mayoría de los componentes son objetos COM ágiles que se pueden comunicar igual de bien con los objetos en el subproceso en segundo plano y en el subproceso de IU. Si no se puede realizar un objeto COM ágil, se requerirán objetos auxiliares conocidos como proxies y códigos auxiliares para comunicarse con otros objetos COM a través de los límites del subproceso de IU y el subproceso en segundo plano. (En términos COM, esto se conoce como una comunicación entre subprocesamientos controlados).
 

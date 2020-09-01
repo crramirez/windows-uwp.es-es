@@ -1,23 +1,23 @@
 ---
 title: Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
-description: Enumera los problemas conocidos del programa para desarrolladores de UWP en Xbox.
+description: Obtenga información sobre algunos problemas conocidos de UWP en el programa para desarrolladores de Xbox One y vea cómo acceder a otros recursos de ayuda.
 ms.date: 03/29/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: dbf9d40d4dc2cfedaa78cbca5b16c4cc26d2d4e1
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 52421d17de5f26fe29060c39d33b51cc85fa197a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730072"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174559"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
 
 En este tema se describen los problemas conocidos de UWP en el Programa para desarrolladores de Xbox One. Para obtener más información acerca de este programa, consulta [UWP en Xbox](index.md). 
 
-\[Si llegó aquí desde un vínculo en un tema de referencia de la API y busca información sobre la API de la familia de dispositivos universales, consulte [características de UWP que todavía no se admiten en Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
+\[Si llegó aquí desde un vínculo en un tema de referencia de la API y busca información sobre la API de la familia de dispositivos universales, consulte [características de UWP que todavía no se admiten en Xbox](/uwp/extension-sdks/uwp-limitations-on-xbox).\]
 
 La siguiente lista destaca algunos problemas conocidos que puedes encontrarte, aunque esta no es una lista exhaustiva. 
 
@@ -60,7 +60,7 @@ Las aplicaciones para la Plataforma universal de Windows (UWP) en dispositivos X
 
 ## <a name="windows-runtime-api-coverage"></a>Windows Runtime cobertura de API
 
-No todas las API de Windows Runtime se admiten en Xbox. Para ver la lista de las API que sabemos que no funcionan, consulta [UWP features that aren't yet supported on Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN) (Características UWP que aún no se admiten en Xbox). Si encuentras problemas con otras API, notifícalo en los foros. 
+No todas las API de Windows Runtime se admiten en Xbox. Para ver la lista de las API que sabemos que no funcionan, consulta [UWP features that aren't yet supported on Xbox](/uwp/extension-sdks/uwp-limitations-on-xbox) (Características UWP que aún no se admiten en Xbox). Si encuentras problemas con otras API, notifícalo en los foros. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Desplazarse a WDP genera una advertencia de certificado

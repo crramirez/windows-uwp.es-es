@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bbc0f23ad712850e565814febe5b7e681e58a85d
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 7cee236b385b6129e7ab1a9cacd549f217f6e734
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234572"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175609"
 ---
 # <a name="create-adaptive-tiles"></a>Crear iconos adaptables
 
 Las plantillas de iconos adaptables son una nueva característica de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación de Windows. Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](../tiles-and-notifications/tile-schema.md).
 
-(Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) al diseñar las notificaciones para Windows 10.)
+(Si quieres, puedes seguir usando las plantillas preestablecidas del [catálogo de plantillas de iconos de Windows 8](/previous-versions/windows/apps/hh761491(v=win.10)) al diseñar las notificaciones para Windows 10.)
 
 
 ## <a name="getting-started"></a>Introducción
@@ -420,8 +420,8 @@ new AdaptiveText()
 | base                           | 15 epx                    | Semibold    |
 | subtitle                       | 20 epx                    | Normal     |
 | title                          | 24 epx                    | Semilight   |
-| subheader                      | 34 epx                    | Ligero       |
-| encabezado                         | 46 epx                    | Ligero       |
+| subheader                      | 34 epx                    | Claro       |
+| encabezado                         | 46 epx                    | Claro       |
 
  
 
@@ -1399,7 +1399,3 @@ TileWide = new TileBinding()
  
 
  
-
-
-
-

@@ -6,30 +6,30 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: d7a63c44ac8cb6f6b17951cf6515fad33fb83ee9
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: b975dcf88ecd26dc5a24d602c117b779fa2aada6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74734950"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174529"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Crear recursos en el paquete de la aplicación, en lugar de en un paquete de recursos
 
-Algunos tipos de aplicaciones (diccionarios multilingües, herramientas de traducción, etc.) necesitan reemplazar el comportamiento predeterminado de un lote de aplicaciones y crear recursos en el paquete de la aplicación en lugar de tenerlos en paquetes de recursos independientes. En este tema se explica cómo hacerlo.
+Algunos tipos de aplicaciones (diccionarios multilingües, herramientas de traducción, etc.) necesitan invalidar el comportamiento predeterminado de un lote de aplicaciones y compilar recursos en el paquete de la aplicación en lugar de tenerlos en paquetes de recursos independientes (o paquetes de recursos). En este tema se explica cómo hacerlo.
 
-De manera predeterminada, al compilar una [lote de aplicaciones (.appxbundle)](/windows/msix/package/packaging-uwp-apps), solo tus recursos predeterminados para idioma, escala y nivel de característica de DirectX están integrados en el paquete de la aplicación. Los recursos traducidos, y los recursos adaptados para escalas no predeterminadas y/o niveles de características DirectX, están integrados en paquetes de recursos y solo se descargan en los dispositivos que necesitan. Si un cliente compra tu aplicación en la Microsoft Store usando un dispositivo con una preferencia de idioma establecida en español, solo se descargará e instalará tu aplicación además del paquete de recursos de español. Si ese mismo usuario más adelante cambia su preferencia de idioma a francés en **Configuración**, se descargará e instalará el paquete de recursos en francés de tu aplicación. Suceden cosas similares con tus recursos cualificados para escala y para nivel de característica de DirectX. Para la mayoría de las aplicaciones, este comportamiento constituye una valiosa eficiencia y es exactamente lo que el cliente *quieres* y tú quieren que suceda.
+De forma predeterminada, al compilar un [paquete de aplicaciones (. appxbundle)](/windows/msix/package/packaging-uwp-apps), solo los recursos predeterminados de idioma, escala y nivel de característica de DirectX están integrados en el paquete de la aplicación. Los recursos traducidos &mdash; y los recursos adaptados para las escalas y los niveles de características de DirectX no predeterminados &mdash; se integran en los paquetes de recursos y solo se descargan en los dispositivos que los necesiten. Si un cliente compra la aplicación desde el Microsoft Store mediante un dispositivo con una preferencia de idioma establecida en español, solo se descargará e instalará la aplicación más el paquete de recursos de español. Si más adelante el mismo usuario cambia su preferencia de idioma a francés en **configuración**, se descargará e instalará el paquete de recursos en francés de la aplicación. Se producen acciones similares con los recursos calificados para la escala y el nivel de características de DirectX. Para la mayoría de las aplicaciones, este comportamiento constituye una eficacia valiosa y es exactamente lo que usted y el cliente *quieren* que suceda.
 
-Sin embargo, si la aplicación permite al usuario cambiar el idioma sobre la marcha desde dentro de la aplicación (en lugar de a través de **Configuración**), ese comportamiento predeterminado no es apropiado. Realmente quieres todos los recursos de idioma se descarguen e instalen incondicionalmente junto con la aplicación una vez y, a continuación, permanezcan en el dispositivo. Quieres crear todos esos recursos en el paquete de la aplicación en lugar de en los paquetes de recursos independientes.
+Pero si la aplicación permite al usuario cambiar el idioma sobre la marcha desde dentro de la aplicación (en lugar de hacerlo a través de la **configuración**), ese comportamiento predeterminado no es adecuado. Realmente desea que todos los recursos de idioma se descarguen e instalen de manera incondicional junto con la aplicación una vez y que permanezcan en el dispositivo. Desea compilar todos esos recursos en el paquete de la aplicación en lugar de en paquetes de recursos independientes.
 
-**Nota** Al incluir recursos en un paquete de la aplicación básicamente se aumenta el tamaño de la aplicación. Ese es el motivo por el que solo vale la pena hacerlo si la naturaleza de la aplicación lo exige. De lo contrario, a continuación, no tienes que hacer nada excepto compilar un lote de aplicaciones normal como de costumbre.
+**Nota:** La inclusión de los recursos en un paquete de aplicación aumenta esencialmente el tamaño de la aplicación. Por eso solo merece la pena hacer si la naturaleza de la aplicación lo exige. Si no es así, no es necesario hacer nada, salvo que se crea un lote de aplicaciones normal como de costumbre.
 
-Puedes configurar Visual Studio para compilar recursos en el paquete de la aplicación de una de dos maneras posibles. Puedes agregar un archivo de configuración al proyecto o bien, puedes editar el archivo de proyecto directamente. Usa cualquiera de estas opciones con las que te sientas más cómodo o cualquiera que funcione mejor con tu sistema de compilación.
+Puede configurar Visual Studio para compilar recursos en el paquete de la aplicación de una de estas dos maneras. Puede Agregar un archivo de configuración al proyecto o puede editar el archivo de proyecto directamente. Use cualquiera de estas opciones con las que esté más familiarizado, o lo que mejor se adapte a su sistema de compilación.
 
 ## <a name="option-1-use-priconfigpackagingxml-to-build-resources-into-your-app-package"></a>Opción 1. Usar priconfig.packaging.xml para compilar recursos en el paquete de la aplicación
 
-1. En Visual Studio, agrega un elemento nuevo a tu proyecto. Elige Archivo XML y asígnale el nombre `priconfig.packaging.xml`.
-2. En el Explorador de soluciones, selecciona `priconfig.packaging.xml` y comprueba la ventana Propiedades. La acción de compilación del archivo debería establecerse en Ninguna y Copiar en el directorio de salida debería establecerse en No copiar.
-3. Reemplaza el contenido del archivo con este XML.
+1. En Visual Studio, agregue un nuevo elemento al proyecto. Elija archivo XML y asigne al archivo el nombre `priconfig.packaging.xml` .
+2. En Explorador de soluciones, seleccione `priconfig.packaging.xml` y active la ventana Propiedades. La acción de compilación del archivo debe establecerse en ninguno y el directorio de resultados debe estar establecido en no copiar.
+3. Reemplace el contenido del archivo por este código XML.
    ```xml
    <packaging>
       <autoResourcePackage qualifier="Language" />
@@ -37,18 +37,18 @@ Puedes configurar Visual Studio para compilar recursos en el paquete de la aplic
       <autoResourcePackage qualifier="DXFeatureLevel" />
    </packaging>
    ```
-4. Cada elemento `<autoResourcePackage>` indica a Visual Studio que divida los recursos automáticamente para el nombre de calificador determinado en paquetes de recursos independientes. Esto se denomina *división automática*. Con el contenido del archivo que tiene hasta el momento, realmente no ha cambiado el comportamiento de Visual Studio. Es decir, Visual Studio *ya se comportó como si* este archivo estuviera presente con este contenido, ya que estos son los valores predeterminados. Si no deseas que Visual Studio divida automáticamente en un nombre de calificador, elimina ese elemento `<autoResourcePackage>` del archivo. Este es el aspecto que tendría el archivo si quisieras que todos tus recursos de idiomas se integraran en el paquete de la aplicación en lugar de dividirse automáticamente en paquetes de recursos independientes.
+4. Cada `<autoResourcePackage>` elemento indica a Visual Studio que divida automáticamente los recursos para el nombre del calificador dado en paquetes de recursos independientes. Esto se denomina *División automática*. Con el contenido del archivo que tiene hasta ahora, no ha cambiado el comportamiento de Visual Studio. En otras palabras, Visual Studio *ya se comportaba como si* este archivo estuviese presente con el contenido, ya que estos son los valores predeterminados. Si no desea que Visual Studio se divida automáticamente según un nombre de calificador, elimine `<autoResourcePackage>` el elemento del archivo. Este es el aspecto que tendrá el archivo si desea que todos los recursos de idioma se compilen en el paquete de la aplicación en lugar de dividirse automáticamente en paquetes de recursos independientes.
    ```xml
    <packaging>
       <autoResourcePackage qualifier="Scale" />
       <autoResourcePackage qualifier="DXFeatureLevel" />
    </packaging>
    ```
-5. Guarda y cierra el archivo y recompila el proyecto.
+5. Guarde y cierre el archivo y recompile el proyecto.
 
-Para confirmar que se están teniendo en cuenta tus opciones de división automática, busca el archivo `<ProjectFolder>\obj\<ReleaseConfiguration folder>\split.priconfig.xml` y confirma que su contenido coincide con tus opciones. De ser así, has configurado Visual Studio correctamente para compilar los recursos que elijas en el paquete de la aplicación.
+Para confirmar que se están teniendo en cuenta las opciones de División automática, busque el archivo `<ProjectFolder>\obj\<ReleaseConfiguration folder>\split.priconfig.xml` y confirme que su contenido coincide con sus elecciones. Si lo hacen, habrá configurado correctamente Visual Studio para compilar los recursos de su elección en el paquete de la aplicación.
 
-Hay un paso final que debes hacer. **Pero solo si has eliminado el nombre de calificador `Language`** . Debes especificar la unión de todos los idiomas admitidos de tu aplicación como el valor predeterminado de la aplicación para el idioma. Para obtener detalles, consulta [Especificar los recursos predeterminados que la aplicación usa](specify-default-resources-installed.md). Esto es lo que tu `priconfig.default.xml` contendría si estuvieras incluyendo recursos para inglés, español y francés en el paquete de la aplicación.
+Hay un paso final que debe hacer. **Pero solo si eliminó el `Language` nombre del calificador**. Debe especificar la Unión de todo el idioma compatible de la aplicación como valor predeterminado de la aplicación para el idioma. Para obtener más información, consulte [especificación de los recursos predeterminados que usa la aplicación](specify-default-resources-installed.md). Esto es lo que `priconfig.default.xml` incluiría si estuviera incluyendo recursos para inglés, español y francés en el paquete de la aplicación.
 
 ```xml
    <default>
@@ -59,37 +59,37 @@ Hay un paso final que debes hacer. **Pero solo si has eliminado el nombre de cal
 
 ### <a name="how-does-this-work"></a>¿Cómo funciona?
 
-En segundo plano, Visual Studio inicia una herramienta denominada `MakePri.exe` para generar un archivo conocido como un índice de recursos del paquete, que describe todos los recursos de la aplicación, incluyendo la indicación de en qué nombres de calificador de recursos dividir automáticamente. Para obtener más información acerca de esta herramienta, consulta [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md). Visual Studio pasa un archivo de configuración a `MakePri.exe`. El contenido de tu archivo `priconfig.packaging.xml` se usa como el elemento `<packaging>` de ese archivo de configuración, que es la parte que determina la división automática. Por lo tanto, agregar y editar `priconfig.packaging.xml` en última instancia influye en el contenido del archivo de índice de recursos del paquete que Visual Studio genera para tu aplicación, así como el contenido de los paquetes de tu lote de aplicaciones.
+En segundo plano, Visual Studio inicia una herramienta denominada `MakePri.exe` para generar un archivo conocido como índice de recursos de paquete, que describe todos los recursos de la aplicación, incluido el que indica en qué nombres de calificador de recurso se divide automáticamente. Para obtener más información acerca de esta herramienta, consulte [compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md). Visual Studio pasa un archivo de configuración a `MakePri.exe` . El contenido del `priconfig.packaging.xml` archivo se utiliza como el `<packaging>` elemento de ese archivo de configuración, que es la parte que determina la División automática. Por lo tanto, agregar y editar `priconfig.packaging.xml` influye en última instancia en el contenido del archivo de índice de recursos del paquete que Visual Studio genera para la aplicación, así como el contenido de los paquetes en el lote de aplicaciones.
 
-### <a name="using-a-different-file-name-than-priconfigpackagingxml"></a>Usar un nombre diferente a `priconfig.packaging.xml`
+### <a name="using-a-different-file-name-than-priconfigpackagingxml"></a>Con un nombre de archivo diferente que `priconfig.packaging.xml`
 
-Si a tu archivo le asignas el nombre `priconfig.packaging.xml`, Visual Studio lo reconocerá y lo usará automáticamente. Si le asignas un nombre diferente, deberás informar a Visual Studio. En tu archivo de proyecto, entre las etiquetas de apertura y cierre del primer elemento `<PropertyGroup>`, agrega este XML.
+Si asigna un nombre al archivo `priconfig.packaging.xml` , Visual Studio lo reconocerá y lo usará automáticamente. Si le asigna un nombre diferente, deberá dejar que Visual Studio lo sepa. En el archivo de proyecto, entre las etiquetas de apertura y cierre del primer `<PropertyGroup>` elemento, agregue este XML.
 
 ```xml
 <AppxPriConfigXmlPackagingSnippetPath>FILE-PATH-AND-NAME</AppxPriConfigXmlPackagingSnippetPath>
 ```
 
-Reemplaza `FILE-PATH-AND-NAME` por la ruta de acceso al archivo y el nombre del archivo.
+Reemplace `FILE-PATH-AND-NAME` por la ruta de acceso y el nombre del archivo.
 
-## <a name="option-2-use-your-project-file-to-build-resources-into-your-app-package"></a>Opción 2. Usar tu archivo de proyecto para compilar recursos en el paquete de la aplicación
+## <a name="option-2-use-your-project-file-to-build-resources-into-your-app-package"></a>Opción 2. Usar el archivo de proyecto para compilar recursos en el paquete de la aplicación
 
-Esta es una alternativa a la Opción 1. Una vez que comprendas cómo funciona la Opción 1, puedes elegir hacer la Opción 2 en su lugar, si es adecuada para tu desarrollo o compilar un mejor flujo de trabajo.
+Esta es una alternativa a la opción 1. Una vez que comprenda cómo funciona la opción 1, puede elegir la opción 2 en su lugar, si esto se adapta mejor a su flujo de trabajo de desarrollo o de compilación.
 
-En tu archivo de proyecto, entre las etiquetas de apertura y cierre del primer elemento `<PropertyGroup>`, agrega este XML.
+En el archivo de proyecto, entre las etiquetas de apertura y cierre del primer `<PropertyGroup>` elemento, agregue este XML.
 
 ```xml
 <AppxBundleAutoResourcePackageQualifiers>Language|Scale|DXFeatureLevel</AppxBundleAutoResourcePackageQualifiers>
 ```
 
-Este es el aspecto que tiene después de eliminar el primer nombre de calificador.
+Este es el aspecto que tendrá después de eliminar el primer nombre de calificador.
 
 ```xml
 <AppxBundleAutoResourcePackageQualifiers>Scale|DXFeatureLevel</AppxBundleAutoResourcePackageQualifiers>
 ```
 
-Guarda, cierra y recompila el proyecto.
+Guarde y cierre el proyecto y vuelva a compilarlo.
 
-Hay un paso final que debes hacer. **Pero solo si has eliminado el nombre de calificador `Language`** . Debes especificar la unión de todos los idiomas admitidos de tu aplicación como el valor predeterminado de la aplicación para el idioma. Para obtener detalles, consulta [Especificar los recursos predeterminados que la aplicación usa](specify-default-resources-installed.md). Esto es lo que tu archivo de proyecto contendría si estuvieras incluyendo recursos para inglés, español y francés en el paquete de la aplicación.
+Hay un paso final que debe hacer. **Pero solo si eliminó el `Language` nombre del calificador**. Debe especificar la Unión de todo el idioma compatible de la aplicación como valor predeterminado de la aplicación para el idioma. Para obtener más información, consulte [especificación de los recursos predeterminados que usa la aplicación](specify-default-resources-installed.md). Esto es lo que contendría el archivo del proyecto si estuviera incluyendo recursos para inglés, español y francés en el paquete de la aplicación.
 
 ```xml
 <AppxDefaultResourceQualifiers>Language=en;es;fr</AppxDefaultResourceQualifiers>
@@ -97,6 +97,6 @@ Hay un paso final que debes hacer. **Pero solo si has eliminado el nombre de cal
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Empaquetar una aplicación para UWP con Visual Studio](../packaging/packaging-uwp-apps.md)
+* [Empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
 * [Especificar los recursos predeterminados que la aplicación usa](specify-default-resources-installed.md)

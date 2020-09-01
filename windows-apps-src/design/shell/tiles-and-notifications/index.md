@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb65acf606ffa44f075016720ebcd055ba5febc8
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 06cff7247dff4f370d9e20a736c4383a9c09c25a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234465"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174619"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones de Windows
  
@@ -37,7 +37,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Cada aplic
 | Artículo | Descripción |
 | --- | --- |
 | [Crear iconos](creating-tiles.md) | Personaliza el icono predeterminado de la aplicación y proporciona activos para diferentes tamaños de pantalla. |
-| [Activos de icono de aplicación](app-assets.md) | Los recursos de icono de la aplicación, que aparecen en una amplia variedad de formatos en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación de Windows. Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados. |
+| [Activos de icono de aplicación](../../style/app-icons-and-logos.md) | Los recursos de icono de la aplicación, que aparecen en una amplia variedad de formatos en todo el sistema operativo Windows 10, son las tarjetas de llamada de la aplicación de Windows. Estas directrices detallan el lugar donde aparecen los recursos de icono de la aplicación en el sistema y proporcionan sugerencias de diseño detalladas sobre cómo crear los iconos más sofisticados. |
 | [API de icono principal](primary-tile-apis.md) | Solicita anclar el icono principal de la aplicación y comprueba si está anclado actualmente. |
 | [Contenido de icono](create-adaptive-tiles.md) | El contenido de notificación de icono se especifica con una nueva característica adaptable de Windows 10, que te permite diseñar tu propio contenido de notificación de icono con un lenguaje de marcado sencillo y flexible que se adapta a diferentes densidades de pantalla. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación de Windows. |
 | [Esquema de contenido de icono](../tiles-and-notifications/tile-schema.md) | Estos son los elementos y atributos que usas para crear iconos adaptables. |

@@ -7,12 +7,12 @@ keywords: windows win32, desarrollo de escritorio
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 20399b9a6398b1f17f74d2de74cc4b5e4ba270ac
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 6f4b790978449bd6d5c279a5405c22db51cd0724
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493000"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170729"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Compilación de aplicaciones de escritorio para PC Windows
 
@@ -49,12 +49,12 @@ Hay cuatro plataformas principales para compilar aplicaciones de escritorio para
 <td><a href="/windows/win32/desktop-programming/">Introducción</a><br/><a href="/windows/win32/apiindex/windows-api-list/">Referencia de las API</a><br/><a href="https://github.com/Microsoft/Windows-classic-samples">Ejemplos</a></td>
 </tr>
 <tr class="odd">
-<td><a href="https://docs.microsoft.com/dotnet/framework/wpf/">WPF</a></td>
+<td><a href="/dotnet/framework/wpf/">WPF</a></td>
 <td><p>Plataforma basada en .NET establecida para aplicaciones Windows administradas con gráficos abundantes que cuenta con un modelo de interfaz de usuario XAML. Estas aplicaciones pueden estar dirigidas a <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> o a la versión completa de .NET Framework.</p></td>
 <td><a href="/dotnet/framework/wpf/getting-started/">Introducción</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referencia de API (.NET)</a><br/><a href="https://github.com/Microsoft/WPF-Samples">Ejemplos</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://docs.microsoft.com/dotnet/framework/winforms/">Windows Forms</a></td>
+<td><a href="/dotnet/framework/winforms/">Windows Forms</a></td>
 <td><p>Plataforma basada en .NET que está diseñada para las aplicaciones de línea de negocio administradas con un modelo de interfaz de usuario ligera. Estas aplicaciones pueden estar dirigidas a <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> o a la versión completa de .NET Framework.</p></td>
 <td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">Introducción</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referencia de API (.NET)</a></td>
 </tr>
@@ -71,8 +71,8 @@ Si tienes una aplicación de escritorio de Win32 nativa, WPF o Windows Forms, W
 Estas son solo algunas de las características disponibles para mejorar tus aplicaciones de escritorio existentes:
 
 * Usa [MSIX](/windows/msix/) para empaquetar e implementar tus aplicaciones de escritorio. MSIX es un formato moderno de paquete de la aplicación de Windows que proporciona una experiencia de empaquetado universal para todas las aplicaciones de Windows. MSIX reúne los mejores aspectos de las tecnologías de instalación de MSI, .appx, App-V y ClickOnce, y está compilado para ser seguro y confiable.
-* Integra tu aplicación de escritorio con experiencias de Windows 10 mediante las [extensiones de paquete](/windows/apps/desktop/modernize/desktop-to-uwp-extensions). Por ejemplo, haz que los iconos de Inicio apunten a tu aplicación, convierte tu aplicación en un destino de recurso compartido o envía notificaciones del sistema desde la aplicación.
-* Usa [islas XAML](/windows/apps/desktop/modernize/xaml-islands) para hospedar controles XAML de UWP en tu aplicación de escritorio. Muchas de las características más recientes de la interfaz de usuario de Windows 10 solo están disponibles para los controles XAML de UWP.
+* Integra tu aplicación de escritorio con experiencias de Windows 10 mediante las [extensiones de paquete](./modernize/desktop-to-uwp-extensions.md). Por ejemplo, haz que los iconos de Inicio apunten a tu aplicación, convierte tu aplicación en un destino de recurso compartido o envía notificaciones del sistema desde la aplicación.
+* Usa [islas XAML](./modernize/xaml-islands.md) para hospedar controles XAML de UWP en tu aplicación de escritorio. Muchas de las características más recientes de la interfaz de usuario de Windows 10 solo están disponibles para los controles XAML de UWP.
 
 Para obtener más información, consulta los artículos siguientes.
 
@@ -80,8 +80,8 @@ Para obtener más información, consulta los artículos siguientes.
 
 | Artículo | Descripción |
 |---------|-------------|
-| [Modernización de las aplicaciones de escritorio](/windows/apps/desktop/modernize) | Describe las características de desarrollo de Windows 10 y UWP más recientes que puedes usar en cualquier aplicación de escritorio, incluidas las aplicaciones de escritorio de WPF, Windows Forms y C++ Win32. |
-| [Tutorial: Modernización de una aplicación WPF](/windows/apps/desktop/modernize/modernize-wpf-tutorial) | Sigue las instrucciones paso a paso para modernizar una aplicación de ejemplo de línea de negocio de WPF existente. Para ello, agrega los controles del calendario y el Lápiz de UWP a la aplicación e inclúyela en un paquete MSIX.  |
+| [Modernización de las aplicaciones de escritorio](./modernize/index.md) | Describe las características de desarrollo de Windows 10 y UWP más recientes que puedes usar en cualquier aplicación de escritorio, incluidas las aplicaciones de escritorio de WPF, Windows Forms y C++ Win32. |
+| [Tutorial: Modernización de una aplicación WPF](./modernize/modernize-wpf-tutorial.md) | Sigue las instrucciones paso a paso para modernizar una aplicación de ejemplo de línea de negocio de WPF existente. Para ello, agrega los controles del calendario y el Lápiz de UWP a la aplicación e inclúyela en un paquete MSIX.  |
 
 ## <a name="create-new-desktop-apps"></a>Creación de nuevas aplicaciones de escritorio
 
@@ -93,20 +93,20 @@ Si estás creando una nueva aplicación de escritorio para Windows, aquí tienes
 |---------|-------------|
 | [Elección de la plataforma de aplicaciones](choose-your-platform.md) | Proporciona una comparación detallada de las principales plataformas de aplicaciones de escritorio y puede ayudarte a elegir la plataforma adecuada para tus necesidades. En este artículo también se proporcionan vínculos útiles a documentos de cada plataforma. |
 | [Plantillas de proyecto Visual Studio para aplicaciones de Windows](visual-studio-templates.md) | Describe las plantillas de proyecto y elementos que Visual Studio proporciona para ayudarle a compilar aplicaciones para dispositivos Windows 10 mediante el uso de C\# o C++. |
-| [Modernización de las aplicaciones de escritorio](/windows/apps/desktop/modernize) | Describe las características de desarrollo de Windows 10 y UWP más recientes que puedes usar en cualquier aplicación de escritorio, incluidas las aplicaciones de escritorio de WPF, Windows Forms y C++ Win32. |
-| [Características y tecnologías](/windows/apps/features-and-technologies) | Proporciona información general sobre las características de Windows a las que se puede acceder a través de cada una de las plataformas de aplicaciones de escritorio principales, además de vínculos a los documentos relacionados. |
+| [Modernización de las aplicaciones de escritorio](./modernize/index.md) | Describe las características de desarrollo de Windows 10 y UWP más recientes que puedes usar en cualquier aplicación de escritorio, incluidas las aplicaciones de escritorio de WPF, Windows Forms y C++ Win32. |
+| [Características y tecnologías](../features-and-technologies.md) | Proporciona información general sobre las características de Windows a las que se puede acceder a través de cada una de las plataformas de aplicaciones de escritorio principales, además de vínculos a los documentos relacionados. |
 
 ## <a name="related-documentation-and-technologies"></a>Documentación y tecnologías relacionadas
 
 | Recurso | Descripción |
 |---------|-------------|
-| [.NET Core 3.0](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0) | Obtén información sobre las características más recientes de .NET Core 3.0, incluidas las mejoras para las aplicaciones de WPF y Windows Forms. |
-| [Guía de escritorio para WPF y .NET Core 3.0](https://docs.microsoft.com/dotnet/desktop-wpf/overview/index) | Desarrolla aplicaciones de WPF para .NET Core 3.0 en lugar de desarrollarlas para la versión completa de .NET Framework.  |
-| [Azure](https://docs.microsoft.com/azure/) | Amplía el alcance de tus aplicaciones con los servicios en la nube de Azure. |
-| [Visual Studio](https://docs.microsoft.com/visualstudio/) | Aprende a usar Visual Studio para desarrollar aplicaciones y servicios. |
-| [MSIX](https://docs.microsoft.com/windows/msix/) | Empaqueta e implementa cualquier aplicación de Windows con un formato de empaquetado moderno y universal. |
-| [Inteligencia artificial de Windows](https://docs.microsoft.com/windows/ai/) | Usa la IA de Windows para compilar soluciones inteligentes para problemas complejos en tus aplicaciones. |
-| [Contenedores de Windows](https://docs.microsoft.com/virtualization/windowscontainers/) | Empaqueta tus aplicaciones con sus dependencias en entornos de Windows rápidos y completamente aislados. |
-| [Aplicaciones web progresivas](https://docs.microsoft.com/microsoft-edge/progressive-web-apps) | Convierte tus aplicaciones web en Web Apps progresivas que se puedan distribuir y ejecutar como aplicaciones para UWP en Windows 10. |
-| [Xamarin](https://docs.microsoft.com/xamarin/) | Crea aplicaciones multiplataforma para Windows, Android, iOS y macOS con código .NET e interfaces de usuario específicas de la plataforma. |
-| [Archivo de documentos para Windows 8.x y versiones anteriores](https://docs.microsoft.com/previous-versions/windows/) | Accede a la documentación archivada sobre la creación de aplicaciones para Windows 8. x y versiones anteriores. |
+| [.NET Core 3.0](/dotnet/core/whats-new/dotnet-core-3-0) | Obtén información sobre las características más recientes de .NET Core 3.0, incluidas las mejoras para las aplicaciones de WPF y Windows Forms. |
+| [Guía de escritorio para WPF y .NET Core 3.0](/dotnet/desktop-wpf/overview/index) | Desarrolla aplicaciones de WPF para .NET Core 3.0 en lugar de desarrollarlas para la versión completa de .NET Framework.  |
+| [Azure](/azure/) | Amplía el alcance de tus aplicaciones con los servicios en la nube de Azure. |
+| [Visual Studio](/visualstudio/) | Aprende a usar Visual Studio para desarrollar aplicaciones y servicios. |
+| [MSIX](/windows/msix/) | Empaqueta e implementa cualquier aplicación de Windows con un formato de empaquetado moderno y universal. |
+| [Inteligencia artificial de Windows](/windows/ai/) | Usa la IA de Windows para compilar soluciones inteligentes para problemas complejos en tus aplicaciones. |
+| [Contenedores de Windows](/virtualization/windowscontainers/) | Empaqueta tus aplicaciones con sus dependencias en entornos de Windows rápidos y completamente aislados. |
+| [Aplicaciones web progresivas](/microsoft-edge/progressive-web-apps) | Convierte tus aplicaciones web en Web Apps progresivas que se puedan distribuir y ejecutar como aplicaciones para UWP en Windows 10. |
+| [Xamarin](/xamarin/) | Crea aplicaciones multiplataforma para Windows, Android, iOS y macOS con código .NET e interfaces de usuario específicas de la plataforma. |
+| [Archivo de documentos para Windows 8.x y versiones anteriores](/previous-versions/windows/) | Accede a la documentación archivada sobre la creación de aplicaciones para Windows 8. x y versiones anteriores. |

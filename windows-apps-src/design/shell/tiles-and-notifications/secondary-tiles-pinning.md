@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo anclar un icono secundario para que se inicie desde la aplicación de Windows.
+description: Obtenga información sobre cómo crear un icono secundario y anclarlo al menú Inicio mediante programación desde una aplicación Plataforma universal de Windows (UWP).
 title: Anclar iconos secundarios a Inicio
 label: Pin secondary tiles to Start
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, iconos secundarios, PIN, anclaje, Inicio rápido, ejemplo de código, ejemplo, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: 7499a9a4040850595f616a5de0badb9efeab635f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8e3949bd4534d32f202aaec78b91eb8c780e6db8
+ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172319"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238290"
 ---
 # <a name="pin-secondary-tiles-to-start"></a>Anclar iconos secundarios a Inicio
 

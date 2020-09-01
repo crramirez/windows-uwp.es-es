@@ -1,41 +1,41 @@
 ---
-description: Describe el esquema de datos JSON extendido para productos de la Tienda en el espacio de nombres Windows.Services.Store.
-title: Esquemas de datos para productos de la Store
+description: Describe el esquema de datos JSON extendido para los productos de la tienda en el espacio de nombres Windows. Services. Store.
+title: Esquemas de datos para productos de Store
 ms.date: 09/26/2017
 ms.topic: article
-keywords: windows 10, uwp, ExtendedJsonData, productos de Microsoft Store, esquema
+keywords: Windows 10, UWP, ExtendedJsonData, productos de la tienda, esquema
 ms.localizationpriority: medium
-ms.openlocfilehash: 77f63ce409a576b3c873d95df0d2e8d0f0933808
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 46feac06745cd875aaf99985d45ea1b5b126b540
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372537"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175099"
 ---
-# <a name="data-schemas-for-store-products"></a>Esquemas de datos para productos de la Store
+# <a name="data-schemas-for-store-products"></a>Esquemas de datos para productos de Store
 
-Cuando envías un producto como una aplicación o un complemento a la Tienda, esta mantiene un conjunto completo de datos para el producto y sus licencias. En el código de la aplicación, puedes obtener acceso mediante programación a algunos de estos datos con las propiedades del espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Por ejemplo, puedes recuperar la descripción y el precio de la aplicación actual o un complemento de la aplicación actual mediante las propiedades [StoreProduct.Description](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Description) y [StoreProduct.Price](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Price).
+Cuando se envía un producto, como una aplicación o un complemento a la tienda, el almacén mantiene un conjunto completo de datos para el producto y sus licencias. En el código de la aplicación, puede acceder mediante programación a algunos de estos datos mediante las propiedades del espacio de nombres [Windows. Services. Store](/uwp/api/windows.services.store) . Por ejemplo, puede recuperar la descripción y el precio de la aplicación actual o un complemento de la aplicación actual mediante las propiedades [StoreProduct. Description](/uwp/api/windows.services.store.storeproduct.Description) y [StoreProduct. Price](/uwp/api/windows.services.store.storeproduct.Price) .
 
-Sin embargo, muchos de los datos de productos de la Store no se exponen por las propiedades predefinidas en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Para obtener acceso a los datos completos de un producto en tu código, puedes usar las siguientes propiedades generales en su lugar:
+Sin embargo, gran parte de los datos de los productos de la tienda no se exponen mediante propiedades predefinidas en el espacio de nombres [Windows. Services. Store](/uwp/api/windows.services.store) . Para tener acceso a los datos completos de un producto en el código, puede usar en su lugar las siguientes propiedades generales:
 
-* [StoreProduct.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.ExtendedJsonData)
-* [StoreSku.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.ExtendedJsonData)
-* [StoreAvailability.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.ExtendedJsonData)
-*   [StoreCollectionData.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storecollectiondata.ExtendedJsonData)
-*   [StoreAppLicense.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData)
-* [StoreLicense.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storelicense.ExtendedJsonData)
-*   [StorePurchaseProperties.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storepurchaseproperties.ExtendedJsonData)
+* [StoreProduct.ExtendedJsonData](/uwp/api/windows.services.store.storeproduct.ExtendedJsonData)
+* [StoreSku.ExtendedJsonData](/uwp/api/windows.services.store.storesku.ExtendedJsonData)
+* [StoreAvailability.ExtendedJsonData](/uwp/api/windows.services.store.storeavailability.ExtendedJsonData)
+*   [StoreCollectionData.ExtendedJsonData](/uwp/api/windows.services.store.storecollectiondata.ExtendedJsonData)
+*   [StoreAppLicense.ExtendedJsonData](/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData)
+* [StoreLicense.ExtendedJsonData](/uwp/api/windows.services.store.storelicense.ExtendedJsonData)
+*   [StorePurchaseProperties.ExtendedJsonData](/uwp/api/windows.services.store.storepurchaseproperties.ExtendedJsonData)
 
-Estas propiedades devuelven los datos completos del objeto correspondiente como una cadena con formato JSON. En este artículo se proporciona el esquema completo para los datos devueltos por estas propiedades.
+Estas propiedades devuelven los datos completos del objeto correspondiente como una cadena con formato JSON. En este artículo se proporciona el esquema completo de los datos devueltos por estas propiedades.
 
 > [!NOTE]
-> Los productos de la Store se organizan en una jerarquía de objetos de [producto](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct), [SKU](https://docs.microsoft.com/uwp/api/windows.services.store.storesku), y [disponibilidad](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability). Para obtener más información, consulta [Productos, SKU y disponibilidades](in-app-purchases-and-trials.md#products-skus).
+> Los productos del almacén se organizan en una jerarquía de objetos de [producto](/uwp/api/windows.services.store.storeproduct), [SKU](/uwp/api/windows.services.store.storesku)y [disponibilidad](/uwp/api/windows.services.store.storeavailability) . Para obtener más información, consulte [productos, SKU y disponibilidad](in-app-purchases-and-trials.md#products-skus).
 
 ## <a name="schema-for-storeproduct-storesku-storeavailability-and-storecollectiondata"></a>Esquema para StoreProduct, StoreSku, StoreAvailability y StoreCollectionData
 
-El esquema siguiente describe la cadena con formato JSON devuelta por [StoreProduct.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.ExtendedJsonData). Las propiedades [StoreSku.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.ExtendedJsonData), [StoreAvailability.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.ExtendedJsonData) y [StoreCollectionData.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storecollectiondata.ExtendedJsonData) solo devuelven las partes del esquema que se definen en las rutas de acceso `DisplaySkuAvailabilities\Sku`, `DisplaySkuAvailabilities\Availabilities` y `DisplaySkuAvailabilities\Sku\CollectionData`, respectivamente.
+En el esquema siguiente se describe la cadena con formato JSON devuelta por [StoreProduct. ExtendedJsonData](/uwp/api/windows.services.store.storeproduct.ExtendedJsonData). Las propiedades [StoreSku. ExtendedJsonData](/uwp/api/windows.services.store.storesku.ExtendedJsonData), [StoreAvailability. ExtendedJsonData](/uwp/api/windows.services.store.storeavailability.ExtendedJsonData)y [StoreCollectionData. ExtendedJsonData](/uwp/api/windows.services.store.storecollectiondata.ExtendedJsonData) solo devuelven las partes del esquema definidas bajo las rutas de acceso `DisplaySkuAvailabilities\Sku` , `DisplaySkuAvailabilities\Availabilities` y `DisplaySkuAvailabilities\Sku\CollectionData` , respectivamente.
 
-Para ver un ejemplo de una cadena con formato JSON devuelta por [StoreProduct.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.ExtendedJsonData), consulta [esta sección](#product-example).
+Para obtener un ejemplo de una cadena con formato JSON devuelta por [StoreProduct. ExtendedJsonData](/uwp/api/windows.services.store.storeproduct.ExtendedJsonData), vea [esta sección](#product-example).
 
 [!code-json[ExtendedJsonDataSchema](./code/InAppPurchasesAndLicenses_RS1/json/StoreProduct.ExtendedJsonData.json#L1-L729)]
 
@@ -43,15 +43,15 @@ Para ver un ejemplo de una cadena con formato JSON devuelta por [StoreProduct.Ex
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una cadena con formato JSON devuelta por la propiedad [StoreProduct.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.ExtendedJsonData) para la aplicación.
+En el ejemplo siguiente se muestra una cadena con formato JSON devuelta por la propiedad [StoreProduct. ExtendedJsonData](/uwp/api/windows.services.store.storeproduct.ExtendedJsonData) para la aplicación.
 
 [!code-json[ExtendedJsonDataSchema](./code/InAppPurchasesAndLicenses_RS1/json/StoreProduct.ExtendedJsonDataExample.json#L1-L268)]
 
 ## <a name="schema-for-storeapplicense-and-storelicense"></a>Esquema para StoreAppLicense y StoreLicense
 
-El esquema siguiente describe la cadena con formato JSON devuelta por [StoreAppLicense.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData). La propiedad [StoreLicense.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storelicense.ExtendedJsonData) devuelve solamente las partes del esquema que se definen en la ruta de acceso `productAddOns`.
+En el esquema siguiente se describe la cadena con formato JSON devuelta por [StoreAppLicense. ExtendedJsonData](/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData). La propiedad [StoreLicense. ExtendedJsonData](/uwp/api/windows.services.store.storelicense.ExtendedJsonData) devuelve solo las partes del esquema definidas bajo la `productAddOns` ruta de acceso.
 
-Para ver un ejemplo de una cadena con formato JSON devuelta por [StoreAppLicense.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData), consulta [esta sección](#license-example).
+Para obtener un ejemplo de una cadena con formato JSON devuelta por [StoreAppLicense. ExtendedJsonData](/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData), vea [esta sección](#license-example).
 
 [!code-json[ExtendedJsonDataSchema](./code/InAppPurchasesAndLicenses_RS1/json/StoreAppLicense.ExtendedJsonData.json#L1-L80)]
 
@@ -59,21 +59,21 @@ Para ver un ejemplo de una cadena con formato JSON devuelta por [StoreAppLicense
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una cadena con formato JSON devuelta por la propiedad [StoreAppLicense.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData) para la aplicación.
+En el ejemplo siguiente se muestra una cadena con formato JSON devuelta por la propiedad [StoreAppLicense. ExtendedJsonData](/uwp/api/windows.services.store.storeapplicense.ExtendedJsonData) para la aplicación.
 
 [!code-json[ExtendedJsonDataSchema](./code/InAppPurchasesAndLicenses_RS1/json/StoreAppLicense.ExtendedJsonDataExample.json#L1-L28)]
 
 ## <a name="schema-for-storepurchaseproperties"></a>Esquema para StorePurchaseProperties
 
-El esquema siguiente describe la cadena con formato JSON devuelta por [StorePurchaseProperties.ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storepurchaseproperties.ExtendedJsonData).
+En el esquema siguiente se describe la cadena con formato JSON devuelta por [StorePurchaseProperties. ExtendedJsonData](/uwp/api/windows.services.store.storepurchaseproperties.ExtendedJsonData).
 
 [!code-json[ExtendedJsonDataSchema](./code/InAppPurchasesAndLicenses_RS1/json/StorePurchaseProperties.ExtendedJsonData.json#L1-L12)]
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
-* [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
-* [Obtener la información de licencia para las aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
-* [Habilitar la adquisición de la aplicación de las aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [Habilitar complemento consumibles compras](enable-consumable-add-on-purchases.md)
+* [Obtener información de producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obtener información de licencia para aplicaciones y complementos](get-license-info-for-apps-and-add-ons.md)
+* [Habilitar compras desde la aplicación para aplicaciones y complementos](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [Habilitar compras de complementos consumibles](enable-consumable-add-on-purchases.md)
 * [Implementar una versión de prueba de la aplicación](implement-a-trial-version-of-your-app.md)

@@ -1,17 +1,17 @@
 ---
-title: Optimizar la latencia de entrada para juegos de DirectX para UWP
+title: Optimizar la latencia de entrada para juegos DirectX de UWP
 description: La latencia de entrada puede influir considerablemente en la experiencia de un juego, por lo que al optimizarla puedes conseguir una experiencia más fluida.
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, games, juegos, DirectX, input latency, latencia de entrada
+keywords: Windows 10, UWP, juegos, DirectX, latencia de entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: a74e2e24810dee058aa166800091af91d55cdef4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f0f95e7bdc523751e0d9eea5ffdd1ef5b889ddfc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368456"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175269"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 
@@ -60,12 +60,12 @@ Cuando el contenido de un juego de DirectX se representa y está listo para apar
 
 Realizaremos una iteración de un sencillo juego de puzzle para ilustrar la implementación del bucle del juego en cada uno de los escenarios mencionados anteriormente. En cada implementación se comentan las decisiones tomadas, los beneficios y el equilibrio obtenidos, que te servirán de guía a la hora de optimizar tus aplicaciones para lograr una latencia de entrada baja y la eficiencia energética.
 
-## <a name="scenario-1-render-on-demand"></a>Escenario 1: Representación a petición
+## <a name="scenario-1-render-on-demand"></a>Escenario 1: Representar a petición
 
 
 La primera iteración del juego de puzzle actualiza la pantalla únicamente cuando un usuario mueve una pieza del puzzle. Un usuario puede arrastrar una pieza del puzzle hasta su sitio o bien ajustarla en su sitio seleccionándola y, luego, tocando el destino correspondiente. En el segundo caso, la pieza de puzzle irá al destino sin ninguna animación o efecto.
 
-El código tiene un bucle de juego con un solo subproceso dentro del método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) que usa **CoreProcessEventsOption::ProcessOneAndAllPending**. Si se usa esta opción, todos los eventos que actualmente estén disponibles se distribuirán en la cola. Si no hay eventos pendientes, el bucle del juego espera hasta que surge uno.
+El código tiene un bucle de juego con un solo subproceso dentro del método [**IFrameworkView::Run**](/uwp/api/windows.applicationmodel.core.iframeworkview.run) que usa **CoreProcessEventsOption::ProcessOneAndAllPending**. Si se usa esta opción, todos los eventos que actualmente estén disponibles se distribuirán en la cola. Si no hay eventos pendientes, el bucle del juego espera hasta que surge uno.
 
 ``` syntax
 void App::Run()
@@ -91,12 +91,12 @@ void App::Run()
 }
 ```
 
-## <a name="scenario-2-render-on-demand-with-transient-animations"></a>Escenario 2: Representación a petición con animaciones transitorias
+## <a name="scenario-2-render-on-demand-with-transient-animations"></a>Escenario 2: Representar a petición con animaciones transitorias
 
 
 En la segunda iteración, el juego se modifica de forma que, cuando un usuario selecciona una pieza del puzzle y después toca el destino correcto de dicha pieza, se produce una animación de la pieza en pantalla hasta que llega a su destino.
 
-Como ya se comentó antes, el código tiene un bucle de juego con un solo subproceso que usa **ProcessOneAndAllPending** para distribuir los eventos de entrada en la cola. La diferencia aquí reside en que, durante una animación, el bucle cambia para usar **CoreProcessEventsOption::ProcessAllIfPresent** y, así, no tener que esperar nuevos eventos de entrada. Si no hay eventos pendientes, [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) regresa inmediatamente y permite que la aplicación muestre el siguiente fotograma de la animación. Cuando la animación finaliza, el bucle cambia de nuevo a **ProcessOneAndAllPending** para restringir las actualizaciones de pantalla.
+Como ya se comentó antes, el código tiene un bucle de juego con un solo subproceso que usa **ProcessOneAndAllPending** para distribuir los eventos de entrada en la cola. La diferencia aquí reside en que, durante una animación, el bucle cambia para usar **CoreProcessEventsOption::ProcessAllIfPresent** y, así, no tener que esperar nuevos eventos de entrada. Si no hay eventos pendientes, [**ProcessEvents**](/uwp/api/windows.ui.core.coredispatcher.processevents) regresa inmediatamente y permite que la aplicación muestre el siguiente fotograma de la animación. Cuando la animación finaliza, el bucle cambia de nuevo a **ProcessOneAndAllPending** para restringir las actualizaciones de pantalla.
 
 ``` syntax
 void App::Run()
@@ -139,7 +139,7 @@ void App::Run()
 
 Para permitir la transición entre **ProcessOneAndAllPending** y **ProcessAllIfPresent**, la aplicación debe realizar un seguimiento del estado para saber si hay animación. En la aplicación de puzle, esto se logra agregando un nuevo método al que se puede llamar durante el bucle del juego en la clase GameState. La rama de animación del bucle del juego controla las actualizaciones en el estado de la animación llamando al nuevo método Update de GameState.
 
-## <a name="scenario-3-render-60-frames-per-second"></a>Escenario 3: Procesar 60 fotogramas por segundo
+## <a name="scenario-3-render-60-frames-per-second"></a>Escenario 3: Representar 60 fotogramas por segundo
 
 
 En la tercera iteración, la aplicación muestra un cronómetro que informa al usuario del tiempo que lleva manipulando el puzzle. Como refleja el tiempo transcurrido hasta en milisegundos, debe representar 60 fotogramas por segundo para mantener la pantalla actualizada.
@@ -177,12 +177,12 @@ Este método constituye la forma más sencilla de escribir un juego, ya que no h
 
 Sin embargo, esta facilidad de desarrollo tiene su precio, y es que representar a 60 fotogramas por segundo requiere más energía que hacerlo a petición. Lo mejor es usar **ProcessAllIfPresent** cuando el juego cambie lo que aparece en cada fotograma. Asimismo, la latencia de entrada también aumenta hasta llegar incluso a los 16,7 ms, ya que la aplicación bloquea el bucle del juego en el intervalo de sincronización de la pantalla en lugar de en **ProcessEvents**. Algunos eventos de entrada pueden quedar descartados, porque la cola se procesa solamente una vez por fotograma (60 Hz).
 
-## <a name="scenario-4-render-60-frames-per-second-and-achieve-the-lowest-possible-input-latency"></a>Escenario 4: Representar 60 fotogramas por segundo y lograr la menor latencia posible de entrada
+## <a name="scenario-4-render-60-frames-per-second-and-achieve-the-lowest-possible-input-latency"></a>Escenario 4: Representar 60 fotogramas por segundo y lograr la latencia de entrada más baja posible
 
 
 Algunos juegos pueden ser capaces de ignorar o compensar el aumento de la latencia de entrada que hemos visto en el escenario 3. No obstante, si una latencia de entrada baja es fundamental para la experiencia del juego y la sensibilidad de la respuesta del jugador, los juegos que se representan a 60 fotogramas por segundo deberán procesar las entradas en un subproceso aparte.
 
-La cuarta iteración del juego de puzzle se basa en el escenario 3, y divide el procesamiento de entradas y la representación de gráficos del bucle del juego en subprocesos independientes. Al tener subprocesos independientes para cada evento, la salida de gráficos no provoca retrasos en la entrada, pero el código es más complejo. En el escenario 4, el subproceso de entrada llama a [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) con [**CoreProcessEventsOption::ProcessUntilQuit**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreProcessEventsOption), que espera nuevos eventos y distribuye todos los eventos disponibles. Este comportamiento se mantiene hasta que la ventana se cierra o el juego llama a [**CoreWindow::Close**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.close).
+La cuarta iteración del juego de puzzle se basa en el escenario 3, y divide el procesamiento de entradas y la representación de gráficos del bucle del juego en subprocesos independientes. Al tener subprocesos independientes para cada evento, la salida de gráficos no provoca retrasos en la entrada, pero el código es más complejo. En el escenario 4, el subproceso de entrada llama a [**ProcessEvents**](/uwp/api/windows.ui.core.coredispatcher.processevents) con [**CoreProcessEventsOption::ProcessUntilQuit**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption), que espera nuevos eventos y distribuye todos los eventos disponibles. Este comportamiento se mantiene hasta que la ventana se cierra o el juego llama a [**CoreWindow::Close**](/uwp/api/windows.ui.core.corewindow.close).
 
 ``` syntax
 void App::Run()
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-El **DirectX 11 y XAML App (Windows Universal)** plantilla en Microsoft Visual Studio 2015 divide el bucle de juego en varios subprocesos de manera similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreIndependentInputSource) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
+La plantilla **DirectX 11 and XAML App (Universal Windows)** de Microsoft Visual Studio 2015 divide el bucle del juego en varios subprocesos de una forma similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](/uwp/api/Windows.UI.Core.CoreIndependentInputSource) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Otras formas de reducir la latencia de entrada
 
@@ -242,11 +242,11 @@ El **DirectX 11 y XAML App (Windows Universal)** plantilla en Microsoft Visual S
 
 Los juegos de DirectX responden a las entradas de usuario actualizando lo que se ve en pantalla. En una pantalla de 60 Hz, la actualización se produce cada 16,7 ms (1 segundo/60 fotogramas). En la figura 1 se muestran el ciclo de vida aproximado y la respuesta a un evento de entrada relativo a la señal de actualización de 16,7 ms (VBlank) de una aplicación que representa 60 fotogramas por segundo:
 
-Figura 1
+En la Ilustración 1
 
 ![figura 1: latencia de entrada en directx ](images/input-latency1.png)
 
-En Windows 8.1, DXGI introdujo el **DXGI\_intercambio\_cadena\_marca\_marco\_LATENCIA\_WAITABLE\_objeto** marca para el intercambio cadena, que permite que las aplicaciones reducir esta latencia fácilmente sin necesidad de implementar la heurística necesaria para mantener la cola presente vacío. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura 2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
+En Windows 8.1, DXGI presentó la marca de objeto de tiempo de ** \_ \_ \_ \_ \_ \_ espera \_ del marco** de la cadena de intercambio de dxgi para la cadena de intercambio, lo que permite a las aplicaciones reducir fácilmente esta latencia sin necesidad de implementar la heurística para mantener la cola presente vacía. Las cadenas de intercambio creadas con esta etiqueta se conocen como cadenas de intercambio que pueden esperar. En la figura 2 se muestran el ciclo de vida y respuesta aproximados a un evento de entrada cuando se usan cadenas de intercambio que pueden esperar:
 
 Figura 2
 
@@ -257,7 +257,3 @@ Lo que deducimos de estos diagramas es que existe la posibilidad de reducir la l
  
 
  
-
-
-
-

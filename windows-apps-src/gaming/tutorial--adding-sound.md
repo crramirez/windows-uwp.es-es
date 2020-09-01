@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, sonido
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e624c750bfce0633bc91d440fd883341b831836
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 04a9ea70914be3c60826df8753eca2ad1c30f19d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409654"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175189"
 ---
 # <a name="add-sound"></a>Agregar sonido
 
@@ -21,7 +21,7 @@ ms.locfileid: "85409654"
 En este tema, se creará un motor de sonido sencillo con las API de [XAudio2](/windows/desktop/xaudio2/xaudio2-introduction) . Si no está familiarizado con __XAudio2__, hemos incluido una breve introducción en [conceptos de audio](#audio-concepts).
 
 >[!Note]
->Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](/windows/uwp/get-started/get-uwp-app-samples).
+>Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](../get-started/get-app-samples.md).
 
 ## <a name="objective"></a>Objetivo
 

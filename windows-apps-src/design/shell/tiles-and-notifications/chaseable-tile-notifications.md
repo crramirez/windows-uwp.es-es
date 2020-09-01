@@ -1,57 +1,57 @@
 ---
-Description: Usa notificaciones de icono rastreables para averiguar qué ha mostrado tu aplicación en su Icono dinámico cuando el usuario ha hecho clic en ella.
+Description: Use las notificaciones de icono de seguimiento para averiguar lo que la aplicación muestra en su icono dinámico cuando el usuario hace clic en ella.
 title: Notificaciones de iconos rastreables
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tile notifications
 template: detail.hbs
 ms.date: 06/13/2017
 ms.topic: article
-keywords: windows 10, uwp, iconos rastreables, iconos dinámicos, notificaciones de iconos rastreables
+keywords: Windows 10, UWP, mosaicos de seguimiento, mosaicos dinámicos, notificaciones de icono de seguimiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e27dec0e7256cfc035ecc3150bd976f69743fe3
-ms.sourcegitcommit: f15cf141c299bde9cb19965d8be5198d7f85adf8
+ms.openlocfilehash: a10e68f2926761338a95d5d2c649c84468efada8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358620"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173819"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificaciones de iconos rastreables
 
-Las notificaciones de icono rastreables permiten determinar qué notificaciones de icono ha mostrado el Icono dinámico de la aplicación cuando el usuario ha hecho clic en dicho icono.  
-Por ejemplo, una aplicación de noticias podría usar esta característica para determinar qué noticia mostraba su Icono dinámico cuando el usuario la ha iniciado; luego podría asegurarse de que la historia se muestre en un lugar destacado, para que el usuario pueda encontrarla. 
+Las notificaciones de icono de seguimiento le permiten determinar qué notificaciones de icono se muestran en el icono dinámico de la aplicación cuando el usuario hizo clic en el icono.  
+Por ejemplo, una aplicación de noticias podría usar esta característica para determinar en qué noticia se mostraba el icono dinámico cuando el usuario lo inició; podría asegurarse de que la historia se muestre de forma destacada para que el usuario pueda encontrarla. 
 
 > [!IMPORTANT]
-> **Requiere la actualización de aniversario de**: Usar notificaciones de icono chaseable con C#, C++, o para UWP basada en VB aplicaciones, debe tener como destino el SDK 14393 y se ejecuta la compilación 14393 o superior. Para las aplicaciones para UWP basadas en JavaScript, debes utilizar el SDK 17134 y ejecutar la compilación 17134 o superior. 
+> **Requiere actualización de aniversario**: para usar notificaciones de icono de seguimiento con aplicaciones de UWP basadas en C#, C++ o VB, debe tener como destino el SDK 14393 y ejecutar la compilación 14393 o posterior. En el caso de las aplicaciones para UWP basadas en JavaScript, debe tener como destino el SDK 17134 y ejecutar la compilación 17134 o posterior. 
 
 
-> **API importantes**: [Propiedad LaunchActivatedEventArgs.TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo clase](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+> **API importantes**: [propiedad LaunchActivatedEventArgs. TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [clase TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 
-## <a name="how-it-works"></a>Cómo funciona
+## <a name="how-it-works"></a>Funcionamiento
 
-Para habilitar las notificaciones de iconos rastreables, usa la propiedad **Arguments** de la carga de notificaciones de iconos, similar a la propiedad launch en la carga de notificaciones del sistema, para insertar información sobre el contenido en la notificación de icono.
+Para habilitar las notificaciones de icono de seguimiento, use la propiedad **arguments** en la carga de notificación de icono, similar a la propiedad Launch en la carga de notificación del sistema, para insertar información sobre el contenido en la notificación de icono.
 
-Cuando la aplicación se inicia mediante el Icono dinámico, el sistema devuelve una lista de argumentos desde las notificaciones de iconos actuales/mostradas recientemente.
-
-
-## <a name="when-to-use-chaseable-tile-notifications"></a>Cuándo usar las notificaciones de iconos rastreables
-
-Las notificaciones de iconos rastreables se usan normalmente al utilizar la cola de notificaciones del Icono dinámico (lo que significa que se realizan ciclos por hasta 5 notificaciones diferentes). También son útiles cuando el contenido del Icono dinámico es probable que no esté sincronizado con el contenido más reciente de la aplicación. Por ejemplo, la aplicación de noticias actualiza su Icono dinámico cada 30 minutos, pero cuando se inicia la aplicación, carga las últimas noticias (que es posible que no incluyan algo que estaba en el icono desde el último intervalo de sondeo). Cuando sucede eso, el usuario puede frustrarse por no encontrar la noticia que estaba viendo en su Icono dinámico. Aquí es donde pueden ayudar las notificaciones de iconos rastreables, al permitirte asegurar que lo que el usuario ha visto en su icono sea fácil de encontrar.
-
-## <a name="what-to-do-with-a-chaseable-tile-notifications"></a>Qué hacer con las notificaciones de iconos rastreables
-
-Lo más importante a tener en cuenta es que, en la mayoría de casos, **NO debes navegar directamente a la notificación específica** que estuviera en el icono cuando el usuario hizo clic en él. El Icono dinámico sirve como punto de entrada a la aplicación. Puede haber dos escenarios cuando un usuario hace clic en el icono dinámico: (1) ha intentado iniciar la aplicación normalmente o (2) que querían ver más información acerca de una notificación específica que se encontraba en el icono dinámico. Dado que no hay forma de que el usuario indique el comportamiento que quiere de manera explícita, lo ideal es **iniciar la aplicación normalmente y a la vez asegurarse de que la notificación que ha visto el usuario sea fácil de encontrar**.
-
-Por ejemplo, al hacer clic en el Icono dinámico de la aplicación MSN Noticias, la aplicación se inicia normalmente: muestra la página principal o el artículo que el usuario estuviera leyendo anteriormente. Sin embargo, en la página principal, la aplicación se asegura de que la noticia del Icono dinámico sea fácil de encontrar. De este modo, se admiten ambos casos: el escenario en el que simplemente quieres iniciar o reanudar la aplicación y el escenario en el que deseas ver el artículo específico.
+Cuando la aplicación se inicia mediante el icono dinámico, el sistema devuelve una lista de argumentos de las notificaciones de icono actual o recientemente mostradas.
 
 
-## <a name="how-to-include-the-arguments-property-in-your-tile-notification-payload"></a>Cómo incluir la propiedad Arguments en la carga activa de las notificaciones de iconos
+## <a name="when-to-use-chaseable-tile-notifications"></a>Cuándo usar notificaciones de icono con seguimiento
 
-En una carga útil de notificaciones, la propiedad Arguments permite a la aplicación proporcionar datos que puedes usar para identificar la notificación más adelante. Por ejemplo, los argumentos podrían incluir el identificador del artículo, para que cuando se inicie puedas recuperar y mostrar la noticia. La propiedad acepta una cadena, que se puede serializar como se quiera (cadena de consulta, JSON, etc.), pero normalmente recomendamos el formato de cadena de consulta, dado que es ligero y codifica XML bien.
+Las notificaciones de icono de seguimiento se suelen usar cuando se usa la cola de notificación en el icono dinámico (lo que significa que está pasando por un máximo de 5 notificaciones diferentes). También resultan útiles cuando el contenido del icono dinámico puede no estar sincronizado con el contenido más reciente de la aplicación. Por ejemplo, la aplicación de noticias actualiza su icono dinámico cada 30 minutos, pero cuando se inicia la aplicación, carga las últimas noticias (lo que puede no incluir algo que estaba en el icono del último intervalo de sondeo). Cuando esto sucede, es posible que el usuario se sienta frustrado al no poder encontrar el caso que vio en su icono dinámico. Aquí es donde las notificaciones de icono de persecución pueden ayudar, permitiéndole asegurarse de que el usuario que vio en su icono es fácilmente reconocible.
 
-La propiedad se puede establecer en los elementos **TileVisual** y **TileBinding** y se organiza en cascada hacia abajo. Si quieres los mismos argumentos en todos los tamaños de icono, simplemente establece los argumentos en **TileVisual**. Si necesitas argumentos específicos para tamaños de icono concretos, puedes establecer dichos argumentos en elementos **TileBinding** particulares.
+## <a name="what-to-do-with-a-chaseable-tile-notifications"></a>Qué hacer con las notificaciones de un icono de seguimiento
 
-Este ejemplo crea una carga de notificaciones que usa la propiedad arguments para que la notificación se pueda identificar más adelante. 
+Lo más importante que hay que tener en cuenta es que en la mayoría de los escenarios **no debe navegar directamente a la notificación específica** que estaba en el icono cuando el usuario hizo clic en él. El icono dinámico se usa como punto de entrada para la aplicación. Puede haber dos escenarios en los que un usuario haga clic en el icono dinámico: (1) deseaba iniciar la aplicación normalmente, o (2) quería ver más información sobre una notificación específica que estaba en el icono dinámico. Dado que no hay ninguna manera de que el usuario indique explícitamente qué comportamiento quieren, la experiencia ideal es **iniciar la aplicación normalmente, asegurándose de que la notificación que vio el usuario es fácilmente reconocible**.
+
+Por ejemplo, al hacer clic en el icono dinámico de la aplicación MSN News se inicia la aplicación normalmente: se muestra la Página principal o el artículo que el usuario ha leído anteriormente. Sin embargo, en la Página principal, la aplicación garantiza que la historia del icono dinámico sea fácilmente reconocible. De este modo, se admiten ambos escenarios: el escenario en el que solo quiere iniciar o reanudar la aplicación y el escenario en el que desea ver la historia específica.
+
+
+## <a name="how-to-include-the-arguments-property-in-your-tile-notification-payload"></a>Cómo incluir la propiedad arguments en la carga de notificación de icono
+
+En una carga de notificación, la propiedad arguments permite que la aplicación proporcione datos que puede usar para identificar posteriormente la notificación. Por ejemplo, los argumentos podrían incluir el identificador del caso, de modo que cuando se inicie, pueda recuperar y mostrar el caso. La propiedad acepta una cadena, que se puede serializar como se desea (cadena de consulta, JSON, etc.), pero normalmente se recomienda el formato de cadena de consulta, ya que es ligero y codifica XML de manera excelente.
+
+La propiedad se puede establecer en los elementos **TileVisual** y **TileBinding** , y se pondrá en cascada. Si desea los mismos argumentos en cada tamaño de mosaico, simplemente establezca los argumentos en el **TileVisual**. Si necesita argumentos específicos para tamaños de icono específicos, puede establecer los argumentos en elementos **TileBinding** individuales.
+
+En este ejemplo se crea una carga de notificación que usa la propiedad arguments para que la notificación se pueda identificar más adelante. 
 
 ```csharp
 // Uses the following NuGet packages
@@ -105,13 +105,13 @@ TileContent content = new TileContent()
 
 ## <a name="how-to-check-for-the-arguments-property-when-your-app-launches"></a>Cómo comprobar la propiedad arguments cuando se inicia la aplicación
 
-La mayoría de aplicaciones tienen un archivo de App.xaml.cs que contiene una invalidación para el método [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_). Como sugiere su nombre, la aplicación llama a este método cuando se inicia. Toma un único argumento, un objeto [LaunchActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs).
+La mayoría de las aplicaciones tienen un archivo App.xaml.cs que contiene una invalidación para el método [onlaunched](/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) . Como su nombre sugiere, la aplicación llama a este método cuando se inicia. Toma un único argumento, un objeto [LaunchActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) .
 
-El objeto LaunchActivatedEventArgs tiene una propiedad que habilita las notificaciones rastreables: la [propiedad TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), que proporciona acceso a un [objeto TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo). Cuando el usuario inicia la aplicación desde su icono (en lugar de desde la lista de aplicaciones, una búsqueda o cualquier otro punto de entrada), la aplicación inicializa esta propiedad.
+El objeto LaunchActivatedEventArgs tiene una propiedad que habilita las notificaciones de seguimiento: la [propiedad TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), que proporciona acceso a un [objeto TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo). Cuando el usuario inicia la aplicación desde su icono (en lugar de la lista de aplicaciones, la búsqueda o cualquier otro punto de entrada), la aplicación inicializa esta propiedad.
 
-El [objeto TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo) contiene una propiedad llamada [RecentlyShownNotifications](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo.RecentlyShownNotifications), que contiene una lista de las notificaciones que se han mostrado en el icono durante de los últimos 15 minutos. El primer elemento de la lista de representa la notificación que hay actualmente en el icono, y los elementos siguientes representan las notificaciones que el usuario ha visto antes de la actual. Si el icono se ha borrado, la lista está vacía.
+El [objeto TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo) contiene una propiedad denominada [RecentlyShownNotifications](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo.RecentlyShownNotifications), que contiene una lista de notificaciones que se han mostrado en el icono en los últimos 15 minutos. El primer elemento de la lista representa la notificación que se encuentra actualmente en el icono y los elementos siguientes representan las notificaciones que el usuario vio antes de la actual. Si el icono se ha borrado, esta lista está vacía.
 
-Cada ShownTileNotification tiene una propiedad de argumentos. La propiedad de Arguments se inicializará con la cadena de argumentos de la carga de la notificación de mosaico, o null si la carga útil no incluye la cadena de argumentos.
+Cada ShownTileNotification tiene una propiedad arguments. La propiedad arguments se inicializará con la cadena arguments de la carga de notificación del icono, o null si la carga no incluye la cadena arguments.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -140,14 +140,14 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ```
 
 
-### <a name="accessing-onlaunched-from-desktop-applications"></a>Acceso a OnLaunched desde aplicaciones de escritorio
+### <a name="accessing-onlaunched-from-desktop-applications"></a>Acceso a Onlaunched desde aplicaciones de escritorio
 
-Las aplicaciones de escritorio (como Win32, WPF, etcetera) mediante el [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop), puede usar iconos chaseable demasiado! La única diferencia es acceder a los argumentos de OnLaunched. Tenga en cuenta que en primer lugar debe [empaquetar la aplicación con el puente de escritorio](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
+Las aplicaciones de escritorio (como Win32, WPF, etc.) mediante el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), también pueden usar mosaicos de seguimiento. La única diferencia es el acceso a los argumentos Onlaunched. Tenga en cuenta que primero debe [empaquetar la aplicación con el puente de escritorio](/windows/msix/desktop/source-code-overview).
 
 > [!IMPORTANT]
-> **Requiere la actualización de octubre de 2018**: Para usar el `AppInstance.GetActivatedEventArgs()` API, debe tener como destino el SDK 17763 y se ejecuta la compilación 17763 o superior.
+> **Requiere la actualización de octubre de 2018**: para usar la `AppInstance.GetActivatedEventArgs()` API, debe tener como destino el SDK 17763 y ejecutar la compilación 17763 o posterior.
 
-Para aplicaciones de escritorio, para tener acceso a los argumentos de inicio, haga lo siguiente...
+En el caso de las aplicaciones de escritorio, para tener acceso a los argumentos de inicio, haga lo siguiente...
 
 ```csharp
 
@@ -185,7 +185,7 @@ static void Main()
 
 ## <a name="raw-xml-example"></a>Ejemplo de XML sin formato
 
-Si usas XML sin formato en lugar de la biblioteca de notificaciones, este es el código XML.
+Si utiliza XML sin formato en lugar de la biblioteca de notificaciones, este es el código XML.
 
 ```xml
 <tile>
@@ -221,5 +221,5 @@ Si usas XML sin formato en lugar de la biblioteca de notificaciones, este es el 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [LaunchActivatedEventArgs.TileActivatedInfo property](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs#Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_TileActivatedInfo_)
-- [Clase TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+- [Propiedad LaunchActivatedEventArgs. TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs#Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_TileActivatedInfo_)
+- [Clase TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)

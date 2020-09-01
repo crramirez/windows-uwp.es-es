@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, barra de tareas, administrador de la barra de tareas, anclar a la barra de tareas, icono principal
 ms.localizationpriority: medium
-ms.openlocfilehash: 44ef6430398960e13fe5eebb40a52d022df6f0d2
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8c5bba4a3bd6ebf1c4cbe0ef59a21c0e6ce44c79
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970660"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173839"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>Anclar la aplicación a la barra de tareas
 
@@ -22,12 +22,12 @@ Puede anclar su propia aplicación mediante programación a la barra de tareas, 
 > [!IMPORTANT]
 > **Requiere Fall Creators Update**: debe tener como destino el SDK 16299 y ejecutar la compilación 16299 o superior para usar las API de la barra de tareas.
 
-> **API importantes**: [clase TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) 
+> **API importantes**: [clase TaskbarManager](/uwp/api/windows.ui.shell.taskbarmanager) 
 
 
 ## <a name="when-should-you-ask-the-user-to-pin-your-app-to-the-taskbar"></a>¿Cuándo se debe pedir al usuario que ancle la aplicación a la barra de tareas? 
 
-La [clase TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager) permite pedirle al usuario que ancle la aplicación a la barra de tareas. el usuario debe aprobar la solicitud. Puede crear una gran cantidad de esfuerzo en la creación de una aplicación estelar y ahora tiene la oportunidad de pedirle al usuario que la ancle en la barra de tareas. Pero antes de profundizar en el código, aquí tiene algunas cosas que debe tener en cuenta al diseñar su experiencia:
+La [clase TaskbarManager](/uwp/api/windows.ui.shell.taskbarmanager) permite pedirle al usuario que ancle la aplicación a la barra de tareas. el usuario debe aprobar la solicitud. Puede crear una gran cantidad de esfuerzo en la creación de una aplicación estelar y ahora tiene la oportunidad de pedirle al usuario que la ancle en la barra de tareas. Pero antes de profundizar en el código, aquí tiene algunas cosas que debe tener en cuenta al diseñar su experiencia:
 
 * Cree una experiencia de **usuario no disruptiva** y fácilmente descartable en la aplicación con una llamada a la acción "anclar a la barra de tareas". Evite el uso de cuadros de diálogo y controles flotantes para este fin. 
 * Explique **claramente el** valor de la aplicación antes de pedir al usuario que la ancle.
@@ -38,7 +38,7 @@ La [clase TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.ta
 
 ## <a name="1-check-whether-the-required-apis-exist"></a>1. Compruebe si existen las API necesarias
 
-Si la aplicación es compatible con versiones anteriores de Windows 10, debe comprobar si la clase TaskbarManager está disponible. Puede usar el [método ApiInformation. IsTypePresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation#Windows_Foundation_Metadata_ApiInformation_IsTypePresent_System_String_) para realizar esta comprobación. Si la clase TaskbarManager no está disponible, evite ejecutar llamadas a las API.
+Si la aplicación es compatible con versiones anteriores de Windows 10, debe comprobar si la clase TaskbarManager está disponible. Puede usar el  [método ApiInformation. IsTypePresent](/uwp/api/windows.foundation.metadata.apiinformation#Windows_Foundation_Metadata_ApiInformation_IsTypePresent_System_String_) para realizar esta comprobación. Si la clase TaskbarManager no está disponible, evite ejecutar llamadas a las API.
 
 ```csharp
 if (ApiInformation.IsTypePresent("Windows.UI.Shell.TaskbarManager"))
@@ -57,7 +57,7 @@ else
 
 Las aplicaciones de Windows se pueden ejecutar en una amplia variedad de dispositivos. no todas ellas admiten la barra de tareas. En este momento, solo los dispositivos de escritorio admiten la barra de tareas. 
 
-Incluso si la barra de tareas está disponible, es posible que una directiva de grupo en el equipo del usuario deshabilite el anclaje de la barra de tareas. Por lo tanto, antes de intentar anclar la aplicación, debe comprobar si se admite el anclaje en la barra de tareas. La [propiedad TaskbarManager. IsPinningAllowed](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsPinningAllowed) devuelve true si la barra de tareas está presente y permite el anclaje. 
+Incluso si la barra de tareas está disponible, es posible que una directiva de grupo en el equipo del usuario deshabilite el anclaje de la barra de tareas. Por lo tanto, antes de intentar anclar la aplicación, debe comprobar si se admite el anclaje en la barra de tareas. La [propiedad TaskbarManager. IsPinningAllowed](/uwp/api/windows.ui.shell.taskbarmanager.IsPinningAllowed) devuelve true si la barra de tareas está presente y permite el anclaje. 
 
 ```csharp
 // Check if taskbar allows pinning (Group Policy can disable it, or some device families don't have taskbar)
@@ -65,12 +65,12 @@ bool isPinningAllowed = TaskbarManager.GetDefault().IsPinningAllowed;
 ```
 
 > [!NOTE]
-> Si no quiere anclar la aplicación a la barra de tareas y solo desea averiguar si la barra de tareas está disponible, use la [propiedad TaskbarManager. IsSupported](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsSupported).
+> Si no quiere anclar la aplicación a la barra de tareas y solo desea averiguar si la barra de tareas está disponible, use la [propiedad TaskbarManager. IsSupported](/uwp/api/windows.ui.shell.taskbarmanager.IsSupported).
 
 
 ## <a name="3-check-whether-your-app-is-currently-pinned-to-the-taskbar"></a>3. Compruebe si la aplicación está anclada actualmente a la barra de tareas
 
-Obviamente, no hay ningún punto en pedir al usuario que le permita anclar la aplicación a la barra de tareas si ya está anclada allí. Puede usar el [método TaskbarManager. IsCurrentAppPinnedAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.IsCurrentAppPinnedAsync) para comprobar si la aplicación ya está anclada antes de preguntar al usuario.
+Obviamente, no hay ningún punto en pedir al usuario que le permita anclar la aplicación a la barra de tareas si ya está anclada allí. Puede usar el [método TaskbarManager. IsCurrentAppPinnedAsync](/uwp/api/windows.ui.shell.taskbarmanager.IsCurrentAppPinnedAsync) para comprobar si la aplicación ya está anclada antes de preguntar al usuario.
 
 ```csharp
 // Check whether your app is currently pinned
@@ -91,7 +91,7 @@ else
 
 Si la barra de tareas está presente y se permite el anclaje y la aplicación no está anclada actualmente, es posible que quiera mostrar una sugerencia sutil para que los usuarios sepan que pueden anclar la aplicación. Por ejemplo, puede mostrar un icono de anclaje en algún lugar de la interfaz de usuario en el que el usuario pueda hacer clic. 
 
-Si el usuario hace clic en la interfaz de usuario de sugerencia de PIN, llamará al [método TaskbarManager. RequestPinCurrentAppAsync](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager.RequestPinCurrentAppAsync). Este método muestra un cuadro de diálogo que pide al usuario que confirme que desea que la aplicación esté anclada a la barra de tareas.
+Si el usuario hace clic en la interfaz de usuario de sugerencia de PIN, llamará al [método TaskbarManager. RequestPinCurrentAppAsync](/uwp/api/windows.ui.shell.taskbarmanager.RequestPinCurrentAppAsync). Este método muestra un cuadro de diálogo que pide al usuario que confirme que desea que la aplicación esté anclada a la barra de tareas.
 
 > [!IMPORTANT]
 > Se debe llamar a este método desde un subproceso de interfaz de usuario de primer plano; de lo contrario, se producirá una excepción.
@@ -109,5 +109,5 @@ Este método devuelve un valor booleano que indica si la aplicación está ancla
 ## <a name="resources"></a>Recursos
 
 * [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-pin-to-taskbar)
-* [Clase TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
+* [Clase TaskbarManager](/uwp/api/windows.ui.shell.taskbarmanager)
 * [Anclar una aplicación al menú Inicio](tiles-and-notifications/primary-tile-apis.md)

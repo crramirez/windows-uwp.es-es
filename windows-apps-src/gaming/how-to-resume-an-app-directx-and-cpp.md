@@ -4,14 +4,14 @@ description: En este tema se muestra cómo restaurar datos importantes de la apl
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, reanudar, resuming, directx
+keywords: Windows 10, UWP, reanudación, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: b1506351dd06563386154ac35938cbd17f5ced32
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 37bceafae39c314966a95f06a282fe5c91814738
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368615"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175289"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>Cómo reanudar una aplicación (DirectX y C++)
 
@@ -22,9 +22,9 @@ En este tema se muestra cómo restaurar datos importantes de la aplicación cuan
 ## <a name="register-the-resuming-event-handler"></a>Registrar el controlador de eventos de reanudación
 
 
-Haz un registro para controlar el evento [**CoreApplication::Resuming**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.resuming), que indica que el usuario abandonó la aplicación y después volvió.
+Haz un registro para controlar el evento [**CoreApplication::Resuming**](/uwp/api/windows.applicationmodel.core.coreapplication.resuming), que indica que el usuario abandonó la aplicación y después volvió.
 
-Agrega este código a la implementación del método [**IFrameworkView::Initialize**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize) del proveedor de vistas:
+Agrega este código a la implementación del método [**IFrameworkView::Initialize**](/uwp/api/windows.applicationmodel.core.iframeworkview.initialize) del proveedor de vistas:
 
 ```cpp
 // The first method is called when the IFrameworkView is being created.
@@ -43,7 +43,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## <a name="refresh-displayed-content-after-suspension"></a>Actualizar el contenido mostrado tras la suspensión
 
 
-Cuando la aplicación controla el evento Resuming, tiene la oportunidad de actualizar el contenido mostrado. Restaura cualquier aplicación que hayas guardado con el controlador para [**CoreApplication::Suspending**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.suspending) y reinicia el procesamiento. Nota para desarrolladores de juegos: Si suspendiste el motor de audio, es el momento de reiniciarlo.
+Cuando la aplicación controla el evento Resuming, tiene la oportunidad de actualizar el contenido mostrado. Restaura cualquier aplicación que hayas guardado con el controlador para [**CoreApplication::Suspending**](/uwp/api/windows.applicationmodel.core.coreapplication.suspending) y reinicia el procesamiento. Nota para desarrolladores de juegos: Si suspendiste el motor de audio, es el momento de reiniciarlo.
 
 ```cpp
 void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)
@@ -56,7 +56,7 @@ void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)
 }
 ```
 
-Esta devolución de llamada se produce como un mensaje de evento procesado por [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) para el elemento [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) de la aplicación. Esta devolución de llamada no se invocará si no llamas a [**CoreDispatcher::ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) desde el bucle principal de la aplicación (implementado en el método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) del proveedor de vistas).
+Esta devolución de llamada se produce como un mensaje de evento procesado por [**CoreDispatcher**](/uwp/api/Windows.UI.Core.CoreDispatcher) para el elemento [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) de la aplicación. Esta devolución de llamada no se invocará si no llamas a [**CoreDispatcher::ProcessEvents**](/uwp/api/windows.ui.core.coredispatcher.processevents) desde el bucle principal de la aplicación (implementado en el método [**IFrameworkView::Run**](/uwp/api/windows.applicationmodel.core.iframeworkview.run) del proveedor de vistas).
 
 ``` syntax
 // This method is called after the window becomes active.
@@ -83,7 +83,7 @@ void App::Run()
 }
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 
 El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o al escritorio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano No obstante, es posible que la aplicación haya estado suspendida durante un período de tiempo largo. Por ello, debes actualizar el contenido mostrado que puede haber cambiado mientras la aplicación estaba suspendida, y reiniciar cualquier subproceso de representación o de procesamiento de audio. Si guardaste datos de estado del juego durante un evento de suspensión anterior, restáuralos ahora.
@@ -96,7 +96,3 @@ El sistema suspende la aplicación cuando el usuario cambia a otra aplicación o
  
 
  
-
-
-
-

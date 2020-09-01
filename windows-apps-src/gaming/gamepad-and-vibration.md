@@ -4,14 +4,14 @@ description: Usa las API de controlador para juegos Windows.Gaming.Input para de
 ms.assetid: BB03BB8E-255F-4AE8-AC43-1E519CA860FE
 ms.date: 09/06/2018
 ms.topic: article
-keywords: windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration
+keywords: Windows 10, UWP, juegos, controlador para juegos, vibración
 ms.localizationpriority: medium
-ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 66844b78893ffa8cb92b6b17bd11d87c1d4b1aa0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210601"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175329"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 
@@ -27,7 +27,7 @@ En esta página encontrarás información sobre:
 
 ## <a name="gamepad-overview"></a>Información general del controlador para juegos
 
-Los controladores para juegos como el Mando inalámbrico Xbox y el Mando inalámbrico Xbox S son dispositivos de entrada para juegos de propósito general. Son el dispositivo de entrada estándar en Xbox One y una opción habitual para los jugadores de Windows que no prefieran el teclado y el mouse. Los controladores para juegos son compatibles con aplicaciones para UWP de Xbox y Windows 10 en el espacio de nombres [Windows. Gaming. Input][].
+Los controladores para juegos como el Mando inalámbrico Xbox y el Mando inalámbrico Xbox S son dispositivos de entrada para juegos de propósito general. Son el dispositivo de entrada estándar en Xbox One y una opción habitual para los jugadores de Windows que no prefieran el teclado y el mouse. Los controladores para juegos son compatibles con aplicaciones para UWP de Xbox y Windows 10 en el espacio de nombres [Windows.Gaming.Input][].
 
 Los controladores de juegos de Xbox One están equipados con un panel direccional (o el PAD D); **A**, **B**, **X**, **y**, **vista**y botones de **menú** ; thumbsticks izquierda y derecha, los reboteadores y los desencadenadores; y un total de cuatro motores de vibración. Ambos sticks analógicos proporcionan lecturas analógicas duales en los ejes X e Y y, además, actúan como botón cuando se presionan. Cada desencadenador proporciona una lectura analógica que representa hasta qué punto se vuelve a extraer.
 
@@ -35,7 +35,7 @@ Los controladores de juegos de Xbox One están equipados con un panel direcciona
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
 
 > [!NOTE]
-> `Windows.Gaming.Input.Gamepad` también es compatible con los controladores de juegos de Xbox 360, que tienen el mismo diseño de control que los controladores de juegos estándar de Xbox One.
+> `Windows.Gaming.Input.Gamepad` también admite los controladores de juegos de Xbox 360, que tienen el mismo diseño de control que los controladores de juegos estándar de Xbox One.
 
 ### <a name="vibration-and-impulse-triggers"></a>Gatillos de impulso y vibración
 
@@ -48,7 +48,7 @@ Para obtener más información, consulta [Información general sobre los gatillo
 
 ### <a name="thumbstick-deadzones"></a>Zonas muertas del stick analógico
 
-Lo ideal es que un stick analógico en reposo en la posición central produzca la misma lectura neutra en los ejes X e Y siempre. Sin embargo, debido a las fuerzas mecánicas y la sensibilidad del stick analógico, las lecturas reales en la posición central solo se aproximan al valor ideal neutro y pueden variar en lecturas posteriores. Por esta razón, siempre debe usar un pequeño _deadzone_&mdash;un intervalo de valores cerca de la posición de centro ideal que se omiten&mdash;para compensar las diferencias de fabricación, el desgaste mecánico u otros problemas del controlador de juegos.
+Lo ideal es que un stick analógico en reposo en la posición central produzca la misma lectura neutra en los ejes X e Y siempre. Sin embargo, debido a las fuerzas mecánicas y la sensibilidad del stick analógico, las lecturas reales en la posición central solo se aproximan al valor ideal neutro y pueden variar en lecturas posteriores. Por esta razón, siempre debe usar un pequeño _Deadzone_ &mdash; un intervalo de valores cerca de la posición de centro ideal que se omiten &mdash; para compensar las diferencias de fabricación, el desgaste mecánico u otros problemas del controlador de juegos.
 
 Las zonas muertas mayores ofrecen una estrategia simple para separar la entrada intencionada de la entrada no intencionada.
 
@@ -63,12 +63,12 @@ Como controlador de navegación de la interfaz de usuario, los controladores de 
 | Comando de navegación | Entrada del controlador para juegos                       |
 | ------------------:| ----------------------------------- |
 |                 Arriba | Stick analógico izquierdo hacia arriba/cruceta hacia arriba       |
-|               Abajo | Stick analógico izquierdo hacia abajo/cruceta hacia abajo   |
-|               Izquierda | Stick analógico izquierdo hacia la izquierda/cruceta hacia la izquierda   |
-|              Derecha | Stick analógico izquierdo hacia la derecha/cruceta hacia la derecha |
+|               Bajar | Stick analógico izquierdo hacia abajo/cruceta hacia abajo   |
+|               Left | Stick analógico izquierdo hacia la izquierda/cruceta hacia la izquierda   |
+|              Right | Stick analógico izquierdo hacia la derecha/cruceta hacia la derecha |
 |               Ver | Botón de vista                         |
 |               Menú | Botón de menú                         |
-|             Aceptar | Botón A                            |
+|             Accept | Botón A                            |
 |             Cancelar | Botón B                            |
 
 Además, los controladores para juegos asignan todos los comandos del [conjunto opcional](ui-navigation-controller.md#optional-set) de navegación a las entradas restantes.
@@ -94,7 +94,7 @@ El sistema administra los controladores para juegos, por lo tanto, no tendrás q
 
 ### <a name="the-gamepads-list"></a>Lista de controladores para juegos
 
-La clase [Gamepad][] proporciona una propiedad estática, [Controladores de juegos][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Dado que es posible que solo esté interesado en algunos de los controladores de juegos conectados, se recomienda que mantenga su propia colección en lugar de acceder a ellas a través de la propiedad `Gamepads`.
+La clase [Gamepad][] proporciona una propiedad estática, [Gamepads][], que es una lista de solo lectura de los controladores para juegos que están actualmente conectados. Dado que es posible que solo esté interesado en algunos de los controladores de juegos conectados, se recomienda que mantenga su propia colección en lugar de acceder a ellas a través de la `Gamepads` propiedad.
 
 El siguiente ejemplo copia todos los controladores para juegos conectados en una nueva colección. Tenga en cuenta que, dado que otros subprocesos en segundo plano van a tener acceso a esta colección (en los eventos [GamepadAdded][] y [GamepadRemoved][] ), debe colocar un bloqueo en torno a cualquier código que lea o actualice la colección.
 
@@ -179,7 +179,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-En el ejemplo siguiente se detiene el seguimiento de un controlador de juegos que se ha quitado. También deberá controlar lo que ocurre con los controladores de juegos a los que está realizando un seguimiento cuando se quitan. por ejemplo, este código solo realiza el seguimiento de la entrada de un controlador de juegos y simplemente lo establece en `nullptr` cuando se quita. Tendrá que comprobar cada fotograma si el controlador de juegos está activo y actualizar el controlador de juegos del que está recopilando datos cuando los controladores están conectados y desconectados.
+En el ejemplo siguiente se detiene el seguimiento de un controlador de juegos que se ha quitado. También deberá controlar lo que ocurre con los controladores de juegos a los que está realizando un seguimiento cuando se quitan. por ejemplo, este código solo realiza un seguimiento de la entrada de un controlador de juegos y simplemente lo establece en `nullptr` cuando se quita. Tendrá que comprobar cada fotograma si el controlador de juegos está activo y actualizar el controlador de juegos del que está recopilando datos cuando los controladores están conectados y desconectados.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -231,7 +231,7 @@ Después de identificar el controlador para juegos que te interesa, puedes recop
 
 ### <a name="polling-the-gamepad"></a>Sondeo del controlador para juegos
 
-El sondeo captura una instantánea del dispositivo de navegación en un momento preciso en el tiempo. Este enfoque de la recopilación de entrada es una buena opción para la mayoría de los juegos porque su lógica normalmente se ejecuta en un bucle determinista en lugar de controlarse mediante eventos; también suele ser más sencillo interpretar comandos de juego de la entrada recopilada de una vez que de muchas entradas individuales recopiladas a lo largo del tiempo.
+El sondeo captura una instantánea del dispositivo de navegación en un momento preciso en el tiempo. Este enfoque para la recopilación de entradas es una buena opción para la mayoría de los juegos porque su lógica normalmente se ejecuta en un bucle determinista en lugar de ser controlado por eventos. Normalmente, es más fácil interpretar los comandos del juego a partir de la entrada recopilada todos a la vez que desde muchas entradas únicas recopiladas a lo largo del tiempo.
 
 El sondeo de un controlador para juegos se realiza llamando a [GetCurrentReading][]; esta función devuelve [GamepadReading][] que contiene el estado del controlador para juegos.
 
@@ -271,7 +271,7 @@ double rightStickX = reading.RightThumbstickX; // returns a value between -1.0 a
 double rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
-Al leer los valores del stick analógico, verás que no producen una lectura neutra confiable de 0,0 cuando el stick analógico está en reposo en la posición central; en su lugar, se producen diferentes valores próximos a 0,0 cada vez que se mueve el stick analógico y se devuelve a la posición central. Para mitigar estas variaciones, puedes implementar una pequeña _zona muerta_, que es un intervalo de valores cerca de la posición central ideal que se omiten. Una manera de implementar una zona muerta es determinar la distancia desde el centro que se ha movido el stick analógico y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puede calcular la distancia aproximadamente&mdash;no es exacto porque las lecturas de los sticks son esencialmente valores polares, no planos,&mdash;simplemente mediante el teorema de pitagórica. Esto genera un zona muerta radial.
+Al leer los valores del stick analógico, verás que no producen una lectura neutra confiable de 0,0 cuando el stick analógico está en reposo en la posición central; en su lugar, se producen diferentes valores próximos a 0,0 cada vez que se mueve el stick analógico y se devuelve a la posición central. Para mitigar estas variaciones, puedes implementar una pequeña _zona muerta_, que es un intervalo de valores cerca de la posición central ideal que se omiten. Una manera de implementar una zona muerta es determinar la distancia desde el centro que se ha movido el stick analógico y pasar por alto las lecturas más próximas a una cierta distancia que elijas. Puede calcular la distancia aproximadamente &mdash; no es exacto porque las lecturas del stick analógico son esencialmente valores polares, no planos, &mdash; simplemente mediante el teorema de pitagórica. Esto genera un zona muerta radial.
 
 En el siguiente ejemplo se muestra una zona muerta radial básica mediante el teorema de Pitágoras.
 
@@ -331,12 +331,12 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>Lectura de los botones
 
-Cada uno de los botones del controlador de juegos&mdash;las cuatro direcciones del panel D, los reboteadores izquierdo y derecho, la presión de la palanca izquierda y derecha, **a**, **B**, **X**, **y**, **vista**y **menú**&mdash;proporciona una lectura digital que indica si se ha presionado (hacia abajo) o se ha soltado (arriba). Por motivos de eficacia, las lecturas de los botones no se representan como valores booleanos individuales; en su lugar, se empaquetan en un solo campo de bits que se representa mediante la enumeración [GamepadButtons][] .
+Cada uno de los botones del controlador de juegos &mdash; las cuatro direcciones del panel D, los reboteadores izquierdo y derecho, la presión de la palanca izquierda y derecha, **a**, **B**, **X**, **y**, **vista**y **menú** &mdash; proporcionan una lectura digital que indica si se ha presionado (hacia abajo) o se ha soltado (arriba). Por motivos de eficacia, las lecturas de los botones no se representan como valores booleanos individuales; en su lugar, se empaquetan en un solo campo de bits que se representa mediante la enumeración [GamepadButtons][] .
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
 
-Los valores de los botones se leen en la propiedad `Buttons` de la estructura [GamepadReading][]. Dado que esta propiedad es un campo de bits, se usa el enmascaramiento bit a bit para aislar el valor del botón que te interesa. El botón está presionado (abajo) cuando se establece el bit correspondiente; de lo contrario no lo está (arriba).
+Los valores de los botones se leen en la propiedad `Buttons` de la estructura [GamepadReading][]. Dado que esta propiedad es un campo de bits, se usa el enmascaramiento bit a bit para aislar el valor del botón que te interesa. El botón está presionado (abajo) cuando se establece el bit correspondiente; de lo contrario, se libera (up).
 
 En el ejemplo siguiente, se determina si el botón A está presionado.
 
@@ -370,11 +370,11 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 }
 ```
 
-En ocasiones, es posible que desee determinar si un botón cambia de presionado a liberado o liberado a presionado, si hay varios botones presionados o liberados, o si un conjunto de botones está organizado de una manera determinada&mdash;algunos presionados, no. Para obtener información sobre cómo detectar cada una de estas condiciones, consulta [Detecting button transitions (Detección de transiciones de botón)](input-practices-for-games.md#detecting-button-transitions) y [Detecting complex button arrangements (Detección de disposiciones de botones complejas)](input-practices-for-games.md#detecting-complex-button-arrangements).
+En ocasiones, es posible que desee determinar si un botón cambia de presionado a liberado o liberado a presionado, si hay varios botones presionados o liberados, o si un conjunto de botones está organizado de una forma determinada &mdash; , pero no. Para obtener información sobre cómo detectar cada una de estas condiciones, consulta [Detecting button transitions (Detección de transiciones de botón)](input-practices-for-games.md#detecting-button-transitions) y [Detecting complex button arrangements (Detección de disposiciones de botones complejas)](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 ## <a name="run-the-gamepad-input-sample"></a>Ejecutar la muestra de entrada del controlador para juegos
 
-La [muestra de GamepadUWP _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadUWP) indica cómo conectarse a un controlador para juegos y leer su estado.
+La [muestra de GamepadUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadUWP) indica cómo conectarse a un controlador para juegos y leer su estado.
 
 ## <a name="vibration-and-impulse-triggers-overview"></a>Información general sobre los gatillos de impulso y vibración
 
@@ -386,7 +386,7 @@ Los controladores para juegos de Xbox One están equipados con un total de cuatr
 
 La vibración del controlador para juegos se controla mediante la propiedad [Vibration][] de la clase [Gamepad][]. `Vibration` es una instancia de la estructura [GamepadVibration][] que se compone de cuatro valores de punto flotante. cada valor representa la intensidad de uno de los motores.
 
-Aunque los miembros de la propiedad `Gamepad.Vibration` se pueden modificar directamente, se recomienda inicializar una instancia de `GamepadVibration` independiente con los valores que desee y, a continuación, copiarla en la propiedad `Gamepad.Vibration` para cambiar las intensidades del motor reales a la vez.
+Aunque los miembros de la `Gamepad.Vibration` propiedad se pueden modificar directamente, se recomienda inicializar una `GamepadVibration` instancia independiente con los valores que desee y, a continuación, copiarla en la `Gamepad.Vibration` propiedad para cambiar las intensidades del motor reales todas a la vez.
 
 En el siguiente ejemplo se muestra cómo cambiar todas las intensidades del motor a la vez.
 
@@ -436,7 +436,7 @@ vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 mainGamepad.Vibration = vibration;
 ```
 
-Recuerda que estos dos motores no son idénticos; por lo tanto, si se establecen estas propiedades en el mismo valor, no se produce la misma vibración en cada uno de ellos. Para cualquier valor, el motor izquierdo genera una vibración más fuerte con una frecuencia menor que el motor derecho que&mdash;para el mismo valor&mdash;genera una vibración más suave con una frecuencia mayor. Incluso en el valor máximo, el motor izquierdo no puede generar las altas frecuencias del motor derecho, ni el motor derecho puede producir las altas fuerzas del motor izquierdo. Aun así, debido a que los motores están conectados de forma rígida por el cuerpo del controlador para juegos, los jugadores no experimentan las vibraciones por separado totalmente, aunque los motores tengan diferentes características y puedan vibrar con intensidades diferentes. Este tipo de disposición permite producir una gama más amplia y expresiva de sensaciones que si los motores fueran idénticos.
+Recuerda que estos dos motores no son idénticos; por lo tanto, si se establecen estas propiedades en el mismo valor, no se produce la misma vibración en cada uno de ellos. Para cualquier valor, el motor de la izquierda genera una vibración más fuerte con una frecuencia menor que el motor derecho que, &mdash; para el mismo valor, &mdash; genera una vibración más suave con una frecuencia mayor. Incluso en el valor máximo, el motor izquierdo no puede generar las altas frecuencias del motor derecho, ni el motor derecho puede producir las altas fuerzas del motor izquierdo. Aun así, debido a que los motores están conectados de forma rígida por el cuerpo del controlador para juegos, los jugadores no experimentan las vibraciones por separado totalmente, aunque los motores tengan diferentes características y puedan vibrar con intensidades diferentes. Este tipo de disposición permite producir una gama más amplia y expresiva de sensaciones que si los motores fueran idénticos.
 
 ### <a name="using-the-impulse-triggers"></a>Uso de los gatillos de impulso
 
@@ -462,23 +462,23 @@ A diferencia de los otros, los dos motores de vibración dentro de los gatillos 
 
 ## <a name="run-the-gamepad-vibration-sample"></a>Ejecutar la muestra de vibración del controlador para juegos
 
-La [muestra de GamepadVibrationUWP _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadVibrationUWP) indica cómo se utilizan los motores de vibración del controlador para juegos y los gatillos de impulso para producir una variedad de efectos.
+La [muestra de GamepadVibrationUWP _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadVibrationUWP) indica cómo se utilizan los motores de vibración del controlador para juegos y los gatillos de impulso para producir una variedad de efectos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Windows.Gaming.Input.UINavigationController][]
-* [Windows. Gaming. Input. IGameController][]
-* [Prácticas de entrada para juegos](input-practices-for-games.md)
+* [Windows.Gaming.Input.IGameController][]
+* [Procedimientos de entrada para juegos](input-practices-for-games.md)
 
-[Windows. Gaming. Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
-[Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx
-[Windows. Gaming. Input. IGameController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
-[gamepad]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.aspx
-[Controladores de juegos]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepads.aspx
-[gamepadadded]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadadded.aspx
-[gamepadremoved]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadremoved.aspx
-[getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.getcurrentreading.aspx
-[Vibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.vibration.aspx
-[gamepadreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
-[gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
-[gamepadvibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx
+[Windows. Gaming. Input]: /uwp/api/Windows.Gaming.Input
+[Windows.Gaming.Input.UINavigationController]: /uwp/api/Windows.Gaming.Input.UINavigationController
+[Windows.Gaming.Input.IGameController]: /uwp/api/Windows.Gaming.Input.IGameController
+[gamepad]: /uwp/api/Windows.Gaming.Input.Gamepad
+[gamepads]: /uwp/api/Windows.Gaming.Input.Gamepad
+[gamepadadded]: /uwp/api/Windows.Gaming.Input.Gamepad
+[gamepadremoved]: /uwp/api/Windows.Gaming.Input.Gamepad
+[getcurrentreading]: /uwp/api/Windows.Gaming.Input.Gamepad
+[vibration]: /uwp/api/Windows.Gaming.Input.Gamepad
+[gamepadreading]: /uwp/api/Windows.Gaming.Input.GamepadReading
+[gamepadbuttons]: /uwp/api/Windows.Gaming.Input.GamepadButtons
+[gamepadvibration]: /uwp/api/Windows.Gaming.Input.GamepadVibration

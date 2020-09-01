@@ -8,23 +8,23 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fd33720255a04ffd8669673f027973afb4369086
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 94a93f9b1506d2b4dfcdad260bf86bf39c15d875
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684208"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173349"
 ---
 # <a name="speech-interactions"></a>Interacciones de voz
 
 Integra el reconocimiento de voz y texto a voz (también denominado TTS o síntesis de voz) directamente en la experiencia del usuario de la aplicación.
 
-**Reconocimiento de voz** Reconocimiento de voz convierte las palabras que pronuncia el usuario en texto para entrada de formulario, para dictado de texto, para especificar una acción o un comando y para llevar a cabo tareas. Las gramáticas predefinidas para el dictado de texto libre y la búsqueda web, y las gramáticas personalizadas creadas con la versión 1.0 de la Especificación de gramática de reconocimiento de voz (SRGS) son compatibles.
+**Reconocimiento de voz** El reconocimiento de voz convierte las palabras que habla el usuario en texto para la entrada de formulario, para el dictado de texto, para especificar una acción o un comando, y para realizar tareas. Las gramáticas predefinidas para el dictado de texto libre y la búsqueda web, y las gramáticas personalizadas creadas con la versión 1.0 de la Especificación de gramática de reconocimiento de voz (SRGS) son compatibles.
 
-**TTS** TTS usa un motor de síntesis de voz (voz) para convertir una cadena de texto en palabras habladas. La cadena de entrada puede ser texto básico y sin adornos o Lenguaje de marcado de síntesis de voz (SSML) más complejo. SSML proporciona una forma estándar de controlar características de la salida de voz, como la pronunciación, el volumen, el tono, la velocidad o el énfasis.
+**TTS** TTS usa un motor de síntesis de voz (Voice) para convertir una cadena de texto en palabras pronunciadas. La cadena de entrada puede ser texto básico y sin adornos o Lenguaje de marcado de síntesis de voz (SSML) más complejo. SSML proporciona una forma estándar de controlar características de la salida de voz, como la pronunciación, el volumen, el tono, la velocidad o el énfasis.
 
 **Otros componentes relacionados con la voz:** 
-**Cortana** en las aplicaciones Windows usa comandos de voz personalizados (hablados o escritos) para lanzar la aplicación en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activarla como un servicio en segundo plano (**Cortana** conserva el foco, pero proporciona los resultados de la aplicación). Consulta las [Directrices para el comando de voz (VCD) de Cortana](https://docs.microsoft.com/cortana/voice-commands/vcd) si expones la funcionalidad de la aplicación en la interfaz de usuario de **Cortana**.
+ **Cortana** en aplicaciones Windows usa comandos de voz personalizados (hablados o con tipo) para iniciar la aplicación en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activar como un servicio en segundo plano (**Cortana** conserva el foco pero proporciona resultados de la aplicación). Consulte las [instrucciones del comando de voz de Cortana (VCD)](/cortana/voice-commands/vcd) si expone la funcionalidad de la aplicación en la interfaz de usuario de **Cortana** .
 
 ## <a name="speech-interaction-design"></a>Diseño de la interacción mediante voz
 
@@ -164,7 +164,7 @@ Una gramática personalizada se ha diseñado y creado por el usuario y se instal
     -   Reduce cada gramática al mínimo. Las gramáticas que contienen pocas frases suelen proporcionar un reconocimiento más preciso que las gramáticas más extensas compuestas por más frases. Es preferible tener varias gramáticas escuetas para escenarios específicos que tener una sola gramática para toda la aplicación.
     -   Permite que los usuarios sepan qué decir para cada contexto de la aplicación y habilitar y deshabilitar gramáticas según sea necesario.
     -   Diseña cada gramática para que los usuarios puedan decir un comando de diferentes formas. Por ejemplo, puedes usar la regla **GARBAGE** para que coincida con la entrada de voz que la gramática no define. Esto permite a los usuarios decir más palabras que no tienen sentido para la aplicación. Por ejemplo, "dame", "y", "uh", "quizás", etc.
-    -   Usa el elemento [sapi:subset](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/jj572474(v=office.14)) como ayuda para encontrar entradas de voz. Se trata de una extensión de Microsoft a la especificación de SRGS para ayudar a encontrar frases parciales.
+    -   Usa el elemento [sapi:subset](/previous-versions/office/developer/speech-technologies/jj572474(v=office.14)) como ayuda para encontrar entradas de voz. Se trata de una extensión de Microsoft a la especificación de SRGS para ayudar a encontrar frases parciales.
     -   Intenta no definir frases en la gramática que contengan una sola sílaba. El reconocimiento tiende a ser más exacto con frases con dos o más sílabas.
     -   Evita usar frases que suenen parecido. Por ejemplo, frases como "hola", "cola" y "bola" pueden confundir al motor de reconocimiento y la precisión del reconocimiento puede no ser buena.
 
@@ -175,11 +175,11 @@ Una gramática personalizada se ha diseñado y creado por el usuario y se instal
 
 Si la aplicación contiene vocabulario especializado con palabras inusuales o ficticias, o palabras con pronunciaciones poco comunes, mejorarás el rendimiento del reconocimiento de esas palabras si defines pronunciaciones personalizadas.
 
-Para una pequeña lista de palabras y frases, o una lista de palabras o frases poco usadas, puedes crear pronunciaciones personalizadas en una gramática SRGS. Consulta [Elemento token](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361600(v=office.14)) para obtener más información.
+Para una pequeña lista de palabras y frases, o una lista de palabras o frases poco usadas, puedes crear pronunciaciones personalizadas en una gramática SRGS. Consulta [Elemento token](/previous-versions/office/developer/speech-technologies/hh361600(v=office.14)) para obtener más información.
 
-En el caso de listas de palabras y frases más largas, o palabras o frases usadas con frecuencia, puedes crear documentos de lexicón de pronunciación independiente. Consulta [Acerca de los lexicones y los alfabetos fonéticos](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361646(v=office.14)) para obtener más información.
+En el caso de listas de palabras y frases más largas, o palabras o frases usadas con frecuencia, puedes crear documentos de lexicón de pronunciación independiente. Consulta [Acerca de los lexicones y los alfabetos fonéticos](/previous-versions/office/developer/speech-technologies/hh361646(v=office.14)) para obtener más información.
 
-## <a name="testing"></a>Probándose
+## <a name="testing"></a>Prueba
 
 Prueba la precisión del reconocimiento de voz y la interfaz de usuario compatible con el público objetivo de la aplicación. Esta es la mejor manera de determinar la eficacia de la funcionalidad de interacción de voz en la aplicación. Por ejemplo, ¿los usuarios obtienen resultados de reconocimiento inexactos porque la aplicación no puede escuchar una frase común?
 
@@ -200,7 +200,7 @@ Debes escuchar todas las cadenas de TTS para garantizar que son inteligibles y s
 -   Encadenar una secuencia de palabras inusuales o dictar números o signos de puntuación puede provocar que una frase sea ininteligible.
 -   La voz puede sonar forzada cuando la prosodia o cadencia es diferente a cómo un hablante nativo diría una frase.
 
-Ambos problemas se pueden solucionar mediante el uso de SSML en lugar de texto sin formato como entrada para el sintetizador de voz. Para obtener más información sobre SSML, consulta [Usar SSML para controlar la voz sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) y [Referencia de Lenguaje de marcado de síntesis de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
+Ambos problemas se pueden solucionar mediante el uso de SSML en lugar de texto sin formato como entrada para el sintetizador de voz. Para obtener más información sobre SSML, consulta [Usar SSML para controlar la voz sintetizada](/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) y [Referencia de Lenguaje de marcado de síntesis de voz](/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
 
 ## <a name="other-articles-in-this-section"></a>Otros artículos de esta sección 
 
@@ -210,20 +210,17 @@ Ambos problemas se pueden solucionar mediante el uso de SSML en lugar de texto s
 | [Especificar el idioma del reconocedor de voz](specify-the-speech-recognizer-language.md) | Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz. |
 | [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md) | Aprende a definir y usar restricciones personalizadas para el reconocimiento de voz. |
 | [Habilitar el dictado continuo](enable-continuous-dictation.md) |Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración. |
-| [Administrar problemas con la entrada de audio](manage-issues-with-audio-input.md) | Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio. |
+| [Administrar los problemas con la entrada de audio](manage-issues-with-audio-input.md) | Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio. |
 | [Establecer tiempos de espera de reconocimiento de voz](set-speech-recognition-timeouts.md) | Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz. |
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Interacciones de voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
-* [Interacciones de Cortana](https://docs.microsoft.com/windows/uwp/input-and-devices/cortana-interactions)
+* [Interacciones de voz]()
+* [Interacciones de Cortana](./cortana-interactions.md)
 
- **Ejemplos**
+ **Muestras**
 
-* [Ejemplo de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
+* [Muestra de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  
-
-
-
