@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0f6ef206dc836e48bfc904767ff8c8c7bdca9db
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 3bef1e1061948c4327426485621b9f611fc51f21
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340045"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161249"
 ---
 # <a name="adaptive-streaming-with-playready"></a>Streaming adaptable con PlayReady
 
@@ -28,7 +28,7 @@ En este artículo solo se tratan los aspectos del streaming adaptable específic
 
 En este artículo se usa el código del [Adaptive streaming sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) (ejemplo de streaming adaptable) del repositorio **Windows-universal-samples** de Microsoft en GitHub. El escenario 4 presenta el uso de streaming adaptable con PlayReady. Para descargar el repositorio en un archivo ZIP, desplázate hasta el nivel raíz del repositorio y selecciona el botón **Descargar ZIP**.
 
-Necesitarás las siguientes instrucciones **using**:
+Necesitará las siguientes instrucciones **using** :
 
 ```csharp
 using LicenseRequest;
@@ -63,9 +63,9 @@ private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 
 ## <a name="setting-up-the-mediaprotectionmanager"></a>Configurar el MediaProtectionManager
 
-Para agregar la protección de contenido de PlayReady a tu aplicación para UWP, tienes que configurar un objeto [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager). Esto se hace al inicializar el objeto [**AdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource).
+Para agregar la protección de contenido de PlayReady a tu aplicación para UWP, tienes que configurar un objeto [MediaProtectionManager](/uwp/api/Windows.Media.Protection.MediaProtectionManager). Esto se hace al inicializar el objeto [**AdaptiveMediaSource**](/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource).
 
-El siguiente código configura un objeto [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager):
+El siguiente código configura un objeto [MediaProtectionManager](/uwp/api/Windows.Media.Protection.MediaProtectionManager):
 
 ```csharp
 private void SetUpProtectionManager(ref MediaElement mediaElement)
@@ -100,7 +100,7 @@ private void SetUpProtectionManager(ref MediaElement mediaElement)
 
 Este código puede copiarse simplemente en la aplicación, dado que es obligatorio para configurar la protección de contenido.
 
-El evento [ComponentLoadFailed](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.componentloadfailed) se activa cuando no se puede realizar la carga de datos binarios. Debemos agregar un controlador de eventos para controlar este evento, que señale que no se completó la carga:
+El evento [ComponentLoadFailed](/uwp/api/windows.media.protection.mediaprotectionmanager.componentloadfailed) se activa cuando no se puede realizar la carga de datos binarios. Debemos agregar un controlador de eventos para controlar este evento, que señale que no se completó la carga:
 
 ```csharp
 private void ProtectionManager_ComponentLoadFailed(
@@ -111,7 +111,7 @@ private void ProtectionManager_ComponentLoadFailed(
 }
 ```
 
-De forma similar, debemos agregar un controlador de eventos para el evento [ServiceRequested](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.servicerequested), que se activa cuando se solicita un servicio. Este código comprueba de qué tipo de solicitud se trata y responde en consecuencia:
+De forma similar, debemos agregar un controlador de eventos para el evento [ServiceRequested](/uwp/api/windows.media.protection.mediaprotectionmanager.servicerequested), que se activa cuando se solicita un servicio. Este código comprueba de qué tipo de solicitud se trata y responde en consecuencia:
 
 ```csharp
 private async void ProtectionManager_ServiceRequested(
@@ -192,7 +192,7 @@ async void ProActiveIndivRequest()
 
 ## <a name="license-acquisition-service-requests"></a>Solicitudes de servicio de adquisición de licencias
 
-Si, en su lugar, la solicitud era de tipo [PlayReadyLicenseAcquisitionServiceRequest](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest), llamamos a la siguiente función para solicitar y adquirir la licencia de PlayReady. Indicamos al objeto **MediaProtectionServiceCompletion** que se haya pasado si la solicitud era correcta o no y completamos la solicitud:
+Si, en su lugar, la solicitud era de tipo [PlayReadyLicenseAcquisitionServiceRequest](/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest), llamamos a la siguiente función para solicitar y adquirir la licencia de PlayReady. Indicamos al objeto **MediaProtectionServiceCompletion** que pasamos en si la solicitud se realizó correctamente o no y completamos la solicitud:
 
 ```csharp
 async void LicenseAcquisitionRequest(
@@ -274,7 +274,7 @@ async void LicenseAcquisitionRequest(
 
 ## <a name="initializing-the-adaptivemediasource"></a>Inicializar el objeto AdaptiveMediaSource
 
-Por último, necesitarás una función para inicializar el objeto [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource), que se creó a partir de una clase [Uri](https://docs.microsoft.com/dotnet/api/system.uri) y una clase [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) concretas. La clase **Uri** debe ser el vínculo al archivo multimedia (HLS o DASH), y la clase **MediaElement** debe estar definida en el código XAML.
+Por último, necesitarás una función para inicializar el objeto [AdaptiveMediaSource](/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource), que se creó a partir de una clase [Uri](/dotnet/api/system.uri) y una clase [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) concretas. La clase **Uri** debe ser el vínculo al archivo multimedia (HLS o DASH), y la clase **MediaElement** debe estar definida en el código XAML.
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
@@ -297,7 +297,3 @@ Puedes llamar a esta función en cualquier evento que controle el inicio del str
 
 ## <a name="see-also"></a>Vea también
 - [DRM de PlayReady](playready-client-sdk.md)
-
-
-
-

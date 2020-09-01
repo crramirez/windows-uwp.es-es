@@ -1,17 +1,17 @@
 ---
-title: Portar búferes, uniformes y vértices de OpenGL ES 2.0 a Direct3D
+title: Almacenamiento de búferes de OpenGL ES 2,0, uniformes y vértices en Direct3D
 description: Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores.
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, games, juegos, opengl, direct3d, buffers, búferes, uniforms, uniformes, vertex attributes, atributos de vértice
+keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, búferes, uniformes, atributos de vértices
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d79a4573438aec49d4aa1b828c90e72c04150de
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0ba95f2279491d1f1ab2b27c2aaf7a9a7e2409b5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368152"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159329"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
 
@@ -20,9 +20,9 @@ ms.locfileid: "66368152"
 
 **API importantes**
 
--   [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)
--   [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout)
--   [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)
+-   [**ID3D11Device1::CreateBuffer**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)
+-   [**ID3D11Device1::CreateInputLayout**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout)
+-   [**ID3D11DeviceContext1::IASetInputLayout**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)
 
 Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores.
 
@@ -34,9 +34,9 @@ Esta es la asignación básica.
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | uniforme                   | campo de búfer de constantes (**cbuffer**).                                                                                                                                                |
 | atributo                 | campo de elementos de búfer de vértices, designado por un diseño de entrada y marcado con una semántica HLSL específica.                                                                                |
-| objeto de búfer             | búfer; Consulte [ **D3D11\_SUBRESOURCE\_datos** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) y [ **D3D11\_búfer\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc)y definiciones de un búfer de uso general. |
-| objeto de búfer de cuadros (FBO) | destinos de representación; consulta [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) con [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d).                                       |
-| búfer de reserva               | cadena de intercambio con superficie "búfer de reserva"; consulta [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) con la interfaz [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1) adjunta.                       |
+| objeto de búfer             | búfer Vea [**D3D11 \_ subresource \_ Data**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) y [**D3D11 \_ buffer \_ DESC**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) y for an general-use buffer definitions. |
+| objeto de búfer de cuadros (FBO) | destinos de representación; consulta [**ID3D11RenderTargetView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) con [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d).                                       |
+| búfer de reserva               | cadena de intercambio con superficie "búfer de reserva"; consulta [**IDXGISwapChain1**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) con la interfaz [**IDXGISurface1**](/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1) adjunta.                       |
 
  
 
@@ -46,14 +46,14 @@ Esta es la asignación básica.
 En OpenGL ES 2.0, el proceso de crear y enlazar cualquier tipo de búfer, por lo general, sigue este patrón:
 
 -   Llama a glGenBuffers para generar uno o más búferes y devolverles sus identificadores.
--   Llame a glBindBuffer para definir el diseño de un búfer, por ejemplo, GL\_elemento\_matriz\_búfer.
+-   Llame a glBindBuffer para definir el diseño de un búfer, como el búfer de la matriz de elementos de libro de contabilidad \_ \_ \_ .
 -   Llama a glBufferData para rellenar el búfer con datos específicos (como estructuras de vértice, datos de índice o datos de color) en un diseño específico.
 
 El tipo de búfer más común es el búfer de vértices, que como mínimo contiene las posiciones de los vértices en algún sistema de coordenadas. Normalmente, un vértice se representa con una estructura que contiene las coordenadas de posición, un vector normal en la posición del vértice, un vector tangente en la posición del vértice y coordenadas de búsqueda de texturas (uv). El búfer tiene una lista contigua de estos vértices en algún orden (como una lista de triángulos, franja o ventilador) y que, de manera colectiva, representan los polígonos visibles de la escena. (En Direct3D 11, al igual que en OpenGL ES 2.0, es ineficiente tener varios búferes de vértices por llamada Draw).
 
 Este es un ejemplo de un búfer de vértices y un búfer de índices creados con OpenGL ES 2.0:
 
-OpenGL ES 2.0: Crear y rellenar un búfer de vértices y un búfer de índice.
+OpenGL ES 2.0: crear y rellenar un búfer de vértices y un búfer de índices
 
 ``` syntax
 glGenBuffers(1, &renderer->vertexBuffer);
@@ -73,11 +73,11 @@ Otros búferes incluyen búferes de píxeles y mapas, como texturas. La canaliza
 
 En Direct3D 11, los elementos de datos del búfer se consideran "subrecursos" y pueden variar entre elementos de datos de vértice individuales y texturas de mapas de MIP.
 
--   Rellenar un [ **D3D11\_SUBRESOURCE\_datos** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) estructura con la configuración de un elemento de datos del búfer.
--   Rellenar un [ **D3D11\_búfer\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) estructura con el tamaño de los elementos individuales en el búfer, así como el tipo de búfer.
--   Llama a [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) con estas dos estructuras.
+-   Rellene una estructura de [** \_ \_ datos de subrecurso D3D11**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) con la configuración de un elemento de datos de búfer.
+-   Rellene una estructura [** \_ \_ DESC de búfer D3D11**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) con el tamaño de los elementos individuales en el búfer, así como el tipo de búfer.
+-   Llama a [**ID3D11Device1::CreateBuffer**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) con estas dos estructuras.
 
-Direct3D 11: Crear y rellenar un búfer de vértices y un búfer de índice.
+Direct3D 11: crear y rellenar un búfer de vértices y un búfer de índices
 
 ``` syntax
 D3D11_SUBRESOURCE_DATA vertexBufferData = {0};
@@ -106,9 +106,9 @@ m_d3dDevice->CreateBuffer(
     
 ```
 
-Los mapas o búferes de píxeles grabables, como un búfer de cuadros, pueden crearse como objetos [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d). Estos pueden enlazarse como recursos a [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) o a [**ID3D11ShaderResourceView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11shaderresourceview) y, una vez enlazados, pueden mostrarse con la cadena de intercambio asociada o pasar a un sombreador, respectivamente.
+Los mapas o búferes de píxeles grabables, como un búfer de cuadros, pueden crearse como objetos [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d). Estos pueden enlazarse como recursos a [**ID3D11RenderTargetView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) o a [**ID3D11ShaderResourceView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11shaderresourceview) y, una vez enlazados, pueden mostrarse con la cadena de intercambio asociada o pasar a un sombreador, respectivamente.
 
-Direct3D 11: Creación de un objeto de búfer de fotogramas.
+Direct3D 11: crear un objeto de búfer de trama
 
 ``` syntax
 ComPtr<ID3D11RenderTargetView> m_d3dRenderTargetViewWin;
@@ -127,7 +127,7 @@ m_d3dDevice->CreateRenderTargetView(
 
 En Open GL ES 2.0, los uniformes son los mecanismos para suministrar datos constantes a programas sombreadores individuales. Los sombreadores no pueden alterar estos datos.
 
-Establecer un uniforme normalmente implica proporcionar uno de lo glUniform\* métodos con la ubicación de carga en la GPU, junto con un puntero a los datos en memoria de la aplicación. Después de IEl glUniform\* método se ejecuta, los datos uniformes están en la memoria GPU y accesible por los sombreadores que han mostrado es uniformes. Debes asegurarte de que los datos estén empaquetados de modo tal que el sombreador pueda interpretarlos según su declaración de uniforme (usando tipos compatibles).
+Establecer un uniforme normalmente implica proporcionar uno de los \* métodos glUniform con la ubicación de carga en la GPU junto con un puntero a los datos de la memoria de la aplicación. Una vez que \* se ejecuta el método IEL glUniform, los datos uniformes se encontraban en la memoria de la GPU y se puede acceder a ellos mediante los sombreadores que han declarado ese Uniform. Debes asegurarte de que los datos estén empaquetados de modo tal que el sombreador pueda interpretarlos según su declaración de uniforme (usando tipos compatibles).
 
 OpenGL ES 2.0: crear un uniforme y cargarle datos
 
@@ -141,17 +141,17 @@ glUniformMatrix4fv(renderer->mvpLoc, 1, GL_FALSE, (GLfloat*) &renderer->mvpMatri
 
 En el GLSL de un sombreador, la correspondiente declaración de uniforme sería similar a la siguiente:
 
-OpenGL ES 2.0: Declaración uniforme GLSL
+Open GL ES 2.0: declaración de uniforme en GLSL
 
 ``` syntax
 uniform mat4 u_mvpMatrix;
 ```
 
-Direct3D designa datos de uniforme como "búferes de constantes", que, al igual que los uniformes, contienen datos de constantes proporcionados a sombreadores individuales. Al igual que con los búferes de uniformes, es importante empaquetar los datos del búfer de constantes en la memoria de forma que el sombreador pueda interpretarlos. Uso de tipos de DirectXMath (como [ **XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4)) en lugar de tipos de plataforma (como **float\***  o **float\[4\]** ) garantiza la alineación del elemento de datos adecuada.
+Direct3D designa datos de uniforme como "búferes de constantes", que, al igual que los uniformes, contienen datos de constantes proporcionados a sombreadores individuales. Al igual que con los búferes de uniformes, es importante empaquetar los datos del búfer de constantes en la memoria de forma que el sombreador pueda interpretarlos. El uso de tipos de DirectXMath (como [**XMFLOAT4**](/windows/desktop/api/directxmath/ns-directxmath-xmfloat4)) en lugar de los tipos de plataforma (como **float \* ** o **float \[ \] 4**) garantiza la alineación de elementos de datos adecuada.
 
 Los búferes de constantes deben tener un registro de GPU asociado que se use para hacer referencia a los datos en la GPU. Los datos se empaquetan en la ubicación del registro, como se indica en el diseño del búfer.
 
-Direct3D 11: Creación de un búfer de constantes y cargar datos en él
+Direct3D 11: crear un búfer de constantes y cargarle datos
 
 ``` syntax
 struct ModelViewProjectionConstantBuffer
@@ -176,7 +176,7 @@ m_d3dDevice->CreateBuffer(
 
 En el HSLS de un sombreador, la correspondiente declaración de un búfer de constantes sería similar a la siguiente:
 
-Direct3D 11: Búfer de constantes declaración HLSL
+Direct3D 11: declaración de búfer de constantes en HLSL
 
 ``` syntax
 cbuffer ModelViewProjectionConstantBuffer : register(b0)
@@ -190,7 +190,7 @@ Observa que se debe declarar un registro para cada búfer de constantes. Los dis
 ## <a name="port-vertex-attributes-to-a-direct3d-input-layouts-and-hlsl-semantics"></a>Migrar atributos de vértice a diseños de entrada de Direct3D y semántica de HLSL
 
 
-Dado que la canalización de sombreador puede modificar los datos de vértice, OpenGL ES 2.0 requiere que los especifiques como "atributos" en lugar de "uniformes". (Esto ha cambiado en versiones posteriores de OpenGL y GLSL). Datos específicos del vértice tal la posición del vértice, normals, tangentes y valores de color se proporcionan a los sombreadores como valores de atributo. Estos valores de atributo corresponden a desplazamientos específicos para cada elemento en los datos de vértice; por ejemplo, el primer atributo podría apuntar al componente de posición de un vértice individual y el segundo, a la normal, y así sucesivamente.
+Dado que la canalización de sombreador puede modificar los datos de vértice, OpenGL ES 2.0 requiere que los especifiques como "atributos" en lugar de "uniformes". (Esto cambió en las versiones más recientes de OpenGL y GLSL.) Los datos específicos de vértices con valores de posición, normales, tangente y color se proporcionan en los sombreadores como valores de atributo. Estos valores de atributo corresponden a desplazamientos específicos para cada elemento en los datos de vértice; por ejemplo, el primer atributo podría apuntar al componente de posición de un vértice individual y el segundo, a la normal, y así sucesivamente.
 
 El proceso básico de trasladar los datos del búfer de vértices de la memoria principal a la GPU es similar al siguiente:
 
@@ -199,7 +199,7 @@ El proceso básico de trasladar los datos del búfer de vértices de la memoria 
 -   Llama a glVertexAttribPointer para proporcionar el tamaño de atributo correcto y el desplazamiento dentro de un elemento de datos de vértice individual. Haz esto para cada atributo.
 -   Habilita la información de diseño de datos de vértice con glEnableVertexAttribArray.
 
-OpenGL ES 2.0: Cargar los datos de búfer de vértices en el atributo de sombreador
+OpenGL ES 2.0: cargar datos del búfer de vértices al atributo de sombreador
 
 ``` syntax
 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->vertexBuffer);
@@ -217,18 +217,18 @@ glEnableVertexAttribArray(loc);
 
 Ahora, en el sombreador de vértices, declaras atributos con los mismos nombres que definiste en la llamada a glGetAttribLocation.
 
-OpenGL ES 2.0: Declarar un atributo en GLSL
+OpenGL ES 2.0: declarar un atributo en GLSL
 
 ``` syntax
 attribute vec4 a_position;
 attribute vec4 a_color;                     
 ```
 
-De alguna manera, el mismo proceso se mantiene para Direct3D. En lugar de atributos, los datos de vértice se proporcionan en búferes de entrada, que incluyen búferes de vértices y los correspondientes búferes de índices. No obstante, dado que Direct3D no tiene la declaración de "atributo", debes especificar un diseño de entrada que declara el componente individual de los elementos de datos en el búfer de vértices, así como la semántica de HLSL que indica dónde y cómo el sombreador de vértices va a interpretar estos componentes. La semántica de HLSL requiere que definas el uso de cada componente con una cadena específica que informa al motor sombreador sobre su propósito. Por ejemplo, los datos de posición de vértice se marcan como POSITION, los datos normales se marcan como NORMAL y los datos de color de vértice se marcan como COLOR. (Otras fases del sombreador también requieren semántica específica, y esa semántica tener interpretaciones diferentes en función de la etapa del sombreador). Para obtener más información sobre la semántica HLSL, lea [portar su canalización de sombreador](change-your-shader-loading-code.md) y [HLSL semántica](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps).
+De alguna manera, el mismo proceso se mantiene para Direct3D. En lugar de atributos, los datos de vértice se proporcionan en búferes de entrada, que incluyen búferes de vértices y los correspondientes búferes de índices. No obstante, dado que Direct3D no tiene la declaración de "atributo", debes especificar un diseño de entrada que declara el componente individual de los elementos de datos en el búfer de vértices, así como la semántica de HLSL que indica dónde y cómo el sombreador de vértices va a interpretar estos componentes. La semántica de HLSL requiere que definas el uso de cada componente con una cadena específica que informa al motor sombreador sobre su propósito. Por ejemplo, los datos de posición de vértice se marcan como POSITION, los datos normales se marcan como NORMAL y los datos de color de vértice se marcan como COLOR. (Otras fases del sombreador necesitan tener una semántica específica que debe tener diferentes interpretaciones según la fase del sombreador proporcionada). Para obtener más información acerca de la semántica HLSL, te recomendamos que leas [Portar la canalización del sombreador](change-your-shader-loading-code.md) y [Semántica de HLSL](/windows/desktop/direct3dhlsl/dcl-usage---ps).
 
 De manera colectiva, el proceso de establecer los búferes de vértices e índices, así como el diseño de entrada, se denomina fase de "Ensamblado de entrada" (IA) de la canalización de gráficos de Direct3D.
 
-Direct3D 11: Configuración de la fase de ensamblado de entrada
+Direct3D 11: configurar la fase de ensamblado de entrada
 
 ``` syntax
 // Set up the IA stage corresponding to the current draw operation.
@@ -250,14 +250,14 @@ m_d3dContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 m_d3dContext->IASetInputLayout(m_inputLayout.Get());
 ```
 
-Un diseño de entrada se declara y asocia con un sombreador de vértices al declarar el formato del elemento de datos de vértice y la semántica usada para cada componente. El diseño de datos de elemento de vértice se describe en el D3D11\_entrada\_elemento\_DESC que cree debe coincidir con el diseño de la estructura correspondiente. En este ejemplo, creas un diseño para los datos de vértice con dos componentes:
+Un diseño de entrada se declara y asocia con un sombreador de vértices al declarar el formato del elemento de datos de vértice y la semántica usada para cada componente. El diseño de datos del elemento Vertex descrito en el \_ elemento de entrada D3D11 \_ \_ DESC que cree debe corresponderse con el diseño de la estructura correspondiente. En este ejemplo, creas un diseño para los datos de vértice con dos componentes:
 
 -   Una coordenada de posición de vértice, representada en la memoria principal como XMFLOAT3, que es una matriz alineada de 3 valores de puntos flotantes de 32 bits para las coordenadas (x, y, z).
 -   Un valor de color de vértice, representado como XMFLOAT4, que es una matriz alineada de 4 valores de puntos flotantes de 32 bits para el color (RGBA).
 
-Debes asignar una semántica y un tipo de formato a cada uno. A continuación, debes pasar la descripción a [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout). El diseño de entrada se usará cuando llamemos a [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout) en el momento en que configures el ensamblado de entrada durante el método de representación.
+Debes asignar una semántica y un tipo de formato a cada uno. A continuación, debes pasar la descripción a [**ID3D11Device1::CreateInputLayout**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout). El diseño de entrada se usará cuando llamemos a [**ID3D11DeviceContext1::IASetInputLayout**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout) en el momento en que configures el ensamblado de entrada durante el método de representación.
 
-Direct3D 11: Que describe una distribución con semántica específica
+Direct3D 11: describir un diseño de entrada con semántica específica
 
 ``` syntax
 ComPtr<ID3D11InputLayout> m_inputLayout;
@@ -285,7 +285,7 @@ m_d3dContext->IASetInputLayout(m_inputLayout.Get());
 
 Por último, asegúrate de que el sombreador pueda comprender los datos de entrada declarando la entrada. La semántica que asignaste en el diseño se usa para seleccionar las ubicaciones correctas en la memoria de GPU.
 
-Direct3D 11: Declaración de datos de entrada del sombreador con la semántica HLSL
+Direct3D 11: declarar datos de entrada de sombreador con semántica de HLSL
 
 ``` syntax
 struct VertexShaderInput
@@ -298,7 +298,3 @@ struct VertexShaderInput
  
 
  
-
-
-
-

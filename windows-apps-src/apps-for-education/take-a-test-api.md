@@ -6,18 +6,18 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: windows 10, uwp, education
 ms.localizationpriority: medium
-ms.openlocfilehash: 3708252908c9f63bbb5070ef864b8418c857ac19
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: f5894e80c11d69c91be8492b80c3200e15a3dc31
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854731"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161269"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Realizar una prueba](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que representa evaluaciones en línea bloqueadas para pruebas de gran interés, lo que permite a los educadores centrarse en el contenido de la evaluación en lugar de en cómo proporcionar un entorno de prueba seguro. Para lograrlo, usa una API de JavaScript que cualquier aplicación web puede usar. La API Take-a-test es compatible con el [estándar de API del explorador de SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para un alto juego de pruebas básicas.
+[Realizar una prueba](/education/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que representa evaluaciones en línea bloqueadas para pruebas de gran interés, lo que permite a los educadores centrarse en el contenido de la evaluación en lugar de en cómo proporcionar un entorno de prueba seguro. Para lograrlo, usa una API de JavaScript que cualquier aplicación web puede usar. La API Take-a-test es compatible con el [estándar de API del explorador de SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para un alto juego de pruebas básicas.
 
-Vea la [referencia técnica](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) de la aplicación de prueba para obtener más información sobre la propia aplicación. Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
+Vea la [referencia técnica](/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) de la aplicación de prueba para obtener más información sobre la propia aplicación. Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Documentación de referencia
 Las API Take a test existen en los siguientes espacios de nombres. Tenga en cuenta que todas las API dependen de un `SecureBrowser` objeto global.
@@ -59,8 +59,8 @@ Bloquea el dispositivo. También se usa para desbloquear el dispositivo. La apli
 
 **Parámetros**  
 * `enable` - **true** para ejecutar la aplicación de Take-a-test encima de la pantalla de bloqueo y aplicar las directivas descritas en este [documento](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** detiene la ejecución de Take-a-test sobre la pantalla de bloqueo y la cierra a menos que la aplicación no esté bloqueada. en cuyo caso no hay ningún efecto.  
-* `onSuccess`-[opcional] la función a la que se llama una vez que el bloqueo se ha habilitado o deshabilitado correctamente. Debe tener el formato `Function(Boolean currentlockdownstate)` .  
-* `onError`-[opcional] la función a la que se llama si se produce un error en la operación de bloqueo. Debe tener el formato `Function(Boolean currentlockdownstate)` .  
+* `onSuccess` -[opcional] la función a la que se llama una vez que el bloqueo se ha habilitado o deshabilitado correctamente. Debe tener el formato `Function(Boolean currentlockdownstate)` .  
+* `onError` -[opcional] la función a la que se llama si se produce un error en la operación de bloqueo. Debe tener el formato `Function(Boolean currentlockdownstate)` .  
 
 **Requisitos**  
 Windows 10, versión 1709
@@ -76,7 +76,7 @@ Determina si el contexto de bloqueo aún se aplica al dispositivo. La aplicació
 `void SecureBrowser.security.isEnvironmentSecure(Function callback);`
 
 **Parámetros**  
-* `callback`: La función a la que se llama cuando se completa esta función. Debe tener el formato, `Function(String state)` donde `state` es una cadena JSON que contiene dos campos. El primero es el `secure` campo, que solo se mostrará `true` si se han habilitado todos los bloqueos necesarios (o características deshabilitadas) para habilitar un entorno de pruebas seguro y ninguno de ellos se ha puesto en peligro, ya que la aplicación entró en modo de bloqueo. El otro campo, `messageKey` , incluye otros detalles o información que es específico del proveedor. El objetivo es permitir a los proveedores incluir información adicional que aumenta la `secure` marca booleana:
+* `callback` : La función a la que se llama cuando se completa esta función. Debe tener el formato, `Function(String state)` donde `state` es una cadena JSON que contiene dos campos. El primero es el `secure` campo, que solo se mostrará `true` si se han habilitado todos los bloqueos necesarios (o características deshabilitadas) para habilitar un entorno de pruebas seguro y ninguno de ellos se ha puesto en peligro, ya que la aplicación entró en modo de bloqueo. El otro campo, `messageKey` , incluye otros detalles o información que es específico del proveedor. El objetivo es permitir a los proveedores incluir información adicional que aumenta la `secure` marca booleana:
 
 ```JSON
 {
@@ -99,12 +99,12 @@ Obtiene detalles sobre la plataforma en la que se ejecuta la aplicación de prue
 `void SecureBrowser.security.getDeviceInfo(Function callback);`
 
 **Parámetros**  
-* `callback`: La función a la que se llama cuando se completa esta función. Debe tener el formato, `Function(String infoObj)` donde `infoObj` es una cadena JSON que contiene varios campos. Se deben admitir los campos siguientes:
-    * `os`representa el tipo de sistema operativo (por ejemplo: Windows, macOS, Linux, iOS, Android, etc.).
-    * `name`representa el nombre de la versión del sistema operativo, si existe (por ejemplo: Sierra, Ubuntu).
-    * `version`representa la versión del sistema operativo (por ejemplo: 10,1, 10 Pro, etc.)
-    * `brand`representa la personalización de marca del explorador (por ejemplo: OAKS, CA, SmarterApp, etc.).
-    * `model`representa el modelo de dispositivo solo para dispositivos móviles; NULL/no se utiliza para los exploradores de escritorio.
+* `callback` : La función a la que se llama cuando se completa esta función. Debe tener el formato, `Function(String infoObj)` donde `infoObj` es una cadena JSON que contiene varios campos. Se deben admitir los campos siguientes:
+    * `os` representa el tipo de sistema operativo (por ejemplo: Windows, macOS, Linux, iOS, Android, etc.).
+    * `name` representa el nombre de la versión del sistema operativo, si existe (por ejemplo: Sierra, Ubuntu).
+    * `version` representa la versión del sistema operativo (por ejemplo: 10,1, 10 Pro, etc.)
+    * `brand` representa la personalización de marca del explorador (por ejemplo: OAKS, CA, SmarterApp, etc.).
+    * `model` representa el modelo de dispositivo solo para dispositivos móviles; NULL/no se utiliza para los exploradores de escritorio.
 
 **Requisitos**  
 Windows 10, versión 1709
@@ -120,8 +120,8 @@ Obtiene la lista de todos los procesos que se ejecutan en el equipo cliente prop
 `void SecureBrowser.security.examineProcessList(String[] blacklistedProcessList, Function callback);`
 
 **Parámetros**  
-* `blacklistedProcessList`-La lista de procesos que la aplicación de prueba tiene en la lista negra.  
-`callback`: La función que se va a invocar una vez que se han encontrado los procesos activos. Debe tener el formato: `Function(String foundBlacklistedProcesses)` donde `foundBlacklistedProcesses` tiene el formato: `"['process1.exe','process2.exe','processEtc.exe']"` . Estará vacío si no se encontró ningún proceso en la lista negra. Si es null, indica que se ha producido un error en la llamada de función original.
+* `blacklistedProcessList` -La lista de procesos que la aplicación de prueba tiene en la lista negra.  
+`callback` : La función que se va a invocar una vez que se han encontrado los procesos activos. Debe tener el formato: `Function(String foundBlacklistedProcesses)` donde `foundBlacklistedProcesses` tiene el formato: `"['process1.exe','process2.exe','processEtc.exe']"` . Estará vacío si no se encontró ningún proceso en la lista negra. Si es null, indica que se ha producido un error en la llamada de función original.
 
 **Observaciones** La lista no incluye los procesos del sistema.
 
@@ -139,7 +139,7 @@ Cierra el explorador y se desbloquea el dispositivo. La aplicación de prueba de
 `void SecureBrowser.security.close(restart);`
 
 **Parámetros**  
-* `restart`: Este parámetro se omite, pero se debe proporcionar.
+* `restart` : Este parámetro se omite, pero se debe proporcionar.
 
 **Comentarios** En Windows 10, versión 1607, el dispositivo debe estar bloqueado inicialmente. En versiones posteriores, este método cierra el explorador independientemente de si el dispositivo está bloqueado.
 
@@ -157,7 +157,7 @@ La aplicación Web de prueba debe invocar esto para determinar si el modo permis
 `void SecureBrowser.security.getPermissiveMode(Function callback)`
 
 **Parámetros**  
-* `callback`: La función que se va a invocar cuando se complete esta llamada. Debe tener el formato: `Function(Boolean permissiveMode)` donde `permissiveMode` indica si el explorador se encuentra actualmente en modo permisivo. Si no está definida o es null, se produjo un error en la operación get.
+* `callback` : La función que se va a invocar cuando se complete esta llamada. Debe tener el formato: `Function(Boolean permissiveMode)` donde `permissiveMode` indica si el explorador se encuentra actualmente en modo permisivo. Si no está definida o es null, se produjo un error en la operación get.
 
 **Requisitos**  
 Windows 10, versión 1709
@@ -173,8 +173,8 @@ La aplicación Web de prueba debe invocar esto para activar o desactivar el modo
 `void SecureBrowser.security.setPermissiveMode(Boolean enable, Function callback)`
 
 **Parámetros**  
-* `enable`: El valor booleano que indica el estado del modo permisivo deseado.  
-* `callback`: La función que se va a invocar cuando se complete esta llamada. Debe tener el formato: `Function(Boolean permissiveMode)` donde `permissiveMode` indica si el explorador se encuentra actualmente en modo permisivo. Si no está definida o es null, se produjo un error en la operación SET.
+* `enable` : El valor booleano que indica el estado del modo permisivo deseado.  
+* `callback` : La función que se va a invocar cuando se complete esta llamada. Debe tener el formato: `Function(Boolean permissiveMode)` donde `permissiveMode` indica si el explorador se encuentra actualmente en modo permisivo. Si no está definida o es null, se produjo un error en la operación SET.
 
 **Requisitos**  
 Windows 10, versión 1709
@@ -203,7 +203,7 @@ Obtiene la lista de direcciones MAC del dispositivo. La aplicación de prueba de
 `void SecureBrowser.security.getMACAddress(Function callback);`
 
 **Parámetros**  
-* `callback`: La función que se va a invocar cuando se complete esta llamada. Debe tener el formato: `Function(String addressArray)` donde `addressArray` tiene el formato: `"['00:11:22:33:44:55','etc']"` .
+* `callback` : La función que se va a invocar cuando se complete esta llamada. Debe tener el formato: `Function(String addressArray)` donde `addressArray` tiene el formato: `"['00:11:22:33:44:55','etc']"` .
 
 **Comentarios:**  
 Es difícil confiar en las direcciones IP de origen para distinguir entre los equipos de los usuarios finales dentro de los servidores de prueba, ya que los firewalls/NAT/proxies se usan habitualmente en las escuelas. Las direcciones MAC permiten a la aplicación distinguir equipos cliente finales detrás de un firewall común con fines de diagnóstico.
@@ -221,7 +221,7 @@ Obtiene la hora a la que se inició la aplicación de prueba.
 **Sintaxis**  
 `DateTime SecureBrowser.security.getStartTime();`
 
-**Devolver**  
+**Return**  
 Objeto DateTime que indica la hora A la que se inició la aplicación de prueba.
 
 **Requisitos**  
@@ -238,7 +238,7 @@ Consulta si una funcionalidad está habilitada o deshabilitada.
 `Object SecureBrowser.security.getCapability(String feature)`
 
 **Parámetros**  
-`feature`: La cadena para determinar la capacidad que se va a consultar. Las cadenas de capacidad válidas son "screenMonitoring", "Printing" y "textSuggestions" (no distingue mayúsculas de minúsculas).
+`feature` : La cadena para determinar la capacidad que se va a consultar. Las cadenas de capacidad válidas son "screenMonitoring", "Printing" y "textSuggestions" (no distingue mayúsculas de minúsculas).
 
 **Valor devuelto**  
 Esta función devuelve un objeto o un literal de JavaScript con la forma: `{<feature>:true|false}` . **true** si la capacidad consultada está habilitada, **false** si la funcionalidad no está habilitada o si la cadena de funcionalidad no es válida.
@@ -256,10 +256,10 @@ Habilita o deshabilita una funcionalidad específica en el explorador.
 `void SecureBrowser.security.setCapability(String feature, String value, Function onSuccess, Function onError)`
 
 **Parámetros**  
-* `feature`: La cadena para determinar la capacidad que se va a establecer. Las cadenas de capacidad válidas son `"screenMonitoring"` , `"printing"` y `"textSuggestions"` (no distingue mayúsculas de minúsculas).  
-* `value`: La configuración prevista para la característica. Debe ser `"true"` o `"false"` .  
-* `onSuccess`-[opcional] la función a la que se llamará una vez completada correctamente la operación de establecimiento. Debe tener el formato `Function(String jsonValue)` en el que *jsonValue* tiene el formato: `{<feature>:true|false|undefined}` .  
-* `onError`-[opcional] la función a la que se llama si se produce un error en la operación de establecimiento. Debe tener el formato `Function(String jsonValue)` en el que *jsonValue* tiene el formato: `{<feature>:true|false|undefined}` .
+* `feature` : La cadena para determinar la capacidad que se va a establecer. Las cadenas de capacidad válidas son `"screenMonitoring"` , `"printing"` y `"textSuggestions"` (no distingue mayúsculas de minúsculas).  
+* `value` : La configuración prevista para la característica. Debe ser `"true"` o `"false"` .  
+* `onSuccess` -[opcional] la función a la que se llamará una vez completada correctamente la operación de establecimiento. Debe tener el formato `Function(String jsonValue)` en el que *jsonValue* tiene el formato: `{<feature>:true|false|undefined}` .  
+* `onError` -[opcional] la función a la que se llama si se produce un error en la operación de establecimiento. Debe tener el formato `Function(String jsonValue)` en el que *jsonValue* tiene el formato: `{<feature>:true|false|undefined}` .
 
 **Comentarios:**  
 Si la característica de destino es desconocida para el explorador, esta función pasará un valor de `undefined` a la función de devolución de llamada.

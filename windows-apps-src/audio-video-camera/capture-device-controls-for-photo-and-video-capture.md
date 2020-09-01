@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7344e5004e6ac398673734cb03ddbdde93b3bd0d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 458b610ac3fcc651f68ccf07c4a3cb30813239d9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254315"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160989"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuales de la cámara para la captura de fotos y vídeos
 
@@ -26,31 +26,31 @@ El código de este artículo es una adaptación de la [muestra del SDK de contro
 > [!NOTE]
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para implementar la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios de captura más avanzados. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
 
-Todas las API de control de dispositivos mencionadas en este artículo son miembros del espacio de nombres [**Windows.Media.Devices**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices).
+Todas las API de control de dispositivos mencionadas en este artículo son miembros del espacio de nombres [**Windows.Media.Devices**](/uwp/api/Windows.Media.Devices).
 
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
 ## <a name="exposure"></a>Exposure
 
-[  **ExposureControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ExposureControl) te permite definir la velocidad del obturador que se usa durante la captura de fotos o vídeo.
+[**ExposureControl**](/uwp/api/Windows.Media.Devices.ExposureControl) te permite definir la velocidad del obturador que se usa durante la captura de fotos o vídeo.
 
-Este ejemplo usa un control [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor actual de la exposición y una casilla para activar o desactivar el ajuste de exposición automática.
+Este ejemplo usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor actual de la exposición y una casilla para activar o desactivar el ajuste de exposición automática.
 
 [!code-xml[ExposureXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetExposureXAML)]
 
-Comprueba si el dispositivo de captura actual admite **ExposureControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece el estado de activación de la casilla para indicar si el ajuste de exposición automática está activo en el valor de la propiedad [**Auto**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.auto).
+Comprueba si el dispositivo de captura actual admite **ExposureControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.exposurecontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece el estado de activación de la casilla para indicar si el ajuste de exposición automática está activo en el valor de la propiedad [**Auto**](/uwp/api/windows.media.devices.exposurecontrol.auto).
 
-El valor de exposición debe estar dentro del intervalo admitido por el dispositivo y debe ser un incremento del tamaño de paso admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.min), [**Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.max) y [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
+El valor de exposición debe estar dentro del intervalo admitido por el dispositivo y debe ser un incremento del tamaño de paso admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](/uwp/api/windows.media.devices.exposurecontrol.min), [**Max**](/uwp/api/windows.media.devices.exposurecontrol.max) y [**Step**](/uwp/api/windows.media.devices.exposurecontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
 
-Define el valor del control deslizante en el valor actual de **ExposureControl** después de anular el registro del controlador de eventos [**ValueChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
+Define el valor del control deslizante en el valor actual de **ExposureControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
 [!code-cs[ExposureControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureControl)]
 
-En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de exposición mediante una llamada a [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.setvalueasync).
+En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de exposición mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.exposurecontrol.setvalueasync).
 
 [!code-cs[ExposureSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureSlider)]
 
-En el controlador de eventos **CheckedChanged** de la casilla de exposición automática, activa y desactiva el ajuste de exposición automática llamando a [**SetAutoAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.setautoasync) y pasando un valor booleano.
+En el controlador de eventos **CheckedChanged** de la casilla de exposición automática, activa y desactiva el ajuste de exposición automática llamando a [**SetAutoAsync**](/uwp/api/windows.media.devices.exposurecontrol.setautoasync) y pasando un valor booleano.
 
 [!code-cs[ExposureCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureCheckBox)]
 
@@ -59,54 +59,54 @@ En el controlador de eventos **CheckedChanged** de la casilla de exposición aut
 
 ## <a name="exposure-compensation"></a>Compensación de exposición
 
-El [**ExposureCompensationControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ExposureCompensationControl) te permite establecer la compensación de exposición que se usa durante la captura de fotos o vídeo.
+El [**ExposureCompensationControl**](/uwp/api/Windows.Media.Devices.ExposureCompensationControl) te permite establecer la compensación de exposición que se usa durante la captura de fotos o vídeo.
 
-Este ejemplo usa un control [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor de compensación de exposición actual.
+Este ejemplo usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor de compensación de exposición actual.
 
 [!code-xml[EvXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetEvXAML)]
 
 Comprueba si el dispositivo de captura actual admite **ExposureCompensationControl** comprobando la propiedad [Supported](supported-codecs.md). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
-El valor de compensación de la exposición debe estar dentro del intervalo que admite el dispositivo y debe ser un incremento del tamaño de los pasos admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecompensationcontrol.min), [**Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecompensationcontrol.max) y [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecompensationcontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
+El valor de compensación de la exposición debe estar dentro del intervalo que admite el dispositivo y debe ser un incremento del tamaño de los pasos admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](/uwp/api/windows.media.devices.exposurecompensationcontrol.min), [**Max**](/uwp/api/windows.media.devices.exposurecompensationcontrol.max) y [**Step**](/uwp/api/windows.media.devices.exposurecompensationcontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
 
-Define el valor del control deslizante con el valor actual de **ExposureCompensationControl** después de anular el registro del controlador de eventos [**ValueChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
+Define el valor del control deslizante con el valor actual de **ExposureCompensationControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
 [!code-cs[EvControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEvControl)]
 
-En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de exposición mediante una llamada a [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecompensationcontrol.setvalueasync).
+En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de exposición mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.exposurecompensationcontrol.setvalueasync).
 
 [!code-cs[EvValueChanged](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEvValueChanged)]
 
-## <a name="flash"></a>Flash
+## <a name="flash"></a>Intermitente
 
-[  **FlashControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FlashControl) te permite activar o desactivar el flash o activar el flash automático, que permite al sistema determinar dinámicamente si se usa el flash. Este control también te permite habilitar la reducción de ojos rojos automática en los dispositivos que lo admiten. Todas estas opciones de configuración se aplican a la captura de fotos. El [**TorchControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.TorchControl) es un control independiente para activar o desactivar la linterna para la captura de vídeo.
+[**FlashControl**](/uwp/api/Windows.Media.Devices.FlashControl) te permite activar o desactivar el flash o activar el flash automático, que permite al sistema determinar dinámicamente si se usa el flash. Este control también te permite habilitar la reducción de ojos rojos automática en los dispositivos que lo admiten. Todas estas opciones de configuración se aplican a la captura de fotos. El [**TorchControl**](/uwp/api/Windows.Media.Devices.TorchControl) es un control independiente para activar o desactivar la linterna para la captura de vídeo.
 
 En este ejemplo se usa un conjunto de botones de radio para permitir al usuario alternar entre activado, desactivado y la configuración de flash automática. También se proporciona una casilla para permitir la alternancia de la función de reducción de ojos rojos y la linterna de vídeo.
 
 [!code-xml[FlashXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetFlashXAML)]
 
-Comprueba si el dispositivo de captura actual admite **FlashControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Si se admite **FlashControl**, es posible que la reducción de ojos rojos automática sea o no sea compatible; por lo tanto, comprueba la propiedad [**RedEyeReductionSupported**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.redeyereductionsupported) antes de habilitar la interfaz de usuario. Como **TorchControl** es independiente del control del flash, también debes comprobar la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.torchcontrol.supported) antes de usarlo.
+Comprueba si el dispositivo de captura actual admite **FlashControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.focuscontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Si se admite **FlashControl**, es posible que la reducción de ojos rojos automática sea o no sea compatible; por lo tanto, comprueba la propiedad [**RedEyeReductionSupported**](/uwp/api/windows.media.devices.flashcontrol.redeyereductionsupported) antes de habilitar la interfaz de usuario. Como **TorchControl** es independiente del control del flash, también debes comprobar la propiedad [**Supported**](/uwp/api/windows.media.devices.torchcontrol.supported) antes de usarlo.
 
-En el controlador de eventos [**Checked**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) de cada botón de opción del flash, activa o desactiva los ajustes del flash que correspondan. Ten en cuenta que para definir que el flash se use siempre, debes definir la propiedad [**Enabled**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.enabled) como true y la propiedad [**Auto**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.auto), como false.
+En el controlador de eventos [**Checked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) de cada botón de opción del flash, activa o desactiva los ajustes del flash que correspondan. Ten en cuenta que para definir que el flash se use siempre, debes definir la propiedad [**Enabled**](/uwp/api/windows.media.devices.flashcontrol.enabled) como true y la propiedad [**Auto**](/uwp/api/windows.media.devices.flashcontrol.auto), como false.
 
 [!code-cs[FlashControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFlashControl)]
 
 [!code-cs[FlashRadioButtons](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFlashRadioButtons)]
 
-En el controlador de la casilla de reducción de ojos rojos, define la propiedad [**RedEyeReduction**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.redeyereduction) con el valor adecuado.
+En el controlador de la casilla de reducción de ojos rojos, define la propiedad [**RedEyeReduction**](/uwp/api/windows.media.devices.flashcontrol.redeyereduction) con el valor adecuado.
 
 [!code-cs[RedEye](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetRedEye)]
 
-Por último, en el controlador de la casilla de la linterna de vídeo, define la propiedad [**Enabled**](https://docs.microsoft.com/uwp/api/windows.media.devices.torchcontrol.enabled) con el valor adecuado.
+Por último, en el controlador de la casilla de la linterna de vídeo, define la propiedad [**Enabled**](/uwp/api/windows.media.devices.torchcontrol.enabled) con el valor adecuado.
 
 [!code-cs[Torch](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
 > [!NOTE] 
->  En algunos dispositivos, la linterna no emite luz, incluso si el objeto [**TorchControl.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.devices.torchcontrol.enabled) se establece en true, a menos que el dispositivo tenga una secuencia de vista previa en ejecución y esté capturando vídeo activamente. El orden de operaciones recomendado es activar la vista previa de vídeo, activar la linterna estableciendo **Enabled** en true y, a continuación, iniciar la captura de vídeo. En algunos dispositivos la linterna se enciende después de iniciar la vista previa. En otros dispositivos, es posible que la linterna no se encienda hasta que se inicie la captura de vídeo.
+>  En algunos dispositivos, la linterna no emite luz, incluso si el objeto [**TorchControl.Enabled**](/uwp/api/windows.media.devices.torchcontrol.enabled) se establece en true, a menos que el dispositivo tenga una secuencia de vista previa en ejecución y esté capturando vídeo activamente. El orden de operaciones recomendado es activar la vista previa de vídeo, activar la linterna estableciendo **Enabled** en true y, a continuación, iniciar la captura de vídeo. En algunos dispositivos la linterna se enciende después de iniciar la vista previa. En otros dispositivos, es posible que la linterna no se encienda hasta que se inicie la captura de vídeo.
 
-## <a name="focus"></a>Focus
+## <a name="focus"></a>Foco
 
-El objeto [**FocusControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusControl) admite tres métodos diferentes usados con frecuencia para ajustar el enfoque de la cámara: autoenfoque continuo, pulsar para enfocar y enfoque manual. Una aplicación de cámara puede admitir los tres métodos, pero para fines de simplificación, en este artículo se explican las tres técnicas por separado. En esta sección también se describe cómo habilitar la luz de la ayuda de foco.
+El objeto [**FocusControl**](/uwp/api/Windows.Media.Devices.FocusControl) admite tres métodos diferentes usados con frecuencia para ajustar el enfoque de la cámara: autoenfoque continuo, pulsar para enfocar y enfoque manual. Una aplicación de cámara puede admitir los tres métodos, pero para fines de simplificación, en este artículo se explican las tres técnicas por separado. En esta sección también se describe cómo habilitar la luz de la ayuda de foco.
 
 ### <a name="continuous-autofocus"></a>Autofocus continuo
 
@@ -114,13 +114,13 @@ Si se habilita el autofocus, se indica a la cámara que debe ajustar el foco din
 
 [!code-xml[CAFXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetCAFXAML)]
 
-Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.supported). A continuación, determina si se admite el autoenfoque continuo comprobando la lista [**SupportedFocusModes**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.supportedfocusmodes) para ver si contiene el valor [**FocusMode.Continuous**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusMode) y, si es así, muestra el botón de radio de autoenfoque continuo.
+Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.flashcontrol.supported). A continuación, determina si se admite el autoenfoque continuo comprobando la lista [**SupportedFocusModes**](/uwp/api/windows.media.devices.focuscontrol.supportedfocusmodes) para ver si contiene el valor [**FocusMode.Continuous**](/uwp/api/Windows.Media.Devices.FocusMode) y, si es así, muestra el botón de radio de autoenfoque continuo.
 
 [!code-cs[CAF](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCAF)]
 
-En el controlador de eventos [**Checked**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) del botón de radio de autoenfoque continuo, usa la propiedad [**VideoDeviceController.FocusControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.focuscontrol) para obtener una instancia del control. Llama a [**UnlockAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.unlockasync) para desbloquear el control en caso de que la aplicación haya llamado anteriormente a [**LockAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.lockasync) para habilitar uno de los otros modos de enfoque.
+En el controlador de eventos [**Checked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) del botón de radio de autoenfoque continuo, usa la propiedad [**VideoDeviceController.FocusControl**](/uwp/api/windows.media.devices.videodevicecontroller.focuscontrol) para obtener una instancia del control. Llama a [**UnlockAsync**](/uwp/api/windows.media.devices.focuscontrol.unlockasync) para desbloquear el control en caso de que la aplicación haya llamado anteriormente a [**LockAsync**](/uwp/api/windows.media.devices.focuscontrol.lockasync) para habilitar uno de los otros modos de enfoque.
 
-Crea un nuevo objeto [**FocusSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusSettings) y establece la propiedad [**Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.focussettings.mode) en **Continuous**. Establece la propiedad [**AutoFocusRange**](https://docs.microsoft.com/uwp/api/windows.media.devices.focussettings.autofocusrange) en un valor adecuado para el escenario de la aplicación o seleccionado por el usuario en tu interfaz de usuario. Pasa el objeto **FocusSettings** al método [**Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.configure) y, a continuación, llama a [**FocusAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusasync) para iniciar el autoenfoque continuo.
+Crea un nuevo objeto [**FocusSettings**](/uwp/api/Windows.Media.Devices.FocusSettings) y establece la propiedad [**Mode**](/uwp/api/windows.media.devices.focussettings.mode) en **Continuous**. Establece la propiedad [**AutoFocusRange**](/uwp/api/windows.media.devices.focussettings.autofocusrange) en un valor adecuado para el escenario de la aplicación o seleccionado por el usuario en tu interfaz de usuario. Pasa el objeto **FocusSettings** al método [**Configure**](/uwp/api/windows.media.devices.focuscontrol.configure) y, a continuación, llama a [**FocusAsync**](/uwp/api/windows.media.devices.focuscontrol.focusasync) para iniciar el autoenfoque continuo.
 
 [!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
 
@@ -129,17 +129,17 @@ Crea un nuevo objeto [**FocusSettings**](https://docs.microsoft.com/uwp/api/Wind
 
 ### <a name="tap-to-focus"></a>Pulsar para enfocar
 
-La técnica de pulsar para enfocar usa el objeto [**FocusControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusControl) y el [**RegionsOfInterestControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.RegionsOfInterestControl) para especificar una subregión del marco de captura donde debe centrarse el dispositivo de captura. La región de enfoque se determina por la pulsación del usuario en la pantalla que muestra la secuencia de vista previa.
+La técnica de pulsar para enfocar usa el objeto [**FocusControl**](/uwp/api/Windows.Media.Devices.FocusControl) y el [**RegionsOfInterestControl**](/uwp/api/Windows.Media.Devices.RegionsOfInterestControl) para especificar una subregión del marco de captura donde debe centrarse el dispositivo de captura. La región de enfoque se determina por la pulsación del usuario en la pantalla que muestra la secuencia de vista previa.
 
 En este ejemplo se usa un botón de radio para habilitar y deshabilitar el modo de pulsar para enfocar.
 
 [!code-xml[TapFocusXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetTapFocusXAML)]
 
-Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.supported). Para poder usar esta técnica, **RegionsOfInterestControl** debe ser compatible y debe admitir al menos una región. Comprueba las propiedades [**AutoFocusSupported**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.autofocussupported) y [**MaxRegions**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.maxregions) para determinar si se debe mostrar u ocultar el botón de radio de pulsar para enfocar.
+Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.flashcontrol.supported). Para poder usar esta técnica, **RegionsOfInterestControl** debe ser compatible y debe admitir al menos una región. Comprueba las propiedades [**AutoFocusSupported**](/uwp/api/windows.media.devices.regionsofinterestcontrol.autofocussupported) y [**MaxRegions**](/uwp/api/windows.media.devices.regionsofinterestcontrol.maxregions) para determinar si se debe mostrar u ocultar el botón de radio de pulsar para enfocar.
 
 [!code-cs[TapFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocus)]
 
-En el controlador de eventos [**Checked**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) del botón de radio de pulsar para enfocar, usa la propiedad [**VideoDeviceController.FocusControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.focuscontrol) para obtener una instancia del control. Llama a [**LockAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.lockasync) para bloquear el control en caso de que la aplicación haya llamado anteriormente a [**UnlockAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.unlockasync) para habilitar el autoenfoque continuo y luego espera a que el usuario pulse la pantalla para cambiar el enfoque.
+En el controlador de eventos [**Checked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) del botón de radio de pulsar para enfocar, usa la propiedad [**VideoDeviceController.FocusControl**](/uwp/api/windows.media.devices.videodevicecontroller.focuscontrol) para obtener una instancia del control. Llama a [**LockAsync**](/uwp/api/windows.media.devices.focuscontrol.lockasync) para bloquear el control en caso de que la aplicación haya llamado anteriormente a [**UnlockAsync**](/uwp/api/windows.media.devices.focuscontrol.unlockasync) para habilitar el autoenfoque continuo y luego espera a que el usuario pulse la pantalla para cambiar el enfoque.
 
 [!code-cs[TapFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusRadioButton)]
 
@@ -147,38 +147,38 @@ Este ejemplo se centra en una región cuando el usuario pulsa la pantalla y, a c
 
 [!code-cs[IsFocused](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsFocused)]
 
-El siguiente paso es escuchar el evento cuando el usuario pulsa la pantalla, controlando el evento [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped) de [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement), que está mostrando actualmente la secuencia de vista previa de captura. Si la cámara no muestra actualmente la vista previa o si el modo de pulsar para enfocar no está habilitado, regresa del controlador sin hacer nada.
+El siguiente paso es escuchar el evento cuando el usuario pulsa la pantalla, controlando el evento [**Tapped**](/uwp/api/windows.ui.xaml.uielement.tapped) de [**CaptureElement**](/uwp/api/Windows.UI.Xaml.Controls.CaptureElement), que está mostrando actualmente la secuencia de vista previa de captura. Si la cámara no muestra actualmente la vista previa o si el modo de pulsar para enfocar no está habilitado, regresa del controlador sin hacer nada.
 
-Si la variable de seguimiento *\_isFocused* se cambia a false, y si la cámara no está actualmente en el proceso de foco (determinado por la propiedad [**FocusState**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusstate) del **FocusControl**), comienza el proceso de pulsación de enfoque. Obtén la posición de la pulsación del usuario a partir de los argumentos del evento pasados al controlador. En este ejemplo también se usa esta oportunidad para elegir el tamaño de la región que se enfocará. En este caso, el tamaño es 1/4 de la dimensión más pequeña del elemento de captura. Pasa la posición de pulsación y el tamaño de la región al método auxiliar **TapToFocus** que se define en la siguiente sección.
+Si la variable de seguimiento * \_ isFocused* se cambia a false y la cámara no está actualmente en el proceso de foco (determinado por la propiedad [**FocusState**](/uwp/api/windows.media.devices.focuscontrol.focusstate) del **FocusControl**), comienza el proceso de punteo en el foco. Obtén la posición de la pulsación del usuario a partir de los argumentos del evento pasados al controlador. En este ejemplo también se usa esta oportunidad para elegir el tamaño de la región que se enfocará. En este caso, el tamaño es 1/4 de la dimensión más pequeña del elemento de captura. Pasa la posición de pulsación y el tamaño de la región al método auxiliar **TapToFocus** que se define en la siguiente sección.
 
-Si la alternancia *\_isFocused* está establecida en true, el usuario TAP debe borrar el foco de la región anterior. Esto se realiza en el método auxiliar **TapUnfocus** que se muestra a continuación.
+Si el control de alternancia * \_ isFocused* está establecido en true, el usuario TAP debe borrar el foco de la región anterior. Esto se realiza en el método auxiliar **TapUnfocus** que se muestra a continuación.
 
 [!code-cs[TapFocusPreviewControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusPreviewControl)]
 
-En el método auxiliar **TapToFocus** , establezca primero el *\_isFocused* en true para que la siguiente pulsación de pantalla libere el foco de la región punteada.
+En el método auxiliar **TapToFocus** , establezca primero el valor de * \_ isFocused* en true para que la siguiente pulsación de pantalla libere el foco de la región punteada.
 
-Es la siguiente tarea de este método auxiliar es determinar el rectángulo dentro de la secuencia de vista previa que se asignará al control de foco. Esto requiere dos pasos. El primer paso es determinar el rectángulo que la secuencia de vista previa ocupa dentro del control [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement). Esto depende de las dimensiones de la secuencia de vista previa y de la orientación del dispositivo. El método auxiliar **GetPreviewStreamRectInControl**, que se muestra al final de esta sección, realiza esta tarea y devuelve el rectángulo que contiene la secuencia de vista previa.
+Es la siguiente tarea de este método auxiliar es determinar el rectángulo dentro de la secuencia de vista previa que se asignará al control de foco. Esto requiere dos pasos. El primer paso es determinar el rectángulo que la secuencia de vista previa ocupa dentro del control [**CaptureElement**](/uwp/api/Windows.UI.Xaml.Controls.CaptureElement). Esto depende de las dimensiones de la secuencia de vista previa y de la orientación del dispositivo. El método auxiliar **GetPreviewStreamRectInControl**, que se muestra al final de esta sección, realiza esta tarea y devuelve el rectángulo que contiene la secuencia de vista previa.
 
 La siguiente tarea en **TapToFocus** es convertir la ubicación de pulsación y el tamaño del rectángulo de enfoque deseado, que se determinaron dentro del controlador de eventos **CaptureElement.Tapped** en coordenadas de la secuencia de captura. El método auxiliar **ConvertUiTapToPreviewRect**, que se muestra más adelante en esta sección, realiza esta conversión y devuelve el rectángulo, en coordenadas de la secuencia de captura, donde se solicitará el enfoque.
 
-Ahora que se ha obtenido el rectángulo de destino, crea un nuevo objeto [**RegionOfInterest**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.RegionOfInterest) estableciendo la propiedad [**Bounds**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionofinterest.bounds) en el rectángulo de destino obtenido en los pasos anteriores.
+Ahora que se ha obtenido el rectángulo de destino, crea un nuevo objeto [**RegionOfInterest**](/uwp/api/Windows.Media.Devices.RegionOfInterest) estableciendo la propiedad [**Bounds**](/uwp/api/windows.media.devices.regionofinterest.bounds) en el rectángulo de destino obtenido en los pasos anteriores.
 
-Obtén el objeto [**FocusControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusControl) del dispositivo de captura. Crea un nuevo objeto [**FocusSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusSettings) y establece el [**Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.mode) y [**AutoFocusRange**](https://docs.microsoft.com/uwp/api/windows.media.devices.focussettings.autofocusrange) en los valores deseados después de asegurarte de que son compatibles con el **FocusControl**. Llama a [**Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.configure) en el **FocusControl** para activar la configuración e indicar al dispositivo que empiece a enfocarse en la región especificada.
+Obtén el objeto [**FocusControl**](/uwp/api/Windows.Media.Devices.FocusControl) del dispositivo de captura. Crea un nuevo objeto [**FocusSettings**](/uwp/api/Windows.Media.Devices.FocusSettings) y establece el [**Mode**](/uwp/api/windows.media.devices.focuscontrol.mode) y [**AutoFocusRange**](/uwp/api/windows.media.devices.focussettings.autofocusrange) en los valores deseados después de asegurarte de que son compatibles con el **FocusControl**. Llama a [**Configure**](/uwp/api/windows.media.devices.focuscontrol.configure) en el **FocusControl** para activar la configuración e indicar al dispositivo que empiece a enfocarse en la región especificada.
 
-A continuación, obtén el objeto [**RegionsOfInterestControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.RegionsOfInterestControl) del dispositivo de captura y llama a [**SetRegionsAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.setregionsasync) para establecer la región activa. Se pueden establecer varias regiones de interés en los dispositivos que lo admiten, pero este ejemplo solo establece una sola región.
+A continuación, obtén el objeto [**RegionsOfInterestControl**](/uwp/api/Windows.Media.Devices.RegionsOfInterestControl) del dispositivo de captura y llama a [**SetRegionsAsync**](/uwp/api/windows.media.devices.regionsofinterestcontrol.setregionsasync) para establecer la región activa. Se pueden establecer varias regiones de interés en los dispositivos que lo admiten, pero este ejemplo solo establece una sola región.
 
-Por último, llama a [**FocusAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusasync) en el objeto **FocusControl** para iniciar el enfoque.
+Por último, llama a [**FocusAsync**](/uwp/api/windows.media.devices.focuscontrol.focusasync) en el objeto **FocusControl** para iniciar el enfoque.
 
 > [!IMPORTANT]
 > Al implementar la pulsación para enfocar, el orden de las operaciones es importante. Debes llamar a estas API en el siguiente orden:
 >
-> 1. [**FocusControl. Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.configure)
-> 2. [**RegionsOfInterestControl.SetRegionsAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.setregionsasync)
-> 3. [**FocusControl. FocusAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusasync)
+> 1. [**FocusControl.Configure**](/uwp/api/windows.media.devices.focuscontrol.configure)
+> 2. [**RegionsOfInterestControl.SetRegionsAsync**](/uwp/api/windows.media.devices.regionsofinterestcontrol.setregionsasync)
+> 3. [**FocusControl.FocusAsync**](/uwp/api/windows.media.devices.focuscontrol.focusasync)
 
 [!code-cs[TapToFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapToFocus)]
 
-En el método auxiliar **TapUnfocus**, obtén el objeto **RegionsOfInterestControl** y llama a [**ClearRegionsAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.clearregionsasync) para borrar la región que se haya registrado con el control dentro del método auxiliar **TapToFocus**. A continuación, obtén el objeto **FocusControl** y llama a [**FocusAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusasync) para que el dispositivo se vuelva a enfocar sin una región de interés.
+En el método auxiliar **TapUnfocus**, obtén el objeto **RegionsOfInterestControl** y llama a [**ClearRegionsAsync**](/uwp/api/windows.media.devices.regionsofinterestcontrol.clearregionsasync) para borrar la región que se haya registrado con el control dentro del método auxiliar **TapToFocus**. A continuación, obtén el objeto **FocusControl** y llama a [**FocusAsync**](/uwp/api/windows.media.devices.focuscontrol.focusasync) para que el dispositivo se vuelva a enfocar sin una región de interés.
 
 [!code-cs[TapUnfocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapUnfocus)]
 
@@ -186,7 +186,7 @@ El método auxiliar **GetPreviewStreamRectInControl** usa la resolución de la s
 
 [!code-cs[GetPreviewStreamRectInControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetGetPreviewStreamRectInControl)]
 
-El método auxiliar **ConvertUiTapToPreviewRect** toma como argumentos la ubicación del evento de pulsación, el tamaño deseado de la región de enfoque y el rectángulo que contiene la secuencia de vista previa obtenida del método auxiliar **GetPreviewStreamRectInControl**. Este método usa estos valores y la orientación actual del dispositivo para calcular el rectángulo dentro de la secuencia de vista previa que contiene la región deseada. Una vez más, este método usa variables de miembro de clase definidas en el código de ejemplo de captura básica de elementos multimedia que se encuentra en [Capturar fotos y vídeo con MediaCapture](capture-photos-and-video-with-mediacapture.md).
+El método auxiliar **ConvertUiTapToPreviewRect** toma como argumentos la ubicación del evento de pulsación, el tamaño deseado de la región de enfoque y el rectángulo que contiene la secuencia de vista previa obtenida del método auxiliar **GetPreviewStreamRectInControl**. Este método usa estos valores y la orientación actual del dispositivo para calcular el rectángulo dentro de la secuencia de vista previa que contiene la región deseada. Una vez más, este método usa variables de miembro de clase definidas en el código de ejemplo de captura básica de elementos multimedia que se encuentra en [Capturar fotos y vídeo con MediaCapture](./index.md).
 
 [!code-cs[ConvertUiTapToPreviewRect](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetConvertUiTapToPreviewRect)]
 
@@ -196,19 +196,19 @@ La técnica de enfoque manual usa un control **Slider** para definir la profundi
 
 [!code-xml[ManualFocusXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetManualFocusXAML)]
 
-Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
+Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.focuscontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
-El valor de enfoque debe estar dentro del intervalo que admite el dispositivo y debe ser un incremento del tamaño de los pasos admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.min), [**Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.max) y [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
+El valor de enfoque debe estar dentro del intervalo que admite el dispositivo y debe ser un incremento del tamaño de los pasos admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](/uwp/api/windows.media.devices.focuscontrol.min), [**Max**](/uwp/api/windows.media.devices.focuscontrol.max) y [**Step**](/uwp/api/windows.media.devices.focuscontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
 
-Define el valor del control deslizante con el valor actual del objeto **FocusControl** después de anular el registro del controlador de eventos [**ValueChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
+Define el valor del control deslizante con el valor actual del objeto **FocusControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
 [!code-cs[Focus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
 
-En el controlador de eventos **Checked** del botón de radio de enfoque manual, obtén el objeto **FocusControl** y llama a [**LockAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.lockasync) en caso de que la aplicación hubiera desbloqueado el enfoque anteriormente con una llamada a [**UnlockAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.unlockasync).
+En el controlador de eventos **Checked** del botón de radio de enfoque manual, obtén el objeto **FocusControl** y llama a [**LockAsync**](/uwp/api/windows.media.devices.focuscontrol.lockasync) en caso de que la aplicación hubiera desbloqueado el enfoque anteriormente con una llamada a [**UnlockAsync**](/uwp/api/windows.media.devices.focuscontrol.unlockasync).
 
 [!code-cs[ManualFocusChecked](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetManualFocusChecked)]
 
-En el controlador de eventos **ValueChanged** del control deslizante del enfoque manual, obtén el valor actual del control y define el valor de enfoque mediante una llamada a [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.setvalueasync).
+En el controlador de eventos **ValueChanged** del control deslizante del enfoque manual, obtén el valor actual del control y define el valor de enfoque mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.focuscontrol.setvalueasync).
 
 [!code-cs[FocusSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusSlider)]
 
@@ -218,35 +218,35 @@ En los dispositivos que lo admiten, puedes habilitar una luz de enfoque auxiliar
 
 [!code-xml[FocusLightXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetFocusLightXAML)]
 
-Comprueba si el dispositivo de captura actual admite **FlashControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.supported). Asimismo, comprueba [**AssistantLightSupported**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.assistantlightsupported) para asegurarte de que también se admite la luz auxiliar. Si se admiten ambos, puedes mostrar y habilitar la interfaz de usuario para esta función.
+Comprueba si el dispositivo de captura actual admite **FlashControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.flashcontrol.supported). Asimismo, comprueba [**AssistantLightSupported**](/uwp/api/windows.media.devices.flashcontrol.assistantlightsupported) para asegurarte de que también se admite la luz auxiliar. Si se admiten ambos, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
 [!code-cs[FocusLight](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusLight)]
 
-En el controlador de eventos **CheckedChanged**, obtén el objeto [**FlashControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FlashControl) del dispositivo de captura. Define la propiedad [**AssistantLightEnabled**](https://docs.microsoft.com/uwp/api/windows.media.devices.flashcontrol.assistantlightenabled) para habilitar o deshabilitar la luz de enfoque.
+En el controlador de eventos **CheckedChanged**, obtén el objeto [**FlashControl**](/uwp/api/Windows.Media.Devices.FlashControl) del dispositivo de captura. Define la propiedad [**AssistantLightEnabled**](/uwp/api/windows.media.devices.flashcontrol.assistantlightenabled) para habilitar o deshabilitar la luz de enfoque.
 
 [!code-cs[FocusLightCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusLightCheckBox)]
 
 ## <a name="iso-speed"></a>Velocidad ISO
 
-[  **IsoSpeedControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.IsoSpeedControl) te permite definir la velocidad ISO que se usa durante la captura de fotos o vídeo.
+[**IsoSpeedControl**](/uwp/api/Windows.Media.Devices.IsoSpeedControl) te permite definir la velocidad ISO que se usa durante la captura de fotos o vídeo.
 
-En este ejemplo se usa un control [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor de compensación de exposición actual y una casilla para alternar el ajuste de velocidad ISO automática.
+En este ejemplo se usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor de compensación de exposición actual y una casilla para alternar el ajuste de velocidad ISO automática.
 
 [!code-xml[IsoXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetIsoXAML)]
 
-Comprueba si el dispositivo de captura actual admite **IsoSpeedControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece el estado de activación de la casilla para indicar si el ajuste de velocidad ISO automática está activo en el valor de la propiedad [**Auto**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.auto).
+Comprueba si el dispositivo de captura actual admite **IsoSpeedControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.isospeedcontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece el estado de activación de la casilla para indicar si el ajuste de velocidad ISO automática está activo en el valor de la propiedad [**Auto**](/uwp/api/windows.media.devices.isospeedcontrol.auto).
 
-El valor de velocidad ISO debe estar dentro del intervalo admitido por el dispositivo y debe ser un incremento del tamaño de paso admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.min), [**Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.max) y [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
+El valor de velocidad ISO debe estar dentro del intervalo admitido por el dispositivo y debe ser un incremento del tamaño de paso admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](/uwp/api/windows.media.devices.isospeedcontrol.min), [**Max**](/uwp/api/windows.media.devices.isospeedcontrol.max) y [**Step**](/uwp/api/windows.media.devices.isospeedcontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
 
-Define el valor del control deslizante con el valor actual del **IsoSpeedControl** después de anular el registro del controlador de eventos [**ValueChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
+Define el valor del control deslizante con el valor actual del **IsoSpeedControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
 [!code-cs[IsoControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoControl)]
 
-En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de velocidad ISO mediante una llamada a [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.setvalueasync).
+En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de velocidad ISO mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.isospeedcontrol.setvalueasync).
 
 [!code-cs[IsoSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoSlider)]
 
-En el controlador de eventos **CheckedChanged** de la casilla de velocidad ISO automática, activa el ajuste de velocidad ISO automática llamando a [**SetAutoAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.setautoasync). Para desactivar el ajuste velocidad ISO automática, llama a [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.isospeedcontrol.setvalueasync) y pasa el valor actual del control deslizante.
+En el controlador de eventos **CheckedChanged** de la casilla de velocidad ISO automática, activa el ajuste de velocidad ISO automática llamando a [**SetAutoAsync**](/uwp/api/windows.media.devices.isospeedcontrol.setautoasync). Para desactivar el ajuste velocidad ISO automática, llama a [**SetValueAsync**](/uwp/api/windows.media.devices.isospeedcontrol.setvalueasync) y pasa el valor actual del control deslizante.
 
 [!code-cs[IsoCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoCheckBox)]
 
@@ -254,42 +254,42 @@ En el controlador de eventos **CheckedChanged** de la casilla de velocidad ISO a
 
 La estabilización de imagen óptica (OIS) estabiliza una secuencia de vídeo capturada manipulando mecánicamente el dispositivo de captura de hardware, lo que puede proporcionar un resultado superior a la estabilización digital. En los dispositivos que no admiten OIS, puedes usar el efecto VideoStabilizationEffect para realizar la estabilización digital de los vídeos capturados. Para más información, consulta [Efectos para captura de vídeo](effects-for-video-capture.md).
 
-Para determinar si el dispositivo actual admite OIS, comprueba la propiedad [**OpticalImageStabilizationControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.opticalimagestabilizationcontrol.supported).
+Para determinar si el dispositivo actual admite OIS, comprueba la propiedad [**OpticalImageStabilizationControl.Supported**](/uwp/api/windows.media.devices.opticalimagestabilizationcontrol.supported).
 
-El control de estabilización de imagen óptica admite tres modos: activado, desactivado y automático, lo que significa que el dispositivo determina dinámicamente si OIS puede mejorar la captura multimedia y, si es así, habilita OIS. Para determinar si un dispositivo es compatible con un modo determinado, comprueba si la colección [**OpticalImageStabilizationControl.SupportedModes**](https://docs.microsoft.com/uwp/api/windows.media.devices.opticalimagestabilizationcontrol.supportedmodes) contiene el modo deseado.
+El control de estabilización de imagen óptica admite tres modos: activado, desactivado y automático, lo que significa que el dispositivo determina dinámicamente si OIS puede mejorar la captura multimedia y, si es así, habilita OIS. Para determinar si un dispositivo es compatible con un modo determinado, comprueba si la colección [**OpticalImageStabilizationControl.SupportedModes**](/uwp/api/windows.media.devices.opticalimagestabilizationcontrol.supportedmodes) contiene el modo deseado.
 
-Para habilitar o deshabilitar OIS, define [**OpticalImageStabilizationControl.Mode**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.OpticalImageStabilizationMode) en el modo deseado.
+Para habilitar o deshabilitar OIS, define [**OpticalImageStabilizationControl.Mode**](/uwp/api/Windows.Media.Devices.OpticalImageStabilizationMode) en el modo deseado.
 
 [!code-cs[SetOpticalImageStabilizationMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetOpticalImageStabilizationMode)]
 
 ## <a name="powerline-frequency"></a>Frecuencia de la línea de alimentación
 Algunos dispositivos de cámara admiten el procesamiento de antiparpadeo que depende de conocer la frecuencia de la CA de las líneas de alimentación en el entorno actual. Algunos dispositivos admiten la determinación automática de la frecuencia de la línea de alimentación, mientras que otros requieren que la frecuencia se establezca de forma manual. El siguiente ejemplo de código muestra cómo determinar la compatibilidad de la frecuencia de la línea de alimentación en el dispositivo y, si es necesario, cómo establecer la frecuencia de forma manual. 
 
-En primer lugar, llama al método **VideoDeviceController**[**TryGetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trygetpowerlinefrequency), pasando un parámetro de salida de tipo [**PowerlineFrequency**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.PowerlineFrequency); si se produce un error en esta llamada, el control de frecuencia de la línea de alimentación no se admite en el dispositivo actual. Si se admite la característica, puedes determinar si el modo automático está disponible en el dispositivo intentando establecer el modo automático. Para ello, llame a [**TrySetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trysetpowerlinefrequency) y pase el valor **auto**. Si la llamada se realiza correctamente, significa que se admite la frecuencia de la Powerline automática. Si en el dispositivo se admite el controlador de frecuencia de la línea de alimentación, pero no se admite la detección automática de la frecuencia, puedes establecer la frecuencia manualmente mediante el uso de **TrySetPowerlineFrequency**. En este ejemplo, **MyCustomFrequencyLookup** es un método personalizado que se implementa para determinar la frecuencia correcta para la ubicación actual del dispositivo. 
+En primer lugar, llama al método **VideoDeviceController**[**TryGetPowerlineFrequency**](/uwp/api/windows.media.devices.videodevicecontroller.trygetpowerlinefrequency), pasando un parámetro de salida de tipo [**PowerlineFrequency**](/uwp/api/Windows.Media.Capture.PowerlineFrequency); si se produce un error en esta llamada, el control de frecuencia de la línea de alimentación no se admite en el dispositivo actual. Si se admite la característica, puedes determinar si el modo automático está disponible en el dispositivo intentando establecer el modo automático. Para ello, llame a [**TrySetPowerlineFrequency**](/uwp/api/windows.media.devices.videodevicecontroller.trysetpowerlinefrequency) y pase el valor **auto**. Si la llamada se realiza correctamente, significa que se admite la frecuencia de la Powerline automática. Si en el dispositivo se admite el controlador de frecuencia de la línea de alimentación, pero no se admite la detección automática de la frecuencia, puedes establecer la frecuencia manualmente mediante el uso de **TrySetPowerlineFrequency**. En este ejemplo, **MyCustomFrequencyLookup** es un método personalizado que se implementa para determinar la frecuencia correcta para la ubicación actual del dispositivo. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 
 ## <a name="white-balance"></a>Balance de blancos
 
-[  **WhiteBalanceControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.whitebalancecontrol) te permite definir el balance de blancos que se usa durante la captura de fotos o vídeo.
+[**WhiteBalanceControl**](/uwp/api/windows.media.devices.videodevicecontroller.whitebalancecontrol) te permite definir el balance de blancos que se usa durante la captura de fotos o vídeo.
 
-En este ejemplo se usa un control [**ComboBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para seleccionar entre valores predeterminados de temperatura de color integrados y un control [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) para el ajuste manual del balance de blancos.
+En este ejemplo se usa un control [**ComboBox**](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para seleccionar entre valores predeterminados de temperatura de color integrados y un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para el ajuste manual del balance de blancos.
 
 [!code-xml[WhiteBalanceXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetWhiteBalanceXAML)]
 
-Comprueba si el dispositivo de captura actual admite **WhiteBalanceControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece los elementos del cuadro combinado en los valores de la enumeración [**ColorTemperaturePreset**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ColorTemperaturePreset). También, establece el elemento seleccionado en el valor actual de la propiedad [**Preset**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.preset).
+Comprueba si el dispositivo de captura actual admite **WhiteBalanceControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.whitebalancecontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece los elementos del cuadro combinado en los valores de la enumeración [**ColorTemperaturePreset**](/uwp/api/Windows.Media.Devices.ColorTemperaturePreset). También, establece el elemento seleccionado en el valor actual de la propiedad [**Preset**](/uwp/api/windows.media.devices.whitebalancecontrol.preset).
 
-Para el control manual, el valor del balance de blancos debe estar dentro del intervalo admitido por el dispositivo y debe ser un incremento del tamaño de paso admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.min), [**Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.max) y [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante. Antes de habilitar el control manual, comprueba que el intervalo entre los valores mínimos y máximos admitidos es mayor que el tamaño de paso. Si no es así, no se admite el control manual en el dispositivo actual.
+Para el control manual, el valor del balance de blancos debe estar dentro del intervalo admitido por el dispositivo y debe ser un incremento del tamaño de paso admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](/uwp/api/windows.media.devices.whitebalancecontrol.min), [**Max**](/uwp/api/windows.media.devices.whitebalancecontrol.max) y [**Step**](/uwp/api/windows.media.devices.whitebalancecontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante. Antes de habilitar el control manual, comprueba que el intervalo entre los valores mínimos y máximos admitidos es mayor que el tamaño de paso. Si no es así, no se admite el control manual en el dispositivo actual.
 
-Define el valor del control deslizante con el valor actual de **WhiteBalanceControl** después de anular el registro del controlador de eventos [**ValueChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
+Define el valor del control deslizante con el valor actual de **WhiteBalanceControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
 [!code-cs[WhiteBalance](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalance)]
 
-En el controlador de eventos [**SelectionChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) del cuadro combinado de valores predeterminados de temperatura de color, obtén el valor predeterminado seleccionado actualmente y define el valor del control llamando a [**SetPresetAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.setpresetasync). Si el valor predeterminado seleccionado no es **Manual**, deshabilita el control deslizante del balance de blancos manual.
+En el controlador de eventos [**SelectionChanged**](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) del cuadro combinado de valores predeterminados de temperatura de color, obtén el valor predeterminado seleccionado actualmente y define el valor del control llamando a [**SetPresetAsync**](/uwp/api/windows.media.devices.whitebalancecontrol.setpresetasync). Si el valor predeterminado seleccionado no es **Manual**, deshabilita el control deslizante del balance de blancos manual.
 
 [!code-cs[WhiteBalanceComboBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalanceComboBox)]
 
-En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor del balance de blancos mediante una llamada a [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurecontrol.setvalueasync).
+En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor del balance de blancos mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.exposurecontrol.setvalueasync).
 
 [!code-cs[WhiteBalanceSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalanceSlider)]
 
@@ -297,27 +297,27 @@ En el controlador de eventos **ValueChanged**, obtén el valor actual del contro
 > El ajuste del balance de blancos solo se admite mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de establecer el valor del balance de blancos o el valor predeterminado.
 
 > [!IMPORTANT]
-> El valor predeterminado de **ColorTemperaturePreset.Auto** indica al sistema que ajuste automáticamente el nivel del balance de blancos. En algunos escenarios, como capturar una secuencia fotográfica donde los niveles de balance de blancos deben iguales para cada fotograma, te recomendamos que bloquees el control en el valor automático actual. Para ello, llama a [**SetPresetAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.setpresetasync) y especifica el valor predeterminado **Manual** y no establezcas un valor en el control mediante [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.setvalueasync). Esto hará que el dispositivo bloquee el valor actual. No intentes leer el valor actual del control y después pasar el valor obtenido a **SetValueAsync** porque no se garantiza que este valor sea correcto.
+> El valor predeterminado de **ColorTemperaturePreset.Auto** indica al sistema que ajuste automáticamente el nivel del balance de blancos. En algunos escenarios, como capturar una secuencia fotográfica donde los niveles de balance de blancos deben iguales para cada fotograma, te recomendamos que bloquees el control en el valor automático actual. Para ello, llama a [**SetPresetAsync**](/uwp/api/windows.media.devices.whitebalancecontrol.setpresetasync) y especifica el valor predeterminado **Manual** y no establezcas un valor en el control mediante [**SetValueAsync**](/uwp/api/windows.media.devices.whitebalancecontrol.setvalueasync). Esto hará que el dispositivo bloquee el valor actual. No intentes leer el valor actual del control y después pasar el valor obtenido a **SetValueAsync** porque no se garantiza que este valor sea correcto.
 
 ## <a name="zoom"></a>Zoom
 
-El [**ZoomControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomControl) te permite establecer el nivel de zoom que se usa durante la captura de fotos o vídeo.
+El [**ZoomControl**](/uwp/api/Windows.Media.Devices.ZoomControl) te permite establecer el nivel de zoom que se usa durante la captura de fotos o vídeo.
 
-Este ejemplo usa un control [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el nivel de zoom actual. En la siguiente sección, se muestra cómo ajustar el zoom con un gesto de reducir en la pantalla.
+Este ejemplo usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el nivel de zoom actual. En la siguiente sección, se muestra cómo ajustar el zoom con un gesto de reducir en la pantalla.
 
 [!code-xml[ZoomXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetZoomXAML)]
 
-Comprueba si el dispositivo de captura actual admite **ZoomControl** comprobando la propiedad [**Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
+Comprueba si el dispositivo de captura actual admite **ZoomControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.zoomcontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
-El valor del nivel de zoom debe estar dentro del intervalo que admite el dispositivo y debe ser un incremento del tamaño de los pasos admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.min), [**Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.max) y [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
+El valor del nivel de zoom debe estar dentro del intervalo que admite el dispositivo y debe ser un incremento del tamaño de los pasos admitido. Para obtener los valores admitidos para el dispositivo actual, comprueba las propiedades [**Min**](/uwp/api/windows.media.devices.zoomcontrol.min), [**Max**](/uwp/api/windows.media.devices.zoomcontrol.max) y [**Step**](/uwp/api/windows.media.devices.zoomcontrol.step), que se usan para establecer las propiedades correspondientes del control deslizante.
 
-Define el valor del control deslizante con el valor actual del objeto **ZoomControl** después de anular el registro del controlador de eventos [**ValueChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
+Define el valor del control deslizante con el valor actual del objeto **ZoomControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
 [!code-cs[ZoomControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetZoomControl)]
 
-En el controlador de eventos **ValueChanged**, crea una nueva instancia de la clase [**ZoomSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomSettings) y define la propiedad [**Value**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.value) con el valor actual del control deslizante de zoom. Si la propiedad [**SupportedModes**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.supportedmodes) del **ZoomControl** contiene [**ZoomTransitionMode.Smooth**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomTransitionMode), significa que el dispositivo admite transiciones suaves entre niveles de zoom. Dado que este modo proporciona una mejor experiencia del usuario, normalmente querrás usar este valor para la propiedad [**Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.mode) del objeto **ZoomSettings**.
+En el controlador de eventos **ValueChanged**, crea una nueva instancia de la clase [**ZoomSettings**](/uwp/api/Windows.Media.Devices.ZoomSettings) y define la propiedad [**Value**](/uwp/api/windows.media.devices.zoomsettings.value) con el valor actual del control deslizante de zoom. Si la propiedad [**SupportedModes**](/uwp/api/windows.media.devices.zoomcontrol.supportedmodes) del **ZoomControl** contiene [**ZoomTransitionMode.Smooth**](/uwp/api/Windows.Media.Devices.ZoomTransitionMode), significa que el dispositivo admite transiciones suaves entre niveles de zoom. Dado que este modo proporciona una mejor experiencia del usuario, normalmente querrás usar este valor para la propiedad [**Mode**](/uwp/api/windows.media.devices.zoomsettings.mode) del objeto **ZoomSettings**.
 
-Por último, cambia la configuración de zoom actual al pasar el objeto **ZoomSettings** al método [**Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.configure) del objeto **ZoomControl**.
+Por último, cambia la configuración de zoom actual al pasar el objeto **ZoomSettings** al método [**Configure**](/uwp/api/windows.media.devices.zoomcontrol.configure) del objeto **ZoomControl**.
 
 [!code-cs[ZoomSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetZoomSlider)]
 
@@ -325,23 +325,23 @@ Por último, cambia la configuración de zoom actual al pasar el objeto **ZoomSe
 
 Como se analizó en la sección anterior, en los dispositivos que lo admiten, el modo de zoom suave permite que el dispositivo de captura cambie sin inconvenientes entre niveles de zoom digital, lo que permite al usuario ajustar el nivel de zoom dinámicamente durante la operación de captura sin transiciones discretas y un poco molestas. En esta sección se describe cómo ajustar el nivel de zoom en respuesta a un gesto de reducir.
 
-Primero, determine si el control de zoom digital es compatible en el dispositivo actual comprobando la propiedad [**ZoomControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.supported). A continuación, determina si el modo de zoom suave está disponible mediante la comprobación de [**ZoomControl.SupportedModes**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.supportedmodes) para ver si contiene el valor [**ZoomTransitionMode.Smooth**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomTransitionMode).
+Primero, determine si el control de zoom digital es compatible en el dispositivo actual comprobando la propiedad [**ZoomControl.Supported**](/uwp/api/windows.media.devices.zoomcontrol.supported). A continuación, determina si el modo de zoom suave está disponible mediante la comprobación de [**ZoomControl.SupportedModes**](/uwp/api/windows.media.devices.zoomcontrol.supportedmodes) para ver si contiene el valor [**ZoomTransitionMode.Smooth**](/uwp/api/Windows.Media.Devices.ZoomTransitionMode).
 
 [!code-cs[IsSmoothZoomSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsSmoothZoomSupported)]
 
-En un dispositivo habilitado para funcionalidad multitáctil, un escenario típico consiste en ajustar el factor de zoom con un gesto de reducir con dos dedos. Establezca la propiedad [**ManipulationMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationmode) del control [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) en [**ManipulationModes.Scale**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationModes) para permitir que el gesto de reducir. A continuación, registra el evento [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) que se desencadena cuando el gesto de reducir cambia el tamaño.
+En un dispositivo habilitado para funcionalidad multitáctil, un escenario típico consiste en ajustar el factor de zoom con un gesto de reducir con dos dedos. Establezca la propiedad [**ManipulationMode**](/uwp/api/windows.ui.xaml.uielement.manipulationmode) del control [**CaptureElement**](/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) en [**ManipulationModes.Scale**](/uwp/api/Windows.UI.Xaml.Input.ManipulationModes) para permitir que el gesto de reducir. A continuación, registra el evento [**ManipulationDelta**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) que se desencadena cuando el gesto de reducir cambia el tamaño.
 
 [!code-cs[RegisterPinchGestureHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterPinchGestureHandler)]
 
-En el controlador del evento **ManipulationDelta**, actualiza el factor de zoom en función de los cambios en el gesto de reducir del usuario. El valor [**ManipulationDelta.Scale**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.ManipulationDelta) representa el cambio en escala del gesto de reducir, de modo que un pequeño incremento en el tamaño del gesto de reducir es un número ligeramente mayor que 1.0 y una pequeña reducción es un número ligeramente menor que 1.0. En este ejemplo, el valor actual del control de zoom se multiplica por la diferencia de la escala.
+En el controlador del evento **ManipulationDelta**, actualiza el factor de zoom en función de los cambios en el gesto de reducir del usuario. El valor [**ManipulationDelta.Scale**](/uwp/api/Windows.UI.Input.ManipulationDelta) representa el cambio en escala del gesto de reducir, de modo que un pequeño incremento en el tamaño del gesto de reducir es un número ligeramente mayor que 1.0 y una pequeña reducción es un número ligeramente menor que 1.0. En este ejemplo, el valor actual del control de zoom se multiplica por la diferencia de la escala.
 
-Antes de establecer el factor de zoom, debes asegurarte de que el valor no es inferior al valor mínimo que admite el dispositivo, como lo indica la propiedad [**ZoomControl.Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.min). Además, asegúrate de que el valor es menor o igual al valor de [**ZoomControl.Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.max). Por último, debe asegurarse de que el factor de zoom es un múltiplo del tamaño del paso de zoom compatible con el dispositivo, como se indica en la propiedad [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.step) . Si el factor de zoom no cumple estos requisitos, se generará una excepción cuando intentes establecer el nivel de zoom en el dispositivo de captura.
+Antes de establecer el factor de zoom, debes asegurarte de que el valor no es inferior al valor mínimo que admite el dispositivo, como lo indica la propiedad [**ZoomControl.Min**](/uwp/api/windows.media.devices.zoomcontrol.min). Además, asegúrate de que el valor es menor o igual al valor de [**ZoomControl.Max**](/uwp/api/windows.media.devices.zoomcontrol.max). Por último, debe asegurarse de que el factor de zoom es un múltiplo del tamaño del paso de zoom compatible con el dispositivo, como se indica en la propiedad [**Step**](/uwp/api/windows.media.devices.zoomcontrol.step) . Si el factor de zoom no cumple estos requisitos, se generará una excepción cuando intentes establecer el nivel de zoom en el dispositivo de captura.
 
-Para establecer el nivel de zoom en el dispositivo de captura, crea un nuevo objeto [**ZoomSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomSettings). Establece la propiedad [**Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.mode) en [**ZoomTransitionMode.Smooth**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomTransitionMode) y, a continuación, establece la propiedad [**Value**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.value) en el factor de zoom deseado. Por último, llama a [**ZoomControl.Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.configure) para definir el nuevo valor de zoom en el dispositivo. El dispositivo pasará sin problemas al nuevo valor de zoom.
+Para establecer el nivel de zoom en el dispositivo de captura, crea un nuevo objeto [**ZoomSettings**](/uwp/api/Windows.Media.Devices.ZoomSettings). Establece la propiedad [**Mode**](/uwp/api/windows.media.devices.zoomsettings.mode) en [**ZoomTransitionMode.Smooth**](/uwp/api/Windows.Media.Devices.ZoomTransitionMode) y, a continuación, establece la propiedad [**Value**](/uwp/api/windows.media.devices.zoomsettings.value) en el factor de zoom deseado. Por último, llama a [**ZoomControl.Configure**](/uwp/api/windows.media.devices.zoomcontrol.configure) para definir el nuevo valor de zoom en el dispositivo. El dispositivo pasará sin problemas al nuevo valor de zoom.
 
 [!code-cs[ManipulationDelta](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetManipulationDelta)]
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)

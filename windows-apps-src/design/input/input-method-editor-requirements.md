@@ -7,12 +7,12 @@ keywords: IME, editor de métodos de entrada, entrada, interacción
 ms.date: 07/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ecf150973defb0a431fc7248181ddf648576ac77
-ms.sourcegitcommit: 86ce67a03e87fa1282849b2fcb4f89d1cf23a091
+ms.openlocfilehash: 5a34c15826bff757b7c4277b87cc5fed53a6f109
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87840078"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160009"
 ---
 # <a name="custom-input-method-editor-ime-requirements"></a>Requisitos del editor de métodos de entrada (IME) personalizados
 
@@ -181,7 +181,7 @@ Cuando se proporcionan alternativas, la aplicación debe tratar cada alternativa
 
 ## <a name="ui-design-guidelines"></a>Directrices de diseño de la interfaz de usuario
 
-Todos los IME deben seguir las instrucciones de experiencia del usuario que se describen en [diseñar y codificar aplicaciones de Windows](/windows/uwp/design/).
+Todos los IME deben seguir las instrucciones de experiencia del usuario que se describen en [diseñar y codificar aplicaciones de Windows](../index.md).
 
 ### <a name="dont-use-sticky-windows"></a>No use ventanas rápidas
 
@@ -301,4 +301,4 @@ Implemente la Convención siguiente para que sus IME cumplan los requisitos de a
 - [ITfFnSearchCandidateProvider](/windows/win32/api/ctffunc/nn-ctffunc-itffnsearchcandidateprovider)
 - [ITfIntegratableCandidateListUIElement](/windows/win32/api/ctffunc/nn-ctffunc-itfintegratablecandidatelistuielement)
 - [SendInput](/windows/win32/api/winuser/nf-winuser-sendinput)
-- [Accesibilidad](/windows/uwp/design/accessibility/accessibility)
+- [Accesibilidad](../accessibility/accessibility.md)

@@ -1,41 +1,41 @@
 ---
-Description: Este tema explica el concepto general de calificadores, cómo usarlos y la finalidad de cada uno de los nombres de calificador.
-title: Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
+Description: En este tema se explica el concepto general de calificadores, cómo usarlos y el propósito de cada uno de los nombres de calificador.
+title: Adaptar los recursos al idioma, escala, alto contraste y otros calificadores
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d6af9d532ecabe517983e8b56cdf8e1b2a2d812
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 3678d525fa00df07408b9d85af34a3dd825b4fcf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254521"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161339"
 ---
-# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
+# <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, alto contraste y otros calificadores
 
-En este tema se explica el concepto general de calificadores de recursos, cómo usarlos y la finalidad de cada uno de los nombres de calificador. Consulta [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) para ver una tabla de referencia de todos los valores de calificador posibles.
+En este tema se explica el concepto general de calificadores de recursos, cómo usarlos y la finalidad de cada uno de los nombres de calificador. Vea [**ResourceContext. QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) para obtener una tabla de referencia de todos los posibles valores de calificador.
 
-La aplicación puede cargar activos y recursos adaptados a contextos de tiempo de ejecución, como el idioma de la pantalla, contraste alto, [mostrar el factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)y muchos otros. La manera de hacerlo es dar nombres a las carpetas o los archivos de los recursos para que coincidan con los nombres de calificador y valores de calificador que correspondan a esos contextos. Por ejemplo, puede que quieras que tu aplicación cargue un conjunto diferente de activos de imagen en modo de contraste alto.
+La aplicación puede cargar activos y recursos que se adaptan a los contextos en tiempo de ejecución, como el idioma de visualización, el contraste alto, el [factor de escala de visualización](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)y muchos otros. La manera de hacerlo es asignar un nombre a las carpetas o los archivos de los recursos para que coincidan con los nombres de calificador y los valores de calificador que corresponden a esos contextos. Por ejemplo, puede que desee que la aplicación cargue un conjunto diferente de recursos de imagen en el modo de contraste alto.
 
-Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
+Para más información sobre la propuesta de valor de localizar la aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
 
-## <a name="qualifier-name-qualifier-value-and-qualifier"></a>Nombre de calificador, valor de calificador y calificador
+## <a name="qualifier-name-qualifier-value-and-qualifier"></a>Nombre del calificador, valor de calificador y calificador
 
-Un nombre de calificador es una clave que se asigna a un conjunto de valores de calificador. Estos son el nombre de calificador y los valores de calificador de contraste.
+Un nombre de calificador es una clave que se asigna a un conjunto de valores de calificador. Estos son los valores de nombre de calificador y calificador para el contraste.
 
-| Contexto | Nombre de calificador | Valores de calificador |
+| Context | Nombre del calificador | Valores de calificador |
 | :--------------- | :--------------- | :--------------- |
-| Configuración de contraste alto | contraste | estándar, alto, negro y blanco |
+| Configuración de contraste alto | contraste | estándar, alto, negro, blanco |
 
-Combina un nombre de calificador con un valor de calificador, para formar un calificador. `<qualifier name>-<qualifier value>` es el formato de un calificador. `contrast-standard` es un ejemplo de un calificador.
+Combine un nombre de calificador con un valor de calificador para formar un calificador. `<qualifier name>-<qualifier value>` es el formato de un calificador. `contrast-standard` es un ejemplo de un calificador.
 
-Por lo tanto, para contraste alto, el conjunto de calificadores es `contrast-standard`, `contrast-high`, `contrast-black` y `contrast-white`. Los nombres de calificador y los valores de calificador no distinguen mayúsculas de minúsculas. Por ejemplo, `contrast-standard` y `Contrast-Standard` son el mismo calificador.
+Por lo tanto, para el contraste alto, el conjunto de calificadores es `contrast-standard` ,, `contrast-high` `contrast-black` y `contrast-white` . Los nombres y los valores de calificador no distinguen mayúsculas de minúsculas. Por ejemplo, `contrast-standard` y `Contrast-Standard` son el mismo calificador.
 
-## <a name="use-qualifiers-in-folder-names"></a>Usar calificadores en los nombres de carpeta
+## <a name="use-qualifiers-in-folder-names"></a>Usar calificadores en nombres de carpeta
 
-Este es un ejemplo del uso de calificadores para dar nombres a carpetas que contienen los archivos de activos. Usa los calificadores en los nombres de carpeta si tienes varios archivos de activos por calificador. De este modo, se define el calificador una vez en el nivel de carpeta y el calificador se aplica a todos los elementos que se encuentran dentro de la carpeta.
+Este es un ejemplo del uso de calificadores para asignar nombres a las carpetas que contienen archivos de recursos. Use calificadores en nombres de carpeta si tiene varios archivos de recursos por calificador. De este modo, se establece el calificador una vez en el nivel de carpeta y el calificador se aplica a todo el contenido de la carpeta.
 
 ```console
 \Assets\Images\contrast-standard\<logo.png, and other image files>
@@ -44,11 +44,11 @@ Este es un ejemplo del uso de calificadores para dar nombres a carpetas que cont
 \Assets\Images\contrast-white\<logo.png, and other image files>
 ```
 
-Si das nombres a las carpetas como en el ejemplo anterior, la aplicación usa la configuración de contraste alto para cargar archivos de recursos desde la carpeta con el nombre del calificador apropiado. Por lo tanto, si el valor es negro en contraste alto, a continuación se cargan los archivos de recursos de la carpeta `\Assets\Images\contrast-black`. Si el valor es Ninguno (es decir, el equipo no está en modo de contraste alto), a continuación se cargan los archivos de recursos de la carpeta `\Assets\Images\contrast-standard`.
+Si asigna un nombre a las carpetas como en el ejemplo anterior, la aplicación usa la configuración de contraste alto para cargar los archivos de recursos desde la carpeta denominada para el calificador adecuado. Por lo tanto, si el valor es contraste alto negro, se cargan los archivos de recursos en la `\Assets\Images\contrast-black` carpeta. Si el valor es ninguno (es decir, el equipo no está en modo de contraste alto), se cargan los archivos de recursos de la `\Assets\Images\contrast-standard` carpeta.
 
-## <a name="use-qualifiers-in-file-names"></a>Usar calificadores en nombres de carpetas
+## <a name="use-qualifiers-in-file-names"></a>Usar calificadores en nombres de archivo
 
-En lugar de crear y asignar nombres a carpetas, puedes usar un calificador para que asigne nombres a los propios archivos de recursos. Puede que prefieras hacerlo si solamente tienes un archivo de recursos por calificador. Este es un ejemplo.
+En lugar de crear y asignar nombres a las carpetas, puede usar un calificador para asignar nombre a los propios archivos de recursos. Puede que prefiera hacerlo si solo tiene un archivo de recursos por cada calificador. A continuación se muestra un ejemplo.
 
 ```console
 \Assets\Images\logo.contrast-standard.png
@@ -57,44 +57,44 @@ En lugar de crear y asignar nombres a carpetas, puedes usar un calificador para 
 \Assets\Images\logo.contrast-white.png
 ```
 
-El archivo cuyo nombre contiene el calificador más apropiado para la configuración es el que se carga. Esta lógica de coincidencia funciona del mismo modo para los nombres de archivo que para los nombres de carpeta.
+El archivo cuyo nombre contiene el calificador más apropiado para la configuración es el que se carga. Esta lógica coincidente funciona de la misma manera para los nombres de archivo que para los nombres de carpeta.
 
 ## <a name="reference-a-string-or-image-resource-by-name"></a>Hacer referencia a un recurso de cadena o imagen por nombre
 
-Consulta [Hacer referencia a un identificador de recursos de cadena desde el marcado XAML](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml), [Hacer referencia a un identificador de recursos de cadena desde código](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code) y [Hacer referencia a un recurso de imagen u otro activo en el marcado y código XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
+Vea [hacer referencia a un identificador de recursos de cadena desde el marcado XAML](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml), [hacer referencia a un identificador de recursos de cadena desde el código](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code)y [hacer referencia a una imagen u otro recurso desde código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
 
-## <a name="actual-and-neutral-qualifier-matches"></a>Los calificadores real y neutro concuerdan
-No es necesario proporcionar un archivo de recursos para *cada* valor de calificador. Por ejemplo, si te encuentras con que solo necesitas un activo visual para contraste alto y uno para contraste estándar, puedes ponerles nombres a esos activos de esta forma.
+## <a name="actual-and-neutral-qualifier-matches"></a>Coincide con el calificador real y neutro
+No es necesario proporcionar un archivo de recursos para *cada* valor de calificador. Por ejemplo, si observa que solo necesita un recurso visual para contraste alto y otro para el contraste estándar, puede asignar un nombre a esos recursos como este.
 
 ```console
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.png
 ```
 
-El nombre del primer archivo contiene el calificador `contrast-high`. Ese calificador es una coincidencia *real* para cualquier configuración de contraste alto cuando el contraste alto está *activado*. En otras palabras, es una estrecha coincidencia, por lo que se prefiere. Una coincidencia *real* solo se puede producir si el calificador contiene un valor *real*, como hace este. En este caso, `high` es un valor *real* de `contrast`.
+El primer nombre de archivo contiene el `contrast-high` calificador. Ese calificador es una coincidencia *real* de cualquier valor de contraste alto cuando está *activado*el contraste alto. En otras palabras, se trata de una coincidencia cercana, por lo que es preferible. Una coincidencia *real* solo puede producirse si el calificador contiene un valor *real* , como hace. En este caso, `high` es un valor *real* para `contrast` .
 
-El archivo denominado `logo.png` no tiene ningún calificador de contraste. La ausencia de un calificador es un valor *neutro*. Si no se encuentra ninguna coincidencia preferida, el valor neutro actúa como coincidencia de reserva. En este ejemplo, si el contraste alto está *desactivado*, no hay ninguna coincidencia real. La coincidencia *neutra* es la mejor coincidencia que se puede encontrar, por lo que se carga el activo `logo.png`.
+El archivo denominado `logo.png` no tiene ningún calificador de contraste en absoluto. La ausencia de un calificador es un valor *neutro* . Si no se encuentra ninguna coincidencia preferida, el valor neutro sirve como coincidencia de reserva. En este ejemplo, si el contraste alto está *desactivado*, no hay ninguna coincidencia real. La coincidencia *neutra* es la mejor coincidencia que se puede encontrar y, por tanto, `logo.png` se carga el recurso.
 
-Si desearas cambiar el nombre de `logo.png` a `logo.contrast-standard.png`, en ese caso el nombre de archivo contendría un valor de calificador real. Con el contraste alto desactivado, habría una coincidencia real con `logo.contrast-standard.png`, y ese sería el archivo de activos que se cargaría. Por lo tanto, se cargarían los mismos archivos, en las mismas condiciones, pero debido a distintas coincidencias.
+Si tuviera que cambiar el nombre de `logo.png` a `logo.contrast-standard.png` , el nombre de archivo contendría un valor de calificador real. Con contraste alto desactivado, debería haber una coincidencia real con `logo.contrast-standard.png` y ese es el archivo de recursos que se cargaría. Por lo tanto, se cargarían los mismos archivos, en las mismas condiciones, pero debido a coincidencias diferentes.
 
-Si solo necesitas un conjunto de activos de contraste alto y un conjunto para contraste estándar, puedes usar nombres de carpeta en lugar de nombres de archivo. En este caso, al omitir el nombre de carpeta por completo, obtienes la coincidencia neutra.
+Si solo necesita un conjunto de recursos para el contraste alto y un conjunto para el contraste estándar, puede utilizar nombres de carpeta en lugar de nombres de archivo. En este caso, omitir completamente el nombre de la carpeta le da la coincidencia neutra.
 
 ```console
 \Assets\Images\contrast-high\<logo.png, and other images to load when high contrast theme is not None>
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
 
-Para obtener más información sobre cómo funciona la coincidencia de calificador, consulta [Sistema de administración de recursos](resource-management-system.md).
+Para obtener más información sobre cómo funciona la coincidencia de calificador, vea [sistema de administración de recursos](resource-management-system.md).
 
 ## <a name="multiple-qualifiers"></a>Varios calificadores
 
-Puedes combinar los calificadores en los nombres de carpetas y archivos. Por ejemplo, es aconsejable que tu aplicación cargue activos de imagen cuando el modo de contraste alto esté activado *y* el factor de escala de pantalla sea de 400. Una manera de hacerlo es con carpetas anidadas.
+Puede combinar calificadores en nombres de archivos y carpetas. Por ejemplo, puede que desee que la aplicación cargue recursos de imagen cuando el modo de contraste alto esté activado *y* el factor de escala de pantalla sea 400. Una manera de hacerlo es con las carpetas anidadas.
 
 ```console
 \Assets\Images\contrast-high\scale-400\<logo.png, and other image files>
 ```
 
-Para `logo.png` y los demás archivos que se cargarán, la configuración debe coincidir con *ambos* calificadores.
+Para `logo.png` y los demás archivos que se van a cargar, la configuración debe coincidir con *ambos* calificadores.
 
 Otra opción consiste en combinar varios calificadores en un nombre de carpeta.
 
@@ -102,35 +102,35 @@ Otra opción consiste en combinar varios calificadores en un nombre de carpeta.
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
-En un nombre de carpeta, puedes combinar varios calificadores separados por un carácter de guión bajo. `<qualifier1>[_<qualifier2>...]` es el formato.
+En un nombre de carpeta, se combinan varios calificadores separados con un carácter de subrayado. `<qualifier1>[_<qualifier2>...]` es el formato.
 
-Puedes combinar varios calificadores en un nombre de archivo en el mismo formato.
+Puede combinar varios calificadores en un nombre de archivo en el mismo formato.
 
 ```console
 \Assets\Images\logo.contrast-high_scale-400.png
 ```
 
-Dependiendo de las herramientas y el flujo de trabajo que usas para la creación de activos, o de lo que te resulte más fácil leer o administrar, puede elegir una estrategia de nomenclatura única para todos los calificadores o puedes combinarlas para los distintos calificadores.
+En función de las herramientas y el flujo de trabajo que use para la creación de recursos, o en lo que más le resulte más fácil de leer o administrar, puede elegir una estrategia de nomenclatura única para todos los calificadores o puede combinarlos para diferentes calificadores.
 
 ## <a name="alternateform"></a>AlternateForm
 
-El calificador `alternateform` se usa para proporcionar una forma alternativa de un recurso para alguna finalidad especial. Normalmente esto lo usan solo los desarrolladores japoneses de aplicaciones para proporcionar una cadena furigana para la que `msft-phonetic` está reservada (consulta la sección "Admitir Furigana para las cadenas en japonés que puedan ordenarse" en [Cómo prepararse para la localización](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))).
+El `alternateform` calificador se usa para proporcionar una forma alternativa de un recurso con fines especiales. Esto lo suelen usar los desarrolladores de aplicaciones en japonés para proporcionar una cadena furigana para la que el valor `msft-phonetic` está reservado (vea la sección "compatibilidad con furigana para cadenas japonesas que se pueden ordenar" en [How to Prepare for Localization](/previous-versions/windows/apps/hh967762(v=win.10))).
 
-El sistema de destino o la aplicación deben proporcionar un valor con respecto al cual concuerden los calificadores `alternateform`. No uses el prefijo `msft-` para tus propios valores de calificador `alternateform` personalizados.
+El sistema de destino o la aplicación deben proporcionar un valor con el que `alternateform` se cotejan los calificadores. No use el `msft-` prefijo para sus propios `alternateform` valores de calificador personalizados.
 
 ## <a name="configuration"></a>Configuración
 
-Es poco probable que necesites el nombre de calificador `configuration`. Puede usarse para especificar los recursos que se aplican solo a un determinado entorno de tiempo de creación, como los recursos solo para pruebas.
+No es probable que necesite el nombre del `configuration` calificador. Se puede usar para especificar los recursos que solo son aplicables a un entorno de tiempo de creación determinado, como los recursos de solo prueba.
 
-El calificador `configuration` se usa para cargar un recurso que coincida en la mayor medida posible con el valor de la variable de entorno `MS_CONFIGURATION_ATTRIBUTE_VALUE`. Por tanto, puedes poner la variable al valor de la cadena que se ha asignado a los recursos relevantes, por ejemplo `designer` o `test`.
+El `configuration` calificador se usa para cargar un recurso que mejor coincida con el valor de la `MS_CONFIGURATION_ATTRIBUTE_VALUE` variable de entorno. Por lo tanto, puede establecer la variable en el valor de cadena que se ha asignado a los recursos correspondientes, por ejemplo `designer` , o `test` .
 
 ## <a name="contrast"></a>Compare
 
-El calificador `contrast` se usa para proporcionar recursos que se ajusten mejor a la configuración de contraste alto.
+El `contrast` calificador se usa para proporcionar recursos que coincidan mejor con la configuración de contraste alto.
 
-## <a name="custom"></a>Personalizado
+## <a name="custom"></a>Personalizada
 
-La aplicación puede establecer un valor para el calificador `custom` y, a continuación, se cargan los recursos que coincidan más con ese valor. Por ejemplo, puedes cargar recursos basados en la licencia de la aplicación. Cuando se inicia la aplicación, comprueba su licencia y usa eso como el valor del calificador `custom`, llamando a [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue), como se muestra en el ejemplo de código.
+La aplicación puede establecer un valor para el `custom` calificador y, a continuación, se cargan los recursos que mejor coincidan con ese valor. Por ejemplo, puede que desee cargar recursos en función de la licencia de su aplicación. Cuando se inicia la aplicación, comprueba su licencia y la usa como el valor del `custom` calificador mediante una llamada a [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue), como se muestra en el ejemplo de código.
 
 ```csharp
 public void SetLicenseLevel(BrandID brand)
@@ -150,29 +150,29 @@ public void SetLicenseLevel(BrandID brand)
 }
 ```
 
-En este escenario, tendrías que facilitar los nombres de los recursos que incluyen los calificadores `custom-premium`, `custom-standard` y `custom-trial`.
+En este escenario, proporcionaría los nombres de los recursos que incluyen los calificadores `custom-premium` , `custom-standard` y `custom-trial` .
 
 ## <a name="devicefamily"></a>DeviceFamily
 
-Es poco probable que necesites el nombre de calificador `devicefamily`. Puedes y debes evitar usarlo siempre que sea posible, porque hay técnicas que puedes usar en su lugar, que son mucho más adecuadas y robustas. Estas técnicas se describen en [Detección de la plataforma en que se está ejecutando la aplicación](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) y [Código adaptable para versiones](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+No es probable que necesite el nombre del `devicefamily` calificador. Puede y debe evitar usarlo siempre que sea posible, ya que hay técnicas que puede usar en su lugar y que son mucho más convenientes y eficaces. Estas técnicas se describen en [detectar la plataforma en la que se ejecuta la aplicación y en el](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on) [código adaptable](../debug-test-perf/version-adaptive-code.md)de la versión.
 
-Pero, como último recurso, es posible usar calificadores devicefamily para dar nombre a carpetas que contengan las vistas XAML (una vista XAML es un archivo XAML que contiene diseños y controles de interfaz de usuario).
+Sin embargo, como último recurso, es posible usar calificadores devicefamily para asignar nombres a las carpetas que contienen las vistas XAML (una vista XAML es un archivo XAML que contiene los controles y el diseño de la interfaz de usuario).
 
 ```console
 \devicefamily-desktop\<MainPage.xaml, and other markup files to load when running on a desktop computer>
 \devicefamily-mobile\<MainPage.xaml, and other markup files to load when running on a phone>
 ```
 
-O bien, puedes ponerles nombres a los archivos.
+O bien, puede asignar nombres a los archivos.
 
 ```console
 \MainPage.devicefamily-desktop.xaml
 \MainPage.devicefamily-mobile.xaml
 ```
 
-En cualquier caso cada copia de `MainPage.[<qualifier>].xaml` comparte una `MainPage.xaml.cs` común, que no se modifica en el proyecto por lo relativo a nombre, ubicación y contenido.
+En cualquier caso, cada copia de `MainPage.[<qualifier>].xaml` comparte una común `MainPage.xaml.cs` , que permanece sin cambios en el proyecto en términos de nombre, ubicación y contenido.
 
-También puedes usar un calificador devicefamily para dar nombre a un archivo de recursos (`.resw`) o a una carpeta. Por ejemplo, cuando la aplicación se ejecuta en la familia de dispositivos móviles, el elemento de interfaz de usuario `<TextBlock x:Uid="DeviceFriendlyName"/>` usará los recursos de texto y de primer plano definidos en tu archivo `Resources.devicefamily-mobile.resw`, caso de que lo contenga.
+También puede usar un calificador devicefamily para asignar un nombre a un archivo de recursos ( `.resw` ) o a una carpeta. Por ejemplo, cuando la aplicación se ejecuta en la familia de dispositivos móviles, el elemento de la interfaz de usuario usará `<TextBlock x:Uid="DeviceFriendlyName"/>` los recursos de texto y de primer plano definidos en el `Resources.devicefamily-mobile.resw` archivo si contiene
 
 ```xml
 <data name="DeviceFriendlyName.Foreground">
@@ -183,54 +183,54 @@ También puedes usar un calificador devicefamily para dar nombre a un archivo de
 </data>
 ```
 
-Para obtener más información sobre el uso de un archivo de recursos, consulta [Localizar las cadenas de interfaz de usuario](localize-strings-ui-manifest.md).
+Para obtener más información sobre el uso de un archivo de recursos, consulte [localizar las cadenas de la interfaz de usuario](localize-strings-ui-manifest.md).
 
 ## <a name="dxfeaturelevel"></a>DXFeatureLevel
 
-Es poco probable que necesites el nombre de calificador `dxfeaturelevel`. Fue diseñado para usarse con los activos de juego de Direct3D, para hacer que los recursos de nivel inferior se cargaran, para coincidir con una configuración de hardware de nivel inferior propia del tiempo. Pero ahora esa configuración de hardware ya se usa tan poco que te recomendamos que no uses este calificador.
+No es probable que necesite el nombre del `dxfeaturelevel` calificador. Se diseñó para usarse con los recursos de juegos de Direct3D, con el fin de que se carguen los recursos de nivel inferior para que coincidan con una determinada configuración de hardware de bajo nivel de tiempo. Pero la prevalencia de esa configuración de hardware es ahora tan baja que se recomienda no usar este calificador.
 
 ## <a name="homeregion"></a>HomeRegion
 
-El calificador `homeregion` corresponde a la configuración del usuario para el país o región. Representa la ubicación principal del usuario. Los valores incluyen cualquier [etiqueta de región BCP-47](https://tools.ietf.org/html/bcp47) que sea válida. Es decir, cualquier código de región de dos letras **ISO 3166-1 alpha-2**, además del conjunto de códigos geográficos de tres dígitos **numérico ISO 3166-1** para regiones compuestas (consulta la [Composición M49 de códigos de región de la División de Estadística de las Naciones Unidas](https://unstats.un.org/unsd/methods/m49/m49regin.htm)). Los códigos de "Agrupaciones económicas seleccionadas y otras" no son válidos.
+El `homeregion` calificador corresponde a la configuración del usuario para el país o la región. Representa la ubicación principal del usuario. Los valores incluyen cualquier [etiqueta de región BCP-47](https://tools.ietf.org/html/bcp47)válida. Es decir, cualquier código **iso 3166-1 alpha-2** de la región de dos letras, más el conjunto de códigos geográficos **ISO 3166-1 numéricos** de tres dígitos para regiones compuestas (consulte la [composición de regiones de M49 de Naciones Unidas](https://unstats.un.org/unsd/methods/m49/m49regin.htm)). Los códigos de "selecciones económicas y otras agrupaciones" no son válidos.
 
 ## <a name="language"></a>Idioma
 
-Un calificador `language` corresponde a la configuración de idioma de la pantalla. Los valores incluyen cualquier [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47) que sea válida. Para obtener una lista de idiomas, consulta el [Registro de subetiquetas de idioma de IANA](https://www.iana.org/assignments/language-subtag-registry).
+Un `language` calificador corresponde a la configuración de idioma para mostrar. Los valores incluyen cualquier [etiqueta de lenguaje BCP-47](https://tools.ietf.org/html/bcp47)válida. Para obtener una lista de los idiomas, consulte el [registro de subetiquetas del lenguaje IANA](https://www.iana.org/assignments/language-subtag-registry).
 
-Si quieres que tu aplicación admita diferentes idiomas de pantalla y tienes literales de cadena en el código o en el marcado XAML, entonces mueve esas cadenas fuera del código o marcado y a un archivo de recursos (`.resw`). A continuación, puedes hacer una copia traducida de ese archivo de recursos para cada idioma que admita la aplicación.
+Si desea que la aplicación admita diferentes idiomas para mostrar y que tenga literales de cadena en el código o en el marcado XAML, mueva esas cadenas fuera del código o marcado y a un archivo de recursos ( `.resw` ). A continuación, puedes hacer una copia traducida de ese archivo de recursos para cada idioma que admita la aplicación.
 
-Normalmente se usa un calificador `language` para dar nombre a las carpetas que contienen los archivos de recursos (`.resw`).
+Normalmente se utiliza un `language` calificador para asignar un nombre a las carpetas que contienen los archivos de recursos ( `.resw` ).
 
 ```console
 \Strings\language-en\Resources.resw
 \Strings\language-ja\Resources.resw
 ```
 
-Puedes omitir la parte `language-` de un calificador `language` (es decir, el nombre de calificador). No puedes hacerlo con los otros tipos de calificadores; y sólo puedes hacerlo en un nombre de carpeta.
+Puede omitir la `language-` parte de un `language` calificador (es decir, el nombre del calificador). No se puede hacer esto con los otros tipos de calificadores; y solo puede hacerlo en un nombre de carpeta.
 
 ```console
 \Strings\en\Resources.resw
 \Strings\ja\Resources.resw
 ```
 
-En lugar de dar nombres a carpetas, puedes usar un calificador `language` para que los archivos de recursos se den nombre ellos mismos.
+En lugar de asignar nombres a las carpetas, puede usar `language` calificadores para asignar nombres a los propios archivos de recursos.
 
 ```console
 \Strings\Resources.language-en.resw
 \Strings\Resources.language-ja.resw
 ```
 
-Consulta [Localizar las cadenas de interfaz de usuario](localize-strings-ui-manifest.md) para obtener más información sobre cómo hacer la aplicación localizable mediante el uso de recursos de cadenas y cómo hacer referencia a un recurso de cadena en la aplicación.
+Consulte [localizar las cadenas de la interfaz de usuario](localize-strings-ui-manifest.md) para obtener más información sobre cómo hacer que la aplicación se pueda localizar mediante recursos de cadena y cómo hacer referencia a un recurso de cadena en la aplicación.
 
 ## <a name="layoutdirection"></a>LayoutDirection
 
-Un calificador `layoutdirection` corresponde a la dirección del diseño de la configuración de idioma de la pantalla. Por ejemplo, es posible que una imagen deba reflejarse para los idiomas de lectura de derecha a izquierda, cómo el árabe o el hebreo. Los paneles de diseño y las imágenes de la interfaz de usuario responderán a la dirección del diseño correctamente si estableces su propiedad [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) (consulta [Ajustar el diseño y las fuentes y admitir RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)). Sin embargo, el calificador `layoutdirection` es para los casos donde el simple volteo no es adecuado, y permite responder a la direccionalidad del alineamiento específico del orden de lectura y el texto de formas más generales.
+Un `layoutdirection` calificador corresponde a la dirección de diseño de la configuración de idioma para mostrar. Por ejemplo, puede que sea necesario crear un reflejo de una imagen para un idioma de derecha a izquierda, como el árabe o el hebreo. Los paneles de diseño y las imágenes de la interfaz de usuario responderán correctamente a la dirección de diseño si establece su propiedad [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) (consulte [ajustar diseño y fuentes, y compatibilidad con RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)). Sin embargo, el `layoutdirection` calificador es para los casos en los que el volteo sencillo no es adecuado y permite responder a la direccionalidad del orden de lectura específico y la alineación del texto de maneras más generales.
 
 ## <a name="scale"></a>Escala
 
-Windows selecciona automáticamente un factor de escala para cada pantalla en función de su valor de PPP (puntos por pulgada) y la distancia de visualización del dispositivo. Consulta [Píxeles efectivos y factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor). Debes crear las imágenes con varios tamaños recomendados (al menos 100, 200 y 400) para que Windows pueda elegir el tamaño perfecto o pueda utilizar el tamaño más cercano y ajustar su escala. Para que Windows pueda identificar qué archivo físico contiene el tamaño correcto de imagen para el factor de escala de visualización, deberás usar un calificador `scale`. La escala de un recurso coincide con el valor de [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation.ResolutionScale) o el recurso con la siguiente escala mayor.
+Windows selecciona automáticamente un factor de escala para cada pantalla en función de sus PPP (puntos por pulgada) y la distancia de visualización del dispositivo. Vea [píxeles efectivos y factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor). Debe crear las imágenes en varios tamaños recomendados (al menos 100, 200 y 400) para que Windows pueda elegir el tamaño perfecto, o bien puede usar el tamaño más cercano y escalarla. Para que Windows pueda identificar qué archivo físico contiene el tamaño correcto de la imagen para el factor de escala de pantalla, se usa un `scale` calificador. La escala de un recurso coincide con el valor de [DisplayInformation. ResolutionScale](/uwp/api/windows.graphics.display.displayinformation.ResolutionScale)o con el siguiente recurso a mayor escala.
 
-Este es un ejemplo de cómo establecer el calificador del nivel de carpeta.
+A continuación se muestra un ejemplo de cómo establecer el calificador en el nivel de carpeta.
 
 ```console
 \Assets\Images\scale-100\<logo.png, and other image files>
@@ -246,29 +246,29 @@ Y este ejemplo lo establece en el nivel de archivo.
 \Assets\Images\logo.scale-400.png
 ```
 
-Para obtener información sobre la calificación de un recurso tanto para `scale` como para `targetsize`, consulta [Calificar un recurso de imagen para targetsize](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
+Para obtener información sobre cómo calificar un recurso para `scale` y `targetsize` , consulte [calificar un recurso de imagen para el destino](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
 ## <a name="targetsize"></a>TargetSize
 
-El calificador `targetsize` se usa principalmente para especificar los [iconos de asociación de tipo de archivo](https://docs.microsoft.com/windows/desktop/shell/how-to-assign-a-custom-icon-to-a-file-type) o los [iconos de protocolo](https://docs.microsoft.com/windows/desktop/search/-search-3x-wds-ph-ui-extensions) a mostrar en el Explorador de archivos. El valor del calificador representa la longitud del lado de una imagen cuadrada en píxeles (físicos) sin procesar. Se carga el recurso cuyo valor coincide con la opción de configuración Vista del Explorador de archivos; o el recurso con el siguiente valor más grande, en caso de ausencia de coincidencia exacta.
+El `targetsize` calificador se usa principalmente para especificar [iconos de asociaciones de tipo de archivo](/windows/desktop/shell/how-to-assign-a-custom-icon-to-a-file-type) o iconos de [Protocolo](/windows/desktop/search/-search-3x-wds-ph-ui-extensions) que se mostrarán en el explorador de archivos. El valor del calificador representa la longitud lateral de una imagen cuadrada en píxeles sin formato (físicos). Se carga el recurso cuyo valor coincide con la configuración de la vista en el explorador de archivos. o el recurso con el siguiente valor mayor en la ausencia de una coincidencia exacta.
 
-Puedes definir activos que representen varios tamaños de valor de calificador `targetsize` para el icono de la aplicación (`/Assets/Square44x44Logo.png`) en la pestaña de activos visuales del diseñador de manifiesto de paquete de la aplicación.
+Puede definir recursos que representen varios tamaños de `targetsize` valor de calificador para el icono de la aplicación ( `/Assets/Square44x44Logo.png` ) en la pestaña activos visuales del diseñador de manifiestos del paquete de aplicaciones.
 
-Para obtener información sobre la calificación de un recurso tanto para `scale` como para `targetsize`, consulta [Calificar un recurso de imagen para targetsize](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
+Para obtener información sobre cómo calificar un recurso para `scale` y `targetsize` , consulte [calificar un recurso de imagen para el destino](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize).
 
 ## <a name="theme"></a>Tema
 
-El calificador `theme` se usa para proporcionar recursos que coincidan mejor con la configuración predeterminada del modo de aplicación o la invalidación de la aplicación usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
+El `theme` calificador se usa para proporcionar los recursos que mejor se adaptan a la configuración predeterminada del modo de aplicación o la invalidación de la aplicación mediante [Application. RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
 
 
 ## <a name="shell-light-theme-and-unplated-resources"></a>Subtema claro de Shell y recursos desplanchados
 La *actualización de Windows 10 de mayo de 2019* presentó un nuevo tema "claro" para el shell de Windows. Como resultado, algunos recursos de aplicación que se mostraron anteriormente en un fondo oscuro se mostrarán ahora en un fondo claro. En el caso de las aplicaciones que proporcionan recursos sin placa de altform para los conmutadores de barra de tareas y de ventanas (Alt + Tab, vista de tareas, etc.), debe comprobar que tienen un contraste aceptable en un fondo claro.
 
 ### <a name="providing-light-theme-specific-assets"></a>Proporcionar recursos específicos del tema ligeros
-Las aplicaciones que quieren proporcionar un recurso personalizado para el tema claro de Shell pueden usar un nuevo calificador de recurso de formulario alternativo: `altform-lightunplated`. Este calificador refleja el calificador altform-unplated existente. 
+Las aplicaciones que quieren proporcionar un recurso personalizado para el tema claro de Shell pueden usar un nuevo calificador de recurso de formulario alternativo: `altform-lightunplated` . Este calificador refleja el calificador altform-unplated existente. 
 
 ### <a name="downlevel-considerations"></a>Consideraciones de nivel inferior
-Las aplicaciones no deben usar el calificador `theme-light` con el calificador `altform-unplated`. Esto producirá un comportamiento imprevisible en RS5 y versiones anteriores de Windows debido a la manera en que se cargan los recursos de la barra de tareas. En versiones anteriores de Windows, la versión de tema claro se puede usar de forma incorrecta. El calificador `altform-lightunplated` evita este problema. 
+Las aplicaciones no deben usar el `theme-light` calificador con el `altform-unplated` calificador. Esto producirá un comportamiento imprevisible en RS5 y versiones anteriores de Windows debido a la manera en que se cargan los recursos de la barra de tareas. En versiones anteriores de Windows, la versión de tema claro se puede usar de forma incorrecta. El `altform-lightunplated` calificador evita este problema. 
 
 ### <a name="compatibility-behavior"></a>Comportamiento de compatibilidad
 Por compatibilidad con versiones anteriores, Windows incluye la lógica para detectar iconos monocromáticos y comprueba si se compara con el fondo previsto. Si el icono no cumple los requisitos de contraste, Windows buscará una versión en blanco de contraste del recurso. Si no está disponible, Windows revertirá al uso de la versión recubierta del recurso.
@@ -284,11 +284,11 @@ Por compatibilidad con versiones anteriores, Windows incluye la lógica para det
 
 * [Píxeles efectivos y factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [Sistema de administración de recursos](resource-management-system.md)
-* [Preparación para la localización](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
-* [Detección de la plataforma en la que se ejecuta la aplicación](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Información general de las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+* [Preparación para la localización](/previous-versions/windows/apps/hh967762(v=win.10))
+* [Detección de la plataforma en la que se está ejecutando la aplicación](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
+* [Información general sobre las familias de dispositivos](/uwp/extension-sdks/device-families-overview)
 * [Localizar las cadenas de la interfaz de usuario](localize-strings-ui-manifest.md)
 * [BCP-47](https://tools.ietf.org/html/bcp47)
 * [División de estadísticas de Naciones Unidas M49 composición de códigos de región](https://unstats.un.org/unsd/methods/m49/m49regin.htm)
 * [Registro de subetiqueta del lenguaje IANA](https://www.iana.org/assignments/language-subtag-registry)
-* [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)
+* [Ajustar el diseño y las fuentes y admitir la escritura RTL](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

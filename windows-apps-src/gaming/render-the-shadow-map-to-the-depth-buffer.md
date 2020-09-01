@@ -4,21 +4,21 @@ description: Representa desde el punto de vista de la luz para crear un mapa de 
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, games, juegos, rendering, representación, shadow map, mapa de sombras, depth buffer, búfer de profundidad, direct3d
+keywords: Windows 10, UWP, juegos, representación, mapa de sombras, búfer de profundidad, Direct3D
 ms.localizationpriority: medium
-ms.openlocfilehash: a8ae67df457d4abafc8fb689a747139f62ca0e0e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5f492b1007a96b893abf6cdd1e7c6686cd5a41ee
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368075"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159239"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Representar el mapa de sombras en el búfer de profundidad
 
 
 
 
-Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra. El mapa de profundidad enmascara el espacio que se va a representar en la sombra Parte 2 de [Tutorial: Implementar los volúmenes de instantáneas con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Representa desde el punto de vista de la luz para crear un mapa de profundidad de dos dimensiones representando el volumen de sombra. El mapa de profundidad enmascara el espacio que se va a representar en la sombra Parte 2 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="clear-the-depth-buffer"></a>Borra el búfer de profundidad
 
@@ -37,7 +37,7 @@ Para el pase (o transferencia) de representación de sombras, especifica un búf
 
 Especifica la ventanilla de luz y un sombreador de vértices, y establece los búferes de constantes del espacio de luz. Usa la selección (culling) de la cara anterior para este pase a fin de optimizar los valores de profundidad en el búfer de sombras.
 
-Observa que en la mayoría de dispositivos, puedes especificar nullptr para el sombreador de píxeles (o saltear completamente la especificación de un sombreador de píxeles). Sin embargo algunos controladores pueden generar una excepción cuando llamas a draw en el dispositivo de Direct3D con un sombreador de píxeles nulo establecido. Para evitar esta excepción, puedes establecer un sombreador de píxeles mínimo para el pase de representación de sombras. El resultado de este sombreador se descarta; puede llamar a [**discard**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-discard) en cada píxel.
+Observa que en la mayoría de dispositivos, puedes especificar nullptr para el sombreador de píxeles (o saltear completamente la especificación de un sombreador de píxeles). Sin embargo algunos controladores pueden generar una excepción cuando llamas a draw en el dispositivo de Direct3D con un sombreador de píxeles nulo establecido. Para evitar esta excepción, puedes establecer un sombreador de píxeles mínimo para el pase de representación de sombras. El resultado de este sombreador se descarta; puede llamar a [**discard**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-discard) en cada píxel.
 
 Representa los objetos que pueden arrojar sombras, pero no te preocupes en representar geometría que no pueda dar sombra (como el piso de una habitación u objetos quitados del pase de sombras por motivos de optimización).
 
@@ -125,7 +125,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**Optimizar el frustum de vista:**  Asegúrese de que su implementación calcula un frustum vista estrecha para que obtengan más precisión fuera de su búfer de profundidad. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps) para ver más sugerencias sobre la técnica de sombras.
+**Optimizar el frustum de vista:** asegúrate de que tu implementación calcule un frustum de vista ajustado para que obtengas la mayor precisión posible de tu búfer de profundidad. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps) para ver más sugerencias sobre la técnica de sombras.
 
 ## <a name="vertex-shader-for-shadow-pass"></a>Sombreador de vértices para el pase de sombras
 
@@ -153,7 +153,3 @@ En la siguiente parte de este tutorial, aprenderás a agregar sombras mediante l
  
 
  
-
-
-
-

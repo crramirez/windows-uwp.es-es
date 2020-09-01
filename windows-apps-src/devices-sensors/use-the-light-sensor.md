@@ -6,24 +6,24 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 04d75d4c854a407fd733c6ecdfb3cabac84faef6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ae31e1dc26a5836285a438d3bff9c742f94b7177
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369607"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159499"
 ---
 # <a name="use-the-light-sensor"></a>Usar el sensor de luz
 
 
 **API importantes**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**LightSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.LightSensor)
+-   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+-   [**LightSensor**](/uwp/api/Windows.Devices.Sensors.LightSensor)
 
 **Ejemplo**
 
--   Para ver una implementación más completa, consulta la [muestra de sensor de luz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LightSensor).
+-   Para obtener una implementación más completa, vea el [ejemplo de sensor de luz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LightSensor).
 
 Aprende a usar el sensor de luz ambiental para detectar cambios de iluminación.
 
@@ -31,7 +31,7 @@ El sensor de luz ambiental es uno de los distintos tipos de sensores ambientales
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
+Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que estés usando debe ser compatible con un sensor de luz ambiental.
 
@@ -39,9 +39,9 @@ El dispositivo o emulador que estés usando debe ser compatible con un sensor de
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de sensor de luz simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-###  <a name="instructions"></a>Instrucciones
+###  <a name="instructions"></a>Instructions
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
 -   Abre el archivo BlankPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -135,11 +135,11 @@ Tendrás que cambiar el nombre del espacio de nombres del fragmento de código a
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **LightingCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="LightingCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:LightingCS"`.
 
--   Presiona F5 (o selecciona **Depurar** > **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
+-   Presione F5 o seleccione **depurar**  >  **iniciar depuración** para compilar, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar los valores del sensor de luz al cambiar la luz disponibles para el sensor o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Para detener la aplicación, vuelva a Visual Studio y presione Mayús + F5 o seleccione **depurar**  >  **detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 

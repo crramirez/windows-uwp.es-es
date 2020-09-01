@@ -6,24 +6,24 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c7fadaf902b4aa543234bc8d43fbc1595a54219
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 143d83a0c1257cf662fb686a5e0620db5cc6fb68
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369687"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159529"
 ---
 # <a name="use-the-compass"></a>Usar la brújula
 
 
 **API importantes**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Compass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass)
+-   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+-   [**Brújula**](/uwp/api/Windows.Devices.Sensors.Compass)
 
 **Ejemplo**
 
--   Para ver una implementación más completa, consulta la [muestra de brújula](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
+-   Para obtener una implementación más completa, consulte el [ejemplo de brújula](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).
 
 Aprende a usar la brújula para determinar el rumbo actual.
 
@@ -31,7 +31,7 @@ Una aplicación puede devolver la orientación actual con respecto al norte magn
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
+Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que estés usando debe tener una brújula.
 
@@ -39,9 +39,9 @@ El dispositivo o emulador que estés usando debe tener una brújula.
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de brújula simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -134,11 +134,11 @@ You'll need to rename the namespace in the previous snippet with the name you ga
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **CompassCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="CompassCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:CompassCS"`.
 
--   Presiona F5 (o selecciona **Depurar** > **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
+-   Presione F5 o seleccione **depurar**  >  **iniciar depuración** para compilar, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar los valores de brújula moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Para detener la aplicación, vuelva a Visual Studio y presione Mayús + F5 o seleccione **depurar**  >  **detener depuración** para detener la aplicación.
 
 ### <a name="explanation"></a>Explicación
 

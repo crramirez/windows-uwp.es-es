@@ -5,12 +5,12 @@ ms.date: 12/12/2018
 ms.topic: article
 keywords: Windows 10, UWP, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: c63f59e7bcf282dc829d0fb8fa5971113f7638ad
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 8846fc11dc39a3931d8f3278caf13b7aff464bc2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053595"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160839"
 ---
 # <a name="time-based-animations"></a>Animaciones basadas en tiempo
 
@@ -53,7 +53,7 @@ Antes de describir cómo crear animaciones explícitas basadas en tiempo con Key
 - Grupo de animación: iniciar varias animaciones al mismo tiempo.
   - Se utiliza a menudo cuando se desea animar varias propiedades al mismo tiempo.
 
-Para obtener más información, consulte [CompositionAnimationGroup](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionanimationgroup).
+Para obtener más información, consulte [CompositionAnimationGroup](/uwp/api/windows.ui.composition.compositionanimationgroup).
 
 Teniendo en cuenta estos conceptos, vamos a consultar la fórmula general para construir un KeyFrameAnimation:
 

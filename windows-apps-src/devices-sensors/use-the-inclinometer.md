@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ebfbdda8f5f7bf308ee427ab79d8dd45969e3108
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 40095ce6c6011d97959e2515f4e6699fefd61b81
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054335"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159509"
 ---
 # <a name="use-the-inclinometer"></a>Usar el inclinómetro
 
 
 **API importantes**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Inclinometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer)
+-   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+-   [**Inclinometer**](/uwp/api/Windows.Devices.Sensors.Inclinometer)
 
 **Ejemplo**
 
@@ -29,7 +29,7 @@ Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X
 
 Algunos juegos en 3D necesitan un inclinómetro como dispositivo de entrada. Un ejemplo común es el simulador de vuelos, que asigna los tres ejes del inclinómetro (X, Y y Z) a los datos de entrada del timón de profundidad, el alerón y el timón de dirección del avión.
 
- ## <a name="prerequisites"></a>Prerrequisitos
+ ## <a name="prerequisites"></a>Requisitos previos
 
 Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
@@ -177,4 +177,3 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
  <TextBlock HorizontalAlignment="Left" Height="19" Margin="0,56,0,0" TextWrapping="Wrap" Text="Yaw:" VerticalAlignment="Top" Width="55" Foreground="#FFF7F3F3"/>
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
-

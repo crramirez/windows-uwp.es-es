@@ -10,19 +10,19 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: d95b7159c64c7796e55d4566d62630c076a707b1
-ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
+ms.openlocfilehash: 069fea914a5802e8f8f09efbda5751cb0447c910
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469560"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159619"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
 **API importantes**
 
-- [**Windows. Devices. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-- [**Windows.Devices.Bluetooth.Rfcomm**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
+- [**Windows.Devices.Bluetooth**](/uwp/api/Windows.Devices.Bluetooth)
+- [**Windows.Devices.Bluetooth.Rfcomm**](/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
 
 En este artículo se proporciona información general de Bluetooth RFCOMM en aplicaciones para la Plataforma universal de Windows (UWP), junto con el código de ejemplo sobre cómo enviar o recibir un archivo.
 
@@ -33,11 +33,11 @@ En este artículo se proporciona información general de Bluetooth RFCOMM en apl
 
 ## <a name="overview"></a>Información general
 
-Las API del espacio de nombres [**Windows.Devices.Bluetooth.Rfcomm**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm) se basan en los patrones existentes para Windows.Devices, incluidos [**enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) e [**instantiation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice). La lectura y la escritura de datos están diseñadas para aprovechar los [**patrones de flujo de datos establecidos**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) y los objetos en [**Windows.Storage.Streams**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams). Los atributos del Protocolo de detección de servicios (DSP) tienen un valor y un tipo esperado. Sin embargo, algunos dispositivos comunes tienen implementaciones incorrectas de los atributos SDP, en los que el valor no es del tipo esperado. Además, muchos usos de RFCOMM no requieren atributos SDP adicionales. Por estas razones, esta API permite el acceso a los datos SDP sin analizar, desde los cuales los desarrolladores pueden obtener la información que necesitan.
+Las API del espacio de nombres [**Windows.Devices.Bluetooth.Rfcomm**](/uwp/api/Windows.Devices.Bluetooth.Rfcomm) se basan en los patrones existentes para Windows.Devices, incluidos [**enumeration**](/uwp/api/Windows.Devices.Enumeration) e [**instantiation**](/uwp/api/Windows.Devices.Portable.StorageDevice). La lectura y la escritura de datos están diseñadas para aprovechar los [**patrones de flujo de datos establecidos**](/uwp/api/Windows.Storage.Streams.DataReader) y los objetos en [**Windows.Storage.Streams**](/uwp/api/Windows.Storage.Streams). Los atributos del Protocolo de detección de servicios (DSP) tienen un valor y un tipo esperado. Sin embargo, algunos dispositivos comunes tienen implementaciones incorrectas de los atributos SDP, en los que el valor no es del tipo esperado. Además, muchos usos de RFCOMM no requieren atributos SDP adicionales. Por estas razones, esta API permite el acceso a los datos SDP sin analizar, desde los cuales los desarrolladores pueden obtener la información que necesitan.
 
 Las API RFCOMM usan el concepto de identificadores de servicio. Aunque un identificador de servicio es simplemente un GUID de 128 bit, también suelen especificarse como un entero de 16 o 32 bits. La API RFCOMM ofrece un contenedor para que los identificadores de servicio puedan especificarse y consumirse como GUID de 128 bits y como enteros de 32 bit, pero no ofrece enteros de 16 bits. Esto no es un problema para la API, ya que los lenguajes se convierten de forma automática a un entero de 32 bits y el identificador todavía puede generarse correctamente.
 
-Las aplicaciones pueden realizar operaciones del dispositivo de varios pasos en una tarea en segundo plano para así poder ejecutarse hasta completarse, incluso si la aplicación pasa a segundo plano y se suspende. Esto permite un mantenimiento del dispositivo más fiable, como los cambios en el firmware o la configuración permanente, así como la sincronización de contenidos, sin que el usuario tenga que interrumpir lo que hacía y ver una barra de progreso. Usa la clase [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger) para el mantenimiento del dispositivo y la clase [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) para la sincronización de contenidos. Ten en cuenta que estas tareas en segundo plano limitan el tiempo que la aplicación puede ejecutarse en segundo plano, y no tienen por objetivo permitir el funcionamiento indefinidamente ni la sincronización infinita.
+Las aplicaciones pueden realizar operaciones del dispositivo de varios pasos en una tarea en segundo plano para así poder ejecutarse hasta completarse, incluso si la aplicación pasa a segundo plano y se suspende. Esto permite un mantenimiento del dispositivo más fiable, como los cambios en el firmware o la configuración permanente, así como la sincronización de contenidos, sin que el usuario tenga que interrumpir lo que hacía y ver una barra de progreso. Usa la clase [**DeviceServicingTrigger**](/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger) para el mantenimiento del dispositivo y la clase [**DeviceUseTrigger**](/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) para la sincronización de contenidos. Ten en cuenta que estas tareas en segundo plano limitan el tiempo que la aplicación puede ejecutarse en segundo plano, y no tienen por objetivo permitir el funcionamiento indefinidamente ni la sincronización infinita.
 
 Para obtener un ejemplo de código completo que detalle la operación de RFCOMM, consulta [**Bluetooth RFCOMM chat sample (Muestra de chat de Bluetooth RFCOMM)**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) en Github.  
 
@@ -46,9 +46,9 @@ Para obtener un ejemplo de código completo que detalle la operación de RFCOMM,
 Al enviar archivos, el escenario de aplicación básico consiste en conectarse a un dispositivo emparejado según el dispositivo deseado. Esto implica los pasos siguientes:
 
 - Use las funciones **RfcommDeviceService. \* GetDeviceSelector** para ayudar a generar una consulta AQS que se puede usar para enumerar las instancias de dispositivo emparejadas del servicio deseado.
-- Selecciona un dispositivo enumerado, crea una clase [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService) y lee los atributos SDP según sea necesario (usando [**established data helpers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) para analizar los datos del atributo).
-- Crea un socket y usa las propiedades [**RfcommDeviceService.ConnectionHostName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname) y [**RfcommDeviceService.ConnectionServiceName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename) en el método [**StreamSocket.ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync) para realizar el mantenimiento del dispositivo remoto con los parámetros adecuados.
-- Sigue los patrones de flujo de datos establecidos para leer grupos de datos desde el archivo y enviarlos a la propiedad [**StreamSocket.OutputStream**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.outputstream) del socket al dispositivo.
+- Selecciona un dispositivo enumerado, crea una clase [**RfcommDeviceService**](/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService) y lee los atributos SDP según sea necesario (usando [**established data helpers**](/uwp/api/Windows.Storage.Streams.DataReader) para analizar los datos del atributo).
+- Crea un socket y usa las propiedades [**RfcommDeviceService.ConnectionHostName**](/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname) y [**RfcommDeviceService.ConnectionServiceName**](/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename) en el método [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync) para realizar el mantenimiento del dispositivo remoto con los parámetros adecuados.
+- Sigue los patrones de flujo de datos establecidos para leer grupos de datos desde el archivo y enviarlos a la propiedad [**StreamSocket.OutputStream**](/uwp/api/windows.networking.sockets.streamsocket.outputstream) del socket al dispositivo.
 
 ```csharp
 using System;
@@ -361,13 +361,13 @@ bool IsCompatibleVersion(RfcommDeviceService^ service)
 
 Otro escenario de aplicación RFCOMM común es hospedar un servicio en el equipo y exponerlo para otros dispositivos.
 
-- Crea una clase [**RfcommServiceProvider**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider) para anunciar el servicio deseado.
-- Establece los atributos de SDP según sea necesario (con [**established data helpers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) para generar los datos del atributo) y empieza a anunciar los registros de SDP para que otros dispositivos los recuperen.
+- Crea una clase [**RfcommServiceProvider**](/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider) para anunciar el servicio deseado.
+- Establece los atributos de SDP según sea necesario (con [**established data helpers**](/uwp/api/Windows.Storage.Streams.DataReader) para generar los datos del atributo) y empieza a anunciar los registros de SDP para que otros dispositivos los recuperen.
 - Para conectarse a un dispositivo cliente, crea un dispositivo de escucha de socket para empezar a escuchar las solicitudes de conexiones entrantes.
 - Cuando se recibe una conexión, almacena el socket conectado para un procesamiento posterior.
 - Sigue los patrones de flujo de datos establecidos para leer grupos de datos desde InputStream del socket y guardarlos en un archivo.
 
-Para mantener un servicio de RFCOMM en segundo plano, usa el objeto [**RfcommConnectionTrigger**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.rfcommconnectiontrigger). La tarea en segundo plano se desencadena cuando se establece la conexión al servicio. El desarrollador recibe un identificador para el socket en la tarea en segundo plano. La tarea en segundo plano es de larga ejecución y se mantiene mientras el socket está en uso.    
+Para mantener un servicio de RFCOMM en segundo plano, usa el objeto [**RfcommConnectionTrigger**](/uwp/api/windows.applicationmodel.background.rfcommconnectiontrigger). La tarea en segundo plano se desencadena cuando se establece la conexión al servicio. El desarrollador recibe un identificador para el socket en la tarea en segundo plano. La tarea en segundo plano es de larga ejecución y se mantiene mientras el socket está en uso.    
 
 ```csharp
 Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider _provider;

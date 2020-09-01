@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, Visual Studio, herramientas, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: c97c24eca55cf43559b9f518eaf2fbc4656aa374
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 250450b2174ce249d1ec5afaf4c5188df9266f5e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942815"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159269"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Herramientas de Visual Studio para la programación de juegos
 
@@ -43,7 +43,7 @@ Usa el Editor de imágenes para trabajar con los tipos de textura enriquecida y 
 
 Crea [archivos de personalizaciones de compilación](#build-customizations-for-3d-assets) para convertir estos formatos en archivos .dds durante la compilación.
 
-Para obtener más información, consulta [Trabajar con texturas e imágenes](https://docs.microsoft.com/visualstudio/designers/working-with-textures-and-images?view=vs-2015).
+Para obtener más información, consulta [Trabajar con texturas e imágenes](/visualstudio/designers/working-with-textures-and-images?view=vs-2015).
 
 > **Nota:**    El editor de imágenes no pretende ser un sustituto para una aplicación completa de edición de imágenes de características, pero es adecuado para muchos escenarios sencillos de visualización y edición.
 
@@ -62,7 +62,7 @@ Esta es la captura de pantalla de un modelo en el editor con iluminación aplica
 
 ![tetera](images/modeleditor.png)
 
-Para obtener más información, consulta [Trabajar con modelos 3D](https://docs.microsoft.com/visualstudio/designers/working-with-3-d-models?view=vs-2015).
+Para obtener más información, consulta [Trabajar con modelos 3D](/visualstudio/designers/working-with-3-d-models?view=vs-2015).
 
 > **Nota:**    El editor de modelos no pretende ser un sustituto para una aplicación completa de edición de modelos de características, pero es adecuado para muchos escenarios sencillos de visualización y edición.
 
@@ -109,7 +109,7 @@ float3 LambertLighting(
 }
 ```
 
-Para obtener más información, consulta [Trabajar con sombreadores](https://docs.microsoft.com/visualstudio/designers/working-with-shaders?view=vs-2015).
+Para obtener más información, consulta [Trabajar con sombreadores](/visualstudio/designers/working-with-shaders?view=vs-2015).
 
 ## <a name="build-customizations-for-3d-assets"></a>Personalizaciones de compilación para activos 3D
 
@@ -122,7 +122,7 @@ Para agregar una personalización de compilación, haga clic con el botón derec
 -   La canalización de contenido de malla toma archivos de malla (como .fbx) y muestra archivos de malla .cmo como salida.
 -   La canalización de contenido de sombreador toma un gráfico de sombreador visual (.dgsl) del Editor de sombras de Visual Studio y muestra un archivo de Compiled Shader Output (.cso).
 
-Para obtener más información, consulta [Usar activos 3D en el juego o aplicación](https://docs.microsoft.com/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015).
+Para obtener más información, consulta [Usar activos 3D en el juego o aplicación](/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015).
 
 ## <a name="debugging-directx-graphics"></a>Depurar gráficos DirectX 
 
@@ -139,7 +139,7 @@ Visual Studio proporciona herramientas de depuración específicas para gráfico
 -   Compatibilidad limitada con Direct2D.
 -   Requisitos de SDK y sistema operativo
 
-Para obtener más información, consulta [Depurar gráficos DirectX](https://docs.microsoft.com/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015).
+Para obtener más información, consulta [Depurar gráficos DirectX](/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015).
 
 
  
@@ -147,7 +147,3 @@ Para obtener más información, consulta [Depurar gráficos DirectX](https://doc
  
 
  
-
-
-
-

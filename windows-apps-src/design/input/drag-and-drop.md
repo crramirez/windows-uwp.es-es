@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 52fb9c5d6b9c594be1ad4f1fa1a4421d99cae5fa
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 9958aab20c13f0104ca1a52c6fccda33c00f6281
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234611"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159969"
 ---
 # <a name="drag-and-drop"></a>Arrastrar y colocar
 
 Arrastrar y colocar es una manera intuitiva de transferir datos dentro de una aplicación o entre aplicaciones en el escritorio de Windows. Arrastrar y colocar permite que el usuario transfiera datos entre aplicaciones o dentro de una aplicación mediante un gesto estándar (mantenga presionado el dedo con el dedo o pulse y haga clic con un mouse o un lápiz).
 
-> **API importantes**: [propiedad CanDrag](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag), [propiedad AllowDrop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop) 
+> **API importantes**: [propiedad CanDrag](/uwp/api/windows.ui.xaml.uielement.candrag), [propiedad AllowDrop](/uwp/api/windows.ui.xaml.uielement.allowdrop) 
 
 El origen de arrastre, que es la aplicación o el área donde se desencadena el movimiento de arrastre, proporciona los datos que se van a transferir rellenando un objeto de paquete de datos que puede contener formatos de datos estándar, incluidos texto, RTF, HTML, mapas de bits, elementos de almacenamiento o formatos de datos personalizados. El origen también indica el tipo de operaciones que admite: copiar, desplace o link. Cuando se libera el puntero, se produce la eliminación. El destino de colocación, que es la aplicación o área situada debajo del puntero, procesa el paquete de datos y devuelve el tipo de operación que realiza.
 
@@ -37,11 +37,11 @@ Aquí se muestra información general sobre lo que debe hacer para habilitar la 
 
 ## <a name="enable-dragging"></a>Habilitar arrastre
 
-Para habilitar el arrastre en un elemento, establezca la propiedad [**CanDrag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag) en **true**. Esto hace que el elemento, y los elementos que contiene, en el caso de colecciones como ListView--arrastrable.
+Para habilitar el arrastre en un elemento, establezca la propiedad [**CanDrag**](/uwp/api/windows.ui.xaml.uielement.candrag) en **true**. Esto hace que el elemento, y los elementos que contiene, en el caso de colecciones como ListView--arrastrable.
 
 Sea específico de lo que se puede arrastrar. Los usuarios no querrán arrastrar todo en la aplicación, solo algunos elementos, como imágenes o texto. 
 
-Aquí se muestra cómo establecer [**CanDrag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag).
+Aquí se muestra cómo establecer [**CanDrag**](/uwp/api/windows.ui.xaml.uielement.candrag).
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
 
@@ -53,24 +53,24 @@ En la mayoría de los casos, el sistema creará un paquete de datos automáticam
 * Imágenes
 * Texto 
 
-Para el resto de contenido, deberá controlar los eventos **DragStarted** y **DragCompleted** y usarlos para construir su propio [paquete de objetos](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage).
+Para el resto de contenido, deberá controlar los eventos **DragStarted** y **DragCompleted** y usarlos para construir su propio [paquete de objetos](/uwp/api/windows.applicationmodel.datatransfer.datapackage).
 
 ## <a name="enable-dropping"></a>Habilitar eliminación
 
-En el siguiente marcado se muestra cómo establecer un área específica de la aplicación como un valor válido para la operación de colocar mediante [**AllowDrop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop) en XAML. Si un usuario intenta colocar elementos en otro lugar, el sistema no se lo permitirá. Si quieres que los usuarios puedan colocar elementos en cualquier parte de la aplicación, establece todo el fondo como destino para colocar elementos.
+En el siguiente marcado se muestra cómo establecer un área específica de la aplicación como un valor válido para la operación de colocar mediante [**AllowDrop**](/uwp/api/windows.ui.xaml.uielement.allowdrop) en XAML. Si un usuario intenta colocar elementos en otro lugar, el sistema no se lo permitirá. Si quieres que los usuarios puedan colocar elementos en cualquier parte de la aplicación, establece todo el fondo como destino para colocar elementos.
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
 
 ## <a name="handle-the-dragover-event"></a>Controlar el evento DragOver
 
-El evento [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover) se desencadena cuando un usuario arrastra un elemento sobre la aplicación, pero aún no lo ha colocado. En este controlador, debes especificar qué tipo de operaciones admite la aplicación mediante el uso de la propiedad [**AcceptedOperation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation). La opción Copiar es la más común.
+El evento [**DragOver**](/uwp/api/windows.ui.xaml.uielement.dragover) se desencadena cuando un usuario arrastra un elemento sobre la aplicación, pero aún no lo ha colocado. En este controlador, debes especificar qué tipo de operaciones admite la aplicación mediante el uso de la propiedad [**AcceptedOperation**](/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation). La opción Copiar es la más común.
 
 [!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
 
 ## <a name="process-the-drop-event"></a>Procesar el evento Drop
 
-El evento [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop) se produce cuando el usuario suelta elementos en un área de colocación válida. Procésalos con la propiedad [**DataView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.dataview).
+El evento [**Drop**](/uwp/api/windows.ui.xaml.uielement.drop) se produce cuando el usuario suelta elementos en un área de colocación válida. Procésalos con la propiedad [**DataView**](/uwp/api/windows.ui.xaml.drageventargs.dataview).
 
 Para simplificar en el ejemplo siguiente, se supone que el usuario ha quitado una sola foto y ha tenido acceso a ella directamente. En realidad, los usuarios pueden colocar simultáneamente varios elementos de diferentes formatos. La aplicación debe controlar esta posibilidad comprobando qué tipos de archivos se han quitado y cuántos hay y procesar cada uno de ellos en consecuencia. También debe considerar la posibilidad de notificar al usuario si está intentando hacer algo que la aplicación no admite.
 
@@ -78,13 +78,13 @@ Para simplificar en el ejemplo siguiente, se supone que el usuario ha quitado un
 
 ## <a name="customize-the-ui"></a>Personalización de la interfaz de usuario
 
-El sistema proporciona una interfaz de usuario predeterminada para arrastrar y colocar elementos. Sin embargo, puedes personalizar diversas partes de la interfaz de usuario mediante el establecimiento de títulos y glifos personalizados o, directamente, optar por no mostrar ninguna interfaz de usuario. Para personalizar la interfaz de usuario, usa la propiedad [**DragEventArgs.DragUIOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.draguioverride).
+El sistema proporciona una interfaz de usuario predeterminada para arrastrar y colocar elementos. Sin embargo, puedes personalizar diversas partes de la interfaz de usuario mediante el establecimiento de títulos y glifos personalizados o, directamente, optar por no mostrar ninguna interfaz de usuario. Para personalizar la interfaz de usuario, usa la propiedad [**DragEventArgs.DragUIOverride**](/uwp/api/windows.ui.xaml.drageventargs.draguioverride).
 
 [!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
 
 ## <a name="open-a-context-menu-on-an-item-you-can-drag-with-touch"></a>Abrir un menú contextual de un elemento que se pueda arrastrar con la función táctil
 
-Cuando se usa la función táctil, las acciones de arrastrar una clase [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) y abrir su menú contextual comparten gestos táctiles similares, ya que cada uno comienza con la operación de mantener presionado. A continuación te mostramos cómo el sistema elimina la ambigüedad entre las dos acciones para los elementos de la aplicación que admiten ambas: 
+Cuando se usa la función táctil, las acciones de arrastrar una clase [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) y abrir su menú contextual comparten gestos táctiles similares, ya que cada uno comienza con la operación de mantener presionado. A continuación te mostramos cómo el sistema elimina la ambigüedad entre las dos acciones para los elementos de la aplicación que admiten ambas: 
 
 * Si un usuario mantiene presionado un elemento y comienza a arrastrar dentro de los 500 milisegundos, se arrastra el elemento y no se muestra el menú contextual. 
 * Si el usuario mantiene presionado pero no arrastra dentro de los 500 milisegundos, se abre el menú contextual. 
@@ -92,31 +92,31 @@ Cuando se usa la función táctil, las acciones de arrastrar una clase [**UIElem
 
 ## <a name="designate-an-item-in-a-listview-or-gridview-as-a-folder"></a>Designar un elemento en una clase ListView o GridView como una carpeta
 
-Puedes especificar una clase [**ListViewItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewItem) o [**GridViewItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridViewItem) como una carpeta. Esto es especialmente útil para escenarios de TreeView y Explorador de archivos. Para ello, establece explícitamente la propiedad [**AllowDrop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop) en **True** en ese elemento. 
+Puedes especificar una clase [**ListViewItem**](/uwp/api/Windows.UI.Xaml.Controls.ListViewItem) o [**GridViewItem**](/uwp/api/Windows.UI.Xaml.Controls.GridViewItem) como una carpeta. Esto es especialmente útil para escenarios de TreeView y Explorador de archivos. Para ello, establece explícitamente la propiedad [**AllowDrop**](/uwp/api/windows.ui.xaml.uielement.allowdrop) en **True** en ese elemento. 
 
-El sistema mostrará automáticamente las animaciones adecuadas para colocar en una carpeta en vez de un elemento sin carpeta. El código de tu aplicación debe seguir controlando el evento [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop) en el elemento de la carpeta (así como en el elemento sin carpeta) para actualizar el origen de datos y agregar el elemento a la carpeta de destino.
+El sistema mostrará automáticamente las animaciones adecuadas para colocar en una carpeta en vez de un elemento sin carpeta. El código de tu aplicación debe seguir controlando el evento [**Drop**](/uwp/api/windows.ui.xaml.uielement.drop) en el elemento de la carpeta (así como en el elemento sin carpeta) para actualizar el origen de datos y agregar el elemento a la carpeta de destino.
 
 ## <a name="implementing-custom-drag-and-drop"></a>Implementar la función de arrastrar y colocar personalizada
 
-La clase [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) realiza la mayor parte del trabajo de implementación de la función de arrastrar y colocar. Pero si lo desea, puede implementar su propia versión mediante las API del [espacio de nombres Windows. ApplicationModel. datatransfer. DragDrop. Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
+La clase [UIElement](/uwp/api/windows.ui.xaml.uielement) realiza la mayor parte del trabajo de implementación de la función de arrastrar y colocar. Pero si lo desea, puede implementar su propia versión mediante las API del [espacio de nombres Windows. ApplicationModel. datatransfer. DragDrop. Core](/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
 
 | Funcionalidad | API de WinRT |
 | --- | --- |
-|  Habilitar arrastre | [CoreDragOperation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.coredragoperation)  |
-|  Crear un paquete de datos | [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)  |
-| Entrega de un arrastre al shell  | [CoreDragOperation.StartAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.coredragoperation)  |
-| Recepción de la entrega desde el shell  | [CoreDragDropManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.coredragdropmanager)<br/>[ICoreDropOperationTarget](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.icoredropoperationtarget)    |
+|  Habilitar arrastre | [CoreDragOperation](/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.coredragoperation)  |
+|  Crear un paquete de datos | [DataPackage](/uwp/api/windows.applicationmodel.datatransfer.datapackage)  |
+| Entrega de un arrastre al shell  | [CoreDragOperation.StartAsync](/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.coredragoperation)  |
+| Recepción de la entrega desde el shell  | [CoreDragDropManager](/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.coredragdropmanager)<br/>[ICoreDropOperationTarget](/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core.icoredropoperationtarget)    |
 
 
 
 ## <a name="see-also"></a>Vea también
 
 * [Comunicación entre aplicaciones](index.md)
-* [AllowDrop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)
-* [CanDrag](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag)
-* [DragOver](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
-* [AcceptedOperation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation)
-* [DataView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.dataview)
-* [DragUIOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.draguioverride)
-* [Omisiones](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
-* [IsDragSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isdragsource)
+* [AllowDrop](/uwp/api/windows.ui.xaml.uielement.allowdrop)
+* [CanDrag](/uwp/api/windows.ui.xaml.uielement.candrag)
+* [DragOver](/uwp/api/windows.ui.xaml.uielement.dragover)
+* [AcceptedOperation](/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation)
+* [DataView](/uwp/api/windows.ui.xaml.drageventargs.dataview)
+* [DragUIOverride](/uwp/api/windows.ui.xaml.drageventargs.draguioverride)
+* [Omisiones](/uwp/api/windows.ui.xaml.uielement.drop)
+* [IsDragSource](/uwp/api/windows.ui.xaml.controls.listviewbase.isdragsource)

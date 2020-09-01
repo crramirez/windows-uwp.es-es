@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e38d64750b410369a9ff9ebf871267b03e0ad07e
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 4bed5ad24c1478d47456d1e35a83ba4c54f99406
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054345"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159549"
 ---
 # <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
 
 **API importantes**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Acelerómetro**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer)
+-   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+-   [**Acelerómetro**](/uwp/api/Windows.Devices.Sensors.Accelerometer)
 
 **Ejemplo**
 
@@ -29,7 +29,7 @@ Aprende a usar el acelerómetro para responder al movimiento del usuario.
 
 Una aplicación de juego sencilla puede usar un único sensor, el acelerómetro, como un dispositivo de entrada. Estas aplicaciones suelen usar uno o dos ejes de entrada. Pero también pueden usar el evento shake como otra fuente de entrada.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 

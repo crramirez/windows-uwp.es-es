@@ -1,17 +1,17 @@
 ---
 title: Movimiento de mouse relativo
-description: Utiliza controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas para el seguimiento del delta de píxeles entre los movimientos del mouse en los juegos.
+description: Use controles de mouse relativos, que no usan el cursor del sistema y no devuelven coordenadas de pantalla absolutas, para realizar el seguimiento de la diferencia de píxeles entre los movimientos del mouse en los juegos.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, games, juegos, mouse, input, entrada
+keywords: Windows 10, UWP, juegos, Mouse, entrada
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d36d81aa3f4e0124f79cf8c736b715eb91590d0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 155fed8e4bc1cb12196fcaaca4b7232b84c19032
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368193"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159259"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a>CoreWindow o movimiento de mouse relativo
 
@@ -31,7 +31,7 @@ Cuando el usuario realiza una acción que mueve la aplicación fuera de un modo 
 - Desactivar el control del mouse relativo 
 - Establecer el cursor del mouse en un valor no nulo (que lo hace visible)
 
-> **Nota:**  
+> **Nota**  
 Con este patrón, la ubicación del cursor del mouse absoluto se conserva al entrar en el modo relativo sin cursor. El cursor reaparece en la misma ubicación de coordenada de pantalla en la que estaba antes de habilitar el modo de movimiento de mouse relativo.
 
  
@@ -39,7 +39,7 @@ Con este patrón, la ubicación del cursor del mouse absoluto se conserva al ent
 ## <a name="handling-relative-mouse-movement"></a>Controlar el movimiento de mouse relativo
 
 
-Para acceder a los valores delta de mouse relativo, regístrate para el evento [MouseDevice::MouseMoved](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) tal como se muestra aquí.
+Para acceder a los valores delta de mouse relativo, regístrate para el evento [MouseDevice::MouseMoved](/uwp/api/windows.devices.input.mousedevice.mousemoved) tal como se muestra aquí.
 
 
 ```cpp
@@ -85,18 +85,18 @@ void MoveLookController::OnMouseMoved(
 
 ```
 
-El controlador de eventos de este ejemplo de código, **OnMouseMoved**, representa la vista sobre la base de los movimientos del mouse. La posición del puntero del mouse se pasa al controlador como un objeto [MouseEventArgs](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseEventArgs). 
+El controlador de eventos de este ejemplo de código, **OnMouseMoved**, representa la vista sobre la base de los movimientos del mouse. La posición del puntero del mouse se pasa al controlador como un objeto [MouseEventArgs](/uwp/api/Windows.Devices.Input.MouseEventArgs). 
 
-Omite procesar en exceso los datos de mouse absoluto del evento [CoreWindow::PointerMoved](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) cuando la aplicación cambie al control de valores de movimiento de mouse relativo. No obstante, solamente omite esta entrada si el evento **CoreWindow::PointerMoved** se produjo como resultado de la entrada de mouse (en contraposición con la entrada táctil). El cursor se oculta estableciendo el valor de [CoreWindow::PointerCursor](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) en **nullptr**. 
+Omite procesar en exceso los datos de mouse absoluto del evento [CoreWindow::PointerMoved](/uwp/api/windows.ui.core.corewindow.pointermoved) cuando la aplicación cambie al control de valores de movimiento de mouse relativo. No obstante, solamente omite esta entrada si el evento **CoreWindow::PointerMoved** se produjo como resultado de la entrada de mouse (en contraposición con la entrada táctil). El cursor se oculta estableciendo el valor de [CoreWindow::PointerCursor](/uwp/api/windows.ui.core.corewindow.pointercursor) en **nullptr**. 
 
 ## <a name="returning-to-absolute-mouse-movement"></a>Volver al movimiento de mouse absoluto
 
-Cuando la aplicación salga del modo de manipulación de escenas u objetos 3D, y ya no use el movimiento de mouse relativo (por ejemplo, cuando devuelve una pantalla de menú) vuelve al procesamiento normal del movimiento de mouse absoluto. En este punto, deja de leer los datos de mouse relativo, reinicia el procesamiento de eventos de mouse (y puntero) estándar y establece [CoreWindow::PointerCursor](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) en un valor no nulo. 
+Cuando la aplicación salga del modo de manipulación de escenas u objetos 3D, y ya no use el movimiento de mouse relativo (por ejemplo, cuando devuelve una pantalla de menú) vuelve al procesamiento normal del movimiento de mouse absoluto. En este punto, deja de leer los datos de mouse relativo, reinicia el procesamiento de eventos de mouse (y puntero) estándar y establece [CoreWindow::PointerCursor](/uwp/api/windows.ui.core.corewindow.pointercursor) en un valor no nulo. 
 
-> **Nota:**  
+> **Nota**  
 Cuando tu aplicación se encuentra en el modo de manipulación de escenas u objetos 3D (procesamiento de movimientos de mouse relativo con el cursor desactivado), el mouse no puede invocar la interfaz de usuario perimetral como los accesos, la pila de retroceso o la barra de la aplicación. Por lo tanto, es importante proporcionar un mecanismo para salir de este modo específico, como la tecla **Esc** que se usa habitualmente.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Controles de movimiento vistazo para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) 
+* [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) 
 * [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md)

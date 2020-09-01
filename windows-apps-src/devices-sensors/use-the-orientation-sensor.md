@@ -6,34 +6,34 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 407c76c41d4a8620e2168e8e03dd2a3e24d73b61
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0217567fd2b78542b745a02fbdfa3bd816d9a2b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369573"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159459"
 ---
 # <a name="use-the-orientation-sensor"></a>Usar el sensor de orientación
 
 
 **API importantes**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor)
--   [**SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation)
+-   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+-   [**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor)
+-   [**SimpleOrientation**](/uwp/api/Windows.Devices.Sensors.SimpleOrientation)
 
-**Ejemplos**
+**Muestras**
 
--   [Ejemplo del sensor de orientación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
--   [Ejemplo del sensor de orientación simple](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
+-   [Ejemplo de sensor de orientación](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
+-   [Ejemplo de sensor de orientación simple](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
 
 Aprende a usar los sensores de orientación para determinar la orientación del dispositivo.
 
-Hay dos tipos diferentes de las API que se incluyen en el sensor de orientación del [ **Windows.Devices.Sensors** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) espacio de nombres: [**OrientationSensor** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) y [ **SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation). Si bien ambos sensores son sensores de orientación, ese término está sobrecargado y se usan para fines muy diferentes. Sin embargo, dado que ambos son sensores de orientación, se tratan en este artículo.
+Existen dos tipos diferentes de API sensor de orientación que se incluyen en el espacio de nombres [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors): [**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor) y [**SimpleOrientation**](/uwp/api/Windows.Devices.Sensors.SimpleOrientation). Si bien ambos sensores son sensores de orientación, ese término está sobrecargado y se usan para fines muy diferentes. Sin embargo, dado que ambos son sensores de orientación, se tratan en este artículo.
 
-La API de [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) se usa para aplicaciones 3D para obtener un cuaternión y una matriz de rotación. Un cuaternión puede entender más fácilmente como un giro de un punto de \[x, y, z\] alrededor de un eje arbitrario (contrastar con una matriz de rotación, que representa las rotaciones en torno a tres ejes). Las operaciones matemáticas en torno a los cuaterniones son bastante complejas, ya que implican las propiedades geométricas de números complejos y las propiedades matemáticas de números imaginarios. Sin embargo, es fácil trabajar con ellas y son compatibles con marcos como DirectX. Una aplicación compleja en 3D puede usar el sensor de orientación para ajustar la perspectiva del usuario. Este sensor combina los datos de entrada del acelerómetro, el girómetro y la brújula.
+La API de [**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor) se usa para aplicaciones 3D para obtener un cuaternión y una matriz de rotación. Un cuaternión puede entenderse más fácilmente como un giro de un punto \[ x, y, z \] sobre un eje arbitrario (en oposición a una matriz de rotación, que representa rotaciones alrededor de tres ejes). Las operaciones matemáticas en torno a los cuaterniones son bastante complejas, ya que implican las propiedades geométricas de números complejos y las propiedades matemáticas de números imaginarios. Sin embargo, es fácil trabajar con ellas y son compatibles con marcos como DirectX. Una aplicación compleja en 3D puede usar el sensor de orientación para ajustar la perspectiva del usuario. Este sensor combina los datos de entrada del acelerómetro, el girómetro y la brújula.
 
-La API de [**SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation) se usa para determinar la orientación actual del dispositivo en cuanto a las definiciones, como vertical hacia arriba, vertical hacia abajo, horizontal hacia la izquierda y horizontal hacia la derecha. También puede detectar si un dispositivo está boca arriba o boca abajo. En lugar de devolver propiedades como "vertical arriba" u "horizontal izquierda", este sensor devuelve un valor de rotación: "No gira", "Rotated90DegreesCounterclockwise" y así sucesivamente. En la siguiente tabla, se asignan las propiedades de orientación comunes a la lectura del sensor correspondiente.
+La API de [**SimpleOrientation**](/uwp/api/Windows.Devices.Sensors.SimpleOrientation) se usa para determinar la orientación actual del dispositivo en cuanto a las definiciones, como vertical hacia arriba, vertical hacia abajo, horizontal hacia la izquierda y horizontal hacia la derecha. También puede detectar si un dispositivo está boca arriba o boca abajo. En lugar de devolver propiedades como "vertical hacia arriba" u "horizontal hacia la izquierda", este sensor devuelve un valor de rotación: "Not rotated", "Rotated90DegreesCounterclockwise", etc. En la siguiente tabla, se asignan las propiedades de orientación comunes a la lectura del sensor correspondiente.
 
 | Orientación     | Lectura del sensor correspondiente      |
 |-----------------|-----------------------------------|
@@ -44,7 +44,7 @@ La API de [**SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Dev
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
+Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que estés usando debe tener un sensor de orientación.
 
@@ -52,9 +52,9 @@ El dispositivo o emulador que estés usando debe tener un sensor de orientación
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de orientación desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-###  <a name="instructions"></a>Instrucciones
+###  <a name="instructions"></a>Instructions
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -177,11 +177,11 @@ Tendrás que cambiar el nombre del espacio de nombres del fragmento de código a
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **OrientationSensorCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="OrientationSensorCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:OrientationSensorCS"`.
 
--   Presiona F5 (o selecciona **Depurar** > **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
+-   Presione F5 o seleccione **depurar**  >  **iniciar depuración** para compilar, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Para detener la aplicación, vuelva a Visual Studio y presione Mayús + F5 o seleccione **depurar**  >  **detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -214,9 +214,9 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de orientación simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -323,11 +323,11 @@ Tendrás que cambiar el nombre del espacio de nombres del fragmento de código a
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **SimpleOrientationCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="SimpleOrientationCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:SimpleOrientationCS"`.
 
--   Presiona F5 (o selecciona **Depurar** > **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
+-   Presione F5 o seleccione **depurar**  >  **iniciar depuración** para compilar, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar la orientación moviendo el dispositivo o usando las herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Para detener la aplicación, vuelva a Visual Studio y presione Mayús + F5 o seleccione **depurar**  >  **detener depuración** para detener la aplicación.
 
 ### <a name="explanation"></a>Explicación
 
