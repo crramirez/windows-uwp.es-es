@@ -1,15 +1,15 @@
 ---
 title: Shell habilitado para voz (VES) en Xbox
-description: Obtenga información sobre cómo agregar compatibilidad de control de voz a las aplicaciones para UWP en Xbox.
+description: Obtenga información sobre cómo agregar compatibilidad con el control de voz a las aplicaciones Plataforma universal de Windows (UWP) en Xbox mediante el shell habilitado para voz (VES).
 ms.date: 10/19/2017
 ms.topic: article
 keywords: Shell de Windows 10, UWP, Xbox, voz y voz habilitada
-ms.openlocfilehash: db846e906917f29781200f3c312f6dbd6e2b2dd1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 38afa2473dd74ab580cf38cc21d1f2b192f9b72a
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161669"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304657"
 ---
 # <a name="using-speech-to-invoke-ui-elements"></a>Usar voz para invocar elementos de la interfaz de usuario
 
@@ -217,7 +217,7 @@ Con `comboBox` , usamos la `LabeledBy` propiedad `label1` como referencia como e
 
 Por último, con `button3` , ves toma el `Name` del primer elemento secundario, ya que en `button3` sí mismo no tiene un `AutomationProperties.Name` conjunto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Fundamentos de UI Automation](/dotnet/framework/ui-automation/ui-automation-fundamentals "Fundamentos de UI Automation")
 - [Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario")
 - [Preguntas más frecuentes](frequently-asked-questions.md)

@@ -1,16 +1,16 @@
 ---
 title: Introducción al desarrollo de aplicaciones para UWP en Xbox One
-description: Cómo configurar el equipo y Xbox One para el desarrollo para UWP.
+description: Obtenga información sobre cómo configurar el equipo de desarrollo y la consola Xbox One para empezar a trabajar con el desarrollo de aplicaciones Plataforma universal de Windows (UWP) en Xbox One.
 ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 19756730177485c6d16ad9a42ff1174eba8ca3b9
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 243f8972f1ea5879ee77f036d97c05e29d446b12
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820309"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304707"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introducción al desarrollo de aplicaciones para UWP en Xbox One
 
@@ -19,7 +19,7 @@ Sigue estos pasos **atentamente** para configurar correctamente el equipo y Xbox
 ## <a name="before-you-start"></a>Antes de comenzar
 
 Antes de empezar, debes hacer lo siguiente:
--   Configurar un equipo con la versión más reciente de Windows 10.
+-   Configure un equipo con la versión más reciente de Windows 10.
 <!-- -  Install Microsoft Visual Studio 2015 Update 3 or Microsoft Visual Studio 2019.
 
     > [!NOTE]
@@ -29,28 +29,28 @@ Antes de empezar, debes hacer lo siguiente:
 
 ## <a name="setting-up-your-development-pc"></a>Configurar el equipo de desarrollo
 
-1.  Instale Visual Studio 2015 Update 3, Visual Studio 2017 o Visual Studio de 2019.
+1.  Instale Visual Studio 2015 Update 3, Visual Studio 2017 o Visual Studio 2019.
 
-    Si va a instalar Visual Studio 2015 Update 3, asegúrese de que elige **personalizado** instalar y seleccione el **herramientas de desarrollo de aplicaciones Windows universales** casilla de verificación: no es parte del valor predeterminado de instalación. Si eres un desarrollador de C++, asegúrate de elegir **Instalación personalizada** y seleccionar **C++** .
+    Si va a instalar Visual Studio 2015 Update 3, asegúrese de elegir instalación **personalizada** y activar la casilla **herramientas de desarrollo de aplicaciones universales de Windows** : no forma parte de la instalación predeterminada. Si eres un desarrollador de C++, asegúrate de elegir **Instalación personalizada** y seleccionar **C++**.
 
-    Si va a instalar Visual Studio 2017 o Visual Studio de 2019, asegúrese de que elige el **desarrollo de plataforma Universal de Windows** carga de trabajo. Si es desarrollador de C++, en el **resumen** panel de la derecha, bajo **desarrollo de plataforma Universal de Windows**, asegúrese de que selecciona el **herramientas de C++ Universal Windows Platform** casilla de verificación. No es parte de la instalación predeterminada.
+    Si va a instalar Visual Studio 2017 o Visual Studio 2019, asegúrese de elegir la carga de trabajo de **desarrollo de plataforma universal de Windows** . Si es desarrollador de C++, en el panel **Resumen** de la derecha, en **plataforma universal de Windows desarrollo**, asegúrese de activar la casilla herramientas de **c++ plataforma universal de Windows** . No forma parte de la instalación predeterminada.
 
-    Para obtener más información, consulte [configurar su UWP en el entorno de desarrollo de Xbox](development-environment-setup.md).
+    Para obtener más información, consulte [configuración de la UWP en el entorno de desarrollo de Xbox](development-environment-setup.md).
 
-2.  Instale la última versión [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
+2.  Instale el [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk)más reciente.
 
-3.  Habilitar el modo de programador para el equipo de desarrollo (**configuración / actualización y seguridad / para los desarrolladores o usar características del desarrollador / modo de programador**).
+3.  Habilite el modo de desarrollador para el equipo de desarrollo (**configuración/actualizar & seguridad/para desarrolladores/usar características para desarrolladores/modo de desarrollador**).
 
-Ahora que el PC de desarrollo está listo, ve este vídeo o sigue leyendo para ver cómo configurar tu Xbox One para desarrollar y crear e implementar una aplicación para UWP para ella.
+Ahora que el equipo de desarrollo está listo, puede ver este vídeo o seguir leyendo para ver cómo configurar la consola Xbox One para el desarrollo y crear e implementar una aplicación para UWP en ella.
 </br>
 </br>
 <iframe src="https://channel9.msdn.com/Events/Xbox/App-Dev-on-Xbox/Get-started-with-App-Dev-on-Xbox/player#time=51s:paused" width="600" height="338"  allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="setting-up-your-xbox-one-console"></a>Configurar la consola Xbox One
 
-1.  Activa el modo de desarrollador en tu Xbox One. Descargar la aplicación, obtener el código de activación y, a continuación, escríbala en el **consolas Xbox One administrar** página en su cuenta de desarrollador de la aplicación de centro de partners. Para obtener más información, consulta [Activación del modo de desarrollador de Xbox One](devkit-activation.md). 
+1.  Activa el modo de desarrollador en tu Xbox One. Descargue la aplicación, obtenga el código de activación y, después, escríbalo en la página **administrar consolas de Xbox One** de la cuenta de desarrollador de la aplicación del centro de Partners. Para obtener más información, consulte [activación del modo de desarrollador de Xbox One](devkit-activation.md). 
 
-2.  Abra el **activación del modo de desarrollo** aplicación y seleccione **conmutador y reinicie**. Enhorabuena, ahora tienes una consola Xbox One en modo de desarrollador.
+2.  Abra la aplicación de **activación en modo de desarrollo** y seleccione **cambiar y reiniciar**. Enhorabuena, ahora tienes una consola Xbox One en modo de desarrollador.
   
   > [!NOTE]
   > Tus aplicaciones y juegos de versión comercial no se ejecutarán en modo de desarrollador, pero sí que lo harán las aplicaciones o juegos que crees. Vuelve al Modo comercial para ejecutar tus aplicaciones y juegos favoritos.
@@ -60,29 +60,29 @@ Ahora que el PC de desarrollo está listo, ve este vídeo o sigue leyendo para v
 
 ## <a name="creating-your-first-project-in-visual-studio"></a>Crear su primer proyecto en Visual Studio
 
-Para obtener más información, consulte [configurar su UWP en el entorno de desarrollo de Xbox](development-environment-setup.md).
+Para obtener información más detallada, consulte [configurar el entorno de desarrollo de la Xbox en la consola de UWP](development-environment-setup.md).
 
-1.  **Para C#** : Cree un nuevo proyecto de Windows Universal y en el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **propiedades**. Seleccione el **depurar** , modifique **dispositivo de destino** a **máquina remota**, escriba la dirección IP o nombre de host de la consola Xbox One en el **máquina remota**  campo y, a continuación, seleccione **Universal (protocolo sin cifrar)** en el **modo de autenticación** lista desplegable.   
+1.  **Para C#**: cree un nuevo proyecto universal de Windows y, en el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **propiedades**. Seleccione la **pestaña depurar** , cambiar **dispositivo de destino** a **equipo remoto**, escriba la dirección IP o el nombre de host de la consola Xbox One en el campo **equipo remoto** y seleccione **universal (protocolo sin cifrar)** en la lista desplegable **modo de autenticación** .   
 
     Para buscar la dirección IP de Xbox One, inicia la Página principal para desarrolladores en la consola (el icono grande del lado derecho de la página principal) y mira a la esquina superior izquierda. Para obtener más información sobre la página principal para desarrolladores, consulta [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md).  
 
-2.  **Para proyectos de C++ y HTML/Javascript**: Siga una ruta de acceso similar a C# proyectos, pero en las propiedades del proyecto que se vaya a la **depuración** ficha, seleccione **máquina remota** en el depurador para abrir la lista desplegable, escriba la dirección IP o nombre de host de la consola en el **nombre de la máquina** campo y, a continuación, seleccione **Universal (protocolo sin cifrar)** en el **tipo de autenticación** campo.
+2.  En el **caso de los proyectos de C++ y HTML/JavaScript**: debe seguir una ruta de acceso similar a la de los proyectos de C#, pero en las propiedades del proyecto, vaya a la pestaña **depuración** , seleccione **equipo remoto** en el depurador para abrir la lista desplegable, escriba la dirección IP o el nombre de host de la consola en el campo **nombre** **de la** máquina y seleccione **universal**
 
-3. Seleccione **x64** en la lista desplegable a la izquierda del botón verde de reproducción en la barra de menús superior.
+3. Seleccione **x64** en la lista desplegable situada a la izquierda del botón verde de reproducción en la barra de menús superior.
    
 4.  Al presionar F5, la aplicación se compila y se empieza a implementar en tu Xbox One.
   
-5.  La primera vez que hagas esto, Visual Studio te pedirá un PIN para Xbox One. Puede obtener un PIN iniciando principal de desarrollo en Xbox One y seleccionando el **pin se muestra Visual Studio** botón.
+5.  La primera vez que hagas esto, Visual Studio te pedirá un PIN para Xbox One. Puede obtener un PIN si inicia dev Home en la Xbox One y selecciona el botón **Mostrar PIN de Visual Studio** .
   
 6.  Una vez hayas realizado el emparejamiento, la aplicación empezará a implementarse. La primera vez que lo hagas, es posible que el proceso sea poco lento (tenemos que copiar todas las herramientas en la consola Xbox), pero si el proceso tarda más de unos pocos minutos, probablemente significa que se ha producido un error. Asegúrate de haber seguido los pasos anteriores (especialmente de haber configurado el **Modo de autenticación** en **Universal**) y de usar una conexión de red de cable en tu Xbox One.  
 
 7. Siéntate y relájate. Disfruta de la primera aplicación que se ejecuta en la consola.  
 
-## <a name="thats-it"></a>Ya está.
+## <a name="thats-it"></a>Eso es todo.
 
-![Hello World](images/getting-started-hello-world.png)
+![Hola mundo](images/getting-started-hello-world.png)
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 - [Preguntas más frecuentes](frequently-asked-questions.md)  
-- [Problemas conocidos de UWP en el programa para desarrolladores de Xbox](known-issues.md)
+- [Problemas conocidos de UWP en el Programa para desarrolladores de Xbox](known-issues.md)
 - [UWP en Xbox One](index.md) 

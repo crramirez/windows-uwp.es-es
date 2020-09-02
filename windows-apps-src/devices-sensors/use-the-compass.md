@@ -1,17 +1,17 @@
 ---
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: Usar la brújula
-description: Aprende a usar la brújula para determinar el rumbo actual.
+description: Aprenda a usar la API de brújula de Plataforma universal de Windows (UWP) para determinar el encabezado actual en una aplicación de navegación.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 143d83a0c1257cf662fb686a5e0620db5cc6fb68
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bc0365ced06e85a99fa063c86cad0946526b3f26
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159529"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304667"
 ---
 # <a name="use-the-compass"></a>Usar la brújula
 
@@ -29,7 +29,7 @@ Aprende a usar la brújula para determinar el rumbo actual.
 
 Una aplicación puede devolver la orientación actual con respecto al norte magnético o verdadero. Las aplicaciones de navegación usan la brújula para determinar la dirección de un dispositivo y orientar el mapa según corresponda.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 

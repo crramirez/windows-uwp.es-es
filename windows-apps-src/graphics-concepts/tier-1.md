@@ -1,18 +1,18 @@
 ---
 title: Nivel 1
-description: En esta sección se describe la compatibilidad de nivel 1.
+description: Obtenga información sobre las limitaciones generales y específicas que afectan a la compatibilidad de nivel 1 con las características de recursos de streaming en Direct3D.
 ms.assetid: 153DA429-0C99-4691-AEB4-124FD9B17BE2
 keywords:
 - Nivel 1
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fcd5debb367b73ad23492cf63d3acdd1797c23a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2ff90c75e3f4aefa28ddad5528d39d2f2d541bb0
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162709"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304647"
 ---
 # <a name="tier-1"></a>Nivel 1
 

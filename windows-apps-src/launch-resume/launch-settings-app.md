@@ -10,12 +10,12 @@ ms.custom: 19H1
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 5f62fa915c7a00d2e359989e6e10718f704854ab
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d90669e03ae15acdc826d9e0b227f12d4ecf3cbc
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173009"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304717"
 ---
 # <a name="launch-the-windows-settings-app"></a>Cómo iniciar la aplicación Configuración de Windows
 
@@ -146,7 +146,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Control ocular | MS-Settings: easeofaccess-eyecontrol |
 | Fuentes | MS-Settings: fuentes |
 | Contraste alto | ms-settings:easeofaccess-highcontrast |
-| Teclado | ms-settings:easeofaccess-keyboard |
+| Keyboard | ms-settings:easeofaccess-keyboard |
 | Lupa | ms-settings:easeofaccess-magnifier |
 | Mouse | ms-settings:easeofaccess-mouse |
 | Narrator | ms-settings:easeofaccess-narrator |
@@ -168,7 +168,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Game DVR | MS-Settings: Gaming-gamedvr |
 | Modo Juego | MS-Settings: Gaming-gamemode |
 | Reproducir una pantalla completa de juego | MS-Settings: quietmomentsgame |
-| TruePlay | MS-Settings: Gaming-trueplay (**en desuso en Windows 10, versión 1809 y posteriores**) |
+| TruePlay | MS-Settings: Gaming-trueplay (**a partir de Windows 10, versión 1809 (10,0; Compilación 17763), esta característica se ha quitado de Windows**) |
 | Redes Xbox | MS-Settings: Gaming-xboxnetworking |
 
 ## <a name="home-page"></a>Página de inicio
@@ -212,7 +212,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 
 |Página de configuración| URI |
 |-------------|-----|
-| Fondo | ms-settings:personalization-background |
+| Información previa | ms-settings:personalization-background |
 | Elegir las carpetas que aparecen en el inicio | MS-Settings: personalización-Inicio-lugares |
 | Colores | ms-settings:personalization-colors<br/>MS-Settings: colores |
 | Observe | MS-Settings: vista de la personalización (**en desuso en Windows 10, versión 1809 y posteriores**) |
@@ -245,7 +245,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Cámara | ms-settings:privacy-webcam |
 | Contactos | ms-settings:privacy-contacts |
 | Documentos | MS-Settings: privacidad-documentos |
-| Correo electrónico | ms-settings:privacy-email |
+| Email | ms-settings:privacy-email |
 | Seguidor de ojos | MS-Settings: Privacy-eyetracker (requiere hardware eyetracker) |
 | Comentarios y diagnósticos | ms-settings:privacy-feedback |
 | Sistema de archivos | MS-Settings: Privacy-broadfilesystemaccess |
@@ -316,7 +316,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Fecha y hora | ms-settings:dateandtime |
 | Configuración de IME de Japón | MS-Settings: regionlanguage-jpnime (disponible si está instalado el editor de métodos de entrada de Microsoft Japón) |
-| Región | MS-Settings: regionformatting |
+| Region | MS-Settings: regionformatting |
 | Idioma | MS-Settings: teclado<br/>ms-settings:regionlanguage<br/>MS-Settings: regionlanguage-bpmfime<br/>MS-Settings: regionlanguage-cangjieime<br/>MS-Settings: regionlanguage-chsime-pinyin-domainlexicon<br/>MS-Settings: regionlanguage-chsime-pinyin-KeyConfig<br/>MS-Settings: regionlanguage-chsime-pinyin-UDP<br/>MS-Settings: regionlanguage-chsime-Wubi-UDP<br/>MS-Settings: regionlanguage-quickime |
 | Configuración del IME de pinyin | MS-Settings: regionlanguage-chsime-pinyin (disponible si está instalado el editor de métodos de entrada de Microsoft pinyin) |
 | Voz | ms-settings:speech |
@@ -328,7 +328,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Activación | MS-Settings: activación |
 | Copia de seguridad | MS-Settings: copia de seguridad |
-| Optimización de entrega | MS-Settings: optimización de entrega |
+| Optimización de distribución | MS-Settings: optimización de entrega |
 | Encontrar mi dispositivo | MS-Settings: findmydevice |
 | Para desarrolladores | ms-settings:developers |
 | Recuperación | MS-Settings: recuperación |

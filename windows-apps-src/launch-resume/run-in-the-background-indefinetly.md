@@ -6,12 +6,12 @@ keywords: tarea en segundo plano, ejecución extendida, recursos, límites, tare
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ec77b0f4777f12d20ec13bcfbac864993afd441
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 33b41c432edde42bc31daa1d5631f60fb38d8397
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175119"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304507"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Ejecutar en segundo plano de manera indefinida
 
@@ -27,9 +27,14 @@ Si está desarrollando una aplicación que no está pensada para enviarse al Mic
 
 La `extendedExecutionUnconstrained` funcionalidad se agrega como una capacidad restringida en el manifiesto de la aplicación. Vea [declaraciones](../packaging/app-capability-declarations.md) de funcionalidades de aplicación para obtener más información sobre las funcionalidades restringidas.
 
-> **Nota:** Agregue la declaración de espacio de nombres XML *xmlns: ResCap* y use el prefijo *ResCap* para declarar la funcionalidad.
+> [!NOTE]
+> Agregue la declaración de espacio de nombres XML *xmlns: ResCap* y use el prefijo *ResCap* para declarar la funcionalidad.
+>
+> Para obtener más información, consulte la sección funcionalidades restringidas de [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+>
 
 _Package.appxmanifest_
+
 ```xml
 <Package
     ...
@@ -71,9 +76,14 @@ El registro del evento **revocado** permitirá a la aplicación realizar cualqui
 
 En el Plataforma universal de Windows, las tareas en segundo plano son procesos que se ejecutan en segundo plano sin ninguna forma de interfaz de usuario. Por lo general, las tareas en segundo plano pueden ejecutarse durante un máximo de veinticinco segundos antes de que se cancelen. Algunas de las tareas de ejecución más larga también tienen una comprobación para asegurarse de que la tarea en segundo plano no esté inactiva o usando memoria. En Windows Creators Update (versión 1703), se presentó la funcionalidad restringida [extendedBackgroundTaskTime](../packaging/app-capability-declarations.md) para quitar estos límites. La funcionalidad **extendedBackgroundTaskTime** se agrega como una capacidad restringida en el archivo de manifiesto de la aplicación:
 
-> **Nota:** Agregue la declaración de espacio de nombres XML *xmlns: ResCap* y use el prefijo *ResCap* para declarar la funcionalidad.
+> [!NOTE]
+> Agregue la declaración de espacio de nombres XML *xmlns: ResCap* y use el prefijo *ResCap* para declarar la funcionalidad.
+>
+> Para obtener más información, consulte la sección funcionalidades restringidas de [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+>
 
 _Package.appxmanifest_
+
 ```xml
 <Package
     ... 
@@ -92,6 +102,6 @@ El Plataforma universal de Windows supervisa la ejecución de tareas en segundo 
 
 Tenga en cuenta que las funcionalidades de **extendedExecutionUnconstrained** y **extendedBackgroundTaskTime** pueden invalidar la directiva predeterminada para las aplicaciones para UWP y pueden provocar una pérdida de batería significativa. Antes de usar estas funcionalidades, primero confirme que las directivas de ejecución extendida predeterminada y tiempo de tarea en segundo plano no satisfagan sus necesidades y realice pruebas en condiciones con restricción de batería para comprender el impacto que tendrá la aplicación en un dispositivo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Quitar las restricciones de recursos de tareas en segundo plano](/windows/application-management/enterprise-background-activity-controls)

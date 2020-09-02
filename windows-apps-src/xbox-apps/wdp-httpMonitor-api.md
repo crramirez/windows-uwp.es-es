@@ -1,26 +1,26 @@
 ---
-title: Referencia de API del supervisor de HTTP del Portal de dispositivos
-description: Obtén información sobre cómo acceder al tráfico HTTP desde la aplicación centrada en una consola Xbox.
+title: Referencia de API del monitor HTTP del portal de dispositivos
+description: Obtenga información sobre cómo acceder al tráfico HTTP en tiempo real desde la aplicación con el foco en una consola Xbox mediante la API de REST del portal de dispositivos Xbox de/ext/httpmonitor/Sessions.
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 1e7c07c92c1671cd9051393586e1e8562fa756d0
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 6ea53f6356aa89a83f3b267a65f65b32aad5749d
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244101"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304537"
 ---
-# <a name="http-monitor-api-reference"></a>Referencia de API del supervisor de HTTP   
-Puede acceder al tráfico de HTTP en tiempo real para la aplicación centrada mediante esta API si se ha habilitado el supervisor de HTTP en la consola Xbox, activando la casilla en Dev Home.
+# <a name="http-monitor-api-reference"></a>Referencia de la API del monitor HTTP   
+Puede acceder al tráfico HTTP en tiempo real de la aplicación con el foco mediante esta API si el monitor HTTP se ha habilitado en la consola Xbox. para ello, active la casilla en dev Home.
 
-## <a name="get-if-the-http-monitor-is-enabled"></a>Obtener si el supervisor de HTTP está habilitado
+## <a name="get-if-the-http-monitor-is-enabled"></a>Obtener si está habilitado el monitor HTTP
 
 **Solicitud**
 
-Puedes obtener si se ha habilitado el supervisor de HTTP en Dev Home.
+Puede obtener si el monitor HTTP se ha habilitado en dev Home.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 GET | /ext/httpmonitor/sessions
 
@@ -36,10 +36,10 @@ GET | /ext/httpmonitor/sessions
 
 - Ninguno
 
-**Respuesta**   
+**Ante**   
 Un objeto JSON con los siguientes campos:
 
-* Habilitado - (booleano) Si el supervisor de HTTP se ha habilitado en la consola Xbox activando la casilla en Dev Home.
+* Habilitado: (bool) si el monitor HTTP se ha habilitado en la consola Xbox activando la casilla de dev Home.
 
 **Código de estado**
 
@@ -51,15 +51,15 @@ Código de estado HTTP      | Descripción
 4XX | Códigos de error
 5XX | Códigos de error
 
-## <a name="get-http-traffic-from-the-focused-app"></a>Obtener el tráfico de HTTP desde la aplicación centrada
+## <a name="get-http-traffic-from-the-focused-app"></a>Obtención del tráfico HTTP desde la aplicación con el foco
 
 **Solicitud**
 
-Obtén en tiempo real el tráfico de HTTP desde la aplicación centrada en Xbox, siempre que no sea una aplicación de sistema, si se ha habilitado el supervisor de HTTP desde Dev Home.
+Obtiene el tráfico HTTP desde la aplicación con el foco en la Xbox, siempre y cuando no sea una aplicación del sistema, en tiempo real, si el monitor HTTP se ha habilitado desde dev Home.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
-Websocket | /ext/httpmonitor/sessions
+WebSocket | /ext/httpmonitor/sessions
 
 **Parámetros de URI**
 
@@ -73,20 +73,20 @@ Websocket | /ext/httpmonitor/sessions
 
 - Ninguno
 
-**Respuesta**   
+**Ante**   
 Un objeto JSON con los siguientes campos:
 
 * Sesiones
-    * RequestHeaders - (objeto JSON), Los encabezados desde la solicitud de HTTP.
-    * RequestContentHeaders - (objeto JSON), Los encabezados de contenido de la solicitud desde la solicitud de HTTP.
-    * RequestURL - (cadena) La dirección URL de la solicitud.
-    * RequestMethod - (cadena) El método de la solicitud.
-    * RequestMessage - (cadena) El mensaje de la solicitud, actualmente solo admite el contenido de JSON y de texto.
-    * ResponseHeaders - (objeto JSON), Los encabezados de respuesta desde la respuesta de HTTP.
-    * ResponseContentHeaders - (objeto JSON), Los encabezados del contenido de respuesta desde la respuesta de HTTP.
-    * StatusCode - (número) El código de estado dela respuesta.
-    * ReasponsePhrase - (cadena) La frase del motivo de la respuesta.
-    * ResponseMessage - (cadena) El mensaje de respuesta, actualmente solo admite el contenido de JSON y de texto.
+    * RequestHeaders: (objeto JSON) los encabezados de solicitud de la solicitud HTTP.
+    * RequestContentHeaders: (objeto JSON) los encabezados de contenido de la solicitud de la solicitud HTTP.
+    * RequestURL: (cadena) dirección URL de la solicitud.
+    * RequestMethod: (cadena) el método de solicitud.
+    * RequestMessage: (cadena) el mensaje de solicitud; actualmente solo admite contenido JSON y texto.
+    * ResponseHeaders: (objeto JSON) los encabezados de respuesta de la respuesta HTTP.
+    * ResponseContentHeaders: (objeto JSON) los encabezados de contenido de respuesta de la respuesta HTTP.
+    * StatusCode: (número) código de estado de respuesta.
+    * ReasponsePhrase: (cadena) la frase del motivo de la respuesta.
+    * ResponseMessage: (cadena) el mensaje de respuesta; actualmente solo admite contenido JSON y texto.
 
 **Código de estado**
 
@@ -96,7 +96,7 @@ Código de estado HTTP      | Descripción
 :------     | :-----
 200 | La solicitud se realizó correctamente.
 4XX | Códigos de error
-403 | Supervisor de HTTP deshabilitado, debe habilitarse en Dev Home
+403 | El monitor HTTP está deshabilitado, debe estar habilitado en dev Home
 5XX | Códigos de error
 
 

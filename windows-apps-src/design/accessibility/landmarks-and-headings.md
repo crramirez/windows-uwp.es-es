@@ -1,5 +1,5 @@
 ---
-description: Describe los puntos de referencia y las características de los encabezados de accesibilidad.
+description: Aprenda a usar las características de puntos de referencia y encabezados de la automatización de la interfaz de usuario para definir secciones de contenido en la aplicación, mejorar la accesibilidad y ayudar a los usuarios de tecnología de asistencia (en) a navegar por la interfaz de usuario.
 ms.assetid: 019CC63D-D915-4EBD-9442-DE899AB973C9
 title: Puntos de referencia y encabezados
 label: Landmarks and Headings
@@ -8,12 +8,12 @@ ms.date: 01/24/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c05f39c0497a2e2ef369abd04ed437f8387e60f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 65af556180e39ea66bbeb553a50c0746f952a08c
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173999"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304747"
 ---
 # <a name="landmarks-and-headings"></a>Puntos de referencia y encabezados
 

@@ -1,62 +1,62 @@
 ---
 title: Luz ambiente
-description: La luz ambiente proporciona iluminación constante a una escena.
+description: Obtenga información sobre cómo la iluminación ambiente proporciona iluminación constante para una escena y aprenda a establecer la iluminación ambiente en Direct3D con C++.
 ms.assetid: C34FA65A-3634-4A4B-B183-4CDA89F4DC95
 keywords:
 - Luz ambiente
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ac958a93fcafbb33a9025196b49398e2e3269e55
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: c21a674b0961836752c879bcea681b568f31053c
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291843"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304467"
 ---
 # <a name="ambient-lighting"></a>Luz ambiente
 
-La luz ambiente proporciona iluminación constante a una escena. Ilumina todos los vértices de un objeto del mismo modo porque no depende de ningún otro factor de iluminación, como las normales de los vértices, la dirección de la luz, la posición de la luz, el alcance o la atenuación. La luz ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto de la misma manera. Se calcular con rapidez, pero deja objetos con una apariencia plana y poco realista.
+La iluminación ambiente proporciona iluminación constante para una escena. Ilumina todos los vértices de objeto de la misma forma porque no depende de ningún otro factor de iluminación, como las normales de vértice, la dirección clara, la posición de la luz, el intervalo o la atenuación. La iluminación ambiente es constante en todas las direcciones y colorea todos los píxeles de un objeto. Es rápido calcular pero deja objetos que parezcan planos e impropios.
 
-La luz ambiente es el tipo de iluminación más rápido, pero obtienen los resultados menos realistas. Direct3D contiene una sola propiedad de luz ambiente global que puedes usar sin tener que crear ninguna luz. Como alternativa, puedes establecer cualquier objeto de luz para que proporcione luz ambiente.
+La iluminación ambiente es el tipo de iluminación más rápido, pero genera los resultados menos realistas. Direct3D contiene una única propiedad de luz ambiente global que puede usar sin crear ninguna luz. Como alternativa, puede establecer cualquier objeto de luz para proporcionar iluminación ambiente.
 
-La luz ambiente para una escena se describe mediante la siguiente ecuación.
+La iluminación ambiente para una escena se describe en la siguiente ecuación.
 
-Iluminación ambiente = Cₐ\*\[Gₐ + sum (Atten<sub></sub>\*terreno<sub></sub>\*L<sub>ai</sub>)\]
+Iluminación ambiente = C ₐ \* \[ g ₐ + SUM (ATTEN<sub>i</sub>i i i e \* <sub>i</sub> \* <sub>IA</sub>)\]
 
 Donde:
 
 | Parámetro         | Valor predeterminado | Tipo          | Descripción                                                                                                       |
 |-------------------|---------------|---------------|-------------------------------------------------------------------------------------------------------------------|
-| Cₐ                | (0,0,0,0)     | D3DCOLORVALUE | Color ambiente del material                                                                                            |
-| Gₐ                | (0,0,0,0)     | D3DCOLORVALUE | Color ambiente global                                                                                              |
-| Atten<sub>i</sub> | (0,0,0,0)     | D3DCOLORVALUE | Atenuación lumínica de la luz i. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md). |
-| Spot<sub>i</sub>  | (0,0,0,0)     | D3DVECTOR     | Factor del foco de luz de la luz i. Consulta [Atenuación y factor de foco de luz](attenuation-and-spotlight-factor.md).  |
-| sum               | N/D           | N/D           | Suma de la luz ambiente                                                                                          |
-| L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Color de luz ambiente de la luz i.                                                                              |
+| C ₐ                | (0, 0, 0, 0)     | D3DCOLORVALUE | Color ambiental de material                                                                                            |
+| G ₐ                | (0, 0, 0, 0)     | D3DCOLORVALUE | Color ambiente global                                                                                              |
+| ATTEN<sub>i</sub> | (0, 0, 0, 0)     | D3DCOLORVALUE | Atenuación de la luz i. Vea [atenuación y factor destacado](attenuation-and-spotlight-factor.md). |
+| Puntual<sub>i</sub>  | (0, 0, 0, 0)     | D3DVECTOR     | Factor destacado de la luz i. Vea [atenuación y factor destacado](attenuation-and-spotlight-factor.md).  |
+| Sum               | N/D           | N/D           | Suma de la luz ambiente                                                                                          |
+| L<sub>AI</sub>    | (0, 0, 0, 0)     | D3DVECTOR     | Color ambiente claro de la luz iésimo                                                                              |
 
  
 
-El valor de Cₐ es:
+El valor de C ₐ es:
 
--   vértice color1, si AMBIENTMATERIALSOURCE = D3DMCS\_COLOR1 y el color del primer vértice se proporciona en la declaración de vértice.
--   vértice color2, si AMBIENTMATERIALSOURCE = D3DMCS\_COLOR2 y el segundo color de vértice se proporciona en la declaración de vértice.
--   color ambiente del material.
+-   Vertex color1, si AMBIENTMATERIALSOURCE = D3DMCS \_ color1, y el primer color de vértice se proporciona en la declaración de vértices.
+-   Vertex color2, si AMBIENTMATERIALSOURCE = D3DMCS \_ color2, y el segundo color de vértice se proporciona en la declaración de vértices.
+-   color ambiente de material.
 
-**Tenga en cuenta**    si se utilizan cualquiera de las opciones de AMBIENTMATERIALSOURCE y no se proporciona el color de vértice, a continuación, se usa el color ambiental de material.
+**Nota:**    Si se usa la opción AMBIENTMATERIALSOURCE y no se proporciona el color del vértice, se usa el color ambiente del material.
 
  
 
-Para usar el color ambiente del material, usa SetMaterial como se muestra en el siguiente código de ejemplo.
+Para usar el color ambiente de material, use SetMaterial como se muestra en el código de ejemplo siguiente.
 
-Gₐ es el color ambiente global. Se establece mediante SetRenderState (D3DRS\_AMBIENT). Hay un color ambiente global en una escena de Direct3D. Este parámetro no está asociado con un objeto de luz de Direct3D.
+G ₐ es el color ambiente global. Se establece mediante SetRenderState (D3DRS \_ ambiente). Hay un color ambiente global en una escena de Direct3D. Este parámetro no está asociado a un objeto de Direct3D Light.
 
-L<sub>ai</sub> es el color ambiente de la luz i en la escena. Cada luz en Direct3D tiene un conjunto de propiedades, una de ellas es el color ambiente. El término, sum(L<sub>ai</sub>) es la suma de todos los colores ambiente de la escena.
+L<sub>AI</sub> es el color ambiente de la luz iésimo de la escena. Cada luz de Direct3D tiene un conjunto de propiedades, uno de los cuales es el color ambiente. El término SUM (L<sub>AI</sub>) es una suma de todos los colores de ambiente de la escena.
 
 ## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Ejemplo
 
 
-En este ejemplo, el objeto se colorea con la luz ambiente de la escena y un color ambiente del material.
+En este ejemplo, el objeto se colorea utilizando la luz ambiente de la escena y un color ambiente de material.
 
 ```cpp
 #define GRAY_COLOR  0x00bfbfbf
@@ -67,22 +67,22 @@ Ambient.b = 0.0f;
 Ambient.a = 0.0f;
 ```
 
-Según la ecuación, el color resultante para los vértices del objeto es una combinación del color del material y del color de la luz.
+Según la ecuación, el color resultante para los vértices del objeto es una combinación del color del material y el color claro.
 
-Las dos ilustraciones siguientes muestran el color del material, que es gris, y el color de la luz, que es rojo brillante.
+En las dos ilustraciones siguientes se muestra el color del material, que está atenuado y el color claro, que es rojo brillante.
 
-![ilustración de una esfera gris](images/amb1.jpg)![ilustración de una esfera roja](images/lightred.jpg)
+![Ilustración de una esfera gris](images/amb1.jpg)![Ilustración de una esfera roja](images/lightred.jpg)
 
-En la siguiente ilustración se muestra la escena resultante. El único objeto en la escena es una esfera. La luz ambiente ilumina todos los vértices del objeto con el mismo color. No depende de la normal del vértice ni de la dirección de la luz. Como consecuencia, la esfera parece un círculo en 2D porque no existe ninguna diferencia en sombreado alrededor de la superficie del objeto.
+La escena resultante se muestra en la siguiente ilustración. El único objeto de la escena es una esfera. Luz ambiente ilumina todos los vértices de objetos con el mismo color. No depende de la dirección de la luz o del vértice normal. Como resultado, la esfera tiene el aspecto de un círculo 2D porque no hay ninguna diferencia en el sombreado en torno a la superficie del objeto.
 
-![ilustración de una esfera con luz ambiente](images/lighta.jpg)
+![Ilustración de una esfera con iluminación ambiente](images/lighta.jpg)
 
-Para dar a los objetos un aspecto más realista, aplica iluminación especular o difusa, además de luz ambiente.
+Para dar una apariencia más realista a los objetos, aplique la iluminación difusa o especular además de la iluminación ambiente.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Matemáticas de iluminación](mathematics-of-lighting.md)
+[Cálculos de iluminación](mathematics-of-lighting.md)
 
  
 
