@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: Windows 10, UWP, captura de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: 829b99932c8035c2e9d493ed7319f640386f88ed
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b57be844e5ee10d384046aac651ab4f198f37d9e
+ms.sourcegitcommit: 14c0b1ea2447a81ddf31982b40e19a74ecc6d59e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163629"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89310076"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -24,6 +24,8 @@ Con la captura de pantalla, los desarrolladores invocan la interfaz de usuario s
 
 > [!NOTE]
 > Las API de captura de pantalla solo se admiten en auriculares de escritorio y Windows Mixed Reality.
+
+En este artículo se describe la captura de una sola imagen de la ventana de pantalla o de la aplicación. Para obtener información sobre la codificación de fotogramas capturados desde la pantalla a un archivo de vídeo, consulte [captura de pantalla en vídeo](screen-capture-video.md) .
 
 ## <a name="add-the-screen-capture-capability"></a>Agregar la funcionalidad de captura de pantalla
 
@@ -686,8 +688,9 @@ End Class
 
 ## <a name="record-a-video"></a>Grabar un vídeo
 
-Si desea grabar un vídeo de la aplicación, puede hacerlo más fácilmente con el [espacio de nombres Windows. Media. AppRecording](/uwp/api/windows.media.apprecording). Esto forma parte del SDK de la extensión de escritorio, por lo que solo funciona en el escritorio y requiere que se agregue una referencia a él desde el proyecto. Consulte información general de las [familias de dispositivos](/uwp/extension-sdks/device-families-overview) para obtener más información.
+Si desea grabar un vídeo de la aplicación, puede seguir el tutorial presentado en el artículo [captura de pantalla en vídeo](screen-capture-video.md). O bien, puede usar el [espacio de nombres Windows. Media. AppRecording](/uwp/api/windows.media.apprecording). Esto forma parte del SDK de la extensión de escritorio, por lo que solo funciona en el escritorio y requiere que se agregue una referencia a él desde el proyecto. Consulte información general de las [familias de dispositivos](/uwp/extension-sdks/device-families-overview) para obtener más información.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-* [Espacio de nombres Windows. Graphics. Capture](/uwp/api/windows.graphics.capture)
+* [Espacio de nombres Windows. Graphics. Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture)
+* [Captura de pantalla para vídeo](screen-capture-video.md)
