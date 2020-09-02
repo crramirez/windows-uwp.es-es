@@ -1,26 +1,22 @@
 ---
-title: Soporte técnico y comentarios
-description: Archivo de inclusión de comentarios y soporte técnico
-ms.date: 06/12/2018
 ms.topic: include
-keywords: windows 10, uwp, punto de servicio, pos
-ms.localizationpriority: medium
-ms.openlocfilehash: e1b6850c294e0427ac05ad4a4d7b2945df0dc34f
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+author: mattwojo
+ms.author: mattwoj
+ms.date: 08/31/2020
+ms.prod: uwp
+ms.openlocfilehash: 2077423518755c674fcc2e7dfa3962ab1945f244
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260881"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89326210"
 ---
-## <a name="support-and-feedback"></a>Soporte técnico y comentarios
+## <a name="support-and-feedback"></a>Soporte y comentarios
 
-### <a name="find-answers-to-your-questions"></a>Encuentra respuestas a tus preguntas
+### <a name="find-answers-to-your-questions"></a>Encontrar respuestas a tus preguntas
 
-¿Tienes alguna pregunta? Pregúntenos en [Stack Overflow](https://stackoverflow.com/questions/tagged/pointofservice) o en el [Foro de MSDN UWP](https://social.msdn.microsoft.com/Forums/en-US/home?forum=wpdevelop&filter=alltypes&sort=relevancedesc&searchTerm=%5Bpointofservice%5D)
+¿Tienes alguna pregunta? Pregúntenos sobre nuestros [documentos p&un foro con la etiqueta UWP](https://social.msdn.microsoft.com/Forums/en-US/home?category=&forum=&filter=alltypes&sort=relevancedesc&brandIgnore=true&filter=alltypes&searchTerm=%5BUWP%5D) o en [Stack Overflow con la etiqueta pointofservice](https://stackoverflow.com/questions/tagged/pointofservice).
 
 Ayúdenos a encontrar sus preguntas:
 - Agregue la etiqueta [pointofservice](https://stackoverflow.com/questions/tagged/pointofservice) a su pregunta en Stack Overflow. 
-- Incluya el término ["pointofservice"](https://social.msdn.microsoft.com/Forums/en-US/home?forum=wpdevelop&filter=alltypes&sort=relevancedesc&searchTerm=%5Bpointofservice%5D) en su publicación en el foro de MSDN UWP
-
-### <a name="make-feature-suggestions-or-give-feedback"></a>Realizar sugerencias de características o enviar comentarios
-Vea los comentarios de los [desarrolladores UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform?category_id=202594).
+- Incluya el término ["UWP"](https://social.msdn.microsoft.com/Forums/en-US/home?category=&forum=&filter=alltypes&sort=relevancedesc&brandIgnore=true&filter=alltypes&searchTerm=%5BUWP%5D) en su publicación en el&de preguntas y respuestas.
