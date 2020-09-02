@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows 10, UWP, API de promociones de Microsoft Store, campañas de ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b9cb30d2a87d93df1790fb42ad3b4b243f0f713
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 74afbda1cc93aa0602618d6d94efe6baadf59ecb
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164559"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363708"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Ejecutar campañas de ad mediante los servicios de almacenamiento
 
@@ -102,7 +102,7 @@ En el diagrama siguiente se ilustra la relación entre las campañas, las línea
 
 En el ejemplo de código siguiente se muestra cómo obtener un token de acceso Azure AD y cómo llamar a la API de promociones de Microsoft Store desde una aplicación de consola de C#. Para usar este ejemplo de código, asigna las variables *tenantId*, *clientId*, *clientSecret* y *appID* a los valores adecuados de tu escenario. Este ejemplo requiere el [paquete JSON.net](https://www.newtonsoft.com/json) de Newtonsoft para deserializar los datos JSON devueltos por la API de promociones de Microsoft Store.
 
-[!code-csharp[PromotionsApi](./code/StoreServicesExamples_Promotions/cs/Program.cs#PromotionsApiExample)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_Promotions/cs/Program.cs" id="PromotionsApiExample":::
 
 ## <a name="related-topics"></a>Temas relacionados
 

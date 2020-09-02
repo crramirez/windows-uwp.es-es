@@ -6,12 +6,12 @@ keywords: UWP, complementos, compras desde la aplicación, IAPs, Windows. Applic
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ab2b5937746f006c0f5efd296e9b4a4f3cb82696
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ac6fc8a6ac39c106e3d5d593a36595097c4bde45
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171579"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364118"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de productos desde la aplicación
 
@@ -34,7 +34,7 @@ Independientemente de que la aplicación sea gratuita o no, puedes vender conten
 Cuando se esté iniciando la aplicación, obtén el objeto [LicenseInformation](/uwp/api/Windows.ApplicationModel.Store.LicenseInformation) de la aplicación mediante la inicialización de la clase [CurrentApp](/uwp/api/Windows.ApplicationModel.Store.CurrentApp) o [CurrentAppSimulator](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) para habilitar las compras de un producto desde la aplicación.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#InitializeLicenseTest)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs" id="InitializeLicenseTest":::
 
 ## <a name="step-2-add-the-in-app-offers-to-your-app"></a>Paso 2: Agrega las ofertas desde la aplicación
 
@@ -61,7 +61,7 @@ Para cada función que quieras tener disponible a través de un producto desde l
     En este ejemplo se muestra cómo puedes codificar una función de producto llamada **featureName** en un bloqueo condicional específico de una licencia. La cadena, **featureName**, es el token que identifica de forma única este producto dentro de la aplicación y también se utiliza para identificarlo en el almacén.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#CodeFeature)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs" id="CodeFeature":::
 
 3.  **Agrega la interfaz de usuario de compra para esta característica**
 
@@ -70,7 +70,7 @@ Para cada función que quieras tener disponible a través de un producto desde l
     A continuación te mostramos cómo comprobar si el cliente ya tiene un producto desde la aplicación y, si no la tiene, cómo mostrar el cuadro de diálogo de compra para que puedan comprarla. Reemplaza el comentario "mostrar el cuadro de diálogo de compra" por el código personalizado del cuadro de diálogo de compra (como, por ejemplo, una página con un alegre botón que diga: “¡Comprar esta aplicación!” ).
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[EnableInAppPurchases](./code/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs#BuyFeature)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs" id="BuyFeature":::
 
 ## <a name="step-3-change-the-test-code-to-the-final-calls"></a>Paso 3: Cambia el código de prueba para las llamadas finales
 

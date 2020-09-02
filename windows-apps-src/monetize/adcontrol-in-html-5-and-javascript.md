@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, ADS, Advertising, AdControl, ad control, JavaScript, HTML
 ms.localizationpriority: medium
-ms.openlocfilehash: d770e8a9a15835d7fab52e7383acca3a3df6c6cd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b99432c40bf2b4633e8902a5bb7b7eedab3119dc
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155679"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364058"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>AdControl en HTML 5 y JavaScript
 
@@ -103,7 +103,7 @@ En el ejemplo siguiente se muestra el index.htmcompleto l para una aplicación s
 En los pasos anteriores se muestra cómo declarar un **AdControl** en el marcado HTML. Como alternativa, puede crear mediante programación un **control** de la con JavaScript. En este ejemplo se da por supuesto que usa un **div** existente en el código HTML con el identificador **myAd**.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-javascript[AdControl](./code/AdvertisingSamples/AdControlSamples/js/main.js#DeclareAdControl)]
+:::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/js/main.js" id="DeclareAdControl":::
 
 En este ejemplo se supone que ya has declarado los métodos del controlador de eventos llamados **myAdError**, **myAdRefreshed** y **myAdEngagedChanged**.
 

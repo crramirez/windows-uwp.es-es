@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5924ad4b969fbf29021b2b48440ce071a516fe09
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c0e94e0ddaba027b38ecc76b1c97126204990f1a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175729"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363988"
 ---
 # <a name="connect-to-remote-cameras"></a>Conexión a cámaras remotas
 
@@ -43,7 +43,7 @@ En el ejemplo siguiente se muestra una clase auxiliar que utiliza un objeto **De
 
 Además, este ejemplo controla el evento [**DeviceWatcher. Updated**](/uwp/api/windows.devices.enumeration.devicewatcher.updated) , además de los eventos **agregados** y **quitados** . En el controlador **actualizado** , el dispositivo de cámara remota asociado se quita de y, a continuación, se vuelve a agregar a la colección.
 
-[!code-cs[SnippetRemoteCameraPairingHelper](./code/Frames_Win10/Frames_Win10/RemoteCameraPairingHelper.cs#SnippetRemoteCameraPairingHelper)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/RemoteCameraPairingHelper.cs" id="SnippetRemoteCameraPairingHelper":::
 
 
 ## <a name="related-topics"></a>Temas relacionados

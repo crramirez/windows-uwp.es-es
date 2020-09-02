@@ -6,12 +6,12 @@ keywords: Windows 10, UWP, consumibles, complementos, compras desde la aplicaci�
 ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f09b9a5c1f53c6a33f830c72514e061dc893348
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 01f1646c05b66d354a403e2621e3b032c22734d3
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171589"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363658"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumibles
 
@@ -73,7 +73,7 @@ Después de que el usuario [compre el complemento](enable-in-app-purchases-of-ap
 Este ejemplo muestra cómo notificar un consumible administrado por la Tienda como completado.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs#ConsumeAddOn)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs" id="ConsumeAddOn":::
 
 <span id="get_balance" />
 
@@ -82,7 +82,7 @@ Este ejemplo muestra cómo notificar un consumible administrado por la Tienda co
 En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingAsync](/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) de la clase [StoreContext](/uwp/api/windows.services.store.storecontext) para obtener el saldo restante para un complemento consumible administrado por la Tienda.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs" id="GetRemainingAddOnBalance":::
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, control de anuncios, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ada6ad04150d6a0f20e9286122ce02933091236
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: eedb3f12bfc9da51afb2d5205122cbd42d7b31bf
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174979"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363098"
 ---
 # <a name="interstitial-ads"></a>Anuncios intersticiales
 
@@ -69,22 +69,22 @@ En esta sección se proporcionan ejemplos en C#, pero Visual Basic y C++ tambié
 
 3.  En el archivo de código adecuado de la aplicación (por ejemplo, en MainPage.xaml.cs o un archivo de código para otra página), agrega la siguiente referencia de espacio de nombres.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet1":::
 
 4.  En una ubicación adecuada de tu aplicación (por ejemplo, en ```MainPage``` o en otra página), declara un objeto [InterstitialAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad) y varios campos de cadenas que representen el id. de aplicación y el id. de unidad del anuncio intersticial. En el ejemplo de código siguiente se asignan los `myAppId` `myAdUnitId` campos y a los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) de los anuncios intersticiales.
 
     > [!NOTE]
     > Cada **InterstitialAd** tiene una *unidad de anuncio* correspondiente que los servicios usan para servir anuncios al control, y cada unidad de ad consta de un identificador de *unidad de ad* y un identificador de *aplicación*. En estos pasos, asignará el identificador de unidad de ad de prueba y los valores de ID. de aplicación al control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debe [reemplazar estos valores de prueba con valores dinámicos](#release) del centro de Partners.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet2":::
 
 5.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **InterstitialAd** y conecta controladores de eventos para los eventos del objeto.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet3":::
 
 6.  Si desea mostrar un anuncio de *vídeo intersticial* : aproximadamente 30-60 segundos antes de necesitar el anuncio, use el método [RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para obtener previamente el anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse. Asegúrese de especificar **AdType. video** para el tipo de anuncio.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet4":::
 
     Si desea mostrar un anuncio de *banner intersticial* : aproximadamente 5-8 segundos antes de que se necesite el anuncio, use el método [RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para obtener previamente el anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse. Asegúrese de especificar **AdType. display** para el tipo de anuncio.
 
@@ -94,11 +94,11 @@ En esta sección se proporcionan ejemplos en C#, pero Visual Basic y C++ tambié
 
 6.  En el punto del código en el que desea mostrar el anuncio de banner intersticial o de vídeo intersticial, confirme que el método **InterstitialAd** está listo para mostrarse y, a continuación, se muestra mediante el método [Show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) .
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet5":::
 
 7.  Define los controladores de eventos para el objeto **InterstitialAd**.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet6)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet6":::
 
 8.  Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
 
@@ -129,15 +129,15 @@ En las siguientes instrucciones se supone que ha creado un proyecto universal de
     > [!NOTE]
     > Cada **InterstitialAd** tiene una *unidad de anuncio* correspondiente que los servicios usan para servir anuncios al control, y cada unidad de ad consta de un identificador de *unidad de ad* y un identificador de *aplicación*. En estos pasos, asignará el identificador de unidad de ad de prueba y los valores de ID. de aplicación al control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debe [reemplazar estos valores de prueba con valores dinámicos](#release) del centro de Partners.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet1)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/script.js" id="Snippet1":::
 
 5.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **InterstitialAd** y conecta controladores de eventos para el objeto.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet2)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/script.js" id="Snippet2":::
 
 5. Si desea mostrar un anuncio de *vídeo intersticial* : aproximadamente 30-60 segundos antes de necesitar el anuncio, use el método [RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para obtener previamente el anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse. Asegúrese de especificar **InterstitialAdType. video** para el tipo de anuncio.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet3)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/script.js" id="Snippet3":::
 
     Si desea mostrar un anuncio de *banner intersticial* : aproximadamente 5-8 segundos antes de que se necesite el anuncio, use el método [RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para obtener previamente el anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse. Asegúrese de especificar **InterstitialAdType. display** para el tipo de anuncio.
 
@@ -149,11 +149,11 @@ En las siguientes instrucciones se supone que ha creado un proyecto universal de
 
 6.  En el punto del código donde quieras mostrar el anuncio, confirma que **InterstitialAd** está listo para mostrarse y, después, muéstralo con el método [Show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet4)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/samples.js" id="Snippet4":::
 
 7.  Define los controladores de eventos para el objeto **InterstitialAd**.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet5)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/samples.js" id="Snippet5":::
 
 9.  Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
 
@@ -173,26 +173,26 @@ En este ejemplo se supone que ha creado un proyecto de **aplicación XAML y Dire
 
 2.  En un archivo de encabezado apropiado para tu aplicación (por ejemplo, DirectXPage.xaml.h), declara un objeto [InterstitialAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad) y los métodos de controlador de eventos relacionados.  
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet1)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h" id="Snippet1":::
 
 3.  En el mismo archivo de encabezado, declara varios campos de cadena que representen el id. de aplicación y el id. de unidad para tu anuncio intersticial. En el ejemplo de código siguiente se asignan los `myAppId` `myAdUnitId` campos y a los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) de los anuncios intersticiales.
 
     > [!NOTE]
     > Cada **InterstitialAd** tiene una *unidad de anuncio* correspondiente que los servicios usan para servir anuncios al control, y cada unidad de ad consta de un identificador de *unidad de ad* y un identificador de *aplicación*. En estos pasos, asignará el identificador de unidad de ad de prueba y los valores de ID. de aplicación al control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debe [reemplazar estos valores de prueba con valores dinámicos](#release) del centro de Partners.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet2)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h" id="Snippet2":::
 
 4.  En el archivo .cpp donde quieras agregar código para mostrar un anuncio intersticial, agrega la siguiente referencia de espacio de nombres. En los siguientes ejemplos se supone que agregas el código al archivo DirectXPage.xaml.cpp de tu aplicación.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet3)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet3":::
 
 6.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), crea una instancia del objeto **InterstitialAd** y conecta controladores de eventos para los eventos del objeto. En el siguiente ejemplo, ```InterstitialAdSamplesCpp``` es el espacio de nombres para el proyecto; cambia este nombre si es necesario en tu código.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet4)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet4":::
 
 7. Si desea mostrar un anuncio de *vídeo intersticial* : aproximadamente 30-60 segundos antes de necesitar el anuncio intersticial, use el método [RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para obtener previamente el anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse. Asegúrese de especificar **AdType:: video** para el tipo de anuncio.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet5)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet5":::
 
     Si desea mostrar un anuncio de *banner intersticial* : aproximadamente 5-8 segundos antes de que se necesite el anuncio, use el método [RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) para obtener previamente el anuncio. Esto deja tiempo suficiente para solicitar y preparar el anuncio antes de que deba mostrarse. Asegúrese de especificar **AdType::D** Mostrar para el tipo de anuncio.
 
@@ -202,11 +202,11 @@ En este ejemplo se supone que ha creado un proyecto de **aplicación XAML y Dire
 
 7.  En el punto del código donde quieras mostrar el anuncio, confirma que **InterstitialAd** está listo para mostrarse y, después, muéstralo con el método [Show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet6)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet6":::
 
 8.  Define los controladores de eventos para el objeto **InterstitialAd**.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet7)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet7":::
 
 9. Compila y prueba la aplicación para confirmar que muestra los anuncios de prueba.
 

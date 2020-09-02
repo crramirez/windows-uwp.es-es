@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: 'Windows 10, UWP, ADS, Advertising, AdControl, solución de problemas, XAML, c #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 719e05d67d68627fcd631edfd6c688b17f8507bd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: db1f1b7c3a60aa651cce5ada4200ddf3e249c72f
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164389"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363028"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guía de solución de problemas de XAML y C#
 
@@ -174,7 +174,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 2.  Asegúrate de crear la instancia de **AdControl**. Si no se crean instancias de **AdControl**, no estará disponible.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs" id="Snippet1":::
 
 3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el identificador de la aplicación y el identificador de unidad de ad que obtuvo en el centro de Partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
@@ -239,7 +239,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     Este código de C# recupera el mensaje de error y lo muestra en **TextBlock**.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet2)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs" id="Snippet2":::
 
     El error más común que provoca una caja negra es "No ad available". Este error significa que no hay ningún anuncio disponible para devolver desde la solicitud.
 
@@ -256,7 +256,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     En el ejemplo siguiente se muestra cómo llamar al método **Refresh**.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet3)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs" id="Snippet3":::
 
 3.  **AdControl** se comporta con normalidad. A veces el mismo anuncio aparecerá más de una vez en una fila, lo que da la apariencia de que los anuncios no se actualizan.
 

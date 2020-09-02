@@ -6,12 +6,12 @@ keywords: Windows 10, UWP, evaluación, compras desde la aplicación, Windows. S
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cac33f36e66c1a5f22fc246daab192298e9f876
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c07be51de312ab5a8483cb67537e809d3a55e14a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167559"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363648"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementar una versión de prueba de la aplicación
 
@@ -78,7 +78,7 @@ Si tu aplicación se está inicializando, obtén el objeto [StoreAppLicense](/uw
 En este punto, si el usuario compró la aplicación, se recomienda proporcionar información al usuario sobre los cambios de estado de licencia. Es posible que necesites pedirle al usuario que reinicie la aplicación, si así la has codificado. Esta transición debe ser lo más sencilla y fácil posible.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs" id="ImplementTrial":::
 
 Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 

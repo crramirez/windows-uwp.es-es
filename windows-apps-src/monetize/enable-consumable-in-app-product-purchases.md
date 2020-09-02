@@ -6,12 +6,12 @@ keywords: UWP, consumible, complementos, compras desde la aplicación, IAPs, Win
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fd4bc4d21a5f292cd50655c452522e07424f920
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fb4119296b11e805fa72ff027383d13e6fb43818
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172929"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363698"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de productos consumibles desde la aplicación
 
@@ -33,7 +33,7 @@ La solicitud de compra inicial se realiza con [RequestProductPurchaseAsync](/uwp
 En el siguiente ejemplo se muestra una solicitud de compra de un producto consumible desde la aplicación. Verás comentarios en el código que indican cuándo debería realizar la aplicación el suministro local del producto consumible desde la aplicación en dos casos distintos: cuando la solicitud se realiza correctamente y cuando la solicitud no se realiza correctamente debido a una compra no suministrada del mismo producto.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#MakePurchaseRequest)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs" id="MakePurchaseRequest":::
 
 ## <a name="step-2-tracking-local-fulfillment-of-the-consumable"></a>Paso 2: Seguimiento del suministro local del consumible
 
@@ -45,7 +45,7 @@ Cuando se concede al cliente acceso al producto consumible desde la aplicación,
 En el siguiente ejemplo, se demuestra el uso de las propiedades [PurchaseResults](/uwp/api/Windows.ApplicationModel.Store.PurchaseResults) desde la llamada a [RequestProductPurchaseAsync](/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) en el paso anterior, para identificar el producto comprado que se va a suministrar. Se usa una colección para almacenar la información de los productos en una ubicación a la que después se pueda hacer referencia para confirmar que el suministro local se ha realizado correctamente.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GrantFeatureLocally)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs" id="GrantFeatureLocally":::
 
 En el siguiente ejemplo, se muestra cómo usar la matriz del ejemplo anterior para acceder a los pares id. del producto/ id. de transacción que se usan más tarde cuando se informa del suministro a la Tienda.
 
@@ -53,7 +53,7 @@ En el siguiente ejemplo, se muestra cómo usar la matriz del ejemplo anterior pa
 > Con independencia de la metodología que use la aplicación para realizar un seguimiento y confirmar su cumplimiento, la aplicación debe demostrar la diligencia debida para asegurarse de que no se cobra a los clientes por los elementos que no recibieron.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#IsLocallyFulfilled)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs" id="IsLocallyFulfilled":::
 
 ## <a name="step-3-reporting-product-fulfillment-to-the-store"></a>Paso 3: Informar del suministro de productos a la Tienda
 
@@ -63,7 +63,7 @@ Después de completar el suministro local, la aplicación debe hacer una llamada
 > Si se produce un error al notificar productos consumibles en la aplicación en la tienda, el usuario no podrá comprar el producto de nuevo hasta que se notifique la entrega de la compra anterior.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#ReportFulfillment)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs" id="ReportFulfillment":::
 
 ## <a name="step-4-identifying-unfulfilled-purchases"></a>Paso 4: Identificación de compras sin suministrar
 
@@ -72,7 +72,7 @@ La aplicación puede usar el método [GetUnfulfilledConsumablesAsync](/uwp/api/w
 En el siguiente ejemplo, se demuestra cómo se puede usar [GetUnfulfilledConsumablesAsync](/uwp/api/windows.applicationmodel.store.currentapp.getunfulfilledconsumablesasync) para enumerar consumibles sin suministrar, y cómo la aplicación puede iterar por esta lista para completar el suministro local.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumablePurchases](./code/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs#GetUnfulfilledConsumables)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableConsumablePurchases.cs" id="GetUnfulfilledConsumables":::
 
 ## <a name="related-topics"></a>Temas relacionados
 

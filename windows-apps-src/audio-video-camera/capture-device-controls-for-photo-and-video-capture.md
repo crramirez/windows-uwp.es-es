@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 458b610ac3fcc651f68ccf07c4a3cb30813239d9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d7248b4f3fe515a164410305bac074f44cae53e6
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160989"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362868"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Controles manuales de la cámara para la captura de fotos y vídeos
 
@@ -28,7 +28,7 @@ El código de este artículo es una adaptación de la [muestra del SDK de contro
 
 Todas las API de control de dispositivos mencionadas en este artículo son miembros del espacio de nombres [**Windows.Media.Devices**](/uwp/api/Windows.Media.Devices).
 
-[!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetVideoControllersUsing":::
 
 ## <a name="exposure"></a>Exposure
 
@@ -36,7 +36,7 @@ Todas las API de control de dispositivos mencionadas en este artículo son miemb
 
 Este ejemplo usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor actual de la exposición y una casilla para activar o desactivar el ajuste de exposición automática.
 
-[!code-xml[ExposureXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetExposureXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetExposureXAML":::
 
 Comprueba si el dispositivo de captura actual admite **ExposureControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.exposurecontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece el estado de activación de la casilla para indicar si el ajuste de exposición automática está activo en el valor de la propiedad [**Auto**](/uwp/api/windows.media.devices.exposurecontrol.auto).
 
@@ -44,15 +44,15 @@ El valor de exposición debe estar dentro del intervalo admitido por el disposit
 
 Define el valor del control deslizante en el valor actual de **ExposureControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
-[!code-cs[ExposureControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureControl)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetExposureControl":::
 
 En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de exposición mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.exposurecontrol.setvalueasync).
 
-[!code-cs[ExposureSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureSlider)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetExposureSlider":::
 
 En el controlador de eventos **CheckedChanged** de la casilla de exposición automática, activa y desactiva el ajuste de exposición automática llamando a [**SetAutoAsync**](/uwp/api/windows.media.devices.exposurecontrol.setautoasync) y pasando un valor booleano.
 
-[!code-cs[ExposureCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureCheckBox)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetExposureCheckBox":::
 
 > [!IMPORTANT]
 > El modo de exposición automática solo se admite mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de activar la exposición automática.
@@ -63,7 +63,7 @@ El [**ExposureCompensationControl**](/uwp/api/Windows.Media.Devices.ExposureComp
 
 Este ejemplo usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor de compensación de exposición actual.
 
-[!code-xml[EvXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetEvXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetEvXAML":::
 
 Comprueba si el dispositivo de captura actual admite **ExposureCompensationControl** comprobando la propiedad [Supported](supported-codecs.md). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
@@ -71,11 +71,11 @@ El valor de compensación de la exposición debe estar dentro del intervalo que 
 
 Define el valor del control deslizante con el valor actual de **ExposureCompensationControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
-[!code-cs[EvControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEvControl)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetEvControl":::
 
 En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de exposición mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.exposurecompensationcontrol.setvalueasync).
 
-[!code-cs[EvValueChanged](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEvValueChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetEvValueChanged":::
 
 ## <a name="flash"></a>Intermitente
 
@@ -83,23 +83,23 @@ En el controlador de eventos **ValueChanged**, obtén el valor actual del contro
 
 En este ejemplo se usa un conjunto de botones de radio para permitir al usuario alternar entre activado, desactivado y la configuración de flash automática. También se proporciona una casilla para permitir la alternancia de la función de reducción de ojos rojos y la linterna de vídeo.
 
-[!code-xml[FlashXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetFlashXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetFlashXAML":::
 
 Comprueba si el dispositivo de captura actual admite **FlashControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.focuscontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Si se admite **FlashControl**, es posible que la reducción de ojos rojos automática sea o no sea compatible; por lo tanto, comprueba la propiedad [**RedEyeReductionSupported**](/uwp/api/windows.media.devices.flashcontrol.redeyereductionsupported) antes de habilitar la interfaz de usuario. Como **TorchControl** es independiente del control del flash, también debes comprobar la propiedad [**Supported**](/uwp/api/windows.media.devices.torchcontrol.supported) antes de usarlo.
 
 En el controlador de eventos [**Checked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) de cada botón de opción del flash, activa o desactiva los ajustes del flash que correspondan. Ten en cuenta que para definir que el flash se use siempre, debes definir la propiedad [**Enabled**](/uwp/api/windows.media.devices.flashcontrol.enabled) como true y la propiedad [**Auto**](/uwp/api/windows.media.devices.flashcontrol.auto), como false.
 
-[!code-cs[FlashControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFlashControl)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetFlashControl":::
 
-[!code-cs[FlashRadioButtons](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFlashRadioButtons)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetFlashRadioButtons":::
 
 En el controlador de la casilla de reducción de ojos rojos, define la propiedad [**RedEyeReduction**](/uwp/api/windows.media.devices.flashcontrol.redeyereduction) con el valor adecuado.
 
-[!code-cs[RedEye](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetRedEye)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetRedEye":::
 
 Por último, en el controlador de la casilla de la linterna de vídeo, define la propiedad [**Enabled**](/uwp/api/windows.media.devices.torchcontrol.enabled) con el valor adecuado.
 
-[!code-cs[Torch](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetTorch":::
 
 > [!NOTE] 
 >  En algunos dispositivos, la linterna no emite luz, incluso si el objeto [**TorchControl.Enabled**](/uwp/api/windows.media.devices.torchcontrol.enabled) se establece en true, a menos que el dispositivo tenga una secuencia de vista previa en ejecución y esté capturando vídeo activamente. El orden de operaciones recomendado es activar la vista previa de vídeo, activar la linterna estableciendo **Enabled** en true y, a continuación, iniciar la captura de vídeo. En algunos dispositivos la linterna se enciende después de iniciar la vista previa. En otros dispositivos, es posible que la linterna no se encienda hasta que se inicie la captura de vídeo.
@@ -112,17 +112,17 @@ El objeto [**FocusControl**](/uwp/api/Windows.Media.Devices.FocusControl) admite
 
 Si se habilita el autofocus, se indica a la cámara que debe ajustar el foco dinámicamente para intentar mantener enfocado al sujeto de la foto o vídeo. Este ejemplo usa un botón de radio para activar y desactivar el autoenfoque continuo.
 
-[!code-xml[CAFXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetCAFXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetCAFXAML":::
 
 Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.flashcontrol.supported). A continuación, determina si se admite el autoenfoque continuo comprobando la lista [**SupportedFocusModes**](/uwp/api/windows.media.devices.focuscontrol.supportedfocusmodes) para ver si contiene el valor [**FocusMode.Continuous**](/uwp/api/Windows.Media.Devices.FocusMode) y, si es así, muestra el botón de radio de autoenfoque continuo.
 
-[!code-cs[CAF](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCAF)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetCAF":::
 
 En el controlador de eventos [**Checked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) del botón de radio de autoenfoque continuo, usa la propiedad [**VideoDeviceController.FocusControl**](/uwp/api/windows.media.devices.videodevicecontroller.focuscontrol) para obtener una instancia del control. Llama a [**UnlockAsync**](/uwp/api/windows.media.devices.focuscontrol.unlockasync) para desbloquear el control en caso de que la aplicación haya llamado anteriormente a [**LockAsync**](/uwp/api/windows.media.devices.focuscontrol.lockasync) para habilitar uno de los otros modos de enfoque.
 
 Crea un nuevo objeto [**FocusSettings**](/uwp/api/Windows.Media.Devices.FocusSettings) y establece la propiedad [**Mode**](/uwp/api/windows.media.devices.focussettings.mode) en **Continuous**. Establece la propiedad [**AutoFocusRange**](/uwp/api/windows.media.devices.focussettings.autofocusrange) en un valor adecuado para el escenario de la aplicación o seleccionado por el usuario en tu interfaz de usuario. Pasa el objeto **FocusSettings** al método [**Configure**](/uwp/api/windows.media.devices.focuscontrol.configure) y, a continuación, llama a [**FocusAsync**](/uwp/api/windows.media.devices.focuscontrol.focusasync) para iniciar el autoenfoque continuo.
 
-[!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetCafFocusRadioButton":::
 
 > [!IMPORTANT]
 > El modo de autoenfoque solo se admite mientras la secuencia de vista previa está en ejecución. Comprueba que la secuencia de vista previa se está ejecutando antes de activar el autoenfoque automático.
@@ -133,19 +133,19 @@ La técnica de pulsar para enfocar usa el objeto [**FocusControl**](/uwp/api/Win
 
 En este ejemplo se usa un botón de radio para habilitar y deshabilitar el modo de pulsar para enfocar.
 
-[!code-xml[TapFocusXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetTapFocusXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetTapFocusXAML":::
 
 Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.flashcontrol.supported). Para poder usar esta técnica, **RegionsOfInterestControl** debe ser compatible y debe admitir al menos una región. Comprueba las propiedades [**AutoFocusSupported**](/uwp/api/windows.media.devices.regionsofinterestcontrol.autofocussupported) y [**MaxRegions**](/uwp/api/windows.media.devices.regionsofinterestcontrol.maxregions) para determinar si se debe mostrar u ocultar el botón de radio de pulsar para enfocar.
 
-[!code-cs[TapFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocus)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetTapFocus":::
 
 En el controlador de eventos [**Checked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) del botón de radio de pulsar para enfocar, usa la propiedad [**VideoDeviceController.FocusControl**](/uwp/api/windows.media.devices.videodevicecontroller.focuscontrol) para obtener una instancia del control. Llama a [**LockAsync**](/uwp/api/windows.media.devices.focuscontrol.lockasync) para bloquear el control en caso de que la aplicación haya llamado anteriormente a [**UnlockAsync**](/uwp/api/windows.media.devices.focuscontrol.unlockasync) para habilitar el autoenfoque continuo y luego espera a que el usuario pulse la pantalla para cambiar el enfoque.
 
-[!code-cs[TapFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusRadioButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetTapFocusRadioButton":::
 
 Este ejemplo se centra en una región cuando el usuario pulsa la pantalla y, a continuación, quita el enfoque de esa región cuando el usuario pulsa de nuevo, como un botón de alternancia. Usa una variable booleana para realizar el seguimiento del estado actual de alternancia.
 
-[!code-cs[IsFocused](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsFocused)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetIsFocused":::
 
 El siguiente paso es escuchar el evento cuando el usuario pulsa la pantalla, controlando el evento [**Tapped**](/uwp/api/windows.ui.xaml.uielement.tapped) de [**CaptureElement**](/uwp/api/Windows.UI.Xaml.Controls.CaptureElement), que está mostrando actualmente la secuencia de vista previa de captura. Si la cámara no muestra actualmente la vista previa o si el modo de pulsar para enfocar no está habilitado, regresa del controlador sin hacer nada.
 
@@ -153,7 +153,7 @@ Si la variable de seguimiento * \_ isFocused* se cambia a false y la cámara no 
 
 Si el control de alternancia * \_ isFocused* está establecido en true, el usuario TAP debe borrar el foco de la región anterior. Esto se realiza en el método auxiliar **TapUnfocus** que se muestra a continuación.
 
-[!code-cs[TapFocusPreviewControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusPreviewControl)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetTapFocusPreviewControl":::
 
 En el método auxiliar **TapToFocus** , establezca primero el valor de * \_ isFocused* en true para que la siguiente pulsación de pantalla libere el foco de la región punteada.
 
@@ -176,25 +176,25 @@ Por último, llama a [**FocusAsync**](/uwp/api/windows.media.devices.focuscontro
 > 2. [**RegionsOfInterestControl.SetRegionsAsync**](/uwp/api/windows.media.devices.regionsofinterestcontrol.setregionsasync)
 > 3. [**FocusControl.FocusAsync**](/uwp/api/windows.media.devices.focuscontrol.focusasync)
 
-[!code-cs[TapToFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapToFocus)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetTapToFocus":::
 
 En el método auxiliar **TapUnfocus**, obtén el objeto **RegionsOfInterestControl** y llama a [**ClearRegionsAsync**](/uwp/api/windows.media.devices.regionsofinterestcontrol.clearregionsasync) para borrar la región que se haya registrado con el control dentro del método auxiliar **TapToFocus**. A continuación, obtén el objeto **FocusControl** y llama a [**FocusAsync**](/uwp/api/windows.media.devices.focuscontrol.focusasync) para que el dispositivo se vuelva a enfocar sin una región de interés.
 
-[!code-cs[TapUnfocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapUnfocus)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetTapUnfocus":::
 
 El método auxiliar **GetPreviewStreamRectInControl** usa la resolución de la secuencia de vista previa y la orientación del dispositivo para determinar el rectángulo dentro del elemento de vista previa que contiene la secuencia de vista previa, y recorta cualquier espaciado ancho que puede proporcionar el control para mantener la relación de aspecto de la secuencia. Este método usa variables de miembro de clase definidas en el código de ejemplo de captura básica de elementos multimedia que se encuentra en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
-[!code-cs[GetPreviewStreamRectInControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetGetPreviewStreamRectInControl)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetGetPreviewStreamRectInControl":::
 
 El método auxiliar **ConvertUiTapToPreviewRect** toma como argumentos la ubicación del evento de pulsación, el tamaño deseado de la región de enfoque y el rectángulo que contiene la secuencia de vista previa obtenida del método auxiliar **GetPreviewStreamRectInControl**. Este método usa estos valores y la orientación actual del dispositivo para calcular el rectángulo dentro de la secuencia de vista previa que contiene la región deseada. Una vez más, este método usa variables de miembro de clase definidas en el código de ejemplo de captura básica de elementos multimedia que se encuentra en [Capturar fotos y vídeo con MediaCapture](./index.md).
 
-[!code-cs[ConvertUiTapToPreviewRect](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetConvertUiTapToPreviewRect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetConvertUiTapToPreviewRect":::
 
 ### <a name="manual-focus"></a>Enfoque manual
 
 La técnica de enfoque manual usa un control **Slider** para definir la profundidad de enfoque actual del dispositivo de captura. Se usa un botón de radio para activar y desactivar el enfoque manual.
 
-[!code-xml[ManualFocusXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetManualFocusXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetManualFocusXAML":::
 
 Comprueba si el dispositivo de captura actual admite el objeto **FocusControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.focuscontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
@@ -202,29 +202,29 @@ El valor de enfoque debe estar dentro del intervalo que admite el dispositivo y 
 
 Define el valor del control deslizante con el valor actual del objeto **FocusControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
-[!code-cs[Focus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetFocus":::
 
 En el controlador de eventos **Checked** del botón de radio de enfoque manual, obtén el objeto **FocusControl** y llama a [**LockAsync**](/uwp/api/windows.media.devices.focuscontrol.lockasync) en caso de que la aplicación hubiera desbloqueado el enfoque anteriormente con una llamada a [**UnlockAsync**](/uwp/api/windows.media.devices.focuscontrol.unlockasync).
 
-[!code-cs[ManualFocusChecked](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetManualFocusChecked)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetManualFocusChecked":::
 
 En el controlador de eventos **ValueChanged** del control deslizante del enfoque manual, obtén el valor actual del control y define el valor de enfoque mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.focuscontrol.setvalueasync).
 
-[!code-cs[FocusSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusSlider)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetFocusSlider":::
 
 ### <a name="enable-the-focus-light"></a>Habilitar la luz de enfoque
 
 En los dispositivos que lo admiten, puedes habilitar una luz de enfoque auxiliar para ayudar al dispositivo en el proceso de enfoque. En este ejemplo, se usa una casilla para habilitar o deshabilitar la luz de enfoque auxiliar.
 
-[!code-xml[FocusLightXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetFocusLightXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetFocusLightXAML":::
 
 Comprueba si el dispositivo de captura actual admite **FlashControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.flashcontrol.supported). Asimismo, comprueba [**AssistantLightSupported**](/uwp/api/windows.media.devices.flashcontrol.assistantlightsupported) para asegurarte de que también se admite la luz auxiliar. Si se admiten ambos, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
-[!code-cs[FocusLight](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusLight)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetFocusLight":::
 
 En el controlador de eventos **CheckedChanged**, obtén el objeto [**FlashControl**](/uwp/api/Windows.Media.Devices.FlashControl) del dispositivo de captura. Define la propiedad [**AssistantLightEnabled**](/uwp/api/windows.media.devices.flashcontrol.assistantlightenabled) para habilitar o deshabilitar la luz de enfoque.
 
-[!code-cs[FocusLightCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusLightCheckBox)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetFocusLightCheckBox":::
 
 ## <a name="iso-speed"></a>Velocidad ISO
 
@@ -232,7 +232,7 @@ En el controlador de eventos **CheckedChanged**, obtén el objeto [**FlashContro
 
 En este ejemplo se usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el valor de compensación de exposición actual y una casilla para alternar el ajuste de velocidad ISO automática.
 
-[!code-xml[IsoXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetIsoXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetIsoXAML":::
 
 Comprueba si el dispositivo de captura actual admite **IsoSpeedControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.isospeedcontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece el estado de activación de la casilla para indicar si el ajuste de velocidad ISO automática está activo en el valor de la propiedad [**Auto**](/uwp/api/windows.media.devices.isospeedcontrol.auto).
 
@@ -240,15 +240,15 @@ El valor de velocidad ISO debe estar dentro del intervalo admitido por el dispos
 
 Define el valor del control deslizante con el valor actual del **IsoSpeedControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
-[!code-cs[IsoControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoControl)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetIsoControl":::
 
 En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor de velocidad ISO mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.isospeedcontrol.setvalueasync).
 
-[!code-cs[IsoSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoSlider)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetIsoSlider":::
 
 En el controlador de eventos **CheckedChanged** de la casilla de velocidad ISO automática, activa el ajuste de velocidad ISO automática llamando a [**SetAutoAsync**](/uwp/api/windows.media.devices.isospeedcontrol.setautoasync). Para desactivar el ajuste velocidad ISO automática, llama a [**SetValueAsync**](/uwp/api/windows.media.devices.isospeedcontrol.setvalueasync) y pasa el valor actual del control deslizante.
 
-[!code-cs[IsoCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoCheckBox)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetIsoCheckBox":::
 
 ## <a name="optical-image-stabilization"></a>Estabilización de imagen óptica
 
@@ -260,14 +260,14 @@ El control de estabilización de imagen óptica admite tres modos: activado, des
 
 Para habilitar o deshabilitar OIS, define [**OpticalImageStabilizationControl.Mode**](/uwp/api/Windows.Media.Devices.OpticalImageStabilizationMode) en el modo deseado.
 
-[!code-cs[SetOpticalImageStabilizationMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetOpticalImageStabilizationMode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetSetOpticalImageStabilizationMode":::
 
 ## <a name="powerline-frequency"></a>Frecuencia de la línea de alimentación
 Algunos dispositivos de cámara admiten el procesamiento de antiparpadeo que depende de conocer la frecuencia de la CA de las líneas de alimentación en el entorno actual. Algunos dispositivos admiten la determinación automática de la frecuencia de la línea de alimentación, mientras que otros requieren que la frecuencia se establezca de forma manual. El siguiente ejemplo de código muestra cómo determinar la compatibilidad de la frecuencia de la línea de alimentación en el dispositivo y, si es necesario, cómo establecer la frecuencia de forma manual. 
 
 En primer lugar, llama al método **VideoDeviceController**[**TryGetPowerlineFrequency**](/uwp/api/windows.media.devices.videodevicecontroller.trygetpowerlinefrequency), pasando un parámetro de salida de tipo [**PowerlineFrequency**](/uwp/api/Windows.Media.Capture.PowerlineFrequency); si se produce un error en esta llamada, el control de frecuencia de la línea de alimentación no se admite en el dispositivo actual. Si se admite la característica, puedes determinar si el modo automático está disponible en el dispositivo intentando establecer el modo automático. Para ello, llame a [**TrySetPowerlineFrequency**](/uwp/api/windows.media.devices.videodevicecontroller.trysetpowerlinefrequency) y pase el valor **auto**. Si la llamada se realiza correctamente, significa que se admite la frecuencia de la Powerline automática. Si en el dispositivo se admite el controlador de frecuencia de la línea de alimentación, pero no se admite la detección automática de la frecuencia, puedes establecer la frecuencia manualmente mediante el uso de **TrySetPowerlineFrequency**. En este ejemplo, **MyCustomFrequencyLookup** es un método personalizado que se implementa para determinar la frecuencia correcta para la ubicación actual del dispositivo. 
 
-[!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetPowerlineFrequency":::
 
 ## <a name="white-balance"></a>Balance de blancos
 
@@ -275,7 +275,7 @@ En primer lugar, llama al método **VideoDeviceController**[**TryGetPowerlineFre
 
 En este ejemplo se usa un control [**ComboBox**](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para seleccionar entre valores predeterminados de temperatura de color integrados y un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para el ajuste manual del balance de blancos.
 
-[!code-xml[WhiteBalanceXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetWhiteBalanceXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetWhiteBalanceXAML":::
 
 Comprueba si el dispositivo de captura actual admite **WhiteBalanceControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.whitebalancecontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función. Establece los elementos del cuadro combinado en los valores de la enumeración [**ColorTemperaturePreset**](/uwp/api/Windows.Media.Devices.ColorTemperaturePreset). También, establece el elemento seleccionado en el valor actual de la propiedad [**Preset**](/uwp/api/windows.media.devices.whitebalancecontrol.preset).
 
@@ -283,15 +283,15 @@ Para el control manual, el valor del balance de blancos debe estar dentro del in
 
 Define el valor del control deslizante con el valor actual de **WhiteBalanceControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
-[!code-cs[WhiteBalance](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalance)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetWhiteBalance":::
 
 En el controlador de eventos [**SelectionChanged**](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) del cuadro combinado de valores predeterminados de temperatura de color, obtén el valor predeterminado seleccionado actualmente y define el valor del control llamando a [**SetPresetAsync**](/uwp/api/windows.media.devices.whitebalancecontrol.setpresetasync). Si el valor predeterminado seleccionado no es **Manual**, deshabilita el control deslizante del balance de blancos manual.
 
-[!code-cs[WhiteBalanceComboBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalanceComboBox)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetWhiteBalanceComboBox":::
 
 En el controlador de eventos **ValueChanged**, obtén el valor actual del control y define el valor del balance de blancos mediante una llamada a [**SetValueAsync**](/uwp/api/windows.media.devices.exposurecontrol.setvalueasync).
 
-[!code-cs[WhiteBalanceSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalanceSlider)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetWhiteBalanceSlider":::
 
 > [!IMPORTANT]
 > El ajuste del balance de blancos solo se admite mientras se ejecuta la secuencia de vista previa. Comprueba que la secuencia de vista previa se está ejecutando antes de establecer el valor del balance de blancos o el valor predeterminado.
@@ -305,7 +305,7 @@ El [**ZoomControl**](/uwp/api/Windows.Media.Devices.ZoomControl) te permite esta
 
 Este ejemplo usa un control [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider) para ajustar el nivel de zoom actual. En la siguiente sección, se muestra cómo ajustar el zoom con un gesto de reducir en la pantalla.
 
-[!code-xml[ZoomXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetZoomXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml" id="SnippetZoomXAML":::
 
 Comprueba si el dispositivo de captura actual admite **ZoomControl** comprobando la propiedad [**Supported**](/uwp/api/windows.media.devices.zoomcontrol.supported). Si el control se admite, puedes mostrar y habilitar la interfaz de usuario para esta función.
 
@@ -313,13 +313,13 @@ El valor del nivel de zoom debe estar dentro del intervalo que admite el disposi
 
 Define el valor del control deslizante con el valor actual del objeto **ZoomControl** después de anular el registro del controlador de eventos [**ValueChanged**](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged) para que el evento no se desencadene cuando se define el valor.
 
-[!code-cs[ZoomControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetZoomControl)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetZoomControl":::
 
 En el controlador de eventos **ValueChanged**, crea una nueva instancia de la clase [**ZoomSettings**](/uwp/api/Windows.Media.Devices.ZoomSettings) y define la propiedad [**Value**](/uwp/api/windows.media.devices.zoomsettings.value) con el valor actual del control deslizante de zoom. Si la propiedad [**SupportedModes**](/uwp/api/windows.media.devices.zoomcontrol.supportedmodes) del **ZoomControl** contiene [**ZoomTransitionMode.Smooth**](/uwp/api/Windows.Media.Devices.ZoomTransitionMode), significa que el dispositivo admite transiciones suaves entre niveles de zoom. Dado que este modo proporciona una mejor experiencia del usuario, normalmente querrás usar este valor para la propiedad [**Mode**](/uwp/api/windows.media.devices.zoomsettings.mode) del objeto **ZoomSettings**.
 
 Por último, cambia la configuración de zoom actual al pasar el objeto **ZoomSettings** al método [**Configure**](/uwp/api/windows.media.devices.zoomcontrol.configure) del objeto **ZoomControl**.
 
-[!code-cs[ZoomSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetZoomSlider)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs" id="SnippetZoomSlider":::
 
 ### <a name="smooth-zoom-using-pinch-gesture"></a>Zoom suave con el gesto de reducir
 
@@ -327,11 +327,11 @@ Como se analizó en la sección anterior, en los dispositivos que lo admiten, el
 
 Primero, determine si el control de zoom digital es compatible en el dispositivo actual comprobando la propiedad [**ZoomControl.Supported**](/uwp/api/windows.media.devices.zoomcontrol.supported). A continuación, determina si el modo de zoom suave está disponible mediante la comprobación de [**ZoomControl.SupportedModes**](/uwp/api/windows.media.devices.zoomcontrol.supportedmodes) para ver si contiene el valor [**ZoomTransitionMode.Smooth**](/uwp/api/Windows.Media.Devices.ZoomTransitionMode).
 
-[!code-cs[IsSmoothZoomSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsSmoothZoomSupported)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetIsSmoothZoomSupported":::
 
 En un dispositivo habilitado para funcionalidad multitáctil, un escenario típico consiste en ajustar el factor de zoom con un gesto de reducir con dos dedos. Establezca la propiedad [**ManipulationMode**](/uwp/api/windows.ui.xaml.uielement.manipulationmode) del control [**CaptureElement**](/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) en [**ManipulationModes.Scale**](/uwp/api/Windows.UI.Xaml.Input.ManipulationModes) para permitir que el gesto de reducir. A continuación, registra el evento [**ManipulationDelta**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) que se desencadena cuando el gesto de reducir cambia el tamaño.
 
-[!code-cs[RegisterPinchGestureHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterPinchGestureHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetRegisterPinchGestureHandler":::
 
 En el controlador del evento **ManipulationDelta**, actualiza el factor de zoom en función de los cambios en el gesto de reducir del usuario. El valor [**ManipulationDelta.Scale**](/uwp/api/Windows.UI.Input.ManipulationDelta) representa el cambio en escala del gesto de reducir, de modo que un pequeño incremento en el tamaño del gesto de reducir es un número ligeramente mayor que 1.0 y una pequeña reducción es un número ligeramente menor que 1.0. En este ejemplo, el valor actual del control de zoom se multiplica por la diferencia de la escala.
 
@@ -339,7 +339,7 @@ Antes de establecer el factor de zoom, debes asegurarte de que el valor no es in
 
 Para establecer el nivel de zoom en el dispositivo de captura, crea un nuevo objeto [**ZoomSettings**](/uwp/api/Windows.Media.Devices.ZoomSettings). Establece la propiedad [**Mode**](/uwp/api/windows.media.devices.zoomsettings.mode) en [**ZoomTransitionMode.Smooth**](/uwp/api/Windows.Media.Devices.ZoomTransitionMode) y, a continuación, establece la propiedad [**Value**](/uwp/api/windows.media.devices.zoomsettings.value) en el factor de zoom deseado. Por último, llama a [**ZoomControl.Configure**](/uwp/api/windows.media.devices.zoomcontrol.configure) para definir el nuevo valor de zoom en el dispositivo. El dispositivo pasará sin problemas al nuevo valor de zoom.
 
-[!code-cs[ManipulationDelta](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetManipulationDelta)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetManipulationDelta":::
 
 ## <a name="related-topics"></a>Temas relacionados
 

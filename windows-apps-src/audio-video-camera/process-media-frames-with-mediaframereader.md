@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3271d6ff787672917b8ab4acf3b660421491d371
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b53103f0d0c67bd18b71ac94812f4cef53ca8ac0
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173689"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363818"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -41,12 +41,12 @@ Al igual que con cualquier aplicación que use **MediaCapture**, debes declarar 
 
 En el código de ejemplo de este artículo se usan las API de los siguientes espacios de nombres, además de las que se incluyen con la plantilla de proyecto predeterminada.
 
-[!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetFramesUsing":::
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Seleccionar orígenes de fotogramas y grupos de orígenes de fotogramas
 Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El objeto [**MediaFrameSourceGroup**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
 
-[!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetFindAllAsync":::
 
 También puede crear una [**DeviceWatcher**](/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) mediante [**DeviceInformation. CreateWatcher**](/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) y el valor devuelto por [**MediaFrameSourceGroup. GetDeviceSelector**](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para recibir notificaciones cuando cambien los grupos de orígenes de fotogramas disponibles en el dispositivo, como cuando una cámara externa esté conectada. Para obtener más información, consulta [**Enumerar dispositivos**](../devices-sensors/enumerate-devices.md).
 
@@ -54,7 +54,7 @@ Una clase [**MediaFrameSourceGroup**](/uwp/api/Windows.Media.Capture.Frames.Medi
 
 El siguiente ejemplo muestra la forma más sencilla de seleccionar un grupo de orígenes de fotogramas. Este código, simplemente, recorre todos los grupos disponibles y, a continuación, recorre cada elemento de la colección [**SourceInfos**](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.sourceinfos). Cada objeto **MediaFrameSourceInfo** se comprueba para ver si admite las características que nos interesan. En este caso, se comprueba el valor [**VideoPreview**](/uwp/api/Windows.Media.Capture.MediaStreamType) de la propiedad [**MediaStreamType**](/uwp/api/windows.media.capture.frames.mediaframesourceinfo.mediastreamtype), lo que significa que el dispositivo proporciona una secuencia de vista previa de vídeo, y se comprueba el valor [**Color**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceKind) de la propiedad [**SourceKind**](/uwp/api/windows.media.capture.frames.mediaframesourceinfo.sourcekind), que indica que el origen proporciona fotogramas de color.
 
-[!code-cs[SimpleSelect](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSimpleSelect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetSimpleSelect":::
 
 Este método para identificar el grupo de orígenes de fotogramas y los orígenes de fotogramas deseados funciona con casos sencillos, pero si quieres seleccionar orígenes de fotogramas por criterios más complejos, puede volverse más complicado. Otro método es usar la sintaxis de Linq y objetos anónimos para realizar la selección. En el siguiente ejemplo se usa el método de extensión **Select** para transformar los objetos **MediaFrameSourceGroup** de la lista *frameSourceGroups* en un objeto anónimo con dos campos: *sourceGroup*, que representa el grupo en sí mismo, y *colorSourceInfo*, que representa el origen del fotograma de color en el grupo. El campo *colorSourceInfo* se establece en el resultado del elemento **FirstOrDefault**, que selecciona el primer objeto para el que se resuelve el predicado proporcionado en true. En este caso, el predicado es true si el tipo de secuencia es **VideoPreview**, el tipo de origen es **Color** y la cámara está en el panel frontal del dispositivo.
 
@@ -62,11 +62,11 @@ De la lista de objetos anónimos que devuelve la consulta que se describió ante
 
 Ahora puedes usar los campos del objeto seleccionado para obtener referencias de los objetos **MediaFrameSourceGroup** y **MediaFrameSourceInfo** que representan la cámara a color. Se usarán más tarde para inicializar el objeto **MediaCapture** y crear una clase **MediaFrameReader** para el origen seleccionado. Por último, debes comprobar si el grupo de orígenes es nulo, lo que significa que el dispositivo actual no tiene los orígenes de captura solicitados.
 
-[!code-cs[SelectColor](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSelectColor)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetSelectColor":::
 
 En el siguiente ejemplo se usa una técnica similar, como la que se describió anteriormente, para seleccionar un grupo de orígenes que contiene cámaras a color, de profundidad y de infrarrojos.
 
-[!code-cs[ColorInfraredDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetColorInfraredDepth)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetColorInfraredDepth":::
 
 > [!NOTE]
 > A partir de Windows 10, versión 1803, puede usar la clase [**MediaCaptureVideoProfile**](/uwp/api/Windows.Media.Capture.MediaCaptureVideoProfile) para seleccionar un origen de fotogramas multimedia con un conjunto de funcionalidades deseadas. Para obtener más información, consulte la sección **uso de perfiles de vídeo para seleccionar un origen de fotogramas** más adelante en este artículo.
@@ -77,7 +77,7 @@ El siguiente paso es inicializar el objeto **MediaCapture** para usar el grupo d
 
 El objeto **MediaCapture** se usa normalmente desde varias ubicaciones dentro de la aplicación, por lo que debes declarar una variable de miembro de clase para contenerlo.
 
-[!code-cs[DeclareMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaCapture)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetDeclareMediaCapture":::
 
 Para crear una instancia del objeto **MediaCapture**, llama al constructor. A continuación, cree un objeto [**MediaCaptureInitializationSettings**](/uwp/api/windows.media.capture.mediacaptureinitializationsettings) que se usará para inicializar el objeto **MediaCapture** . En este ejemplo, se usan los siguientes valores:
 
@@ -88,19 +88,19 @@ Para crear una instancia del objeto **MediaCapture**, llama al constructor. A co
 
 Llama al método [**InitializeAsync**](/uwp/api/windows.media.capture.mediacapture.initializeasync) para inicializar la clase **MediaCapture** con la configuración que quieras. Asegúrate de llamar a este método dentro de un bloque *try* por si se produce un error de inicialización.
 
-[!code-cs[InitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMediaCapture)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetInitMediaCapture":::
 
 ## <a name="set-the-preferred-format-for-the-frame-source"></a>Establecer el formato preferido en el origen de fotogramas
 Para establecer el formato preferido en un origen de fotogramas, debes obtener un objeto [**MediaFrameSource**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource) que represente el origen. Para obtener el objeto, accede al diccionario de la propiedad [**Frames**](/previous-versions/windows/apps/phone/jj207578(v=win.10)) del objeto **MediaCapture** y especifica el identificador del origen de fotogramas que quieres usar. Por este motivo guardamos el objeto [**MediaFrameSourceInfo**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) mientras seleccionábamos un grupo de orígenes de fotogramas.
 
 La propiedad [**MediaFrameSource.SupportedFormats**](/uwp/api/windows.media.capture.frames.mediaframesource.supportedformats) contiene una lista de objetos [**MediaFrameFormat**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameFormat) que describen los formatos admitidos para el origen de fotogramas. Usa el método de extensión de Linq **Where** para seleccionar un formato basado en las propiedades que quieras. En este ejemplo, se selecciona un formato que tiene un ancho de 1080 píxeles y puede suministrar fotogramas en un formato RGB de 32 bits. El método de extensión **FirstOrDefault** selecciona la primera entrada de la lista. Si el formato seleccionado es nulo, el origen de fotogramas no admitirá el formato solicitado. Si se admite el formato, puedes solicitar que el origen use este formato llamando al objeto [**SetFormatAsync**](../develop/index.md).
 
-[!code-cs[GetPreferredFormat](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetPreferredFormat)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetGetPreferredFormat":::
 
 ## <a name="create-a-frame-reader-for-the-frame-source"></a>Crear un lector de fotogramas para el origen de fotogramas
 Para recibir fotogramas de un origen de fotogramas multimedia, usa una clase [**MediaFrameReader**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader).
 
-[!code-cs[DeclareMediaFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaFrameReader)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetDeclareMediaFrameReader":::
 
 Para crear una instancia del lector de fotogramas, llama al método [**CreateFrameReaderAsync**](/uwp/api/windows.media.capture.mediacapture.createframereaderasync) en el objeto **MediaCapture** inicializado. El primer argumento de este método es el origen de fotogramas desde el que quieres recibir fotogramas. Puedes crear un lector de fotogramas distinto para cada origen de fotogramas que quieras usar. El segundo argumento indica al sistema el formato de salida en el que quieres que lleguen los fotogramas. Esto puede ahorrarte tener que realizar tus propias conversiones a fotogramas a medida que llegan. Ten en cuenta que, si especificas un formato que no es compatible con el origen de fotogramas, se generará una excepción, así que asegúrate de que el valor esté en la colección [**SupportedFormats**](/uwp/api/windows.media.capture.frames.mediaframesource.supportedformats).  
 
@@ -108,22 +108,22 @@ Después de crear el lector de fotogramas, registra un controlador para el event
 
 Indica al sistema que comience a leer fotogramas desde el origen con una llamada al método [**StartAsync**](/uwp/api/windows.media.capture.frames.mediaframereader.startasync).
 
-[!code-cs[CreateFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateFrameReader)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetCreateFrameReader":::
 
 ## <a name="handle-the-frame-arrived-event"></a>Controlar el evento de llegada de fotogramas
 El evento [**MediaFrameReader.FrameArrived**](/uwp/api/windows.media.capture.frames.mediaframereader.framearrived) se genera siempre que un nuevo fotograma esté disponible. Puedes elegir procesar cada fotograma que llegue o usar solo fotogramas cuando los necesites. Ya que el lector de fotogramas genera el evento en su propio subproceso, es posible que tengas que implementar una lógica de sincronización para asegurarte de que no intentas acceder a los mismos datos desde varios subprocesos. En esta sección se muestra cómo sincronizar dibujando fotogramas de color en un control de imagen de una página XAML. Este escenario trata la restricción de sincronización adicional que necesita que todas las actualizaciones de los controles XAML se realicen en el subproceso de la interfaz de usuario.
 
 El primer paso para mostrar fotogramas en XAML es crear un control de imagen. 
 
-[!code-xml[ImageElementXAML](./code/Frames_Win10/Frames_Win10/MainPage.xaml#SnippetImageElementXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml" id="SnippetImageElementXAML":::
 
 En la página de código subyacente, declara una variable de miembro de clase de tipo **SoftwareBitmap** que se usará como un búfer de reserva al que se copiarán todas las imágenes entrantes. Ten en cuenta que no se copian los datos de imagen, solo las referencias de objeto. Además, declara un valor booleano para comprobar si la operación de interfaz de usuario todavía se está ejecutando.
 
-[!code-cs[DeclareBackBuffer](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareBackBuffer)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetDeclareBackBuffer":::
 
 Ya que los fotogramas llegarán como objetos **SoftwareBitmap**, debes crear un objeto [**SoftwareBitmapSource**](/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) que te permita usar un objeto **SoftwareBitmap** como el origen de un **Control** XAML. Debes establecer el origen de imagen en algún lugar del código antes de iniciar el lector de fotogramas.
 
-[!code-cs[ImageElementSource](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetImageElementSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetImageElementSource":::
 
 Ahora es el momento de implementar el controlador de eventos **FrameArrived**. Cuando se llama al controlador, el parámetro *sender* contiene una referencia al objeto **MediaFrameReader** que generó el evento. Llama al método [**TryAcquireLatestFrame**](/uwp/api/windows.media.capture.frames.mediaframereader.tryacquirelatestframe) en este objeto para intentar obtener el fotograma más reciente. Como su nombre indica, es posible que el método **TryAcquireLatestFrame** no consiga devolver correctamente un fotograma. Por lo tanto, cuando accedes a las propiedades VideoMediaFrame y SoftwareBitmap, asegúrate de probar que no son nulas. En este ejemplo, el operador condicional nulo ? se usa para acceder a la propiedad **SoftwareBitmap** y, a continuación, se comprueba que el objeto recuperado no sea nulo.
 
@@ -141,12 +141,12 @@ Por último, la variable *_taskRunning* se vuelve a establecer en false para que
 > Si accedes a los objetos [**SoftwareBitmap**](/uwp/api/windows.media.capture.frames.videomediaframe.softwarebitmap) o [**Direct3DSurface**](/uwp/api/windows.media.capture.frames.videomediaframe.direct3dsurface) proporcionados por la propiedad [**VideoMediaFrame**](/uwp/api/windows.media.capture.frames.mediaframereference.videomediaframe) de una clase [**MediaFrameReference**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference), el sistema crea una referencia fuerte a estos objetos, lo que significa que no se eliminarán cuando se llamae a [**Dispose**](/uwp/api/windows.media.capture.frames.mediaframereference.close) en la clase **MediaFrameReference** contenedora. Se debe llamar explícitamente al método **Dispose** de **SoftwareBitmap** o **Direct3DSurface** directamente para los objetos que deben eliminarse inmediatamente. De lo contrario, el recolector de elementos no usados al final liberará la memoria de estos objetos, pero no se puede saber cuando ocurrirá, y si el número de superficies o mapas de bits asignados supera la cantidad máxima permitida por el sistema, el nuevo flujo de fotogramas se detendrá. Puede copiar fotogramas recuperados mediante el método [**SoftwareBitmap. Copy**](/uwp/api/windows.graphics.imaging.softwarebitmap.copy) por ejemplo y, a continuación, liberar los fotogramas originales para superar esta limitación. Además, si crea **MediaFrameReader** con la sobrecarga [CreateFrameReaderAsync (Windows. Media. Capture. frames. MediaFrameSource inputSource, System. String outputSubtype, Windows. Graphics. Imaging. BitmapSize outlocate)](/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_System_String_Windows_Graphics_Imaging_BitmapSize_) o [CreateFrameReaderAsync (Windows. Media. Capture. frames. MediaFrameSource InputSource, System. String outputSubtype)](/uwp/api/windows.media.capture.mediacapture.createframereaderasync#Windows_Media_Capture_MediaCapture_CreateFrameReaderAsync_Windows_Media_Capture_Frames_MediaFrameSource_System_String_), los fotogramas devueltos son copias de los datos de fotogramas originales, por lo que no hacen que la adquisición de fotogramas se detenga 
 
 
-[!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFrameArrived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetFrameArrived":::
 
 ## <a name="cleanup-resources"></a>Limpieza de recursos
 Cuando hayas terminado de leer fotogramas, asegúrate de detener el lector de fotogramas multimedia con una llamada al método [**StopAsync**](/uwp/api/windows.media.capture.frames.mediaframereader.stopasync). Después, elimina el controlador **FrameArrived** y desecha el objeto **MediaCapture**.
 
-[!code-cs[Cleanup](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCleanup)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetCleanup":::
 
 Para obtener más información sobre cómo limpiar los objetos de captura multimedia cuando se suspende la aplicación, consulta [**Acceso fácil a la vista previa de cámara**](simple-camera-preview-access.md).
 
@@ -162,34 +162,34 @@ La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 > [!NOTE] 
 > Para manipular píxeles en imágenes **SoftwareBitmap**, debes acceder a un búfer de memoria nativo. Para ello, debes usar la interfaz COM IMemoryBufferByteAccess incluida en la siguiente lista de códigos y actualizar las propiedades del proyecto para permitir la compilación del código no seguro. Para obtener más información, consulta [Creación de imágenes](imaging.md).
 
-[!code-cs[IMemoryBufferByteAccess](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetIMemoryBufferByteAccess)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/FrameRenderer.cs" id="SnippetIMemoryBufferByteAccess":::
 
-[!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetFrameRenderer)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/FrameRenderer.cs" id="SnippetFrameRenderer":::
 
 ## <a name="use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources"></a>Uso de MultiSourceMediaFrameReader para obtener fotogramas de tiempo corellated de varios orígenes
 A partir de Windows 10, versión 1607, puede usar [**MultiSourceMediaFrameReader**](/uwp/api/windows.media.capture.frames.multisourcemediaframereader) para recibir fotogramas corellated de tiempo de varios orígenes. Esta API facilita el procesamiento que requiere fotogramas de varios orígenes que se han tomado en proximidad temporal de cierre, como el uso de la clase [**DepthCorrelatedCoordinateMapper**](/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper) . Una limitación del uso de este nuevo método es que los eventos de llegada de fotogramas solo se producen a la velocidad del origen de captura más lento. Se quitarán los fotogramas adicionales de los orígenes más rápidos. Además, dado que el sistema espera que los fotogramas lleguen desde distintos orígenes con diferentes tasas, no reconoce automáticamente si un origen ha dejado de generar fotogramas por completo. En el código de ejemplo de esta sección se muestra cómo usar un evento para crear su propia lógica de tiempo de espera que se invoca si los marcos correlacionados no llegan dentro de un límite de tiempo definido por la aplicación.
 
 Los pasos para usar [**MultiSourceMediaFrameReader**](/uwp/api/windows.media.capture.frames.multisourcemediaframereader) son similares a los pasos para usar [**MediaFrameReader**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) descritos anteriormente en este artículo. En este ejemplo se utiliza un origen de color y un origen de profundidad. Declare algunas variables de cadena para almacenar los identificadores de origen de fotogramas multimedia que se usarán para seleccionar fotogramas de cada origen. A continuación, declare un [**ManualResetEventSlim**](/dotnet/api/system.threading.manualreseteventslim), un [**CancellationTokenSource**](/dotnet/api/system.threading.cancellationtokensource)y un [**EventHandler**](/dotnet/api/system.eventhandler) que se usarán para implementar la lógica de tiempo de espera para el ejemplo. 
 
-[!code-cs[MultiFrameDeclarations](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameDeclarations)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetMultiFrameDeclarations":::
 
 Con las técnicas descritas anteriormente en este artículo, consulte un [**MediaFrameSourceGroup**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) que incluya los orígenes de color y profundidad necesarios para este escenario de ejemplo. Después de seleccionar el grupo de origen de fotograma deseado, obtenga el [**MediaFrameSourceInfo**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) para cada origen de fotogramas.
 
-[!code-cs[SelectColorAndDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSelectColorAndDepth)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetSelectColorAndDepth":::
 
 Cree e inicialice un objeto **MediaCapture** , pasando el grupo de origen del marco seleccionado en la configuración de inicialización.
 
-[!code-cs[MultiFrameInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameInitMediaCapture)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetMultiFrameInitMediaCapture":::
 
 Después de inicializar el objeto **MediaCapture** , recupere los objetos [**MediaFrameSource**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSource) para las cámaras de color y de profundidad. Almacene el identificador de cada origen para que pueda seleccionar el marco de llegada del origen correspondiente.
 
-[!code-cs[GetColorAndDepthSource](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetColorAndDepthSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetGetColorAndDepthSource":::
 
 Cree e inicialice el **MultiSourceMediaFrameReader** llamando a [**CreateMultiSourceFrameReaderAsync**](/uwp/api/windows.media.capture.mediacapture.createmultisourceframereaderasync) y pasando una matriz de orígenes de fotogramas que usará el lector. Registre un controlador de eventos para el evento [**FrameArrived**](/uwp/api/windows.media.capture.frames.multisourcemediaframereader.FrameArrived) . En este ejemplo se crea una instancia de la clase auxiliar **FrameRenderer** , descrita anteriormente en este artículo, para representar fotogramas en un control de **imagen** . Inicie el lector de fotogramas llamando a [**StartAsync**](/uwp/api/windows.media.capture.frames.multisourcemediaframereader.StartAsync).
 
 Registre un controlador de eventos para el evento **CorellationFailed** declarado anteriormente en el ejemplo. Indicaremos este evento si uno de los orígenes de fotogramas multimedia que se usan deja de generar fotogramas. Por último, llame a [**Task. Run**](/dotnet/api/system.threading.tasks.task.run#System_Threading_Tasks_Task_Run_System_Action_) para llamar al método de la aplicación auxiliar timeout, **NotifyAboutCorrelationFailure**, en un subproceso independiente. La implementación de este método se muestra más adelante en este artículo.
 
-[!code-cs[InitMultiFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMultiFrameReader)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetInitMultiFrameReader":::
 
 El evento **FrameArrived** se desencadena cuando un nuevo marco está disponible en todos los orígenes de fotogramas multimedia administrados por **MultiSourceMediaFrameReader**. Esto significa que el evento se generará a la cadencia del origen multimedia más lento. Si un origen produce varios fotogramas en el momento en que un origen más lento produce un fotograma, se quitarán los fotogramas adicionales del origen rápido. 
 
@@ -199,18 +199,18 @@ Llame al método [**set**](/dotnet/api/system.threading.manualreseteventslim.set
 
 Por último, realice cualquier procesamiento en los fotogramas multimedia correlacionados con el tiempo. En este ejemplo se muestra simplemente el marco del origen de profundidad.
 
-[!code-cs[MultiFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameArrived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetMultiFrameArrived":::
 
 El método auxiliar **NotifyCorrelationFailure** se ejecutó en un subproceso independiente después del inicio del lector de fotogramas. En este método, compruebe si se ha señalado el evento de fotograma recibido. Recuerde que, en el controlador **FrameArrived** , se establece este evento cada vez que llega un conjunto de fotogramas correlacionados. Si el evento no se ha señalado para algún período de tiempo definido por la aplicación, 5 segundos es un valor razonable, y la tarea no se ha cancelado mediante **CancellationToken**, es probable que uno de los orígenes de fotogramas multimedia haya dejado de leer fotogramas. En este caso, normalmente desea apagar el lector de fotogramas, por lo que debe generar el evento **CorrelationFailed** definido por la aplicación. En el controlador de este evento puede detener el lector de fotogramas y limpiar sus recursos asociados, tal como se muestra anteriormente en este artículo.
 
-[!code-cs[NotifyCorrelationFailure](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetNotifyCorrelationFailure)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetNotifyCorrelationFailure":::
 
-[!code-cs[CorrelationFailure](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCorrelationFailure)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetCorrelationFailure":::
 
 ## <a name="use-buffered-frame-acquisition-mode-to-preserve-the-sequence-of-acquired-frames"></a>Usar el modo de adquisición de tramas almacenadas en búfer para conservar la secuencia de fotogramas adquiridos
 A partir de Windows 10, versión 1709, puede establecer la propiedad **[AcquisitionMode](/uwp/api/windows.media.capture.frames.mediaframereader.AcquisitionMode)** de **MediaFrameReader** o **MultiSourceMediaFrameReader** en el **almacenamiento en búfer** para conservar la secuencia de fotogramas pasados a la aplicación desde el origen del marco.
 
-[!code-cs[SetBufferedFrameAcquisitionMode](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSetBufferedFrameAcquisitionMode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetSetBufferedFrameAcquisitionMode":::
 
 En el modo de adquisición predeterminado, en **tiempo real**, si se adquieren varios fotogramas del origen mientras la aplicación sigue controlando el evento **FrameArrived** de un fotograma anterior, el sistema enviará la aplicación al fotograma adquirido más recientemente y quitará los fotogramas adicionales que estén esperando en el búfer. Esto proporciona a la aplicación el fotograma más reciente disponible en todo momento. Este suele ser el modo más útil para aplicaciones informáticas en tiempo real. 
 
@@ -223,21 +223,21 @@ En los ejemplos de código siguientes se muestra una implementación simple que 
 
 En primer lugar, agregue dos controles **MediaPlayerElement** a la página XAML.
 
-[!code-xml[MediaPlayerElement1XAML](./code/Frames_Win10/Frames_Win10/MainPage.xaml#SnippetMediaPlayerElement1XAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml" id="SnippetMediaPlayerElement1XAML":::
 
-[!code-xml[MediaPlayerElement2XAML](./code/Frames_Win10/Frames_Win10/MainPage.xaml#SnippetMediaPlayerElement2XAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml" id="SnippetMediaPlayerElement2XAML":::
 
 Después, con las técnicas que se muestran en las secciones anteriores de este artículo, seleccione un **MediaFrameSourceGroup** que contenga objetos **MediaFrameSourceInfo** para cámaras de color en el panel frontal y el panel posterior. Tenga en cuenta que la **MediaPlayer** no convierte automáticamente fotogramas de formatos que no sean de color, como datos de profundidad o de infrarrojos, en datos de color. El uso de otros tipos de sensor puede producir resultados inesperados. 
 
-[!code-cs[MediaSourceSelectGroup](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceSelectGroup)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetMediaSourceSelectGroup":::
 
 Inicialice el objeto **MediaCapture** para usar el **MediaFrameSourceGroup**seleccionado.
 
-[!code-cs[MediaSourceInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceInitMediaCapture)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetMediaSourceInitMediaCapture":::
 
 Por último, llame a **[MediaSource. CreateFromMediaFrameSource](/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** para crear un objeto **MediaSource** para cada origen de marco mediante la propiedad **[ID](/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** del objeto **MediaFrameSourceInfo** asociado para seleccionar uno de los orígenes de fotogramas de la colección **[FrameSources](/uwp/api/windows.media.capture.mediacapture.FrameSources)** del objeto **MediaCapture** . Inicialice un nuevo objeto **MediaPlayer** y asígnelo a **MediaPlayerElement** llamando a **[SetMediaPlayer](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)**. A continuación, establezca la propiedad **[source](/uwp/api/windows.media.playback.mediaplayer.Source)** en el objeto **MediaSource** recién creado.
 
-[!code-cs[MediaSourceMediaPlayer](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceMediaPlayer)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetMediaSourceMediaPlayer":::
 
 ## <a name="use-video-profiles-to-select-a-frame-source"></a>Usar perfiles de vídeo para seleccionar un origen de fotogramas
 
@@ -245,7 +245,7 @@ Un perfil de cámara, representado por un objeto [**MediaCaptureVideoProfile**](
 
 En primer lugar, llame a [**MediaFrameSourceGroup. FindAllAsync**](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync) para obtener una lista de todos los grupos de orígenes de fotogramas multimedia disponibles en el dispositivo actual. Recorra cada grupo de origen y llame a [**MediaCapture. FindKnownVideoProfiles**](/uwp/api/windows.media.capture.mediacapture.findknownvideoprofiles) para obtener una lista de todos los perfiles de vídeo del grupo de origen actual que admiten el perfil especificado, en este caso HDR con WCG Photo. Si se encuentra un perfil que cumpla los criterios, cree un nuevo objeto **MediaCaptureInitializationSettings** y establezca el **perfil** de videosource en el perfil SELECT y el **VideoDeviceId** en la propiedad **ID** del grupo de origen del marco multimedia actual.
 
-[!code-cs[GetSettingsWithProfile](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetSettingsWithProfile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetGetSettingsWithProfile":::
 
 Para obtener más información sobre el uso de perfiles de cámara, consulte [perfiles de cámara](camera-profiles.md).
 

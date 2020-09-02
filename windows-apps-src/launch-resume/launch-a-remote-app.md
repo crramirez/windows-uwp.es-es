@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP, dispositivos conectados, sistemas remotos, Roma, proyecto Roma
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: 784403ede6b21b79dcb14d1da6dde22df68c410e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4163106c5439ec8881c1b5042f63fb7abf4fd668
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158789"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362508"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar una aplicación en un dispositivo remoto
 
@@ -45,18 +45,18 @@ En primer lugar, debes buscar el dispositivo al que quieres conectarte. [Discove
 
 El código de estos ejemplos requiere que tenga una `using Windows.System.RemoteSystems` instrucción en los archivos de clase.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetBuildDeviceList)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetBuildDeviceList":::
 
 Lo primero que debes hacer antes de realizar un inicio remoto es llamar a `RemoteSystem.RequestAccessAsync()`. Comprueba el valor devuelto para asegurarte de que tu aplicación puede acceder a dispositivos remotos. Es posible que no se pueda realizar esta comprobación si no has agregado la funcionalidad `remoteSystem` a tu aplicación.
 
 La llamada a los controladores de eventos del monitor de sistema tiene lugar cuando un dispositivo con el que nos podemos conectar se detecta o ya no está disponible. Usaremos estos controladores de eventos para mantener una lista actualizada de dispositivos con los que nos podemos conectar.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetEventHandlers)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetEventHandlers":::
 
 
 Realizaremos un seguimiento de los dispositivos mediante el identificador del sistema remoto mediante un objeto **Dictionary**. Un **ObservableCollection** se usa para contener la lista de dispositivos que se pueden enumerar. Un **ObservableCollection** también facilita el enlace de la lista de dispositivos a la interfaz de usuario, aunque no lo haremos en este ejemplo.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetMembers)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetMembers":::
 
 Agrega una llamada a `BuildDeviceList()` en el código de inicio de la aplicación antes de intentar iniciar una aplicación remota.
 
@@ -68,7 +68,7 @@ Otras sobrecargas de **RemoteLauncher.LaunchUriAsync** te permiten especificar o
 
 En casos prácticos, podrías proporcionar la interfaz de usuario para seleccionar el dispositivo al que quieres dirigirte. No obstante, para simplificar este ejemplo, solo usaremos el primer dispositivo remoto de la lista.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetRemoteUriLaunch)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetRemoteUriLaunch":::
 
 El objeto [**RemoteLaunchUriStatus**](/uwp/api/windows.system.remotelaunchuristatus) que se devuelve de **RemoteLauncher.LaunchUriAsync()** indica si el inicio remoto se ha realizado correctamente y, si no es así, la causa.
 

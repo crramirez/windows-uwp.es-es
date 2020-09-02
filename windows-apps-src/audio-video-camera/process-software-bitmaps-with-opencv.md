@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: Windows 10, UWP, OpenCV, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b1808c6940cbfc03c2572bd72ecf0c57cfd5010
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a917c4efc8da8fbdabbdc753aacf23724ae17055
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173679"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363808"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Procesar mapas de bits con OpenCV
 
@@ -51,21 +51,21 @@ Los ejemplos de este artículo le guiarán a través de la creación de un códi
 
 Pegue el código siguiente en el archivo de encabezado OpenCVHelper. h. Este código incluye archivos de encabezado de OpenCV para los paquetes *Core* y *ImgProc* que se han instalado y declara tres métodos que se mostrarán en los pasos siguientes.
 
-[!code-cpp[OpenCVHelperHeader](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.h#SnippetOpenCVHelperHeader)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.h" id="SnippetOpenCVHelperHeader":::
 
 Elimine el contenido existente del archivo OpenCVHelper. cpp y, a continuación, agregue las siguientes directivas Include. 
 
-[!code-cpp[OpenCVHelperInclude](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperInclude)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperInclude":::
 
 Después de las directivas Include, agregue las siguientes directivas **using** . 
 
-[!code-cpp[OpenCVHelperUsing](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperUsing)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperUsing":::
 
 A continuación, agregue el método **GetPointerToPixelData** a OpenCVHelper. cpp. Este método toma un **[SoftwareBitmap](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)** y, a través de una serie de conversiones, obtiene una representación de interfaz com de los datos de píxeles a través de la cual se puede obtener un puntero al búfer de datos subyacente como una matriz de **caracteres** . 
 
 En primer lugar, se obtiene un **[BitmapBuffer](/uwp/api/windows.graphics.imaging.bitmapbuffer)** que contiene los datos de píxeles llamando a **[LockBuffer](/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)**, solicitando un búfer de lectura/escritura para que la biblioteca OpenCV pueda modificar los datos de los píxeles.  Se llama a **[CreateReference](/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)** para obtener un objeto **[IMemoryBufferReference](/uwp/api/windows.foundation.imemorybufferreference)** . A continuación, la interfaz **IMemoryBufferByteAccess** se convierte en un **IInspectable**, la interfaz base de todas las clases de Windows Runtime y se llama a **[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))** para obtener una interfaz com **[IMemoryBufferByteAccess](/previous-versions/mt297505(v=vs.85))** que nos permita obtener el búfer de datos de píxeles como una matriz de **caracteres** . Por último, rellene la matriz de **caracteres** mediante una llamada a **[IMemoryBufferByteAccess:: getBuffer](/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)**. Si se produce un error en cualquiera de los pasos de conversión de este método, el método devuelve **false**, lo que indica que no puede continuar el procesamiento.
 
-[!code-cpp[OpenCVHelperGetPointerToPixelData](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperGetPointerToPixelData)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperGetPointerToPixelData":::
 
 A continuación, agregue el método **TryConvert** que se muestra a continuación. Este método toma un objeto **SoftwareBitmap** e intenta convertirlo en un objeto **paspartú** , que es el objeto de matriz que OpenCV usa para representar los búferes de datos de la imagen. Este método llama al método **GetPointerToPixelData** definido anteriormente para obtener una representación de matriz de **caracteres** del búfer de datos de píxeles. Si esto se realiza correctamente, se llama al constructor de la clase **Mat** , pasando el ancho y el alto de píxel obtenidos del objeto **SoftwareBitmap** de origen. 
 
@@ -74,11 +74,11 @@ A continuación, agregue el método **TryConvert** que se muestra a continuació
 
 El método devuelve una copia superficial del objeto **paspartú** creado para que el procesamiento posterior funcione en el mismo búfer de datos de píxeles de datos al que hace referencia el objeto **SoftwareBitmap** y no una copia de este búfer.
 
-[!code-cpp[OpenCVHelperTryConvert](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperTryConvert)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperTryConvert":::
 
 Por último, esta clase auxiliar de ejemplo implementa un método de procesamiento de imagen único, **Blur**, que simplemente usa el método **TryConvert** definido anteriormente para recuperar un objeto de **paspartú** que representa el mapa de bits de origen y el mapa de bits de destino para la operación de desenfoque y, a continuación, llama al método **Blur** desde la biblioteca ImgProc de OpenCV. El otro parámetro para **desenfocar** especifica el tamaño del efecto de desenfoque en las direcciones X e y.
 
-[!code-cpp[OpenCVHelperBlur](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperBlur)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperBlur":::
 
 
 ## <a name="a-simple-softwarebitmap-opencv-example-using-the-helper-component"></a>Un ejemplo de OpenCV de SoftwareBitmap sencillo con el componente auxiliar
@@ -94,9 +94,9 @@ Se crea una nueva instancia de **OpenCVHelper** y se llama al método **Blur** ,
 
 Este código de ejemplo usa las API de los siguientes espacios de nombres, además de los espacios de nombres incluidos en la plantilla de proyecto predeterminada.
 
-[!code-cs[OpenCVMainPageUsing](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVMainPageUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVMainPageUsing":::
 
-[!code-cs[OpenCVBlur](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVBlur)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVBlur":::
 
 ## <a name="related-topics"></a>Temas relacionados
 

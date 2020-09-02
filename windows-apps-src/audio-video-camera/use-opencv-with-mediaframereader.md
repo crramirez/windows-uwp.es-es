@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: 2128313c48f8d279a23cf63278b3e853c00348e4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f78197b6108a81f3335dc202585127105bd94339
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175659"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363728"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Usar la biblioteca de Computer Vision de código abierto (OpenCV) con MediaFrameReader
 
@@ -37,7 +37,7 @@ Siga los pasos de [proceso de mapas de bits de software con OpenCV](process-soft
 ## <a name="find-available-frame-source-groups"></a>Buscar grupos de orígenes de fotogramas disponibles
 En primer lugar, debe buscar un grupo de origen de fotogramas multimedia del que se obtendrán los fotogramas multimedia. Obtiene la lista de grupos de origen disponibles en el dispositivo actual llamando a **[MediaFrameSourceGroup. FindAllAsync](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)**. Después, seleccione los grupos de orígenes que proporcionan los tipos de sensor necesarios para el escenario de la aplicación. En este ejemplo, simplemente necesitamos un grupo de origen que proporcione fotogramas de una cámara RGB.
 
-[!code-cs[OpenCVFrameSourceGroups](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameSourceGroups)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVFrameSourceGroups":::
 
 ## <a name="initialize-the-mediacapture-object"></a>Inicializar el objeto MediaCapture
 A continuación, debe inicializar el objeto **MediaCapture** para usar el grupo de origen del marco seleccionado en el paso anterior estableciendo la propiedad **[SourceGroup](/uwp/api/windows.media.capture.mediacaptureinitializationsettings.SourceGroup)** de **MediaCaptureInitializationSettings**.
@@ -47,20 +47,20 @@ A continuación, debe inicializar el objeto **MediaCapture** para usar el grupo 
 
 Una vez inicializado el objetos **mediacapture** , obtenga una referencia al origen de fotogramas RGB mediante el acceso a la propiedad **[MediaCapture. FrameSources](/uwp/api/windows.media.capture.mediacapture.FrameSources)** .
 
-[!code-cs[OpenCVInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVInitMediaCapture)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVInitMediaCapture":::
 
 ## <a name="initialize-the-mediaframereader"></a>Inicializar MediaFrameReader
 A continuación, cree un [**MediaFrameReader**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) para el origen de fotogramas RGB recuperado en el paso anterior. Con el fin de mantener una buena velocidad de fotogramas, es posible que desee procesar fotogramas que tengan una resolución inferior a la resolución del sensor. En este ejemplo se proporciona el argumento **[BitmapSize](/uwp/api/windows.graphics.imaging.bitmapsize)** opcional al método **[MediaCapture. CreateFrameReaderAsync](/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** para solicitar que se cambie el tamaño de los fotogramas proporcionados por el lector de fotogramas a 640 x 480 píxeles.
 
 Después de crear el lector de fotogramas, registre un controlador para el evento **[FrameArrived](/uwp/api/windows.media.capture.frames.mediaframereader.FrameArrived)** . A continuación, cree un nuevo objeto **[SoftwareBitmapSource](/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource)** , que usará la clase auxiliar **FrameRenderer** para presentar la imagen procesada. A continuación, llame al constructor para **FrameRenderer**. Inicialice la instancia de la clase **OpenCVHelper** definida en el componente de Windows Runtime OpenCVBridge. Esta clase auxiliar se usa en el controlador **FrameArrived** para procesar cada fotograma. Por último, inicie el lector de fotogramas llamando a **[StartAsync](/uwp/api/windows.media.capture.frames.mediaframereader.StartAsync)**.
 
-[!code-cs[OpenCVFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameReader)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVFrameReader":::
 
 
 ## <a name="handle-the-framearrived-event"></a>Controlar el evento FrameArrived
 El evento **FrameArrived** se desencadena cuando un nuevo marco está disponible en el lector de fotogramas. Llame a **[TryAcquireLatestFrame](/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** para obtener el fotograma, si existe. Obtiene el **SoftwareBitmap** desde **[MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference)**. Tenga en cuenta que la clase **CVHelper** que se usa en este ejemplo requiere que las imágenes usen el formato de píxel BRGA8 con alfa premultiplicado. Si el marco que se pasa al evento tiene un formato diferente, convierta el **SoftwareBitmap** en el formato correcto. A continuación, cree un **SoftwareBitmap** que se usará como destino de la operación de desenfoque. Las propiedades de la imagen de origen se usan como argumentos en el constructor para crear un mapa de bits con formato coincidente. Llame al método **Blur** de la clase auxiliar para procesar el marco. Por último, pase la imagen de salida de la operación de desenfoque a **PresentSoftwareBitmap**, el método de la clase auxiliar **FrameRenderer** que muestra la imagen en el control de **imagen** XAML con el que se inicializó.
 
-[!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVFrameArrived":::
 
 ## <a name="related-topics"></a>Temas relacionados
 

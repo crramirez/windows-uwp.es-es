@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e0c96eb4171e752faf0a8f6de2fbcf60479c62c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 72a6fe2e704bc419306c74f410ed51e8e8560fa6
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161179"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362978"
 ---
 # <a name="audio-graphs"></a>Gráficos de audio
 
@@ -50,9 +50,9 @@ API de gráficos de audio de Windows Runtime:
 
 La clase [**AudioGraph**](/uwp/api/Windows.Media.Audio.AudioGraph) es el elemento primario de todos los nodos que conforman el gráfico. Usa este objeto para crear instancias de todos los tipos de nodo de audio. Crea una instancia de la clase **AudioGraph** inicializando un objeto [**AudioGraphSettings**](/uwp/api/Windows.Media.Audio.AudioGraphSettings) que contenga opciones de configuración para el gráfico y, a continuación, llama a [**AudioGraph.CreateAsync**](/uwp/api/windows.media.audio.audiograph.createasync). El valor [**CreateAudioGraphResult**](/uwp/api/Windows.Media.Audio.CreateAudioGraphResult) devuelto proporciona acceso a un gráfico de audio creado o proporciona un valor de error si se produce un error en la creación del gráfico de audio.
 
-[!code-cs[DeclareAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareAudioGraph)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareAudioGraph":::
 
-[!code-cs[InitAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetInitAudioGraph)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetInitAudioGraph":::
 
 -   Todos los tipos de nodo de audio se crean mediante los \* métodos Create de la clase **AudioGraph** .
 -   El método [**AudioGraph.Start**](/uwp/api/windows.media.audio.audiograph.start) hace que el gráfico de audio comience a procesar datos de audio. El método [**AudioGraph.Stop**](/uwp/api/windows.media.audio.audiograph.stop) detiene el procesamiento de audio. Cada nodo del gráfico se puede iniciar y detener de forma independiente mientras se está ejecutando el gráfico, pero ningún nodo está activo cuando se detiene el gráfico. [**ResetAllNodes**](/uwp/api/windows.media.audio.audiograph.resetallnodes) hace que todos los nodos del gráfico descarten cualquier dato almacenado actualmente en sus búferes de audio.
@@ -69,37 +69,37 @@ La clase [**AudioGraph**](/uwp/api/Windows.Media.Audio.AudioGraph) es el element
 
 Puedes permitir que el gráfico de audio use el dispositivo de representación de audio predeterminado o que use la clase [**Windows.Devices.Enumeration.DeviceInformation**](/uwp/api/Windows.Devices.Enumeration.DeviceInformation) para obtener una lista dispositivos de representación de audio disponibles del sistema mediante una llamada a [**FindAllAsync**](/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) y pasando el selector de dispositivos de representación de audio devuelto por [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](/uwp/api/windows.media.devices.mediadevice.getaudiorenderselector). Puedes elegir uno de los objetos **DeviceInformation** devueltos mediante programación o mostrar la interfaz de usuario para que el usuario pueda seleccionar un dispositivo y, a continuación, usarlo para establecer la propiedad [**PrimaryRenderDevice**](/uwp/api/windows.media.audio.audiographsettings.primaryrenderdevice).
 
-[!code-cs[EnumerateAudioRenderDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioRenderDevices)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetEnumerateAudioRenderDevices":::
 
 ##  <a name="device-input-node"></a>Nodo de entrada de dispositivo
 
 Un nodo de entrada de dispositivo envía audio al gráfico desde un dispositivo de captura de audio conectado al sistema, como un micrófono. Crea un objeto [**DeviceInputNode**](/uwp/api/Windows.Media.Audio.AudioDeviceInputNode) que use el dispositivo de captura de audio predeterminado del sistema mediante una llamada a [**CreateDeviceInputNodeAsync**](/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync). Proporciona una [**AudioRenderCategory**](/uwp/api/Windows.Media.Render.AudioRenderCategory) para permitir que el sistema optimice la canalización de audio para la categoría especificada.
 
-[!code-cs[DeclareDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareDeviceInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareDeviceInputNode":::
 
 
-[!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateDeviceInputNode":::
 
 Si desea especificar un dispositivo de captura de audio específico para el nodo de entrada de dispositivo, puede usar la clase [**Windows. Devices. Enumeration. DeviceInformation**](/uwp/api/Windows.Devices.Enumeration.DeviceInformation) para obtener una lista de los dispositivos de captura de audio disponibles del sistema llamando a [**FindAllAsync**](/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) y pasando el selector de dispositivos de representación de audio devuelto por [**Windows. Media. Devices. MediaDevice. GetAudioCaptureSelector**](/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector). Puede elegir uno de los objetos **DeviceInformation** devueltos mediante programación o Mostrar la interfaz de usuario para permitir que el usuario seleccione un dispositivo y, a continuación, pasarlo a [**CreateDeviceInputNodeAsync**](/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync).
 
-[!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetEnumerateAudioCaptureDevices":::
 
 ##  <a name="device-output-node"></a>Nodo de dispositivo de salida
 
 Un nodo de dispositivo de salida envía audio del gráfico a un dispositivo de representación de audio, como los altavoces o auriculares. Crea un [**DeviceOutputNode**](/uwp/api/Windows.Media.Audio.AudioDeviceOutputNode) llamando a [**CreateDeviceOutputNodeAsync**](/uwp/api/windows.media.audio.audiograph.createdeviceoutputnodeasync). El nodo de salida usa el [**PrimaryRenderDevice**](/uwp/api/windows.media.audio.audiographsettings.primaryrenderdevice) del gráfico de audio.
 
-[!code-cs[DeclareDeviceOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareDeviceOutputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareDeviceOutputNode":::
 
-[!code-cs[CreateDeviceOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceOutputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateDeviceOutputNode":::
 
 ##  <a name="file-input-node"></a>Nodo de entrada de archivo
 
 Un nodo de entrada de archivo te permite enviar datos desde un archivo de audio al gráfico. Crea un [**AudioFileInputNode**](/uwp/api/Windows.Media.Audio.AudioFileInputNode) llamando a [**CreateFileInputNodeAsync**](/uwp/api/windows.media.audio.audiograph.createfileinputnodeasync).
 
-[!code-cs[DeclareFileInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFileInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareFileInputNode":::
 
 
-[!code-cs[CreateFileInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFileInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateFileInputNode":::
 
 -   Los nodos de entrada de archivos admiten los siguientes formatos de archivo: mp3, wav, wma y m4a.
 -   Establece la propiedad [**StartTime**](/uwp/api/windows.media.audio.audiofileinputnode.starttime) para especificar el desplazamiento de tiempo en el archivo donde debe comenzar la reproducción. Si esta propiedad es null, se usa el comienzo del archivo. Establece la propiedad [**EndTime**](/uwp/api/windows.media.audio.audiofileinputnode.endtime) para especificar el desplazamiento de tiempo en el archivo donde debe finalizar la reproducción. Si esta propiedad es null, se usa el final del archivo. El valor de tiempo de inicio debe ser menor que el valor de tiempo final y el valor de hora final debe ser menor o igual a la duración del archivo de audio, que puede determinarse comprobando el valor de la propiedad [**Duration**](/uwp/api/windows.media.audio.audiofileinputnode.duration).
@@ -111,30 +111,30 @@ Un nodo de entrada de archivo te permite enviar datos desde un archivo de audio 
 
 La clase [**MediaSource**](/uwp/api/Windows.Media.Core.MediaSource) proporciona una manera común de hacer referencia a los elementos multimedia de distintos orígenes y expone un modelo común para acceder a los datos multimedia, independientemente del formato multimedia subyacente, que podría ser un archivo en disco, una secuencia o un origen de red de streaming adaptable. Un nodo [* * MediaSourceAudioInputNode](/uwp/api/windows.media.audio.mediasourceaudioinputnode) le permite dirigir datos de audio de un **MediaSource** al gráfico de audio. Cree un **MediaSourceAudioInputNode** mediante una llamada a [**CreateMediaSourceAudioInputNodeAsync**](/uwp/api/windows.media.audio.audiograph.createmediasourceaudioinputnodeasync#Windows_Media_Audio_AudioGraph_CreateMediaSourceAudioInputNodeAsync_Windows_Media_Core_MediaSource_), pasando un objeto **MediaSource** que represente el contenido que desea reproducir. Se devuelve un [* * CreateMediaSourceAudioInputNodeResult](/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult) que puede usar para determinar el estado de la operación comprobando la propiedad de [**Estado**](/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.status) . Si el estado es **correcto**, puede obtener el **MediaSourceAudioInputNode** creado mediante el acceso a la propiedad de [**nodo**](/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.node) . En el ejemplo siguiente se muestra la creación de un nodo a partir de un objeto AdaptiveMediaSource que representa el streaming de contenido a través de la red. Para más información sobre cómo trabajar con **MediaSource**, consulte [elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md). Para obtener más información sobre el streaming de contenido multimedia a través de Internet, consulte [Adaptive streaming](adaptive-streaming.md).
 
-[!code-cs[DeclareMediaSourceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareMediaSourceInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareMediaSourceInputNode":::
 
-[!code-cs[CreateMediaSourceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateMediaSourceInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateMediaSourceInputNode":::
 
 Para recibir una notificación cuando la reproducción ha alcanzado el final del contenido de **MediaSource** , registre un controlador para el evento [**MediaSourceCompleted**](/uwp/api/windows.media.audio.mediasourceaudioinputnode.mediasourcecompleted) . 
 
-[!code-cs[RegisterMediaSourceCompleted](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetRegisterMediaSourceCompleted)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetRegisterMediaSourceCompleted":::
 
-[!code-cs[MediaSourceCompleted](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetMediaSourceCompleted)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetMediaSourceCompleted":::
 
 Al reproducirse un archivo desde el disco, es probable que siempre se complete correctamente, la transmisión por secuencias de multimedia desde un origen de red puede producir un error durante la reproducción debido a un cambio en la conexión de red u otros problemas que se encuentran fuera del control del gráfico de audio. Si un **MediaSource** deja de ser reproducible durante la reproducción, el gráfico de audio generará el evento [**UnrecoverableErrorOccurred**](/uwp/api/windows.media.audio.audiograph.unrecoverableerroroccurred) . Puede usar el controlador de este evento para detener y eliminar el gráfico de audio y, a continuación, reinicializar el gráfico. 
 
-[!code-cs[RegisterUnrecoverableError](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetRegisterUnrecoverableError)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetRegisterUnrecoverableError":::
 
-[!code-cs[UnrecoverableError](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUnrecoverableError)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetUnrecoverableError":::
 
 ##  <a name="file-output-node"></a>Nodo de salida de archivo
 
 Un nodo de salida de archivo permite dirigir datos de audio desde el gráfico a un archivo de audio. Crea un [**AudioFileOutputNode**](/uwp/api/Windows.Media.Audio.AudioFileOutputNode) llamando a [**CreateFileOutputNodeAsync**](/uwp/api/windows.media.audio.audiograph.createfileoutputnodeasync).
 
-[!code-cs[DeclareFileOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFileOutputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareFileOutputNode":::
 
 
-[!code-cs[CreateFileOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFileOutputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateFileOutputNode":::
 
 -   Los nodos de salida de archivos admiten los siguientes formatos de archivo: mp3, wav, wma y m4a.
 -   Es necesario llamar a [**AudioFileOutputNode.Stop**](/uwp/api/windows.media.audio.audiofileoutputnode.stop) para detener el procesamiento del nodo antes de llamar a [**AudioFileOutputNode.FinalizeAsync**](/uwp/api/windows.media.audio.audiofileoutputnode.finalizeasync) o se generará una excepción.
@@ -143,14 +143,14 @@ Un nodo de salida de archivo permite dirigir datos de audio desde el gráfico a 
 
 Un nodo de entrada de fotogramas de audio permite insertar datos de audio que se generan en su propio código en el gráfico de audio. Esto permite escenarios como crear un sintetizador de software personalizado. Cree un [**AudioFrameInputNode**](/uwp/api/Windows.Media.Audio.AudioFrameInputNode) llamando a [**CreateFrameInputNode**](/uwp/api/windows.media.audio.audiograph.createframeinputnode).
 
-[!code-cs[DeclareFrameInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFrameInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareFrameInputNode":::
 
 
-[!code-cs[CreateFrameInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFrameInputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateFrameInputNode":::
 
 El evento [**FrameInputNode.QuantumStarted**](/uwp/api/windows.media.audio.audioframeinputnode.quantumstarted) se genera cuando el gráfico de audio está listo para empezar a procesar el siguiente cuanto de datos de audio. Proporcionas los datos de audio generados de forma personalizada desde dentro del controlador a este evento.
 
-[!code-cs[QuantumStarted](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStarted)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetQuantumStarted":::
 
 -   El objeto [**FrameInputNodeQuantumStartedEventArgs**](/uwp/api/Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs) pasado al controlador de eventos **QuantumStarted** expone la propiedad [**RequiredSamples**](/uwp/api/windows.media.audio.frameinputnodequantumstartedeventargs.requiredsamples) que indica cuántas muestras el gráfico de audio necesita para rellenar el cuanto para su procesamiento.
 -   Realiza una llamada a [**AudioFrameInputNode.AddFrame**](/uwp/api/windows.media.audio.audioframeinputnode.addframe) para pasar un objeto [**AudioFrame**](/uwp/api/Windows.Media.AudioFrame) rellenado con datos de audio al gráfico.
@@ -159,11 +159,11 @@ El evento [**FrameInputNode.QuantumStarted**](/uwp/api/windows.media.audio.audio
 
 Para rellenar un [**AudioFrame**](/uwp/api/Windows.Media.AudioFrame) con datos de audio, debes obtener acceso al búfer de memoria subyacente del fotograma de audio. Para ello, debes inicializar la interfaz COM **IMemoryBufferByteAccess** agregando el siguiente código dentro de tu espacio de nombres.
 
-[!code-cs[ComImportIMemoryBufferByteAccess](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetComImportIMemoryBufferByteAccess)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetComImportIMemoryBufferByteAccess":::
 
 El siguiente código muestra un ejemplo de implementación de un método auxiliar **GenerateAudioData** que crea un [**AudioFrame**](/uwp/api/Windows.Media.AudioFrame) y se rellena con datos de audio.
 
-[!code-cs[GenerateAudioData](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetGenerateAudioData)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetGenerateAudioData":::
 
 -   Como este método tiene acceso el búfer sin procesar subyacente a los tipos de Windows Runtime, se debe declarar con la palabra clave **unsafe**. También debes configurar el proyecto en Microsoft Visual Studio para permitir la compilación del código no seguro; para ello, abre la página **Propiedades** del proyecto, haz clic en la página de propiedades de **Compilación** y selecciona la casilla **Permitir código no seguro**.
 -   Inicializa una nueva instancia de [**AudioFrame**](/uwp/api/Windows.Media.AudioFrame) en el espacio de nombres **Windows.Media** pasando el tamaño del búfer deseado al constructor. El tamaño de búfer es el número de muestras multiplicado por el tamaño de cada muestra.
@@ -176,21 +176,21 @@ El siguiente código muestra un ejemplo de implementación de un método auxilia
 
 Un nodo de salida de fotogramas de audio permite recibir y procesar la salida de datos de audio desde el gráfico de audio con código personalizado que crees. Un escenario de ejemplo para esto es la realización de análisis de señal en la salida de audio. Crea un [**AudioFrameOutputNode**](/uwp/api/Windows.Media.Audio.AudioFrameOutputNode) llamando a [**CreateFrameOutputNode**](/uwp/api/windows.media.audio.audiograph.createframeoutputnode).
 
-[!code-cs[DeclareFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFrameOutputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetDeclareFrameOutputNode":::
 
-[!code-cs[CreateFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFrameOutputNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateFrameOutputNode":::
 
 El evento [**AudioGraph. QuantumStarted**](/uwp/api/Windows.Media.Audio.AudioGraph.QuantumStarted) se genera cuando el gráfico de audio ha comenzado a procesar un Quantum de datos de audio. Puedes obtener acceso a los datos de audio desde dentro del controlador para este evento. 
 
 > [!NOTE]
 > Si desea recuperar fotogramas de audio a una cadencia regular, sincronizados con el gráfico de audio, llame a [AudioFrameOutputNode. GetFrame](/uwp/api/windows.media.audio.audioframeoutputnode.GetFrame) desde dentro del controlador de eventos **QuantumStarted** sincrónicos. El evento **QuantumProcessed** se genera de forma asincrónica después de que el motor de audio haya completado el procesamiento de audio, lo que significa que su cadencia puede ser irregular. Por lo tanto, no debe usar el evento **QuantumProcessed** para el procesamiento sincronizado de los datos de fotogramas de audio.
 
-[!code-cs[SnippetQuantumStartedFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStartedFrameOutput)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetQuantumStartedFrameOutput":::
 
 -   Realiza una llamada a [**GetFrame**](/uwp/api/windows.media.audio.audioframeoutputnode.getframe) para obtener un objeto [**AudioFrame**](/uwp/api/Windows.Media.AudioFrame) rellenado con datos de audio del gráfico.
 -   Se muestra a continuación un ejemplo de implementación del método auxiliar **ProcessFrameOutput**.
 
-[!code-cs[ProcessFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetProcessFrameOutput)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetProcessFrameOutput":::
 
 -   Al igual que el ejemplo de nodo de entrada de fotogramas de audio anterior, tendrás que declarar la interfaz COM **IMemoryBufferByteAccess** y configurar el proyecto para permitir que el código no seguro tenga acceso al búfer subyacente de audio.
 -   Obtén el [**AudioBuffer**](/uwp/api/Windows.Media.AudioBuffer) de la trama de audio llamando a [**LockBuffer**](/uwp/api/windows.media.audioframe.lockbuffer).
@@ -201,19 +201,19 @@ El evento [**AudioGraph. QuantumStarted**](/uwp/api/Windows.Media.Audio.AudioGra
 
 Todos los tipos de nodos de entrada exponen el método **AddOutgoingConnection** que enruta el audio generado por el nodo al que se pasa al método. El siguiente ejemplo conecta un [**AudioFileInputNode**](/uwp/api/Windows.Media.Audio.AudioFileInputNode) a un [**AudioDeviceOutputNode**](/uwp/api/Windows.Media.Audio.AudioDeviceOutputNode), que es una configuración simple para reproducir un archivo de audio en el altavoz del dispositivo.
 
-[!code-cs[AddOutgoingConnection1](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection1)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetAddOutgoingConnection1":::
 
 Puedes crear más de una conexión desde un nodo de entrada a otros nodos. El siguiente ejemplo agrega otra conexión desde [**AudioFileInputNode**](/uwp/api/Windows.Media.Audio.AudioFileInputNode) a un [**AudioFileOutputNode**](/uwp/api/Windows.Media.Audio.AudioFileOutputNode). Ahora, el audio desde el archivo de audio se reproduce en el altavoz del dispositivo y también se escribe en un archivo de audio.
 
-[!code-cs[AddOutgoingConnection2](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection2)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetAddOutgoingConnection2":::
 
 Los nodos de salida también pueden recibir más de una conexión desde otros nodos. En el siguiente ejemplo, se establece una conexión desde un [**AudioDeviceInputNode**](/uwp/api/Windows.Media.Audio.AudioDeviceInputNode) al nodo [**AudioDeviceOutput**](/uwp/api/Windows.Media.Audio.AudioDeviceOutputNode). Dado que el nodo de salida tiene conexiones desde el nodo de entrada del archivo y el nodo de entrada del dispositivo, la salida contendrá una mezcla de audio de ambas fuentes. **AddOutgoingConnection** proporciona una sobrecarga que te permite especificar un valor de ganancia para la señal que pasa a través de la conexión.
 
-[!code-cs[AddOutgoingConnection3](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection3)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetAddOutgoingConnection3":::
 
 Aunque los nodos de salida pueden aceptar conexiones de varios nodos, puedes crear una mezcla intermedia de señales desde uno o varios nodos antes de pasar la combinación a una salida. Por ejemplo, puedes establecer el nivel o aplicar efectos a un subconjunto de las señales de audio en un gráfico. Para llevarlo a cabo, puedes usar el elemento [**AudioSubmixNode**](/uwp/api/Windows.Media.Audio.AudioSubmixNode). Puedes conectarte a un nodo de submezcla de uno o más nodos de entrada u otros nodos de submezcla. En el ejemplo siguiente, se crea un nuevo nodo de submezcla con [**AudioGraph.CreateSubmixNode**](/uwp/api/windows.media.audio.audiograph.createsubmixnode). A continuación, se agregan las conexiones desde un nodo de entrada de archivo y un nodo de salida de fotogramas al nodo de submezcla. Por último, el nodo de submezcla está conectado a un nodo de salida de archivo.
 
-[!code-cs[CreateSubmixNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateSubmixNode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateSubmixNode":::
 
 ## <a name="starting-and-stopping-audio-graph-nodes"></a>Iniciar y detener los nodos del gráfico de audio
 
@@ -227,7 +227,7 @@ Todos los tipos de nodos exponen el método **Reset**, que permite que el nodo d
 
 La API de gráfico de audio te permite agregar efectos de audio para cada tipo de nodo en un gráfico. Los nodos de salida, nodos de entrada y nodos de submezcla pueden tener un número ilimitado de efectos de audio, limitados solo por las funcionalidades del hardware. El siguiente ejemplo muestra cómo agregar el efecto de eco integrado a un nodo de submezcla.
 
-[!code-cs[AddEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddEffect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetAddEffect":::
 
 -   Todos los efectos de audio implementan [**IAudioEffectDefinition**](/uwp/api/Windows.Media.Effects.IAudioEffectDefinition). Cada nodo expone una propiedad **EffectDefinitions** que representa la lista de efectos aplicados a ese nodo. Agrega un efecto agregando su objeto de definición a la lista.
 -   Existen varias clases de definición de efectos que se proporcionan en el espacio de nombres **Windows.Media.Audio**. Entre ellas se incluyen las siguientes:
@@ -248,23 +248,23 @@ Para crear un emisor, antes puedes crear una forma en la que el sonido se proyec
 
 Asigna el emisor a un nodo de audio cuando lo crees mediante el método de creación sobrecargado correspondiente al tipo de nodo que desees. En este ejemplo, se usa [**CreateFileInputNodeAsync**](/uwp/api/windows.media.audio.audiograph.createfileinputnodeasync) para crear un nodo de entrada de archivos desde un archivo especificado y el objeto [**AudioNodeEmitter**](/uwp/api/Windows.Media.Audio.AudioNodeEmitter) que se desee asociar con el nodo.
 
-[!code-cs[CreateEmitter](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateEmitter)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetCreateEmitter":::
 
 La clase [**AudioDeviceOutputNode**](/uwp/api/Windows.Media.Audio.AudioDeviceOutputNode) que envía audio desde el gráfico al usuario tiene un objeto de oyente, al que se accede con la propiedad [**Listener**](/uwp/api/windows.media.audio.audiodeviceoutputnode.listener), que representa la ubicación, la orientación y la velocidad del usuario en el espacio 3D. Las posiciones de todos los emisores en el gráfico son relativas a la posición y la orientación del objeto emisor. De manera predeterminada, el oyente se encuentra en el origen (0,0,0) orientado de frente en el eje Z, pero puedes establecer su posición y su orientación con las propiedades [**Position**](/uwp/api/windows.media.audio.audionodelistener.position) y [**Orientation**](/uwp/api/windows.media.audio.audionodelistener.orientation).
 
-[!code-cs[Listener](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetListener)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetListener":::
 
 Puedes actualizar la ubicación, la velocidad y la dirección de los emisores en el tiempo de ejecución para simular el movimiento de un origen de audio a través del espacio 3D.
 
-[!code-cs[UpdateEmitter](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUpdateEmitter)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetUpdateEmitter":::
 
 También puedes actualizar la ubicación, la velocidad y la orientación del objeto Listener en el tiempo de ejecución para simular el movimiento del usuario en el espacio 3D.
 
-[!code-cs[UpdateListener](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUpdateListener)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetUpdateListener":::
 
 De manera predeterminada, el audio espacial se calcula mediante el algoritmo de función de transferencia relativo a la cabeza (HRTF) de Microsoft para atenuar el audio en función de su forma, su velocidad y su posición en relación con el oyente. Puedes establecer la propiedad [**SpatialAudioModel**](/uwp/api/windows.media.audio.audionodeemitter.spatialaudiomodel)**en FoldDown** para usar un método simple de mezcla estéreo de simulación de audio espacial, que es menos preciso pero también requiere menos recursos de CPU y memoria.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Reproducción de multimedia](media-playback.md)
  
 

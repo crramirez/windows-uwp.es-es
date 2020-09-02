@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, vídeo, Scheduler, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6baf26b083cce08557a9b09f2ba95d5ad889f4a4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9d1a5c08d9965422d6fcd543ee38d3e628be8432
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175109"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364068"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anuncios en contenido de vídeo
 
@@ -44,7 +44,7 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
   En el siguiente ejemplo se muestra cómo establecer un control [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) en código JavaScript.
 
-  [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet1)]
+  :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet1":::
 
 ## <a name="how-to-use-the-adscheduler-class-in-your-code"></a>Cómo usar la clase AdScheduler en el código
 
@@ -75,7 +75,7 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
 6.  En el archivo main.js del proyecto, agrega código que cree un nuevo objeto **AdScheduler**. Pasa el objeto **MediaPlayer** que hospeda el contenido de vídeo. El código debe colocarse de forma que se ejecute después de [WinJS.UI.processAll](/previous-versions/windows/apps/hh440975).
 
-    [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet2":::
 
 7.  Use los métodos **requestSchedule** o **RequestScheduleByUrl** del objeto **AdScheduler** para solicitar una programación de ad del servidor e insértela en la escala de tiempo de **MediaPlayer** y, a continuación, reproduzca el medio de vídeo.
 
@@ -83,18 +83,18 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
         Este método toma la forma de una [promesa](../threading-async/asynchronous-programming-universal-windows-platform-apps.md#asynchronous-patterns-in-uwp-using-javascript), que es una construcción asincrónica donde se pasan dos punteros de función: un puntero a la función **alcompletar** para llamar a cuando la promesa se completa correctamente y un puntero para que la función **OnError** llame a si se produce un error. En la función **Alfinalizar** , inicie la reproducción del contenido de vídeo. El anuncio comenzará a reproducirse a la hora programada. En la función **OnError** , controle el error y, a continuación, inicie la reproducción del vídeo. El contenido de vídeo se reproducirá sin un anuncio. El argumento de la función **OnError** es un objeto que contiene los miembros siguientes.
 
-        [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet3)]
+        :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet3":::
 
     * Para solicitar una programación de ad de un servidor de ad que no sea de Microsoft, use **requestScheduleByUrl**y pase el URI del servidor. Este método también toma la forma de una **promesa** que acepta punteros para las funciones **Alfinalizar** y **OnError** . La carga de ad que se devuelve desde el servidor debe ajustarse a los formatos de carga de la plantilla de servicio de anuncios de vídeo (VAST) o vídeo de varias listas de reproducción (VMAP).
 
-        [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet4)]
+        :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet4":::
 
     > [!NOTE]
     > Debe esperar a que se devuelvan **requestSchedule** o **requestScheduleByUrl** antes de empezar a reproducir el contenido de vídeo principal en el **MediaPlayer**. A partir de la reproducción de medios antes de que **requestSchedule** devuelva (en el caso de un anuncio de relanzamiento), la reversión previa interrumpirá el contenido del vídeo principal. Debe llamar a **Replay** incluso si se produce un error en la función, porque el **AdScheduler** indicará a la **MediaPlayer** que omita los anuncios y se desplace directamente al contenido. Puede que tengas un requisito de negocio distinto, como insertar un anuncio integrado si no es posible obtener un anuncio de forma remota.
 
 8.  Durante la reproducción, puedes controlar eventos adicionales que permiten a tu aplicación realizar el seguimiento del progreso o los errores que pueden producirse tras el proceso de coincidencia de anuncios inicial. El siguiente código muestra algunos de estos eventos, incluidos **onPodStart**, **onPodEnd**, **onPodCountdown**, **onAdProgress**, **onAllComplete** y **onErrorOccurred**.
 
-    [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet5":::
 
 ## <a name="adscheduler-members"></a>Miembros de AdScheduler
 

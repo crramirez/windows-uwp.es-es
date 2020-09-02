@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 449c8b445e70ffb68d0bc95f96e2b33c57e3b38f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1e443c87e9bc20de5c5ce9bc8486f760df6b312c
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163939"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362638"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar con los controles de transporte de contenido multimedia del sistema
 
@@ -36,9 +36,9 @@ Para obtener más información sobre el uso de **MediaSource**, **MediaPlaybackI
 ## <a name="add-metadata-to-be-displayed-by-the-smtc"></a>Agregar los metadatos que deben mostrar los SMTC
 Si quieres agregar o modificar los metadatos que se muestran para los elementos multimedia en los SMTC, como el título de un vídeo o una canción, deberás actualizar las propiedades de visualización del objeto **MediaPlaybackItem** que representa el elemento multimedia. Primero, obtén una referencia al objeto [**MediaItemDisplayProperties**](/uwp/api/Windows.Media.Playback.MediaItemDisplayProperties) llamando a [**GetDisplayProperties**](/uwp/api/windows.media.playback.mediaplaybackitem.getdisplayproperties). Después, establece el tipo de contenido multimedia, música o vídeo, del elemento con la propiedad [**Type**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.type). A continuación, puedes rellenar los campos de [**MusicProperties**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.musicproperties) o [**VideoProperties**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.videoproperties), según el tipo de contenido multimedia especificado. Por último, actualiza los metadatos del elemento multimedia mediante una llamada a [**ApplyDisplayProperties**](/uwp/api/windows.media.playback.mediaplaybackitem.applydisplayproperties).
 
-[!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetSetVideoProperties":::
 
-[!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetSetMusicProperties":::
 
 
 > [!Note]
@@ -52,25 +52,25 @@ Para cada comando, como el comando *Next* (que salta al siguiente elemento de fo
 
 El siguiente ejemplo registra un controlador para el evento **NextReceived** y para el evento [**IsEnabledChanged**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.isenabledchanged) de **NextBehavior**.
 
-[!code-cs[AddNextHandler](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetAddNextHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetAddNextHandler":::
 
 En el ejemplo siguiente se ilustra un escenario en que la aplicación quiere deshabilitar el comando *Next* cuando el usuario haya hecho clic en cinco elementos de la lista de reproducción y quizás exigir alguna interacción del usuario antes de seguir reproduciendo contenido. Cada ## que se genera el evento **NextReceived**, se incrementa un contador. Cuando el contador alcanza el número de destino, [**EnablingRule**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.enablingrule) del comando *Next* se establece en [**Never**](/uwp/api/Windows.Media.Playback.MediaCommandEnablingRule), con lo que se deshabilita el comando. 
 
-[!code-cs[NextReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetNextReceived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetNextReceived":::
 
 También puedes establecer el comando en **Always** para que siempre esté habilitado, incluso si, para el ejemplo del comando *Next*, no hay más elementos en la lista de reproducción. También puedes establecer el comando en **Auto** para que el sistema determine si el comando debe habilitarse en función del contenido que se reproduce.
 
 Para el escenario descrito anteriormente, la aplicación querrá, en algún momento, volver a habilitar el comando *Next*. Para hacerlo, deberá establecer **EnablingRule** en **Auto**.
 
-[!code-cs[EnableNextButton](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetEnableNextButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetEnableNextButton":::
 
 Dado que la aplicación puede tener su propia interfaz de usuario para controlar la reproducción mientras está en primer plano, puedes usar los eventos [**IsEnabledChanged**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.isenabledchanged) para actualizar tu propia interfaz de usuario de modo que coincida con los SMTC a medida que se habilitan o deshabilitan los comandos mediante el acceso a [**IsEnabled**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.isenabled) de la clase [**MediaPlaybackCommandManagerCommandBehavior**](/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior) pasada al controlador.
 
-[!code-cs[IsEnabledChanged](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetIsEnabledChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetIsEnabledChanged":::
 
 En algunos casos, es posible que quieras invalidar completamente el comportamiento de un comando de SMTC. En el siguiente ejemplo, se muestra un escenario donde una aplicación usa los comandos *Next* y *Previous* para cambiar entre las emisoras de radio por Internet, en lugar de saltar entre las pistas de la lista de reproducción actual. Al igual que en el ejemplo anterior, se registra un controlador cuando se recibe un comando, que en este caso es el evento [**PreviousReceived**](/uwp/api/windows.media.playback.mediaplaybackcommandmanager.previousreceived).
 
-[!code-cs[AddPreviousHandler](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetAddPreviousHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetAddPreviousHandler":::
 
 En el controlador **PreviousReceived**, primero se obtiene una clase [**Deferral**](/uwp/api/Windows.Foundation.Deferral) mediante una llamada a [**GetDeferral**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpreviousreceivedeventargs.getdeferral) de la clase [**MediaPlaybackCommandManagerPreviousReceivedEventArgs**](/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs) pasada al controlador. Esto indica al sistema que espere hasta que se complete el aplazamiento antes de ejecutar el comando. Esto es muy importante si vas a hacer llamadas asincrónicas en el controlador. En este punto, el ejemplo llama a un método personalizado que devuelve una clase **MediaPlaybackItem** que representa la emisora de radio anterior.
 
@@ -78,7 +78,7 @@ A continuación, se comprueba la propiedad [**Handled**](/uwp/api/windows.media.
 
 Por último, se llama a [**Complete**](/uwp/api/windows.foundation.deferral.complete) en el objeto de aplazamiento para que el sistema sepa que terminaste de procesar el comando.
 
-[!code-cs[PreviousReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetPreviousReceived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetPreviousReceived":::
                  
 ## <a name="manual-control-of-the-smtc"></a>Control manual de los SMTC
 Como se mencionó anteriormente en este artículo, los SMTC detectarán y mostrarán automáticamente la información de todas las instancias de **MediaPlayer** que cree la aplicación. Si quieres usar varias instancias de **MediaPlayer**, pero quieres que los SMTC proporcionen una sola entrada para la aplicación, debes controlar manualmente el comportamiento de los SMTC en lugar de usar la integración automática. Además, si usas [**MediaTimelineController**](/uwp/api/Windows.Media.MediaTimelineController) para controlar uno o más reproductores multimedia, debes usar la integración de SMTC manual. Asimismo, si la aplicación usa una API distinta de **MediaPlayer**, como la clase [**AudioGraph**](/uwp/api/Windows.Media.Audio.AudioGraph), para reproducir contenido multimedia, debes implementar la integración de SMTC manual para que el usuario emplee los SMTC para controlar la aplicación. Para obtener información sobre cómo controlar manualmente los SMTC, consulta [Control manual de los controles de transporte de multimedia del sistema](system-media-transport-controls.md).

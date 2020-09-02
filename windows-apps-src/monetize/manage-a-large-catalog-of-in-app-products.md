@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, compras desde la aplicación, IAPs, complementos, catálogo, Windows. ApplicationModel. Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a6bd4d95365e33ee30df87247b3aec72f70fc5b1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e3eb35e2fccede9dc6f0412a3762d3d6245847c0
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158429"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364098"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Administrar un catálogo extenso de productos desde la aplicación
 
@@ -35,7 +35,7 @@ La Tienda usará únicamente el *offerId* de la solicitud de compra en el [Purch
 La solicitud de compra de un producto concreto dentro de un catálogo voluminoso se controla en gran medida como cualquier otra solicitud de compra dentro de la aplicación. Cuando tu aplicación llama a la nueva sobrecarga del método [RequestProductPurchaseAsync](/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), proporciona tanto un *OfferId* como un objeto [ProductPurchaseDisplayProperties](/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties) rellenado con el nombre del producto desde la aplicación.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/ManageCatalog.cs" id="MakePurchaseRequest":::
 
 ## <a name="report-fulfillment-of-the-in-app-offer"></a>Notificar la cumplimentación de la oferta desde la aplicación
 
@@ -46,7 +46,7 @@ Tal y como se mencionó antes, la Tienda usa la información de las ofertas sumi
 El siguiente código refleja la llamada de cumplimentación y un patrón de mensaje de interfaz de usuario en el que se inserta la información de la oferta en cuestión. Cuando no existe información específica del producto, el ejemplo usa información del producto [ListingInformation](/uwp/api/Windows.ApplicationModel.Store.ListingInformation).
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#ReportFulfillment)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/ManageCatalog.cs" id="ReportFulfillment":::
 
 ## <a name="related-topics"></a>Temas relacionados
 

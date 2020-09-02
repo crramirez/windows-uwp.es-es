@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a457b5eb976d1c34daa79a88113174fa664804ae
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8a65e7e8c47af2d0536cecea2725fd06d6d48868
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175159"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362829"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
 
@@ -38,11 +38,11 @@ Cuando la aplicación pasa de primer plano a segundo plano, se genera el evento 
 
 Dado que la ejecución en segundo plano reducirá los recursos de memoria que la aplicación tiene permitido conservar, también debes registrar los eventos [**AppMemoryUsageIncreased**](/uwp/api/windows.system.memorymanager.appmemoryusageincreased) y [**AppMemoryUsageLimitChanging**](/uwp/api/windows.system.memorymanager.appmemoryusagelimitchanging), que puedes usar para comprobar el uso actual de memoria de la aplicación y el límite actual. En los siguientes ejemplos se muestran los controladores de estos eventos. Para obtener más información sobre el ciclo de vida de las aplicaciones para UWP, consulta [Ciclo de vida de la aplicación](..//launch-resume/app-lifecycle.md).
 
-[!code-cs[RegisterEvents](./code/ReduceMemory/cs/App.xaml.cs#SnippetRegisterEvents)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetRegisterEvents":::
 
 Cuando se genera el evento [**EnteredBackground**](/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
 
-[!code-cs[EnteredBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetEnteredBackground)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetEnteredBackground":::
 
 Cuando la aplicación cambia al estado de segundo plano, el sistema reduce el límite de memoria de la aplicación con el fin de garantizar que la aplicación en primer plano actual tenga los recursos suficientes para proporcionar una experiencia del usuario que responda adecuadamente.
 
@@ -50,7 +50,7 @@ El controlador del evento [**AppMemoryUsageLimitChanging**](/uwp/api/windows.sys
 
 En este ejemplo, esto se realiza en el método auxiliar **ReduceMemoryUsage**, que se define más adelante en este artículo.
 
-[!code-cs[MemoryUsageLimitChanging](./code/ReduceMemory/cs/App.xaml.cs#SnippetMemoryUsageLimitChanging)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetMemoryUsageLimitChanging":::
 
 > [!NOTE]
 > Las configuraciones de algunos dispositivo permitirán que una aplicación siga ejecutándose por encima del nuevo límite de memoria hasta que el sistema sufra presión de recursos, pero las de otros dispositivos no lo permitirán. En concreto, en Xbox, las aplicaciones se suspenderán o finalizarán si no reducen el uso de memoria por debajo de los nuevos límites en un plazo de 2 (dos) segundos. Esto significa que puedes ofrecer la mejor experiencia en la gama más amplia de dispositivos mediante el uso de este evento para reducir el uso de recursos por debajo del límite en el plazo de 2 (dos) segundos desde que se genere el evento.
@@ -59,26 +59,26 @@ Es posible que, aunque el uso de memoria de la aplicación esté actualmente por
 
 Comprueba si el valor de [**AppMemoryUsageLevel**](/uwp/api/Windows.System.AppMemoryUsageLevel) es **High** u **OverLimit**, y si es así, reduce el uso de memoria. En este ejemplo, esto se controla con el método auxiliar **ReduceMemoryUsage**. También puede suscribirte al evento [**AppMemoryUsageDecreased**](/uwp/api/windows.system.memorymanager.appmemoryusagedecreased), comprobar si la aplicación está por debajo del límite y, si es así, saber que puedes asignar recursos adicionales.
 
-[!code-cs[MemoryUsageIncreased](./code/ReduceMemory/cs/App.xaml.cs#SnippetMemoryUsageIncreased)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetMemoryUsageIncreased":::
 
 **ReduceMemoryUsage** es un método auxiliar que puedes implementar para liberar memoria cuando la aplicación supera el límite de uso mientras se ejecuta en segundo plano. La manera de liberar memoria depende de los detalles específicos de la aplicación, pero una forma recomendada es desechar la interfaz de usuario y los demás recursos asociados con la vista de la aplicación. Para ello, comprueba que estés ejecutando en el estado de segundo plano y luego establece la propiedad [**Content**](/uwp/api/windows.ui.xaml.window.content) de la ventana de la aplicación en `null`, anula el registro de los controladores de eventos de la interfaz de usuario y quita todas las referencias que pudieras tener a la página. Si no logras anular el registro de los controladores de eventos de la interfaz de usuario ni borrar todas las referencias que pudieras tener a la página, no podrás liberar los recursos de la página. A continuación, llama a **GC.Collect** para recuperar la memoria liberada inmediatamente. Normalmente no se fuerza la recolección de elementos no utilizados porque el sistema se encarga de ello. En este caso concreto, se reduce la cantidad de memoria que se carga en esta aplicación, ya que se trata en segundo plano para reducir la probabilidad de que el sistema determine que debe finalizar la aplicación para recuperar memoria.
 
-[!code-cs[UnloadViewContent](./code/ReduceMemory/cs/App.xaml.cs#SnippetUnloadViewContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetUnloadViewContent":::
 
 Cuando se recopila el contenido de la ventana, cada fotograma comienza su proceso de desconexión. Si hay objetos Page en el árbol de objetos visuales en el contenido de la ventana, iniciarán la generación del evento Unloaded. Los objetos Pages no se puede borrar completamente de la memoria, a menos que se eliminen todas las referencias a ellos. En la devolución de llamada de Unloaded, realiza los siguientes pasos para garantizar que la memoria se libere rápidamente:
 * Borra y establece cualquier estructura de datos de gran tamaño de Page en `null`.
 * Anula el registro de todos los controladores de eventos que tienen métodos de devolución de llamada dentro de Page. Asegúrate de registrar esas devoluciones de llamada durante el controlador del evento Loaded correspondiente a Page. El evento Loaded se genera si la interfaz de usuario se ha reconstituido y el objeto Page se ha agregado al árbol de objetos visuales.
 * Llama a `GC.Collect` al final de la devolución de llamada de Unloaded para efectuar rápidamente la recolección de elementos no utilizados de cualquiera de las estructuras de datos de gran tamaño que estableciste recién en `null`. De nuevo, normalmente no fuerza la recolección de elementos no utilizados porque el sistema se encarga de ello. En este caso concreto, se reduce la cantidad de memoria que se carga en esta aplicación, ya que se trata en segundo plano para reducir la probabilidad de que el sistema determine que debe finalizar la aplicación para recuperar memoria.
 
-[!code-cs[MainPageUnloaded](./code/ReduceMemory/cs/App.xaml.cs#SnippetMainPageUnloaded)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetMainPageUnloaded":::
 
 En el controlador del evento [**LeavingBackground**](/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground), establece la variable de seguimiento (`isInBackgroundMode`) para indicar que la aplicación ya no se ejecuta en segundo plano. A continuación, comprueba si el valor de la propiedad [**Content**](/uwp/api/windows.ui.xaml.window.content) de la ventana actual es `null`, que será así si has desechado las vistas de la aplicación para liberar memoria durante la ejecución en segundo plano. Si el contenido de la ventana es `null`, reconstruye la vista de la aplicación. En este ejemplo, el contenido de la ventana se crea en el método auxiliar **CreateRootFrame**.
 
-[!code-cs[LeavingBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetLeavingBackground)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetLeavingBackground":::
 
 El método auxiliar **CreateRootFrame** vuelve a crear el contenido de la vista de la aplicación. El código de este método es casi idéntico al código del controlador [**OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) proporcionado en la plantilla de proyecto predeterminada. La única diferencia es que el controlador **Launching** determina el estado de ejecución anterior a partir de la propiedad [**PreviousExecutionState**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.previousexecutionstate) de la clase [**LaunchActivatedEventArgs**](/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) y el método **CreateRootFrame** simplemente obtiene el estado de ejecución anterior que se pasó como argumento. Para minimizar el código duplicado, puedes refactorizar el código del controlador de eventos **Launching** predeterminado para llamar a **CreateRootFrame**.
 
-[!code-cs[CreateRootFrame](./code/ReduceMemory/cs/App.xaml.cs#SnippetCreateRootFrame)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/ReduceMemory/cs/App.xaml.cs" id="SnippetCreateRootFrame":::
 
 ## <a name="guidelines"></a>Directrices
 

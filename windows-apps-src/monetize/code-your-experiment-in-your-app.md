@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: SDK de Windows 10, UWP, Microsoft Store Services, pruebas A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a7709311539d3f9c50f600f617c211f99c7b507
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dbdd95ab0d4ecde5fbe5cfb8d84d2d328b4c5a24
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171679"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363668"
 ---
 # <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para los experimentos.
 
@@ -46,43 +46,43 @@ En el proyecto, busca el código de la característica que quieres modificar en 
 
 El código específico que necesitas dependerá de la aplicación, pero en el ejemplo siguiente se muestra el proceso básico. Para ver un ejemplo de código completo, consulta [Crea y ejecuta tu primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
-[!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#ExperimentCodeSample)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="ExperimentCodeSample":::
 
 Los siguientes pasos describen las partes importantes de este proceso de forma detallada.
 
 1. Declare un objeto [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) que represente la asignación de variación actual y un objeto [StoreServicesCustomEventLogger](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger) que usará para registrar los eventos de vista y conversión en el centro de Partners.
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet1)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet1":::
 
 2. Declara una variable de cadena que se asigne al [Id. de proyecto](run-app-experiments-with-a-b-testing.md#terms) para el experimento que quieras recuperar.
     > [!NOTE]
     > Puede obtener un identificador de proyecto al [crear un proyecto en el centro de Partners](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). El Id. de proyecto que se muestra a continuación es solo un ejemplo.
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet2":::
 
 3. Obtén la asignación actual de variación en caché para el experimento llamando al método estático [GetCachedVariationAsync](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getcachedvariationasync) y pasa el Id. de proyecto para tu experimento en el método. Este método devuelve un objeto [StoreServicesExperimentVariationResult](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariationresult) que proporciona acceso a la asignación de variación a través de la propiedad [ExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariationresult.experimentvariation).
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet3)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet3":::
 
 4. Comprueba la propiedad [IsStale](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.isstale) para determinar si la asignación de variación en caché debe actualizarse con una asignación de variación remota del servidor. Si necesita actualizarse, llama al método estático [GetRefreshVariationAsync](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getrefreshedvariationasync) para buscar una actualización de una asignación de variación del servidor y actualiza la variación local en caché.
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet4)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet4":::
 
 5. Utiliza los métodos [GetBoolean](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean), [GetDouble](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble), [GetInt32](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32), o [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) del objeto [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) para obtener los valores para la asignación de variación. En cada método, el primer parámetro es el nombre de la variación que desea recuperar (es el mismo nombre de una variación que se especifica en el centro de Partners). El segundo parámetro es el valor predeterminado que el método debe devolver si no es capaz de recuperar el valor especificado del centro de Partners (por ejemplo, si no hay conectividad de red) y no hay disponible una versión en caché de la variación.
 
     El siguiente ejemplo usa el método [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) para obtener una variable llamada *buttonText* y especifica un valor variable predeterminado de **Botón gris**.
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet5)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet5":::
 
 6. En tu código, usa los valores de variables para modificar el comportamiento de la característica que estás probando. Por ejemplo, el siguiente código asigna el valor *buttonText* al contenido de un botón en tu aplicación. Este ejemplo asume que ya has definido este botón en otro lugar en el proyecto.
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet6)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet6":::
 
 7. Por último, registre el [evento de vista](run-app-experiments-with-a-b-testing.md#terms) del experimento en el servicio de prueba a/B del centro de Partners. Inicializa el campo ```logger``` en un objeto [StoreServicesCustomEventLogger](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger) y llama al método [LogForVariation](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation). Pase el objeto [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) que representa la asignación de variación actual (este objeto proporciona contexto sobre el evento al centro de Partners) y el nombre del evento de vista para el experimento. Debe coincidir con el nombre del evento de vista que especifique para el experimento en el centro de Partners. Tu código debe registrar el evento de visualización que indica cuándo el usuario empieza a ver una variación que forma parte del experimento.
 
     El siguiente ejemplo muestra cómo registrar un evento de vista denominado **userViewedButton**. En este ejemplo, el objetivo del experimento es hacer que el usuario haga clic en un botón en la aplicación, por lo que el evento de vista se registra después de que la aplicación haya recuperado los datos de variación (en este caso, el texto del botón) y los haya asignado al contenido del botón.
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet7)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet7":::
 
 ## <a name="log-conversion-events-to-partner-center"></a>Registrar eventos de conversión en el centro de Partners
 
@@ -92,7 +92,7 @@ Después, agregue el código que registra [los eventos de conversión](run-app-e
 
     El siguiente ejemplo registra un evento de conversión denominado **userClickedButton** desde el controlador de eventos **Click** para un botón. En este ejemplo, el objetivo del experimento es hacer que el usuario haga clic en el botón.
 
-    [!code-csharp[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet8)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet8":::
 
 ## <a name="next-steps"></a>Pasos siguientes
 

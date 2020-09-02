@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72687db5bed8303b672ed8ed009108708cb126be
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a0c816470f4a6caf79cb3370a39bc76abb7ef878
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161189"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364038"
 ---
 # <a name="play-media-in-the-background"></a>Reproducir elementos multimedia en segundo plano
 En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que, incluso después de que el usuario haya minimizado la aplicación, regresado a la pantalla principal o salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 
@@ -68,19 +68,19 @@ A continuación, agrega la funcionalidad *backgroundMediaPlayback* al elemento *
 ## <a name="handle-transitioning-between-foreground-and-background"></a>Controlar la transición entre el primer plano y el segundo plano
 Cuando la aplicación pasa de primer plano a segundo plano, se genera el evento [**EnteredBackground**](/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground). Y cuando la aplicación vuelve al primer plano, se genera el evento [**LeavingBackground**](/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground). Dado que estos son eventos de ciclo de vida de la aplicación, debes registrar controladores para estos eventos al crear la aplicación. En la plantilla de proyecto predeterminada, esto significa agregarlos al constructor de clase **App** en App.xaml.cs. 
 
-[!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetRegisterEvents":::
 
 Crea una variable para realizar el seguimiento de si actualmente estás ejecutando en segundo plano.
 
-[!code-cs[DeclareBackgroundMode](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetDeclareBackgroundMode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetDeclareBackgroundMode":::
 
 Cuando se genera el evento [**EnteredBackground**](/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. No se deben realizar tareas de larga duración en el evento **EnteredBackground** porque esto puede causar que al usuario la transición a segundo plano le parezca lenta.
 
-[!code-cs[EnteredBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetEnteredBackground)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetEnteredBackground":::
 
 En el controlador del evento [**LeavingBackground**](/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground), debes establecer la variable de seguimiento para indicar que la aplicación ya no se ejecuta en segundo plano.
 
-[!code-cs[LeavingBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetLeavingBackground)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetLeavingBackground":::
 
 ### <a name="memory-management-requirements"></a>Requisitos de administración de memoria
 La parte más importante de controlar la transición entre el primer y segundo plano es administrar la memoria que usa tu aplicación. Como la ejecución en segundo plano reducirá los recursos de memoria que el sistema permite retener a la aplicación, también debes registrar los eventos [**AppMemoryUsageIncreased**](/uwp/api/windows.system.memorymanager.appmemoryusageincreased) y [**AppMemoryUsageLimitChanging**](/uwp/api/windows.system.memorymanager.appmemoryusagelimitchanging). Cuando se generan estos eventos, debes comprobar el límite actual y el uso de memoria actual de la aplicación y, a continuación, reducir el uso de memoria si es necesario. Para obtener información acerca de cómo reducir el uso de memoria mientras se ejecuta en segundo plano, consulta [Liberar memoria cuando la aplicación pasa a segundo plano](../launch-resume/reduce-memory-usage.md).

@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d1d4f7e24caf50db41851e237a832301df75cd0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 18ef0ee1efb7a69a8b305c9b95e84938fe6fde32
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163659"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363898"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Procesar tramas de audio con MediaFrameReader
 
@@ -43,7 +43,7 @@ Después de llamar a [**MediaCapture.InitializeAsync**](/uwp/api/windows.media.c
 
 Si la consulta devuelve uno o varios orígenes de fotogramas, puede comprobar la propiedad [**CurrentFormat**](/uwp/api/windows.media.capture.frames.mediaframesource.currentformat) para ver si el origen es compatible con el formato de audio que desee: en este ejemplo, los datos de audio float. Compruebe la [**AudioEncodingProperties**](/uwp/api/windows.media.capture.frames.mediaframeformat.audioencodingproperties) para asegurarse de que la codificación de audio que desea es compatible con el origen.
 
-[!code-cs[InitAudioFrameSource](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitAudioFrameSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetInitAudioFrameSource":::
 
 ## <a name="create-and-start-the-mediaframereader"></a>Creación e inicio de MediaFrameReader
 
@@ -51,7 +51,7 @@ Obtenga una nueva instancia de **MediaFrameReader** llamando a [**MediaCapture. 
 
 Registra un controlador para el evento [**MediaFrameReader. FrameArrived**](/uwp/api/windows.media.capture.frames.mediaframereader.framearrived) , que genera el sistema cuando hay disponible un nuevo marco de datos de audio. Llame a [**StartAsync**](/uwp/api/windows.media.capture.frames.mediaframereader.startasync) para iniciar la adquisición de fotogramas de audio. Si el lector de fotogramas no se inicia, el valor de estado devuelto por la llamada tendrá un valor distinto de [**Success**](/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus).
 
-[!code-cs[CreateAudioFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateAudioFrameReader)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetCreateAudioFrameReader":::
 
 En el controlador de eventos **FrameArrived** , llame a [**TryAcquireLatestFrame**](/uwp/api/windows.media.capture.frames.mediaframereader.tryacquirelatestframe) en el objeto **MediaFrameReader** pasado como remitente al controlador para intentar recuperar una referencia al fotograma multimedia más reciente. Tenga en cuenta que este objeto puede ser null, por lo que siempre debe comprobar antes de usar el objeto. El tipos de fotogramas multimedia incluido en el **MediaFrameReference** devuelto desde **TryAcquireLatestFrame** depende del tipo de origen del marco o de los orígenes que haya configurado para adquirir el lector de fotogramas. Como el lector de fotogramas de este ejemplo se configuró para adquirir fotogramas de audio, obtiene el fotograma subyacente mediante la propiedad [**AudioMediaFrame**](/uwp/api/windows.media.capture.frames.mediaframereference.audiomediaframe) . 
 
@@ -59,18 +59,18 @@ Este método auxiliar **ProcessAudioFrame** en el ejemplo siguiente muestra cóm
 
 El formato de los datos depende del origen del marco. En este ejemplo, al seleccionar un origen de fotogramas multimedia, se ha determinado explícitamente que el origen de fotogramas seleccionado usó un solo canal de datos flotantes. En el resto del código de ejemplo se muestra cómo determinar la duración y el recuento de muestras de los datos de audio del marco.  
 
-[!code-cs[ProcessAudioFrame](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetProcessAudioFrame)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetProcessAudioFrame":::
 
 > [!NOTE] 
 > Para poder realizar operaciones en los datos de audio, debe tener acceso a un búfer de memoria nativo. Para ello, debe usar la interfaz com **IMemoryBufferByteAccess** incluyendo la siguiente lista de código. Las operaciones en el búfer nativo deben realizarse en un método que use la palabra clave **Unsafe** . También debe activar la casilla para permitir el código no seguro en la pestaña **compilar** del cuadro de diálogo **propiedades del proyecto >** .
 
-[!code-cs[IMemoryBufferByteAccess](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetIMemoryBufferByteAccess)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/FrameRenderer.cs" id="SnippetIMemoryBufferByteAccess":::
 
 ## <a name="additional-information-on-using-mediaframereader-with-audio-data"></a>Información adicional sobre el uso de MediaFrameReader con datos de audio
 
 Puede recuperar el [**AudioDeviceController**](/uwp/api/Windows.Media.Devices.AudioDeviceController) asociado con el origen de fotogramas de audio mediante el acceso a la propiedad [**MediaFrameSource. Controller**](/uwp/api/windows.media.capture.frames.mediaframesource.controller) . Este objeto se puede usar para obtener o establecer las propiedades de la secuencia del dispositivo de captura o para controlar el nivel de captura. En el siguiente ejemplo se silencia el dispositivo de audio para que el lector de fotogramas siga adquiriendo fotogramas, pero todos los ejemplos tienen el valor 0.
 
-[!code-cs[AudioDeviceControllerMute](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetAudioDeviceControllerMute)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetAudioDeviceControllerMute":::
 
 Puede usar un objeto [**AudioFrame**](/uwp/api/windows.media.audioframe) para pasar los datos de audio capturados por un origen de fotogramas multimedia a [**AudioGraph**](/uwp/api/windows.media.audio.audiograph). Pase el marco al método [**AddFrame**](/uwp/api/windows.media.audio.audioframeinputnode.addframe) de un [**AudioFrameInputNode**](/uwp/api/windows.media.audio.audioframeinputnode). Para obtener más información sobre el uso de gráficos de audio para capturar, procesar y mezclar señales de audio, consulte [gráficos de audio](audio-graphs.md).
 

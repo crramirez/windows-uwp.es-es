@@ -5,12 +5,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows 10, UWP, fusión de baja luz, mapas de bits, procesamiento de imágenes
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1ae98b12d9ddb83f5109212d91ae2aa804e32a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4e82eb780efe83125a09417f349f84ee9451c1f0
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163649"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363838"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a>Procesar mapas de bits con la API LowLightFusion
 
@@ -26,26 +26,26 @@ En este ejemplo, demostraremos cómo usar la [clase LowLightFusion](/uwp/api/win
 
 En primer lugar, es necesario determinar el número de imágenes (también conocidas como fotogramas) que el algoritmo acepta y crear una lista que contenga estos fotogramas.
 
-[!code-cs[SnippetGetMaxLLFFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetGetMaxLLFFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetGetMaxLLFFrames":::
 
 Una vez que determinamos el número de fotogramas que acepta el algoritmo de fusión de poca luz, podemos usar la [FileOpenPicker](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) para permitir al usuario elegir qué imágenes se deben usar en el algoritmo.
 
-[!code-cs[SnippetGetFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetGetFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetGetFrames":::
 
 Ahora que tenemos el número correcto de fotogramas seleccionados, es necesario descodificar los fotogramas en [SoftwareBitmaps](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) y asegurarse de que el SoftwareBitmaps está en el formato correcto para LowLightFusion.
 
-[!code-cs[SnippetDecodeFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetDecodeFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetDecodeFrames":::
 
 
 ## <a name="fuse-the-bitmaps-into-a-single-bitmap"></a>Confundir los mapas de bits en un único mapa de bits
 
 Ahora que tenemos un número correcto de fotogramas en un formato aceptable, podemos usar el método **[FuseAsync](/uwp/api/windows.media.core.lowlightfusion.fuseasync)** para aplicar el algoritmo de fusión de poca luz. El resultado será la imagen procesada, con una mayor claridad, en forma de un SoftwareBitmap. 
 
-[!code-cs[SnippetFuseFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetFuseFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetFuseFrames":::
 
 Por último, limpiaremos el SoftwareBitmap resultante mediante la codificación y el guardado en una imagen "normal" de usuario, similar a las imágenes de entrada con las que comenzamos.
 
-[!code-cs[SnippetEncodeFrame](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetEncodeFrame)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetEncodeFrame":::
 
 
 ## <a name="before-and-after"></a>Antes y después

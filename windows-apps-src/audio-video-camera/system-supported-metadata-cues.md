@@ -6,12 +6,12 @@ ms.date: 04/18/2017
 ms.topic: article
 keywords: Windows 10, UWP, metadatos, pila, voz, capítulo
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ac8140abc1c93e8e2b249bb6040cef3789f1d6a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4088b12bff7166bb902c06d69136831cc4f76525
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175679"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363768"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicaciones de metadatos temporizados admitidos por el sistema
 En este artículo se describe cómo sacar partido de varios formatos de metadatos con tiempo que se pueden incrustar en archivos multimedia o flujos. Las aplicaciones UWP se pueden registrar para los eventos que genera la canalización multimedia durante la reproducción cada vez que se encuentran estas indicaciones de metadatos. Con la clase [**DataCue**](/uwp/api/Windows.Media.Core.DataCue) , las aplicaciones pueden implementar sus propias claves de metadatos personalizados, pero este artículo se centra en varios estándares de metadatos que se detectan automáticamente mediante la canalización multimedia, entre los que se incluyen:
@@ -38,145 +38,145 @@ En este artículo, el control de cada tipo de metadatos se muestra como un escen
 ## <a name="image-based-subtitles"></a>Subtítulos basados en imagen
 A partir de Windows 10, versión 1703, las aplicaciones UWP pueden admitir subtítulos basados en imágenes externos en formato VobSub. Para usar esta característica, primero debe crear un objeto [**MediaSource**](/uwp/api/windows.media.core.mediasource) para el contenido multimedia para el que se mostrarán los subtítulos de imagen. A continuación, cree un objeto [**TimedTextSource**](/uwp/api/windows.media.core.timedtextsource) llamando a [**CreateFromUriWithIndex**](/uwp/api/windows.media.core.timedtextsource.CreateFromUriWithIndex) o [**CreateFromStreamWithIndex**](/uwp/api/windows.media.core.timedtextsource.CreateFromStreamWithIndex), pasando el URI del archivo. sub que contiene los datos de la imagen de subtítulo y el archivo. idx que contiene la información de tiempo de los subtítulos. Agregue **TimedTextSource** a **MediaSource** agregándolo a la colección [**ExternalTimedTextSources**](/uwp/api/windows.media.core.mediasource.ExternalTimedTextSources) del origen. Cree un [**MediaPlaybackItem**](/uwp/api/windows.media.playback.mediaplaybackitem) a partir de **MediaSource**.
 
-[!code-cs[ImageSubtitleLoadContent](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetImageSubtitleLoadContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetImageSubtitleLoadContent":::
 
 Regístrese en los eventos de metadatos de subtítulo de imagen mediante el objeto **MediaPlaybackItem** creado en el paso anterior. En este ejemplo se usa un método auxiliar, **RegisterMetadataHandlerForImageSubtitles**, para registrar los eventos. Una expresión lambda se usa para implementar un controlador para el evento [**TimedMetadataTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.TimedMetadataTracksChanged) , que se produce cuando el sistema detecta un cambio en las pistas de metadatos asociados a **MediaPlaybackItem**. En algunos casos, las pistas de metadatos pueden estar disponibles cuando el elemento de reproducción se resuelve inicialmente, por lo que fuera del controlador **TimedMetadataTracksChanged** , también se recorren las pistas de metadatos disponibles y se llama a **RegisterMetadataHandlerForImageSubtitles**.
 
-[!code-cs[ImageSubtitleTracksChanged](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetImageSubtitleTracksChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetImageSubtitleTracksChanged":::
 
 Después de registrarse para los eventos de metadatos de subtítulo de imagen, **MediaItem** se asigna a un [**MediaPlayer**](/uwp/api/windows.media.playback.mediaplayer) para su reproducción dentro de un [**MediaPlayerElement**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement).
 
-[!code-cs[ImageSubtitlePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetImageSubtitlePlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetImageSubtitlePlay":::
 
 En el método auxiliar **RegisterMetadataHandlerForImageSubtitles** , obtenga una instancia de la clase [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** de **MediaPlaybackItem**. Regístrese para el evento [**CueEntered**](/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y el evento [**CueExited**](/uwp/api/windows.media.core.timedmetadatatrack.CueExited) . A continuación, debe llamar a [**SetPresentationMode**](/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación desea recibir eventos de referencia de metadatos para este elemento de reproducción.
 
-[!code-cs[RegisterMetadataHandlerForImageSubtitles](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForImageSubtitles)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetRegisterMetadataHandlerForImageSubtitles":::
 
 En el controlador del evento **CueEntered** , puede comprobar la correcta [**TimedMetadataKind**](/uwp/api/windows.media.core.timedmetadatatrack.TimedMetadataKind) del objeto [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) pasado en el controlador para ver si los metadatos son para los subtítulos de imagen. Esto es necesario si se usa el mismo controlador de eventos de la pila de datos para varios tipos de metadatos. Si la pista de metadatos asociada es de tipo **TimedMetadataKind. ImageSubtitle**, convierta la pila de datos contenida en la propiedad **CUE** de [**MediaCueEventArgs**](/uwp/api/windows.media.core.mediacueeventargs) a [**ImageCue**](/uwp/api/windows.media.core.imagecue). La propiedad [**softwarebitmap**](/uwp/api/windows.media.core.imagecue.SoftwareBitmap) de **ImageCue** contiene una representación [**SoftwareBitmap**](/uwp/api/windows.graphics.imaging.softwarebitmap) de la imagen de subtítulos. Cree un [**SoftwareBitmapSource**](/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource) y llame a [**SetBitmapAsync**](/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.SetBitmapAsync) para asignar la imagen a un control de [**imagen**](/uwp/api/windows.ui.xaml.controls.image) XAML. Las propiedades de [**extensión**](/uwp/api/windows.media.core.imagecue.Extent) y [**posición**](/uwp/api/windows.media.core.imagecue.Position) del **ImageCue** proporcionan información sobre el tamaño y la posición de la imagen del subtítulo.
 
-[!code-cs[ImageSubtitleCueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetImageSubtitleCueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetImageSubtitleCueEntered":::
 
 ## <a name="speech-cues"></a>Señales de voz
 A partir de Windows 10, versión 1703, las aplicaciones UWP se pueden registrar para recibir eventos en respuesta a los límites de palabras, los límites de oraciones y los marcadores del lenguaje de marcado de síntesis de voz (SSML) en medios reproducidos. Esto permite reproducir secuencias de audio generadas con la clase [**SpeechSynthesizer**](/uwp/api/Windows.Media.SpeechSynthesis.SpeechSynthesizer) y actualizar la interfaz de usuario en función de estos eventos, como mostrar el texto de la palabra o frase que se está reproduciendo.
 
 En el ejemplo que se muestra en esta sección se usa una variable de miembro de clase para almacenar una cadena de texto que se sintetizará y reproducirá.
 
-[!code-cs[SpeechInputText](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetSpeechInputText)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetSpeechInputText":::
 
 Cree una nueva instancia de la clase **SpeechSynthesizer** . Establezca las opciones [**IncludeWordBoundaryMetadata**](/uwp/api/windows.media.speechsynthesis.speechsynthesizeroptions.IncludeWordBoundaryMetadata) y [**IncludeSentenceBoundaryMetadata**](/uwp/api/windows.media.speechsynthesis.speechsynthesizeroptions.IncludeSentenceBoundaryMetadata) para el sintetizador en **true** para especificar que los metadatos se deben incluir en la secuencia multimedia generada. Llame a [**SynthesizeTextToStreamAsync**](/uwp/api/Windows.Media.SpeechSynthesis.SpeechSynthesizer.SynthesizeTextToStreamAsync) para generar una secuencia que contenga la voz sintetizada y los metadatos correspondientes. Cree un objeto [**MediaSource**](/uwp/api/windows.media.core.mediasource) y un objeto [**MediaPlaybackItem**](/uwp/api/windows.media.playback.mediaplaybackitem) a partir de la secuencia sintetizada.
 
-[!code-cs[SynthesizeSpeech](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetSynthesizeSpeech)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetSynthesizeSpeech":::
 
 Regístrese para los eventos de metadatos de voz mediante el objeto **MediaPlaybackItem** . En este ejemplo se usa un método auxiliar, **RegisterMetadataHandlerForSpeech**, para registrar los eventos. Una expresión lambda se usa para implementar un controlador para el evento [**TimedMetadataTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.TimedMetadataTracksChanged) , que se produce cuando el sistema detecta un cambio en las pistas de metadatos asociados a **MediaPlaybackItem**.  En algunos casos, las pistas de metadatos pueden estar disponibles cuando el elemento de reproducción se resuelve inicialmente, por lo que fuera del controlador **TimedMetadataTracksChanged** , también se recorren las pistas de metadatos disponibles y se llama a **RegisterMetadataHandlerForSpeech**.
 
-[!code-cs[SpeechTracksChanged](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetSpeechTracksChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetSpeechTracksChanged":::
 
 Después de registrarse para los eventos de metadatos de voz, **MediaItem** se asigna a un [**MediaPlayer**](/uwp/api/windows.media.playback.mediaplayer) para su reproducción dentro de un [**MediaPlayerElement**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement).
 
-[!code-cs[SpeechPlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetSpeechPlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetSpeechPlay":::
 
 En el método auxiliar **RegisterMetadataHandlerForSpeech** , obtenga una instancia de la clase [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** de **MediaPlaybackItem**. Regístrese para el evento [**CueEntered**](/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y el evento [**CueExited**](/uwp/api/windows.media.core.timedmetadatatrack.CueExited) . A continuación, debe llamar a [**SetPresentationMode**](/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación desea recibir eventos de referencia de metadatos para este elemento de reproducción.
 
-[!code-cs[RegisterMetadataHandlerForWords](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForWords)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetRegisterMetadataHandlerForWords":::
 
 En el controlador del evento **CueEntered** , puede comprobar la correcta [**TimedMetadataKind**](/uwp/api/windows.media.core.timedmetadatatrack.TimedMetadataKind) del objeto [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) pasado en el controlador para ver si los metadatos son voz. Esto es necesario si se usa el mismo controlador de eventos de la pila de datos para varios tipos de metadatos. Si la pista de metadatos asociada es de tipo **TimedMetadataKind. Speech**, convierta la pila de datos contenida en la propiedad **CUE** de [**MediaCueEventArgs**](/uwp/api/windows.media.core.mediacueeventargs) a [**SpeechCue**](/uwp/api/windows.media.core.speechcue). En el caso de las señales de voz, el tipo de la pila de voz incluida en la pista de metadatos se determina mediante la comprobación de la propiedad de **etiqueta** . El valor de esta propiedad será "SpeechWord" para los límites de palabras, "SpeechSentence" para los límites de oraciones o "SpeechBookmark" para los marcadores de SSML. En este ejemplo, se busca el valor "SpeechWord" y, si se encuentra este valor, se usan las propiedades [**StartPositionInInput**](/uwp/api/windows.media.core.speechcue.StartPositionInInput) y [**EndPositionInInput**](/uwp/api/windows.media.core.speechcue.EndPositionInInput) de **SpeechCue** para determinar la ubicación dentro del texto de entrada de la palabra que se está reproduciendo actualmente. En este ejemplo, simplemente se genera cada palabra en el resultado de la depuración.
 
-[!code-cs[SpeechWordCueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetSpeechWordCueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetSpeechWordCueEntered":::
 
 ## <a name="chapter-cues"></a>Guías de capítulos
 A partir de Windows 10, versión 1703, las aplicaciones UWP se pueden registrar para las pilas que se corresponden con los capítulos de un elemento multimedia. Para usar esta característica, cree un objeto [**MediaSource**](/uwp/api/windows.media.core.mediasource) para el contenido multimedia y, a continuación, cree un objeto [**MediaPlaybackItem**](/uwp/api/windows.media.playback.mediaplaybackitem) a partir de **MediaSource**.
 
-[!code-cs[ChapterCueLoadContent](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetChapterCueLoadContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetChapterCueLoadContent":::
 
 Regístrese en el capítulo eventos de metadatos mediante el objeto **MediaPlaybackItem** creado en el paso anterior. En este ejemplo se usa un método auxiliar, **RegisterMetadataHandlerForChapterCues**, para registrar los eventos. Una expresión lambda se usa para implementar un controlador para el evento [**TimedMetadataTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.TimedMetadataTracksChanged) , que se produce cuando el sistema detecta un cambio en las pistas de metadatos asociados a **MediaPlaybackItem**. En algunos casos, las pistas de metadatos pueden estar disponibles cuando el elemento de reproducción se resuelve inicialmente, por lo que fuera del controlador **TimedMetadataTracksChanged** , también se recorren las pistas de metadatos disponibles y se llama a **RegisterMetadataHandlerForChapterCues**.
 
-[!code-cs[ChapterCueTracksChanged](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetChapterCueTracksChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetChapterCueTracksChanged":::
 
 Después de registrarse para el capítulo eventos de metadatos, **MediaItem** se asigna a un [**MediaPlayer**](/uwp/api/windows.media.playback.mediaplayer) para su reproducción dentro de un [**MediaPlayerElement**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement).
 
-[!code-cs[ChapterCuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetChapterCuePlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetChapterCuePlay":::
 
 En el método auxiliar **RegisterMetadataHandlerForChapterCues** , obtenga una instancia de la clase [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** de **MediaPlaybackItem**. Regístrese para el evento [**CueEntered**](/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y el evento [**CueExited**](/uwp/api/windows.media.core.timedmetadatatrack.CueExited) . A continuación, debe llamar a [**SetPresentationMode**](/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación desea recibir eventos de referencia de metadatos para este elemento de reproducción.
 
-[!code-cs[RegisterMetadataHandlerForChapterCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForChapterCues)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetRegisterMetadataHandlerForChapterCues":::
 
 En el controlador del evento **CueEntered** , puede comprobar la correcta [**TimedMetadataKind**](/uwp/api/windows.media.core.timedmetadatatrack.TimedMetadataKind) del objeto [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) pasado en el controlador para ver si los metadatos son para las indicaciones de los capítulos. Esto es necesario si se usa el mismo controlador de eventos de la pila de datos para varios tipos de metadatos. Si la pista de metadatos asociada es de tipo **TimedMetadataKind. Chapter**, convierta la pila de datos contenida en la propiedad **CUE** de [**MediaCueEventArgs**](/uwp/api/windows.media.core.mediacueeventargs) a [**ChapterCue**](/uwp/api/windows.media.core.chaptercue). La propiedad [**title**](/uwp/api/windows.media.core.chaptercue.Title) de **ChapterCue** contiene el título del capítulo que se acaba de alcanzar en la reproducción.
 
-[!code-cs[ChapterCueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetChapterCueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetChapterCueEntered":::
 
 ### <a name="seek-to-the-next-chapter-using-chapter-cues"></a>Busque el siguiente capítulo con las indicaciones de capítulo
 Además de recibir notificaciones cuando el capítulo actual cambia en un elemento de reproducción, también puede usar las indicaciones de capítulo para buscar el siguiente capítulo dentro de un elemento de reproducción. El método de ejemplo que se muestra a continuación toma como argumentos un elemento [**MediaPlayer**](/uwp/api/windows.media.playback.mediaplayer) y un objeto [**MediaPlaybackItem**](/uwp/api/windows.media.playback.mediaplaybackitem) que representa el elemento multimedia que se está reproduciendo. Se busca en la colección [**TimedMetadataTracks**](/uwp/api/windows.media.playback.mediaplaybackitem.TimedMetadataTracks) para ver si alguna de las pistas tiene [**TimedMetadataKind**](/uwp/api/windows.media.core.timedmetadatatrack.TimedMetadataKind) correctamente el valor [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) de **TimedMetadataKind. Chapter**.  Si se encuentra una pista de capítulo, el método recorre en bucle cada indicación de la colección de [**pilas**](/uwp/api/windows.media.core.timedmetadatatrack.Cues) de la pista para buscar la primera indicación que tiene un [**startTime**](/uwp/api/windows.media.core.chaptercue.StartTime) mayor que la [**posición**](/uwp/api/windows.media.playback.mediaplaybacksession.Position) actual de la sesión de reproducción del reproductor de media. Una vez que se encuentra la pila correcta, se actualiza la posición de la sesión de reproducción y se actualiza el título del capítulo en la interfaz de usuario.
 
-[!code-cs[GoToNextChapter](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetGoToNextChapter)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetGoToNextChapter":::
 
 ## <a name="extended-m3u-comments"></a>Comentarios de M3U extendidos
 A partir de Windows 10, versión 1703, las aplicaciones UWP se pueden registrar para las pilas que corresponden a los comentarios de un archivo de manifiesto de M3U extendido. En este ejemplo se usa [**AdaptiveMediaSource**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource) para reproducir el contenido multimedia. Para obtener más información, consulte [Adaptive streaming](adaptive-streaming.md). Cree un **AdaptiveMediaSource** para el contenido llamando a [**CreateFromUriAsync**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.CreateFromUriAsync) o [**CreateFromStreamAsync**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.CreateFromStreamAsync). Cree un objeto  [**MediaSource**](/uwp/api/windows.media.core.mediasource) llamando a [**CreateFromAdaptiveMediaSource**](/uwp/api/windows.media.core.mediasource.CreateFromAdaptiveMediaSource) y, a continuación, cree un [**MediaPlaybackItem**](/uwp/api/windows.media.playback.mediaplaybackitem) a partir de **MediaSource**.
 
-[!code-cs[EXTM3ULoadContent](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEXTM3ULoadContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEXTM3ULoadContent":::
 
 Regístrese para los eventos de metadatos de M3U mediante el objeto **MediaPlaybackItem** creado en el paso anterior. En este ejemplo se usa un método auxiliar, **RegisterMetadataHandlerForEXTM3UCues**, para registrar los eventos. Una expresión lambda se usa para implementar un controlador para el evento [**TimedMetadataTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.TimedMetadataTracksChanged) , que se produce cuando el sistema detecta un cambio en las pistas de metadatos asociados a **MediaPlaybackItem**. En algunos casos, las pistas de metadatos pueden estar disponibles cuando el elemento de reproducción se resuelve inicialmente, por lo que fuera del controlador **TimedMetadataTracksChanged** , también se recorren las pistas de metadatos disponibles y se llama a **RegisterMetadataHandlerForEXTM3UCues**.
 
-[!code-cs[EXTM3UCueTracksChanged](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEXTM3UCueTracksChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEXTM3UCueTracksChanged":::
 
 Después de registrarse para los eventos de metadatos de M3U, **MediaItem** se asigna a un [**MediaPlayer**](/uwp/api/windows.media.playback.mediaplayer) para su reproducción dentro de un [**MediaPlayerElement**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement).
 
-[!code-cs[EXTM3UCuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEXTM3UCuePlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEXTM3UCuePlay":::
 
 En el método auxiliar **RegisterMetadataHandlerForEXTM3UCues** , obtenga una instancia de la clase [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** de **MediaPlaybackItem**. Compruebe la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "EXTM3U" si la pista representa los comentarios de M3U. Regístrese para el evento [**CueEntered**](/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y el evento [**CueExited**](/uwp/api/windows.media.core.timedmetadatatrack.CueExited) . A continuación, debe llamar a [**SetPresentationMode**](/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación desea recibir eventos de referencia de metadatos para este elemento de reproducción.
 
-[!code-cs[RegisterMetadataHandlerForEXTM3UCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForEXTM3UCues)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetRegisterMetadataHandlerForEXTM3UCues":::
 
 En el controlador del evento **CueEntered** , convierta la pila de datos contenida en la propiedad **CUE** de [**MediaCueEventArgs**](/uwp/api/windows.media.core.mediacueeventargs) a [**DataCue**](/uwp/api/windows.media.core.datacue).  Asegúrese de que los valores de **DataCue** y de la propiedad de [**datos**](/uwp/api/windows.media.core.datacue.Data) de la pila no sean null. Los comentarios extendidos de la UME se proporcionan en forma de cadenas UTF-16, little endian y terminadas en NULL. Cree un nuevo **DataReader** para leer los datos de la pila mediante una llamada a [**DataReader. FromBuffer**](/uwp/api/windows.storage.streams.datareader.FromBuffer). Establezca la propiedad [**UnicodeEncoding**](/uwp/api/windows.storage.streams.datareader.UnicodeEncoding) del lector en [**Utf16LE**](/uwp/api/windows.storage.streams.unicodeencoding) para leer los datos en el formato correcto. Llame a [**ReadString**](/uwp/api/windows.storage.streams.datareader.ReadString) para leer los datos, especificando la mitad de la longitud del campo de **datos** , ya que cada carácter tiene dos bytes de tamaño y resta uno para quitar el carácter nulo final. En este ejemplo, el comentario M3U simplemente se escribe en la salida de depuración.
 
-[!code-cs[EXTM3UCueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEXTM3UCueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEXTM3UCueEntered":::
 
 ## <a name="id3-tags"></a>Etiquetas ID3
 A partir de Windows 10, versión 1703, las aplicaciones UWP se pueden registrar para las pilas que corresponden a las etiquetas ID3 en el contenido http Live Streaming (HLS). En este ejemplo se usa [**AdaptiveMediaSource**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource) para reproducir el contenido multimedia. Para obtener más información, consulte [Adaptive streaming](adaptive-streaming.md). Cree un **AdaptiveMediaSource** para el contenido llamando a [**CreateFromUriAsync**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.CreateFromUriAsync) o [**CreateFromStreamAsync**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.CreateFromStreamAsync). Cree un objeto  [**MediaSource**](/uwp/api/windows.media.core.mediasource) llamando a [**CreateFromAdaptiveMediaSource**](/uwp/api/windows.media.core.mediasource.CreateFromAdaptiveMediaSource) y, a continuación, cree un [**MediaPlaybackItem**](/uwp/api/windows.media.playback.mediaplaybackitem) a partir de **MediaSource**.
 
-[!code-cs[EXTM3ULoadContent](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEXTM3ULoadContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEXTM3ULoadContent":::
 
 Regístrese para los eventos de etiqueta ID3 mediante el objeto **MediaPlaybackItem** creado en el paso anterior. En este ejemplo se usa un método auxiliar, **RegisterMetadataHandlerForID3Cues**, para registrar los eventos. Una expresión lambda se usa para implementar un controlador para el evento [**TimedMetadataTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.TimedMetadataTracksChanged) , que se produce cuando el sistema detecta un cambio en las pistas de metadatos asociados a **MediaPlaybackItem**. En algunos casos, las pistas de metadatos pueden estar disponibles cuando el elemento de reproducción se resuelve inicialmente, por lo que fuera del controlador **TimedMetadataTracksChanged** , también se recorren las pistas de metadatos disponibles y se llama a **RegisterMetadataHandlerForID3Cues**.
 
-[!code-cs[ID3LoadContent](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetID3LoadContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetID3LoadContent":::
 
 Después de registrarse para los eventos de metadatos ID3, **MediaItem** se asigna a un [**MediaPlayer**](/uwp/api/windows.media.playback.mediaplayer) para su reproducción dentro de un [**MediaPlayerElement**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement).
 
-[!code-cs[ID3CuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetID3CuePlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetID3CuePlay":::
 
 
 En el método auxiliar **RegisterMetadataHandlerForID3Cues** , obtenga una instancia de la clase [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** de **MediaPlaybackItem**. Compruebe la propiedad DispatchType de la pista de metadatos, que tendrá un valor que contiene la cadena GUID "15260DFFFF49443320FF49443320000F" si la pista representa etiquetas ID3. Regístrese para el evento [**CueEntered**](/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y el evento [**CueExited**](/uwp/api/windows.media.core.timedmetadatatrack.CueExited) . A continuación, debe llamar a [**SetPresentationMode**](/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación desea recibir eventos de referencia de metadatos para este elemento de reproducción.
 
-[!code-cs[RegisterMetadataHandlerForID3Cues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForID3Cues)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetRegisterMetadataHandlerForID3Cues":::
 
 En el controlador del evento **CueEntered** , convierta la pila de datos contenida en la propiedad **CUE** de [**MediaCueEventArgs**](/uwp/api/windows.media.core.mediacueeventargs) a [**DataCue**](/uwp/api/windows.media.core.datacue).  Asegúrese de que los valores de **DataCue** y de la propiedad de [**datos**](/uwp/api/windows.media.core.datacue.Data) de la pila no sean null. Los comentarios extendidos de la UME se proporcionan en la forma bytes sin formato del flujo de transporte (vea [http://id3.org/id3v2.4.0-structure](https://id3.org/id3v2.4.0-structure) ). Cree un nuevo **DataReader** para leer los datos de la pila mediante una llamada a [**DataReader. FromBuffer**](/uwp/api/windows.storage.streams.datareader.FromBuffer).  En este ejemplo, los valores de encabezado de la etiqueta ID3 se leen de los datos de la pila y se escriben en la salida de depuración.
 
-[!code-cs[ID3CueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetID3CueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetID3CueEntered":::
 
 ## <a name="fragmented-mp4-emsg-boxes"></a>Cuadros eMsg MP4 fragmentados
 A partir de Windows 10, versión 1703, las aplicaciones UWP se pueden registrar para las pilas que corresponden a los cuadros de eMsg dentro de flujos MP4 fragmentados. Un ejemplo de uso de este tipo de metadatos es que los proveedores de contenido señalen a las aplicaciones cliente para que reproduzcan un anuncio durante el contenido de streaming en vivo. En este ejemplo se usa [**AdaptiveMediaSource**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource) para reproducir el contenido multimedia. Para obtener más información, consulte [Adaptive streaming](adaptive-streaming.md). Cree un **AdaptiveMediaSource** para el contenido llamando a [**CreateFromUriAsync**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.CreateFromUriAsync) o [**CreateFromStreamAsync**](/uwp/api/windows.media.streaming.adaptive.adaptivemediasource.CreateFromStreamAsync). Cree un objeto  [**MediaSource**](/uwp/api/windows.media.core.mediasource) llamando a [**CreateFromAdaptiveMediaSource**](/uwp/api/windows.media.core.mediasource.CreateFromAdaptiveMediaSource) y, a continuación, cree un [**MediaPlaybackItem**](/uwp/api/windows.media.playback.mediaplaybackitem) a partir de **MediaSource**.
 
-[!code-cs[EmsgLoadContent](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEmsgLoadContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEmsgLoadContent":::
 
 Regístrese para los eventos de eMsg Box mediante el objeto **MediaPlaybackItem** creado en el paso anterior. En este ejemplo se usa un método auxiliar, **RegisterMetadataHandlerForEmsgCues**, para registrar los eventos. Una expresión lambda se usa para implementar un controlador para el evento [**TimedMetadataTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.TimedMetadataTracksChanged) , que se produce cuando el sistema detecta un cambio en las pistas de metadatos asociados a **MediaPlaybackItem**. En algunos casos, las pistas de metadatos pueden estar disponibles cuando el elemento de reproducción se resuelve inicialmente, por lo que fuera del controlador **TimedMetadataTracksChanged** , también se recorren las pistas de metadatos disponibles y se llama a **RegisterMetadataHandlerForEmsgCues**.
 
-[!code-cs[ID3LoadContent](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetID3LoadContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetID3LoadContent":::
 
 Después de registrarse para los eventos de metadatos del cuadro eMsg, el **MediaItem** se asigna a un [**MediaPlayer**](/uwp/api/windows.media.playback.mediaplayer) para su reproducción dentro de un [**MediaPlayerElement**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement).
 
-[!code-cs[EmsgCuePlay](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEmsgCuePlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEmsgCuePlay":::
 
 
 En el método auxiliar **RegisterMetadataHandlerForEmsgCues** , obtenga una instancia de la clase [**TimedMetadataTrack**](/uwp/api/windows.media.core.timedmetadatatrack) mediante la indexación en la colección **TimedMetadataTracks** de **MediaPlaybackItem**. Compruebe la propiedad DispatchType de la pista de metadatos, que tendrá un valor de "eMsg: MP4" si la pista representa cuadros eMsg. Regístrese para el evento [**CueEntered**](/uwp/api/windows.media.core.timedmetadatatrack.CueEntered) y el evento [**CueExited**](/uwp/api/windows.media.core.timedmetadatatrack.CueExited) . A continuación, debe llamar a [**SetPresentationMode**](/uwp/api/windows.media.playback.mediaplaybacktimedmetadatatracklist.SetPresentationMode) en la colección **TimedMetadataTracks** del elemento de reproducción para indicar al sistema que la aplicación desea recibir eventos de referencia de metadatos para este elemento de reproducción.
 
 
-[!code-cs[RegisterMetadataHandlerForEmsgCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForEmsgCues)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetRegisterMetadataHandlerForEmsgCues":::
 
 
 En el controlador del evento **CueEntered** , convierta la pila de datos contenida en la propiedad **CUE** de [**MediaCueEventArgs**](/uwp/api/windows.media.core.mediacueeventargs) a [**DataCue**](/uwp/api/windows.media.core.datacue).  Asegúrese de que el objeto **DataCue** no es NULL. La canalización de medios proporciona las propiedades correspondientes al cuadro eMsg como propiedades personalizadas en la colección de [**propiedades**](/uwp/api/windows.media.core.datacue.Properties) del objeto DataCue. En este ejemplo se intenta extraer varios valores de propiedad diferentes mediante el método **[TryGetValue](/uwp/api/windows.foundation.collections.propertyset.trygetvalue)** . Si este método devuelve null, significa que la correcta solicitud no está presente en el cuadro eMsg, por lo que en su lugar se establece un valor predeterminado.
 
 La siguiente parte del ejemplo muestra el escenario en el que se desencadena la reproducción de anuncios, que es el caso en el que la propiedad *scheme_id_uri* , obtenida en el paso anterior, tiene un valor de "urn: SCTE: scte35:2013: XML" (vea [http://dashif.org/identifiers/event-schemes/](https://dashif.org/identifiers/event-schemes/) ). Tenga en cuenta que el estándar recomienda enviar este eMsg varias veces para la redundancia, por lo que en este ejemplo se mantiene una lista de los identificadores de eMsg que ya se han procesado y solo se procesan los mensajes nuevos. Cree un nuevo **DataReader** para leer los datos de la indicación llamando a [**DataReader. FromBuffer**](/uwp/api/windows.storage.streams.datareader.FromBuffer) y establezca la codificación en UTF-8 estableciendo la propiedad [**UnicodeEncoding**](/uwp/api/windows.storage.streams.datareader.UnicodeEncoding) y, a continuación, lea los datos. En este ejemplo, la carga del mensaje se escribe en la salida de depuración. Una aplicación real usaría los datos de carga para programar la reproducción de un anuncio.
 
-[!code-cs[EmsgCueEntered](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetEmsgCueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage_Cues.xaml.cs" id="SnippetEmsgCueEntered":::
 
 
 ## <a name="related-topics"></a>Temas relacionados

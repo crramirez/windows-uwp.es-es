@@ -1,7 +1,7 @@
 ---
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: En este artículo se describe cómo usar la clase [**CameraCaptureUI**](/uwp/api/windows.media.capture.cameracaptureui) para capturar fotografías o vídeos mediante la interfaz de usuario de la cámara integrada en Windows.
-title: Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada de Windows
+title: Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,14 +9,14 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: a512f72c01f2082dd067fc867f7434c92d2aa0c8
-ms.sourcegitcommit: 79e4b3a9c53060b64513e2e240f0a4f073cc5dab
+ms.openlocfilehash: 5b5e1369e37fc683a3a09c8f404b1998ee06bdab
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978940"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364008"
 ---
-# <a name="capture-photos-and-video-with-the-windows-built-in-camera-ui"></a>Capturar fotos y vídeos con la interfaz de usuario de la cámara integrada de Windows
+# <a name="capture-photos-and-video-with-the-windows-built-in-camera-ui"></a>Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows
 
 En este artículo se describe cómo usar la clase [**CameraCaptureUI**](/uwp/api/windows.media.capture.cameracaptureui) para capturar fotografías o vídeos mediante la interfaz de usuario de la cámara integrada en Windows. Esta característica es fácil de usar. Permite que la aplicación obtenga una foto o un vídeo capturado por el usuario con solo unas pocas líneas de código.
 
@@ -62,8 +62,8 @@ Realiza una llamada a [**OpenAsync**](/uwp/api/windows.storage.istoragefile.open
 
 Para mostrar la imagen en la interfaz de usuario, declara un control de [**Image**](/uwp/api/Windows.UI.Xaml.Controls.Image) en la página XAML.
 
-:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cs/MainPage.xaml.cs" id="SnippetImageControl":::
-:::code language="cppwinrt" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cppwinrt/MainPage.cpp" id="SnippetImageControl":::
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cs/MainPage.xaml" id="SnippetImageControl":::
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cppwinrt/MainPage.xaml" id="SnippetImageControl":::
 
 Para usar el mapa de bits de software en tu página XAML, incluye el espacio de nombres [**Windows.UI.Xaml.Media.Imaging**](/uwp/api/Windows.UI.Xaml.Media.Imaging) de "using" en el proyecto.
 

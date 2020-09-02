@@ -1,66 +1,66 @@
 ---
-description: Usa los ejemplos de código de C# de esta sección para obtener más información sobre cómo enviar opciones de juego y tráileres usando la API de envío de Microsoft Store.
-title: 'Muestra de C#: envío de aplicación con opciones de juego y tráileres'
+description: Use los ejemplos de código de C# de esta sección para obtener más información sobre el envío de opciones de juego y finalizadores con la API de envío de Microsoft Store.
+title: 'Ejemplo de C#: envío de aplicaciones con opciones y finalizadores de juego'
 ms.date: 07/10/2017
 ms.topic: article
-keywords: Windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, opciones de juego, tráileres, descripciones avanzadas, C#
+keywords: 'Windows 10, UWP, API de envío de Microsoft Store, ejemplos de código, opciones de juego, finalizadores, listas avanzadas, C #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ffb11c020eacd687ab72274b04f41406c3df2af
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 16d51a12c6d703be3a76c1c90d5ab6a2e9442603
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334643"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363198"
 ---
-# <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\# ejemplo: envío de la aplicación con las opciones del juego y finalizadores
+# <a name="c-sample-app-submission-with-game-options-and-trailers"></a>\#Ejemplo de C: envío de aplicaciones con opciones y finalizadores de juego
 
-En este artículo se proporcionan ejemplos de código C# que muestran cómo usar la [API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) para estas tareas:
+En este artículo se proporcionan ejemplos de código de C# que muestran cómo usar la [API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) para estas tareas:
 
-* Obtén un token de acceso de Azure AD para usarlo con la API de envío de Microsoft Store.
+* Obtenga un token de acceso Azure AD para usarlo con la API de envío de Microsoft Store.
 * Crear un envío de aplicación
-* Configura los datos de la descripción de la Tienda para el envío de aplicación, incluida las opciones de descripciones avanzadas de [juegos](manage-app-submissions.md#gaming-options-object) y [tráileres](manage-app-submissions.md#trailer-object).
-* Carga el archivo ZIP que contiene los paquetes, las imágenes de descripciones y los archivos de tráileres para el envío de aplicación.
-* Confirma el envío de aplicación.
+* Configure los datos de la lista de tiendas para el envío de la aplicación, incluidas las opciones de anuncios avanzados de [juegos](manage-app-submissions.md#gaming-options-object) y [finalizadores](manage-app-submissions.md#trailer-object) .
+* Cargue el archivo ZIP que contiene los paquetes, las imágenes de lista y los archivos de finalizador para el envío de la aplicación.
+* Confirme el envío de la aplicación.
 
-Puedes revisar cada ejemplo para conocer más detalles sobre la tarea que muestra, o bien puedes compilar todos los ejemplos de código de este artículo en una aplicación de consola. Para compilar los ejemplos, crea una aplicación de consola de C# denominada **DevCenterApiSample** en Visual Studio, copia cada ejemplo en un archivo de código independiente en el proyecto y compila el proyecto.
+Puedes revisar cada ejemplo para conocer más detalles sobre la tarea que muestra, o bien puedes compilar todos los ejemplos de código de este artículo en una aplicación de consola. Para compilar los ejemplos, cree una aplicación de consola de C# denominada **DevCenterApiSample** en Visual Studio, copie cada ejemplo en un archivo de código independiente en el proyecto y compile el proyecto.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Estos ejemplos cumplen los siguientes requisitos:
+Estos ejemplos tienen los siguientes requisitos:
 
-* Agrega una referencia al ensamblado System.Web en el proyecto.
-* Instala el paquete NuGet [v4.5.11](https://www.newtonsoft.com/json) de Newtonsoft en el proyecto.
+* Agregue una referencia al ensamblado System. Web en el proyecto.
+* Instale el [Newtonsoft.Jsen](https://www.newtonsoft.com/json) el paquete NuGet de Newtonsoft en el proyecto.
 
 <span id="create-app-submission" />
 
 ## <a name="create-an-app-submission"></a>Crear un envío de aplicación
 
-La clase ```CreateAndSubmitSubmissionExample``` define un método ```Execute``` público que llama a otros métodos de ejemplo para usar la API de envío de Microsoft Store para crear y confirmar un envío de aplicación que contiene opciones de juego y un tráiler. Para adaptar este código a tu propio uso:
+La ```CreateAndSubmitSubmissionExample``` clase define un ```Execute``` método público que llama a otros métodos de ejemplo para usar el Microsoft Store API de envío para crear y confirmar un envío de aplicación que contiene opciones de juego y un finalizador. Para adaptar este código para su propio uso:
 
-* Asigna la variable ```tenantId``` al identificador de inquilino para tu aplicación y asigna las variables ```clientId``` y ```clientSecret``` al identificador de cliente y clave para tu aplicación. Para obtener más información, vea [cómo asociar una aplicación de Azure AD con su cuenta de centro de partners](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
-* Asigna la variable ```applicationId``` al [Id. de la Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la cual quieres crear un envío.
+* Asigne la ```tenantId``` variable al identificador de inquilino de la aplicación y asigne las ```clientId``` variables y ```clientSecret``` al identificador de cliente y la clave de la aplicación. Para obtener más información, consulte [Asociación de una aplicación Azure ad a la cuenta del centro de Partners](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account) .
+* Asigne la ```applicationId``` variable al [identificador de almacén](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que desea crear un envío.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/cs/CreateAndSubmitSubmissionExample.cs#CreateAndSubmitSubmissionExample)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_SubmissionAdvancedListings/cs/CreateAndSubmitSubmissionExample.cs" id="CreateAndSubmitSubmissionExample":::
 
 <span id="token" />
 
-## <a name="obtain-an-azure-ad-access-token"></a>Obtener un token de acceso de Azure AD
+## <a name="obtain-an-azure-ad-access-token"></a>Obtención de un token de acceso de Azure AD
 
-La clase ```DevCenterAccessTokenClient``` define un método auxiliar que usa tus valores ```tenantId```, ```clientId``` y ```clientSecret``` para crear un token de acceso de Azure AD para usarlo con la API de envío de Microsoft Store.
+La ```DevCenterAccessTokenClient``` clase define un método auxiliar que usa los ```tenantId``` ```clientId``` valores, y ```clientSecret``` para crear un token de acceso Azure ad para usarlo con la API de envío Microsoft Store.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/cs/DevCenterAccessTokenClient.cs#DevCenterAccessTokenClient)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_SubmissionAdvancedListings/cs/DevCenterAccessTokenClient.cs" id="DevCenterAccessTokenClient":::
 
 <span id="utilities" />
 
-## <a name="helper-methods-to-invoke-the-submission-api-and-upload-submission-files"></a>Métodos auxiliares para invocar la API de envío y los archivos de envío de carga
+## <a name="helper-methods-to-invoke-the-submission-api-and-upload-submission-files"></a>Métodos auxiliares para invocar la API de envío y cargar archivos de envío
 
-La clase ```DevCenterClient``` define métodos auxiliares que invocan una variedad de métodos en la API de envío de Microsoft Store y cargan el archivo ZIP que contiene los paquetes, las imágenes de descripciones y los archivos de tráileres para el envío de aplicación.
+La ```DevCenterClient``` clase define métodos auxiliares que invocan una variedad de métodos en el Microsoft Store API de envío y cargan el archivo zip que contiene los paquetes, las imágenes de lista y los archivos de finalizador para el envío de la aplicación.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[SubmissionApi](./code/StoreServicesExamples_SubmissionAdvancedListings/cs/DevCenterClient.cs#DevCenterClient)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_SubmissionAdvancedListings/cs/DevCenterClient.cs" id="DevCenterClient":::
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md)

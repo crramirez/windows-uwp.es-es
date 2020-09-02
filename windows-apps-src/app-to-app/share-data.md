@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c11c4b630e6b38dd567fece782686743925e214
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4ed74149552e6582bf133550d4db1a45625e8c39
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161329"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364048"
 ---
 # <a name="share-data"></a>Compartir datos
 
@@ -25,11 +25,11 @@ Este artículo explica cómo admitir el contrato para contenido compartido en un
 
 Agrega un controlador de eventos [**DataRequested**](/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested) para que se llame siempre que un usuario invoque el recurso compartido. Esto puede producirse si el usuario pulsa un control de la aplicación (por ejemplo, un botón o un comando de la barra de la aplicación) o automáticamente en un escenario específico (si el usuario finaliza un nivel y obtiene una puntuación alta, por ejemplo).
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetPrepareToShare":::
 
 Cuando se produce un evento [**DataRequested**](/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested), tu aplicación recibe un objeto [**DataRequest**](/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest). Este objeto contiene un [**DataPackage**](/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) que puedes usar para proporcionar el contenido que el usuario quiere compartir. Debes proporcionar un título y datos para compartir. La descripción es opcional, pero se recomienda.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetCreateRequest":::
 
 ## <a name="choose-data"></a>Elige los datos
 
@@ -45,7 +45,7 @@ Puedes compartir varios tipos de datos, incluidos:
 
 El objeto [**DataPackage**](/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) puede contener uno o más de estos formatos, en cualquier combinación. En el ejemplo a continuación se muestra el uso compartido de un texto.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetSetContent":::
 
 ## <a name="set-properties"></a>Establecimiento de las propiedades
 
@@ -53,13 +53,13 @@ Cuando empaquetas datos para compartirlos, puedes suministrar diversas propiedad
 
 Todas las propiedades excepto el título son opcionales. La propiedad de título es obligatoria y debe establecerse.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetSetProperties":::
 
 ## <a name="launch-the-share-ui"></a>Iniciar la interfaz de usuario de uso compartido
 
 El sistema proporciona una interfaz de usuario para uso compartido. Para iniciarla, llama al método [**ShowShareUI**](/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui).
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetShowUI":::
 
 ## <a name="handle-errors"></a>Control de errores
 
@@ -96,7 +96,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 
 * [Comunicación entre aplicaciones](index.md)
 * [Recibir datos](receive-data.md)

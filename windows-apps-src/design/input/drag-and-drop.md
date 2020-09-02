@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9958aab20c13f0104ca1a52c6fccda33c00f6281
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0e661eb0859e9720e31fabb6e5a7b33857de28b7
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159969"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363678"
 ---
 # <a name="drag-and-drop"></a>Arrastrar y colocar
 
@@ -43,7 +43,7 @@ Sea específico de lo que se puede arrastrar. Los usuarios no querrán arrastrar
 
 Aquí se muestra cómo establecer [**CanDrag**](/uwp/api/windows.ui.xaml.uielement.candrag).
 
-[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml" id="SnippetDragArea":::
 
 No es necesario realizar ninguna otra acción para poder arrastrar elementos, a menos que quieras personalizar la interfaz de usuario (de la cual hablamos más adelante en este artículo). La opción para colocar elementos requiere algunos pasos más.
 
@@ -59,14 +59,14 @@ Para el resto de contenido, deberá controlar los eventos **DragStarted** y **Dr
 
 En el siguiente marcado se muestra cómo establecer un área específica de la aplicación como un valor válido para la operación de colocar mediante [**AllowDrop**](/uwp/api/windows.ui.xaml.uielement.allowdrop) en XAML. Si un usuario intenta colocar elementos en otro lugar, el sistema no se lo permitirá. Si quieres que los usuarios puedan colocar elementos en cualquier parte de la aplicación, establece todo el fondo como destino para colocar elementos.
 
-[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml" id="SnippetDropArea":::
 
 
 ## <a name="handle-the-dragover-event"></a>Controlar el evento DragOver
 
 El evento [**DragOver**](/uwp/api/windows.ui.xaml.uielement.dragover) se desencadena cuando un usuario arrastra un elemento sobre la aplicación, pero aún no lo ha colocado. En este controlador, debes especificar qué tipo de operaciones admite la aplicación mediante el uso de la propiedad [**AcceptedOperation**](/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation). La opción Copiar es la más común.
 
-[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml.cs" id="SnippetGrid_DragOver":::
 
 ## <a name="process-the-drop-event"></a>Procesar el evento Drop
 
@@ -74,13 +74,13 @@ El evento [**Drop**](/uwp/api/windows.ui.xaml.uielement.drop) se produce cuando 
 
 Para simplificar en el ejemplo siguiente, se supone que el usuario ha quitado una sola foto y ha tenido acceso a ella directamente. En realidad, los usuarios pueden colocar simultáneamente varios elementos de diferentes formatos. La aplicación debe controlar esta posibilidad comprobando qué tipos de archivos se han quitado y cuántos hay y procesar cada uno de ellos en consecuencia. También debe considerar la posibilidad de notificar al usuario si está intentando hacer algo que la aplicación no admite.
 
-[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml.cs" id="SnippetGrid_Drop":::
 
 ## <a name="customize-the-ui"></a>Personalización de la interfaz de usuario
 
 El sistema proporciona una interfaz de usuario predeterminada para arrastrar y colocar elementos. Sin embargo, puedes personalizar diversas partes de la interfaz de usuario mediante el establecimiento de títulos y glifos personalizados o, directamente, optar por no mostrar ninguna interfaz de usuario. Para personalizar la interfaz de usuario, usa la propiedad [**DragEventArgs.DragUIOverride**](/uwp/api/windows.ui.xaml.drageventargs.draguioverride).
 
-[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml.cs" id="SnippetGrid_DragOverCustom":::
 
 ## <a name="open-a-context-menu-on-an-item-you-can-drag-with-touch"></a>Abrir un menú contextual de un elemento que se pueda arrastrar con la función táctil
 
@@ -109,7 +109,7 @@ La clase [UIElement](/uwp/api/windows.ui.xaml.uielement) realiza la mayor parte 
 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Comunicación entre aplicaciones](index.md)
 * [AllowDrop](/uwp/api/windows.ui.xaml.uielement.allowdrop)

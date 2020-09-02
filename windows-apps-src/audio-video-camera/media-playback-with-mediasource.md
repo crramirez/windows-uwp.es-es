@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d3d9e6e363f213fd00b03b84b09d9f81b9d3843
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f1f428bb8beb4bb933387a77e5a74819016a4c64
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163809"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363888"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Elementos multimedia, listas de reproducción y pistas
 
@@ -39,38 +39,38 @@ En el siguiente ejemplo se muestra cómo reproducir un archivo multimedia selecc
 
 Para completar este escenario, tendrás que incluir los espacios de nombres [**Windows.Media.Core**](/uwp/api/Windows.Media.Core) y [**Windows.Media.Playback**](/uwp/api/Windows.Media.Playback).
 
-[!code-cs[Using](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetUsing":::
 
 Declara una variable de tipo **MediaSource**. Para los ejemplos de este artículo, el origen de contenido multimedia se declara como un miembro de clase para que se pueda acceder a él desde varias ubicaciones.
 
-[!code-cs[DeclareMediaSource](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetDeclareMediaSource":::
 
 Declara una variable para almacenar el objeto **MediaPlayer** y, si quieres representar el contenido multimedia en XAML, agrega un control **MediaPlayerElement** a la página.
 
-[!code-cs[DeclareMediaPlayer](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaPlayer)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetDeclareMediaPlayer":::
 
-[!code-xml[MediaPlayerElement](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetMediaPlayerElement)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml" id="SnippetMediaPlayerElement":::
 
 Para permitir al usuario seleccionar un archivo multimedia para su reproducción, usa una clase [**FileOpenPicker**](/uwp/api/Windows.Storage.Pickers.FileOpenPicker). Con el objeto [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) devuelto desde el método [**PickSingleFileAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) del selector, inicializa un nuevo objeto MediaObject con una llamada a [**MediaSource.CreateFromStorageFile**](/uwp/api/windows.media.core.mediasource.createfromstoragefile). Por último, establece el origen del contenido multimedia como el origen de reproducción del objeto **MediaElement** con una llamada al método [**SetPlaybackSource**](/uwp/api/windows.ui.xaml.controls.mediaelement.setplaybacksource).
 
-[!code-cs[PlayMediaSource](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPlayMediaSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetPlayMediaSource":::
 
 De manera predeterminada, el objeto **MediaPlayer** no comienza a reproducirse automáticamente cuando se establece el origen del contenido multimedia. Puedes comenzar la reproducción de forma manual con una llamada al método [**Play**](/uwp/api/windows.media.playback.mediaplayer.play).
 
-[!code-cs[Play](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetPlay":::
 
 También puedes establecer la propiedad [**AutoPlay**](/uwp/api/windows.media.playback.mediaplayer.autoplay) de **MediaPlayer** en true para indicar al reproductor que comience la reproducción en cuanto se establezca el origen del contenido multimedia.
 
-[!code-cs[AutoPlay](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAutoPlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetAutoPlay":::
 
 ### <a name="create-a-mediasource-from-a-downloadoperation"></a>Crear un MediaSource desde un DownloadOperation
 A partir de Windows, versión 1803, puede crear un objeto **MediaSource** a partir de un **DownloadOperation**.
 
-[!code-cs[CreateMediaSourceFromDownload](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetCreateMediaSourceFromDownload)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetCreateMediaSourceFromDownload":::
 
 Tenga en cuenta que, si bien puede crear un **MediaSource** a partir de una descarga sin iniciarlo o establecer su propiedad **IsRandomAccessRequired** en true, debe hacer ambas cosas antes de intentar adjuntar el **MediaSource** a un **MediaPlayer** o **MediaPlayerElement** para su reproducción.
 
-[!code-cs[StartDownload](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetStartDownload)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetStartDownload":::
 
 
 ## <a name="handle-multiple-audio-video-and-metadata-tracks-with-mediaplaybackitem"></a>Controlar varias pistas de audio, vídeo y metadatos con MediaPlaybackItem
@@ -79,7 +79,7 @@ El uso de un objeto [**MediaSource**](/uwp/api/Windows.Media.Core.MediaSource) p
 
 Declara una variable para almacenar el objeto **MediaPlaybackItem**.
 
-[!code-cs[DeclareMediaPlaybackItem](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaPlaybackItem)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetDeclareMediaPlaybackItem":::
 
 Crea un objeto **MediaPlaybackItem** con una llamada al constructor y pasándolo en un objeto **MediaSource** inicializado.
 
@@ -87,44 +87,44 @@ Si tu aplicación admite varias pistas de audio, vídeo o datos en un elemento d
 
 Por último, establece el origen de reproducción de la clase **MediaElement** o **MediaPlayer** en tu objeto **MediaPlaybackItem**.
 
-[!code-cs[PlayMediaPlaybackItem](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPlayMediaPlaybackItem)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetPlayMediaPlaybackItem":::
 
 > [!NOTE] 
 > Un objeto **MediaSource** únicamente se puede asociar a un solo objeto **MediaPlaybackItem**. Después de crear un objeto **MediaPlaybackItem** a partir de un origen, si intentas crear otro elemento de reproducción desde el mismo origen, se generará un error. Además, después de crear un objeto **MediaPlaybackItem** desde un origen de contenido multimedia, no puedes establecer el objeto **MediaSource** directamente como el origen de un objeto **MediaPlayer**. En cambio, debes usar el objeto **MediaPlaybackItem**.
 
 El evento [**VideoTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.videotrackschanged) se genera después de que un objeto **MediaPlaybackItem** que contiene varias pistas de vídeos se asigne como origen de reproducción y se puede volver a lanzar si la lista de pistas de vídeo cambia para los cambios de elemento. El controlador de este evento te permite actualizar la interfaz de usuario para permitir al usuario cambiar entre pistas disponibles. En este ejemplo se usa un objeto [**ComboBox**](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) para mostrar las pistas de vídeo disponibles.
 
-[!code-xml[VideoComboBox](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetVideoComboBox)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml" id="SnippetVideoComboBox":::
 
 En el controlador **VideoTracksChanged**, repite todas las pistas de la lista [**VideoTracks**](/uwp/api/windows.media.playback.mediaplaybackitem.videotracks) del elemento de reproducción. Para cada pista, se crea un nuevo objeto [**ComboBoxItem**](/uwp/api/Windows.UI.Xaml.Controls.ComboBoxItem). Si la pista todavía no tiene etiqueta, esta se genera a partir del índice de pistas. La propiedad [**Tag**](/uwp/api/windows.ui.xaml.frameworkelement.tag) del elemento de cuadro combinado se establece en el índice de pistas para que se pueda identificar más adelante. Por último, el elemento se agrega al cuadro combinado. Ten en cuenta que estas operaciones se realizan en una llamada [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) porque todos los cambios de la interfaz de usuario deben realizarse en el subproceso de interfaz de usuario y este evento se lanza en un subproceso diferente.
 
-[!code-cs[VideoTracksChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetVideoTracksChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetVideoTracksChanged":::
 
 En el controlador [**SelectionChanged**](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) del cuadro combinado, el índice de pistas se recupera de la propiedad **Tag** del elemento seleccionado. Si estableces la propiedad [**SelectedIndex**](/uwp/api/windows.media.playback.mediaplaybackvideotracklist.selectedindex) en la lista [**VideoTracks**](/uwp/api/windows.media.playback.mediaplaybackitem.videotracks) del elemento de reproducción de contenido multimedia, el objeto **MediaElement** o **MediaPlayer** cambiará la pista de vídeo activa al índice especificado.
 
-[!code-cs[VideoTracksSelectionChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetVideoTracksSelectionChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetVideoTracksSelectionChanged":::
 
 La administración de elementos multimedia con varias pistas de audio funciona exactamente del mismo modo que con las pistas de vídeo. Controla el objeto [**AudioTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.audiotrackschanged) para actualizar la interfaz de usuario con las pistas de audio que se encuentran en la lista [**AudioTracks**](/uwp/api/windows.media.playback.mediaplaybackitem.audiotracks) del elemento de reproducción. Cuando el usuario selecciona una pista de audio, establece la propiedad [**SelectedIndex**](/uwp/api/windows.media.playback.mediaplaybackaudiotracklist.selectedindex) de la lista **AudioTracks** para hacer que el objeto **MediaElement** o **MediaPlayer** cambie la pista de audio activa al índice especificado.
 
-[!code-xml[AudioComboBox](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetAudioComboBox)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml" id="SnippetAudioComboBox":::
 
-[!code-cs[AudioTracksChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAudioTracksChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetAudioTracksChanged":::
 
-[!code-cs[AudioTracksSelectionChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAudioTracksSelectionChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetAudioTracksSelectionChanged":::
 
 Además de contenido de audio y vídeo, un objeto **MediaPlaybackItem** puede contener cero o más objetos [**TimedMetadataTrack**](/uwp/api/Windows.Media.Core.TimedMetadataTrack). Una pista de metadatos temporizada puede contener texto de subtítulo o título, o puede contener datos personalizados que son propiedad de la aplicación. Una pista de metadatos temporizada contiene una lista de indicaciones representadas por objetos que heredan del objeto [**IMediaCue**](/uwp/api/Windows.Media.Core.IMediaCue), como un objeto [**DataCue**](/uwp/api/Windows.Media.Core.DataCue) o [**TimedTextCue**](/uwp/api/Windows.Media.Core.TimedTextCue). Cada indicación tiene una hora de inicio y una duración que determina el momento de activación de la indicación y durante cuánto tiempo.
 
 Similar a las pistas de audio y vídeos, las pistas de metadatos temporizadas de un elemento multimedia se pueden descubrir al controlar el evento [**TimedMetadataTracksChanged**](/uwp/api/windows.media.playback.mediaplaybackitem.timedmetadatatrackschanged) de un objeto **MediaPlaybackItem**. Sin embargo, con las pistas de metadatos temporizadas, quizás el usuario quiera habilitar más de una pista de metadatos a la vez. Además, en función del escenario de la aplicación, es posible que quieras habilitar o deshabilitar las pitas de metadatos automáticamente, sin la intervención del usuario. A efectos de Ilustración, en este ejemplo se agrega un control [**ToggleButton**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton) para cada pista de metadatos en un elemento multimedia para permitir que el usuario habilite y deshabilite la pista. La propiedad **Tag** de cada botón está establecida en el índice de la pista de metadatos asociada para que se pueda identificar cuando se alterne el botón.
 
-[!code-xml[MetaStackPanel](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetMetaStackPanel)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml" id="SnippetMetaStackPanel":::
 
-[!code-cs[TimedMetadataTrackschanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedMetadataTrackschanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetTimedMetadataTrackschanged":::
 
 Dado que puede haber más de una pista de metadatos activa a la vez, no se establece simplemente el índice activo de la lista de pistas de metadatos. En cambio, llama al método [**SetPresentationMode**](/previous-versions/windows/dn986977(v=win.10)) del objeto **MediaPlaybackItem**, pasando el índice de la pista que quieras cambiar y luego proporcionando un valor de la enumeración [**TimedMetadataTrackPresentationMode**](/uwp/api/Windows.Media.Playback.TimedMetadataTrackPresentationMode). El modo de presentación que elijas depende de la implementación de la aplicación. En este ejemplo, la pista de metadatos se establece en **PlatformPresented** cuando está habilitada. En el caso de las pistas basadas en texto, esto significa que el sistema mostrará automáticamente las indicaciones de texto en la pista. Cuando el botón de alternancia está desactivado, el modo de presentación se establece en **deshabilitado**, lo que significa que no se muestra ningún texto y no se genera ningún evento de indicación. Los eventos de indicación se describen más adelante en este artículo.
 
-[!code-cs[ToggleChecked](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetToggleChecked)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetToggleChecked":::
 
-[!code-cs[ToggleUnchecked](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetToggleUnchecked)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetToggleUnchecked":::
 
 Mientras se procesan las pistas de metadatos, puedes acceder al conjunto de indicaciones de la pista mediante el acceso a las propiedades [**Cues**](/uwp/api/windows.media.core.timedmetadatatrack.cues) o [**ActiveCues**](/uwp/api/windows.media.core.timedmetadatatrack.activecues). Puedes hacerlo para actualizar la interfaz de usuario con el fin de mostrar las ubicaciones de indicación de un elemento multimedia.
 
@@ -135,18 +135,18 @@ Una vez que tengas una referencia a la pista insertada, comprueba el valor de [*
 
 Por último, puedes registrar el evento [**OpenFailed**](/uwp/api/windows.media.core.audiotrack.openfailed) de la pista, que se genera si se admite la pista en el dispositivo, pero no se pudo abrir debido a un error desconocido en la canalización.
 
-[!code-cs[AudioTracksChanged_CodecCheck](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAudioTracksChanged_CodecCheck)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetAudioTracksChanged_CodecCheck":::
 
 En el controlador del evento [**OpenFailed**](/uwp/api/windows.media.core.audiotrack.openfailed), puedes comprobar si se desconoce el estado de **MediaSource** y, si es así, puedes seleccionar mediante programación una pista diferente para reproducir, permitir al usuario que elija una pista diferente o abandonar la reproducción.
 
-[!code-cs[OpenFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetOpenFailed)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetOpenFailed":::
 
 ## <a name="set-display-properties-used-by-the-system-media-transport-controls"></a>Establecer las propiedades de visualización que se usan en los controles de transporte de contenido multimedia del sistema
 A partir de Windows 10, versión 1607, el contenido multimedia que se reproduce en una clase [**MediaPlayer**](/uwp/api/Windows.Media.Playback.MediaPlayer) se integra automáticamente en los controles de transporte de contenido multimedia del sistema (SMTC) de manera predeterminada. Puedes especificar los metadatos que se mostrarán en SMTC actualizando las propiedades de visualización de **MediaPlaybackItem**. Obtén un objeto que representa las propiedades de visualización de un elemento mediante una llamada a [**GetDisplayProperties**](/uwp/api/windows.media.playback.mediaplaybackitem.getdisplayproperties). Establece si el elemento de reproducción es música o vídeo al establecer el valor de la propiedad [**Type**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.type). A continuación, establece las propiedades [**VideoProperties**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.videoproperties) o [**MusicProperties**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.musicproperties) del objeto. Llama a [**ApplyDisplayProperties**](/uwp/api/windows.media.playback.mediaplaybackitem.applydisplayproperties) para actualizar las propiedades del elemento en los valores que hayas especificado. Por lo general, una aplicación recuperará los valores de visualización dinámicamente desde un servicio web, pero en el siguiente ejemplo se muestra este proceso con los valores codificados de forma rígida.
 
-[!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetSetVideoProperties":::
 
-[!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetSetMusicProperties":::
 
 ## <a name="add-external-timed-text-with-timedtextsource"></a>Agregar texto temporizado externo con TimedTextSource
 
@@ -154,17 +154,17 @@ En algunos escenarios, puedes tener archivos externos que contienen texto tempor
 
 En este ejemplo, se usa una colección **Dictionary** para almacenar una lista de los orígenes de texto temporizado del elemento multimedia con el URI de origen y el objeto **TimedTextSource** como el par clave y valor con el fin de identificar las pistas después de que se hayan resuelto.
 
-[!code-cs[TimedTextSourceMap](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedTextSourceMap)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetTimedTextSourceMap":::
 
 Crea un nuevo objeto **TimedTextSource** para cada archivo de texto temporizado externo con una llamada a [**CreateFromUri**](/uwp/api/windows.media.core.mediasource.createfromuri). Agrega una entrada al objeto **Dictionary** para el origen de texto temporizado. Agrega un controlador para el evento [**TimedTextSource.Resolved**](/uwp/api/windows.media.core.timedtextsource.resolved) con el fin de controlar si el elemento no se pudo cargar o para establecer propiedades adicionales después de que el elemento se haya cargado correctamente.
 
 Registra todos los objetos **TimedTextSource** en el objeto **MediaSource** agregándolos a la colección [**ExternalTimedTextSources**](/uwp/api/windows.media.core.mediasource.externaltimedtextsources). Ten en cuenta que los orígenes de texto temporizado externos se agregan directamente al objeto **MediaSource** y no al objeto **MediaPlaybackItem** creado a partir del origen. Para actualizar la interfaz de usuario y reflejar las pistas de texto externo, registra y controla el evento **TimedMetadataTracksChanged** según se describió anteriormente en este artículo.
 
-[!code-cs[TimedTextSource](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedTextSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetTimedTextSource":::
 
 En el controlador del evento [**TimedTextSource.Resolved**](/uwp/api/windows.media.core.timedtextsource.resolved), comprueba la propiedad **Error** del objeto [**TimedTextSourceResolveResultEventArgs**](/uwp/api/Windows.Media.Core.TimedTextSourceResolveResultEventArgs) que se pasó al controlador para determinar si se produjo un error al intentar cargar los datos de texto temporizado. Si el elemento se resolvió correctamente, puede usar este controlador para actualizar las propiedades adicionales de la pista resuelta. En este ejemplo se agrega una etiqueta para cada pista basada en el URI previamente almacenado en el **Diccionario**.
 
-[!code-cs[TimedTextSourceResolved](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTimedTextSourceResolved)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetTimedTextSourceResolved":::
 
 ## <a name="add-additional-metadata-tracks"></a>Agregar pistas de metadatos adicionales
 
@@ -176,17 +176,17 @@ Cree un nuevo objeto de pila, adecuado para el tipo de seguimiento de metadatos 
 
 A partir de Windows 10, versión 1703, la propiedad **DataCue. Properties** expone un [**PropertySet**](/uwp/api/windows.foundation.collections.propertyset) que puede usar para almacenar propiedades personalizadas en pares de clave/datos que se pueden recuperar en los eventos **CueEntered** y **CueExited** .  
 
-[!code-cs[AddDataTrack](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAddDataTrack)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetAddDataTrack":::
 
 El evento **CueEntered** se genera cuando se ha alcanzado la hora de inicio de una indicación, siempre que la pista asociada tenga un modo de presentación de **ApplicationPresented**, **Hidden** o **PlatformPresented**. Los eventos de indicación no se generan para pistas de metadatos mientras el modo de presentación de la pista es **Disabled**. En este ejemplo, simplemente se envían a la ventana de depuración los datos personalizados asociados con la indicación.
 
-[!code-cs[DataCueEntered](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetDataCueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetDataCueEntered":::
 
 En este ejemplo se agrega una pista de texto personalizado al especificar **TimedMetadataKind.Caption** durante la creación de la pista y usando objetos [**TimedTextCue**](/uwp/api/Windows.Media.Core.TimedTextCue) para agregar indicaciones a la pista.
 
-[!code-cs[AddTextTrack](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAddTextTrack)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetAddTextTrack":::
 
-[!code-cs[TextCueEntered](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetTextCueEntered)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetTextCueEntered":::
 
 ## <a name="play-a-list-of-media-items-with-mediaplaybacklist"></a>Reproducir una lista de elementos multimedia con MediaPlaybackList
 
@@ -196,7 +196,7 @@ El objeto [**MediaPlaybackList**](/uwp/api/Windows.Media.Playback.MediaPlaybackL
 
 Para empezar, declara una variable para almacenar el objeto **MediaPlaybackList**.
 
-[!code-cs[DeclareMediaPlaybackList](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaPlaybackList)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetDeclareMediaPlaybackList":::
 
 Crear un objeto **MediaPlaybackItem** para cada elemento multimedia que quieras agregar a tu lista usando el mismo procedimiento descrito anteriormente en este artículo. Inicializa el objeto **MediaPlaybackList** y agrégale los elementos de reproducción de contenido multimedia. Registra el controlador del evento [**CurrentItemChanged**](/uwp/api/windows.media.playback.mediaplaybacklist.currentitemchanged). Este evento permite actualizar la interfaz de usuario para reflejar el elemento multimedia que se encuentra en reproducción. También puede registrarse para el evento [ItemOpened](/uwp/api/Windows.Media.Playback.MediaPlaybackList.ItemOpened) , que se genera cuando un elemento de la lista se abre correctamente y el evento [ItemFailed](/uwp/api/Windows.Media.Playback.MediaPlaybackList.ItemFailed) , que se genera cuando no se puede abrir un elemento de la lista.
 
@@ -204,54 +204,54 @@ A partir de Windows 10, versión 1703, puede especificar el número máximo de o
 
 Para habilitar la reproducción de la lista, establezca el origen de reproducción de la **MediaPlayer** en el **MediaPlaybackList**.
 
-[!code-cs[PlayMediaPlaybackList](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPlayMediaPlaybackList)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetPlayMediaPlaybackList":::
 
 En el controlador de eventos **CurrentItemChanged**, actualiza la interfaz de usuario para reflejar el elemento en reproducción, que se puede recuperar con la propiedad [**NewItem**](/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.newitem) del objeto [**CurrentMediaPlaybackItemChangedEventArgs**](/uwp/api/Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs) pasado al evento. Recuerda que si actualizas la interfaz de usuario de este evento, debes hacerlo dentro de una llamada a [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) para que las actualizaciones se hagan en el subproceso de la interfaz de usuario.
 
 A partir de Windows 10, versión 1703, puede comprobar la propiedad [CurrentMediaPlaybackItemChangedEventArgs. Reason](/uwp/api/windows.media.playback.currentmediaplaybackitemchangedeventargs.Reason) para obtener un valor que indica la razón por la que el elemento ha cambiado, como la aplicación que cambia los elementos mediante programación, el elemento que se está reproduciendo anteriormente hasta su final o un error que se produce.
 
-[!code-cs[MediaPlaybackListItemChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetMediaPlaybackListItemChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetMediaPlaybackListItemChanged":::
 
 
 Llama a [**MovePrevious**](/uwp/api/windows.media.playback.mediaplaybacklist.moveprevious) o [**MoveNext**](/uwp/api/windows.media.playback.mediaplaybacklist.movenext) para hacer que el reproductor de contenido multimedia reproduzca el elemento anterior o siguiente en tu objeto **MediaPlaybackList**.
 
-[!code-cs[PrevButton](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPrevButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetPrevButton":::
 
-[!code-cs[NextButton](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetNextButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetNextButton":::
 
 Establece la propiedad [**ShuffleEnabled**](/uwp/api/windows.media.playback.mediaplaybacklist.shuffleenabled) para especificar si el reproductor de contenido multimedia debe reproducir los elementos de la lista en orden aleatorio.
 
-[!code-cs[ShuffleButton](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetShuffleButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetShuffleButton":::
 
 Establece la propiedad [**AutoRepeatEnabled**](/uwp/api/windows.media.playback.mediaplaybacklist.autorepeatenabled) para especificar si el reproductor de contenido multimedia debe repetir la reproducción de la lista.
 
-[!code-cs[RepeatButton](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetRepeatButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetRepeatButton":::
 
 
 ### <a name="handle-the-failure-of-media-items-in-a-playback-list"></a>Controlar los errores de los elementos multimedia en una lista de reproducción
 El evento [**ItemFailed**](/uwp/api/windows.media.playback.mediaplaybacklist.itemfailed) se genera cuando se produce un error al intentar abrir un elemento de la lista. La propiedad [**ErrorCode**](/uwp/api/windows.media.playback.mediaplaybackitemerror.errorcode) del objeto [**MediaPlaybackItemError**](/uwp/api/Windows.Media.Playback.MediaPlaybackItemError) pasado al controlador enumera la causa específica del error cuando es posible, incluidos los errores de red, descodificación o de cifrado.
 
-[!code-cs[ItemFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetItemFailed)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetItemFailed":::
 
 ### <a name="disable-playback-of-items-in-a-playback-list"></a>Deshabilitar la reproducción de elementos en una lista de reproducción
 A partir de Windows 10, versión 1703, puede deshabilitar la reproducción de uno o más elementos en un **MediaPlaybackItemList** estableciendo la propiedad [IsDisabledInPlaybackList](/uwp/api/Windows.Media.Playback.MediaPlaybackItem.IsDisabledInPlaybackList) de un elemento [MediaPlaybackItem](/uwp/api/Windows.Media.Playback.MediaPlaybackItem) en false. 
 
 Un escenario típico para esta característica es para las aplicaciones que reproducen música transmitida desde Internet. La aplicación puede escuchar los cambios en el estado de conexión de red del dispositivo y deshabilitar la reproducción de elementos que no se descargan por completo. En el ejemplo siguiente, se registra un controlador para el evento [NetworkInformation. NetworkStatusChanged](/uwp/api/Windows.Networking.Connectivity.NetworkInformation.NetworkStatusChanged) .
 
-[!code-cs[RegisterNetworkStatusChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetRegisterNetworkStatusChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetRegisterNetworkStatusChanged":::
 
 En el controlador de **NetworkStatusChanged**, compruebe si [GetInternetConnectionProfile](/uwp/api/Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile) devuelve null, lo que indica que la red no está conectada. En este caso, recorra en bucle todos los elementos de la lista de reproducción y si el [TotalDownloadProgress](/uwp/api/windows.media.playback.mediaplaybackitem.TotalDownloadProgress) del elemento es menor que 1, lo que significa que el elemento no se ha descargado completamente, deshabilite el elemento. Si está habilitada la conexión de red, recorra en bucle todos los elementos de la lista de reproducción y habilite cada elemento.
 
-[!code-cs[NetworkStatusChanged](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetNetworkStatusChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetNetworkStatusChanged":::
 
 ### <a name="defer-binding-of-media-content-for-items-in-a-playback-list-by-using-mediabinder"></a>Aplazar el enlace de contenido multimedia para los elementos de una lista de reproducción mediante MediaBinder
 En los ejemplos anteriores, se crea un objeto **MediaSource** a partir de un archivo, una dirección URL o una secuencia, después del cual se crea un objeto **MediaPlaybackItem** y se agrega a un objeto **MediaPlaybackList**. En algunos escenarios, como si se cobra al usuario para ver el contenido, es posible que desee aplazar la recuperación del contenido de un objeto **MediaSource** hasta que el elemento de la lista de reproducción esté listo para reproducirse realmente. Para implementar este escenario, cree una instancia de la clase [**MediaBinder**](/uwp/api/Windows.Media.Core.MediaBinder) . Establezca la propiedad [**token**](/uwp/api/Windows.Media.Core.MediaBinder.Token) en una cadena definida por la aplicación que identifique el contenido para el que desea aplazar la recuperación y, a continuación, registre un controlador para el evento de [**enlace**](/uwp/api/Windows.Media.Core.MediaBinder.Binding) . A continuación, cree un **MediaSource** desde el **enlazador** llamando a [**MediaSource. CreateFromMediaBinder**](/uwp/api/windows.media.core.mediasource.createfrommediabinder). A continuación, cree un **MediaPlaybackItem** a partir de **MediaSource** y agréguelo a la lista de reproducción como de costumbre.
 
-[!code-cs[InitMediaBinder](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetInitMediaBinder)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetInitMediaBinder":::
 
 Cuando el sistema determina que es necesario recuperar el contenido asociado a **MediaBinder** , se generará el evento de **enlace** . En el controlador de este evento, puede recuperar la instancia de **MediaBinder** desde el [**MediaBindingEventArgs**](/uwp/api/windows.media.core.mediabindingeventargs) que se pasa al evento. Recupere la cadena que especificó para la propiedad **token** y Úsela para determinar qué contenido se debe recuperar. **MediaBindingEventArgs** proporciona métodos para establecer el contenido enlazado en varias representaciones diferentes, como [**SetStorageFile**](/uwp/api/windows.media.core.mediabindingeventargs.setstoragefile), [**SetStream**](/uwp/api/windows.media.core.mediabindingeventargs.setstream), [**SetStreamReference**](/uwp/api/windows.media.core.mediabindingeventargs.setstreamreference)y [**SetUri**](/uwp/api/windows.media.core.mediabindingeventargs.seturi). 
 
-[!code-cs[BinderBinding](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetBinderBinding)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetBinderBinding":::
 
 Tenga en cuenta que si realiza operaciones asincrónicas, como solicitudes Web, en el controlador de eventos de **enlace** , debe llamar al método [**MediaBindingEventArgs. GetDeferral**](/uwp/api/windows.media.core.mediabindingeventargs.GetDeferral) para indicar al sistema que espere a que la operación se complete antes de continuar. Realice una llamada a [**aplazamiento. Complete**](/uwp/api/windows.foundation.deferral.Complete) después de que se complete la operación para indicar al sistema que continúe.
 

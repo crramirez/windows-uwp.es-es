@@ -5,12 +5,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, ADS, Advertising, ad control, ad nativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d3f26049350ce2cc2fc2c16f85989e9ebd5633c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 417560c9099937324b39a8cdfafb7d62ec7e64e6
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171379"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364088"
 ---
 # <a name="native-ads"></a>Anuncios nativos
 
@@ -46,21 +46,21 @@ Siga estas instrucciones para integrar un ad nativo en la aplicación y confirma
 
 4. En el archivo de código adecuado de la aplicación (por ejemplo, en MainPage.xaml.cs o un archivo de código para alguna otra página), agregue las siguientes referencias de espacio de nombres.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Namespaces)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="Namespaces":::
 
 5.  En una ubicación adecuada de la aplicación (por ejemplo, en ```MainPage``` o en otra página), declare un objeto [NativeAdsManagerV2](/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) y varios campos de cadena que representen el identificador de la aplicación y el identificador de la unidad de ad de su ad nativo. En el ejemplo de código siguiente se asignan los `myAppId` `myAdUnitId` campos y a los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) de los anuncios nativos.
     > [!NOTE]
     > Cada **NativeAdsManagerV2** tiene una *unidad de anuncio* correspondiente que los servicios usan para servir anuncios al control de ad nativo, y cada unidad de ad está formada por un identificador de *unidad de ad* y un identificador de *aplicación*. En estos pasos, asignará el identificador de unidad de ad de prueba y los valores de ID. de aplicación al control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debe [reemplazar estos valores de prueba con valores dinámicos](#release) del centro de Partners.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="Variables":::
 
 6.  En el código que se ejecuta en el inicio (por ejemplo, en el constructor de la página), cree una instancia del objeto **NativeAdsManagerV2** y conecte los controladores de eventos para los eventos **AdReady** y **ErrorOccurred** del objeto.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ConfigureNativeAd)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="ConfigureNativeAd":::
 
 7.  Cuando esté listo para mostrar un ad nativo, llame al método **RequestAd** para capturar un anuncio.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#RequestAd)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="RequestAd":::
 
 8.  Cuando un ad nativo está listo para su aplicación, se llama al controlador de eventos [AdReady](/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.adready) y se pasa un objeto [NativeAdV2](/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) que representa el ad nativo al parámetro *e* . Use las propiedades **NativeAdV2** para obtener cada elemento del ad nativo y mostrar estos elementos en la página. Asegúrese de llamar también al método **RegisterAdContainer** para registrar el elemento de la interfaz de usuario que actúa como contenedor para el ad nativo; Esto es necesario para realizar un seguimiento adecuado de las impresiones de anuncios y hacer clic en ellos.
     > [!NOTE]
@@ -96,11 +96,11 @@ Siga estas instrucciones para integrar un ad nativo en la aplicación y confirma
 
     En el ejemplo de código siguiente se muestra un controlador de eventos **AdReady** que muestra cada elemento de ad nativo en los controles de **StackPanel** y, a continuación, llama al método **RegisterAdContainer** para registrar el **StackPanel**. En este código se supone que se ejecuta desde el archivo de código subyacente de la página que contiene el **StackPanel**.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#AdReady)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="AdReady":::
 
 9.  Defina un controlador de eventos para el evento **ErrorOccurred** con el fin de controlar los errores relacionados con ad nativo. En el ejemplo siguiente se escribe información de error en la ventana de **salida** de Visual Studio durante las pruebas.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ErrorOccurred)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="ErrorOccurred":::
 
 10.  Compile y ejecute la aplicación para verla con un anuncio de prueba.
 

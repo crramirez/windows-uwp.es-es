@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 388d1bc2af9d39d08087c7ec5b9dcbc710e74bba
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2b847b7162de19b81c83be2f3769042a5acc8a3a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163579"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363798"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Establecer el formato, la resolución y la velocidad de fotogramas para MediaCapture
 
@@ -36,15 +36,15 @@ La clase auxiliar que se define a continuación controla la comprobación y la c
 
 Debes incluir el espacio de nombres [**Windows.Media.MediaProperties**](/uwp/api/Windows.Media.MediaProperties) en el archivo de origen de la clase auxiliar.
 
-[!code-cs[MediaEncodingPropertiesUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMediaEncodingPropertiesUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetMediaEncodingPropertiesUsing":::
 
-[!code-cs[StreamPropertiesHelper](./code/BasicMediaCaptureWin10/cs/StreamPropertiesHelper.cs#SnippetStreamPropertiesHelper)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/StreamPropertiesHelper.cs" id="SnippetStreamPropertiesHelper":::
 
 ## <a name="determine-if-the-preview-and-capture-streams-are-independent"></a>Determinar si las secuencias de vista previa y captura son independientes
 
 En algunos dispositivos, se usa el mismo pin de hardware para las secuencias de vista previa y captura. En estos dispositivos, al establecer las propiedades de codificación de uno también se establecen las del otro. En los dispositivos que usan pines de hardware diferentes para la vista previa y la captura, las propiedades pueden establecerse por separado para cada secuencia. Usa el siguiente código para determinar si las capturas de vista previa y captura son independientes. Debes ajustar la interfaz de usuario para habilitar o deshabilitar la configuración de las secuencias de forma independiente en función del resultado de esta prueba.
 
-[!code-cs[CheckIfStreamsAreIdentical](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCheckIfStreamsAreIdentical)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetCheckIfStreamsAreIdentical":::
 
 ## <a name="get-a-list-of-available-stream-properties"></a>Obtener una lista de propiedades de secuencia disponibles
 
@@ -52,17 +52,17 @@ Obtén una lista de las propiedades de secuencia disponibles para un dispositivo
 
 Si la aplicación tiene requisitos de velocidad de fotogramas o de resolución específicos, puedes seleccionar un conjunto de propiedades de codificación multimedia mediante programación. En su lugar, una aplicación de cámara típica expondrá la lista de propiedades disponibles en la interfaz de usuario y permitirá que el usuario seleccione la configuración que desee. Se crea un **ComboBoxItem** para cada elemento de la lista de objetos **StreamPropertiesHelper** de la lista. El contenido se establece en el nombre descriptivo devuelto por la clase auxiliar y la etiqueta se establece en la clase auxiliar en sí, para que se pueda usar más adelante con el fin de recuperar las propiedades de codificación asociadas. Cada objeto **ComboBoxItem** se agrega posteriormente al objeto **ComboBox** que se pasa al método.
 
-[!code-cs[PopulateStreamPropertiesUI](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPopulateStreamPropertiesUI)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetPopulateStreamPropertiesUI":::
 
 ## <a name="set-the-desired-stream-properties"></a>Establecer las propiedades de secuencia deseadas
 
 Indica al controlador de dispositivo de vídeo que use tus propiedades de codificación deseadas, para lo cual debe llamar a [**SetMediaStreamPropertiesAsync**](/uwp/api/windows.media.devices.videodevicecontroller.setmediastreampropertiesasync) y pasar el valor **MediaStreamType** que indica si se deben establecer las propiedades de foto, vídeo o vista previa. En este ejemplo se establecen las propiedades de codificación solicitadas cuando el usuario selecciona un elemento en uno de los objetos **ComboBox** que se rellenan con el método auxiliar **PopulateStreamPropertiesUI**.
 
-[!code-cs[PreviewSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPreviewSettingsChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetPreviewSettingsChanged":::
 
-[!code-cs[PhotoSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhotoSettingsChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetPhotoSettingsChanged":::
 
-[!code-cs[VideoSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoSettingsChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetVideoSettingsChanged":::
 
 ## <a name="match-the-aspect-ratio-of-the-preview-and-capture-streams"></a>Coincidir con la relación de aspecto de las secuencias de vista previa y captura
 
@@ -79,7 +79,7 @@ Una aplicación de cámara típica proporcionará la interfaz de usuario para el
 
 Para garantizar que las secuencias de captura de foto o vídeo coincidan con la relación de aspecto de la secuencia de vista previa, este ejemplo llama a [**VideoDeviceController.GetMediaStreamProperties**](/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties) y pasa el valor de enumeración **VideoPreview** para solicitar las propiedades de secuencia actuales de la secuencia de vista previa. A continuación, se define un período de tolerancia de relación de aspecto reducido para que se puedan incluir relaciones de aspecto que no sean exactamente iguales que las de la secuencia de vista previa, siempre que sean aproximadas. A continuación, se usa un método de extensión Linq para seleccionar solo los objetos **StreamPropertiesHelper** donde la relación de aspecto se encuentra dentro del intervalo de tolerancia definido de la secuencia de vista previa.
 
-[!code-cs[MatchPreviewAspectRatio](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMatchPreviewAspectRatio)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetMatchPreviewAspectRatio":::
 
  
 
