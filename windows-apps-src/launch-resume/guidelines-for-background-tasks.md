@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: fb585b46399d7b24eaafa531b2aae34f397dbeb2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 00717a64135ef32a99b06c61b31e2ff59a587878
+ms.sourcegitcommit: b66796c73f14da63794efa66c8ded2caa25da0f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155849"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89285456"
 ---
 # <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 
@@ -61,7 +61,7 @@ Las tareas en segundo plano que se ejecutan en el mismo proceso que la aplicaci�
 
 > **Importante**    A partir de Windows 10, ya no es necesario que las aplicaciones estén en la pantalla de bloqueo como requisito previo para ejecutar tareas en segundo plano.
 
-Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejecutar tipos de tareas admitidos sin necesidad de que se anclen en la pantalla de bloqueo. Sin embargo, las aplicaciones deben llamar a [**GetAccessState**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) y comprobar que no se deniegue la ejecución de la aplicación en segundo plano. Asegúrese de que [**GetAccessStatus**] no devuelve una de las enumeraciones de [**BackgroundAccessStatus**](/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) denegadas. Por ejemplo, este método devolverá ( https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundAccessStatus) si el usuario ha denegado explícitamente los permisos de tarea en segundo plano para la aplicación en la configuración del dispositivo.
+Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejecutar tipos de tareas admitidos sin necesidad de que se anclen en la pantalla de bloqueo. Sin embargo, las aplicaciones deben llamar a [**GetAccessState**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) y comprobar que no se deniegue la ejecución de la aplicación en segundo plano. Asegúrese de que **GetAccessStatus** no devuelve una de las enumeraciones [**BackgroundAccessStatus**](/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) denegadas. Por ejemplo, este método devolverá **BackgroundAccessStatus. DeniedByUser** si el usuario ha denegado explícitamente permisos de tarea en segundo plano para la aplicación en la configuración del dispositivo.
 
 Si se deniega la ejecución de la aplicación en segundo plano, la aplicación debe llamar a [**RequestAccessAsync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) y asegurarse de que la respuesta no se deniega antes de registrar las tareas en segundo plano.
 
