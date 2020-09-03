@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python en windows, python web con wsl, aplicación web de python con el subsistema de windows para linux, desarrollo web de python en windows, aplicación de flask en windows, aplicación de django en windows, python web, desarrollo web de flask en windows, desarrollo web de django en windows, desarrollo web de windows con python, desarrollo web de python de vs code, extensión remota de wsl, ubuntu, wsl, venv, pip, extensión de python de microsoft, ejecutar python en windows, usar python en windows, compilar con python en windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 3ae3b04738152ff1a142e1599cc05357006456b9
-ms.sourcegitcommit: 2af814b7f94ee882f42fae8f61130b9cc9833256
+ms.openlocfilehash: fedfb42e4c1604b3570c2b4db21b12926bea3762
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83717144"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174569"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Introducción al uso de Python para el desarrollo web en Windows
 
@@ -29,14 +29,14 @@ Si usas Python para tareas que no estén relacionadas con el desarrollo web, te 
 
 WSL permite ejecutar un entorno de línea de comandos de GNU/Linux integrado directamente con Windows y tus herramientas favoritas, como Visual Studio Code, Outlook, etc.
 
-Para habilitar e instalar WSL (o WSL 2 según tus necesidades), sigue los pasos que se describen en la [documentación de instalación de WSL](https://docs.microsoft.com/windows/wsl/install-win10). Estos pasos incluirán la elección de una distribución de Linux (por ejemplo, Ubuntu).
+Para habilitar e instalar WSL (o WSL 2 según tus necesidades), sigue los pasos que se describen en la [documentación de instalación de WSL](/windows/wsl/install-win10). Estos pasos incluirán la elección de una distribución de Linux (por ejemplo, Ubuntu).
 
 Una vez que hayas instalado WSL y una distribución de Linux, abre la distribución de Linux (puedes encontrarla en el menú Inicio de Windows), y comprueba la versión y el nombre de código mediante el comando: `lsb_release -dc`.
 
 Se recomienda actualizar la distribución de Linux con regularidad, incluso inmediatamente después de instalarla, para asegurarse de que tiene los paquetes más recientes. Windows no controla automáticamente esta actualización. Para actualizar la distribución, usa el comando: `sudo apt update && sudo apt upgrade`.  
 
 > [!TIP]
-> Considera la posibilidad de [instalar el nuevo Terminal Windows desde Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701) para habilitar varias pestañas (cambia rápidamente entre varias líneas de comando de Linux, el símbolo del sistema de Windows, PowerShell, la CLI de Azure, etc.), crear enlaces de teclado personalizados (teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), usar la característica de búsqueda y configurar temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo/desenfoque/transparencia). [Más información](https://docs.microsoft.com/windows/terminal).
+> Considera la posibilidad de [instalar el nuevo Terminal Windows desde Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701) para habilitar varias pestañas (cambia rápidamente entre varias líneas de comando de Linux, el símbolo del sistema de Windows, PowerShell, la CLI de Azure, etc.), crear enlaces de teclado personalizados (teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), usar la característica de búsqueda y configurar temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo/desenfoque/transparencia). [Más información](/windows/terminal).
 
 ## <a name="set-up-visual-studio-code"></a>Configuración de Visual Studio Code
 
@@ -321,5 +321,5 @@ Enhorabuena, has creado una aplicación web de Django con VS Code y el Subsistem
 
 - [Tutorial de Python con VS Code](https://code.visualstudio.com/docs/python/python-tutorial): un tutorial introductorio para VS Code como entorno de Python, en el que principalmente se describe cómo editar, ejecutar y depurar código.
 - [Compatibilidad de GIT en VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support): obtén información sobre cómo usar los aspectos básicos del control de versiones de GIT en VS Code.  
-- [Información sobre las actualizaciones disponibles próximamente con WSL 2](https://docs.microsoft.com/windows/wsl/wsl2-index): esta nueva versión cambia el modo en que las distribuciones de Linux interactúan con Windows, lo que aumenta el rendimiento del sistema de archivos y agrega compatibilidad completa con las llamadas del sistema.
-- [Trabajo con varias distribuciones de Linux en Windows](https://docs.microsoft.com/windows/wsl/wsl-config): obtén información sobre cómo administrar varias distribuciones de Linux diferentes en la máquina Windows.
+- [Información sobre las actualizaciones disponibles próximamente con WSL 2](/windows/wsl/wsl2-index): esta nueva versión cambia el modo en que las distribuciones de Linux interactúan con Windows, lo que aumenta el rendimiento del sistema de archivos y agrega compatibilidad completa con las llamadas del sistema.
+- [Trabajo con varias distribuciones de Linux en Windows](/windows/wsl/wsl-config): obtén información sobre cómo administrar varias distribuciones de Linux diferentes en la máquina Windows.

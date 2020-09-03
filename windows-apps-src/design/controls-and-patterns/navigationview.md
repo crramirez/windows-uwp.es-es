@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b1f3881081b22fd98e9956f3c2fe45922531677b
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: 7f71a11c76bc6318c9000a9468c7bd9574e0c5d0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448415"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170039"
 ---
 # <a name="navigation-view"></a>Vista de navegación
 
@@ -152,7 +152,7 @@ El panel NavigationView puede contener:
 - Objetos [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator). Separadores para agrupar los elementos de navegación. Establece la propiedad [Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) en 0 para representar el separador como espacio.
 - Objetos [NavigationViewItemHeader](/uwp/api/windows.ui.xaml.controls.navigationviewitemheader). Encabezados para etiquetar grupos de elementos.
 - Un control [AutoSuggestBox](auto-suggest-box.md) opcional para permitir la búsqueda en el nivel de aplicación. Asigna al control la propiedad [NavigationView.AutoSuggestBox](/uwp/api/windows.ui.xaml.controls.navigationview.autosuggestbox).
-- Un punto de entrada opcional para la [configuración de la aplicación](../app-settings/app-settings-and-data.md). Para ocultar el elemento de configuración, establece la propiedad [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) en **false**.
+- Un punto de entrada opcional para la [configuración de la aplicación](../app-settings/guidelines-for-app-settings.md). Para ocultar el elemento de configuración, establece la propiedad [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) en **false**.
 
 El panel izquierdo también contiene:
 
@@ -639,7 +639,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 ```
 
 > [!NOTE]
-> Para la versión [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) de este ejemplo de código, empiece creando un nuevo proyecto en la plantilla de proyecto **Aplicación vacía (C++/WinRT)** y, a continuación, agregue el código a la lista de los archivos de código fuente indicados. Para usar el código fuente exactamente como se muestra en la lista, asigne al nuevo proyecto el nombre *NavigationViewCppWinRT*.
+> Para la versión [C++/WinRT](../../cpp-and-winrt-apis/index.md) de este ejemplo de código, empiece creando un nuevo proyecto en la plantilla de proyecto **Aplicación vacía (C++/WinRT)** y, a continuación, agregue el código a la lista de los archivos de código fuente indicados. Para usar el código fuente exactamente como se muestra en la lista, asigne al nuevo proyecto el nombre *NavigationViewCppWinRT*.
 
 ```cppwinrt
 // MainPage.idl
@@ -945,7 +945,7 @@ namespace winrt::NavigationViewCppWinRT::implementation
 
 El código de C# y C++/WinRT mostrado anteriormente se ha diseñado para que pueda usar el mismo marcado XAML para ambas versiones. Sin embargo, hay otra manera de implementar la versión de C++/WinRT que se describe en esta sección, que quizás le resulte más adecuada.
 
-A continuación se muestra una versión alternativa del controlador **NavView_ItemInvoked**. La técnica de esta versión del controlador implica almacenar primero (en la etiqueta de [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) el nombre de tipo completo de la página a la que quiere ir. En el controlador, aplica la conversión unboxing a ese valor, conviértelo en un objeto [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) y úsalo para ir a la página de destino. No es necesaria la variable de asignación denominada `_pages` que ve en los ejemplos anteriores. Podrá crear pruebas unitarias que confirmen que los valores dentro de las etiquetas son de un tipo válido. Consulta también [Conversión boxing y unboxing de valores escalares a IInspectable con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
+A continuación se muestra una versión alternativa del controlador **NavView_ItemInvoked**. La técnica de esta versión del controlador implica almacenar primero (en la etiqueta de [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) el nombre de tipo completo de la página a la que quiere ir. En el controlador, aplica la conversión unboxing a ese valor, conviértelo en un objeto [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) y úsalo para ir a la página de destino. No es necesaria la variable de asignación denominada `_pages` que ve en los ejemplos anteriores. Podrá crear pruebas unitarias que confirmen que los valores dentro de las etiquetas son de un tipo válido. Consulta también [Conversión boxing y unboxing de valores escalares a IInspectable con C++/WinRT](../../cpp-and-winrt-apis/boxing.md).
 
 ```cppwinrt
 void MainPage::NavView_ItemInvoked(
@@ -1575,7 +1575,7 @@ MainPage::MainPage()
 
 ### <a name="keyboarding-within-hierarchical-navigationview"></a>Uso del teclado con el elemento NavigationView jerárquico
 
-Los usuarios pueden cambiar el foco en la vista de navegación mediante el [teclado](/windows/uwp/design/input/keyboard-interactions). Las teclas de dirección exponen la "navegación interna" dentro del panel y siguen las interacciones que se proporcionan en la [vista de árbol](/windows/uwp/design/controls-and-patterns/tree-view). Las acciones clave cambian al desplazarse por el elemento NavigationView o su menú flotante, que se muestra en los modos Top y Left-Compact de HierarchicalNavigationView. A continuación se muestran las acciones específicas que puede realizar cada clave en un elemento NavigationView jerárquico:
+Los usuarios pueden cambiar el foco en la vista de navegación mediante el [teclado](../input/keyboard-interactions.md). Las teclas de dirección exponen la "navegación interna" dentro del panel y siguen las interacciones que se proporcionan en la [vista de árbol](./tree-view.md). Las acciones clave cambian al desplazarse por el elemento NavigationView o su menú flotante, que se muestra en los modos Top y Left-Compact de HierarchicalNavigationView. A continuación se muestran las acciones específicas que puede realizar cada clave en un elemento NavigationView jerárquico:
 
 | Clave      |      En el modo Left      |  En el modo Top | En el modo de control flotante  |
 |----------|------------------------|--------------|------------|
@@ -1659,7 +1659,7 @@ En este ejemplo se muestra cómo invalidar los recursos de tema en App.xaml. Cua
 
 > La propiedad `IsTitleBarAutoPaddingEnabled` requiere la [biblioteca de interfaz de usuario de Windows](/uwp/toolkits/winui/) versión 2.2 o posterior.
 
-Algunas aplicaciones permiten [personalizar la barra de título de sus ventanas](/windows/uwp/design/shell/title-bar). Esto permite extender el contenido de la aplicación al área de la barra de título. Cuando NavigationView es el elemento raíz de las aplicaciones que se pueden extender a la barra de título  **mediante [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**, el control ajusta automáticamente la posición de los elementos interactivos para evitar la superposición con [la región arrastrable](/windows/uwp/design/shell/title-bar#draggable-regions).
+Algunas aplicaciones permiten [personalizar la barra de título de sus ventanas](../shell/title-bar.md). Esto permite extender el contenido de la aplicación al área de la barra de título. Cuando NavigationView es el elemento raíz de las aplicaciones que se pueden extender a la barra de título  **mediante [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**, el control ajusta automáticamente la posición de los elementos interactivos para evitar la superposición con [la región arrastrable](../shell/title-bar.md#draggable-regions).
 
 ![Una aplicación que se extiende a la barra de título](images/navigation-view-with-titlebar-padding.png)
 

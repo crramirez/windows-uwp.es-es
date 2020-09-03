@@ -10,16 +10,16 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bb3d8fc251a357f4251552ba80e4c922878fe805
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a927e7fa81499ef9eb5a8b798679f13b6d838d17
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970820"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174459"
 ---
 # <a name="pivot"></a>Pivot
 
-El control [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite el deslizamiento táctil rápido entre un pequeño conjunto de secciones de contenido.
+El control [Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite el deslizamiento táctil rápido entre un pequeño conjunto de secciones de contenido.
 
 ![El foco predeterminado subraya el encabezado seleccionado](images/pivot_focus_selectedHeader.png)
 
@@ -27,9 +27,9 @@ El control [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.P
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
-> **API de plataforma**: [Clase Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [Clase NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **API de plataforma**: [Clase Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot), [Clase NavigationView](/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>Ejemplos
 
@@ -145,15 +145,15 @@ Este código crea un control Pivot básico con tres secciones de contenido.
 
 ### <a name="pivot-items"></a>Elementos de tabla dinámica
 
-Pivot es un [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl), por lo que puede contener una colección de elementos de cualquier tipo. Cualquier elemento que agregues a Pivot que no sea explícitamente un [PivotItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PivotItem) se encapsula implícitamente en un PivotItem. Dado que Pivot suele utilizarse para navegar entre páginas de contenido, es habitual rellenar la colección [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) directamente con los elementos de la interfaz de usuario de XAML. También puedes establecer la propiedad [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en un origen de datos. Los elementos enlazados en ItemsSource pueden ser de cualquier tipo, pero si no son explícitamente PivotItems, debes definir las propiedades [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) y [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.headertemplate) para especificar cómo se muestran los elementos.
+Pivot es un [ItemsControl](/uwp/api/Windows.UI.Xaml.Controls.ItemsControl), por lo que puede contener una colección de elementos de cualquier tipo. Cualquier elemento que agregues a Pivot que no sea explícitamente un [PivotItem](/uwp/api/Windows.UI.Xaml.Controls.PivotItem) se encapsula implícitamente en un PivotItem. Dado que Pivot suele utilizarse para navegar entre páginas de contenido, es habitual rellenar la colección [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) directamente con los elementos de la interfaz de usuario de XAML. También puedes establecer la propiedad [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en un origen de datos. Los elementos enlazados en ItemsSource pueden ser de cualquier tipo, pero si no son explícitamente PivotItems, debes definir las propiedades [ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) y [HeaderTemplate](/uwp/api/windows.ui.xaml.controls.pivot.headertemplate) para especificar cómo se muestran los elementos.
 
-Puedes usar la propiedad [SelectedItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selecteditem) para obtener o establecer el elemento activo de Pivot. Usa la propiedad [SelectedIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selectedindex) para obtener o establecer el índice del elemento activo.
+Puedes usar la propiedad [SelectedItem](/uwp/api/windows.ui.xaml.controls.pivot.selecteditem) para obtener o establecer el elemento activo de Pivot. Usa la propiedad [SelectedIndex](/uwp/api/windows.ui.xaml.controls.pivot.selectedindex) para obtener o establecer el índice del elemento activo.
 
 ### <a name="pivot-headers"></a>Encabezados dinámicos
 
-Puedes usar las propiedades [LeftHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.leftheader) y [RightHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.rightheader) para agregar otros controles al encabezado de Pivot.
+Puedes usar las propiedades [LeftHeader](/uwp/api/windows.ui.xaml.controls.pivot.leftheader) y [RightHeader](/uwp/api/windows.ui.xaml.controls.pivot.rightheader) para agregar otros controles al encabezado de Pivot.
 
-Por ejemplo, puedes agregar una clase [CommandBar](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/app-bars) en la propiedad RightHeader de Pivot.
+Por ejemplo, puedes agregar una clase [CommandBar](./app-bars.md) en la propiedad RightHeader de Pivot.
 
 ```xaml
 <Pivot>
@@ -191,7 +191,7 @@ El control tiene dos modos:
 - Al tocar una etiqueta de control dinámico se navega a la página correspondiente y, después, la etiqueta de control dinámico activa gira a la primera posición.
 - Elementos de control dinámico en un bucle de carrusel de la última a la primera sección de control dinámico.
 
-> **Nota:** Los encabezados de tabla dinámica no deben mostrarse en carrusel en un [entorno de 10 pies](../devices/designing-for-tv.md). Establece la propiedad [IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) en **false** si la aplicación se ejecuta en Xbox.
+> **Nota:** Los encabezados de tabla dinámica no deben mostrarse en carrusel en un [entorno de 10 pies](../devices/designing-for-tv.md). Establece la propiedad [IsHeaderItemsCarouselEnabled](/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) en **false** si la aplicación se ejecuta en Xbox.
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -203,5 +203,5 @@ El control tiene dos modos:
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Clase Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot)
+- [Clase Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot)
 - [Conceptos básicos de diseño de la navegación](../basics/navigation-basics.md)

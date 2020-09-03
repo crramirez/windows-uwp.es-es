@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bb01c76879bd00e10286ef429415cf4817315b7
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: 61334cc4d8d91347dac7fa477cc5d508ea8ab5d1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502430"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174489"
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
@@ -24,7 +24,7 @@ ms.locfileid: "88502430"
 
 Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 
-> **API importantes**: [Clase AutoSuggestBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
+> **API importantes**: [Clase AutoSuggestBox](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
 
 ## <a name="elements-of-the-search-experience"></a>Elementos de la experiencia de búsqueda
 

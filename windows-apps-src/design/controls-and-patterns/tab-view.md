@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 489215c0289695832cb895d8566063a93ae2336c
-ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
+ms.openlocfilehash: f59bb821b65eda89aa1fbc88e9c38d5789f61f6e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83867355"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163429"
 ---
 # <a name="tabview"></a>TabView
 
@@ -24,12 +24,12 @@ El control TabView es una manera de mostrar un conjunto de pestañas y su conten
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **TabView** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **TabView** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows**: [Clase TabView](/uwp/api/microsoft.ui.xaml.controls.tabview), [clase TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 > [!TIP]
-> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
+> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
 >
 >En el código subyacente, se usa el alias **muxc** en C# para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado esta instrucción **using** en la parte superior del archivo: `using muxc = Microsoft.UI.Xaml.Controls;`
 
@@ -44,7 +44,7 @@ Las **pestañas de documentos** son el tipo de pestaña que se encuentra en un e
 - Los usuarios puedan abrir documentos o páginas web directamente en pestañas.
 - Los usuarios puedan arrastrar y colocar pestañas entre ventanas.
 
-Si un control TabView no es adecuado para tu aplicación, considera la posibilidad de usar controles como [Pivot](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot) o [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview).
+Si un control TabView no es adecuado para tu aplicación, considera la posibilidad de usar controles como [Pivot](./pivot.md) o [NavigationView](./navigationview.md).
 
 ## <a name="anatomy"></a>Anatomía
 
@@ -104,7 +104,7 @@ En lugar de hacer que las pestañas ocupen su propia fila debajo de la barra de 
 
 Dado que un usuario puede arrastrar una ventana por la barra de título para cambiar la posición de la ventana, es importante que la barra de título no se rellene completamente con pestañas. Por lo tanto, al mostrar las pestañas en una barra de título, tienes que especificar una parte de la barra de títuloque se va a reservar como área arrastrable. Si no especificas una región arrastrable, se podrá arrastrar toda la barra de título, lo que impedirá que las pestañas reciban eventos de entrada. Si el control TabView se muestra en la barra de título de una ventana, siempre tienes que incluir un elemento [TabStripFooter](/uwp/api/microsoft.ui.xaml.controls.tabview.tabstripfooter) en [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) y marcarlo como región arrastrable.
 
-Para obtener más información, consulta [Personalización de la barra de título](https://docs.microsoft.com/windows/uwp/design/shell/title-bar).
+Para obtener más información, consulta [Personalización de la barra de título](../shell/title-bar.md).
 
 ![Pestañas en la barra de título](images/tabview/tab-extend-to-title.png)
 
@@ -329,6 +329,6 @@ private void NavigateToNumberedTabKeyboardAccelerator_Invoked(KeyboardAccelerato
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [MasterDetails](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/master-details)
-- [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview)
-- [Pivot](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot)
+- [MasterDetails](./master-details.md)
+- [NavigationView](./navigationview.md)
+- [Pivot](./pivot.md)

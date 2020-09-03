@@ -8,18 +8,18 @@ ms.author: drewbat
 author: drewbatgit
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 7e2d69390ac9a0f564c99a94151dd967759477a3
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: e4cec3a0493bdea1c4e232e57cdd669ba19bc5ae
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86494013"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168759"
 ---
 # <a name="templated-xaml-controls-for-uwp-and-winui-3-apps-with-cwinrt"></a>Controles XAML con plantilla para aplicaciones para UWP y WinUI 3 con C++/WinRT
 
 En este artículo se recorren los pasos para la creación de un control XAML con plantilla para WinUI 3 con C++/WinRT. Los controles con plantilla se heredan de **Microsoft.UI.Xaml.Controls.Control** y tienen una estructura y comportamiento visual que se pueden personalizar mediante plantillas de control XAML. En este artículo se describe el mismo escenario que en el artículo [Controles personalizados (con plantilla) de XAML con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl), pero se ha adaptado para usar WinUI 3.
 
-Antes de seguir los pasos de este artículo, debe asegurarse de que el entorno de desarrollo está configurado para crear aplicaciones de WinUI 3. Para información de configuración, consulte [Introducción a WinUI 3 para aplicaciones de escritorio](/windows/apps/winui/winui3/get-started-winui3-for-desktop).
+Antes de seguir los pasos de este artículo, debe asegurarse de que el entorno de desarrollo está configurado para crear aplicaciones de WinUI 3. Para información de configuración, consulte [Introducción a WinUI 3 para aplicaciones de escritorio](./get-started-winui3-for-desktop.md).
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Crear una aplicación en blanco (BgLabelControlApp)
 

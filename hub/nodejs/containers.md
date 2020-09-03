@@ -8,12 +8,12 @@ ms.topic: article
 keywords: ''
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 9467224814b1e26f18031662f5e8d994a8fae1ac
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a1bd1b0f2916ccf44cc79d83f0335f55cf3863e4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75683678"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166629"
 ---
 # <a name="get-started-using-docker-containers-with-nodejs"></a>Introducción al uso de contenedores de Docker con Node.js
 
@@ -35,7 +35,7 @@ En esta guía se da por supuesto que ya has completado los pasos para [configura
 
 Los contenedores de Docker son similares a las máquinas virtuales, pero no crean un sistema operativo virtual completo. En su lugar, Docker permite a la aplicación usar el mismo kernel de Linux que el sistema en el que se ejecuta. Esto permite que el paquete de la aplicación solo requiera partes que aún no existen en el equipo host, lo que reduce el tamaño del paquete y mejora el rendimiento.
 
-La disponibilidad continua, mediante el uso de contenedores de Docker con herramientas como [Kubernetes](https://docs.microsoft.com/azure/aks/), es otro motivo para la popularidad de los contenedores. Esto permite crear varias versiones del contenedor de la aplicación en momentos diferentes. En lugar de tener que deshacer todo el sistema para las actualizaciones o el mantenimiento, cada contenedor y sus microservicios específicos se pueden reemplazar sobre la marcha. Puedes preparar un nuevo contenedor con todas las actualizaciones, configurar el contenedor para producción y simplemente apuntar al nuevo contenedor una vez que esté listo. También puedes archivar versiones diferentes de la aplicación mediante contenedores y mantenerlas en ejecución como reserva de seguridad si es necesario.
+La disponibilidad continua, mediante el uso de contenedores de Docker con herramientas como [Kubernetes](/azure/aks/), es otro motivo para la popularidad de los contenedores. Esto permite crear varias versiones del contenedor de la aplicación en momentos diferentes. En lugar de tener que deshacer todo el sistema para las actualizaciones o el mantenimiento, cada contenedor y sus microservicios específicos se pueden reemplazar sobre la marcha. Puedes preparar un nuevo contenedor con todas las actualizaciones, configurar el contenedor para producción y simplemente apuntar al nuevo contenedor una vez que esté listo. También puedes archivar versiones diferentes de la aplicación mediante contenedores y mantenerlas en ejecución como reserva de seguridad si es necesario.
 
 ## <a name="install-docker-desktop-wsl-2-tech-preview"></a>Instalación de Docker Desktop WSL 2 Tech Preview
 
@@ -159,23 +159,23 @@ Para cargar la nueva imagen de contenedor en un repositorio hospedado en Docker 
 
 6. Deberías ver que el contenedor "my-nextjs-app:v1" está activo en el puerto 3333 ->3000/tcp. También puedes ver el "ID. DE CONTENEDOR" que se muestra aquí. Para detener la ejecución del contenedor, escribe el comando: `docker stop <container ID>`
 
-7. Normalmente, una vez que se detiene un contenedor, también se debe quitar. Al quitar un contenedor, se limpian todos los recursos incluidos en él. Una vez que se quita un contenedor, los cambios que se hayan realizado dentro de su sistema de archivos de imagen se perderán de forma permanente. Tendrás que crear una imagen para representar los cambios. Para quitar el contenedor, usa el comando: `docker rm <container ID>`.
+7. Normalmente, cuando se detiene un contenedor, también se debe quitar. Al quitar un contenedor se limpian los recursos que deja. Una vez que se quita un contenedor, los cambios que se hayan realizado dentro de su sistema de archivos de imagen se perderán de forma permanente. Tendrás que crear una imagen para representar los cambios. Para quitar el contenedor, usa el comando: `docker rm <container ID>`.
 
-Más información sobre la [creación de una aplicación web en contenedor con Docker](https://docs.microsoft.com/learn/modules/intro-to-containers/)
+Más información sobre la [creación de una aplicación web en contenedor con Docker](/learn/modules/intro-to-containers/)
 
 ## <a name="deploy-to-azure-container-registry"></a>Implementación en Azure Container Registry
 
-[**Azure Container Registry**](https://azure.microsoft.com/services/container-registry/) (ACR) permite almacenar, administrar y mantener las imágenes de contenedor seguras en repositorios privados y autenticados. ACR, que es compatible con los comandos estándar de Docker, puede controlar las tareas críticas de forma automática, como la supervisión y el mantenimiento del estado del contenedor, además del emparejamiento con [Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes) para crear sistemas de orquestación escalables. Compila a petición o automatiza completamente las compilaciones con desencadenadores, como confirmaciones de código fuente y actualizaciones de imágenes base. ACR también usa la amplia red de Azure Cloud para administrar la latencia de red y las implementaciones globales y crear una experiencia nativa sin problemas para cualquier persona que use [Azure App Service](https://docs.microsoft.com/azure/app-service/) (para hospedaje web, back-ends móviles y API de REST) u [otros servicios en la nube de Azure](https://azure.microsoft.com/product-categories/containers/).
+[**Azure Container Registry**](https://azure.microsoft.com/services/container-registry/) (ACR) permite almacenar, administrar y mantener las imágenes de contenedor seguras en repositorios privados y autenticados. ACR, que es compatible con los comandos estándar de Docker, puede controlar las tareas críticas de forma automática, como la supervisión y el mantenimiento del estado del contenedor, además del emparejamiento con [Kubernetes](/azure/aks/intro-kubernetes) para crear sistemas de orquestación escalables. Compile a petición o automatice completamente las compilaciones con desencadenadores como las confirmaciones del código fuente y las actualizaciones de la imagen de base. ACR también usa la amplia red de Azure Cloud para administrar la latencia de red y las implementaciones globales y crear una experiencia nativa sin problemas para cualquier persona que use [Azure App Service](/azure/app-service/) (para hospedaje web, back-ends móviles y API de REST) u [otros servicios en la nube de Azure](https://azure.microsoft.com/product-categories/containers/).
 
 > [!IMPORTANT]
-> Necesitas tu propia suscripción de Azure para implementar un contenedor en Azure, y puede que se aplique algún cargo. Si aún no tienes una suscripción de Azure, [crea una cuenta gratuita](https://azure.microsoft.com/free/) antes de empezar.
+> Necesitas tu propia suscripción de Azure para implementar un contenedor en Azure, y puede que se aplique algún cargo. Si aún no tiene una suscripción a Azure, [cree una cuenta gratuita](https://azure.microsoft.com/free/) antes de comenzar.
 
-Para obtener ayuda para crear una instancia de Azure Container Registry e implementar la imagen de contenedor de la aplicación, consulta el ejercicio: [Implementación de una imagen de Docker en una instancia de Azure Container](https://docs.microsoft.com/learn/modules/intro-to-containers/7-exercise-deploy-docker-image-to-container-instance).
+Para obtener ayuda para crear una instancia de Azure Container Registry e implementar la imagen de contenedor de la aplicación, consulta el ejercicio: [Implementación de una imagen de Docker en una instancia de Azure Container](/learn/modules/intro-to-containers/7-exercise-deploy-docker-image-to-container-instance).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - [Node.js en Azure](https://azure.microsoft.com/develop/nodejs/)
-- Inicio rápido: [Creación de una aplicación web Node.js en Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-nodejs)
-- Curso en línea: [Administración de contenedores en Azure](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/)
+- Inicio rápido: [Creación de una aplicación web Node.js en Azure](/azure/app-service/app-service-web-get-started-nodejs)
+- Curso en línea: [Administración de contenedores en Azure](/learn/paths/administer-containers-in-azure/)
 - Usar VS Code: [Trabajar con Docker](https://code.visualstudio.com/docs/azure/docker)
 - Documentos de Docker: [Docker Desktop WSL 2 Tech Preview](https://docs.docker.com/docker-for-windows/wsl-tech-preview/)

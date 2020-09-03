@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 834bea47a566789926648098086c05c0a47b6065
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5c4ab2ac5a611d310abc177126cc92b88f9e3b8e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74260553"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165159"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Compilación de una aplicación compleja de la Plataforma universal de Windows (UWP)
 
@@ -128,7 +128,7 @@ Técnicas comunes:
 -   **Reproducir en**  Permite que los usuarios disfruten de la transmisión de audio, vídeo o imágenes desde la aplicación a otros dispositivos de la red doméstica.
 -   **Selector de archivos y extensiones del selector de archivos**   Permite que los usuarios carguen y guarden sus archivos desde el sistema de archivos local, los dispositivos de almacenamiento conectados, el Grupo Hogar o incluso desde otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
 
-Para más información, consulta el tema sobre las [extensiones y los contratos entre aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10)).
+Para más información, consulta el tema sobre las [extensiones y los contratos entre aplicaciones](/previous-versions/windows/apps/hh464906(v=win.10)).
 <!-- Win 8 page. Should have replacement. -->
 
 **Diferentes vistas, factores de forma y configuraciones de hardware**  Windows pone a los usuarios al mando y coloca la aplicación en primer plano. Seguramente quieres que la interfaz de usuario de la aplicación se destaque en cualquier dispositivo, modo de entrada, orientación, configuración de hardware y en cualquier circunstancia en la que el usuario decida usarla.
@@ -141,22 +141,22 @@ Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar 
 
 **Atractiva y original**  Asegúrese de que la aplicación sea original y atraiga a los usuarios con estas experiencias estándar:
 
--   **Animaciones**  Usa nuestra biblioteca de animaciones para que la aplicación resulte rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
+-   **Animaciones**  Usa nuestra biblioteca de animaciones para que la aplicación resulte rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../design/motion/xaml-animation.md).
 -   **Notificaciones del sistema**  Informe a los usuarios sobre contenido personalmente importante o que esté sujeto a una limitación temporal a través de notificaciones del sistema, para atraerlos a la aplicación incluso cuando esté cerrada. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
 -   **Iconos de la aplicación**  Ofrezca actualizaciones nuevas y oportunas para que los usuarios quieran volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../design/shell/tiles-and-notifications/creating-tiles.md).
 
 **Personalización**
 
--   **Configuración**  Permita guardar la configuración de la aplicación para que los usuarios puedan crear la experiencia que quieran. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../design/app-settings/app-settings-and-data.md).
--   **Itinerancia**  Cree una experiencia continua entre dispositivos mediante la itinerancia de datos que permite a los usuarios retomar una tarea exactamente donde la dejaron y preserva la experiencia que más le interesa al usuario, independientemente del dispositivo que esté usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data).
+-   **Configuración**  Permita guardar la configuración de la aplicación para que los usuarios puedan crear la experiencia que quieran. Consolida toda la configuración en una pantalla y a continuación los usuarios podrán configurar la aplicación con un mecanismo común con el que ya están familiarizados. Obtén más información sobre cómo [agregar la configuración de la aplicación](../design/app-settings/guidelines-for-app-settings.md).
+-   **Itinerancia**  Cree una experiencia continua entre dispositivos mediante la itinerancia de datos que permite a los usuarios retomar una tarea exactamente donde la dejaron y preserva la experiencia que más le interesa al usuario, independientemente del dispositivo que esté usando. Mantén la movilidad de la configuración y los estados, para que los usuarios puedan usar la aplicación en todas partes, ya sea en el equipo familiar de la cocina, en el del trabajo o en una tableta personal. Obtén más información acerca de cómo [Administrar datos de la aplicación](../design/app-settings/store-and-retrieve-app-data.md) y consulta las [Directrices de datos móviles de las aplicaciones](../design/app-settings/store-and-retrieve-app-data.md).
 -   **Iconos de usuario**   Haga que la aplicación sea más personal para los usuarios al cargar su imagen como icono de usuario o permitir que establezcan contenido de la aplicación como su icono personal en Windows.
 
 **Capacidades del dispositivo**  Asegúrese de que la aplicación aprovecha al máximo la funcionalidad de los dispositivos de hoy día.
 
--   **Gestos de proximidad**  Permita que los usuarios conecten sus dispositivos a otros dispositivos cercanos pulsándolos físicamente al mismo tiempo (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://docs.microsoft.com/previous-versions/windows/apps/hh465229(v=win.10)).
--   **Cámaras y dispositivos de almacenamiento externo**  Conecte a los usuarios con sus cámaras integradas o conectadas para permitirles conversar, realizar conferencias, grabar vídeoblogs, tomar fotografías del perfil, documentar hechos del mundo que les rodea o para cualquier otra actividad en la que destaque la aplicación. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://docs.microsoft.com/previous-versions/windows/apps/hh465189(v=win.10)).
+-   **Gestos de proximidad**  Permita que los usuarios conecten sus dispositivos a otros dispositivos cercanos pulsándolos físicamente al mismo tiempo (juegos multijugador). Obtén más información sobre [proximidad y pulsación](/previous-versions/windows/apps/hh465229(v=win.10)).
+-   **Cámaras y dispositivos de almacenamiento externo**  Conecte a los usuarios con sus cámaras integradas o conectadas para permitirles conversar, realizar conferencias, grabar vídeoblogs, tomar fotografías del perfil, documentar hechos del mundo que les rodea o para cualquier otra actividad en la que destaque la aplicación. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](/previous-versions/windows/apps/hh465189(v=win.10)).
 -   **Acelerómetros y otros sensores**     Hoy en día los dispositivos vienen con diversos sensores. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
--   **Geolocalización**  Use la información sobre geolocalización que le proporcionan los datos web estándar o los sensores de ubicación geográfica para que los usuarios puedan desplazarse, encontrar su posición en un mapa u obtener avisos sobre personas, actividades o destinos cercanos. Obtén más información sobre la [ubicación geográfica](https://docs.microsoft.com/previous-versions/windows/apps/hh465139(v=win.10)).
+-   **Geolocalización**  Use la información sobre geolocalización que le proporcionan los datos web estándar o los sensores de ubicación geográfica para que los usuarios puedan desplazarse, encontrar su posición en un mapa u obtener avisos sobre personas, actividades o destinos cercanos. Obtén más información sobre la [ubicación geográfica](/previous-versions/windows/apps/hh465139(v=win.10)).
 
 Volvamos a tomar el ejemplo de la aplicación para viajes. Para ofrecer una excelente ayuda a un grupo de amigos que quieren crear de forma conjunta los itinerarios de viajes en grupo, podrías usar algunas de estas funciones, por mencionar algunas:
 
@@ -212,15 +212,15 @@ Para obtener información detallada sobre cómo usar superficies distintas, cons
 -   **Siempre trate de usar el contenido.**   Cuando sea posible, permita que los usuarios manipulen directamente el contenido en el lienzo de la aplicación, en lugar de agregar comandos que actúen sobre el contenido. Por ejemplo, en la aplicación para viajes, permite que los usuarios reorganicen el itinerario arrastrando y colocando las actividades de una lista en el Canvas, en lugar de seleccionar la actividad y usar los botones de comandos Arriba o Abajo.
 -   **Si no puede usar el contenido.** Coloca comandos en una de estas superficies de la interfaz de usuario si no puedes usar el contenido:
 
-    -   En la [barra de comandos](https://docs.microsoft.com/windows/uwp/controls-and-patterns/app-bars): debe colocar la mayoría de los comandos en la barra de comandos, que generalmente permanece oculta hasta que el usuario pulsa la pantalla para que se muestre.
+    -   En la [barra de comandos](../design/controls-and-patterns/app-bars.md): debe colocar la mayoría de los comandos en la barra de comandos, que generalmente permanece oculta hasta que el usuario pulsa la pantalla para que se muestre.
     -   En el lienzo de la aplicación: si el usuario se encuentra en una página o vista que tiene un solo propósito, puedes ofrecerle comandos para ese propósito directamente en el lienzo. Debería haber muy pocos de estos comandos.
-    -   en un [menú contextual](https://docs.microsoft.com/windows/uwp/controls-and-patterns/menus): puede usar los menús contextuales para acciones del portapapeles (como cortar, copiar y pegar) o para comandos que se aplican al contenido y que no se pueden seleccionar (como agregar una chincheta de anotación en una ubicación sobre el mapa).
+    -   en un [menú contextual](../design/controls-and-patterns/menus.md): puede usar los menús contextuales para acciones del portapapeles (como cortar, copiar y pegar) o para comandos que se aplican al contenido y que no se pueden seleccionar (como agregar una chincheta de anotación en una ubicación sobre el mapa).
 
 **Decida cómo mostrar su aplicación en cada vista.**   Windows no solo admite la orientación vertical y horizontal, sino que además te permite cambiar el tamaño de las aplicaciones a cualquier ancho desde la pantalla completa hasta un ancho mínimo. Te interesa que tu aplicación tenga un funcionamiento y un aspecto perfectos en cualquier tamaño, pantalla y orientación, para ello tendrás que planear el diseño de los elementos de la interfaz de usuario para distintos tamaños y vistas. Al hacerlo, la interfaz de usuario de la aplicación cambia de forma fluida para satisfacer las necesidades y preferencias del usuario.
 
 ![Diseños de una aplicación para PC y móvil](images/ux-budgettracker1-md-notablet.png)
 
-Para obtener más información sobre cómo diseñar para diferentes tamaños de pantalla, consulte [tamaños de pantalla y puntos de interrupción de diseño dinámico](https://docs.microsoft.com/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design).
+Para obtener más información sobre cómo diseñar para diferentes tamaños de pantalla, consulte [tamaños de pantalla y puntos de interrupción de diseño dinámico](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 
 ## <a name="make-a-good-first-impression"></a>Causa una buena primera impresión
 
@@ -238,4 +238,4 @@ Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicie
 
 Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función cuenta con un conjunto de directrices de experiencia del usuario que le ayudan a pulir la aplicación, así como un conjunto de requisitos de Store que debe cumplir para publicar la aplicación en Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
 
-Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://developer.microsoft.com/windows/apps/design) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015) para analizar el rendimiento de cada uno de los escenarios de la aplicación.
+Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://developer.microsoft.com/windows/apps/design) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](/visualstudio/profiling/profiling-tools?view=vs-2015) para analizar el rendimiento de cada uno de los escenarios de la aplicación.

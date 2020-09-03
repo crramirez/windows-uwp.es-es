@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: b4ce91e32b14bdf81b40b24e810e0bd86bcaa99b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 4ee8eb8ea34205f2e597bf41da61f5ab63714566
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67321089"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162839"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 
@@ -442,7 +442,7 @@ scene.add(controls.getObject());
 
 La cámara ya está conectada, pero debemos dejar que el mouse y el controlador interactúen para poder mirar alrededor. 
 
-Para esta situación, la [API de bloqueo de puntero](https://docs.microsoft.com/microsoft-edge/dev-guide/dom/pointer-lock) acude al rescate y nos permite conectar los movimientos del mouse a la cámara. La API de bloqueo de puntero también hace que el mouse desaparezca para ofrecer una experiencia más envolvente. Al presionar la tecla ESC, finalizamos la conexión de la cámara con el mouse y este último vuelve a aparecer. La adición de las funciones `getPointerLock()` y `lockChange()` nos ayudarán a hacer esto.
+Para esta situación, la [API de bloqueo de puntero](/microsoft-edge/dev-guide/dom/pointer-lock) acude al rescate y nos permite conectar los movimientos del mouse a la cámara. La API de bloqueo de puntero también hace que el mouse desaparezca para ofrecer una experiencia más envolvente. Al presionar la tecla ESC, finalizamos la conexión de la cámara con el mouse y este último vuelve a aparecer. La adición de las funciones `getPointerLock()` y `lockChange()` nos ayudarán a hacer esto.
 
 La función `getPointerLock()` escucha cuando se produce un clic del mouse. Después del clic, nuestro juego representado (en el elemento `container`) intenta obtener el control del mouse. También agregamos un escucha de eventos para detectar cuando el jugador activa o desactiva el bloqueo que luego llama a `lockChange()`. 
 
@@ -1084,7 +1084,6 @@ Consulta la parte superior de la página para ver el [último CodePen](#introduc
 Ahora que tienes una aplicación para UWP, podrás publicarla en Microsoft Store (siempre que la hayas mejorado). Este proceso tiene diferentes pasos.
 
 1.  Tienes que estar [registrado](https://developer.microsoft.com/store/register) como desarrollador de Windows.
-2.  Debes usar la [lista de comprobación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
-3.  La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
-Para obtener más información, consulte [Publicar su aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/).
-
+2.  Debes usar la [lista de comprobación](../publish/app-submissions.md) del envío de la aplicación.
+3.  La aplicación debe enviarse para su [certificación](../publish/the-app-certification-process.md).
+Para obtener más información, consulte [Publicar su aplicación para UWP](../publish/index.md).

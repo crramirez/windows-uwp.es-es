@@ -5,16 +5,16 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: cd67ea63fc633716cabf9a293a5faeeed6d24b70
-ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
+ms.openlocfilehash: 2d2470b1aa52f8aa4be7e07bf1dfe5213054b005
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87296186"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166249"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
-En este tema se muestra cómo registrar y revocar delegados de control de eventos con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Puedes controlar un evento mediante cualquier objeto de tipo función de C++ estándar.
+En este tema se muestra cómo registrar y revocar delegados de control de eventos con [C++/WinRT](./intro-to-using-cpp-with-winrt.md). Puedes controlar un evento mediante cualquier objeto de tipo función de C++ estándar.
 
 > [!NOTE]
 > Para más información sobre cómo instalar y usar C++/WinRT Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
@@ -314,6 +314,6 @@ Si controlas un evento con la función miembro de un objeto o desde dentro de un
 * [función winrt::implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Crear eventos en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events)
-* [Operaciones simultáneas y asincrónicas con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [Referencias fuertes y débiles de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/weak-references)
+* [Crear eventos en C++/WinRT](./author-events.md)
+* [Operaciones simultáneas y asincrónicas con C++/WinRT](./concurrency.md)
+* [Referencias fuertes y débiles de C++/WinRT](./weak-references.md)

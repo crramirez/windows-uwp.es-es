@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0ad8b78538a2b047501361072a017658ba152e73
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5c39ded4157181581412f01e54772db2bf9a1732
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971010"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174629"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicaciones 
 
@@ -52,7 +52,7 @@ De manera predeterminada, Visual Studio almacena los recursos de icono en un sub
 | Logotipo de distintivo | Iconos de la app | BadgeLogo.png  |
 | Logotipo de paquete o logotipo de Microsoft Store | Instalador de la app, Centro de partners, opción "Informar sobre este producto" en Microsoft Store, opción "Escribir una opinión" en Microsoft Store | StoreLogo.png  |
 
-\* Se usa a menos que elijas [mostrar solo imágenes cargadas en Microsoft Store](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store). 
+\* Se usa a menos que elijas [mostrar solo imágenes cargadas en Microsoft Store](../../publish/app-screenshots-and-images.md#display-only-uploaded-logo-images-in-the-store). 
 
 Para asegurarte de que estos iconos se muestren de manera nítida en todas las pantallas, puedes crear varias versiones del mismo icono para mostrar diferentes factores de escala. 
 
@@ -75,13 +75,13 @@ Dado que los recursos de iconos de app son mapas de bits y estos no se escalan b
 
 "¿Cómo puedo especificar imágenes para la descripción de mi app en Microsoft Store?"
 
-De manera predeterminada, usamos algunas de las imágenes de los paquetes en Microsoft Store, tal como se describe en la tabla de la parte superior de esta página (junto con otras [imágenes que proporciones durante el proceso de envío](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)). Además, tienes la opción de impedir que Microsoft Store use las imágenes de logotipo en los paquetes de tu app al mostrar la descripción a los clientes en Windows 10 (incluyendo Xbox) y, en cambio, hacer que Microsoft Store use solo las imágenes que cargues. Esto te ofrece más control sobre el aspecto de la app en diversas pantallas en Microsoft Store. (Ten en cuenta que si tu producto admite versiones anteriores del sistema operativo, esos clientes todavía podrían ver las imágenes de los paquetes, incluso si usas esta opción). Puedes hacer esto en la sección **Store logos** (Logotipos de Microsoft Store) del paso **Descripción en Microsoft Store** del proceso de envío.
+De manera predeterminada, usamos algunas de las imágenes de los paquetes en Microsoft Store, tal como se describe en la tabla de la parte superior de esta página (junto con otras [imágenes que proporciones durante el proceso de envío](../../publish/app-screenshots-and-images.md)). Además, tienes la opción de impedir que Microsoft Store use las imágenes de logotipo en los paquetes de tu app al mostrar la descripción a los clientes en Windows 10 (incluyendo Xbox) y, en cambio, hacer que Microsoft Store use solo las imágenes que cargues. Esto te ofrece más control sobre el aspecto de la app en diversas pantallas en Microsoft Store. (Ten en cuenta que si tu producto admite versiones anteriores del sistema operativo, esos clientes todavía podrían ver las imágenes de los paquetes, incluso si usas esta opción). Puedes hacer esto en la sección **Store logos** (Logotipos de Microsoft Store) del paso **Descripción en Microsoft Store** del proceso de envío.
 
 ![Especificar los logotipos de Microsoft Store durante el proceso de envío](images/app-icons/storelogodisplay.png)
 
 Cuando activas esta casilla, aparece una nueva sección llamada **Store display images** (Imágenes de visualización en Microsoft Store). Aquí, puedes cargar 3 tamaños de imagen que Microsoft Store usará en lugar de las imágenes de logotipo de los paquetes de la app: 300 x 300, 150 x 150 y 71 x 71 píxeles. Solo el tamaño 300 x 300 es obligatorio, aunque recomendamos que proporciones los tres tamaños.
 
-Para más información, consulta [Mostrar solo imágenes de logotipo cargadas en Microsoft Store](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
+Para más información, consulta [Mostrar solo imágenes de logotipo cargadas en Microsoft Store](../../publish/app-screenshots-and-images.md#display-only-uploaded-logo-images-in-the-store).
 
 <!-- ### Fallback images for the Store
 
@@ -96,7 +96,7 @@ If these images aren't provided, the Store will search all matching images of th
 
 The Store may also use your app's tile and other images that you include in your app's package. 
 
-For more information, see [App screenshots, images, and trailers in the Microsoft Store](/windows/uwp/publish/app-screenshots-and-images). -->
+For more information, see [App screenshots, images, and trailers in the Microsoft Store](../../publish/app-screenshots-and-images.md). -->
 
 
 ## <a name="managing-app-icons-with-the-visual-studio-manifest-designer"></a>Administrar iconos de app con el Diseñador de manifiestos de Visual Studio
@@ -185,7 +185,7 @@ Por ejemplo,
 
 Square150x150Logo-scale-100.png, Square150x150Logo-scale-200.png, Square150x150Logo-scale-400.png
 
-Ten en cuenta que Visual Studio no genera un logotipo de distintivo de manera predeterminada. Eso se debe a que el logotipo de distintivo es único y probablemente no debería coincidir con los otros iconos de app. Para más información, consulta el artículo [Notificaciones de distintivo para aplicaciones de Windows](/windows/uwp/design/shell/tiles-and-notifications/badges). 
+Ten en cuenta que Visual Studio no genera un logotipo de distintivo de manera predeterminada. Eso se debe a que el logotipo de distintivo es único y probablemente no debería coincidir con los otros iconos de app. Para más información, consulta el artículo [Notificaciones de distintivo para aplicaciones de Windows](../shell/tiles-and-notifications/badges.md). 
 
 
 ## <a name="more-about-app-icon-assets"></a>Más sobre los recursos de icono de app
@@ -253,13 +253,13 @@ Estas son las recomendaciones de tamaño para los recursos basados en destino, a
 
 
 ## <a name="more-about-splash-screen-assets"></a>Más información sobre los recursos de la pantalla de presentación
-Para más información sobre las pantallas de presentación, consulta [Pantallas de presentación para aplicaciones de Windows](/windows/uwp/launch-resume/splash-screens).
+Para más información sobre las pantallas de presentación, consulta [Pantallas de presentación para aplicaciones de Windows](../../launch-resume/splash-screens.md).
 
 ## <a name="more-about-badge-logo-assets"></a>Más información sobre los recursos de logotipo de distintivo
 
 Cuando usas el generador de recursos para generar todos los recursos que necesitas, hay un motivo por el que no se generan logotipos de distintivo de manera predeterminada: son muy diferentes de otros recursos de la app. El logotipo de distintivo es una imagen de estado que aparece en las notificaciones y en los iconos de la app. 
 
-Para más información, consulta [Notificaciones de distintivo para aplicaciones de Windows](/windows/uwp/design/shell/tiles-and-notifications/badges).
+Para más información, consulta [Notificaciones de distintivo para aplicaciones de Windows](../shell/tiles-and-notifications/badges.md).
 
 
 ## <a name="customizing-asset-padding"></a>Personalización del relleno de los recursos
@@ -313,16 +313,3 @@ En este ejemplo los márgenes son demasiado estrechos:
 En este artículo se describe cómo crear recursos para factores de escala específicos, pero también puedes crear recursos para una amplia variedad de condiciones y combinaciones de condiciones. Por ejemplo, puedes crear iconos para pantallas de contraste alto o para temas claros y temas oscuros. Incluso puedes crear recursos para idiomas concretos.
 
 Para obtener instrucciones, consulta [Adaptar los recursos para idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md).
-
-
-
-
-
-
-
-
-
-
-
-
-

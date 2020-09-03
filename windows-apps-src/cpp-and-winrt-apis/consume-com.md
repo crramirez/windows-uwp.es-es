@@ -5,16 +5,16 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, COM, component, class, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: d5fae09192262b63b11175bf08e7a2c522b31abd
-ms.sourcegitcommit: 82d441e3b9da920cf860fad6b59d6b848466c90f
+ms.openlocfilehash: 6ccd196b2cd571cc66523b34427ca17acd73388a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271884"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170349"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM con C++/WinRT
 
-Puedes utilizar las funciones de la biblioteca [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para consumir los componentes COM, como los gráficos 2D y 3D de alto rendimiento de las API de DirectX. C++/WinRT es la manera más sencilla de usar DirectX sin comprometer el rendimiento. En este tema se usa un ejemplo de código completo de Direct2D para mostrar cómo utilizar C++/WinRT para consumir clases e interfaces COM. Por supuesto, puedes combinar la programación en COM y Windows Runtime dentro del mismo proyecto de C++/WinRT.
+Puedes utilizar las funciones de la biblioteca [C++/WinRT](./intro-to-using-cpp-with-winrt.md) para consumir los componentes COM, como los gráficos 2D y 3D de alto rendimiento de las API de DirectX. C++/WinRT es la manera más sencilla de usar DirectX sin comprometer el rendimiento. En este tema se usa un ejemplo de código completo de Direct2D para mostrar cómo utilizar C++/WinRT para consumir clases e interfaces COM. Por supuesto, puedes combinar la programación en COM y Windows Runtime dentro del mismo proyecto de C++/WinRT.
 
 Al final de este tema, encontrarás una lista del código fuente completo de una aplicación de Direct2D mínima. Extraeremos partes de ese código y las usaremos para ilustrar cómo consumir componentes COM mediante C++/WinRT con varias facilidades de la biblioteca C++/WinRT.
 
@@ -131,9 +131,9 @@ Puedes usar [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrget-functio
 
 Puedes usar la función gratuita [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para devolver la dirección de (es decir, un puntero a) la [interfaz IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) subyacente sin procesar de un objeto de un tipo proyectado. Después, puedes pasar esa dirección a una función que tome un puntero de interfaz **IUnknown**.
 
-Para obtener información sobre los *tipos proyectados*, consulta [Consumo de API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis).
+Para obtener información sobre los *tipos proyectados*, consulta [Consumo de API con C++/WinRT](./consume-apis.md).
 
-Para obtener un ejemplo de código de **get_unknown**, consulta [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) o la [lista de código fuente completa de una aplicación Direct2D mínima](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application) en este tema.
+Para obtener un ejemplo de código de **get_unknown**, consulta [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) o la [lista de código fuente completa de una aplicación Direct2D mínima](#full-source-code-listing-of-a-minimal-direct2d-application) en este tema.
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>Paso y devolución de punteros inteligentes COM
 

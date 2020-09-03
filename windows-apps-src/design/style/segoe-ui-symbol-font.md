@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c91053197cff231ec9fac85263b33306a3735ccd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0663f9947249f54a888bf2d3f52f522ceb885604
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82034219"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175789"
 ---
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
@@ -22,7 +22,7 @@ ms.locfileid: "82034219"
 
 En este artículo se enumeran los iconos que proporciona la fuente Segoe MDL2 Assets. 
 
-> **API importantes**: [**enumeración Symbol**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol), [**clase FontIcon**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
+> **API importantes**: [**enumeración Symbol**](/uwp/api/windows.ui.xaml.controls.symbol), [**clase FontIcon**](/uwp/api/windows.ui.xaml.controls.fonticon)
 
 ## <a name="about-segoe-mdl2-assets"></a>Acerca de Segoe MDL2 Assets
 
@@ -43,13 +43,13 @@ Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo con un alto
 Muchos de los iconos también tienen formas reflejadas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
 
 ## <a name="using-the-icons"></a>Usar los iconos
-Si estás desarrollando una aplicación en C#, VB o C++ y XAML, puedes usar los glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Si estás desarrollando una aplicación en C#, VB o C++ y XAML, puedes usar los glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
 ```
 
-Si quieres usar un glifo de la fuente **Segoe MDL2 Assets** que no está incluido en la enumeración Symbol, usa una clase [**FontIcon**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon).
+Si quieres usar un glifo de la fuente **Segoe MDL2 Assets** que no está incluido en la enumeración Symbol, usa una clase [**FontIcon**](/uwp/api/windows.ui.xaml.controls.fonticon).
 
 ```xaml
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
@@ -5521,7 +5521,5 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Directrices sobre iconos](../style/icons.md)
-* [Enumeración Symbol](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Symbol)
-* [Clase FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
-
-
+* [Enumeración Symbol](/uwp/api/Windows.UI.Xaml.Controls.Symbol)
+* [Clase FontIcon](/uwp/api/windows.ui.xaml.controls.fonticon)

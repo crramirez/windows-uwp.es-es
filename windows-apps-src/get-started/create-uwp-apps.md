@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 85795ceccdde1ab49c0b6af65bf0299514879e6c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 83a6774180e2f2f0a65dc9a71ebfac5c273a4424
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685223"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168189"
 ---
 # <a name="start-coding"></a>Empezar a crear el código
 
@@ -43,13 +43,13 @@ Si quiere un tutorial más detallado sobre los conceptos básicos de codificaci�
 
 **Documentos:**
 
-* [Introducción a C#](https://docs.microsoft.com/dotnet/csharp/getting-started/)
-* [Tutoriales rápidos de C#](https://docs.microsoft.com/dotnet/csharp/quick-starts/)
-* [Introducción a Visual Studio](https://docs.microsoft.com/visualstudio/ide/)
+* [Introducción a C#](/dotnet/csharp/getting-started/)
+* [Tutoriales rápidos de C#](/dotnet/csharp/quick-starts/)
+* [Introducción a Visual Studio](/visualstudio/ide/)
 
 **Tutoriales:**
 
-* [Windows en Microsoft Learn](https://docs.microsoft.com/learn/browse/?products=windows&resource_type=module)
+* [Windows en Microsoft Learn](/learn/browse/?products=windows&resource_type=module)
 
 ## <a name="using-the-docs"></a>Uso de los documentos
 
@@ -57,9 +57,9 @@ Si ya ha explorado nuestras pistas de aprendizaje o si está interesado en algo 
 
 | Área | Descripción |
 | --- | --- |
-| **Novedades** | Cada actualización importante de Windows 10 amplía nuestros documentos con nuevas directrices. Estos documentos proporcionan información acerca de la característica y la guía de desarrolladores que hemos agregado para cada versión, así como las listas de nuevas API: </br>   [Novedades para desarrolladores en la versión más reciente de Windows 10](../whats-new/windows-10-version-latest.md) </br> Sin embargo, no solo actualizamos nuestros documentos cuando aparecen las versiones importantes. Siempre agregamos nueva información para que explore y se mantenga al día sobre las últimas novedades: </br>   [Novedades en la documentación](../whats-new/windows-docs-latest.md) |
+| **Novedades** | Cada actualización importante de Windows 10 amplía nuestros documentos con nuevas directrices. Estos documentos proporcionan información acerca de la característica y la guía de desarrolladores que hemos agregado para cada versión, así como las listas de nuevas API: </br>   [Novedades para desarrolladores en la versión más reciente de Windows 10](../whats-new/windows-10-build-19041.md) </br> Sin embargo, no solo actualizamos nuestros documentos cuando aparecen las versiones importantes. Siempre agregamos nueva información para que explore y se mantenga al día sobre las últimas novedades: </br>   [Novedades en la documentación](../whats-new/windows-docs-january-2019.md) |
 | **Diseño e interfaz de usuario** | Toda la información en la presentación visual y la interfaz de usuario de la aplicación se encuentra en esta área de los documentos. Si está interesado en los aspectos específicos del lenguaje de marcado XAML o simplemente desea crear una apariencia única para sus documentos, empiece aquí: </br>   [Conceptos básicos de diseño de las aplicaciones para UWP](../design/basics/index.md) |
-| **Desarrollar aplicaciones** | Si quiere obtener información detallada sobre una característica específica de Windows 10 o simplemente tiene interés en ver lo que puede hacer con el desarrollo de UWP, eche un vistazo a esta área de nuestros documentos: </br>   [Características de las aplicación para UWP](../develop/index.md). </br> La referencia de API para aplicaciones de Windows 10 está hospedada en un conjunto de documentos relacionados, que puede encontrar aquí: </br>   [Espacios de nombres de UWP de Windows](https://docs.microsoft.com/uwp/api/) </br>   [Archivo y esquemas XML](https://docs.microsoft.com/uwp/schemas/) |
+| **Desarrollar aplicaciones** | Si quiere obtener información detallada sobre una característica específica de Windows 10 o simplemente tiene interés en ver lo que puede hacer con el desarrollo de UWP, eche un vistazo a esta área de nuestros documentos: </br>   [Características de las aplicación para UWP](../develop/index.md). </br> La referencia de API para aplicaciones de Windows 10 está hospedada en un conjunto de documentos relacionados, que puede encontrar aquí: </br>   [Espacios de nombres de UWP de Windows](/uwp/api/) </br>   [Archivo y esquemas XML](/uwp/schemas/) |
 | **Desarrollar juegos** | Estos documentos contienen información sobre cómo desarrollar juegos en Windows o Xbox. Esto incluye instrucciones de configuración, programas de desarrolladores e instrucciones para programar con características de DirectX o Xbox. </br>   [Introducción al desarrollo de juegos](../gaming/getting-started.md) |
 | **Publicar** | Estos documentos contienen información sobre cómo publicar su aplicación en la Tienda Windows, desde el envío de la aplicación hasta precios, promoción y atracción de clientes: </br>   [Publicar la aplicación en la Tienda Windows](../publish/index.md) |
 
@@ -69,6 +69,6 @@ Algunas plataformas especializadas de Windows 10, como el desarrollo web o Mixed
 
 | Docs | Descripción |
 | --- | --- |
-| **Microsoft Azure** | Puede encontrar información sobre el desarrollo de la nube y Microsoft Azure en la [documentación para desarrolladores de Microsoft Azure.](https://docs.microsoft.com/azure/) |
-| **Desarrollo web** | Puede encontrar información sobre Microsoft Edge, WebVR y otras características de desarrollo web de Windows en la [documentación para desarrolladores de Microsoft Edge.](https://docs.microsoft.com/microsoft-edge/) |
-| **Windows Mixed Reality** | Mixed Reality mezcla contenido real y virtual en experiencias donde coexisten objetos físicos y digitales. Puede encontrar información sobre la creación de aplicaciones para Microsoft HoloLens y otros cascos envolventes en la [documentación de Windows Mixed Reality.](https://docs.microsoft.com/windows/mixed-reality/)|
+| **Microsoft Azure** | Puede encontrar información sobre el desarrollo de la nube y Microsoft Azure en la [documentación para desarrolladores de Microsoft Azure.](/azure/) |
+| **Desarrollo web** | Puede encontrar información sobre Microsoft Edge, WebVR y otras características de desarrollo web de Windows en la [documentación para desarrolladores de Microsoft Edge.](/microsoft-edge/) |
+| **Windows Mixed Reality** | Mixed Reality mezcla contenido real y virtual en experiencias donde coexisten objetos físicos y digitales. Puede encontrar información sobre la creación de aplicaciones para Microsoft HoloLens y otros cascos envolventes en la [documentación de Windows Mixed Reality.](/windows/mixed-reality/)|

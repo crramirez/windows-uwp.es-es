@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: 9848fc9e330a725f52ce2a7fae8b13f300476cf7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b4cd240882b920f06d06bf1143924a075e7cde53
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970200"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165549"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Uso de Grid y StackPanel para crear una aplicación meteorológica sencilla
 
 Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows 10. Este tutorial dura entre 10 y 20 minutos.
 
-> **API importantes**: [Clase Grid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid), [clase StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)
+> **API importantes**: [Clase Grid](/uwp/api/windows.ui.xaml.controls.grid), [clase StackPanel](/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Requisitos previos
 - Windows 10 y Microsoft Visual Studio 2015 o posterior. (se recomienda usar la versión más reciente de Visual Studio para las actualizaciones de seguridad y desarrollo actuales). [Haz clic aquí para obtener información sobre cómo prepararse con Visual Studio](../../get-started/get-set-up.md).
-- Conocimientos acerca de cómo crear una aplicación de "Hello World" básica mediante XAML y C#. Si aún no los tienes, [haz clic aquí para aprender a crear una aplicación "Hola mundo"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- Conocimientos acerca de cómo crear una aplicación de "Hello World" básica mediante XAML y C#. Si aún no los tienes, [haz clic aquí para aprender a crear una aplicación "Hola mundo"](../../get-started/create-a-hello-world-app-xaml-universal.md).
 
 ## <a name="step-1-create-a-blank-app"></a>Paso 1: Creación de una aplicación vacía
 1. En el menú de Visual Studio, selecciona **Archivo** > **Nuevo proyecto**.
@@ -51,7 +51,7 @@ Para empezar a crear un diseño, abre **MainPage.xaml** mediante el uso del **Ex
 
 El nuevo elemento **Grid** crea un conjunto de 2 filas y columnas que define el diseño de la interfaz de la aplicación. La primera columna tiene un valor de **Width** (ancho) de "3\*", mientras que la segunda tiene un valor de "5\*", lo que divide el espacio horizontal entre las dos columnas en una proporción de 3:5. Del mismo modo, las dos filas tienen un valor de **Height** (alto) de "2\*" y "\*" respectivamente, por lo tanto, el elemento **Grid** asigna el doble de espacio a la primera fila que a la segunda ("\*" equivale a "1\*"). Estas relaciones se mantienen incluso si se cambia el tamaño de la ventana o se cambia el dispositivo.
 
-Para obtener información sobre otros métodos de definir el tamaño de las filas y columnas, consulta [Definir diseños de página con XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml).
+Para obtener información sobre otros métodos de definir el tamaño de las filas y columnas, consulta [Definir diseños de página con XAML](./layouts-with-xaml.md).
 
 Si ejecutas la aplicación ahora, no verás nada,excepto una página en blanco, porque ninguna de las áreas de **Grid** tienen ningún contenido. Para mostrar el elemento **Grid**, vamos a asignarle el color.
 
@@ -120,6 +120,6 @@ Y eso es todo. Has creado correctamente el diseño de una aplicación meteoroló
 Si lo deseas, experimenta con el diseño anterior y explora diferentes maneras en las que podrías representar los datos meteorológicos.
 
 ## <a name="related-articles"></a>Artículos relacionados
-Para obtener una introducción sobre la creación de diseños de aplicaciones de Windows, consulta [Introducción al diseño de aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro).
+Para obtener una introducción sobre la creación de diseños de aplicaciones de Windows, consulta [Introducción al diseño de aplicaciones de Windows](../basics/design-and-ui-intro.md).
 
-Para obtener información sobre cómo crear diseños dinámicos que se adapten a diferentes tamaños de pantalla, consulta [Definir diseños de página con XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)
+Para obtener información sobre cómo crear diseños dinámicos que se adapten a diferentes tamaños de pantalla, consulta [Definir diseños de página con XAML](./layouts-with-xaml.md)

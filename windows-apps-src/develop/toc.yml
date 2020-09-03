@@ -151,6 +151,8 @@
       href: ../audio-video-camera/codec-query.md
     - name: Captura de pantalla
       href: ../audio-video-camera/screen-capture.md
+    - name: Captura de pantalla a vídeo
+      href: ../audio-video-camera/screen-capture-video.md
 - name: Comunicación
   items:
     - name: Comunicación entre aplicaciones

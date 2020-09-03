@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10;uwp;first app;hello world;primera aplicación;hola mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c4d4ba374c68509c0378e769262afda0dae7422
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 9b39efb7aa90499f6d238306ad079f1969907f46
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492840"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175259"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Creación de una aplicación "Hola mundo" (XAML)
 
@@ -74,7 +74,7 @@ Aunque **Aplicación vacía (Universal Window)** es una plantilla mínima, conti
 
 Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el **Explorador de soluciones**. Expande un archivo XAML como una carpeta para ver su archivo de código asociado. Los archivos XAML se abren en una vista en dos paneles que muestra la superficie de diseño y el editor de XAML.
 > [!NOTE]
-> ¿Qué es XAML? El lenguaje de marcado de aplicaciones extensible (XAML) es el lenguaje que se usa para definir la interfaz de usuario de la aplicación. Puede especificarse manualmente, o crearse con las herramientas de diseño de Visual Studio. Un archivo .xaml tiene un archivo de código subyacente .xaml.cs que contiene la lógica. Juntos, el XAML y el código subyacente forman una clase completa. Para obtener más información, consulta [Introducción a XAML](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview).
+> ¿Qué es XAML? El lenguaje de marcado de aplicaciones extensible (XAML) es el lenguaje que se usa para definir la interfaz de usuario de la aplicación. Puede especificarse manualmente, o crearse con las herramientas de diseño de Visual Studio. Un archivo .xaml tiene un archivo de código subyacente .xaml.cs que contiene la lógica. Juntos, el XAML y el código subyacente forman una clase completa. Para obtener más información, consulta [Introducción a XAML](../xaml-platform/xaml-overview.md).
 
 *App.xaml y App.xaml.cs*
 
@@ -87,7 +87,7 @@ Para ver y editar un archivo de tu proyecto, haz doble clic en el archivo en el 
 
 -   MainPage.xaml es donde defines la interfaz de usuario para la aplicación. Puedes agregar elementos directamente con el marcado XAML o puedes usar las herramientas de diseño suministradas por Visual Studio.
 -   MainPage.xaml.cs es la página de código subyacente de MainPage.xaml. Es el sitio donde agregas los controladores de eventos y la lógica de la aplicación.
--   Estos dos archivos juntos definen una nueva clase denominada `MainPage`, que se hereda de [**Página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page), en el espacio de nombres `HelloWorld`.
+-   Estos dos archivos juntos definen una nueva clase denominada `MainPage`, que se hereda de [**Página**](/uwp/api/Windows.UI.Xaml.Controls.Page), en el espacio de nombres `HelloWorld`.
 
 *Package.appxmanifest*
 -   Un archivo de manifiesto que describe tu aplicación: su nombre, descripción, icono, página de inicio, etc.
@@ -224,7 +224,7 @@ Asegúrate de que la firma del método ahora incluya la palabra clave **async**,
 
 ### <a name="what-did-we-just-do"></a>¿Qué acabamos de hacer?
 
-Este código usa algunas API de Windows para crear un objeto de síntesis de voz y luego le proporciona algo de texto para que lo lea. (Para obtener más información sobre el uso de SpeechSynthesis, consulta los documentos sobre el [Espacio de nombres SpeechSynthesis](https://docs.microsoft.com/uwp/api/windows.media.speechsynthesis).)
+Este código usa algunas API de Windows para crear un objeto de síntesis de voz y luego le proporciona algo de texto para que lo lea. (Para obtener más información sobre el uso de SpeechSynthesis, consulta los documentos sobre el [Espacio de nombres SpeechSynthesis](/uwp/api/windows.media.speechsynthesis).)
 
 Cuando ejecutes la aplicación y hagas clic en el botón, tu equipo (o teléfono) literalmente dirá "¡Hello, World!".
 
@@ -233,13 +233,13 @@ Cuando ejecutes la aplicación y hagas clic en el botón, tu equipo (o teléfono
 
 Enhorabuena, has creado tu primera aplicación para Windows 10 y la UWP.
 
-Para aprender a usar XAML el diseño de los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../design/layout/grid-tutorial.md), o dirígete directamente a los [pasos siguientes](learn-more.md).
+Para aprender a usar XAML el diseño de los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../design/layout/grid-tutorial.md), o dirígete directamente a los [pasos siguientes](./create-uwp-apps.md).
 
 ## <a name="see-also"></a>Consulte también
 
 * [Tu primera aplicación](your-first-app.md)
-* [Publicar tu aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/)
-* [Artículos sobre el desarrollo de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/develop/)
+* [Publicar tu aplicación para UWP](../publish/index.md)
+* [Artículos sobre el desarrollo de aplicaciones para UWP](../develop/index.md)
 * [Ejemplos de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

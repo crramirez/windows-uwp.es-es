@@ -5,16 +5,16 @@ ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, directo, pila, asignaciones, proyectado, implementación
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fe8ff6653b8655ee25cd9adc0c11acb22d42a11
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 199b62d96685e207e55e6dff7cd310752617d1d2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68372796"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170259"
 ---
 # <a name="diagnosing-direct-allocations"></a>Diagnóstico de asignaciones directas
 
-Tal como se explica en [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis), cuando crees un objeto de tipo de implementación, debes usar la familia de aplicaciones auxiliares [**winrt::make**](/uwp/cpp-ref-for-winrt/make) para hacerlo. En este tema se analiza en profundidad una característica de C++/WinRT 2.0 que te ayuda a diagnosticar el error que se produce al asignar directamente un objeto de tipo de implementación en la pila.
+Tal como se explica en [Crear API con C++/WinRT](./author-apis.md), cuando crees un objeto de tipo de implementación, debes usar la familia de aplicaciones auxiliares [**winrt::make**](/uwp/cpp-ref-for-winrt/make) para hacerlo. En este tema se analiza en profundidad una característica de C++/WinRT 2.0 que te ayuda a diagnosticar el error que se produce al asignar directamente un objeto de tipo de implementación en la pila.
 
 Estos errores pueden convertirse en bloqueos o daños misteriosos que son difíciles de depurar y requieren mucho tiempo. Por lo tanto, se trata de una característica importante de la que merece la pena comprender su trasfondo.
 
@@ -138,4 +138,4 @@ Por lo tanto, C++/WinRT desafía nuestras nociones preconcebidas de lo que signi
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Consumir API con C++/WinRT](consume-apis.md)
-* [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [Crear API con C++/WinRT](./author-apis.md)

@@ -6,12 +6,12 @@ ms.date: 01/22/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc080a58bc3e381fc26ddcc6a42af28e2dacaa65
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 9c2fd792b9652e38637810b4ccd0aee94075895b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970450"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174699"
 ---
 # <a name="two-pane-view"></a>Vista de dos paneles
 
@@ -23,18 +23,18 @@ ms.locfileid: "82970450"
 Aunque el control TwoPaneView funciona en todos los dispositivos Windows, está diseñado para ayudarte a sacar el máximo partido de los dispositivos de doble pantalla de manera automática, sin necesidad de ninguna codificación especial. En un dispositivo de doble pantalla, la vista de dos paneles garantiza que la interfaz de usuario (UI) se divida sin problemas cuando abarque la brecha entre las pantallas, de modo que el contenido se presente a alguno de los lados de la brecha.
 
 > [!NOTE]
-> Un _dispositivo de doble pantalla_ es un tipo especial de dispositivo con funcionalidades exclusivas. No equivale a un dispositivo de escritorio con varios monitores. Para obtener más información sobre los dispositivos de doble pantalla, consulta [Introducción a los dispositivos de doble pantalla](/dual-screen/introduction). (Consulta [Mostrar varias vistas](/windows/uwp/design/layout/show-multiple-views) para más información sobre las formas en que puedes optimizar la aplicación para varios monitores).
+> Un _dispositivo de doble pantalla_ es un tipo especial de dispositivo con funcionalidades exclusivas. No equivale a un dispositivo de escritorio con varios monitores. Para obtener más información sobre los dispositivos de doble pantalla, consulta [Introducción a los dispositivos de doble pantalla](/dual-screen/introduction). (Consulta [Mostrar varias vistas](../layout/show-multiple-views.md) para más información sobre las formas en que puedes optimizar la aplicación para varios monitores).
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **TwoPaneView** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **TwoPaneView** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopaneview)
 
 > [!TIP]
-> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
+> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
 >
 >En el código subyacente, se usa el alias **muxc** en C# para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado esta instrucción **using** en la parte superior del archivo: `using muxc = Microsoft.UI.Xaml.Controls;`
 
@@ -74,7 +74,7 @@ La vista de dos paneles tiene dos paneles donde colocas el contenido. Ajusta el 
 
 Para configurar la vista de dos paneles, establece la propiedad [PanePriority](/uwp/api/microsoft.ui.xaml.controls.twopaneview.panepriority) para especificar qué panel se muestra cuando hay espacio para un solo panel. Luego, especifica si `Pane1` se muestra en la parte superior o inferior de las ventanas Tall, o a la izquierda o a la derecha para las ventanas Wide.
 
-La vista de dos paneles controla el tamaño y la disposición de los paneles, pero aún tienes que hacer que el contenido dentro del panel se adapte a los cambios de tamaño y orientación. Para más información sobre la creación de una interfaz de usuario adaptable, consulta [Diseños adaptativos con XAML](/windows/uwp/design/layout/layouts-with-xaml) y [Paneles de diseño](/windows/uwp/design/layout/layout-panels).
+La vista de dos paneles controla el tamaño y la disposición de los paneles, pero aún tienes que hacer que el contenido dentro del panel se adapte a los cambios de tamaño y orientación. Para más información sobre la creación de una interfaz de usuario adaptable, consulta [Diseños adaptativos con XAML](../layout/layouts-with-xaml.md) y [Paneles de diseño](../layout/layout-panels.md).
 
 [TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopaneview) administra la presentación de los paneles en función del estado de expansión de la aplicación.
 
@@ -92,7 +92,7 @@ No es necesario que [TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopanevie
 
 ### <a name="add-content-to-the-panes"></a>Agregar contenido a los paneles
 
-Cada panel de una vista de dos paneles puede contener un único `UIElement` de XAML. Para agregar contenido, normalmente colocas un panel de diseño XAML en cada panel y, luego, agregas otros controles y contenido al panel. Los paneles pueden cambiar el tamaño y cambiar entre los modos Wide y Tall, por lo que debes asegurarte de que el contenido de cada panel puede adaptarse a estos cambios. Para más información sobre la creación de una interfaz de usuario adaptable, consulta [Diseños adaptativos con XAML](/windows/uwp/design/layout/layouts-with-xaml) y [Paneles de diseño](/windows/uwp/design/layout/layout-panels).
+Cada panel de una vista de dos paneles puede contener un único `UIElement` de XAML. Para agregar contenido, normalmente colocas un panel de diseño XAML en cada panel y, luego, agregas otros controles y contenido al panel. Los paneles pueden cambiar el tamaño y cambiar entre los modos Wide y Tall, por lo que debes asegurarte de que el contenido de cada panel puede adaptarse a estos cambios. Para más información sobre la creación de una interfaz de usuario adaptable, consulta [Diseños adaptativos con XAML](../layout/layouts-with-xaml.md) y [Paneles de diseño](../layout/layout-panels.md).
 
 En este ejemplo, se crea la UI de la aplicación sencilla de imagen/información que se muestra anteriormente en la sección _Ejemplos_. Cuando la aplicación se amplía a dos pantallas, la imagen y la información se muestran en pantallas independientes. En una sola pantalla, el contenido se puede mostrar en dos paneles o combinarse en un solo panel, en función de la cantidad de espacio disponible. (Cuando solo hay espacio para un panel, se mueve el contenido de Pane2 a Pane1, y se permite al usuario desplazarse para ver cualquier contenido oculto. Verás el código más adelante en la sección _Responder a los cambios de modo_).
 
@@ -190,7 +190,7 @@ MyTwoPaneView.PanePriority = Microsoft.UI.Xaml.Controls.TwoPaneViewPriority.Pane
 
 ### <a name="pane-sizing"></a>Cambio de tamaño de los paneles
 
-En una única pantalla, el tamaño de los paneles está determinado por las propiedades [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) y [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length). Usan valores [GridLength](/uwp/api/windows.ui.xaml.gridlength) que admiten el ajuste de tamaño _auto_ y _star_(\*). Consulta la sección _Propiedades de diseño_ de [Diseños adaptativos con XAML](/windows/uwp/design/layout/layouts-with-xaml#layout-properties) para ver una explicación de los ajustes de tamaño auto y star.
+En una única pantalla, el tamaño de los paneles está determinado por las propiedades [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) y [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length). Usan valores [GridLength](/uwp/api/windows.ui.xaml.gridlength) que admiten el ajuste de tamaño _auto_ y _star_(\*). Consulta la sección _Propiedades de diseño_ de [Diseños adaptativos con XAML](../layout/layouts-with-xaml.md#layout-properties) para ver una explicación de los ajustes de tamaño auto y star.
 
 De manera predeterminada, `Pane1Length` se establece en `Auto` y su tamaño se ajusta a su contenido. `Pane2Length` se establece en `*` y usa todo el espacio restante.
 

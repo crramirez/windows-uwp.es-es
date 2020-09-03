@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2e385f6b9977eead6aed52215080588e4f9d8c27
-ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
+ms.openlocfilehash: 32a66c92d4c079c99aed213d0e1aeae66b808d56
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84262776"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169409"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
@@ -90,7 +90,7 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Usa hasta dos columnas o regiones.
 - Muestra el cuadro de búsqueda.
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo de franja para que siempre se muestre en una tira estrecha de iconos.
-- Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
+- Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](../devices/designing-for-tv.md).
 
 ### <a name="large"></a>Grande
 - Establece los márgenes izquierdo y derecho de la ventana en 24 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.

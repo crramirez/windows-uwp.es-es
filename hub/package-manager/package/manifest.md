@@ -4,12 +4,12 @@ description: Si quiere enviar un paquete de software al repositorio del Administ
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 960caede306228c492bc88c81ac3c1c841b6c18c
-ms.sourcegitcommit: 9c2b21081158e712a856158d25dce76b3e213a9c
+ms.openlocfilehash: 4b2c42fb8a9f8eb741ce253c3ea110fe4eeb10a3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129752"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166499"
 ---
 # <a name="create-your-package-manifest"></a>Creación de un manifiesto de paquete
 
@@ -169,7 +169,7 @@ A menudo, puede averiguar qué elementos `Switches` silenciosos están disponibl
 
 | Instalador | Comando  | Documentación |  
 | :--- | :-- | :--- |  
-| MSI | `/q` | [Opciones de la línea de comandos MSI](https://docs.microsoft.com/windows/win32/msi/command-line-options) |
+| MSI | `/q` | [Opciones de la línea de comandos MSI](/windows/win32/msi/command-line-options) |
 | InstallShield | `/s`  | [Parámetros de la línea de comandos InstallShield](https://docs.flexera.com/installshield19helplib/helplibrary/IHelpSetup_EXECmdLine.htm) |
 | Inno Setup | `/SILENT or /VERYSILENT` | [Documentación de Inno Setup](https://jrsoftware.org/ishelp/) |
 | Nullsoft | `/S` | [Instaladores/desinstaladores silenciosos de Nullsoft](https://nsis.sourceforge.io/Docs/Chapter4.html#silent) |

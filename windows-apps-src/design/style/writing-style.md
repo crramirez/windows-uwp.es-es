@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8d79d4f3394bcf8f7892f2c6dc3d4e0ca72972ab
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: c17d4c0aca4c59e18a13bf42bad16e6739938717
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970610"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168679"
 ---
 # <a name="writing-style"></a>Estilo de escritura
 
@@ -76,7 +76,7 @@ Los usuarios echan un vistazo al texto y a menudo pasarán por alto bloques más
 
 ## <a name="style-conventions"></a>Convenciones de estilo
 
-Si no te consideras escritor, puede que te resulte intimidante intentar implementar estos principios y recomendaciones. Pero no te preocupes, usar un lenguaje sencillo y directo es una manera fantástica de proporcionar una buena experiencia de usuario. Y si aun así no estás seguro de cómo estructurar tus palabras, aquí te indicamos algunas instrucciones útiles. Y si quieres obtener más información, consulta la [Guía de estilo de Microsoft](https://docs.microsoft.com/style-guide/welcome/).
+Si no te consideras escritor, puede que te resulte intimidante intentar implementar estos principios y recomendaciones. Pero no te preocupes, usar un lenguaje sencillo y directo es una manera fantástica de proporcionar una buena experiencia de usuario. Y si aun así no estás seguro de cómo estructurar tus palabras, aquí te indicamos algunas instrucciones útiles. Y si quieres obtener más información, consulta la [Guía de estilo de Microsoft](/style-guide/welcome/).
 
 ### <a name="addressing-the-user"></a>Tratamiento del usuario
 
@@ -228,7 +228,7 @@ Se aplican los mismos principios generales y recomendaciones al escribir texto p
 
 ## <a name="accessibility-and-localization"></a>Accesibilidad y localización
 
-Tu aplicación puede llegar a un público más amplio si se crea teniendo presentes la accesibilidad y la localización. Esto es algo que no solo se puede lograr a través del texto, aunque el lenguaje sencillo y amable es un buen comienzo. Para obtener más información, consulta nuestra [información general sobre accesibilidad](https://docs.microsoft.com/windows/uwp/design/accessibility/accessibility-overview) y las [instrucciones para localización](https://docs.microsoft.com/windows/uwp/design/globalizing/globalizing-portal).
+Tu aplicación puede llegar a un público más amplio si se crea teniendo presentes la accesibilidad y la localización. Esto es algo que no solo se puede lograr a través del texto, aunque el lenguaje sencillo y amable es un buen comienzo. Para obtener más información, consulta nuestra [información general sobre accesibilidad](../accessibility/accessibility-overview.md) y las [instrucciones para localización](../globalizing/globalizing-portal.md).
 
 * **Estar preparado para echar una mano**; ten en cuenta diferentes experiencias. Evita las frases que podrían no tener sentido para un público internacional y no uses palabras que hagan suposiciones sobre lo que el usuario puede y no puede hacer.
 

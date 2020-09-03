@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3a5b6df7a5d8333e0f4834c256a38fc912f8f51e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 555459d427eae045d3cf7eda45a97ec806717380
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970630"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175519"
 ---
 # <a name="typography-in-windows-apps"></a>Tipografía en aplicaciones de Windows
 
@@ -106,7 +106,7 @@ Usa Encabezado o Subencabezado si hay que ajustar el texto.
 
 ## <a name="alignment"></a>Asociación
 
-El valor predeterminado [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) es Left y, en la mayoría de los casos, la alineación del texto a la izquierda con un margen irregular a la derecha proporciona un anclaje coherente del contenido y un diseño uniforme. Para idiomas de derecha a izquierda, consulta [Ajustar el diseño y las fuentes para admitir globalización](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
+El valor predeterminado [TextAlignment](/uwp/api/windows.ui.xaml.textalignment) es Left y, en la mayoría de los casos, la alineación del texto a la izquierda con un margen irregular a la derecha proporciona un anclaje coherente del contenido y un diseño uniforme. Para idiomas de derecha a izquierda, consulta [Ajustar el diseño y las fuentes para admitir globalización](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
 
 ![Muestra el texto alineado a la izquierda.](images/type/alignment.svg)
 
@@ -152,7 +152,7 @@ Segoe UI es nuestra fuente para inglés, los idiomas europeos, griego, hebreo, a
 
 ### <a name="globalizinglocalizing-fonts"></a>Globalizar y localizar fuentes
 
-Usa las [API de asignación de fuentes LanguageFont](https://docs.microsoft.com/uwp/api/Windows.Globalization.Fonts.LanguageFont) para acceder mediante programación al estilo, el espesor, el tamaño y la familia de fuentes recomendados para un idioma en particular. El objeto LanguageFont proporciona acceso a la información de fuente correcta para diversas categorías de contenido, como encabezados de interfaz de usuario, notificaciones, texto del cuerpo y fuentes de cuerpo de documento que los usuarios pueden editar. Para obtener más información, consulta [Ajustar el diseño y las fuentes, y admitir la escritura RTL](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
+Usa las [API de asignación de fuentes LanguageFont](/uwp/api/Windows.Globalization.Fonts.LanguageFont) para acceder mediante programación al estilo, el espesor, el tamaño y la familia de fuentes recomendados para un idioma en particular. El objeto LanguageFont proporciona acceso a la información de fuente correcta para diversas categorías de contenido, como encabezados de interfaz de usuario, notificaciones, texto del cuerpo y fuentes de cuerpo de documento que los usuarios pueden editar. Para obtener más información, consulta [Ajustar el diseño y las fuentes, y admitir la escritura RTL](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
 
 ### <a name="fonts-for-non-latin-languages"></a>Fuentes para idiomas no latinos
 
@@ -340,4 +340,4 @@ Las fuentes con serifa son útiles para presentar grandes cantidades de texto.
 * [Controles de texto](../controls-and-patterns/text-controls.md)
 * [Recursos de temas XAML](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
 * [Estilos XAML](../controls-and-patterns/xaml-styles.md)
-* [Tipografía de Microsoft](https://docs.microsoft.com/typography/)
+* [Tipografía de Microsoft](/typography/)

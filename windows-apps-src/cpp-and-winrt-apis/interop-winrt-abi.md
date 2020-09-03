@@ -5,16 +5,16 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, port, migrate, interop, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: db66e276ffa0337da943917543a0065ac160e468
-ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
+ms.openlocfilehash: 71ae6245fe217277c7408a7eb6b5150900cc45d9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87296170"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170179"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidad entre C++/WinRT y la ABI
 
-En este tema se muestra cómo convertir entre la interfaz binaria de aplicaciones del SDK (ABI) y objetos [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Puedes usar estas técnicas de interoperabilidad entre el código que use estas dos formas de programación con Windows Runtime o puedes usarlas a medida que muevas tu código de la ABI a C++/WinRT.
+En este tema se muestra cómo convertir entre la interfaz binaria de aplicaciones del SDK (ABI) y objetos [C++/WinRT](./intro-to-using-cpp-with-winrt.md). Puedes usar estas técnicas de interoperabilidad entre el código que use estas dos formas de programación con Windows Runtime o puedes usarlas a medida que muevas tu código de la ABI a C++/WinRT.
 
 En general, C++/WinRT expone los tipos ABI como **void\*** , por lo que no necesitas incluir archivos de encabezado de plataforma.
 
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-Las implementaciones de las funciones **as** llaman a [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Si quieres que las conversiones de nivel más bajo solo llamen a [**AddRef**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), puedes usar las funciones auxiliares [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi) y [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi). El siguiente ejemplo de código agrega estas conversiones de nivel más bajo al ejemplo de código anterior.
+Las implementaciones de las funciones **as** llaman a [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Si quieres que las conversiones de nivel más bajo solo llamen a [**AddRef**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), puedes usar las funciones auxiliares [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi) y [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi). El siguiente ejemplo de código agrega estas conversiones de nivel más bajo al ejemplo de código anterior.
 
 > [!IMPORTANT]
 > Al interoperar con tipos de ABI, es fundamental que el tipo de ABI usado se corresponda con la interfaz predeterminada del objeto de C++/WinRT. De lo contrario, las invocaciones de métodos del tipo de ABI acabarán por llamar a métodos del mismo espacio vtable de la interfaz predeterminada con resultados muy inesperados. Tenga en cuenta que [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi) no protege contra esta situación en tiempo de compilación, ya que usa **void\*** para todos los tipos de ABI y supone que el autor de la llamada se ha encargado de que los tipos no tengan errores de coincidencia. De este modo, se evita que los encabezados de C++/WinRT tengan que hacer referencia a los encabezados de ABI, cuando es posible que los tipos de ABI nunca se usen.
@@ -180,7 +180,7 @@ T convert_from_abi(::IUnknown* from)
 }
 ```
 
-La función simplemente llama a [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) para consultar la interfaz predeterminada del tipo C++/WinRT solicitado.
+La función simplemente llama a [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) para consultar la interfaz predeterminada del tipo C++/WinRT solicitado.
 
 Como hemos visto, no es necesaria la función auxiliar para convertir de un objeto C++/WinRT al puntero de interfaz ABI equivalente. Solo tienes que usar la función miembro [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (o [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)) para consultar la interfaz solicitada. Las funciones **as** y **try_as** devuelven un objeto [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que encapsula el tipo ABI solicitado.
 
@@ -286,7 +286,7 @@ To to_winrt(wil::com_ptr_t<From, ErrorPolicy> const& ptr)
 }
 ```
 
-También, consulta [Consumir componentes COM con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-com).
+También, consulta [Consumir componentes COM con C++/WinRT](./consume-com.md).
 
 ### <a name="unsafe-interop-with-abi-com-interface-pointers"></a>Interoperabilidad insegura con punteros de interfaz ABI COM
 
@@ -364,8 +364,8 @@ void GetString(_Out_ HSTRING* value);
 | Copiar **hstring** en **HSTRING** | `copy_to_abi(s, reinterpret_cast<void*&>(h));` | *h* recibe una copia de la cadena. Cualquier cadena que anteriormente pertenecía a *h* se libera. |
 
 ## <a name="important-apis"></a>API importantes
-* [Función AddRef](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)
-* [Función QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
+* [Función AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)
+* [Función QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 * [Función winrt::attach_abi](/uwp/cpp-ref-for-winrt/attach-abi)
 * [Plantilla de estructura winrt::com_ptr](/uwp/cpp-ref-for-winrt/com-ptr)
 * [Función winrt::copy_from_abi](/uwp/cpp-ref-for-winrt/copy-from-abi)

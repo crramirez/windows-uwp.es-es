@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Node.js, windows 10, native windows, directly on windows
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: fe1943da8c1de4f4fced5dec67079522d83f9a19
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8c865610ba2678c1c5ab1b25ff7a2c7410d11f15
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82173471"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166589"
 ---
 # <a name="set-up-your-nodejs-development-environment-directly-on-windows"></a>Configuración del entorno de desarrollo de Node.js directamente en Windows
 
@@ -64,7 +64,7 @@ Aunque windows-nvm es actualmente el administrador de versiones más popular par
 Para instalar Volta como administrador de versiones (en lugar de windows-nvm), consulta la sección **Instalación de Windows** de su [Guía de introducción](https://docs.volta.sh/guide/getting-started); después, descarga y ejecuta Windows Installer siguiendo las instrucciones de configuración.
 
 > [!IMPORTANT]
-> Debes asegurarte de que el [modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#accessing-settings-for-developers) está habilitado en el equipo Windows antes de instalar Volta.
+> Debes asegurarte de que el [modo de desarrollador](/windows/uwp/get-started/enable-your-device-for-development#accessing-settings-for-developers) está habilitado en el equipo Windows antes de instalar Volta.
 
 Para más información sobre el uso de Volta para instalar varias versiones de Node.js en Windows, consulta los [documentos de Volta](https://docs.volta.sh/guide/understanding#managing-your-toolchain).
 
@@ -101,4 +101,4 @@ Si planeas colaborar con otras personas u hospedar el proyecto en un sitio de c�
 Usar Node.js directamente en Windows es ideal para aprender y experimentar con lo que puedes hacer. Una vez que estés preparado para compilar aplicaciones web listas para producción, que normalmente se implementan en un servidor basado en Linux, se recomienda usar el Subsistema de Windows para Linux versión 2 (WSL 2) para desarrollar aplicaciones web Node.js. Muchos marcos y paquetes de Node.js se crean con un entorno *nix en mente, y la mayoría de las aplicaciones Node.js se implementan en Linux, por lo que el desarrollo en WSL garantiza la coherencia entre los entornos de desarrollo y producción. Para configurar un entorno de desarrollo de WSL, consulta [Configurar el entorno de desarrollo de Node.js con WSL 2](./setup-on-wsl2.md).
 
 > [!NOTE]
-> Si te encuentras en una situación (poco frecuente) en la que necesitas hospedar una aplicación Node.js en un servidor Windows, el escenario más común parece ser [mediante un proxy inverso](https://medium.com/intrinsic/why-should-i-use-a-reverse-proxy-if-node-js-is-production-ready-5a079408b2ca). Existen dos formas de hacerlo: 1) [usar iisnode](https://harveywilliams.net/blog/installing-iisnode) o [directamente](https://dev.to/petereysermans/hosting-a-node-js-application-on-windows-with-iis-as-reverse-proxy-397b). No mantenemos estos recursos y recomendamos [usar servidores Linux para hospedar las aplicaciones Node.js](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-nodejs).
+> Si te encuentras en una situación (poco frecuente) en la que necesitas hospedar una aplicación Node.js en un servidor Windows, el escenario más común parece ser [mediante un proxy inverso](https://medium.com/intrinsic/why-should-i-use-a-reverse-proxy-if-node-js-is-production-ready-5a079408b2ca). Existen dos formas de hacerlo: 1) [usar iisnode](https://harveywilliams.net/blog/installing-iisnode) o [directamente](https://dev.to/petereysermans/hosting-a-node-js-application-on-windows-with-iis-as-reverse-proxy-397b). No mantenemos estos recursos y recomendamos [usar servidores Linux para hospedar las aplicaciones Node.js](/azure/app-service/app-service-web-get-started-nodejs).

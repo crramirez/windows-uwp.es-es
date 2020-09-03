@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a8b53eef3538ca637fa5b351b74125eebdfe2b3
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: e2d727c9b5e4c7e2912f0bcae8848149c8073f3b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942845"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169749"
 ---
 # <a name="nested-ui-in-list-items"></a>Interfaz de usuario anidada en elementos de lista
 
@@ -26,9 +26,9 @@ La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los co
 
 Puedes usar la interfaz de usuario anidada para presentar a un usuario las opciones adicionales que le ayudarán a acelerar la realización de acciones importantes. Sin embargo, cuantas más acciones expongas, más complicada será la interfaz de usuario. Debes prestar especial atención si decides usar este patrón de interfaz de usuario. En este artículo se proporcionan directrices para ayudar a determinar el mejor curso de acción para tu interfaz de usuario concreta.
 
-> **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
+> **API importantes**: [clase ListView](/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](/uwp/api/windows.ui.xaml.controls.gridview)
 
-En este artículo, se trata la creación de la interfaz de usuario anidada en los elementos [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) y [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview). Aunque en esta sección no se tratan otros casos de interfaz de usuario anidada, estos conceptos son transferibles. Antes de comenzar, debes estar familiarizado con las instrucciones generales para usar los controles ListView o GridView en la interfaz de usuario, que encontrarás en los artículos [Listas](lists.md) y [Vista de lista y vista de cuadrícula](listview-and-gridview.md).
+En este artículo, se trata la creación de la interfaz de usuario anidada en los elementos [ListView](/uwp/api/windows.ui.xaml.controls.listview) y [GridView](/uwp/api/windows.ui.xaml.controls.gridview). Aunque en esta sección no se tratan otros casos de interfaz de usuario anidada, estos conceptos son transferibles. Antes de comenzar, debes estar familiarizado con las instrucciones generales para usar los controles ListView o GridView en la interfaz de usuario, que encontrarás en los artículos [Listas](lists.md) y [Vista de lista y vista de cuadrícula](listview-and-gridview.md).
 
 En este artículo, se usan los términos *lista*, *elemento de lista* e *interfaz de usuario anidada* tal como se definen aquí:
 - *Lista* hace referencia a una colección de elementos incluidos en una vista de lista o una vista de cuadrícula.
@@ -37,7 +37,7 @@ En este artículo, se usan los términos *lista*, *elemento de lista* e *interfa
 
 ![Partes de la interfaz de usuario anidada](images/nested-ui-example-1.png)
 
-> NOTA&nbsp;&nbsp; ListView y GridView derivan ambos de la clase [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos sobre las listas, la información corresponde a ambos controles, ListView y GridView.
+> NOTA&nbsp;&nbsp; ListView y GridView derivan ambos de la clase [ListViewBase](/uwp/api/windows.ui.xaml.controls.listviewbase), por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos sobre las listas, la información corresponde a ambos controles, ListView y GridView.
 
 ## <a name="primary-and-secondary-actions"></a>Acciones principales y secundarias
 
@@ -137,7 +137,7 @@ Si la entrada proviene de un teclado, esta es la experiencia que obtiene el usua
 - Desde el elemento de interfaz de usuario a la izquierda de Elemento de lista, la tecla TAB coloca el foco en **A**.
 - Desde el elemento de interfaz de usuario a la derecha de Elemento de lista, las teclas Mayús+TAB colocan el foco en **C**.
 
-Para conseguir esta interfaz de usuario, establece [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) en **true** en la lista. [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) puede ser cualquier valor.
+Para conseguir esta interfaz de usuario, establece [IsItemClickEnabled](/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) en **true** en la lista. [SelectionMode](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) puede ser cualquier valor.
 
 Para que el código lo implemente, consulta la sección [Ejemplo](#example) de este artículo.
 
@@ -151,9 +151,9 @@ Este tipo de interfaz de usuario tiende a ser mucho más complicado que los ejem
 
 
 Para conseguir esta interfaz de usuario, establece las siguientes propiedades en la lista:
-- [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) en **None**.
-- [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) en **false**.
-- [IsFocusEngagementEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isfocusengagementenabled) en **true**.
+- [SelectionMode](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) en **None**.
+- [IsItemClickEnabled](/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) en **false**.
+- [IsFocusEngagementEnabled](/uwp/api/windows.ui.xaml.controls.control.isfocusengagementenabled) en **true**.
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="False" >

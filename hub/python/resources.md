@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, microsoft, windows 10, tutoriales, cursos en línea, blogs, eventos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 136da1d69a61cb90c9c80cab5d7ecd822d64820d
-ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
+ms.openlocfilehash: e5ae3eb09a015a5ae1385612d5410c41a43b005b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88243247"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175779"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Recursos para el desarrollo con Python en Windows
 
@@ -27,7 +27,7 @@ Lista de vínculos que recomendamos para los desarrolladores de Python que traba
 
 - [Uso de Python en Windows](https://docs.python.org/3/using/windows.html): esta documentación de Python.org proporciona información general sobre el comportamiento específico de Windows que debes tener en cuenta al usar Python en Microsoft Windows.
 
-- [Azure para desarrolladores en la nube de Python](https://docs.microsoft.com/azure/python/): documentación que incluye desde la creación y la implementación de una aplicación web de Python en Azure hasta la ejecución de código de Python como una función sin servidor.
+- [Azure para desarrolladores en la nube de Python](/azure/python/): documentación que incluye desde la creación y la implementación de una aplicación web de Python en Azure hasta la ejecución de código de Python como una función sin servidor.
 
 - [Publicaciones de Stack Overflow que contienen "Python" y "Windows"](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379): la comunidad de Stack Overflow resulta muy útil para abordar las preguntas. Nos esforzamos por supervisar y respaldar activamente esta comunidad.
 
@@ -39,7 +39,7 @@ Lista de vínculos que recomendamos para los desarrolladores de Python que traba
 
 - [Idiomas de los documentos de Python](https://wiki.python.org/moin/Languages): vínculos a los documentos de Python en idiomas distintos del inglés.
 
-- [Explorador de API de Python](https://docs.microsoft.com/python/api/?view=azure-python): tu tienda integral para todas las API basadas en Python de Microsoft.
+- [Explorador de API de Python](/python/api/?view=azure-python): tu tienda integral para todas las API basadas en Python de Microsoft.
 
 - [Ejemplos de código de Azure con Python](https://azure.microsoft.com/resources/samples/?platform=python&sort=0): Aprende a interactuar con los servicios de Azure mediante el uso de código de Python.
 
@@ -47,7 +47,7 @@ Lista de vínculos que recomendamos para los desarrolladores de Python que traba
 
 ## <a name="online-courses"></a>Cursos en línea
 
-- [Introducción a Python en Microsoft Learn](https://docs.microsoft.com/learn/modules/intro-to-python/): prueba la plataforma de Microsoft Learn interactiva y gana puntos de experiencia por completar este módulo, en el que se describen los aspectos básicos sobre cómo escribir código de Python básico, declarar variables y trabajar con la entrada y salida de la consola. Con el entorno de espacio aislado interactivo, resulta un buen punto de partida para aquellas personas que aún no cuentan con su propio entorno de desarrollo de Python configurado.
+- [Introducción a Python en Microsoft Learn](/learn/modules/intro-to-python/): prueba la plataforma de Microsoft Learn interactiva y gana puntos de experiencia por completar este módulo, en el que se describen los aspectos básicos sobre cómo escribir código de Python básico, declarar variables y trabajar con la entrada y salida de la consola. Con el entorno de espacio aislado interactivo, resulta un buen punto de partida para aquellas personas que aún no cuentan con su propio entorno de desarrollo de Python configurado.
 
 - [Python en Pluralsight: 8 cursos, 29 horas](https://app.pluralsight.com/paths/skills/python): la ruta de aprendizaje de Python en Pluralsight ofrece cursos en línea que abarcan una gran variedad de temas relacionados con Python, incluida una herramienta para medir tus aptitudes y averiguar tus debilidades.
 
@@ -67,14 +67,14 @@ Lista de vínculos que recomendamos para los desarrolladores de Python que traba
 
 - [Otros marcos web de Python](https://wiki.python.org/moin/WebFrameworks): lista de marcos web de Python con breves descripciones de Python.org.
 
-- [Tutorial: Compilación de una aplicación de Flask con Azure Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/translator/tutorial-build-flask-app-translation-synthesis): compila una aplicación web de Flask que usa Azure Cognitive Services para traducir texto, realizar análisis de sentimiento y sintetizar texto traducido a voz.
+- [Tutorial: Compilación de una aplicación de Flask con Azure Cognitive Services](/azure/cognitive-services/translator/tutorial-build-flask-app-translation-synthesis): compila una aplicación web de Flask que usa Azure Cognitive Services para traducir texto, realizar análisis de sentimiento y sintetizar texto traducido a voz.
 
-- [Implementación de una aplicación web de Python en una máquina virtual en Azure Stack](https://docs.microsoft.com/azure-stack/user/azure-stack-dev-start-howto-vm-python): crea una máquina virtual para hospedar la aplicación web de Python en Azure Stack.
+- [Implementación de una aplicación web de Python en una máquina virtual en Azure Stack](/azure-stack/user/azure-stack-dev-start-howto-vm-python): crea una máquina virtual para hospedar la aplicación web de Python en Azure Stack.
 
-- [Compilación de una aplicación de Python mediante la API de Azure Cosmos DB para MongoDB](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-flask): crea una sencilla aplicación de tareas pendientes de Flask con el emulador de Azure Cosmos DB y la API del Azure Cosmos DB para MongoDB.
+- [Compilación de una aplicación de Python mediante la API de Azure Cosmos DB para MongoDB](/azure/cosmos-db/create-mongodb-flask): crea una sencilla aplicación de tareas pendientes de Flask con el emulador de Azure Cosmos DB y la API del Azure Cosmos DB para MongoDB.
 
-- [Compilación de una aplicación de Python y PostgreSQL en Azure App Service](https://docs.microsoft.com/azure/app-service/containers/tutorial-python-postgresql-app): crea una aplicación de Django controlada por datos con PostgreSQL como el back-end de base de datos, que se ejecuta en App Service en Linux.
+- [Compilación de una aplicación de Python y PostgreSQL en Azure App Service](/azure/app-service/containers/tutorial-python-postgresql-app): crea una aplicación de Django controlada por datos con PostgreSQL como el back-end de base de datos, que se ejecuta en App Service en Linux.
 
-- [Compilación de aplicaciones de Django de Python con Microsoft Graph](https://docs.microsoft.com/graph/tutorials/python): crea una aplicación web de Django de Python que use Microsoft Graph API para recuperar información del calendario de un usuario.
+- [Compilación de aplicaciones de Django de Python con Microsoft Graph](/graph/tutorials/python): crea una aplicación web de Django de Python que use Microsoft Graph API para recuperar información del calendario de un usuario.
 
-- [Tutorial: Aplicación web de la API de Bing Ads en Python](https://docs.microsoft.com/advertising/guides/walkthrough-web-application-python?view=bingads-13): empieza a ejecutar una aplicación web de Microsoft Advertising mediante el SDK de Python para Bing Ads, el IDE de Visual Studio Code y el marco web de Django.
+- [Tutorial: Aplicación web de la API de Bing Ads en Python](/advertising/guides/walkthrough-web-application-python?view=bingads-13): empieza a ejecutar una aplicación web de Microsoft Advertising mediante el SDK de Python para Bing Ads, el IDE de Visual Studio Code y el marco web de Django.

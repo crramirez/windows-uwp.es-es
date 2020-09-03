@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, Windows 10, Microsoft, aprendizaje de NodeJS, Node en Windows, Node en Windows para principiantes, desarrollo con Node en Windows, desarrollador con NodeJS en Windows
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: d40d701dc3ae973e0834d0b329527e69854b9e36
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 5737316ae2de0520e5443f69cefaec25679a228f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492870"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166639"
 ---
 # <a name="get-started-using-nodejs-on-windows-for-beginners"></a>Introducción al uso de Node.js en Windows para principiantes
 
@@ -148,5 +148,5 @@ Usaremos el módulo del sistema operativo integrado para obtener información so
 En esta guía, has aprendido algunas cosas básicas sobre lo que puedes hacer con Node.js, has probado la línea de comandos de Node.js en VS Code, has creado una aplicación web simple con Express.js y la has ejecutado localmente en el explorador web. Después has intentado usar algunos de los módulos de Node.js integrados. Para obtener más información sobre cómo instalar y usar algunos marcos web de Node.js populares, consulta la guía siguiente, en la que se trata el Next.js (un marco web representado por el servidor basado en React), Nuxt.js (un marco web representado por el servidor basado en Vue) y Gatsby (un marco web representado de forma estática basado en React). También puedes ir directamente al aprendizaje sobre el uso de bases de datos de MongoDB o PostgreSQL o contenedores de Docker.
 
 - [Introducción a los marcos web de Node.js en Windows](./web-frameworks.md)
-- [Introducción a la conexión de aplicaciones de Node.js a una base de datos](https://docs.microsoft.com/windows/wsl/tutorials/wsl-database)
+- [Introducción a la conexión de aplicaciones de Node.js a una base de datos](/windows/wsl/tutorials/wsl-database)
 - [Introducción al uso de contenedores de Docker con Node.js](./containers.md)

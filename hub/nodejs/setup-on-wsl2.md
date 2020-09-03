@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, learning nodejs, node on windows, node on wsl, node on linux on windows, install node on windows, nodejs with vs code, develop with node on windows, develop with nodejs on windows, install node on WSL, NodeJS on Windows Subsystem for Linux
 ms.localizationpriority: medium
 ms.date: 07/28/2020
-ms.openlocfilehash: ce4e736751d5586c6ab4489e976fc397b1be0301
-ms.sourcegitcommit: 6b83f1854a113490dcd4f52425ecade9e66e0b44
+ms.openlocfilehash: 1b44cc51ecbb83e52a16ab7e5c577578c8765cb9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87333799"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166565"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>Configuración del entorno de desarrollo de Node.js con WSL 2
 
@@ -26,7 +26,7 @@ Se recomienda instalar y ejecutar la versión actualizada de WSL 2 para poder be
 
 ## <a name="install-wsl-2"></a>Instalación de WSL 2
 
-Para habilitar e instalar WSL 2, sigue los pasos que se describen en la [documentación de instalación de WSL](https://docs.microsoft.com/windows/wsl/install-win10). Estos pasos incluirán la elección de una distribución de Linux (por ejemplo, Ubuntu).
+Para habilitar e instalar WSL 2, sigue los pasos que se describen en la [documentación de instalación de WSL](/windows/wsl/install-win10). Estos pasos incluirán la elección de una distribución de Linux (por ejemplo, Ubuntu).
 
 Una vez que hayas instalado WSL 2 y una distribución de Linux, abre la distribución de Linux (puedes encontrarla en el menú Inicio de Windows), y comprueba la versión y el nombre de código mediante el comando: `lsb_release -dc`.
 
@@ -34,7 +34,7 @@ Se recomienda actualizar la distribución de Linux con regularidad, incluso inme
 
 ## <a name="install-windows-terminal-optional"></a>Instalación de Terminal Windows (opcional)
 
-El nuevo Terminal Windows permite habilitar varias pestañas (cambia rápidamente entre varias líneas de comando de Linux, el símbolo del sistema de Windows, PowerShell, la CLI de Azure, etc.), crear enlaces de teclado personalizados (teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), usar la característica de búsqueda y configurar temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo/desenfoque/transparencia). [Más información](https://docs.microsoft.com/windows/terminal).
+El nuevo Terminal Windows permite habilitar varias pestañas (cambia rápidamente entre varias líneas de comando de Linux, el símbolo del sistema de Windows, PowerShell, la CLI de Azure, etc.), crear enlaces de teclado personalizados (teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), usar la característica de búsqueda y configurar temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo/desenfoque/transparencia). [Más información](/windows/terminal).
 
 1. Obtenga [Terminal Windows en Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): al instalar a través de Microsoft Store, las actualizaciones se controlan automáticamente.
 
@@ -78,7 +78,7 @@ Si usas NVM para instalar Node.js y NPM, no es necesario usar el comando SUDO pa
 Aunque nvm es actualmente el administrador de versiones más popular para Node, existen algunas alternativas que se deben tener en cuenta:
 
 - [n](https://www.npmjs.com/package/n#installation) es una alternativa a `nvm` de larga duración que consigue lo mismo con comandos ligeramente diferentes y se instala a través de `npm` en lugar de con un script de Bash.
-- [fnm](https://github.com/Schniz/fnm#using-a-script) es un administrador de versiones más reciente, lo que exige que sea mucho más rápido que `nvm`. (También utiliza [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)).
+- [fnm](https://github.com/Schniz/fnm#using-a-script) es un administrador de versiones más reciente, lo que exige que sea mucho más rápido que `nvm`. (También utiliza [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)).
 - [Volta](https://github.com/volta-cli/volta#installing-volta) es un nuevo administrador de versiones del equipo de LinkedIn que notifica la velocidad mejorada y la compatibilidad multiplataforma.
 - [asdf-vm](https://asdf-vm.com/#/core-manage-asdf-vm) es una única CLI para varios lenguajes, como ike gvm, nvm, rbenv & pyenv y muchos más, todo en uno.
 - [nvs](https://github.com/jasongin/nvs) (conmutador de versiones de Node) es una alternativa `nvm` multiplataforma con la capacidad de [integrarse con VS Code](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md).
@@ -135,7 +135,7 @@ Algunas de las extensiones adicionales que puedes considerar son las siguientes:
 
 ## <a name="set-up-git-optional"></a>Configuración de GIT (opcional)
 
-Si quiere configurar GIT para un proyecto de NodeJS en WSL, consulte el artículo [Introducción al uso de GIT en el subsistema de Windows para Linux](https://docs.microsoft.com/windows/wsl/tutorials/wsl-git) en la documentación de WSL.
+Si quiere configurar GIT para un proyecto de NodeJS en WSL, consulte el artículo [Introducción al uso de GIT en el subsistema de Windows para Linux](/windows/wsl/tutorials/wsl-git) en la documentación de WSL.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -143,5 +143,5 @@ Ya tienes configurado un entorno de desarrollo de Node.js. Para empezar a usar e
 
 - [Introducción a Node.js para principiantes](./beginners.md)
 - [Introducción a los marcos web de Node.js en Windows](./web-frameworks.md)
-- [Introducción a la conexión de aplicaciones de Node.js a una base de datos](https://docs.microsoft.com/windows/wsl/tutorials/wsl-database)
+- [Introducción a la conexión de aplicaciones de Node.js a una base de datos](/windows/wsl/tutorials/wsl-database)
 - [Introducción al uso de contenedores de Docker con Node.js](./containers.md)

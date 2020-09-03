@@ -5,12 +5,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, portal de dispositivos, administrador de aplicaciones, implementación, SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bf3dab97be67a3b97aca4b3132bd9fe18691d15
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0fd5bf6be691974d956de0c71f4a1d11aa1a229f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75681936"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166099"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implementar una aplicación mediante el registro de archivos dinámico 
 
@@ -31,10 +31,10 @@ El diseño de archivos dinámicos simplemente es el acto de colocar el contenido
 
 ## <a name="how-to-register-a-loose-file-layout"></a>Cómo registrar un diseño de archivos dinámicos
 
-Windows proporciona varias herramientas de desarrollo para registrar diseños de archivos dinámicos en dispositivos locales y remotos. Puedes elegir entre `WinDeployAppCmd` (herramienta Windows SDK), Portal de dispositivos Windows, PowerShell y [Visual Studio](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#register-layout-from-network). A continuación, veremos cómo registrar archivos dinámicos con estas herramientas. Pero primero asegúrate de que tienes la siguiente configuración:
+Windows proporciona varias herramientas de desarrollo para registrar diseños de archivos dinámicos en dispositivos locales y remotos. Puedes elegir entre `WinDeployAppCmd` (herramienta Windows SDK), Portal de dispositivos Windows, PowerShell y [Visual Studio](./deploying-and-debugging-uwp-apps.md#register-layout-from-network). A continuación, veremos cómo registrar archivos dinámicos con estas herramientas. Pero primero asegúrate de que tienes la siguiente configuración:
 
 - Los dispositivos deben contar con Windows 10 Creators Update, compilación 14965 o posterior.
-- Tendrás que habilitar el [modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) y la [detección de dispositivos](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#device-discovery) en todos los dispositivos.
+- Tendrás que habilitar el [modo de desarrollador](../get-started/enable-your-device-for-development.md) y la [detección de dispositivos](../get-started/enable-your-device-for-development.md#device-discovery) en todos los dispositivos.
 
 > [!IMPORTANT]
 > El registro de archivos dinámicos solo está disponible en los dispositivos que admiten el protocolo de recurso compartido de red (SMB): escritorio y Xbox. 
@@ -51,7 +51,7 @@ WinAppDeployCmd.exe registerfiles -remotedeploydir <Network Path> -ip <IP Addres
 
 **Dirección IP**: dirección IP del equipo de destino.
 
-**PIN de la máquina de destino**: PIN, en caso de que sea necesario, para establecer una conexión con el dispositivo de destino. Se te pedirá que vuelvas a intentarlo con la opción `-pin` si se requiere autenticación. Consulta [Detección de dispositivo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#device-discovery) para obtener información sobre cómo obtener un PIN.
+**PIN de la máquina de destino**: PIN, en caso de que sea necesario, para establecer una conexión con el dispositivo de destino. Se te pedirá que vuelvas a intentarlo con la opción `-pin` si se requiere autenticación. Consulta [Detección de dispositivo](../get-started/enable-your-device-for-development.md#device-discovery) para obtener información sobre cómo obtener un PIN.
 
 ### <a name="windows-device-portal"></a>Portal de dispositivos Windows
 

@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 621b687e54cfba55bfd176d4fe0072e47cf79183
-ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
+ms.openlocfilehash: 1635f1aa808355c246be96706400e384da8a9777
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437158"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175569"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 
@@ -29,9 +29,9 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
-> **API de plataforma**: [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
+> **API de plataforma**: [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -159,4 +159,4 @@ Si una información sobre herramientas oculta el contenido al que hace referenci
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase ToolTip](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)
+- [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip)

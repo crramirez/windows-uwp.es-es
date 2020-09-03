@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ed38be070263bbd619e44daf5c747a97299b3cf7
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 01ccd7a7ead6bd79b79e8beb3de7f3208b616b7c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233856"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174539"
 ---
 # <a name="navigation-design-basics-for-windows-apps"></a>Conceptos básicos de diseño de navegación para aplicaciones de Windows
 
@@ -168,7 +168,7 @@ Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo 
         ![Imagen de marco](images/nav/thumbnail-frame.svg)
     :::column-end:::
     :::column span="2":::
-        [**Marco**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+        [**Marco**](/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
 Con algunas excepciones, cualquier aplicación que tiene varias páginas usa un marco. Por lo general, una aplicación tiene una página principal que contiene el marco y un elemento de navegación primario, como un control de vista de navegación. Cuando el usuario selecciona una página, el marco la carga y la muestra.
 :::row-end:::

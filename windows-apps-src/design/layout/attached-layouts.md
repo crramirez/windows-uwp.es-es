@@ -7,12 +7,12 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ee88e32ed0ce0fd193fe79e48814a11f494d062
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 9f36035bea91f39d60f44ca9e16c768eb5d75e78
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970220"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165639"
 ---
 # <a name="attached-layouts"></a>Diseños adjuntos
 
@@ -22,12 +22,12 @@ En este tema, trataremos lo que implica la creación de un diseño adjunto (con 
 
 | **Obtención de la biblioteca de la interfaz de usuario de Windows** |
 | - |
-| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/). |
 
 > **API importantes**:
 
 > * [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
-> * [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater)
+> * [ItemsRepeater](../controls-and-patterns/items-repeater.md)
 > * [Diseño](/uwp/api/microsoft.ui.xaml.controls.layout)
 >     * [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout)
 >     * [VirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout)
@@ -44,7 +44,7 @@ Para disponer un diseño es necesario responder a dos preguntas para cada elemen
 
 2. ¿Cuál será la ***posición*** de este elemento?
 
-El sistema de diseño de XAML, que responde a estas preguntas, se trata brevemente en el marco de los [paneles personalizados](/windows/uwp/design/layout/custom-panels-overview).
+El sistema de diseño de XAML, que responde a estas preguntas, se trata brevemente en el marco de los [paneles personalizados](./custom-panels-overview.md).
 
 ### <a name="containers-and-context"></a>Contenedores y contexto
 
@@ -55,7 +55,7 @@ Conceptualmente, el panel de [XAML](/uwp/api/windows.ui.xaml.controls.panel) com
 
 Por esta razón, un panel de XAML se ha asociado tradicionalmente al diseño, pero desde un punto de vista técnico va un paso más allá.
 
-El elemento [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater) también se comporta como el panel pero, a diferencia de este, no expone una propiedad secundaria que permita agregar o quitar mediante programación elementos secundarios de UIElement.  En su lugar, el marco administra automáticamente la vigencia de sus elementos secundarios para que se correspondan con una colección de elementos de datos.  Aunque no se deriva del panel, se comporta como un panel y así lo trata el marco.
+El elemento [ItemsRepeater](../controls-and-patterns/items-repeater.md) también se comporta como el panel pero, a diferencia de este, no expone una propiedad secundaria que permita agregar o quitar mediante programación elementos secundarios de UIElement.  En su lugar, el marco administra automáticamente la vigencia de sus elementos secundarios para que se correspondan con una colección de elementos de datos.  Aunque no se deriva del panel, se comporta como un panel y así lo trata el marco.
 
 > [!NOTE]
 > El elemento [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) es un contenedor, derivado del panel, que delega su lógica en el objeto [Layout](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) adjunto.  LayoutPanel se encuentra en *versión preliminar* y actualmente solo está disponible en la *versión preliminar* del paquete WinUI.
@@ -128,7 +128,7 @@ En primer lugar, decide si el diseño que necesitas crear debe admitir la virtua
 **Algunos aspectos que hay que tener en cuenta...**
 
 1. Los diseños sin virtualización son más fáciles de crear. Si el número de elementos siempre será pequeño, se recomienda crear un diseño sin virtualización.
-2. La plataforma proporciona un conjunto de diseños adjuntos que funcionan con [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater#change-the-layout-of-items) y [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) para cubrir las necesidades comunes.  Familiarízate con ellos antes de decidirte por la definición de un diseño personalizado.
+2. La plataforma proporciona un conjunto de diseños adjuntos que funcionan con [ItemsRepeater](../controls-and-patterns/items-repeater.md#change-the-layout-of-items) y [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) para cubrir las necesidades comunes.  Familiarízate con ellos antes de decidirte por la definición de un diseño personalizado.
 3. Los diseños con virtualización siempre tienen un costo adicional de CPU y memoria, complejidad y sobrecarga en comparación con un diseño sin virtualización.  Como norma general, si los elementos secundarios que el diseño debe administrar probablemente quepan en un área que sea el triple del tamaño de la ventanilla, puede que no compense el diseño con virtualización. El tamaño triple se describe con más detalle más adelante en este documento, pero se debe a la naturaleza asincrónica del desplazamiento en Windows y su repercusión en la virtualización.
 
 > [!TIP]
@@ -145,7 +145,7 @@ El tipo [Layout](/uwp/api/microsoft.ui.xaml.controls.layout) base tiene dos tipo
 
 ## <a name="non-virtualizing-layout"></a>Diseño sin virtualización
 
-El enfoque para crear un diseño sin virtualización debe ser familiar para cualquier usuario que haya creado un [panel personalizado](/windows/uwp/design/layout/custom-panels-overview).  Se aplican los mismos conceptos.  La principal diferencia es que se usa una clase [NonVirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext) para tener acceso a la colección de [elementos secundarios](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext.children), y el diseño puede optar por almacenar el estado.
+El enfoque para crear un diseño sin virtualización debe ser familiar para cualquier usuario que haya creado un [panel personalizado](./custom-panels-overview.md).  Se aplican los mismos conceptos.  La principal diferencia es que se usa una clase [NonVirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext) para tener acceso a la colección de [elementos secundarios](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext.children), y el diseño puede optar por almacenar el estado.
 
 1. Deriva del tipo base [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout) (en lugar del panel).
 2. *(Opcional)* Define las propiedades de dependencia que cuando cambien invalidarán el diseño.
@@ -246,7 +246,7 @@ El desplazamiento en Windows es un proceso asincrónico al subproceso de interfa
 
 ![Rectángulo de realización](images/xaml-attached-layout-realizationrect.png)
 
-Dado que la creación de elementos es costosa, la virtualización de contenedores (por ejemplo, [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater)) proporcionará inicialmente al diseño adjunto un objeto [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) que coincida con la ventanilla. En tiempo de inactividad, el contenedor puede aumentar el tamaño del búfer de contenido preparado realizando llamadas repetidas al diseño mediante un rectángulo de realización cada vez mayor. Este comportamiento es una optimización del rendimiento que intenta lograr un equilibrio entre la rapidez del tiempo de inicio y una buena experiencia de desplazamiento. El tamaño de búfer máximo que generará el objeto ItemsRepeater se controla mediante las propiedades [VerticalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) y [HorizontalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength).
+Dado que la creación de elementos es costosa, la virtualización de contenedores (por ejemplo, [ItemsRepeater](../controls-and-patterns/items-repeater.md)) proporcionará inicialmente al diseño adjunto un objeto [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) que coincida con la ventanilla. En tiempo de inactividad, el contenedor puede aumentar el tamaño del búfer de contenido preparado realizando llamadas repetidas al diseño mediante un rectángulo de realización cada vez mayor. Este comportamiento es una optimización del rendimiento que intenta lograr un equilibrio entre la rapidez del tiempo de inicio y una buena experiencia de desplazamiento. El tamaño de búfer máximo que generará el objeto ItemsRepeater se controla mediante las propiedades [VerticalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) y [HorizontalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength).
 
 **Reutilización de elementos (reciclaje)**
 

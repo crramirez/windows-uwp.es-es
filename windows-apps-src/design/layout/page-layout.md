@@ -5,18 +5,18 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 3dbdf8d006472c288369fd528e89663aca5a9e10
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 551d937836f0dcf0094e54a503d2a8cd80a2f28b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970890"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169529"
 ---
 # <a name="page-layout"></a>Diseño de página
 
-En las aplicaciones de Windows, cada [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) normalmente tiene elementos de navegación, comandos y contenido. 
+En las aplicaciones de Windows, cada [**página**](/uwp/api/Windows.UI.Xaml.Controls.Page) normalmente tiene elementos de navegación, comandos y contenido. 
 
-La aplicación puede tener varias páginas: cuando un usuario inicia una aplicación de Windows, el código de la aplicación crea un [**marco**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) para colocarlo dentro de la [**ventana**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) de la aplicación. A continuación, el marco puede [navegar](../basics/navigate-between-two-pages.md) entre las instancias de la [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) de la aplicación. 
+La aplicación puede tener varias páginas: cuando un usuario inicia una aplicación de Windows, el código de la aplicación crea un [**marco**](/uwp/api/Windows.UI.Xaml.Controls.Frame) para colocarlo dentro de la [**ventana**](/uwp/api/windows.ui.xaml.window) de la aplicación. A continuación, el marco puede [navegar](../basics/navigate-between-two-pages.md) entre las instancias de la [**página**](/uwp/api/Windows.UI.Xaml.Controls.Page) de la aplicación. 
 
 La mayoría de las páginas siguen una estructura de diseño común. En este artículo veremos los elementos de la interfaz de usuario que necesitarás y dónde deben colocarse en una página. 
 
@@ -33,7 +33,7 @@ La navegación izquierda, o el patrón [panel de navegación](../controls-and-pa
 - Punto de entrada a la configuración de la aplicación
 - Punto de entrada a la configuración de la cuenta
 
-El control [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview) implementa el patrón de navegación izquierdo para UWP.
+El control [NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview) implementa el patrón de navegación izquierdo para UWP.
 
 Cuando se selecciona un elemento de navegación, el marco debe desplazarse a la página del elemento seleccionado.
 

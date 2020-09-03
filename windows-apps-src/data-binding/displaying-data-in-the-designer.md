@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c717a74824db43984794b67638dd19b51b5dacd
-ms.sourcegitcommit: 83225cd9f3ef184277fc293d09982ecd511cc088
+ms.openlocfilehash: 84e11bc2a17039b65ae1282531af4b92240f4069
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87160880"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170079"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================
 
 
 
-**Nota**  La cantidad de datos de muestra que necesites (y que te serán de ayuda) depende de si tus enlaces usan la [extensión de marcado {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) o la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext), por lo que solo son apropiadas para la extensión **{Binding}** . Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
+**Nota**  La cantidad de datos de muestra que necesites (y que te serán de ayuda) depende de si tus enlaces usan la [extensión de marcado {Binding}](../xaml-platform/binding-markup-extension.md) o la [extensión de marcado {x:Bind}](../xaml-platform/x-bind-markup-extension.md). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext), por lo que solo son apropiadas para la extensión **{Binding}** . Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
 
 Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio. Para hacer que los controles se rellenen con datos (de modo que puedas trabajar en el diseño de la aplicación, las plantillas y otras propiedades visuales), puedes usar los datos de ejemplo en tiempo de diseño de distintas maneras. Los datos de ejemplo también pueden ser muy útiles y ahorrarte tiempo si creas una aplicación de diseño de bocetos (o prototipos). Puedes usar los datos de ejemplo del boceto o el prototipo en tiempo de ejecución para ilustrar tus ideas sin tener que conectarte a los datos dinámicos reales.
 
@@ -34,7 +34,7 @@ Quizás no sea posible o no desees (puede que por motivos de privacidad o rendim
 <a name="setting-datacontext-in-markup"></a>Configuración de DataContext en el marcado
 -----------------------------
 
-Es una práctica bastante común entre los desarrolladores usar código imperativo (en el código subyacente) para establecer la propiedad [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) de un control de usuario o página, en una instancia del modelo de vista.
+Es una práctica bastante común entre los desarrolladores usar código imperativo (en el código subyacente) para establecer la propiedad [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext) de un control de usuario o página, en una instancia del modelo de vista.
 
 ``` csharp
 public MainPage()
@@ -99,11 +99,11 @@ Todo lo que debes hacer es especificar una clase para el comando que deseas usar
 </Page>
 ```
 
-Las distintas declaraciones xmlns que aparecen indican que los atributos con el prefijo **d:** se interpretan solo en tiempo de diseño y se omiten en tiempo de ejecución. Por tanto, el atributo **d:DataContext** solo afecta al valor de la propiedad [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) en tiempo de diseño; no tiene ningún efecto en tiempo de ejecución. Puedes establecer tanto **d:DataContext** como **DataContext** en el marcado, si quieres. **d:DataContext** realizará el reemplazo en tiempo de diseño y **DataContext** lo realizará en tiempo de ejecución. Estas mismas reglas de reemplazo se aplican a todos los atributos en tiempo de diseño y tiempo de ejecución.
+Las distintas declaraciones xmlns que aparecen indican que los atributos con el prefijo **d:** se interpretan solo en tiempo de diseño y se omiten en tiempo de ejecución. Por tanto, el atributo **d:DataContext** solo afecta al valor de la propiedad [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext) en tiempo de diseño; no tiene ningún efecto en tiempo de ejecución. Puedes establecer tanto **d:DataContext** como **DataContext** en el marcado, si quieres. **d:DataContext** realizará el reemplazo en tiempo de diseño y **DataContext** lo realizará en tiempo de ejecución. Estas mismas reglas de reemplazo se aplican a todos los atributos en tiempo de diseño y tiempo de ejecución.
 
-El atributo **d:DataContext** y todos los demás atributos en tiempo de diseño, se documentan en el tema [Atributos en tiempo de diseño](https://msdn.microsoft.com/library/ff602277(v=VS.95).aspx), que sigue siendo válido para las aplicaciones para la Plataforma universal de Windows (UWP).
+El atributo **d:DataContext** y todos los demás atributos en tiempo de diseño, se documentan en el tema [Atributos en tiempo de diseño](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff602277(v=vs.95)), que sigue siendo válido para las aplicaciones para la Plataforma universal de Windows (UWP).
 
-[**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) no tiene una propiedad **DataContext**, pero sí una propiedad **Source**. En consecuencia, existe una propiedad **d:Source** que puedes usar para establecer datos de muestra solo en tiempo de diseño en una clase **CollectionViewSource**.
+[**CollectionViewSource**](/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) no tiene una propiedad **DataContext**, pero sí una propiedad **Source**. En consecuencia, existe una propiedad **d:Source** que puedes usar para establecer datos de muestra solo en tiempo de diseño en una clase **CollectionViewSource**.
 
 ``` xaml
     <Page.Resources>
@@ -152,6 +152,6 @@ Para crear prototipos, se desean datos de ejemplo en tiempo de diseño y en tiem
 
 En lugar de especificar una clase, se puede diseñar el esquema del origen de datos de ejemplo directamente en el panel **Datos** . También se pueden modificar los valores de los datos de ejemplo en el panel **Datos**; no es necesario abrir y editar un archivo (aunque se puede hacer si se desea).
 
-La característica **Nuevos datos de ejemplo** usa [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext), y no **d:DataContext**, de modo que los datos de ejemplo están disponibles cuando se ejecuta el boceto o el prototipo, así como mientras se diseña. Además, el panel **Datos** acelera realmente las tareas de diseño y enlace. Por ejemplo, con solo arrastrar una propiedad de colección del panel **Datos** a la superficie de diseño, se genera un control de elementos enlazados a datos y las plantillas necesarias, todo listo para compilar y ejecutar.
+La característica **Nuevos datos de ejemplo** usa [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext), y no **d:DataContext**, de modo que los datos de ejemplo están disponibles cuando se ejecuta el boceto o el prototipo, así como mientras se diseña. Además, el panel **Datos** acelera realmente las tareas de diseño y enlace. Por ejemplo, con solo arrastrar una propiedad de colección del panel **Datos** a la superficie de diseño, se genera un control de elementos enlazados a datos y las plantillas necesarias, todo listo para compilar y ejecutar.
 
 ![Datos de ejemplo para la creación de prototipos.](images/displaying-data-in-the-designer-04.png)

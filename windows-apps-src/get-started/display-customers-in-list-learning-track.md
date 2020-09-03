@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción;uwp;windows 10;pista de aprendizaje;enlace de datos;lista;get started;learning track;data binding;list
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3cebf51bdf9fa9942a0b88ed7b4cf66204671781
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 097105d16d6d17807235ab61d36ab1fe185c8ca3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71340337"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165059"
 ---
 # <a name="display-customers-in-a-list"></a>Mostrar clientes en una lista
 
@@ -110,7 +110,7 @@ Ya mostraste los clientes en una lista, pero el enlace de datos te permite hacer
 
 Si seguiste los fragmentos de código anteriores, el enlace creado usa x:Bind y no especifica un modo, por lo que es un enlace de un solo uso. Si quieres editar a tus clientes directamente desde la interfaz de usuario, deberás cambiarlo a un enlace bidireccional, a fin de que los cambios de los datos se pasen a los objetos de cliente. Consulta [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) para más información.
 
-El enlace bidireccional también actualizará la interfaz de usuario si se cambia el origen de datos. Para que esto funcione, debes implementar [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) en el origen y asegurarte de que los establecedores de propiedades generan el evento **PropertyChanged**. Es una práctica habitual que llamen a un método auxiliar como **OnPropertyChanged**, tal como se muestra a continuación:
+El enlace bidireccional también actualizará la interfaz de usuario si se cambia el origen de datos. Para que esto funcione, debes implementar [**INotifyPropertyChanged**](/dotnet/api/system.componentmodel.inotifypropertychanged) en el origen y asegurarte de que los establecedores de propiedades generan el evento **PropertyChanged**. Es una práctica habitual que llamen a un método auxiliar como **OnPropertyChanged**, tal como se muestra a continuación:
 
 ```csharp
 public class Customer : INotifyPropertyChanged
@@ -165,13 +165,13 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 
 | API | Descripción |
 |------|---------------|
-| [Plantilla de datos](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) | Describe la estructura visual de un objeto de datos, lo que permite la visualización de elementos específicos de la interfaz de usuario. |
+| [Plantilla de datos](/uwp/api/Windows.UI.Xaml.DataTemplate) | Describe la estructura visual de un objeto de datos, lo que permite la visualización de elementos específicos de la interfaz de usuario. |
 | [x:Bind](../xaml-platform/x-bind-markup-extension.md) | Documentación sobre la extensión de marcado x:Bind recomendada. |
 | [Binding](../xaml-platform/binding-markup-extension.md) | Documentación sobre la extensión de marcado Binding antigua. |
-| [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Control de interfaz de usuario que muestra los elementos de datos en una pila vertical. |
-| [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Control de texto básico para mostrar datos de texto editable en la interfaz de usuario. |
-| [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) | Interfaz para hacer que los datos sean observables al proporcionárselos a un enlace de datos. |
-| [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) | La propiedad **ItemsSource** de esta clase permite enlazar una ListView a un origen de datos. |
+| [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView) | Control de interfaz de usuario que muestra los elementos de datos en una pila vertical. |
+| [TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Control de texto básico para mostrar datos de texto editable en la interfaz de usuario. |
+| [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) | Interfaz para hacer que los datos sean observables al proporcionárselos a un enlace de datos. |
+| [ItemsControl](/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) | La propiedad **ItemsSource** de esta clase permite enlazar una ListView a un origen de datos. |
 
 ### <a name="useful-docs"></a>Documentos útiles
 

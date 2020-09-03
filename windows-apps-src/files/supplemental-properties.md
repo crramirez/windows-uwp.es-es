@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API WinRT, Indexador, Búsqueda
 localizationpriority: medium
-ms.openlocfilehash: 2a77bfc37d853efd28bde9bc3043d072888822f2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3103074e7d691897e9a8982a254ba36ee331a2b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66369263"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175399"
 ---
 # <a name="using-supplemental-properties"></a>Uso de propiedades complementarias  
 
@@ -27,7 +27,7 @@ Hacer que los metadatos sean aptos para la búsqueda al instante permite a los u
 Durante décadas, la solución de búsqueda rápida en Windows ha sido el indexador y en Creators Update se ha actualizado para admitir estos nuevos escenarios. Las aplicaciones son capaces de etiquetar archivos con otras propiedades, además de las que se extraen por el sistema. Estas propiedades se tratan como ciudadanos de primera clase.  
 
 ## <a name="windows-properties"></a>Propiedades de Windows 
-El [sistema de propiedades de Windows](https://docs.microsoft.com/windows/desktop/properties/windows-properties-system) ha sido una pieza clave en la interacción con los archivos durante años. Permite que las aplicaciones lean propiedades de archivos sin tener que entender el funcionamiento interno de los diferentes formatos de archivo o los lenguajes en los que puede estar. Todo esto se ha abstraído para el desarrollador, lo único que tienes que hacer es solicitar una lista y especificar el orden ascendente o descendente.  
+El [sistema de propiedades de Windows](/windows/desktop/properties/windows-properties-system) ha sido una pieza clave en la interacción con los archivos durante años. Permite que las aplicaciones lean propiedades de archivos sin tener que entender el funcionamiento interno de los diferentes formatos de archivo o los lenguajes en los que puede estar. Todo esto se ha abstraído para el desarrollador, lo único que tienes que hacer es solicitar una lista y especificar el orden ascendente o descendente.  
 
 El sistema de propiedades está interrelacionado con el indexador de Windows: lee todas las propiedades de los archivos dentro de su ámbito y las almacena. Más adelante, cuando una aplicación solicita que una lista de todos los .docx de una carpeta se ordenen por fecha de modificación, exceptuando aquellos creados por John Smith, el indexador puede devolver la lista al instante.  
 
@@ -158,4 +158,4 @@ Aunque sea potencialmente una característica interesante para algunos de los us
 ## <a name="conclusions"></a>Conclusiones 
 Eso es todo, las propiedades complementarias son una forma sencilla de almacenar más propiedades de archivo en el sistema. Su uso es, por supuesto, opcional, pero puede proporcionar a la aplicación una ventaja sobre otras aplicaciones que no pueden ordenar y buscar datos tan rápidamente. 
 
-Estamos deseando ver que las aplicaciones empiezan a usar estas propiedades. Si tienes alguna pregunta sobre cómo usar el encabezado, háznoslo saber en los comentarios a continuación. 
+Estamos deseando ver que las aplicaciones empiezan a usar estas propiedades. Si tienes alguna pregunta sobre cómo usar el encabezado, háznoslo saber en los comentarios a continuación.

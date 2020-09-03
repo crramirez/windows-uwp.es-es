@@ -6,17 +6,17 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 37c7f9edbaee008b6e16ef2ca202ff5cbcf39ca2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5a10a8a6e5b4e5188d28c0f75aace50f7465e5f4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67317503"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163489"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Probar aplicaciones de Surface Hub con Visual Studio
 El simulador de Visual Studio ofrece un entorno donde puede diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no usa la misma interfaz de usuario que Surface Hub, pero resulta útil para probar el aspecto y el comportamiento de la aplicación con la resolución y el tamaño de la pantalla de Surface Hub.
 
-Para más información sobre el simulador, consulta [Ejecutar aplicaciones para UWP en el simulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
+Para más información sobre el simulador, consulta [Ejecutar aplicaciones para UWP en el simulador](/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
 
 ## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Agregar resoluciones de Surface Hub al simulador
 Para agregar resoluciones de Surface Hub al simulador:
@@ -90,7 +90,7 @@ De forma predeterminada, Surface Hub solo instala las aplicaciones de Microsoft 
 3. Elige el **Modo de desarrollador** y acepta la advertencia.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Implementar la aplicación desde Visual Studio
-Para más información sobre el proceso de implementación, consulta [Implementar y depurar aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+Para más información sobre el proceso de implementación, consulta [Implementar y depurar aplicaciones para UWP](./deploying-and-debugging-uwp-apps.md).
 
    > [!NOTE]
    > Esta característica requiere Visual Studio 2015 Update 1 o versiones posteriores, pero se recomienda usar la versión más reciente actualizada de Visual Studio. Una instancia de Visual Studio actualizada incluirá todas las actualizaciones de seguridad y desarrollo más recientes.

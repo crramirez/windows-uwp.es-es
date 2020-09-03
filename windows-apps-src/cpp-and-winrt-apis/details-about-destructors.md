@@ -5,16 +5,16 @@ ms.date: 09/26/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, destrucción diferida, consultas seguras
 ms.localizationpriority: medium
-ms.openlocfilehash: 76068ffc655c20aa13b50cce9ac49af9afd50805
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6b15c32bb35bec1f6a8e8d59e6aefe17ebf74b5d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71329566"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170332"
 ---
 # <a name="extension-points-for-your-implementation-types"></a>Puntos de extensión para los tipos de implementación
 
-La [plantilla struct winrt::implements](/uwp/cpp-ref-for-winrt/implements) es la base desde la cual se derivan directa o indirectamente las implementaciones de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) (de las clases de tiempo de ejecución y las factorías de activación).
+La [plantilla struct winrt::implements](/uwp/cpp-ref-for-winrt/implements) es la base desde la cual se derivan directa o indirectamente las implementaciones de [C++/WinRT](./intro-to-using-cpp-with-winrt.md) (de las clases de tiempo de ejecución y las factorías de activación).
 
 En este tema se describen los puntos de extensión de **winrt::implements** en C++/WinRT 2.0. Puedes optar por implementar estos puntos de extensión en los tipos de implementación, con el fin de personalizar el comportamiento predeterminado de los objetos inspeccionables (*inspeccionables* en el sentido de la interfaz [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable).
 
@@ -22,7 +22,7 @@ Estos puntos de extensión permiten aplazar la destrucción de los tipos de impl
 
 ## <a name="deferred-destruction"></a>Destrucción diferida
 
-En el tema [Diagnóstico de asignaciones directas](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc), hemos mencionado que el tipo de implementación no puede tener un destructor privado.
+En el tema [Diagnóstico de asignaciones directas](./diag-direct-alloc.md), hemos mencionado que el tipo de implementación no puede tener un destructor privado.
 
 La ventaja de tener un destructor público es que permite la destrucción diferida, que es la capacidad de detectar la llamada final de [**IUnknown::Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) en el objeto y después tomar posesión de ese objeto para aplazar su destrucción indefinidamente.
 

@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: cf2eebdc97a1052dd3f4a3e00dd3a911cb80bace
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: bcd8fe289ce1539605ccb454e0994d02563688c5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970670"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169499"
 ---
 # <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 
@@ -26,14 +26,14 @@ Puedes usar un control RichEditBox para escribir y editar documentos de texto en
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
-> **API de plataforma**: [Clase RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Propiedad Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [Propiedad IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [Propiedad IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
+> **API de plataforma**: [Clase RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Propiedad Document](/uwp/api/windows.ui.xaml.controls.richeditbox.document), [Propiedad IsReadOnly](/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [Propiedad IsSpellCheckEnabled](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un **RichEditBox** para mostrar y editar los archivos de texto. No uses un RichEditBox para que el usuario haga entradas en la aplicación de la manera que usas otros cuadros de entrada de texto estándar. En su lugar, úsalo para trabajar con archivos de texto que sean independientes de la aplicación. En general, el texto que se escribe en un RichEditBox se guarda en un archivo .rtf.
--   Si el principal propósito del cuadro de texto multilínea es la creación de documentos de solo lectura (como entradas de blog o contenidos de un mensaje de correo electrónico), y dichos documentos necesitan texto enriquecido, usa un [bloque de texto enriquecido](/windows/uwp/design/controls-and-patterns/rich-text-block).
+-   Si el principal propósito del cuadro de texto multilínea es la creación de documentos de solo lectura (como entradas de blog o contenidos de un mensaje de correo electrónico), y dichos documentos necesitan texto enriquecido, usa un [bloque de texto enriquecido](./rich-text-block.md).
 -   Para capturar texto que solo se va a consumir sin mostrárselo a los usuarios, usa un control de texto sin formato.
 -   Para cualquier otro escenario, usa un control de entrada de texto sin formato.
 
@@ -61,9 +61,9 @@ Este cuadro de edición con formato tiene un documento de texto enriquecido abie
 
 ## <a name="create-a-rich-edit-box"></a>Crear un cuadro de edición con formato
 
-De manera predeterminada, RichEditBox admite la revisión ortográfica. Para deshabilitar el corrector ortográfico, establece la propiedad [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled) en **false**. Si quieres obtener más información, consulta el artículo [Directrices para la revisión ortográfica](text-controls.md).
+De manera predeterminada, RichEditBox admite la revisión ortográfica. Para deshabilitar el corrector ortográfico, establece la propiedad [IsSpellCheckEnabled](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled) en **false**. Si quieres obtener más información, consulta el artículo [Directrices para la revisión ortográfica](text-controls.md).
 
-Usa la propiedad [Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document) de RichEditBox para obtener su contenido. El contenido de RichEditBox es un objeto [Windows.UI.Text.ITextDocument](https://docs.microsoft.com/windows/desktop/api/tom/nn-tom-itextdocument), a diferencia del control RichTextBlock, que usa objetos [Windows.UI.Xaml.Documents.Block](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Block) como contenido. La interfaz ITextDocument proporciona una forma de cargar y guardar el documento en una secuencia, recuperar intervalos de texto, obtener la selección activa, deshacer y rehacer cambios, establecer atributos predeterminados de formato, etcétera.
+Usa la propiedad [Document](/uwp/api/windows.ui.xaml.controls.richeditbox.document) de RichEditBox para obtener su contenido. El contenido de RichEditBox es un objeto [Windows.UI.Text.ITextDocument](/windows/desktop/api/tom/nn-tom-itextdocument), a diferencia del control RichTextBlock, que usa objetos [Windows.UI.Xaml.Documents.Block](/uwp/api/Windows.UI.Xaml.Documents.Block) como contenido. La interfaz ITextDocument proporciona una forma de cargar y guardar el documento en una secuencia, recuperar intervalos de texto, obtener la selección activa, deshacer y rehacer cambios, establecer atributos predeterminados de formato, etcétera.
 
 En este ejemplo se muestra cómo editar, cargar y guardar un archivo de formato de texto enriquecido (.rtf) en un RichEditBox.
 
@@ -208,7 +208,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 Para ayudar a los usuarios a escribir datos con el teclado táctil o con el panel de entrada de software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario. La distribución del teclado predeterminada es normalmente adecuada para trabajar con documentos de texto enriquecido.
 
-Para obtener más información sobre cómo usar los ámbitos de entrada, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard).
+Para obtener más información sobre cómo usar los ámbitos de entrada, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](../input/use-input-scope-to-change-the-touch-keyboard.md).
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
@@ -229,5 +229,5 @@ Para obtener más información sobre cómo usar los ámbitos de entrada, consult
 - [Directrices sobre revisión ortográfica](text-controls.md)
 - [Adición de búsqueda](search.md)
 - [Directrices sobre la entrada de texto](text-controls.md)
-- [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [Clase TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Clase Windows.UI.Xaml.Controls PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)

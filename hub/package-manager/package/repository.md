@@ -4,12 +4,12 @@ description: Después de crear un manifiesto de paquete que describa su aplicaci
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 19a66b2d0724eb0f4f8c3f171033e4e616751717
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: ef94a77d5012adcedf31ae1ecfddc036bcc3a059
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334594"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166509"
 ---
 # <a name="submit-your-manifest-to-the-repository"></a>Envío del manifiesto al repositorio
 
@@ -122,7 +122,7 @@ Durante la validación, aplicamos una serie de etiquetas a la solicitud de incor
 
 * **Necesidades: comentarios del autor**: Hay un error en el envío. Te reasignaremos la solicitud de incorporación de cambios. Si no solucionas el problema en un plazo de 10 días, cerraremos la solicitud de incorporación de cambios.
 * **Manifest-Validation-Error**: El manifiesto enviado contiene un error de sintaxis.
-* **URL-Validation-Error**: Una o varias direcciones URL en el envío no superaron la validación de [SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
+* **URL-Validation-Error**: Una o varias direcciones URL en el envío no superaron la validación de [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
 * **Binary-Validation-Error**: El instalador de la aplicación enviada no superó la prueba de detección de virus o hay un error de coincidencia de hash.
 * **Pull-Request-Error**: Hay un problema con la solicitud de incorporación de cambios. Por ejemplo, la estructura de carpetas no tiene el [formato obligatorio](#step-3-add-your-manifest-to-the-local-repository).
 * **Validation-Error**: La aplicación enviada no superó una prueba de validación general.

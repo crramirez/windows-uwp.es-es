@@ -7,16 +7,16 @@ ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 705b0ecb474c0bb821c3a21f4b8b66073984827f
-ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
+ms.openlocfilehash: fe9cbb9fdc9d73a38642a4f5894b1ef0f8182e69
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469580"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174519"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Historial de navegación y navegación hacia atrás para aplicaciones de Windows
 
-> **API importantes**: [evento BackRequested](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [clase SystemNavigationManager](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
+> **API importantes**: [evento BackRequested](/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [clase SystemNavigationManager](/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
 
 La aplicación de Windows proporciona un sistema de navegación hacia atrás coherente para recorrer el historial de navegación del usuario dentro de una aplicación y, según el dispositivo, para pasar de una aplicación a otra.
 
@@ -74,7 +74,7 @@ Para minimizar los elementos de la interfaz de usuario que se mueven por la apli
 
 ## <a name="code-example"></a>Ejemplo de código
 
-El siguiente ejemplo de código muestra cómo implementar el comportamiento de navegación hacia atrás con un botón Atrás. El código responde al evento Button [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click) y habilita o deshabilita la visibilidad del botón en [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_), al que se llama cuando se navega a una página nueva. El ejemplo de código también controla las entradas de las teclas de retroceso del sistema de hardware y software mediante el registro de un cliente de escucha para el evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested).
+El siguiente ejemplo de código muestra cómo implementar el comportamiento de navegación hacia atrás con un botón Atrás. El código responde al evento Button [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click) y habilita o deshabilita la visibilidad del botón en [**OnNavigatedTo**](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_), al que se llama cuando se navega a una página nueva. El ejemplo de código también controla las entradas de las teclas de retroceso del sistema de hardware y software mediante el registro de un cliente de escucha para el evento [**BackRequested**](/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested).
 
 ```xaml
 <!-- MainPage.xaml -->
@@ -194,7 +194,7 @@ namespace winrt::PageNavTest::implementation
 
 Arriba, controlamos la navegación hacia atrás para una sola página. Puedes controlar la navegación en cada página si quieres excluir páginas específicas de la navegación del botón Atrás, o si quieres ejecutar código en el nivel de página antes de que se muestre la página.
 
-Para controlar la navegación hacia atrás para una aplicación completa, debes registrar un cliente de escucha global para el evento [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) en el archivo de código subyacente `App.xaml`.
+Para controlar la navegación hacia atrás para una aplicación completa, debes registrar un cliente de escucha global para el evento [**BackRequested**](/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) en el archivo de código subyacente `App.xaml`.
 
 Código subyacente de App.xaml:
 
@@ -307,9 +307,9 @@ Los ejemplos de código anteriores muestran cómo controlar todas estas entradas
 
 ## <a name="system-back-behavior-for-backward-compatibilities"></a>Comportamiento hacia atrás del sistema para la compatibilidad con versiones anteriores
 
-Anteriormente, las aplicaciones para UWP usaban [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) para la navegación hacia atrás. La API se seguirá admitiendo para garantizar la compatibilidad con versiones anteriores, pero ya no se recomienda depender de [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility). En su lugar, tu aplicación debería dibujar su propio botón Atrás en la aplicación.
+Anteriormente, las aplicaciones para UWP usaban [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility) para la navegación hacia atrás. La API se seguirá admitiendo para garantizar la compatibilidad con versiones anteriores, pero ya no se recomienda depender de [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility). En su lugar, tu aplicación debería dibujar su propio botón Atrás en la aplicación.
 
-Si la aplicación continúa usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), el sistema de la interfaz de usuario representará el botón Atrás del sistema en la barra de título. (Las interacciones de apariencia y de usuario para el botón Atrás son iguales que en las compilaciones anteriores).
+Si la aplicación continúa usando [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility), el sistema de la interfaz de usuario representará el botón Atrás del sistema en la barra de título. (Las interacciones de apariencia y de usuario para el botón Atrás son iguales que en las compilaciones anteriores).
 
 ![Botón Atrás de la barra de título](images/nav-back-pc.png)
 
