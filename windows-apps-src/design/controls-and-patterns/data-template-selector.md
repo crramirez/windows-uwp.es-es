@@ -7,12 +7,12 @@ ms.date: 10/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: d388e1f4b3f1b1be4e265185934a02b6ccd20064
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 382e28b38347a4901e781a12637423260c4bd3e3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76123857"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160389"
 ---
 # <a name="data-template-selection-styling-items-based-on-their-properties"></a>Selección de plantillas de datos: aplicación de estilos a los elementos según sus propiedades
 
@@ -128,7 +128,7 @@ Una vez que se compila el código, cada elemento de la colección se ejecutará 
 
 ## <a name="datatemplateselector-performance-considerations"></a>Consideraciones sobre el rendimiento de DataTemplateSelector
 
-Cuando se usa un control ListView o GridView con una colección de datos grande, el rendimiento del desplazamiento y el movimiento panorámico pueden ser un problema. Para que el rendimiento de las colecciones grandes sea el adecuado, hay algunos pasos que puedes seguir para mejorar el rendimiento de las plantillas de datos. Estos se describen con más detalle en [Optimización de la interfaz de usuario de ListView y GridView](/windows/uwp/debug-test-perf/optimize-gridview-and-listview).
+Cuando se usa un control ListView o GridView con una colección de datos grande, el rendimiento del desplazamiento y el movimiento panorámico pueden ser un problema. Para que el rendimiento de las colecciones grandes sea el adecuado, hay algunos pasos que puedes seguir para mejorar el rendimiento de las plantillas de datos. Estos se describen con más detalle en [Optimización de la interfaz de usuario de ListView y GridView](../../debug-test-perf/optimize-gridview-and-listview.md).
 
 - _Reducción de objetos por elemento_: mantén el número de objetos de interfaz de usuario de una plantilla de datos en un mínimo razonable.
 - Reciclaje de contenedores con colecciones heterogéneas

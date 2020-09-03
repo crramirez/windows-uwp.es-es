@@ -5,16 +5,16 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, estándar, c++, cpp, winrt, projection, proyección, agile, ágil, object, objeto, agility, agilidad, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dff619e6fa3934f69b93090bee90de6359ca07
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 71800de1d209a0164ab5a7e90bbc191c0f9bebe9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66360329"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154639"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágiles en C++/WinRT
 
-En la mayoría de los casos, se puede acceder a una instancia de una clase en tiempo de ejecución de Windows desde cualquier subproceso (al igual que la mayoría de los objetos C++ estándar). Esta clase en tiempo de ejecución de Windows es *ágil*. Solo un número reducido de clases de Windows Runtime que se incluyen con Windows no son ágiles, pero cuando las consumas deberás tener en cuenta su modelo de subprocesos y el comportamiento de serialización (la serialización transmite datos a través de un límite de apartamento). Es una buena opción predeterminada de que todos los objetos Windows Runtime sean ágiles, por lo que tus propios tipos [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) son ágiles de manera predeterminada.
+En la mayoría de los casos, se puede acceder a una instancia de una clase en tiempo de ejecución de Windows desde cualquier subproceso (al igual que la mayoría de los objetos C++ estándar). Esta clase en tiempo de ejecución de Windows es *ágil*. Solo un número reducido de clases de Windows Runtime que se incluyen con Windows no son ágiles, pero cuando las consumas deberás tener en cuenta su modelo de subprocesos y el comportamiento de serialización (la serialización transmite datos a través de un límite de apartamento). Es una buena opción predeterminada de que todos los objetos Windows Runtime sean ágiles, por lo que tus propios tipos [C++/WinRT](./intro-to-using-cpp-with-winrt.md) son ágiles de manera predeterminada.
 
 Sin embargo, puedes optar por rechazarlos. Es posible que tengas una buena razón para requerir un objeto de tu tipo para residir, por ejemplo, en un determinado apartamento uniproceso. Por lo general, esto está relacionado con los requisitos de reentrada. Pero cada vez más, incluso las API de interfaces de usuarios, ofrecen objetos ágiles. En general, la agilidad es la opción más sencilla y aporta el mayor rendimiento. Además, cuando se implementa una fábrica de activaciones, debe ser ágil aunque tu correspondiente clase en tiempo de ejecución no lo sea.
 
@@ -37,7 +37,7 @@ struct MyType : winrt::implements<MyType, IStringable>
 };
 ```
 
-Dado que no lo hemos rechazado todavía, esta implementación es ágil. La estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) implementa [**IAgileObject**](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject) e [**IMarshal**](/windows/desktop/api/objidl/nn-objidl-imarshal). La implementación **IMarshal** usa **CoCreateFreeThreadedMarshaler** para hacer lo correcto para el código heredado que no conoce **IAgileObject**.
+Dado que no lo hemos rechazado todavía, esta implementación es ágil. La estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) implementa [**IAgileObject**](/windows/desktop/api/objidl/nn-objidl-iagileobject) e [**IMarshal**](/windows/desktop/api/objidl/nn-objidl-imarshal). La implementación **IMarshal** usa **CoCreateFreeThreadedMarshaler** para hacer lo correcto para el código heredado que no conoce **IAgileObject**.
 
 Este código comprueba la agilidad de un objeto. La llamada a [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) lanza una excepción si `myimpl` no es ágil.
 
@@ -115,7 +115,7 @@ La llamada a [**agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agile_refget-
 
 ## <a name="important-apis"></a>API importantes
 
-* [Interfaz IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject)
+* [Interfaz IAgileObject](/windows/desktop/api/objidl/nn-objidl-iagileobject)
 * [Interfaz IMarshal](/windows/desktop/api/objidl/nn-objidl-imarshal)
 * [Plantilla de estructura winrt::agile_ref](/uwp/cpp-ref-for-winrt/agile-ref)
 * [Plantilla de estructura winrt::implements](/uwp/cpp-ref-for-winrt/implements)

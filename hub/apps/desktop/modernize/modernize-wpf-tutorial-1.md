@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 9d08dd0f43f1c505124203028c69326e10eea26c
-ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
+ms.openlocfilehash: c11f1cab37e79fc320f1fb38f5b909d2cecd1ad4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882878"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161589"
 ---
 # <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>Parte 1: Migración de la aplicación Contoso Expenses a .NET Core 3
 
@@ -134,7 +134,7 @@ Para configurar paquetes NuGet para el proyecto **ContosoExpenses.Data**:
     ```
 
     > [!NOTE]
-    > También puedes observar que estás instalando los mismos paquetes para este proyecto de .NET Core 3 que los que usan los proyectos de .NET Framework 4.7.2. Los paquetes NuGet admiten destinos múltiples. Los autores de bibliotecas pueden incluir diferentes versiones de una biblioteca en el mismo paquete, compiladas para distintas arquitecturas y plataformas. Estos paquetes admiten .NET Framework completo y .NET Standard 2.0, que es compatible con proyectos de .NET Core 3. Para obtener más información sobre las diferencias entre .NET Framework, .NET Core y .NET Standard, consulta [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard).
+    > También puedes observar que estás instalando los mismos paquetes para este proyecto de .NET Core 3 que los que usan los proyectos de .NET Framework 4.7.2. Los paquetes NuGet admiten destinos múltiples. Los autores de bibliotecas pueden incluir diferentes versiones de una biblioteca en el mismo paquete, compiladas para distintas arquitecturas y plataformas. Estos paquetes admiten .NET Framework completo y .NET Standard 2.0, que es compatible con proyectos de .NET Core 3. Para obtener más información sobre las diferencias entre .NET Framework, .NET Core y .NET Standard, consulta [.NET Standard](/dotnet/standard/net-standard).
 
 Para configurar paquetes NuGet para el proyecto **ContosoExpenses.Core**:
 

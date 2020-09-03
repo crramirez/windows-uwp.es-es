@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ed1344b5ee49244a6c1afcbb873b54fcc28624f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6c479a47a53c5f52bab1febf490957355264bfc4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684882"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159885"
 ---
 # <a name="sound"></a>Sonido
 
@@ -45,7 +45,7 @@ Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar sonido
 
 La plataforma UWP proporciona un sistema de sonido fácilmente accesible que permite simplemente "invertir un cambio" y obtener una experiencia de sonido envolvente en toda la aplicación.
 
-[**ElementSoundPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayer) es un sistema de sonido integrado dentro de XAML y, cuando está activado en todos los controles predeterminados, se reproducen sonidos automáticamente.
+[**ElementSoundPlayer**](/uwp/api/windows.ui.xaml.elementsoundplayer) es un sistema de sonido integrado dentro de XAML y, cuando está activado en todos los controles predeterminados, se reproducen sonidos automáticamente.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
@@ -64,12 +64,12 @@ La propiedad **SpatialAudioMode** puede aceptar estos valores:
 - **Off**: el audio espacial siempre está desactivado, incluso si el sonido está activado.
 - **On**: siempre se reproducirá audio espacial.
 
-Para obtener más información acerca del audio espacial y de cómo XAML lo controla, consulta [AudioGraph: audio espacial](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio).
+Para obtener más información acerca del audio espacial y de cómo XAML lo controla, consulta [AudioGraph: audio espacial](../../audio-video-camera/audio-graphs.md#spatial-audio).
 
 ### <a name="sound-for-tv-and-xbox"></a>Sonido para televisión y Xbox
 
 El sonido es una parte fundamental de la experiencia en pantalla de TV y, de manera predeterminada, el estado de **ElementSoundPlayer** es **Auto**, lo que significa que solo obtendrás sonido cuando la aplicación se ejecute en Xbox.
-Para obtener más información sobre el diseño para televisión y Xbox, consulta el artículo [Diseño para Xbox y televisión](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
+Para obtener más información sobre el diseño para televisión y Xbox, consulta el artículo [Diseño para Xbox y televisión](../devices/designing-for-tv.md).
 
 ## <a name="sound-volume-override"></a>Invalidación del volumen del sonido
 
@@ -173,5 +173,5 @@ La finalidad de esta característica de ciclo consiste en evitar que los sonidos
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Diseño para Xbox y televisión](/windows/uwp/design/devices/designing-for-tv)
+* [Diseño para Xbox y televisión](../devices/designing-for-tv.md)
 * [Documentación de la clase ElementSoundPlayer](/uwp/api/windows.ui.xaml.elementsoundplayer)

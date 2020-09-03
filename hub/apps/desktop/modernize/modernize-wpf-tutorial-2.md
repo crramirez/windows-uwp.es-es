@@ -8,18 +8,18 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 6bb90fb9cbe7c9f54f60fd1920f0e73e174a3772
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0b5250f1e01aece4f73d83dc7327f193a58f53cf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80482585"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161499"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>Parte 2: Incorporación de un control InkCanvas en UWP mediante islas XAML
 
 Esta es la segunda parte de un tutorial en el que se muestra cómo modernizar una aplicación de escritorio de WPF de ejemplo denominada Contoso Expenses. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, consulta [Tutorial: modernizar una aplicación de WPF](modernize-wpf-tutorial.md). En este artículo se da por supuesto que ya has completado la [parte 1](modernize-wpf-tutorial-1.md).
 
-En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso desea agregar compatibilidad con firmas digitales a la aplicación Contoso Expenses. El control **InkCanvas** de UWP es una opción excelente para este escenario, ya que admite características de entrada de lápiz digital y con tecnología de AI, como la capacidad para reconocer texto y formas. Para ello, usarás el control [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) encapsulado de UWP disponible en el kit de herramientas de la comunidad de Windows. Este control encapsula la interfaz y la funcionalidad del control **InkCanvas** encapsulado de UWP para su uso en una aplicación de WPF. Para obtener más información sobre los controles encapsulados de UWP, consulta [Hospedaje de controles XAML de UWP en aplicaciones de escritorio (islas XAML)](xaml-islands.md).
+En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso desea agregar compatibilidad con firmas digitales a la aplicación Contoso Expenses. El control **InkCanvas** de UWP es una opción excelente para este escenario, ya que admite características de entrada de lápiz digital y con tecnología de AI, como la capacidad para reconocer texto y formas. Para ello, usarás el control [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) encapsulado de UWP disponible en el kit de herramientas de la comunidad de Windows. Este control encapsula la interfaz y la funcionalidad del control **InkCanvas** encapsulado de UWP para su uso en una aplicación de WPF. Para obtener más información sobre los controles encapsulados de UWP, consulta [Hospedaje de controles XAML de UWP en aplicaciones de escritorio (islas XAML)](xaml-islands.md).
 
 ## <a name="configure-the-project-to-use-xaml-islands"></a>Configuración del proyecto para usar islas XAML
 
@@ -36,7 +36,7 @@ Antes de poder agregar un control **InkCanvas** a la aplicación Contoso Expense
 
 3. Haz clic con el botón derecho en el proyecto **ContosoExpenses.Core** en el **Explorador de soluciones** y elige **Agregar -> Nuevo elemento**.
 
-4. Selecciona **Archivo de manifiesto de aplicación**, asígnale el nombre **app.manifest** y haz clic en **Agregar**. Para obtener más información sobre los manifiestos de aplicación, consulta [este artículo](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+4. Selecciona **Archivo de manifiesto de aplicación**, asígnale el nombre **app.manifest** y haz clic en **Agregar**. Para obtener más información sobre los manifiestos de aplicación, consulta [este artículo](/windows/desktop/SbsCs/application-manifests).
 
 5. En el archivo de manifiesto, quita la marca de comentario del siguiente elemento `<supportedOS>` para Windows 10.
 
@@ -80,11 +80,11 @@ Antes de poder agregar un control **InkCanvas** a la aplicación Contoso Expense
 
 ## <a name="add-an-inkcanvas-control-to-the-app"></a>Adición de un control InkCanvas a la aplicación
 
-Ahora que has configurado el proyecto para que use islas XAML de UWP, ya puedes agregar un control encapsulado de UWP [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) a la aplicación.
+Ahora que has configurado el proyecto para que use islas XAML de UWP, ya puedes agregar un control encapsulado de UWP [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) a la aplicación.
 
 1. En el **Explorador de soluciones**, expande la carpeta **Vistas** del proyecto **ContosoExpenses.Core** y haz doble clic en el archivo **ExpenseDetail.xaml**.
 
-2. En el elemento **Ventana** situado cerca de la parte superior del archivo XAML, agrega el atributo siguiente. Esto hace referencia al espacio de nombres de XAML para el control encapsulado de UWP [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas).
+2. En el elemento **Ventana** situado cerca de la parte superior del archivo XAML, agrega el atributo siguiente. Esto hace referencia al espacio de nombres de XAML para el control encapsulado de UWP [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas).
 
     ```xml
     xmlns:toolkit="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls"

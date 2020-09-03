@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 21049c995d467209b22fe8ea5c40d303911f2c2c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: aa8991e7fd0bbb825ff5280f01693f092125f573
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77521295"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161379"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>Tutorial: Modernización de una aplicación WPF 
 
@@ -111,13 +111,13 @@ A partir de Windows 10, versión 1903, puedes hospedar controles de UWP en apl
 
 Para obtener más información, consulta [Controles de UWP en aplicaciones de escritorio (islas XAML)](/windows/uwp/xaml-platform/xaml-host-controls). Este tutorial te guía en el uso de dos tipos diferentes de controles de islas XAML:
 
-* Los controles [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) y [MapControl](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) del kit de herramientas de la comunidad de Windows. Estos controles de WPF encapsulan la interfaz y la funcionalidad de los controles de UWP correspondientes y se pueden usar como cualquier otro control de WPF en el diseñador de Visual Studio.
+* Los controles [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) y [MapControl](/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) del kit de herramientas de la comunidad de Windows. Estos controles de WPF encapsulan la interfaz y la funcionalidad de los controles de UWP correspondientes y se pueden usar como cualquier otro control de WPF en el diseñador de Visual Studio.
 
-* El control [CalendarView](/windows/uwp/design/controls-and-patterns/calendar-view) de UWP. Se trata de un control de UWP estándar que hospedarás mediante el control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) en el kit de herramientas de la comunidad de Windows.
+* El control [CalendarView](/windows/uwp/design/controls-and-patterns/calendar-view) de UWP. Se trata de un control de UWP estándar que hospedarás mediante el control [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) en el kit de herramientas de la comunidad de Windows.
 
 ### <a name="net-core-3"></a>.NET Core 3
 
-[.NET Core](https://docs.microsoft.com/dotnet/core/) es un marco de código abierto que implementa una versión multiplataforma, ligera y fácilmente extensible de la versión de .NET Framework completa. En comparación con la versión completa de .NET Framework, el tiempo de inicio de .NET Core es mucho más rápido y muchas de las API se han optimizado.
+[.NET Core](/dotnet/core/) es un marco de código abierto que implementa una versión multiplataforma, ligera y fácilmente extensible de la versión de .NET Framework completa. En comparación con la versión completa de .NET Framework, el tiempo de inicio de .NET Core es mucho más rápido y muchas de las API se han optimizado.
 
 En sus primeras versiones, el enfoque de .NET Core era ofrecer compatibilidad con aplicaciones web o de back-end. Con .NET Core, puedes crear fácilmente aplicaciones web escalables o API que se puedan hospedar en Windows, Linux o arquitecturas de microservicios como contenedores de Docker.
 
@@ -126,4 +126,4 @@ En sus primeras versiones, el enfoque de .NET Core era ofrecer compatibilidad co
 > [!NOTE]
 > WPF y Windows Forms no están convirtiéndose en multiplataforma, y no se puede ejecutar ninguna instancia de WPF o Windows Forms en Linux y MacOS. Los componentes de la interfaz de usuario de WPF y Windows Forms siguen teniendo una dependencia en el sistema de representación de Windows.
 
-Para obtener más información, consulta el tema sobre [novedades de .NET Core 3.0](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0).
+Para obtener más información, consulta el tema sobre [novedades de .NET Core 3.0](/dotnet/core/whats-new/dotnet-core-3-0).

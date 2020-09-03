@@ -5,16 +5,16 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, XAML, control, binding, property
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ba06ece905e6a91a2279f0fe78e867a8f943bb3
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: b6e663ec77c66d4a018d388da350794771312b77
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492940"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154389"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles de XAML; enlazar a una propiedad de C++/WinRT
 
-Una propiedad que se puede enlazar de forma eficaz a un control de XAML se conoce como una propiedad *observable*. Esta idea se basa en el patrón de diseño de software conocido como *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y cómo enlazar controles de elementos XAML a dichas propiedades (para obtener información general, consulta [Enlace de datos](/windows/uwp/data-binding)).
+Una propiedad que se puede enlazar de forma eficaz a un control de XAML se conoce como una propiedad *observable*. Esta idea se basa en el patrón de diseño de software conocido como *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++/WinRT](./intro-to-using-cpp-with-winrt.md) y cómo enlazar controles de elementos XAML a dichas propiedades (para obtener información general, consulta [Enlace de datos](../data-binding/index.md)).
 
 > [!IMPORTANT]
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
@@ -136,7 +136,7 @@ En la función de mutación **Title**, comprobamos si se ha establecido un valor
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>Declarar e implementar **BookstoreViewModel**
 Nuestra página principal de XAML se enlazará a un modelo de vista principal. Y ese modelo de vista tendrá varias propiedades, incluida una de tipo **BookSku** . En este paso, declararemos e implementaremos la clase en tiempo de ejecución del modelo de vista principal.
 
-Agrega un nuevo elemento **Midl File (.idl)** denominado `BookstoreViewModel.idl`. Pero consulta también [Factorizar clases en tiempo de ejecución en archivos Midl (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
+Agrega un nuevo elemento **Midl File (.idl)** denominado `BookstoreViewModel.idl`. Pero consulta también [Factorizar clases en tiempo de ejecución en archivos Midl (.idl)](./author-apis.md#factoring-runtime-classes-into-midl-files-idl).
 
 ```idl
 // BookstoreViewModel.idl
@@ -306,11 +306,11 @@ runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
 }
 ```
 
-Este es el motivo de tal necesidad. Todos los tipos que el compilador XAML debe validar (incluidas aquellas utilizadas en [{x: Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)) se leen desde Metadatos de Windows (WinMD). Lo único que necesita hacer es agregar la propiedad de solo lectura al archivo Midl. No la implementes, porque el código XAML subyacente generado automáticamente proporciona la implementación por ti.
+Este es el motivo de tal necesidad. Todos los tipos que el compilador XAML debe validar (incluidas aquellas utilizadas en [{x: Bind}](../xaml-platform/x-bind-markup-extension.md)) se leen desde Metadatos de Windows (WinMD). Lo único que necesita hacer es agregar la propiedad de solo lectura al archivo Midl. No la implementes, porque el código XAML subyacente generado automáticamente proporciona la implementación por ti.
 
 ## <a name="consuming-objects-from-xaml-markup"></a>Consumir objetos a partir del marcado XAML
 
-Todas las entidades consumidas por la [**extensión de marcado {x:Bind}** ](/windows/uwp/xaml-platform/x-bind-markup-extension) de XAML deben exponerse públicamente en IDL. Además, si el marcado XAML contiene una referencia a otro elemento que también está en el marcado, el captador de dicho marcado debe estar presente en IDL.
+Todas las entidades consumidas por la [**extensión de marcado {x:Bind}** ](../xaml-platform/x-bind-markup-extension.md) de XAML deben exponerse públicamente en IDL. Además, si el marcado XAML contiene una referencia a otro elemento que también está en el marcado, el captador de dicho marcado debe estar presente en IDL.
 
 ```xaml
 <Page x:Name="MyPage">

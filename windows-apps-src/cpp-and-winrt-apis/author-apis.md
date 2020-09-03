@@ -5,19 +5,19 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, estándar, c++, cpp, winrt, projected, proyectado, projection, proyección, implementation, implementación, implement, implementar, runtime class, clase en tiempo de ejecución, activation, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: 64f605fc716970d2fd4ca534a0c31fb62baa34d4
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 0b5c515760d0a03e163fa663da1f97a728a6da2c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493670"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154599"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
-En este tema se muestra cómo crear las API de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) mediante la estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements), directa o indirectamente. Algunos sinónimos de *crear* en este contexto son *producir* o *implementar*. En este tema se tratan las siguientes situaciones de implementación de las API en un tipo C++/WinRT, en este orden.
+En este tema se muestra cómo crear las API de [C++/WinRT](./intro-to-using-cpp-with-winrt.md) mediante la estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements), directa o indirectamente. Algunos sinónimos de *crear* en este contexto son *producir* o *implementar*. En este tema se tratan las siguientes situaciones de implementación de las API en un tipo C++/WinRT, en este orden.
 
 > [!NOTE]
-> Este tema aborda el tema de los componentes de Windows Runtime, pero solo en el contexto de C++/WinRT. Si estás buscando contenido sobre los componentes de Windows Runtime que cubra todos los lenguajes de Windows Runtime, consulta [Componentes de Windows Runtime](/windows/uwp/winrt-components/).
+> Este tema aborda el tema de los componentes de Windows Runtime, pero solo en el contexto de C++/WinRT. Si estás buscando contenido sobre los componentes de Windows Runtime que cubra todos los lenguajes de Windows Runtime, consulta [Componentes de Windows Runtime](../winrt-components/index.md).
 
 - *No* vas a crear una clase de Windows Runtime (clase en tiempo de ejecución); tan solo quieres implementar una o más interfaces de Windows Runtime para el consumo local dentro de tu app. Derivas directamente desde **winrt::implements** en este caso e implementas funciones.
 - *Sí* que vas a crear una clase en tiempo de ejecución. Es posible que vayas a crear un componente para consumirse desde una app. O puede que vayas a crear un tipo para consumir desde la interfaz de usuario XAML. En este caso, vas tanto a implementar como a consumir una clase en tiempo de ejecución en la misma unidad de compilación. En estos casos, permites que las herramientas generen clases para ti que derivan desde **winrt::implements**.
@@ -178,7 +178,7 @@ struct MyRuntimeClass_base : implements<D, MyProject::IMyRuntimeClass, I...>
 
 Por lo tanto, en este contexto, en la raíz de la jerarquía de herencia, vuelve a ser la plantilla de la estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements).
 
-Para obtener más detalles, el código y un tutorial sobre la creación de API en un componente de Windows Runtime, consulte [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) y [Creación de eventos en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events).
+Para obtener más detalles, el código y un tutorial sobre la creación de API en un componente de Windows Runtime, consulte [Componentes de Windows Runtime con C++/WinRT](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) y [Creación de eventos en C++/WinRT](./author-events.md).
 
 ## <a name="if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui"></a>Si vas a crear una clase en tiempo de ejecución a la que se hará referencia en tu interfaz de usuario de XAML
 
@@ -239,7 +239,7 @@ Hemos visto que el flujo de trabajo consiste en usar IDL para declarar la clase 
 A continuación se muestran algunos ejemplos.
 
 - Puedes flexibilizar los tipos de parámetros. Por ejemplo, si en IDL tu método toma un elemento **SomeClass**, puedes cambiarlo a **Ispectable** en la implementación. Esto funciona porque cualquier elemento **SomeClass** puede reenviarse a **IIspectable** (si lo haces al revés, no funcionará).
-- Puedes aceptar un parámetro que se pueda copiar en función del valor, en lugar de las referencias. Por ejemplo, cambia `SomeClass const&` a `SomeClass`. Esto es necesario cuando necesites evitar capturar una referencia en una corrutina (consulta[Pasar los parámetros](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)).
+- Puedes aceptar un parámetro que se pueda copiar en función del valor, en lugar de las referencias. Por ejemplo, cambia `SomeClass const&` a `SomeClass`. Esto es necesario cuando necesites evitar capturar una referencia en una corrutina (consulta[Pasar los parámetros](./concurrency.md#parameter-passing)).
 - Puedes flexibilizar el valor devuelto. Por ejemplo, puedes cambiar **void** a [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget).
 
 Los dos últimos son muy útiles al escribir un controlador de eventos asincrónicos.
@@ -468,7 +468,7 @@ Hasta que no hayas realizado la modificación descrita anteriormente (pasar dich
 Como has visto anteriormente en este tema, existe una clase de tiempo de ejecución C++/WinRT en forma de más de una clase de C++ que se encuentra en más de un espacio de nombres. Así pues, el nombre **MyRuntimeClass** tiene un significado en el espacio de nombres **winrt::MyProject**, y un significado diferente en el espacio de nombres **winrt::MyProject::implementation**. Ten en cuenta qué espacio de nombres tienes actualmente en contexto, y usa los prefijos de espacio de nombres si necesitas obtener un nombre de un espacio de nombres diferente. Veamos más de cerca los espacios de nombres en cuestión.
 
 - **winrt::MyProject**. Este espacio de nombres contiene tipos proyectados. Un objeto de un tipo proyectado es un proxy; es esencialmente un puntero inteligente hacia un objeto de respaldo y ese objeto de respaldo puede implementarse en tu proyecto o podría implementarse en otra unidad de compilación.
-- **winrt::MyProject::implementation**. Este espacio de nombres contiene tipos de implementación. Un objeto de un tipo de implementación no es un puntero; es un valor&mdash;un objeto de pila de C++ completo. No construyas un tipo de implementación directamente; en su lugar, llama a [**winrt::make**](/uwp/cpp-ref-for-winrt/make) y pasa tu tipo de implementación como el parámetro de la plantilla. Te hemos mostrado ejemplos de **winrt::make** en acción en este tema, y tienes otro ejemplo en la sección [Enlazar los controles XAML a una propiedad de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage). Consulta también el artículo [Diagnóstico de asignaciones directas](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc).
+- **winrt::MyProject::implementation**. Este espacio de nombres contiene tipos de implementación. Un objeto de un tipo de implementación no es un puntero; es un valor&mdash;un objeto de pila de C++ completo. No construyas un tipo de implementación directamente; en su lugar, llama a [**winrt::make**](/uwp/cpp-ref-for-winrt/make) y pasa tu tipo de implementación como el parámetro de la plantilla. Te hemos mostrado ejemplos de **winrt::make** en acción en este tema, y tienes otro ejemplo en la sección [Enlazar los controles XAML a una propiedad de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage). Consulta también el artículo [Diagnóstico de asignaciones directas](./diag-direct-alloc.md).
 - **winrt::MyProject::factory_implementation**. Este espacio de nombres contiene factorías. Un objeto en este espacio de nombres admite [**IActivationFactory**](/windows/win32/api/activation/nn-activation-iactivationfactory).
 
 Esta tabla muestra la calificación mínima de espacio de nombres que necesitas usar en diferentes contextos.
@@ -483,7 +483,7 @@ Esta tabla muestra la calificación mínima de espacio de nombres que necesitas 
 >
 > El problema con `MyRuntimeClass myRuntimeClass;` en ese escenario es que crea un objeto **winrt::MyProject::implementación::MyRuntimeClass** en la pila. Ese objeto (del tipo de implementación) se comporta como el tipo proyectado en algunos modos&mdash;también puedes invocar métodos de la misma manera, e incluso se convierte en un tipo proyectado. Sin embargo, el objeto se destruye, según las reglas normales de C++, cuando el ámbito se cierra. Por lo tanto, si devolviste un tipo proyectado (un puntero inteligente) a ese objeto, ese puntero ahora está pendiente.
 >
-> Este tipo de error de daño de memoria es difícil de diagnosticar. Por lo tanto, para las compilaciones de depuración, una aserción de C++/WinRT te ayudará a detectar este error, mediante un detector de pila. Aún así, las corrutinas se asignan en el montón, por lo que no obtendrás ayuda con este error si se produce en una corrutina. Para obtener más información, consulta [Diagnóstico de asignaciones directas](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc).
+> Este tipo de error de daño de memoria es difícil de diagnosticar. Por lo tanto, para las compilaciones de depuración, una aserción de C++/WinRT te ayudará a detectar este error, mediante un detector de pila. Aún así, las corrutinas se asignan en el montón, por lo que no obtendrás ayuda con este error si se produce en una corrutina. Para obtener más información, consulta [Diagnóstico de asignaciones directas](./diag-direct-alloc.md).
 
 ## <a name="using-projected-types-and-implementation-types-with-various-cwinrt-features"></a>Usar tipos proyectados y de implementación con varias características de C++/WinRT
 
@@ -699,7 +699,7 @@ Como puedes ver, la función **winrt_make_MyProject_MyClass** crea directamente 
 
 ## <a name="overriding-base-class-virtual-methods"></a>Reemplazar los métodos virtuales de la clase base
 
-La clase derivada puede tener problemas con los métodos virtuales si tanto la clase base como la clase derivada son clases definidas por la aplicación, pero el método virtual se define en una clase Windows Runtime de entidad primaria principal. En la práctica, esto sucede si derivas desde clases XAML. El resto de esta sección continúa a partir del ejemplo de [Clases derivadas](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx#derived-classes).
+La clase derivada puede tener problemas con los métodos virtuales si tanto la clase base como la clase derivada son clases definidas por la aplicación, pero el método virtual se define en una clase Windows Runtime de entidad primaria principal. En la práctica, esto sucede si derivas desde clases XAML. El resto de esta sección continúa a partir del ejemplo de [Clases derivadas](./move-to-winrt-from-cx.md#derived-classes).
 
 ```cppwinrt
 namespace winrt::MyNamespace::implementation
@@ -751,7 +751,7 @@ Esto requiere que todos los miembros de la jerarquía de la clase acuerden el va
 * [Función winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Crear eventos en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events)
-* [Consumir API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis)
-* [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)
-* [Controles de XAML; enlazar a una propiedad de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property)
+* [Crear eventos en C++/WinRT](./author-events.md)
+* [Consumir API con C++/WinRT](./consume-apis.md)
+* [Componentes de Windows Runtime con C++/WinRT](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md)
+* [Controles de XAML; enlazar a una propiedad de C++/WinRT](./binding-property.md)

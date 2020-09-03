@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 26e756b52d4faf18eff2fc684c7db94bca058642
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 24ac07b8caacd4369bcbadf2a4019bbcbde59c6b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971080"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159979"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -23,7 +23,7 @@ ms.locfileid: "82971080"
 
 Mostrar resaltado es un efecto de iluminación que resalta los elementos interactivos, como las barras de comandos, cuando el usuario mueve el puntero cerca de ellos. 
 
-> **API importantes**: [clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)
+> **API importantes**: [clase RevealBrush](/uwp/api/windows.ui.xaml.media.revealbrush), [clase RevealBackgroundBrush](/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [clase RevealBorderBrush](/uwp/api/windows.ui.xaml.media.revealborderbrush), [clase RevealBrushHelper](/uwp/api/windows.ui.xaml.media.revealbrushhelper), [clase VisualState](/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Cómo funciona
 Mostrar resaltado llama la atención respecto a elementos interactivos al mostrar el contenedor del elemento cuando el puntero está cerca, como se muestra en la siguiente ilustración:
@@ -142,7 +142,7 @@ En la mayoría de los casos, controlamos el uso de ambos mediante la activación
 ### <a name="when-to-add-reveal"></a>Cuándo agregar Reveal
 Puedes agregar Reveal a tus controles personalizados, pero primero ten en cuenta el tipo de control y cómo se comporta. 
 * Si tu control personalizado es un solo elemento interactivo y no tiene controles similares que compartan su espacio (por ejemplo, elementos de menú en un menú), es probable que tu control personalizado no necesite Reveal.  
-* Si tienes una agrupación de elementos o contenido interactivo relacionado, es probable que esa región de la aplicación necesite Reveal (esto se conoce normalmente como una superficie [dominante](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/collection-commanding)).
+* Si tienes una agrupación de elementos o contenido interactivo relacionado, es probable que esa región de la aplicación necesite Reveal (esto se conoce normalmente como una superficie [dominante](../controls-and-patterns/collection-commanding.md)).
 
 Por ejemplo, un botón por sí mismo no debería usar Reveal, pero un conjunto de botones de una barra de comandos debe usar Reveal.
 
@@ -286,9 +286,9 @@ Al habilitar Reveal en un control personalizado o nuevamente basado en modelo o 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase RevealBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
+- [Clase RevealBrush](/uwp/api/windows.ui.xaml.media.revealbrush)
 - [Acrílico](acrylic.md)
-- [Efectos de composición](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
+- [Efectos de composición](../../composition/composition-effects.md)
 - [Fluent Design para UWP](/windows/apps/fluent-design-system)
 - [Ciencia en el sistema: Fluent Design y profundidad](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [Ciencia en el sistema: Fluent Design y luz](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

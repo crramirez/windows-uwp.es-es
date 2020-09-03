@@ -5,16 +5,16 @@ ms.date: 07/10/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, pasar, parámetros, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 51cde2332d3d9df9d1f488aa7f8246f9e1e2ed36
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 05a627349ad2c4fda890a4f5280f5d33454ea910
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997982"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154459"
 ---
 # <a name="passing-parameters-into-the-abi-boundary"></a>Pasar parámetros a los límites de la ABI
 
-Con los tipos en el espacio de nombres **winrt::param**, C++/WinRT simplifica el paso de parámetros a los límites de ABI ya que proporciona conversiones automáticas para casos habituales. Puedes ver más detalles y ejemplos de código en [Control de cadenas ](/windows/uwp/cpp-and-winrt-apis/strings) y [Tipos de datos de C++ estándar y C++/WinRT](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types).
+Con los tipos en el espacio de nombres **winrt::param**, C++/WinRT simplifica el paso de parámetros a los límites de ABI ya que proporciona conversiones automáticas para casos habituales. Puedes ver más detalles y ejemplos de código en [Control de cadenas ](./strings.md) y [Tipos de datos de C++ estándar y C++/WinRT](./std-cpp-data-types.md).
 
 > [!IMPORTANT]
 > No debes usar los tipos en el espacio de nombres **winrt::param** tú mismo. Esto es porque se usarán en beneficio de la proyección.

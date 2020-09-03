@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 8443ac25ba678986046b967a90a8899eaffb76aa
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 30b41cf0d22d8f8c2c4ce7f774eab9d2aa479d78
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67420116"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161469"
 ---
 # <a name="part-4-add-windows-10-user-activities-and-notifications"></a>4\.ª parte: Incorporación de actividades y notificaciones del usuario de Windows 10
 
@@ -33,11 +33,11 @@ El seguimiento de las actividades de usuario se realiza mediante [Microsoft Grap
 
 ### <a name="introduction-to-adaptive-cards"></a>Introducción a las tarjetas adaptables
 
-En esta sección se proporciona una breve introducción a las [tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/). Si no necesitas esta información, puedes ir directamente a las instrucciones sobre cómo [agregar una tarjeta adaptable](#add-an-adaptive-card).
+En esta sección se proporciona una breve introducción a las [tarjetas adaptables](/adaptive-cards/). Si no necesitas esta información, puedes ir directamente a las instrucciones sobre cómo [agregar una tarjeta adaptable](#add-an-adaptive-card).
 
 Las tarjetas adaptables permiten a los desarrolladores intercambiar contenido de tarjetas de una manera común y coherente. Una tarjeta adaptable se describe mediante una carga JSON que define su contenido, que puede incluir texto, imágenes, acciones, etc.
 
-Una tarjeta adaptable define solo el contenido y no la apariencia visual del contenido. La plataforma donde se recibe la tarjeta adaptable puede representar el contenido con el estilo más adecuado. Las tarjetas adaptables se diseñan con un [representador](https://docs.microsoft.com/adaptive-cards/rendering-cards/getting-started), que puede tomar la carga de JSON y convertirla en una interfaz de usuario nativa. Por ejemplo, la interfaz de usuario podría ser XAML para una aplicación para WPF o UWP, AXML para una aplicación Android o HTML para un sitio web o un chat de bot.
+Una tarjeta adaptable define solo el contenido y no la apariencia visual del contenido. La plataforma donde se recibe la tarjeta adaptable puede representar el contenido con el estilo más adecuado. Las tarjetas adaptables se diseñan con un [representador](/adaptive-cards/rendering-cards/getting-started), que puede tomar la carga de JSON y convertirla en una interfaz de usuario nativa. Por ejemplo, la interfaz de usuario podría ser XAML para una aplicación para WPF o UWP, AXML para una aplicación Android o HTML para un sitio web o un chat de bot.
 
 Este es un ejemplo de una carga sencilla de tarjeta adaptable.
 
@@ -391,7 +391,7 @@ Para agregar una notificación a la aplicación:
     }
     ```
 
-    Las notificaciones del sistema se representan mediante una carga XML, que puede incluir texto, imágenes, acciones, etc. Encontrarás todos los elementos admitidos [aquí](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/toast-schema). Este código usa un esquema muy sencillo con dos líneas de texto: el título y el cuerpo. Una vez que el código define la carga XML y la carga en un objeto **XmlDocument**, ajusta el código XML en un objeto **ToastNotification** y lo muestra mediante una clase **ToastNotificationManager**.
+    Las notificaciones del sistema se representan mediante una carga XML, que puede incluir texto, imágenes, acciones, etc. Encontrarás todos los elementos admitidos [aquí](/windows/uwp/design/shell/tiles-and-notifications/toast-schema). Este código usa un esquema muy sencillo con dos líneas de texto: el título y el cuerpo. Una vez que el código define la carga XML y la carga en un objeto **XmlDocument**, ajusta el código XML en un objeto **ToastNotification** y lo muestra mediante una clase **ToastNotificationManager**.
 
 5. En el proyecto **ContosoExpenses.Core**, expande la carpeta **ViewModels** y abre el archivo **AddNewExpenseViewModel.cs**. 
 

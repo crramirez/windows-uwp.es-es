@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, directrices para desarrol
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 85e41a26343c9e4c6eb239cbfdd74dc946d5b657
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d15cd0289b3de0c086a3ddc974e1b121447188c5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258804"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155229"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en la documentación para los desarrolladores de Windows de septiembre de 2018
 
@@ -22,9 +22,9 @@ La documentación para desarrolladores de Windows se actualiza constantemente co
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[Los documentos de Windows Machine Learning](https://docs.microsoft.com/windows/ai/) ahora se encuentran en su propio sitio y se actualizan para el último SDK de Windows Insider. Hay tutoriales para escritorio y para UWP en C++ y C# para ayudarlo a empezar a agregar WinML a la aplicación.
+[Los documentos de Windows Machine Learning](/windows/ai/) ahora se encuentran en su propio sitio y se actualizan para el último SDK de Windows Insider. Hay tutoriales para escritorio y para UWP en C++ y C# para ayudarlo a empezar a agregar WinML a la aplicación.
 
-[La referencia de API Windows.AI.MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) se ha actualizado para el último SDK de Windows Insider.
+[La referencia de API Windows.AI.MachineLearning](/uwp/api/windows.ai.machinelearning) se ha actualizado para el último SDK de Windows Insider.
 
 [El repositorio de GitHub de Windows-Machine-Learning](https://github.com/Microsoft/Windows-Machine-Learning) se ha actualizado con nuevos ejemplos que funcionan con el SDK más reciente.
 
@@ -32,9 +32,9 @@ La documentación para desarrolladores de Windows se actualiza constantemente co
 
 ### <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
 
-[La biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) es un conjunto de paquetes NuGet que proporciona controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con las versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tienen la versión más reciente del sistema operativo.
+[La biblioteca de interfaz de usuario de Windows](/uwp/toolkits/winui/) es un conjunto de paquetes NuGet que proporciona controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con las versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tienen la versión más reciente del sistema operativo.
 
-Para obtener más información sobre la Biblioteca de interfaz de usuario de Windows, consulte [esta lista de espacios de nombres de API incluidos en el paquete NuGet.](https://docs.microsoft.com/uwp/api/overview/winui/)
+Para obtener más información sobre la Biblioteca de interfaz de usuario de Windows, consulte [esta lista de espacios de nombres de API incluidos en el paquete NuGet.](/uwp/api/overview/winui/)
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 

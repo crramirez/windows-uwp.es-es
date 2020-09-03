@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 70415c9f3d58625cfdc651ec67c8a9f37c23cffa
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 32054a30e56102b9c0642392d78ac75b78fb99e9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77089501"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158229"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -19,9 +19,9 @@ Puedes usar Azure Pipelines para crear compilaciones automatizadas para los proy
 
 ## <a name="create-a-new-azure-pipeline"></a>Creación de una nueva canalización de Azure
 
-Comienza por [registrarte en Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up) si todavía no lo has hecho.
+Comienza por [registrarte en Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up) si todavía no lo has hecho.
 
-Posteriormente, crea una canalización que puedas usar para compilar el código fuente. Para ver un tutorial sobre la creación de una canalización para compilar un repositorio de GitHub, consulta [Crea tu primera canalización](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml). Azure Pipelines admite los tipos de repositorios que aparecen [en este artículo](https://docs.microsoft.com/azure/devops/pipelines/repos).
+Posteriormente, crea una canalización que puedas usar para compilar el código fuente. Para ver un tutorial sobre la creación de una canalización para compilar un repositorio de GitHub, consulta [Crea tu primera canalización](/azure/devops/pipelines/get-started-yaml). Azure Pipelines admite los tipos de repositorios que aparecen [en este artículo](/azure/devops/pipelines/repos).
 
 ## <a name="set-up-an-automated-build"></a>Configurar una compilación automatizada
 
@@ -66,7 +66,7 @@ La plantilla predeterminada intenta firmar el paquete con el certificado especif
 
 ## <a name="add-your-project-certificate-to-the-secure-files-library"></a>Agregar el certificado de proyecto a la biblioteca de archivos seguros
 
-Si es posible, debes evitar el envío de certificados al repositorio, ya que Git los ignorará de forma predeterminada. Para administrar el control seguro de archivos confidenciales como los certificados, Azure DevOps admite la característica de [archivos seguros](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops).
+Si es posible, debes evitar el envío de certificados al repositorio, ya que Git los ignorará de forma predeterminada. Para administrar el control seguro de archivos confidenciales como los certificados, Azure DevOps admite la característica de [archivos seguros](/azure/devops/pipelines/library/secure-files?view=azure-devops).
 
 Para cargar un certificado para la compilación automatizada:
 
@@ -80,7 +80,7 @@ Para cargar un certificado para la compilación automatizada:
 
     ![Cómo cargar un archivo seguro](images/secure-file2.png)
 
-5. Si la clave privada del certificado tiene una contraseña, se recomienda que almacenes la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y, posteriormente, vincules la contraseña a un [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puedes usar las variables para acceder a la contraseña desde la canalización. Ten en cuenta que una contraseña solo se admite para la clave privada; actualmente no se admite el uso de un archivo de certificado protegido por contraseña.
+5. Si la clave privada del certificado tiene una contraseña, se recomienda que almacenes la contraseña en [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates) y, posteriormente, vincules la contraseña a un [grupo de variables](/azure/devops/pipelines/library/variable-groups). Puedes usar las variables para acceder a la contraseña desde la canalización. Ten en cuenta que una contraseña solo se admite para la clave privada; actualmente no se admite el uso de un archivo de certificado protegido por contraseña.
 
 > [!NOTE]
 > A partir de Visual Studio 2019, ya no se genera un certificado temporal en los proyectos de UWP. Para crear o exportar certificados, usa los cmdlets de PowerShell que se describen en [este artículo](/windows/msix/package/create-certificate-package-signing).
@@ -100,7 +100,7 @@ Esta tarea compila cualquier solución que se encuentre en la carpeta de trabajo
 | AppxPackageSigningEnabled | true | Habilita la firma del paquete. |
 | PackageCertificateThumbprint | Huella digital del certificado | Este valor **debe** coincidir con la huella digital del certificado de firma o ser una cadena vacía. |
 | PackageCertificateKeyFile | Ruta | La ruta de acceso al certificado que se utilizará. Se recupera de los metadatos del archivo seguro. |
-| PackageCertificatePassword | Contraseña | La contraseña para la clave privada del certificado. Se recomienda que almacenes la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y vincules la contraseña a un [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puedes transferir la variable a este argumento. |
+| PackageCertificatePassword | Contraseña | La contraseña para la clave privada del certificado. Se recomienda que almacenes la contraseña en [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates) y vincules la contraseña a un [grupo de variables](/azure/devops/pipelines/library/variable-groups). Puedes transferir la variable a este argumento. |
 
 ### <a name="configure-the-build"></a>Configurar la compilación
 
@@ -152,7 +152,7 @@ Los parámetros definidos con la sintaxis `$()` son variables definidas en la de
 
 ![variables predeterminadas](images/building-screen5.png)
 
-Para ver todas las variables predefinidas, consulta [Variables de compilación predefinidas](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
+Para ver todas las variables predefinidas, consulta [Variables de compilación predefinidas](/azure/devops/pipelines/build/variables).
 
 ## <a name="configure-the-publish-build-artifacts-task"></a>Configuración de la tarea para publicar artefactos de compilación
 
@@ -195,7 +195,7 @@ A continuación, quita el argumento de MSBuild `AppxBundle` del paso de compilac
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Compilar la aplicación de .NET para Windows](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
+- [Compilar la aplicación de .NET para Windows](/vsts/build-release/get-started/dot-net)
 - [Empaquetado de aplicaciones para UWP](/windows/msix/package/packaging-uwp-apps)
-- [Transferir localmente aplicaciones de LOB en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
+- [Transferir localmente aplicaciones de LOB en Windows 10](/windows/deploy/sideload-apps-in-windows-10)
 - [Crear un certificado para la firma de paquetes](/windows/msix/package/create-certificate-package-signing)

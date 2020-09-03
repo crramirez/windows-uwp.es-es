@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e008f08d9bf98e309d895f2916ea8aaf84e8464
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 089518a340ba5c33eef5bc9bd883cbd04dcabeb9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969910"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160279"
 ---
 # <a name="flyouts"></a>Controles flotantes
 
@@ -28,7 +28,7 @@ Un control flotante es un contenedor de cierre del elemento por cambio de foco q
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de plataforma:** [Clase Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
@@ -70,7 +70,7 @@ En este ejemplo se crea un control flotante simple que muestra parte del texto c
 </Button>
 ````
 
-Si el control no tiene una propiedad Flyout, puedes usar la propiedad asociada [FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.AttachedFlyoutProperty). Si haces esto, también tienes que llamar al método [FlyoutBase.ShowAttachedFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase#Windows_UI_Xaml_Controls_Primitives_FlyoutBase_ShowAttachedFlyout_Windows_UI_Xaml_FrameworkElement_) para mostrar el control flotante.
+Si el control no tiene una propiedad Flyout, puedes usar la propiedad asociada [FlyoutBase.AttachedFlyout](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.AttachedFlyoutProperty). Si haces esto, también tienes que llamar al método [FlyoutBase.ShowAttachedFlyout](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase#Windows_UI_Xaml_Controls_Primitives_FlyoutBase_ShowAttachedFlyout_Windows_UI_Xaml_FrameworkElement_) para mostrar el control flotante.
 
 En este ejemplo se agrega un control flotante simple a una imagen. Cuando el usuario pulsa la imagen, la aplicación muestra el control flotante.
 
@@ -132,7 +132,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 ````
 
 ## <a name="style-a-flyout"></a>Diseñar un control flotante
-Para diseñar un control flotante, modifica su propiedad [FlyoutPresenterStyle](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout.FlyoutPresenterStyle). En el siguiente ejemplo se muestra un párrafo de texto ajustado y se permite que el bloque de texto sea accesible para un lector de pantalla.
+Para diseñar un control flotante, modifica su propiedad [FlyoutPresenterStyle](/uwp/api/Windows.UI.Xaml.Controls.Flyout.FlyoutPresenterStyle). En el siguiente ejemplo se muestra un párrafo de texto ajustado y se permite que el bloque de texto sea accesible para un lector de pantalla.
 
 ![Control flotante accesible con texto ajustado](../images/flyout-wrapping-text.png)
 

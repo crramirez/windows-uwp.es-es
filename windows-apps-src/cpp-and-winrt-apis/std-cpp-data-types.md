@@ -5,18 +5,18 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, data, types
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cb62f8386798fcb78a11be35ba951616c47039c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d61de7acdfa2fc3b563aa77630a9eb8043bce3d7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68270068"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154339"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>Tipos de datos de C++ estándar y C++/WinRT
 
-Con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), puedes llamar a las API de Windows Runtime con tipos de datos C++ estándar, incluidos algunos tipos de datos de la biblioteca estándar de C++. Puedes pasar cadenas estándar a las API (consulta [Control de cadenas en C++/WinRT](strings.md)) y puedes pasar contenedores estándar y listas de inicializadores a las API que esperan una colección semánticamente equivalente.
+Con [C++/WinRT](./intro-to-using-cpp-with-winrt.md), puedes llamar a las API de Windows Runtime con tipos de datos C++ estándar, incluidos algunos tipos de datos de la biblioteca estándar de C++. Puedes pasar cadenas estándar a las API (consulta [Control de cadenas en C++/WinRT](strings.md)) y puedes pasar contenedores estándar y listas de inicializadores a las API que esperan una colección semánticamente equivalente.
 
-Consulta también [Pasar parámetros a los límites de la ABI](/windows/uwp/cpp-and-winrt-apis/pass-parms-to-abi).
+Consulta también [Pasar parámetros a los límites de la ABI](./pass-parms-to-abi.md).
 
 ## <a name="standard-initializer-lists"></a>Listas de inicializadores estándares
 Una lista de inicializadores (**std::initializer_list**) es una construcción de la biblioteca estándar de C++. Puedes usar las listas de inicializadores cuando llames a algunos constructores y métodos de Windows Runtime. Por ejemplo, puedes llamar a [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes) con una lista.

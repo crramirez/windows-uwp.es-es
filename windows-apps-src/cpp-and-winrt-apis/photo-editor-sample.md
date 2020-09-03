@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, ejemplo, aplicación, foto, editor
 ms.localizationpriority: medium
-ms.openlocfilehash: dcefe2ad8321ae85fcb814bbaead0bb0e5373300
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fb89deaef8c221df9a28f0350f0c860e8da3802d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81266913"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154424"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>Aplicación de ejemplo de C++/WinRT de Photo Editor
 
@@ -26,5 +26,5 @@ La aplicación Photo Editor es una aplicación de ejemplo para la Plataforma uni
 - Creación y uso de los tipos de implementación y los tipos proyectados de la clase de Windows Runtime (clase de tiempo de ejecución). Para obtener más información acerca de estos términos, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT](author-apis.md).
 - [Control de eventos](handle-events.md), incluido el uso de tokens de eventos de revocación automática.
 - Uso del paquete de NuGet Win2D externo y [Windows::UI::Composition](/uwp/api/windows.ui.composition), para efectos de imagen.
-- Enlace de datos XAML, incluida la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
+- Enlace de datos XAML, incluida la [extensión de marcado {x:Bind}](../xaml-platform/x-bind-markup-extension.md).
 - Personalización de la interfaz de usuario y estilo de XAML, incluidas las [animaciones conectadas](../design/motion/connected-animation.md).

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b5fd5061f3b466743cad2e9e412d79caebaf2f0
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 721615ae9acf359bed78cfb3211aaba4c143dfcb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730288"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154119"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>Componentes de UWP y optimización de la interoperabilidad
 
@@ -46,7 +46,7 @@ Hace falta una cantidad considerable de llamadas en un período breve para que s
 
 ### <a name="consider-using-net-for-uwp-apps"></a>Considera el uso de .NET para aplicaciones UWP
 
-Existen determinados casos en los que puedes realizar una tarea mediante el uso de aplicaciones para UWP o .NET para UWP. Te aconsejamos que no trates de combinar tipos de .NET con tipos de UWP. Trata de mantenerte en uno de los dos tipos. Por ejemplo, puedes analizar un flujo de xml con el tipo [**Windows.Data.Xml.Dom.XmlDocument**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom.XmlDocument) (un tipo de UWP) o con el tipo [**System.Xml.XmlReader**](https://docs.microsoft.com/dotnet/api/system.xml.xmlreader) (un tipo de .NET). Usa la API que pertenezca a la misma tecnología que el flujo. Por ejemplo, si lees xml desde [**MemoryStream**](https://docs.microsoft.com/dotnet/api/system.io.memorystream), usa el tipo **System.Xml.XmlReader** porque los dos son tipos de .NET. Si lees desde un archivo, usa el tipo **Windows.Data.Xml.Dom.XmlDocument** porque las API del archivo y **XmlDocument** son componentes de UWP.
+Existen determinados casos en los que puedes realizar una tarea mediante el uso de aplicaciones para UWP o .NET para UWP. Te aconsejamos que no trates de combinar tipos de .NET con tipos de UWP. Trata de mantenerte en uno de los dos tipos. Por ejemplo, puedes analizar un flujo de xml con el tipo [**Windows.Data.Xml.Dom.XmlDocument**](/uwp/api/Windows.Data.Xml.Dom.XmlDocument) (un tipo de UWP) o con el tipo [**System.Xml.XmlReader**](/dotnet/api/system.xml.xmlreader) (un tipo de .NET). Usa la API que pertenezca a la misma tecnología que el flujo. Por ejemplo, si lees xml desde [**MemoryStream**](/dotnet/api/system.io.memorystream), usa el tipo **System.Xml.XmlReader** porque los dos son tipos de .NET. Si lees desde un archivo, usa el tipo **Windows.Data.Xml.Dom.XmlDocument** porque las API del archivo y **XmlDocument** son componentes de UWP.
 
 ### <a name="copy-window-runtime-objects-to-net-types"></a>Copiar objetos de Windows Runtime a tipos de .NET
 
@@ -80,7 +80,7 @@ Los tipos enumerados en [ **.NET para las aplicaciones de Windows**](https://dot
 
 Debes medir tu aplicación y determinar si la interoperabilidad está consumiendo gran parte de su tiempo de ejecución antes de optimizar los costes. Cuando analizas el rendimiento de la aplicación con Visual Studio, puedes obtener con facilidad un límite máximo de costes de interoperabilidad usando la vista **Funciones** y viendo el tiempo transcurrido en métodos que llaman a UWP.
 
-Si tu aplicación es lenta debido a una sobrecarga de interoperabilidad, para mejorar su rendimiento puedes reducir las llamadas a las API de Windows Runtime en las rutas de código activas. Por ejemplo, el motor de un juego que realiza una gran cantidad de cálculos de física al consultar constantemente la posición y las dimensiones de [**UIElements**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) puede ahorrar mucho tiempo si almacena la información necesaria de **UIElements** en variables locales, realiza los cálculos en estos valores almacenados en caché y vuelve a asignar el resultado final a **UIElements** una vez acaba. Por poner otro ejemplo, si el código de C# o Visual Basic obtiene acceso de manera constante a una colección, es más eficaz usar una colección del espacio de nombres [**System.Collections**](https://docs.microsoft.com/dotnet/api/system.collections) que otra del espacio de nombres [**Windows.Foundation.Collections**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections). También puedes considerar combinar llamadas a componentes de UWP; por ejemplo, al usar las API de [**Windows.Storage.BulkAccess**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess).
+Si tu aplicación es lenta debido a una sobrecarga de interoperabilidad, para mejorar su rendimiento puedes reducir las llamadas a las API de Windows Runtime en las rutas de código activas. Por ejemplo, el motor de un juego que realiza una gran cantidad de cálculos de física al consultar constantemente la posición y las dimensiones de [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement) puede ahorrar mucho tiempo si almacena la información necesaria de **UIElements** en variables locales, realiza los cálculos en estos valores almacenados en caché y vuelve a asignar el resultado final a **UIElements** una vez acaba. Por poner otro ejemplo, si el código de C# o Visual Basic obtiene acceso de manera constante a una colección, es más eficaz usar una colección del espacio de nombres [**System.Collections**](/dotnet/api/system.collections) que otra del espacio de nombres [**Windows.Foundation.Collections**](/uwp/api/Windows.Foundation.Collections). También puedes considerar combinar llamadas a componentes de UWP; por ejemplo, al usar las API de [**Windows.Storage.BulkAccess**](/uwp/api/Windows.Storage.BulkAccess).
 
 ### <a name="building-a-uwp-component"></a>Compilar componentes de UWP
 
@@ -89,4 +89,3 @@ Si escribes un componente de UWP para usar en aplicaciones escritas en C++ o Jav
 Todas las sugerencias para lograr el buen rendimiento de las aplicaciones se aplican a los componentes. Evalúa tu componente para saber qué API tienen modelos de alta densidad de tráfico. Para esas áreas, considera proporcionar aquellas API que permitan que los usuarios realicen trabajo con pocas llamadas. Se ha invertido mucho esfuerzo para diseñar UWP para que las aplicaciones puedan usarla sin cruzar repetidas veces el límite de interoperabilidad.
 
  
-

@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 51c43efc859e20606679b385051684730eee1922
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 7e498caa51aa0820b8fb8709f8da178bcee1de9b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493390"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160239"
 ---
 # <a name="flip-view"></a>Inversión de la vista
 
@@ -27,7 +27,7 @@ Usa la vista invertida para explorar una a una las imágenes u otros elementos d
 <img src="images/winui-logo-64x64.png" alt="WinUI logo"
      style="float: left; margin-right: 15px;" />
 
-La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
 
 > **API de plataforma:** [Clase FlipView](/uwp/api/windows.ui.xaml.controls.flipview), [Propiedad ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [Propiedad ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
 
@@ -61,13 +61,13 @@ Asimismo, también puedes examinar verticalmente una vista invertida:
 
 ## <a name="create-a-flip-view"></a>Crear una vista invertida nueva
 
-La clase FlipView forma parte de [ItemsControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol), de modo que puede contener una colección de elementos de cualquier tipo. Para rellenar la vista, agrega elementos a la colección [**Items**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) o establece la propiedad [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en un origen de datos.
+La clase FlipView forma parte de [ItemsControl](/uwp/api/windows.ui.xaml.controls.itemscontrol), de modo que puede contener una colección de elementos de cualquier tipo. Para rellenar la vista, agrega elementos a la colección [**Items**](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) o establece la propiedad [**ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en un origen de datos.
 
-De manera predeterminada, un elemento de datos se muestra en la vista invertida como una representación de cadena del objeto de datos al que está enlazado. Para especificar exactamente cómo se muestran los elementos en la vista invertida, puedes crear una clase [**DataTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate) para definir el diseño de los controles que se usan para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o tener contenido definido en línea. A continuación, asigna la clase DataTemplate a la propiedad [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de la clase FlipView.
+De manera predeterminada, un elemento de datos se muestra en la vista invertida como una representación de cadena del objeto de datos al que está enlazado. Para especificar exactamente cómo se muestran los elementos en la vista invertida, puedes crear una clase [**DataTemplate**](/uwp/api/windows.ui.xaml.datatemplate) para definir el diseño de los controles que se usan para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o tener contenido definido en línea. A continuación, asigna la clase DataTemplate a la propiedad [**ItemTemplate**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de la clase FlipView.
 
 ### <a name="add-items-to-the-items-collection"></a>Agregar elementos a la colección Items
 
-Puedes agregar elementos a la colección [**Items**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) mediante lenguaje XAML o código. Normalmente, los elementos se agregan de esta forma si tienes un pequeño número de elementos que no cambian y que se definen fácilmente en XAML, o si generas los elementos en el código en tiempo de ejecución. Esta es una vista invertida con elementos definidos en línea.
+Puedes agregar elementos a la colección [**Items**](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) mediante lenguaje XAML o código. Normalmente, los elementos se agregan de esta forma si tienes un pequeño número de elementos que no cambian y que se definen fácilmente en XAML, o si generas los elementos en el código en tiempo de ejecución. Esta es una vista invertida con elementos definidos en línea.
 
 ```xaml
 <FlipView x:Name="flipView1">
@@ -88,13 +88,13 @@ flipView1.Items.Add("Item 2");
 stackPanel1.Children.Add(flipView1);
 ```
 
-Cuando agregas elementos a una vista invertida, se colocan automáticamente en un contenedor [**FlipViewItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipViewItem). Para cambiar la manera en que se muestra un elemento, puedes configurar la propiedad [**ItemContainerStyle**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) para aplicar un estilo al contenedor de elementos. 
+Cuando agregas elementos a una vista invertida, se colocan automáticamente en un contenedor [**FlipViewItem**](/uwp/api/Windows.UI.Xaml.Controls.FlipViewItem). Para cambiar la manera en que se muestra un elemento, puedes configurar la propiedad [**ItemContainerStyle**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) para aplicar un estilo al contenedor de elementos. 
 
 Cuando defines los elementos en XAML, se agregan automáticamente a la colección Items.
 
 ### <a name="set-the-items-source"></a>Establecer el origen de los elementos
 
-Por lo general, se usa una vista invertida para mostrar los datos de un origen como una base de datos o Internet. Para rellenar una vista invertida desde un origen de datos, debes establecer la propiedad [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en una colección de elementos de datos.
+Por lo general, se usa una vista invertida para mostrar los datos de un origen como una base de datos o Internet. Para rellenar una vista invertida desde un origen de datos, debes establecer la propiedad [**ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en una colección de elementos de datos.
 
 Aquí, la propiedad ItemsSource de la vista invertida está establecida en el código, directamente en la instancia de una colección.
 
@@ -116,7 +116,7 @@ stackPanel1.Children.Add(flipView1);
 
 También puedes enlazar la propiedad ItemsSource a una colección en XAML. Para obtener más información, consulta el tema [Enlace de datos con XAML](../../data-binding/data-binding-quickstart.md).
 
-En este ejemplo, ItemsSource está enlazado a una clase [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) denominada `itemsViewSource`. 
+En este ejemplo, ItemsSource está enlazado a una clase [**CollectionViewSource**](/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) denominada `itemsViewSource`. 
 
 ```xaml
 <Page.Resources>
@@ -134,7 +134,7 @@ En este ejemplo, ItemsSource está enlazado a una clase [**CollectionViewSource*
 
 ### <a name="specify-the-look-of-the-items"></a>Especificar el aspecto de los elementos
 
-De manera predeterminada, un elemento de datos se muestra en la vista invertida como una representación de cadena del objeto de datos al que está enlazado. Por lo general, preferirás mostrar una presentación más completa de los datos. Para especificar con exactitud cómo se mostrarán los elementos en la vista invertida, debes crear una clase [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). El lenguaje XAML de la clase DataTemplate define el diseño y la apariencia de los controles usados para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o tener contenido definido en línea. La clase DataTemplate se asigna a la propiedad [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) del control FlipView.
+De manera predeterminada, un elemento de datos se muestra en la vista invertida como una representación de cadena del objeto de datos al que está enlazado. Por lo general, preferirás mostrar una presentación más completa de los datos. Para especificar con exactitud cómo se mostrarán los elementos en la vista invertida, debes crear una clase [**DataTemplate**](/uwp/api/Windows.UI.Xaml.DataTemplate). El lenguaje XAML de la clase DataTemplate define el diseño y la apariencia de los controles usados para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o tener contenido definido en línea. La clase DataTemplate se asigna a la propiedad [**ItemTemplate**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) del control FlipView.
 
 En este ejemplo, la clase ItemTemplate de un control FlipView se define en línea. Asimismo, se agrega una superposición a la imagen para mostrar el nombre de la imagen. 
 
@@ -163,7 +163,7 @@ Plantilla de datos de la vista invertida.
 
 ### <a name="set-the-orientation-of-the-flip-view"></a>Establecer la orientación de la vista invertida
 
-De manera predeterminada, la vista invertida se voltea de forma horizontal. Para voltearla de forma vertical, usa un panel StackPanel que tenga orientación vertical, al igual que la propiedad [**ItemsPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) de la vista invertida.
+De manera predeterminada, la vista invertida se voltea de forma horizontal. Para voltearla de forma vertical, usa un panel StackPanel que tenga orientación vertical, al igual que la propiedad [**ItemsPanel**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) de la vista invertida.
 
 Este ejemplo muestra cómo usar un panel StackPanel con orientación vertical como la propiedad ItemsPanel de un control FlipView.
 
@@ -236,4 +236,4 @@ Para obtener un ejemplo de código que muestre cómo agregar un indicador de con
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Directrices sobre listas](lists.md)
-- [**Clase FlipView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)
+- [**Clase FlipView**](/uwp/api/Windows.UI.Xaml.Controls.FlipView)

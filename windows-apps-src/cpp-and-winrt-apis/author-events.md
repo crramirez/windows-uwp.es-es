@@ -5,30 +5,30 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, author, event
 ms.localizationpriority: medium
-ms.openlocfilehash: 980f39f20de369bce226c4d8c1070bda851480c2
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: f1500ab9999d4689385a9f7edce33253c385c0d0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493660"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154569"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
-Este tema se basa en el componente de Windows Runtime, y la aplicación que lo usa, que en el tema [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) se muestra cómo compilar.
+Este tema se basa en el componente de Windows Runtime, y la aplicación que lo usa, que en el tema [Componentes de Windows Runtime con C++/WinRT](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) se muestra cómo compilar.
 
 Estas son las nuevas características que agrega este tema.
 - Actualización de la clase de tiempo de ejecución de la cuenta bancaria para que genere un evento cuando el saldo pase a deudor.
 - Actualización de la aplicación principal que usa la clase de tiempo de ejecución de la cuenta bancaria para que controle ese evento.
 
 > [!NOTE]
-> Para más información sobre cómo instalar y usar [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para más información sobre cómo instalar y usar [C++/WinRT](./intro-to-using-cpp-with-winrt.md) Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 > [!IMPORTANT]
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
 
 ## <a name="create-bankaccountwrc-and-bankaccountcoreapp"></a>Creación de **BankAccountWRC** y **BankAccountCoreApp**
 
-Si desea continuar con las actualizaciones que se muestran en este tema, para que pueda compilar y ejecutar el código, el primer paso es seguir el tutorial del tema [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt). Después de hacerlo, tendrá el componente de Windows Runtime **BankAccountWRC** y la aplicación principal **BankAccountCoreApp** que lo usa.
+Si desea continuar con las actualizaciones que se muestran en este tema, para que pueda compilar y ejecutar el código, el primer paso es seguir el tutorial del tema [Componentes de Windows Runtime con C++/WinRT](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md). Después de hacerlo, tendrá el componente de Windows Runtime **BankAccountWRC** y la aplicación principal **BankAccountCoreApp** que lo usa.
 
 ## <a name="update-bankaccountwrc-to-raise-an-event"></a>Actualización de **BankAccountWRC** para generar un evento
 
@@ -390,4 +390,4 @@ Observa que estas instrucciones no se aplican necesariamente si vas a diseñar u
 * [Crear API con C++/WinRT](author-apis.md)
 * [Consumir API con C++/WinRT](consume-apis.md)
 * [Control de eventos mediante delegados en C++/WinRT](handle-events.md)
-* [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)
+* [Componentes de Windows Runtime con C++/WinRT](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md)

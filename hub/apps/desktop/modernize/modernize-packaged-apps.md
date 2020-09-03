@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1930d879177bc9282a3b55d019aa2bef7eb8f120
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: d1ce2e7dc434558ac1efd52f6def99d63b38c57e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730084"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161519"
 ---
 # <a name="features-that-require-package-identity"></a>Características que requieren la identidad del paquete
 
-Si quieres actualizar la aplicación de escritorio con [experiencias modernas de Windows 10](index.md), muchas características solo están disponibles en las aplicaciones de escritorio que tienen [identidad de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity). Hay varias maneras de conceder identidad de paquete a una aplicación de escritorio:
+Si quieres actualizar la aplicación de escritorio con [experiencias modernas de Windows 10](index.md), muchas características solo están disponibles en las aplicaciones de escritorio que tienen [identidad de paquete](/uwp/schemas/appxpackage/uapmanifestschema/element-identity). Hay varias maneras de conceder identidad de paquete a una aplicación de escritorio:
 
-* Empaquetarla en un [paquete de MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX es un formato moderno de paquete de la aplicación que proporciona una experiencia de empaquetado universal para todas las aplicaciones Windows, WPF, Windows Forms y Win32. Proporciona una sólida experiencia de instalación y actualización, un modelo de seguridad administrado con un sistema de funcionalidades flexible, compatibilidad con Microsoft Store, administración empresarial y muchos modelos de distribución personalizados. Para más información, consulta [Empaquetar aplicaciones de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) en la documentación de MSIX.
+* Empaquetarla en un [paquete de MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX es un formato moderno de paquete de la aplicación que proporciona una experiencia de empaquetado universal para todas las aplicaciones Windows, WPF, Windows Forms y Win32. Proporciona una sólida experiencia de instalación y actualización, un modelo de seguridad administrado con un sistema de funcionalidades flexible, compatibilidad con Microsoft Store, administración empresarial y muchos modelos de distribución personalizados. Para más información, consulta [Empaquetar aplicaciones de escritorio](/windows/msix/desktop/desktop-to-uwp-root) en la documentación de MSIX.
 * Si no puedes adoptar el empaquetado de MSIX para implementar la aplicación de escritorio, a partir de la compilación de Windows 10, versión 2004, puedes conceder la identidad de paquete al crear un *paquete disperso de MSIX* que solo contenga un manifiesto de paquete. Para obtener más información, consulta [Concesión de identidad a aplicaciones de escritorio no empaquetadas](grant-identity-to-nonpackaged-apps.md).
 
 Si la aplicación de escritorio tiene una identidad de paquete, puedes usar las siguientes características en la aplicación.

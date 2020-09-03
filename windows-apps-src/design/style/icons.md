@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7c44baee7d3201e2e554604405afe337007dd510
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e35041cce7e43f6eebed06b39f3ae2dbda55a4ae
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970960"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156799"
 ---
 # <a name="icons-for-windows-apps"></a>Iconos de aplicaciones de Windows
 
@@ -39,7 +39,7 @@ Los iconos pueden aparecer en aplicaciones y fuera de ellas:
     :::column-end:::
 :::row-end:::
 
-En este artículo se describen iconos dentro de la aplicación. Para obtener información sobre los iconos fuera de la aplicación (iconos de la aplicación), consulta el [Artículo sobre iconos de aplicaciones y ventanas](/windows/uwp/design/shell/tiles-and-notifications/app-assets).
+En este artículo se describen iconos dentro de la aplicación. Para obtener información sobre los iconos fuera de la aplicación (iconos de la aplicación), consulta el [Artículo sobre iconos de aplicaciones y ventanas](./app-icons-and-logos.md).
 
 ## <a name="when-to-use-icons"></a>Cuándo usar iconos
 
@@ -100,7 +100,7 @@ No tienes que usar la fuente Segoe MDL2 Assets; puedes usar cualquier fuente que
 ### <a name="use-a-scalable-vector-graphics-svg-file"></a>Usa un archivo Scalable Vector Graphics (SVG).
 :::row:::
     :::column:::
-Los recursos SVG son idóneos para iconos, ya que siempre se ven nítidos en cualquier tamaño o resolución. La mayoría de las aplicaciones de dibujo pueden exportar a SVG. Para obtener instrucciones, consulta [SVGImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource).
+Los recursos SVG son idóneos para iconos, ya que siempre se ven nítidos en cualquier tamaño o resolución. La mayoría de las aplicaciones de dibujo pueden exportar a SVG. Para obtener instrucciones, consulta [SVGImageSource](/uwp/api/windows.ui.xaml.media.imaging.svgimagesource).
     :::column-end:::
     :::column:::
         ![Imagen de SVG](images/icons/icon-scale.gif)
@@ -156,7 +156,7 @@ Establece la familia de fuentes del botón en `Segoe MDL2 Assets` y la propiedad
 :::row:::
     :::column span="2":::
         <b>Paso 2</b><br>
-Puedes usar uno de los objetos de elemento de icono: [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon) o [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon). Esto te ofrece más tipos de iconos entre los que elegir y te permite agrupar iconos y otros tipos de contenido, como texto, si así lo deseas:
+Puedes usar uno de los objetos de elemento de icono: [BitmapIcon](/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](/uwp/api/windows.ui.xaml.controls.pathicon) o [SymbolIcon](/uwp/api/windows.ui.xaml.controls.symbolicon). Esto te ofrece más tipos de iconos entre los que elegir y te permite agrupar iconos y otros tipos de contenido, como texto, si así lo deseas:
     :::column-end:::
     :::column:::
         ![Paso 2 de creación de un botón de icono](images/icons/icon-text-step-2.svg)
@@ -176,7 +176,7 @@ Puedes usar uno de los objetos de elemento de icono: [BitmapIcon](https://docs.m
 
 :::row:::
     :::column span:::
-Cuando tienes una serie de comandos que encajan, como cortar, copiar y pegar, o un conjunto de comandos de dibujo para un programa de edición de fotos, colócalos juntos en una [barra de comandos](../controls-and-patterns/app-bars.md). Una barra de comandos toma uno o varios botones de la barra de la aplicación o botones de alternancia de esta, cada uno de los cuales representa una acción. Cada botón tiene una propiedad [Icon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) que se usa para controlar qué icono muestra. Hay varias formas de especificar el icono. 
+Cuando tienes una serie de comandos que encajan, como cortar, copiar y pegar, o un conjunto de comandos de dibujo para un programa de edición de fotos, colócalos juntos en una [barra de comandos](../controls-and-patterns/app-bars.md). Una barra de comandos toma uno o varios botones de la barra de la aplicación o botones de alternancia de esta, cada uno de los cuales representa una acción. Cada botón tiene una propiedad [Icon](/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) que se usa para controlar qué icono muestra. Hay varias formas de especificar el icono. 
     :::column-end:::
     :::column:::
         ![Ejemplo de una barra de comandos con iconos](images/icons/create-icon-command-bar.svg)
@@ -197,13 +197,13 @@ La forma más sencilla es usar la lista de iconos predefinidos que proporcionamo
 </CommandBar>
 
 ```
-Para obtener la lista completa de nombres de icono, consulta la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Para obtener la lista completa de nombres de icono, consulta la [enumeración Symbol](/uwp/api/windows.ui.xaml.controls.symbol). 
 
 Hay otras maneras de proporcionar iconos para un botón en una barra de comandos:
 
-+ [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon): el icono se basa en un glifo de la familia de fuentes especificada.
-+ [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon): el icono se basa en un archivo de imagen de mapa de bits con el **URI** especificado.
-+ [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon): el icono se basa en los datos de [Path](/uwp/api/windows.ui.xaml.shapes.path).
++ [FontIcon](/uwp/api/windows.ui.xaml.controls.fonticon): el icono se basa en un glifo de la familia de fuentes especificada.
++ [BitmapIcon](/uwp/api/windows.ui.xaml.controls.bitmapicon): el icono se basa en un archivo de imagen de mapa de bits con el **URI** especificado.
++ [PathIcon](/uwp/api/windows.ui.xaml.controls.pathicon): el icono se basa en los datos de [Path](/uwp/api/windows.ui.xaml.shapes.path).
 
 Para obtener más información sobre las barras de comandos, consulta el [artículo sobre la barra de comandos](../controls-and-patterns/app-bars.md). 
 

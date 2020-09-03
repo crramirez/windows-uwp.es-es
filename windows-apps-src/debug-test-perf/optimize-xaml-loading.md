@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: beb6dde4036019e004d94e5f60e8f3583c78d775
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 86c6f9398a61865b014400bbf4a96c8a7ce8a231
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72980023"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154359"
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
@@ -36,7 +36,7 @@ Aquí vamos a ver algunas otras maneras de reducir el número de elementos que l
 
 Si el marcado XAML contiene elementos que no muestran inmediatamente, puedes posponer la carga de esos elementos hasta que se muestren. Por ejemplo, puedes retrasar la creación de contenido no visible, como una pestaña secundaria en una interfaz de usuario similar a una pestaña. O bien, puedes mostrar elementos en una vista de cuadrícula de forma predeterminada, pero debes proporcionar una opción para que el usuario pueda ver los datos en una lista. Puedes retrasar la carga de la lista hasta que se necesite.
 
-Usa [x:Load attribute](../xaml-platform/x-load-attribute.md) en lugar de la propiedad [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.Visibility) para controlar cuándo se muestra un elemento. Cuando la visibilidad de un elemento se marca como **Contraído**, se omitirá durante el pase de representación, pero todavía pagas los costos de la instancia del objeto en la memoria. Si usas x:Load en su lugar, el marco no creará la instancia del objeto hasta que se necesite, por lo que los costos de memoria son más bajos aún. El inconveniente es el costo de una pequeña sobrecarga de memoria (unos 600 bytes) cuando no se puede cargar la interfaz de usuario.
+Usa [x:Load attribute](../xaml-platform/x-load-attribute.md) en lugar de la propiedad [Visibility](/uwp/api/windows.ui.xaml.uielement.Visibility) para controlar cuándo se muestra un elemento. Cuando la visibilidad de un elemento se marca como **Contraído**, se omitirá durante el pase de representación, pero todavía pagas los costos de la instancia del objeto en la memoria. Si usas x:Load en su lugar, el marco no creará la instancia del objeto hasta que se necesite, por lo que los costos de memoria son más bajos aún. El inconveniente es el costo de una pequeña sobrecarga de memoria (unos 600 bytes) cuando no se puede cargar la interfaz de usuario.
 
 > [!NOTE]
 > Puedes retrasar la carga de elementos mediante el atributo [x:Load](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md). El atributo x:Load está disponible a partir de Windows 10 Creators Update (versión 1703, compilación de SDK 15063). Para poder usar x:Load, la versión mínima del proyecto de Visual Studio debe ser *Windows 10 Creators Update (10.0, compilación 15063)* . Para seleccionar versiones anteriores, usa x:DeferLoadStrategy.
@@ -124,7 +124,7 @@ ListView y sus elementos secundarios no se cargan en la memoria.
 
 ### <a name="use-layout-panel-properties"></a>Usar propiedades del panel de diseño
 
-Los paneles de diseño tienen una propiedad [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.background), por lo tanto, no es necesario colocar una clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) delante de un panel solo para colorearlo.
+Los paneles de diseño tienen una propiedad [Background](/uwp/api/windows.ui.xaml.controls.panel.background), por lo tanto, no es necesario colocar una clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) delante de un panel solo para colorearlo.
 
 **Ineficaz**
 
@@ -141,17 +141,17 @@ Los paneles de diseño tienen una propiedad [Background](https://docs.microsoft.
 <Grid Background="Black"/>
 ```
 
-Los paneles de diseño también tienen propiedades de borde integradas, por lo que no necesitas colocar un elemento [Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border) alrededor de un panel de diseño. Consulta [Optimiza tu diseño XAML](optimize-your-xaml-layout.md) para más información y ejemplos.
+Los paneles de diseño también tienen propiedades de borde integradas, por lo que no necesitas colocar un elemento [Border](/uwp/api/windows.ui.xaml.controls.border) alrededor de un panel de diseño. Consulta [Optimiza tu diseño XAML](optimize-your-xaml-layout.md) para más información y ejemplos.
 
 ### <a name="use-images-in-place-of-vector-based-elements"></a>Uso de imágenes en lugar de elementos basados en vector
 
-Si debes volver a usar el mismo elemento basado en vectores numerosas veces, te resultará más útil usar un elemento [Image](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) en su lugar. Los elementos basados en vectores pueden ser más engorrosos porque la CPU debe crear cada elemento individual por separado. Ten en cuenta que el archivo de imagen debe descodificarse una sola vez.
+Si debes volver a usar el mismo elemento basado en vectores numerosas veces, te resultará más útil usar un elemento [Image](/uwp/api/windows.ui.xaml.controls.image) en su lugar. Los elementos basados en vectores pueden ser más engorrosos porque la CPU debe crear cada elemento individual por separado. Ten en cuenta que el archivo de imagen debe descodificarse una sola vez.
 
 ## <a name="optimize-resources-and-resource-dictionaries"></a>Optimización de los recursos y los diccionarios de recursos
 
 Normalmente se usan [diccionarios de recursos](../design/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md) para almacenar, en un nivel algo global, recursos que a los que quieras hacer referencia en varios lugares en la aplicación. Por ejemplo, estilos, pinceles, plantillas, etc.
 
-En general, hemos optimizado el elemento [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) para que no cree instancias de los recursos a menos que se pidan. Pero hay situaciones en las que debes evitar para que no se cree una instancia de recursos de forma innecesaria.
+En general, hemos optimizado el elemento [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) para que no cree instancias de los recursos a menos que se pidan. Pero hay situaciones en las que debes evitar para que no se cree una instancia de recursos de forma innecesaria.
 
 ### <a name="resources-with-xname"></a>Recursos con x:Name
 
@@ -159,7 +159,7 @@ Usa el [atributo x:Key](../xaml-platform/x-key-attribute.md) para hacer referenc
 
 ### <a name="resourcedictionary-in-a-usercontrol"></a>ResourceDictionary en un elemento UserControl
 
-Un elemento ResourceDictionary definido en un objeto [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tienes un objeto UserControl que se usa con mucha frecuencia, saca el objeto ResourceDictionary del objeto UserControl y ponlo en el nivel de página.
+Un elemento ResourceDictionary definido en un objeto [UserControl](/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tienes un objeto UserControl que se usa con mucha frecuencia, saca el objeto ResourceDictionary del objeto UserControl y ponlo en el nivel de página.
 
 ### <a name="resource-and-resourcedictionary-scope"></a>Ámbito de Resource y ResourceDictionary
 
@@ -238,7 +238,7 @@ La manera de hacer que el ejemplo anterior de contador sea más eficiente es mov
 
 ### <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Consolidar varios pinceles que tengan el mismo aspecto en un recurso
 
-La plataforma XAML trata de almacenar en caché los objetos usados frecuentemente para que puedan volver a usarse siempre que sea posible. De todos modos, el lenguaje XAML no puede determinar fácilmente si un pincel declarado en una pieza de marcado es el mismo que está declarado en otra. Este ejemplo usa la clase [SolidColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) como demostración, pero el caso resulta ser más probable y más importante con la clase [GradientBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientBrush). Busca también pinceles que usen los colores predefinidos, por ejemplo, `"Orange"` y `"#FFFFA500"` son el mismo color.
+La plataforma XAML trata de almacenar en caché los objetos usados frecuentemente para que puedan volver a usarse siempre que sea posible. De todos modos, el lenguaje XAML no puede determinar fácilmente si un pincel declarado en una pieza de marcado es el mismo que está declarado en otra. Este ejemplo usa la clase [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) como demostración, pero el caso resulta ser más probable y más importante con la clase [GradientBrush](/uwp/api/Windows.UI.Xaml.Media.GradientBrush). Busca también pinceles que usen los colores predefinidos, por ejemplo, `"Orange"` y `"#FFFFA500"` son el mismo color.
 
 **Ineficaz.**
 
@@ -281,15 +281,15 @@ Para corregir la duplicación, define el pincel como un recurso. Si los controle
 
 El exceso de dibujo es donde se dibuja más de un objeto en los mismos píxeles de pantalla. Ten en cuenta que, a veces, todo se reduce a encontrar el equilibrio entre esta guía y el deseo de minimizar el número de elementos.
 
-Usa [**DebugSettings.IsOverdrawHeatMapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.debugsettings.isoverdrawheatmapenabled) como diagnóstico visual. Es posible que veas que se dibujan objetos que no sabías que habían aparecido en escena.
+Usa [**DebugSettings.IsOverdrawHeatMapEnabled**](/uwp/api/windows.ui.xaml.debugsettings.isoverdrawheatmapenabled) como diagnóstico visual. Es posible que veas que se dibujan objetos que no sabías que habían aparecido en escena.
 
 ### <a name="transparent-or-hidden-elements"></a>Elementos transparentes u ocultos
 
-Si un elemento no es visible porque es transparente o está oculto detrás de otros elementos y no contribuye al diseño, elimínalo. Si el elemento no es visible en el estado visual inicial, pero es visible en otros estados visuales, usa x:Load para controlar su estado o establece [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) to **Contraída** en el propio elemento y cambia el valor a **Visible** en los estados apropiados. Encontrarás algunas excepciones a esta heurística: en general, el valor que una propiedad tiene en los principales estados visuales se establece mejor de forma local en el elemento.
+Si un elemento no es visible porque es transparente o está oculto detrás de otros elementos y no contribuye al diseño, elimínalo. Si el elemento no es visible en el estado visual inicial, pero es visible en otros estados visuales, usa x:Load para controlar su estado o establece [Visibility](/uwp/api/windows.ui.xaml.uielement.visibility) to **Contraída** en el propio elemento y cambia el valor a **Visible** en los estados apropiados. Encontrarás algunas excepciones a esta heurística: en general, el valor que una propiedad tiene en los principales estados visuales se establece mejor de forma local en el elemento.
 
 ### <a name="composite-elements"></a>Elementos compuestos
 
-Usa un elemento compuesto en lugar de disponer varios elementos para crear un efecto. En este ejemplo, el resultado es una forma de dos tonos donde la mitad superior es negra (del fondo de [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)) y la inferior es gris (blanco semitransparente de la clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) con combinación alfa sobre el fondo negro de **Grid**). Aquí, se rellena el 150 % de los píxeles necesarios para lograr el resultado.
+Usa un elemento compuesto en lugar de disponer varios elementos para crear un efecto. En este ejemplo, el resultado es una forma de dos tonos donde la mitad superior es negra (del fondo de [Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid)) y la inferior es gris (blanco semitransparente de la clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) con combinación alfa sobre el fondo negro de **Grid**). Aquí, se rellena el 150 % de los píxeles necesarios para lograr el resultado.
 
 **Ineficaz.**
 
@@ -346,11 +346,11 @@ Un panel de diseño puede tener dos propósitos: colorear un área y diseñar el
 </GridView>
 ```
 
-Si debes realizar la prueba de posicionamiento de [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), te recomendamos que establezcas el valor de fondo "Transparent" en esta propiedad.
+Si debes realizar la prueba de posicionamiento de [Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid), te recomendamos que establezcas el valor de fondo "Transparent" en esta propiedad.
 
 ### <a name="borders"></a>Bordes
 
-Usa un elemento [Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border) para dibujar un borde alrededor de un objeto. En este ejemplo, se usa una clase [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) como un borde provisional alrededor de una clase [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). Sin embargo, todos los píxeles en la celda central se dibujan sobre esta.
+Usa un elemento [Border](/uwp/api/windows.ui.xaml.controls.border) para dibujar un borde alrededor de un objeto. En este ejemplo, se usa una clase [Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid) como un borde provisional alrededor de una clase [TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox). Sin embargo, todos los píxeles en la celda central se dibujan sobre esta.
 
 **Ineficaz.**
 
@@ -385,7 +385,7 @@ Ten en cuenta los márgenes. Dos elementos vecinos se superpondrán (posiblement
 
 ### <a name="cache-static-content"></a>Almacenar el contenido estático en caché
 
-Otra fuente de exceso de dibujo es una forma realizada a partir de muchos elementos superpuestos. Si estableces [CacheMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode) en **BitmapCache** en la clase [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) que contiene la forma compuesta, la plataforma representará el elemento en un mapa de bits una vez y, a continuación, usará ese mapa de bits en cada fotograma en lugar de realizar el exceso de dibujo.
+Otra fuente de exceso de dibujo es una forma realizada a partir de muchos elementos superpuestos. Si estableces [CacheMode](/uwp/api/Windows.UI.Xaml.Media.CacheMode) en **BitmapCache** en la clase [UIElement](/uwp/api/Windows.UI.Xaml.UIElement) que contiene la forma compuesta, la plataforma representará el elemento en un mapa de bits una vez y, a continuación, usará ese mapa de bits en cada fotograma en lugar de realizar el exceso de dibujo.
 
 **Ineficaz.**
 
@@ -413,7 +413,7 @@ La imagen anterior es el resultado, pero este es un mapa de las regiones que se 
 </Canvas>
 ```
 
-Ten en cuenta el uso de [CacheMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode). No uses esta técnica si alguna de las subformas es animada, ya que es probable que la memoria caché de mapas de bits se tenga que regenerar en cada fotograma, lo que anula este propósito.
+Ten en cuenta el uso de [CacheMode](/uwp/api/Windows.UI.Xaml.Media.CacheMode). No uses esta técnica si alguna de las subformas es animada, ya que es probable que la memoria caché de mapas de bits se tenga que regenerar en cada fotograma, lo que anula este propósito.
 
 ## <a name="use-xbf2"></a>Usar XBF2
 

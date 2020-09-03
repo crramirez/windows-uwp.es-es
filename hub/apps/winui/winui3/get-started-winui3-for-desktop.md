@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 7393d4d1bae227bf3b586a54fba5d43ca2dcb53e
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 2b946047602013704b27fb5c5565155d38dbb7f8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493410"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154829"
 ---
 # <a name="get-started-with-winui-3-for-desktop-apps"></a>Introducción a WinUI 3.0 para aplicaciones de escritorio
 
@@ -45,7 +45,7 @@ Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en es
 
         ![Proyecto de aplicación](images/WinUI-csharp-appproject.png)
 
-    * ***Nombre de proyecto* (Package)** : Es un [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix/overview). Con ello se proporciona una experiencia de implementación moderna, la capacidad de integrarse con las características de Windows 10 a través de extensiones de paquete y mucho más. Este proyecto contiene el [manifiesto de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
+    * ***Nombre de proyecto* (Package)** : Es un [Proyecto de paquete de aplicación de Windows](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](/windows/msix/overview). Con ello se proporciona una experiencia de implementación moderna, la capacidad de integrarse con las características de Windows 10 a través de extensiones de paquete y mucho más. Este proyecto contiene el [manifiesto de paquete](/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
 
         ![Proyecto de aplicación](images/WinUI-csharp-packageproject.png)
 
@@ -77,7 +77,7 @@ Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en es
 
         ![Proyecto de aplicación](images/WinUI-cpp-appproject.png)
 
-    * ***Nombre de proyecto* (Package)** : Es un [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix/overview). Con ello se proporciona una experiencia de implementación moderna, la capacidad de integrarse con las características de Windows 10 a través de extensiones de paquete y mucho más. Este proyecto contiene el [manifiesto de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
+    * ***Nombre de proyecto* (Package)** : Es un [Proyecto de paquete de aplicación de Windows](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](/windows/msix/overview). Con ello se proporciona una experiencia de implementación moderna, la capacidad de integrarse con las características de Windows 10 a través de extensiones de paquete y mucho más. Este proyecto contiene el [manifiesto de paquete](/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
 
         ![Proyecto de paquete](images/WinUI-cpp-packageproject.png)
 

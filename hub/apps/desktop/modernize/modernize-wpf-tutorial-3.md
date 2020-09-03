@@ -8,25 +8,25 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 830c1cdf2e24e716d51642bc65b5b6783d0d784a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: e7e09069e11fc14d0a47086bc2594edc975c11d9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "69643371"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161459"
 ---
 # <a name="part-3-add-a-uwp-calendarview-control-using-xaml-islands"></a>3\.ª parte: Incorporación de un control CalendarView en UWP mediante islas XAML
 
 Esta es la tercera parte de un tutorial que muestra cómo modernizar una aplicación de escritorio de WPF de ejemplo denominada Contoso Expenses. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, consulta [Tutorial: Modernización de una aplicación WPF](modernize-wpf-tutorial.md). En este artículo se da por supuesto que ya has completado la [parte 2](modernize-wpf-tutorial-2.md).
 
-En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso quiere facilitar la elección de la fecha de un informe de gastos en un dispositivo con el control táctil habilitado. En esta parte del tutorial, agregarás un control [CalendarView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/calendar-view) de UWP a la aplicación. Este es el mismo control que se usa en la funcionalidad de fecha y hora de Windows 10 en la barra de tareas.
+En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso quiere facilitar la elección de la fecha de un informe de gastos en un dispositivo con el control táctil habilitado. En esta parte del tutorial, agregarás un control [CalendarView](/windows/uwp/design/controls-and-patterns/calendar-view) de UWP a la aplicación. Este es el mismo control que se usa en la funcionalidad de fecha y hora de Windows 10 en la barra de tareas.
 
 ![Imagen de CalendarViewControl](images/wpf-modernize-tutorial/CalendarViewControl.png)
 
-A diferencia del control **InkCanvas** que agregaste en la [parte 2](modernize-wpf-tutorial-2.md), el kit de herramientas de la comunidad de Windows no proporciona una versión ajustada de **CalendarView** de UWP que se pueda usar en aplicaciones de WPF. Como alternativa, hospedarás un elemento **InkCanvas** en el control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) genérico. Puedes usar este control para hospedar cualquier control de UWP de origen proporcionado por la biblioteca de Windows SDK o WinUI o cualquier control personalizado de UWP creado por un tercero. El control **WindowsXamlHost** se proporciona mediante el paquete NuGet del paquete de `Microsoft.Toolkit.Wpf.UI.XamlHost`. Este paquete se incluye con el paquete NuGet de `Microsoft.Toolkit.Wpf.UI.Controls` que instalaste en la [parte 2](modernize-wpf-tutorial-2.md).
+A diferencia del control **InkCanvas** que agregaste en la [parte 2](modernize-wpf-tutorial-2.md), el kit de herramientas de la comunidad de Windows no proporciona una versión ajustada de **CalendarView** de UWP que se pueda usar en aplicaciones de WPF. Como alternativa, hospedarás un elemento **InkCanvas** en el control [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) genérico. Puedes usar este control para hospedar cualquier control de UWP de origen proporcionado por la biblioteca de Windows SDK o WinUI o cualquier control personalizado de UWP creado por un tercero. El control **WindowsXamlHost** se proporciona mediante el paquete NuGet del paquete de `Microsoft.Toolkit.Wpf.UI.XamlHost`. Este paquete se incluye con el paquete NuGet de `Microsoft.Toolkit.Wpf.UI.Controls` que instalaste en la [parte 2](modernize-wpf-tutorial-2.md).
 
 > [!NOTE]
-> En este tutorial solo se muestra cómo usar [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar el control de  **CalendarView** de origen que proporciona Windows SDK. Para ver un tutorial que muestra cómo hospedar un control personalizado, consulta [Hospedaje de un control personalizado de UWP en una aplicación de WPF mediante islas XAML](host-custom-control-with-xaml-islands.md).
+> En este tutorial solo se muestra cómo usar [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar el control de  **CalendarView** de origen que proporciona Windows SDK. Para ver un tutorial que muestra cómo hospedar un control personalizado, consulta [Hospedaje de un control personalizado de UWP en una aplicación de WPF mediante islas XAML](host-custom-control-with-xaml-islands.md).
 
 Para usar el control **WindowsXamlHost**, debes llamar directamente a las API de WinRT desde el código en la aplicación WPF. El paquete NuGet de `Microsoft.Windows.SDK.Contracts` contiene las referencias necesarias para que puedas llamar a las API de WinRT desde la aplicación. Este paquete se incluye también en el paquete NuGet de `Microsoft.Toolkit.Wpf.UI.Controls` que instalaste en la [parte 2](modernize-wpf-tutorial-2.md).
 
@@ -94,7 +94,7 @@ Para usar el control **WindowsXamlHost**, debes llamar directamente a las API de
 
 A continuación, actualizarás la aplicación para procesar la fecha seleccionada, la mostrarás en la pantalla y rellenarás el objeto **Expense** para guardarlo en la base de datos.
 
-El elemento [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) de UWP contiene dos miembros que son pertinentes para este escenario:
+El elemento [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView) de UWP contiene dos miembros que son pertinentes para este escenario:
 
 - La propiedad **SelectedDates** contiene la fecha seleccionada por el usuario.
 - El evento **SelectedDatesChanged** se genera cuando el usuario selecciona una fecha.
@@ -230,6 +230,6 @@ Sin embargo, el control **WindowsXamlHost** es un control host genérico para *c
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este punto del tutorial, has reemplazado correctamente un control de fecha y hora de WPF por el control **CalendarView** de UWP, que admite bolígrafos digitales y táctiles, además de la entrada del mouse y del teclado. Aunque el kit de herramientas de la Comunidad Windows no proporciona una versión ajustada del control **CalendarView** de UWP que se pueda usar directamente en una aplicación de WPF, podías hospedar el control mediante el control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) genérico.
+En este punto del tutorial, has reemplazado correctamente un control de fecha y hora de WPF por el control **CalendarView** de UWP, que admite bolígrafos digitales y táctiles, además de la entrada del mouse y del teclado. Aunque el kit de herramientas de la Comunidad Windows no proporciona una versión ajustada del control **CalendarView** de UWP que se pueda usar directamente en una aplicación de WPF, podías hospedar el control mediante el control [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) genérico.
 
 Ahora ya estás listo para continuar con la [Parte 4: Incorporación de actividades y notificaciones del usuario de Windows 10](modernize-wpf-tutorial-4.md).

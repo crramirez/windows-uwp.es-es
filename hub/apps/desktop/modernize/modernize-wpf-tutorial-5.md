@@ -8,18 +8,18 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 27906d9d389c065ab1fdf7124151cd1915f850eb
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 18b89caa0de947d2b95b46c3deb11378912b6012
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76726018"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161429"
 ---
 # <a name="part-5-package-and-deploy-with-msix"></a>5\.ª parte: Empaquetar e implementar con MSIX
 
 Esta es la parte final de un tutorial en el que se muestra cómo modernizar una aplicación de escritorio de WPF de ejemplo denominada Contoso Expenses. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, consulta [Tutorial: modernizar una aplicación de WPF](modernize-wpf-tutorial.md). En este artículo se da por supuesto que ya has completado la [parte 4](modernize-wpf-tutorial-4.md).
 
-En la [parte 4](modernize-wpf-tutorial-4.md) has aprendido que algunas API de WinRT, incluida la API de notificaciones, requieren la identidad del paquete antes de que se puedan usar en una aplicación. Puedes obtener la identidad del paquete con el empaquetado de Contoso Expenses mediante [MSIX](https://docs.microsoft.com/windows/msix), el formato de empaquetado introducido en Windows 10 para empaquetar e implementar aplicaciones de Windows. MSIX ofrece ventajas a los desarrolladores y profesionales de TI, entre las que se incluyen:
+En la [parte 4](modernize-wpf-tutorial-4.md) has aprendido que algunas API de WinRT, incluida la API de notificaciones, requieren la identidad del paquete antes de que se puedan usar en una aplicación. Puedes obtener la identidad del paquete con el empaquetado de Contoso Expenses mediante [MSIX](/windows/msix), el formato de empaquetado introducido en Windows 10 para empaquetar e implementar aplicaciones de Windows. MSIX ofrece ventajas a los desarrolladores y profesionales de TI, entre las que se incluyen:
 
 - Uso de red y espacio de almacenamiento optimizados.
 - Desinstalación limpia completa, gracias a un contenedor ligero donde se ejecuta la aplicación. No se han dejado claves del Registro ni archivos temporales en el sistema.
@@ -44,7 +44,7 @@ Visual Studio 2019 proporciona una manera sencilla de empaquetar una aplicaci�
 
 5. Selecciona **Windows 10, versión 1903 (10.0; compilación 18362)** para la **versión de destino** y la **versión mínima** y haz clic en **Aceptar**.
 
-    El proyecto **ContosoExpenses.Package** se agrega a la solución **ContosoExpenses**. Este proyecto incluye un [manifiesto de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root), en el que se describen la aplicación y algunos recursos predeterminados que se usan para elementos como el icono del menú Programas y el icono de la pantalla Inicio. Sin embargo, a diferencia de un proyecto de UWP, el proyecto de empaquetado no contiene código. Su finalidad es empaquetar una aplicación de escritorio existente.
+    El proyecto **ContosoExpenses.Package** se agrega a la solución **ContosoExpenses**. Este proyecto incluye un [manifiesto de paquete](/uwp/schemas/appxpackage/uapmanifestschema/schema-root), en el que se describen la aplicación y algunos recursos predeterminados que se usan para elementos como el icono del menú Programas y el icono de la pantalla Inicio. Sin embargo, a diferencia de un proyecto de UWP, el proyecto de empaquetado no contiene código. Su finalidad es empaquetar una aplicación de escritorio existente.
 
 6. En el proyecto **ContosoExpenses.Package**, haz clic con el botón derecho en el nodo **Aplicaciones** y elige **Agregar referencia**. Este nodo especifica qué aplicaciones de la solución se incluirán en el paquete.
 

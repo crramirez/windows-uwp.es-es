@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, strong, weak, reference
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c8ca914737698c22d52657d20ee655d20491b3e8
-ms.sourcegitcommit: a9f44bbb23f0bc3ceade3af7781d012b9d6e5c9a
+ms.openlocfilehash: 2176fe1ee5893b7150b27edf4ea753ae368b41ee
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180770"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154275"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referencias fuertes y débiles de C++/WinRT
 
-Windows Runtime es un sistema con recuento de referencias y en este tipo de sistemas es importante conocer el significado de referencias fuertes y débiles y la diferencia entre ellas (y referencias que no son ninguna de ellas, como el puntero implícito *this*). Como verás en este tema, saber cómo administrar correctamente estas referencias puede significar la diferencia entre un sistema confiable que funciona sin problemas y otro que se bloquea de forma impredecible. Al proporcionar funciones auxiliares que cuentan con compatibilidad completa en la proyección del lenguaje, [C+++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) se encuentra a medio camino en su trabajo de crear sistemas más complejos de forma sencilla y correcta.
+Windows Runtime es un sistema con recuento de referencias y en este tipo de sistemas es importante conocer el significado de referencias fuertes y débiles y la diferencia entre ellas (y referencias que no son ninguna de ellas, como el puntero implícito *this*). Como verás en este tema, saber cómo administrar correctamente estas referencias puede significar la diferencia entre un sistema confiable que funciona sin problemas y otro que se bloquea de forma impredecible. Al proporcionar funciones auxiliares que cuentan con compatibilidad completa en la proyección del lenguaje, [C+++/WinRT](./intro-to-using-cpp-with-winrt.md) se encuentra a medio camino en su trabajo de crear sistemas más complejos de forma sencilla y correcta.
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>Acceso de forma segura al puntero *this* en una corrutina de miembro de clase
 
-Para obtener más información sobre las corrutinas y ejemplos de código, consulta [Operaciones simultáneas y asincrónicas con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
+Para obtener más información sobre las corrutinas y ejemplos de código, consulta [Operaciones simultáneas y asincrónicas con C++/WinRT](./concurrency.md).
 
 En la lista de código siguiente se muestra un ejemplo típico de una corrutina que es una función miembro de una clase. Puedes copiar y pegar este ejemplo en los archivos especificados en un nuevo proyecto de la **aplicación de consola Windows (C++/WinRT)**.
 
@@ -108,7 +108,7 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 Una clase C++/WinRT se deriva directa o indirectamente de la plantilla [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements). Por eso, el objeto C++/WinRT puede llamar a su función miembro protegida [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) para recuperar una referencia fuerte al puntero *this*. Ten en cuenta que no hay necesidad de usar la variable `strong_this` en el ejemplo de código anterior; simplemente al llamar a **get_strong**, se incrementa el recuento de referencias del objeto C++/WinRT, y mantiene su puntero *this* implícito válido.
 
 > [!IMPORTANT]
-> Dado que **get_trong** es una función miembro de la plantilla de estructura **winrt::implements**, puedes llamarla solo desde una clase que derive directa o indirectamente de **winrt::implements**, como por ejemplo una clase C++/WinRT. Para más información acerca de cómo derivar desde **winrt::implements** y ver ejemplos, consulta [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
+> Dado que **get_trong** es una función miembro de la plantilla de estructura **winrt::implements**, puedes llamarla solo desde una clase que derive directa o indirectamente de **winrt::implements**, como por ejemplo una clase C++/WinRT. Para más información acerca de cómo derivar desde **winrt::implements** y ver ejemplos, consulta [Crear API con C++/WinRT](./author-apis.md).
 
 Esto resuelve el problema que teníamos anteriormente cuando llegamos al paso 4. Incluso si todas las demás referencias a la instancia de clase desaparecen, la corrutina ha tomado la precaución de garantizar que sus dependencias sean estables.
 
@@ -256,7 +256,7 @@ En ambos casos, solo estamos capturando el puntero *this* básico. Y esto no tie
 La solución consiste en capturar una referencia fuerte (o, como veremos, una referencia débil si es más adecuada). Una referencia fuerte *incrementa* el recuento de referencias y *mantiene* activo el objeto actual. Solo tienes que declarar una variable de captura (llamada `strong_this` en este ejemplo) e inicializarla con una llamada a [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function), que recupera una referencia fuerte a nuestro puntero *this*.
 
 > [!IMPORTANT]
-> Dado que **get_trong** es una función miembro de la plantilla de estructura **winrt::implements**, puedes llamarla solo desde una clase que derive directa o indirectamente de **winrt::implements**, como por ejemplo una clase C++/WinRT. Para más información acerca de cómo derivar desde **winrt::implements** y ver ejemplos, consulta [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
+> Dado que **get_trong** es una función miembro de la plantilla de estructura **winrt::implements**, puedes llamarla solo desde una clase que derive directa o indirectamente de **winrt::implements**, como por ejemplo una clase C++/WinRT. Para más información acerca de cómo derivar desde **winrt::implements** y ver ejemplos, consulta [Crear API con C++/WinRT](./author-apis.md).
 
 ```cppwinrt
 event_source.Event([this, strong_this { get_strong()}](auto&& ...)

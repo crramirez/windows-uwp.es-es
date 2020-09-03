@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 479a289ff15ab6a3db7a51d52f4bf3b075e8a64b
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 31ced6c31b126986171c81e03b68a0a1cccc44f2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968786"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160359"
 ---
 # <a name="teaching-tip"></a>Sugerencia de enseñanza
 
@@ -27,12 +27,12 @@ Una sugerencia de enseñanza puede ser descartable por cambio de foco, o bien pu
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | El control **TeachingTip** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinadas a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | El control **TeachingTip** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinadas a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase TeachingTip](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
 
 > [!TIP]
-> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
+> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
 >
 >En el código subyacente, se usa el alias **muxc** en C# para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado esta instrucción **using** en la parte superior del archivo: `using muxc = Microsoft.UI.Xaml.Controls;`
 
@@ -125,9 +125,9 @@ Ten en cuenta que en este ejemplo el elemento TeachingTip está en el árbol de 
 
 ### <a name="preferred-placement"></a>Ubicación preferida
 
-La sugerencia de enseñanza reproduce el comportamiento de ubicación del [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) del control flotante con la propiedad TeachingTipPlacementMode. El modo de selección de ubicación predeterminado intentará colocar una sugerencia de enseñanza dirigida sobre su destino, y colocará las sugerencias de enseñanza no dirigidas centradas en la parte inferior de la raíz de XAML. Al igual que con los controles flotantes, si el modo de selección de ubicación preferido no deja espacio libre para que se muestre la sugerencia de enseñanza, se elegirá otro modo de selección de ubicación automáticamente.
+La sugerencia de enseñanza reproduce el comportamiento de ubicación del [FlyoutPlacementMode](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) del control flotante con la propiedad TeachingTipPlacementMode. El modo de selección de ubicación predeterminado intentará colocar una sugerencia de enseñanza dirigida sobre su destino, y colocará las sugerencias de enseñanza no dirigidas centradas en la parte inferior de la raíz de XAML. Al igual que con los controles flotantes, si el modo de selección de ubicación preferido no deja espacio libre para que se muestre la sugerencia de enseñanza, se elegirá otro modo de selección de ubicación automáticamente.
 
-Para las aplicaciones que predicen la entrada del controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
+Para las aplicaciones que predicen la entrada del controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( ../../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
 
 Una sugerencia de enseñanza dirigida con la propiedad PreferredPlacement establecida en "BottomLeft" se mostrará con la delta centrada en la parte inferior de su destino y el cuerpo de la sugerencia estará desplazado hacia la izquierda.
 
@@ -168,7 +168,7 @@ El siguiente diagrama muestra el resultado de los 13 modos de PreferredPlacemen
 
 ### <a name="add-a-placement-margin"></a>Agregar un margen de ubicación
 
-Puedes controlar la distancia a la que se coloca una sugerencia de enseñanza con relación a su destino, al igual que la distancia a la que se coloca una sugerencia de enseñanza no dirigida con relación a los bordes de la raíz de XAML mediante la propiedad PlacementMargin. Al igual que [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tiene cuatro valores: left, right, top y bottom, por lo que solo se usan los valores pertinentes. Por ejemplo, PlacementMargin.Left se aplica cuando la sugerencia está a la izquierda del destino o en el borde izquierdo de la raíz de XAML.
+Puedes controlar la distancia a la que se coloca una sugerencia de enseñanza con relación a su destino, al igual que la distancia a la que se coloca una sugerencia de enseñanza no dirigida con relación a los bordes de la raíz de XAML mediante la propiedad PlacementMargin. Al igual que [Margin](/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tiene cuatro valores: left, right, top y bottom, por lo que solo se usan los valores pertinentes. Por ejemplo, PlacementMargin.Left se aplica cuando la sugerencia está a la izquierda del destino o en el borde izquierdo de la raíz de XAML.
 
 En el ejemplo siguiente se muestra una sugerencia no dirigida cuyos valores Left/Top/Right/Bottom de PlacementMargin están establecidos en 80.
 
@@ -357,7 +357,7 @@ private void OnTipClosing(muxc.TeachingTip sender, muxc.TeachingTipClosingEventA
 * Las sugerencias son temporales y no deben contener información u opciones que sean críticas para la experiencia de una aplicación.
 * Evita mostrar sugerencias de enseñanza con demasiada frecuencia. Es más probable que las sugerencias de enseñanza reciban atención individual cuando están escalonadas a lo largo de sesiones largas o en varias sesiones.
 * Mantén las sugerencias concisas y el tema claro. Las investigaciones muestran que, en promedio, los usuarios solo leen entre 3 y 5 palabras y comprenden entre 2 y 3 antes de decidir si van a interactuar con una sugerencia.
-* No se garantiza la accesibilidad del controlador para juegos de una sugerencia de enseñanza. Para las aplicaciones que esperan recibir la entrada de un controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
+* No se garantiza la accesibilidad del controlador para juegos de una sugerencia de enseñanza. Para las aplicaciones que esperan recibir la entrada de un controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( ../../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
 * Cuando la sugerencia de enseñanza está habilitada para escapar la raíz de XAML, se recomienda habilitar la propiedad IsLightDismissEnabled y establecer el modo de PreferredPlacement más cercano al centro de la raíz de XAML.
 
 ## <a name="reconfiguring-an-open-teaching-tip"></a>Volver a configurar una sugerencia de enseñanza abierta
@@ -366,4 +366,4 @@ Es posible volver a configurar algunos contenidos y propiedades mientras la suge
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Cuadros de diálogo y controles flotantes](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
+* [Cuadros de diálogo y controles flotantes](./index.md)

@@ -1,20 +1,20 @@
 ---
-description: En este tema se muestran dos funciones auxiliares que pueden usarse para realizar la conversión entre objetos de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) y [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+description: En este tema se muestran dos funciones auxiliares que pueden usarse para realizar la conversión entre objetos de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) y [C++/WinRT](./intro-to-using-cpp-with-winrt.md).
 title: Interoperabilidad entre C++/WinRT y C++/CX
 ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, port, migrate, interop, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: d3fa04f0aabe001dc87ce4292dff7557432583a6
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: 8ef3b45222b5e9324dc76d7a81a8d096a569595d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502290"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157379"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilidad entre C++/WinRT y C++/CX
 
-Antes de leer este tema, necesitará la información del tema [Migrar a C++/WinRT desde C++/CX](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx). En este tema se presentan dos opciones de estrategia principales para portar un proyecto de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) a [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+Antes de leer este tema, necesitará la información del tema [Migrar a C++/WinRT desde C++/CX](./move-to-winrt-from-cx.md). En este tema se presentan dos opciones de estrategia principales para portar un proyecto de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) a [C++/WinRT](./intro-to-using-cpp-with-winrt.md).
 
 - Porte todo el proyecto en un solo paso. La opción más sencilla para un proyecto que no es demasiado grande. Si tiene un proyecto de componentes de Windows Runtime, esta estrategia es la única opción.
 - Porte el proyecto gradualmente (el tamaño o la complejidad del código base pueden hacer que sea necesario). Sin embargo, esta estrategia le exige seguir un proceso de portabilidad en el que, durante un momento, existe código de C++/CX y C++/WinRT en paralelo en el mismo proyecto. Para un proyecto XAML, en un momento dado, los tipos de página XAML deben estar, *o bien* todos en C++/WinRT, *o bien* todos en C++/CX.
@@ -23,7 +23,7 @@ Este tema de interoperabilidad es pertinente para esa *segunda* estrategia&mdash
 
 Estas funciones auxiliares serán muy útiles a medida que porte el código gradualmente de C++/CX a C++/WinRT. También puede optar por usar las proyecciones de lenguaje C++/WinRT y C++/CX en el mismo proyecto, independientemente de si está portando o no, y usar estas funciones auxiliares para interoperar entre las dos.
 
-Después de leer este tema, para obtener información y códigos de ejemplo que muestren cómo se admiten las tareas y corrutinas de PPL en paralelo en el mismo proyecto (por ejemplo, llamando a corrutinas desde cadenas de tareas), consulte el tema más avanzado [Asincronía e interoperabilidad entre C++/WinRT y C++/CX](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async).
+Después de leer este tema, para obtener información y códigos de ejemplo que muestren cómo se admiten las tareas y corrutinas de PPL en paralelo en el mismo proyecto (por ejemplo, llamando a corrutinas desde cadenas de tareas), consulte el tema más avanzado [Asincronía e interoperabilidad entre C++/WinRT y C++/CX](./interop-winrt-cx-async.md).
 
 ## <a name="the-from_cx-and-to_cx-functions"></a>Funciones **from_cx** y **to_cx**
 
@@ -80,7 +80,7 @@ Para usar las dos funciones auxiliares en el proyecto, siga estos pasos.
 
 ## <a name="taking-a-ccx-project-and-adding-cwinrt-support"></a>Adopción de un proyecto de C++/CX y adición de compatibilidad con C++/WinRT
 
-En esta sección se describe qué hacer si ha decidido tomar el proyecto de C++/CX existente, agregarle compatibilidad con C++/WinRT y llevar a cabo el trabajo de portabilidad allí. Consulta también [Compatibilidad de Visual Studio para C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+En esta sección se describe qué hacer si ha decidido tomar el proyecto de C++/CX existente, agregarle compatibilidad con C++/WinRT y llevar a cabo el trabajo de portabilidad allí. Consulta también [Compatibilidad de Visual Studio para C++/WinRT](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 Para combinar C++/CX y C++/WinRT en un proyecto de C++/CX&mdash;incluido el uso de las funciones auxiliares **from_cx** y **to_cx** en el proyecto&mdash;debe agregar manualmente la compatibilidad con C++/WinRT al proyecto.
 
@@ -143,7 +143,7 @@ En esta sección se describe qué hacer si ha decidido crear un nuevo proyecto d
 
 Para combinar C++/WinRT y C++/CX en un proyecto de C++/WinRT&mdash;incluido el uso de las funciones auxiliares **from_cx** y **to_cx** en el proyecto&mdash;debe agregar manualmente la compatibilidad con C++/CX al proyecto.
 
-- Cree un nuevo proyecto de C++/WinRT en Visual Studio mediante una de las plantillas de proyecto de C++/WinRT (consulte [Compatibilidad de Visual Studio con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
+- Cree un nuevo proyecto de C++/WinRT en Visual Studio mediante una de las plantillas de proyecto de C++/WinRT (consulte [Compatibilidad de Visual Studio con C++/WinRT](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)).
 - Active la compatibilidad del proyecto para C++/CX. En las propiedades del proyecto, **C/C++ ** \> **General** \> **Usar extensión de Windows Runtime** \> **Sí (/ZW)**.
 
 ### <a name="an-example-cwinrt-project-showing-the-two-helper-functions-in-use"></a>Ejemplo de proyecto de C++/WinRT que muestra las dos funciones auxiliares en uso
@@ -344,5 +344,5 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [Migrar a C++/WinRT desde C++/CX](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx)
-* [Asincronía e interoperabilidad entre C++/WinRT y C++/CX](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async)
+* [Migrar a C++/WinRT desde C++/CX](./move-to-winrt-from-cx.md)
+* [Asincronía e interoperabilidad entre C++/WinRT y C++/CX](./interop-winrt-cx-async.md)

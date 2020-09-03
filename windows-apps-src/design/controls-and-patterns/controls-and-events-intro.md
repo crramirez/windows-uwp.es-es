@@ -11,18 +11,18 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: addb4e7d929fb0222deda63494546d731f01cecd
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: ae53810dee72638eb89467098000988c3baaf047
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775793"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160539"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
 En el desarrollo de aplicaciones de Windows, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
 
-> **API importantes**: [espacio de nombres Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
+> **API importantes**: [espacio de nombres Windows.UI.Xaml.Controls](/uwp/api/windows.ui.xaml.controls)
 
 Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el patrón de [maestro y detalles](master-details.md) es una manera de usar un control [SplitView](split-view.md) para la navegación de la aplicación. Del mismo modo, puedes personalizar la plantilla de un control de [NavigationView](navigationview.md) para implementar el patrón de la pestaña.
 
@@ -169,7 +169,7 @@ Button1().Click({ this, &MainPage::Button1_Click });
 ## <a name="related-topics"></a>Temas relacionados
 
 -   [Índice de controles por función](controls-by-function.md)
--   [Espacio de nombres Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
+-   [Espacio de nombres Windows.UI.Xaml.Controls](/uwp/api/windows.ui.xaml.controls)
 -   [Diseño](../layout/index.md)
 -   [Estilo](../style/index.md)
 -   [Facilidad de uso](../usability/index.md)

@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, proyección, XAML, personalizado, basado en modelo, control
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2bd71e5ec78f3e0d1317c4e69ecd234985b2d8ab
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 805e9db834e4428f8db5815b54b8d1d669310611
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492850"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154229"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles (basados en modelo) personalizados de XAML con C++/WinRT
 
 > [!IMPORTANT]
-> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
+> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con [C++/WinRT](./intro-to-using-cpp-with-winrt.md), consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
 
-Una de las características más eficaces de la plataforma Universal de Windows (UWP) es la flexibilidad que ofrece la pila de la interfaz de usuario (UI) para crear controles personalizados basados en el tipo [**Control**](/uwp/api/windows.ui.xaml.controls.control) de XAML. El marco de interfaz de usuario de XAML ofrece características tales como [propiedades de dependencia personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) y [propiedades adjuntas](/windows/uwp/xaml-platform/custom-attached-properties), así como [plantillas de control](/windows/uwp/design/controls-and-patterns/control-templates), que facilitan la creación de controles repletos de características y personalizables. Este tema te guía por los pasos de creación de un control (basado en modelo) personalizado con C++/WinRT.
+Una de las características más eficaces de la plataforma Universal de Windows (UWP) es la flexibilidad que ofrece la pila de la interfaz de usuario (UI) para crear controles personalizados basados en el tipo [**Control**](/uwp/api/windows.ui.xaml.controls.control) de XAML. El marco de interfaz de usuario de XAML ofrece características tales como [propiedades de dependencia personalizadas](../xaml-platform/custom-dependency-properties.md) y [propiedades adjuntas](../xaml-platform/custom-attached-properties.md), así como [plantillas de control](../design/controls-and-patterns/control-templates.md), que facilitan la creación de controles repletos de características y personalizables. Este tema te guía por los pasos de creación de un control (basado en modelo) personalizado con C++/WinRT.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Crear una aplicación en blanco (BgLabelControlApp)
 
@@ -46,7 +46,7 @@ namespace BgLabelControlApp
 }
 ```
 
-La lista anterior muestra el patrón que se sigue al declarar una propiedad de dependencia (DP). Hay dos partes en cada DP. En primer lugar, se declara una propiedad estática de solo lectura de tipo [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty). Tiene el nombre de la DP más *Property*. Usarás esta propiedad estática en la implementación. En segundo lugar, se declara una propiedad de instancia de lectura y escritura con el tipo y el nombre del DP. Si quieres crear una *propiedad adjunta* (en lugar de una DP), consulta los ejemplos de código en [Propiedades adjuntas personalizadas](/windows/uwp/xaml-platform/custom-attached-properties).
+La lista anterior muestra el patrón que se sigue al declarar una propiedad de dependencia (DP). Hay dos partes en cada DP. En primer lugar, se declara una propiedad estática de solo lectura de tipo [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty). Tiene el nombre de la DP más *Property*. Usarás esta propiedad estática en la implementación. En segundo lugar, se declara una propiedad de instancia de lectura y escritura con el tipo y el nombre del DP. Si quieres crear una *propiedad adjunta* (en lugar de una DP), consulta los ejemplos de código en [Propiedades adjuntas personalizadas](../xaml-platform/custom-attached-properties.md).
 
 > [!NOTE]
 > Si quieres una DP con un tipo de punto flotante, conviértela en `double` (`Double` en [MIDL 3.0](/uwp/midl-3/)). Si se declara e implementa una DP de tipo `float` (`Single` en MIDL) y luego se establece un valor para esa DP en marcado XAML, se producirá el error *Failed to create a 'Windows.Foundation.Single' from the text '<NUMBER>'* (No se pudo crear un "Windows.Foundation.Single" a partir del texto).
@@ -217,5 +217,5 @@ Las funciones *reemplazables* se presentan de forma diferente en las distintas p
 * [Clase UIElement](/uwp/api/windows.ui.xaml.uielement)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Plantillas de control](/windows/uwp/design/controls-and-patterns/control-templates)
-* [Propiedades de dependencia personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties)
+* [Plantillas de control](../design/controls-and-patterns/control-templates.md)
+* [Propiedades de dependencia personalizadas](../xaml-platform/custom-dependency-properties.md)

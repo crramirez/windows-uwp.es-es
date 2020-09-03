@@ -6,12 +6,12 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 931f2fcbcdbf58b9dc2ca40403d7466b620a8991
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ad0595fa070a1970e4890ce7e95627c06385ba6a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63798108"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154219"
 ---
 # <a name="data-binding-and-mvvm"></a>Enlace de datos y MVVM
 
@@ -35,7 +35,7 @@ A diferencia de MVVM, una aplicación con una estructura de "código subyacente"
 Al usar el patrón MVVM, una aplicación se divide en las siguientes capas:
 
 * La capa del **modelo** define los tipos que representan los datos empresariales. Esto incluye todo lo necesario para modelar el dominio de la aplicación principal y, a menudo, incluye la lógica de la aplicación principal. Esta capa es totalmente independiente de las capas de vista y de vista de modelos, y a menudo reside parcialmente en la nube. Con una capa de modelo totalmente implementada, puedes crear varias aplicaciones cliente diferentes si lo prefieres, como aplicaciones web y de UWP que funcionen con los mismos datos subyacentes.
-* La capa de **vista** define la interfaz de usuario mediante el marcado XAML. El marcado incluye expresiones de enlace de datos (como [x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)) que definen la conexión entre componentes de interfaz de usuario específicos y varias vistas de modelos y miembros de modelo. Los archivos de código subyacente a veces se utilizan como parte de la capa de vista para contener el código adicional necesario para personalizar o manipular la interfaz de usuario, o para extraer datos de los argumentos del controlador de eventos antes de llamar a un método de vista de modelos que realiza el trabajo. 
+* La capa de **vista** define la interfaz de usuario mediante el marcado XAML. El marcado incluye expresiones de enlace de datos (como [x:Bind](../xaml-platform/x-bind-markup-extension.md)) que definen la conexión entre componentes de interfaz de usuario específicos y varias vistas de modelos y miembros de modelo. Los archivos de código subyacente a veces se utilizan como parte de la capa de vista para contener el código adicional necesario para personalizar o manipular la interfaz de usuario, o para extraer datos de los argumentos del controlador de eventos antes de llamar a un método de vista de modelos que realiza el trabajo. 
 * La capa **vista de modelos** proporciona los destinos del enlace de datos para la vista. En muchos casos, la vista de modelos expone el modelo directamente o proporciona miembros que contienen miembros de modelo específicos. La vista de modelos también puede definir miembros para realizar el seguimiento de los datos que son relevantes para la interfaz de usuario, pero no para el modelo, como el orden de presentación de una lista de elementos. La vista de modelos también sirve como punto de integración con otros servicios, como el código de acceso a la base de datos. En el caso de los proyectos sencillos, es posible que no necesites una capa de modelo independiente, sino solo una vista de modelos que encapsule todos los datos que necesitas. 
 
 ## <a name="basic-and-advanced-mvvm"></a>MVVM básico y avanzado
@@ -44,7 +44,7 @@ Como en cualquier patrón de diseño, hay más de una manera de implementar MVVM
 
 Aunque los marcos de trabajo de MVVM sofisticados pueden ser muy útiles, especialmente en el caso de los proyectos de escala empresarial, normalmente la adopción de un patrón o técnica determinados conlleva un costo y las ventajas no siempre están claras, en función de la escala y el tamaño del proyecto. Afortunadamente, puedes adoptar solo las técnicas que proporcionan una ventaja clara y tangible, y omitir otras hasta que las necesites. 
 
-En concreto, puedes disfrutar de muchas ventajas tan solo con comprender y aplicar todas las posibilidades del enlace de datos, y separar la lógica de la aplicación en las capas descritas anteriormente. Esto se puede lograr usando solo las funcionalidades proporcionadas por Windows SDK y sin usar marcos de trabajo externos. En concreto, la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) hace que el enlace de datos sea más sencillo y superior que en las plataformas XAML anteriores, lo que elimina la necesidad de crear la gran cantidad de código reutilizable que se requería anteriormente.
+En concreto, puedes disfrutar de muchas ventajas tan solo con comprender y aplicar todas las posibilidades del enlace de datos, y separar la lógica de la aplicación en las capas descritas anteriormente. Esto se puede lograr usando solo las funcionalidades proporcionadas por Windows SDK y sin usar marcos de trabajo externos. En concreto, la [extensión de marcado {x:Bind}](../xaml-platform/x-bind-markup-extension.md) hace que el enlace de datos sea más sencillo y superior que en las plataformas XAML anteriores, lo que elimina la necesidad de crear la gran cantidad de código reutilizable que se requería anteriormente.
 
 Para más información sobre el uso de la arquitectura MVVM básica lista para usar, consulta el [ejemplo de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database), en GitHub. Muchos otros [ejemplos de aplicaciones para UWP](https://github.com/Microsoft?q=windows-appsample
 ) usan también una arquitectura MVVM básica, y el ejemplo de aplicación de [tráfico](https://github.com/Microsoft/Windows-appsample-trafficapp) incluye tanto la versión de código subyacente como la versión MVVM, con notas que describen la [conversión a MVVM](https://github.com/Microsoft/Windows-appsample-trafficapp/blob/MVVM/MVVM.md). 
@@ -53,11 +53,11 @@ Para más información sobre el uso de la arquitectura MVVM básica lista para u
 
 ### <a name="topics"></a>Temas
 
-[Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)  
-[Extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)  
+[Enlace de datos en profundidad](./data-binding-in-depth.md)  
+[Extensión de marcado {x:Bind}](../xaml-platform/x-bind-markup-extension.md)  
 
 ### <a name="samples"></a>Muestras
 
 [Ejemplo de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database)  
 [Ejemplo de inventario de VanArsdel](https://github.com/Microsoft/InventorySample)  
-[Ejemplo de aplicación de tráfico](https://github.com/Microsoft/Windows-appsample-trafficapp)  
+[Ejemplo de aplicación de tráfico](https://github.com/Microsoft/Windows-appsample-trafficapp)

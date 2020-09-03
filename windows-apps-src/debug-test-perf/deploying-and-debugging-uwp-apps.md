@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, depuración, pruebas, rendimiento, debut, test, performance
 ms.localizationpriority: medium
-ms.openlocfilehash: d948af1ce10b3752ba9f20454d8dea72916de692
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0f1ff6a98182f4832a2a1b82bf8ceca4aa176c36
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75683858"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157269"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -92,13 +92,13 @@ Para realizar la implementación en un equipo remoto con una versión anterior a
 
 Para ello, busca **Depurador remoto** en el menú **Inicio**, ábrelo y, si te lo pide, permite que el depurador configure las opciones del firewall. De manera predeterminada, el depurador se inicia con la autenticación de Windows. Esto requiere credenciales de usuario si el usuario que inició sesión no es el mismo en ambos equipos.
 
-Para cambiar a **Sin autenticación**, en el **Depurador remoto**, ve a **Herramientas** -&gt; **Opciones** y establécelo en **Sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Después de esto, puedes implementar desde la máquina de desarrollo.
+Para cambiar a **Sin autenticación**, en el **Depurador remoto**, ve a **Herramientas** -&gt; **Opciones** y establécelo en **Sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](../get-started/enable-your-device-for-development.md). Después de esto, puedes implementar desde la máquina de desarrollo.
 
 Para obtener más información, consulta la página [Centro de descarga para Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
 ## <a name="passing-command-line-debug-arguments"></a>Paso de argumentos de depuración de la línea de comandos
 
-En Visual Studio 2019, puedes pasar argumentos de depuración de la línea de comandos al iniciar la depuración de las aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
+En Visual Studio 2019, puedes pasar argumentos de depuración de la línea de comandos al iniciar la depuración de las aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
 
 > [!NOTE]
 > Esta característica está disponible en Visual Studio 2017 (versión 15.1) para C#, VB y C++. JavaScript está disponible en versiones posteriores. Los argumentos de depuración de la línea de comandos están disponibles para todos los tipos de implementación, excepto el simulador.
@@ -111,7 +111,7 @@ En el caso de proyectos C# y VB de UWP, verás **Argumentos de la línea de coma
 
 ![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-cpp.png)
 
-Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento *args* del objeto [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) tendrá una propiedad **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos**.
+Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento *args* del objeto [**LaunchActivatedEventArgs**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) tendrá una propiedad **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos**.
 
 ![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-debugging.png)
 
@@ -189,7 +189,7 @@ En el dispositivo remoto, el diseño se registrará en la siguiente ubicación p
 
 ## <a name="debugging-options"></a>Opciones de depuración
 
-Windows 10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
+Windows 10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](../launch-resume/handle-app-prelaunch.md). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
 
 La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en la máquina (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de aplicaciones instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](https://blogs.msdn.com/b/visualstudioalm/archive/2015/11/30/debug-uwp-prelaunch-with-vs2015.aspx).
 
@@ -213,7 +213,7 @@ Puedes establecer las siguientes opciones de implementación en la página de pr
 
 ## <a name="symbols"></a>Símbolos
 
-Los archivos de símbolos contienen una variedad de datos muy útiles al depurar el código, como variables, nombres de función y direcciones de punto de entrada, lo que te permite comprender mejor las excepciones y el orden de ejecución de la pila de llamadas. Los símbolos de la mayoría de variantes de Windows están disponibles a través del [Servidor de símbolos de Microsoft](https://msdl.microsoft.com/download/symbols) o se pueden descargar para búsquedas más rápidas y sin conexión en [Descargar paquetes de símbolos de Windows](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-symbols).
+Los archivos de símbolos contienen una variedad de datos muy útiles al depurar el código, como variables, nombres de función y direcciones de punto de entrada, lo que te permite comprender mejor las excepciones y el orden de ejecución de la pila de llamadas. Los símbolos de la mayoría de variantes de Windows están disponibles a través del [Servidor de símbolos de Microsoft](https://msdl.microsoft.com/download/symbols) o se pueden descargar para búsquedas más rápidas y sin conexión en [Descargar paquetes de símbolos de Windows](/windows-hardware/drivers/debugger/debugger-download-symbols).
 
 Para establecer opciones de símbolo de Visual Studio, selecciona **Herramientas > Opciones** y después ve a **Depuración > Símbolos** en la ventana del cuadro de diálogo.
 
@@ -226,7 +226,7 @@ Para cargar símbolos en una sesión de depuración con [WinDbg](#windbg), estab
 .reload
 ```
 
-Puedes agregar más rutas de acceso mediante el delimitador `‘;’` o puedes usar el comando `.sympath+`. Para obtener información sobre operaciones de símbolos más avanzadas que usan WinDbg, consulta [Public and Private Symbols (Símbolos públicos y privados)](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols).
+Puedes agregar más rutas de acceso mediante el delimitador `‘;’` o puedes usar el comando `.sympath+`. Para obtener información sobre operaciones de símbolos más avanzadas que usan WinDbg, consulta [Public and Private Symbols (Símbolos públicos y privados)](/windows-hardware/drivers/debugger/public-and-private-symbols).
 
 ## <a name="windbg"></a>WinDbg
 
@@ -246,7 +246,7 @@ Uno de los comandos más populares de WinDBG es `!analyze -v`, que se usa para r
 - EXCEPTION_RECORD: dirección, código e indicadores de la excepción actual
 - STACK_TEXT: seguimiento de la pila antes de la excepción
 
-Para obtener una lista completa de todos los comandos de WinDbg, consulta [Debugger Commands (Comandos del depurador)](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-commands).
+Para obtener una lista completa de todos los comandos de WinDbg, consulta [Debugger Commands (Comandos del depurador)](/windows-hardware/drivers/debugger/debugger-commands).
 
 ## <a name="related-topics"></a>Temas relacionados
 

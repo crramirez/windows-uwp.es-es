@@ -12,20 +12,20 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d9cb44c91bcd556a10059005a8f19a75f90d3d9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5c8df28335bf67c00f0429d6967e9013c73ec351
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081473"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154199"
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
 
 El modificador para alternar representa un conmutador físico que permite a los usuarios activar o desactivar opciones, como un interruptor de la luz. Usa los controles del modificador para alternar para presentar a los usuarios dos opciones que se excluyan mutuamente (como activar/desactivar). Cuando elijan una opción, se producirá un resultado inmediato.
 
-Para crear un control de modificador para alternar, usa la [clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch).
+Para crear un control de modificador para alternar, usa la [clase ToggleSwitch](/uwp/api/windows.ui.xaml.controls.toggleswitch).
 
-> **API de plataforma**: [clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propiedad IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **API de plataforma**: [clase ToggleSwitch](/uwp/api/windows.ui.xaml.controls.toggleswitch), [propiedad IsOn](/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -97,7 +97,7 @@ stackPanel1.Children.Add(lightToggle);
 
 ### <a name="ison"></a>IsOn
 
-El modificador puede estar activado o desactivado. Usa la propiedad [IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison) para determinar el estado del modificador. Cuando se usa el modificador para controlar el estado de otra propiedad binaria, puedes usar un enlace como se muestra aquí.
+El modificador puede estar activado o desactivado. Usa la propiedad [IsOn](/uwp/api/windows.ui.xaml.controls.toggleswitch.ison) para determinar el estado del modificador. Cuando se usa el modificador para controlar el estado de otra propiedad binaria, puedes usar un enlace como se muestra aquí.
 
 ```xaml
 <StackPanel Orientation="Horizontal">
@@ -108,7 +108,7 @@ El modificador puede estar activado o desactivado. Usa la propiedad [IsOn](https
 
 ### <a name="toggled"></a>Toggled
 
-En otros casos, puedes controlar el evento [Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled) para responder a cambios en el estado.
+En otros casos, puedes controlar el evento [Toggled](/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled) para responder a cambios en el estado.
 
 En este ejemplo se muestra cómo agregar un controlador de eventos Toggled en XAML y en el código. El evento Toggled se controla para activar o desactivar un anillo de progreso y cambiar su visibilidad.
 
@@ -152,7 +152,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### <a name="onoff-labels"></a>Etiquetas On y Off
 
-De forma predeterminada, el modificador para alternar incluye las etiquetas literales On y Off, que se localizan automáticamente. Puedes reemplazar estas etiquetas si configuras las propiedades [OnContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) y [OffContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent).
+De forma predeterminada, el modificador para alternar incluye las etiquetas literales On y Off, que se localizan automáticamente. Puedes reemplazar estas etiquetas si configuras las propiedades [OnContent](/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) y [OffContent](/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent).
 
 En este ejemplo, se reemplazan las etiquetas On/Off con etiquetas Show/Hide.
 
@@ -162,7 +162,7 @@ En este ejemplo, se reemplazan las etiquetas On/Off con etiquetas Show/Hide.
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-También puedes usar contenido más complejo si configuras las propiedades [OnContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) y [OffContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate).
+También puedes usar contenido más complejo si configuras las propiedades [OnContentTemplate](/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) y [OffContentTemplate](/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate).
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -175,7 +175,7 @@ También puedes usar contenido más complejo si configuras las propiedades [OnCo
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
+- [Clase ToggleSwitch](/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [Botones de radio](radio-button.md)
 - [Modificadores para alternar](toggles.md)
 - [Casillas](checkbox.md)
