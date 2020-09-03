@@ -1,17 +1,17 @@
 ---
-Description: Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos.
+description: Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos.
 title: Orientación para administrar paquetes de la aplicación
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ecd8cc96196c31615eac032183956de3bee9e4b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6035f5f21cd1b704415193c393ae0637d3e5dc37
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171059"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411979"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
@@ -49,15 +49,13 @@ Después de hacer que la aplicación no esté disponible, la verá en el centro 
 > [!NOTE]
 > Si quiere mantener la aplicación disponible, pero no desea continuar ofreciéndola a nuevos clientes en una versión de SO determinada, puede crear un nuevo envío y quitar todos los paquetes de la versión del sistema operativo en la que desea evitar nuevas adquisiciones. Por ejemplo, si anteriormente tenía paquetes para Windows Phone 8,1 y Windows 10, y no desea seguir ofreciendo la aplicación a los nuevos clientes en Windows Phone 8,1, quite todos los paquetes de Windows Phone 8,1 del envío. Una vez publicada la actualización, ningún cliente nuevo en Windows Phone 8,1 podrá adquirir la aplicación a través de los clientes que ya la tienen. Sin embargo, la aplicación seguirá estando disponible para los nuevos clientes en Windows 10.
 
-
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Quitar paquetes de una familia de dispositivos anteriormente compatibles
 
-Si quita todos los paquetes de una determinada [familia de dispositivos](/uwp/extension-sdks/device-families-overview) que la aplicación admitía anteriormente, se le pedirá que confirme que es su intención antes de guardar los cambios en la página **paquetes** .
+Si quita todos los paquetes de una determinada familia de dispositivos (consulte [programación con SDK de extensión](/uwp/extension-sdks/device-families-overview)) que la aplicación admitía anteriormente, se le pedirá que confirme que es su intención antes de guardar los cambios en la página **paquetes** .
 
 Al publicar un envío que quita todos los paquetes que podrían ejecutarse en una familia de dispositivos que la aplicación admitía previamente, los nuevos clientes no podrán adquirir la aplicación en esa familia de dispositivos. Siempre puedes publicar otra actualización más adelante para proporcionar paquetes para esa familia de dispositivos de nuevo.
 
 Ten en cuenta que aunque quites todos los paquetes que admitan una determinada familia de dispositivos, los clientes existentes que ya hayan instalado la aplicación en ese tipo de dispositivo pueden seguir usándola, y obtendrán las actualizaciones que proporciones más adelante.
-
 
 <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>
 

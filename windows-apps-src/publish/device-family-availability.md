@@ -1,16 +1,16 @@
 ---
-Description: Una vez que los paquetes se hayan cargado correctamente, verá una tabla que indica los paquetes que se ofrecerán a familias específicas de dispositivos Windows 10 (y versiones anteriores del sistema operativo, si procede), en orden clasificado.
+description: Una vez que los paquetes se hayan cargado correctamente, verá una tabla que indica los paquetes que se ofrecerán a familias específicas de dispositivos Windows 10 (y versiones anteriores del sistema operativo, si procede), en orden clasificado.
 title: Disponibilidad de familias de dispositivos
 ms.date: 03/21/2019
 ms.topic: article
 keywords: Windows 10, UWP, paquetes, carga, disponibilidad de la familia de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: f0b30b5805ffaf0cd591147bcfed9744b64afdb7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 48cbb0fd9ecf27c9926d55e22abc17d039d3674b
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161979"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411969"
 ---
 # <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
@@ -55,7 +55,7 @@ Si el envío de una aplicación publicada anteriormente incluye paquetes que se 
 
 Es importante tener en cuenta que las selecciones realizadas en la sección **disponibilidad** de la familia de dispositivos solo se aplican a las nuevas adquisiciones. Cualquier persona que ya tenga su aplicación puede seguir utilizándola y obtendrá las actualizaciones que envíe, aunque Quite aquí su familia de dispositivos. Esto se aplica incluso a los clientes que adquieren la aplicación antes de actualizar a Windows 10. Por ejemplo, si tiene una aplicación publicada con Windows Phone paquetes 8,1 y agrega un paquete de Windows 10 (UWP) destinado a Windows. la familia de dispositivos universales, los clientes de Windows 10 Mobile con el paquete de Windows Phone 8,1 recibirán una actualización de este paquete de Windows 10 (UWP), aunque haya desactivado la casilla para **Windows 10 Mobile**.
 
-Para obtener más información acerca de las familias de dispositivos, consulte [**información general**](/uwp/extension-sdks/device-families-overview)de las familias de dispositivos.
+Para obtener más información acerca de las familias de dispositivos, consulte [Programming with EXTENSION SDK](/uwp/extension-sdks/device-families-overview).
 
 
 ## <a name="understanding-ranking"></a>Comprender la clasificación

@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: Windows 10, UWP, captura de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: b57be844e5ee10d384046aac651ab4f198f37d9e
-ms.sourcegitcommit: 14c0b1ea2447a81ddf31982b40e19a74ecc6d59e
+ms.openlocfilehash: 96b8c52d8c1c6b6947b7b151df0b1b8bbfe42869
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89310076"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411929"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -688,7 +688,7 @@ End Class
 
 ## <a name="record-a-video"></a>Grabar un vídeo
 
-Si desea grabar un vídeo de la aplicación, puede seguir el tutorial presentado en el artículo [captura de pantalla en vídeo](screen-capture-video.md). O bien, puede usar el [espacio de nombres Windows. Media. AppRecording](/uwp/api/windows.media.apprecording). Esto forma parte del SDK de la extensión de escritorio, por lo que solo funciona en el escritorio y requiere que se agregue una referencia a él desde el proyecto. Consulte información general de las [familias de dispositivos](/uwp/extension-sdks/device-families-overview) para obtener más información.
+Si desea grabar un vídeo de la aplicación, puede seguir el tutorial presentado en el artículo [captura de pantalla en vídeo](screen-capture-video.md). O bien, puede usar el [espacio de nombres Windows. Media. AppRecording](/uwp/api/windows.media.apprecording). Esto forma parte del SDK de la extensión de escritorio, por lo que solo funciona en el escritorio y requiere que se agregue una referencia a él desde el proyecto. Consulte [programación con SDK de extensión](/uwp/extension-sdks/device-families-overview) para obtener más información.
 
 ## <a name="see-also"></a>Consulte también
 

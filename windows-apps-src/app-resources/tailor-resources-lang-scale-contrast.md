@@ -1,17 +1,17 @@
 ---
-Description: En este tema se explica el concepto general de calificadores, cómo usarlos y el propósito de cada uno de los nombres de calificador.
+description: En este tema se explica el concepto general de calificadores, cómo usarlos y el propósito de cada uno de los nombres de calificador.
 title: Adaptar los recursos al idioma, escala, alto contraste y otros calificadores
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 3678d525fa00df07408b9d85af34a3dd825b4fcf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 59f0b636384ba133e985f0704e2033c1acc5f15e
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161339"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89412019"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, alto contraste y otros calificadores
 
@@ -128,7 +128,7 @@ El `configuration` calificador se usa para cargar un recurso que mejor coincida 
 
 El `contrast` calificador se usa para proporcionar recursos que coincidan mejor con la configuración de contraste alto.
 
-## <a name="custom"></a>Personalizada
+## <a name="custom"></a>Personalizado
 
 La aplicación puede establecer un valor para el `custom` calificador y, a continuación, se cargan los recursos que mejor coincidan con ese valor. Por ejemplo, puede que desee cargar recursos en función de la licencia de su aplicación. Cuando se inicia la aplicación, comprueba su licencia y la usa como el valor del `custom` calificador mediante una llamada a [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue), como se muestra en el ejemplo de código.
 
@@ -286,7 +286,7 @@ Por compatibilidad con versiones anteriores, Windows incluye la lógica para det
 * [Sistema de administración de recursos](resource-management-system.md)
 * [Preparación para la localización](/previous-versions/windows/apps/hh967762(v=win.10))
 * [Detección de la plataforma en la que se está ejecutando la aplicación](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Información general sobre las familias de dispositivos](/uwp/extension-sdks/device-families-overview)
+* [Programación con SDK de extensión](/uwp/extension-sdks/device-families-overview)
 * [Localizar las cadenas de la interfaz de usuario](localize-strings-ui-manifest.md)
 * [BCP-47](https://tools.ietf.org/html/bcp47)
 * [División de estadísticas de Naciones Unidas M49 composición de códigos de región](https://unstats.un.org/unsd/methods/m49/m49regin.htm)
