@@ -5,12 +5,12 @@ keywords: what's new;update;features;developer guidance;Windows 10; novedades;ac
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 65c3c2fb4b7a5a7f0b5f4b3c89773f3e21bd654d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: acec4384b5ce04548818a512270e66d7b4500e16
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684738"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174409"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novedades de la documentación para desarrolladores de Windows de julio de 2017
 
@@ -98,21 +98,21 @@ Disponible para [usuarios de Windows Insider](https://insider.windows.com/) en l
 
 ### <a name="media-playback"></a>Reproducción de contenido multimedia
 
-Se han agregado nuevas secciones al artículo de reproducción básica de elementos multimedia, [Reproducir audio y vídeo con MediaPlayer](../audio-video-camera/play-audio-and-video-with-mediaplayer.md). La sección [Reproducir vídeo esférico con MediaPlayer](../audio-video-camera/play-audio-and-video-with-mediaplayer.md) muestra cómo reproducir un vídeo codificado de forma esférica, incluyendo el ajuste del campo de visión y la orientación de la vista en formatos compatibles. La sección [Usar MediaPlayer en modo de servidor de fotogramas](../audio-video-camera/play-audio-and-video-with-mediaplayer.md#use-mediaplayer-in-frame-server-mode) muestra cómo copiar fotogramas desde contenido multimedia reproducido con [MediaPlayer](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer) a una superficie de Direct3D. Esto permite escenarios como la aplicación de efectos en tiempo real con sombreadores de píxeles. El código de ejemplo muestra una implementación rápida de un efecto de desenfoque en una reproducción de vídeo con Win2D.
+Se han agregado nuevas secciones al artículo de reproducción básica de elementos multimedia, [Reproducir audio y vídeo con MediaPlayer](../audio-video-camera/play-audio-and-video-with-mediaplayer.md). La sección [Reproducir vídeo esférico con MediaPlayer](../audio-video-camera/play-audio-and-video-with-mediaplayer.md) muestra cómo reproducir un vídeo codificado de forma esférica, incluyendo el ajuste del campo de visión y la orientación de la vista en formatos compatibles. La sección [Usar MediaPlayer en modo de servidor de fotogramas](../audio-video-camera/play-audio-and-video-with-mediaplayer.md#use-mediaplayer-in-frame-server-mode) muestra cómo copiar fotogramas desde contenido multimedia reproducido con [MediaPlayer](/uwp/api/Windows.Media.Playback.MediaPlayer) a una superficie de Direct3D. Esto permite escenarios como la aplicación de efectos en tiempo real con sombreadores de píxeles. El código de ejemplo muestra una implementación rápida de un efecto de desenfoque en una reproducción de vídeo con Win2D.
 
 ### <a name="media-capture"></a>Captura multimedia
 
-El artículo [Procesar fotogramas multimedia con MediaFrameReader](../audio-video-camera/process-media-frames-with-mediaframereader.md) se actualizó para mostrar el uso de la nueva clase [MultiSourceMediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader), que te permite obtener fotogramas correlacionados en tiempo desde varios orígenes multimedia. Esto resulta de utilidad si necesitas procesar fotogramas desde orígenes diferentes, como una cámara de profundidad y una cámara de color, y necesitas asegurarte de que los fotogramas de cada origen se han capturado cercanos entre sí en el tiempo. Para más información, consulta [Usar MultiSourceMediaFrameReader para obtener fotogramas correlacionados de tiempo de varios orígenes](../audio-video-camera/process-media-frames-with-mediaframereader.md#use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources).
+El artículo [Procesar fotogramas multimedia con MediaFrameReader](../audio-video-camera/process-media-frames-with-mediaframereader.md) se actualizó para mostrar el uso de la nueva clase [MultiSourceMediaFrameReader](/uwp/api/windows.media.capture.frames.multisourcemediaframereader), que te permite obtener fotogramas correlacionados en tiempo desde varios orígenes multimedia. Esto resulta de utilidad si necesitas procesar fotogramas desde orígenes diferentes, como una cámara de profundidad y una cámara de color, y necesitas asegurarte de que los fotogramas de cada origen se han capturado cercanos entre sí en el tiempo. Para más información, consulta [Usar MultiSourceMediaFrameReader para obtener fotogramas correlacionados de tiempo de varios orígenes](../audio-video-camera/process-media-frames-with-mediaframereader.md#use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources).
 
 ### <a name="scoped-search"></a>Ámbito de búsqueda
 
-Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/universal-application-platform-guide.md) y de la [referencia de API](https://docs.microsoft.com/uwp/api/) en docs.microsoft.com. A menos que este ámbito está desactivado, las búsquedas realizadas dentro de estas áreas devolverán solo documentos de UWP.
+Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/universal-application-platform-guide.md) y de la [referencia de API](/uwp/api/) en docs.microsoft.com. A menos que este ámbito está desactivado, las búsquedas realizadas dentro de estas áreas devolverán solo documentos de UWP.
 
 ![Ámbito de búsqueda](images/scoped-search.png)
 
 ### <a name="test-your-windows-app-for-windows-10-s"></a>Probar la aplicación de Windows en Windows 10 S
 
-Prueba la aplicación de Windows para garantizar que funciona correctamente en dispositivos que ejecuten Windows S. Usa [esta guía nueva](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s) para obtener información sobre cómo hacerlo.
+Prueba la aplicación de Windows para garantizar que funciona correctamente en dispositivos que ejecuten Windows S. Usa [esta guía nueva](/windows/msix/desktop/desktop-to-uwp-test-windows-s) para obtener información sobre cómo hacerlo.
 
 ## <a name="samples"></a>Muestras
 
@@ -124,7 +124,7 @@ Prueba la aplicación de Windows para garantizar que funciona correctamente en d
 
 ### <a name="shopping-app-sample"></a>Ejemplo de la aplicación de compras
 
-[Una miniaplicación que presenta una experiencia de compra básica donde los usuarios pueden comprar emoji](https://github.com/Microsoft/Windows-appsample-shopping). Esta aplicación muestra cómo usar la [API de solicitud de pago](https://docs.microsoft.com/uwp/api/windows.applicationmodel.payments) para implementar la experiencia del proceso de confirmación de compra.
+[Una miniaplicación que presenta una experiencia de compra básica donde los usuarios pueden comprar emoji](https://github.com/Microsoft/Windows-appsample-shopping). Esta aplicación muestra cómo usar la [API de solicitud de pago](/uwp/api/windows.applicationmodel.payments) para implementar la experiencia del proceso de confirmación de compra.
 
 ![Captura de pantalla de la muestra de una aplicación de compras](images/shoppingcart.png)  
 

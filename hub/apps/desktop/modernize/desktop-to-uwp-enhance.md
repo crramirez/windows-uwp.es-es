@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: fd561096dc53f85186698c981693693a6d3b9e64
-ms.sourcegitcommit: d95ccb47c616bd32c56e491490a6baf30185c8c5
+ms.openlocfilehash: 5a7c77f6c553408d2631fb3e324e67d79318f9b4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295542"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170699"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>Llamada a las a API de Windows Runtime en aplicaciones de escritorio
 
@@ -36,7 +36,7 @@ Existen dos opciones para los proyectos de .NET:
 
 #### <a name="to-use-the-nuget-option"></a>Uso de la opción NuGet
 
-1. Asegúrate de que las [referencias de paquete](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) están habilitadas:
+1. Asegúrate de que las [referencias de paquete](/nuget/consume-packages/package-references-in-project-files) están habilitadas:
 
     1. En Visual Studio, haz clic en **Herramientas-> Administrador de paquetes NuGet-> Configuración del Administrador de paquetes**.
     2. Asegúrate de que **PackageReference** está seleccionado para **Formato predeterminado de administración de paquetes**.
@@ -76,7 +76,7 @@ Existen dos opciones para los proyectos de .NET:
 
 ### <a name="modify-a-c-win32-project-to-use-windows-runtime-apis"></a>Modificación de un proyecto de C++ de Win32 para usar las API de Windows Runtime
 
-Use [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) para utilizar las API de Windows Runtime. C++/WinRT es una moderna proyección de lenguaje C++17 totalmente estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para darte acceso de primera clase a la API moderna de Windows.
+Use [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) para utilizar las API de Windows Runtime. C++/WinRT es una moderna proyección de lenguaje C++17 totalmente estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para darte acceso de primera clase a la API moderna de Windows.
 
 Para configurar el proyecto para C++/WinRT:
 
@@ -186,7 +186,7 @@ void UWP::ShowToast()
 }
 ```
 
-Para obtener más información acerca de notificaciones, consulta [Notificaciones del sistema interactivas y adaptables](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts).
+Para obtener más información acerca de notificaciones, consulta [Notificaciones del sistema interactivas y adaptables](/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts).
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Compatibilidad con bases de instalación de Windows XP, Windows Vista y Windows 7/8
 
@@ -243,7 +243,7 @@ El compilador compila ese código solo si esa constante está definida en la con
 
 Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación solo llama a las API de Windows Runtime si el usuario ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
-La forma más fácil de agregar comprobaciones en tiempo de ejecución al código es instalar este paquete NuGet: [Aplicaciones auxiliares de Puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el método ``IsRunningAsUWP()`` para desactivar todo el código que llama a las API de Windows Runtime. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identifica el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+La forma más fácil de agregar comprobaciones en tiempo de ejecución al código es instalar este paquete NuGet: [Aplicaciones auxiliares de Puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el método ``IsRunningAsUWP()`` para desactivar todo el código que llama a las API de Windows Runtime. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identifica el contexto de la aplicación](/archive/blogs/appconsult/desktop-bridge-identify-the-applications-context).
 
 ## <a name="related-samples"></a>Ejemplos relacionados
 

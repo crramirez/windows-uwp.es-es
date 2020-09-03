@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: fb9cd2861fe826d9e8d112f2729d2922c68194ce
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ff94c34c61dee4de8450ed0f4f89a1dfc6537f83
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72281894"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173599"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 
@@ -84,4 +84,4 @@ Device Portal en dispositivos móviles proporciona el conjunto estándar de pág
 ## <a name="see-also"></a>Consulta también
 
 * [Introducción al Portal de dispositivos Windows](device-portal.md)
-* [Referencia de API principal del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Referencia de API principal del Portal de dispositivos](./device-portal-api-core.md)

@@ -4,12 +4,12 @@ description: Cómo instalar la biblioteca de interfaz de usuario de Windows.
 ms.topic: reference
 ms.date: 07/15/2020
 keywords: windows 10, uwp, sdk del kit de herramientas
-ms.openlocfilehash: 336439d35c74073db490772dbfdae4ca3e580625
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 94c23ab9573df576af89d9211ced70938fd5105f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492963"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174139"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Introducción a la biblioteca de interfaz de usuario de Windows 2.x
 
@@ -64,7 +64,7 @@ De manera opcional, puede activar "Incluir versión preliminar" para ver las ver
     ```
 
     > [!IMPORTANT]
-    > El orden de los recursos agregados a ResourceDictionary afecta al orden en que se aplican. El diccionario `XamlControlsResources` invalida muchas claves de recursos predeterminadas y, por tanto, se debe agregar primero a `Application.Resources` para que no invalide ningún otro estilo o recurso personalizado en su aplicación. Para obtener más información sobre la carga de recursos, consulte [Referencias a ResourceDictionary y a los recursos XAML](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references).
+    > El orden de los recursos agregados a ResourceDictionary afecta al orden en que se aplican. El diccionario `XamlControlsResources` invalida muchas claves de recursos predeterminadas y, por tanto, se debe agregar primero a `Application.Resources` para que no invalide ningún otro estilo o recurso personalizado en su aplicación. Para obtener más información sobre la carga de recursos, consulte [Referencias a ResourceDictionary y a los recursos XAML](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references).
 
 5. Agregue una referencia al kit de herramientas a las páginas XAML y a sus páginas de código subyacente.
 

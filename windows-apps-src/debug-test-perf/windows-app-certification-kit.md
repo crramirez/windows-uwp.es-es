@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 174ff4e588d75293ecb729312883f4792196c87a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 06ac1525a91426f6d39e20c9a9416154ad3d6f3e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79110105"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174029"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
-Para que tu aplicación obtenga la [certificación de Windows](/windows/win32/win_cert/windows-certification-portal) o para prepararla para su [publicación en Microsoft Store](/windows/uwp/publish/app-submissions), primero debes validarla y probarla. En este tema explicamos cómo instalar y ejecutar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para garantizar la seguridad y la eficiencia de la aplicación.
+Para que tu aplicación obtenga la [certificación de Windows](/windows/win32/win_cert/windows-certification-portal) o para prepararla para su [publicación en Microsoft Store](../publish/app-submissions.md), primero debes validarla y probarla. En este tema explicamos cómo instalar y ejecutar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para garantizar la seguridad y la eficiencia de la aplicación.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -23,7 +23,7 @@ Requisitos previos para probar una aplicación universal de Windows:
 
 - Debes instalar y ejecutar Windows 10.
 - Debes instalar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/downloads/app-certification-kit/), que se incluye en el Kit de desarrollo de software de Windows (SDK) para Windows 10.
-- Debes [habilitar el dispositivo para el desarrollo](/windows/uwp/get-started/enable-your-device-for-development).
+- Debes [habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
 - Debes implementar la aplicación de Windows que deseas probar en tu equipo.
 
 > [!NOTE]
@@ -83,11 +83,11 @@ Requisitos previos para probar una aplicación universal de Windows:
 
 Los umbrales de la prueba de rendimiento del Kit para la certificación de aplicaciones en Windows se basan en el rendimiento de un equipo de bajo consumo.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple con las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), te recomendamos probarla en un equipo de bajo consumo; por ejemplo, un equipo basado en un procesador Intel Atom con una resolución de pantalla de 1366 x 768 (o superior) y un disco duro giratorio (en lugar de un disco duro de estado sólido).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple con las [Directivas de Microsoft Store](/legal/windows/agreements/store-policies), te recomendamos probarla en un equipo de bajo consumo; por ejemplo, un equipo basado en un procesador Intel Atom con una resolución de pantalla de 1366 x 768 (o superior) y un disco duro giratorio (en lugar de un disco duro de estado sólido).
 
-A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulta las [Directivas de la Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) más recientes y prueba la aplicación con la versión más reciente del Kit para la certificación de aplicaciones en Windows para asegurarte de que cumple los últimos requisitos de rendimiento.
+A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulta las [Directivas de la Microsoft Store](/legal/windows/agreements/store-policies) más recientes y prueba la aplicación con la versión más reciente del Kit para la certificación de aplicaciones en Windows para asegurarte de que cumple los últimos requisitos de rendimiento.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 - [Pruebas del Kit para la certificación de aplicaciones en Windows](windows-app-certification-kit-tests.md)
-- [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies)
+- [Directivas de Microsoft Store](/legal/windows/agreements/store-policies)

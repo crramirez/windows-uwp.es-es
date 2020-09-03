@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f9e7cc16b65f4ee2727fae5a711da9372ee91c01
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 56e94b72b76df74cb006ef3bfb145171e335952e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72282189"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174039"
 ---
 # <a name="improve-garbage-collection-performance"></a>Mejorar el rendimiento de la recolección de elementos no usados
 
 
-La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. Para más información sobre el funcionamiento del recolector de elementos no utilizados de .NET y las herramientas para depurar y analizar su rendimiento, consulta [Recolección de elementos no utilizados](https://docs.microsoft.com/dotnet/standard/garbage-collection/index).
+La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. Para más información sobre el funcionamiento del recolector de elementos no utilizados de .NET y las herramientas para depurar y analizar su rendimiento, consulta [Recolección de elementos no utilizados](/dotnet/standard/garbage-collection/index).
 
 **Nota**  La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no utilizados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio 2015](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tema solo se aplica a C# y Visual Basic.
 
@@ -34,23 +34,23 @@ Puedes medir el rendimiento del recolector de elementos no usados en relación c
 
 ### <a name="release-references"></a>Liberar las referencias
 
-Si un objeto de tu aplicación tiene una referencia, dicho objeto y todos los objetos a los que hace referencia no pueden recolectarse. El compilador de .NET realiza un buen trabajo al detectar cuándo una variable ya no se usa. De este modo, los objetos que contienen esa variable se habilitarán para la recolección. Pero, en algunos casos, es posible que no sea evidente que algunos objetos tienen una referencia a otros objetos, porque parte del gráfico de objeto puede pertenecer a bibliotecas que usa tu aplicación. Para conocer las herramientas y las técnicas que te permiten averiguar qué objetos sobreviven a una recolección de elementos no usados, consulta [Recolección de elementos no usados y rendimiento](https://docs.microsoft.com/dotnet/standard/garbage-collection/performance).
+Si un objeto de tu aplicación tiene una referencia, dicho objeto y todos los objetos a los que hace referencia no pueden recolectarse. El compilador de .NET realiza un buen trabajo al detectar cuándo una variable ya no se usa. De este modo, los objetos que contienen esa variable se habilitarán para la recolección. Pero, en algunos casos, es posible que no sea evidente que algunos objetos tienen una referencia a otros objetos, porque parte del gráfico de objeto puede pertenecer a bibliotecas que usa tu aplicación. Para conocer las herramientas y las técnicas que te permiten averiguar qué objetos sobreviven a una recolección de elementos no usados, consulta [Recolección de elementos no usados y rendimiento](/dotnet/standard/garbage-collection/performance).
 
 ### <a name="induce-a-garbage-collection-if-its-useful"></a>Inducir una recolección de elementos no utilizados si es útil
 
 Induce una recolección de elementos no utilizados solamente si has medido el rendimiento de tu aplicación y si has determinado que esto lo mejorará.
 
-Para inducir una recolección de elementos no usados de una generación, llama a [**GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_), donde n es la generación que quieres recolectar (0, 1 o 2).
+Para inducir una recolección de elementos no usados de una generación, llama a [**GC.Collect(n)** ](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_), donde n es la generación que quieres recolectar (0, 1 o 2).
 
 **Nota**  Se recomienda no forzar una recolección de elementos no usados en la aplicación, ya que el recolector de elementos no usados usa muchas medidas heurísticas para determinar el mejor momento de realizar una recolección y, si la fuerzas, en muchos casos provocarás un uso innecesario de la CPU. Pero si sabes que tienes una gran cantidad de objetos en la aplicación que ya no se usan y quieres devolver esta memoria al sistema, puede resultar conveniente forzar una recolección de elementos no utilizados. Por ejemplo, puedes inducir una recolección al final de una secuencia de carga en un juego para liberar memoria antes de comenzar la partida.
  
-Para evitar inducir accidentalmente demasiadas recolecciones de elementos no utilizados, puedes establecer el valor de [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode) en **Optimized**. Esto indica al recolector de elementos no utilizados que debe iniciar una recolección solo si determina que será lo suficientemente productiva como para justificar su ejecución.
+Para evitar inducir accidentalmente demasiadas recolecciones de elementos no utilizados, puedes establecer el valor de [**GCCollectionMode**](/dotnet/api/system.gccollectionmode) en **Optimized**. Esto indica al recolector de elementos no utilizados que debe iniciar una recolección solo si determina que será lo suficientemente productiva como para justificar su ejecución.
 
 ## <a name="reduce-garbage-collection-time"></a>Reducir el tiempo de recolección de elementos no utilizados
 
 Esta sección se aplica si has analizado tu aplicación y has observado que tarda mucho en recolectar los elementos no usados. El tiempo de pausa relacionado con la recolección de elementos no usados abarca: el tiempo que se tarda en ejecutar una sola fase de recolección de elementos no usado y el tiempo total que tarda la aplicación en realizar las recolecciones de elementos no usados. El tiempo que se tarda en realizar una recolección depende de la cantidad de datos activos que debe analizar el recolector. El tamaño de las generaciones 0 y 1 es limitado, pero la generación 2 crece a medida que se activan objetos de larga duración en la aplicación. Esto significa que el tiempo de recolección para las generaciones 0 y 1 son limitados, mientras que las recolecciones de generación 2 pueden tardar más tiempo. La frecuencia con la que se ejecutan las recolecciones de elementos no usados depende principalmente de la cantidad de memoria que se asigna, porque la recolección de elementos no usados libera memoria para cumplir con las solicitudes de asignación.
 
-En ocasiones, el recolector de elementos no utilizados pausa la aplicación para llevar a cabo el trabajo, pero no necesariamente la pausa todo el tiempo que tarda en realizar la recolección. Los tiempos de pausa no suelen ser perceptibles para el usuario en la aplicación, especialmente en las recolecciones de las generaciones 0 y 1. La característica de [recolección de elementos no utilizados en segundo plano](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals) del recolector de elementos no utilizados de .NET permite que las recolecciones de generación 2 se realicen al mismo tiempo que se ejecuta la aplicación y, de este modo, la aplicación solo se pausa por períodos cortos. Pero no siempre es posible realizar una recolección de generación 2 como una recolección en segundo plano. En ese caso, el usuario puede percibir la pausa si tienes un montón demasiado grande (más de 100 MB).
+En ocasiones, el recolector de elementos no utilizados pausa la aplicación para llevar a cabo el trabajo, pero no necesariamente la pausa todo el tiempo que tarda en realizar la recolección. Los tiempos de pausa no suelen ser perceptibles para el usuario en la aplicación, especialmente en las recolecciones de las generaciones 0 y 1. La característica de [recolección de elementos no utilizados en segundo plano](/dotnet/standard/garbage-collection/fundamentals) del recolector de elementos no utilizados de .NET permite que las recolecciones de generación 2 se realicen al mismo tiempo que se ejecuta la aplicación y, de este modo, la aplicación solo se pausa por períodos cortos. Pero no siempre es posible realizar una recolección de generación 2 como una recolección en segundo plano. En ese caso, el usuario puede percibir la pausa si tienes un montón demasiado grande (más de 100 MB).
 
 Las recolecciones de elementos no usados frecuentes pueden contribuir a un mayor consumo de CPU (y, por lo tanto, de energía), tiempos de carga más prolongados o una menor velocidad de fotogramas en la aplicación. A continuación se ofrecen algunas técnicas que puedes usar para reducir el tiempo de recolección de elementos no usados y las pausas relacionadas con la recolección en tu aplicación para UWP.
 
@@ -74,14 +74,10 @@ Los objetos de 85 KB o mayores se asignan al montón de objetos grandes (LOH) y
 
 ### <a name="avoid-reference-rich-objects"></a>Evitar objetos con muchas referencias
 
-El recolector de elementos no utilizados sigue las referencias entre los objetos desde las raíces de la aplicación para determinar qué objetos están activos. Para más información, consulta el tema que explica [lo que sucede durante una recolección de elementos no utilizados](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Si un objeto contiene muchas referencias, el recolector de elementos no utilizados deberá realizar una mayor cantidad de trabajo. Una técnica común (especialmente con los objetos grandes) consiste en convertir los objetos con muchas referencias en objetos sin referencias (por ejemplo, en lugar de almacenar una referencia, almacena un índice). Obviamente, esta técnica solo funciona cuando es posible hacerlo de forma lógica.
+El recolector de elementos no utilizados sigue las referencias entre los objetos desde las raíces de la aplicación para determinar qué objetos están activos. Para más información, consulta el tema que explica [lo que sucede durante una recolección de elementos no utilizados](/dotnet/standard/garbage-collection/fundamentals). Si un objeto contiene muchas referencias, el recolector de elementos no utilizados deberá realizar una mayor cantidad de trabajo. Una técnica común (especialmente con los objetos grandes) consiste en convertir los objetos con muchas referencias en objetos sin referencias (por ejemplo, en lugar de almacenar una referencia, almacena un índice). Obviamente, esta técnica solo funciona cuando es posible hacerlo de forma lógica.
 
 El reemplazo de referencias de objeto por índices puede implicar una modificación complicada y perjudicial en la aplicación, y es más eficaz en objetos grandes con una gran cantidad de referencias. Hazlo solamente si notas tiempos de recolección de elementos no utilizados prolongados en la aplicación relacionados con objetos con muchas referencias.
 
  
 
  
-
-
-
-

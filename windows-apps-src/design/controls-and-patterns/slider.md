@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a51bfb262e81668d167a380a9f3572011dbf7e2c
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 484fb64497443708ec80f3d6ad80b40d14371af5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88943105"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173919"
 ---
 # <a name="sliders"></a>Controles deslizantes
 
@@ -29,9 +29,9 @@ Un control deslizante es un control que permite que el usuario seleccione entre 
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
-> **API de plataforma**: [clase Slider](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [propiedad Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [evento ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
+> **API de plataforma**: [clase Slider](/uwp/api/windows.ui.xaml.controls.slider), [propiedad Value](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [evento ValueChanged](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -99,7 +99,7 @@ volumeSlider.ValueChanged += Slider_ValueChanged;
 stackPanel1.Children.Add(volumeSlider);
 ```
 
-Obtienes y configuras el valor del control deslizante de la propiedad [Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value). Para responder a los cambios de valor, puedes usar el enlace de datos para enlazar la propiedad Value o controlar el evento [ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged).
+Obtienes y configuras el valor del control deslizante de la propiedad [Value](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value). Para responder a los cambios de valor, puedes usar el enlace de datos para enlazar la propiedad Value o controlar el evento [ValueChanged](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged).
 
 ```csharp
 private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -191,4 +191,4 @@ Al diseñar un control deslizante personalizado, piensa en la manera de presenta
 
 ## <a name="related-topics"></a>Temas relacionados
 - [Modificadores para alternar](toggles.md)
-- [Clase de control deslizante](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider)
+- [Clase de control deslizante](/uwp/api/Windows.UI.Xaml.Controls.Slider)

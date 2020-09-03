@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, instrucciones para desarr
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f4e9ce391aa485e681fc198e14fe3374edb72aa1
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 375cd903a0711a1493930567f557992c0bba46b7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684717"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174349"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades en los documentos para desarrolladores de Windows de julio de 2018
 
@@ -22,15 +22,15 @@ La documentación para desarrolladores de Windows se actualiza constantemente co
 
 ### <a name="progressive-web-apps-on-windows"></a>Aplicaciones web progresivas en Windows
 
-Las [aplicaciones web progresivas (PWA)](https://developer.microsoft.com/windows/pwa) son simplemente aplicaciones web que [se mejoran progresivamente](https://www.wikipedia.org/wiki/Progressive_enhancement) con características similares a las aplicaciones nativas en cuanto a compatibilidad con plataformas y motores de explorador; por ejemplo, la instalación con inicio desde la pantalla principal, la compatibilidad para el uso sin conexión y las notificaciones de inserción. En Windows 10, con el motor de Microsoft Edge (EdgeHTML), las PWA cuentan con la ventaja agregada de ejecutarse [independientemente de la ventana del explorador como aplicaciones para UWP](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features).
+Las [aplicaciones web progresivas (PWA)](https://developer.microsoft.com/windows/pwa) son simplemente aplicaciones web que [se mejoran progresivamente](https://www.wikipedia.org/wiki/Progressive_enhancement) con características similares a las aplicaciones nativas en cuanto a compatibilidad con plataformas y motores de explorador; por ejemplo, la instalación con inicio desde la pantalla principal, la compatibilidad para el uso sin conexión y las notificaciones de inserción. En Windows 10, con el motor de Microsoft Edge (EdgeHTML), las PWA cuentan con la ventaja agregada de ejecutarse [independientemente de la ventana del explorador como aplicaciones para UWP](/microsoft-edge/progressive-web-apps/windows-features).
 
 ![Imagen de las PWA en acción](images/progressive-web-apps.jpg)
 
 Consulta nuestras guías de PWA para lo siguiente:
 
-* [Compilar una aplicación web simple como PWA](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)
-* [Mejorar tu PWA con Windows Runtime](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
-* [Publicar la PWA en Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)
+* [Compilar una aplicación web simple como PWA](/microsoft-edge/progressive-web-apps/get-started)
+* [Mejorar tu PWA con Windows Runtime](/microsoft-edge/progressive-web-apps/windows-features)
+* [Publicar la PWA en Microsoft Store](/microsoft-edge/progressive-web-apps/microsoft-store)
 
 ### <a name="notepad"></a>Bloc de notas
 
@@ -48,29 +48,29 @@ Los kits de herramientas de Adobe XD y Adobe Illustrator se han actualizado con 
 
 ### <a name="webvr"></a>WebVR
 
-Hemos agregado varios temas nuevos a la [documentación de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/):
+Hemos agregado varios temas nuevos a la [documentación de WebVR](/microsoft-edge/webvr/):
 
-* [What is WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr) (¿Qué es WebVR?): en este artículo se explica qué es WebVR, por qué deberías usarla y cómo empezar a desarrollar para esta API.
+* [What is WebVR?](/microsoft-edge/webvr/what-is-webvr) (¿Qué es WebVR?): en este artículo se explica qué es WebVR, por qué deberías usarla y cómo empezar a desarrollar para esta API.
 
-* [WebVR in Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas) (WebVR en las aplicaciones web progresivas): aprende a agregar WebVR a una aplicación web progresiva (PWA).
+* [WebVR in Progressive Web Apps](/microsoft-edge/webvr/webvr-in-pwas) (WebVR en las aplicaciones web progresivas): aprende a agregar WebVR a una aplicación web progresiva (PWA).
 
-* [WebVR in WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview) (WebVR en WebView): descubre cómo agregar WebVR a un control WebView en una aplicación de Windows 10.
+* [WebVR in WebView](/microsoft-edge/webvr/webvr-in-webview) (WebVR en WebView): descubre cómo agregar WebVR a un control WebView en una aplicación de Windows 10.
 
-* [WebVR demos](https://docs.microsoft.com/microsoft-edge/webvr/demos) (Demostraciones de WebVR): echa un vistazo a algunas demostraciones de WebVR mediante Microsoft Edge y un casco envolvente de Windows Mixed Reality.
+* [WebVR demos](/microsoft-edge/webvr/demos) (Demostraciones de WebVR): echa un vistazo a algunas demostraciones de WebVR mediante Microsoft Edge y un casco envolvente de Windows Mixed Reality.
 
 Además, hemos realizado algunas actualizaciones en las páginas existentes:
 
 * La tabla de contenido ahora está mejor organizada en cuatro cubos distintos de nivel superior: **Conceptos básicos**, **Desarrollo**, **Recursos** y **Demostraciones**.
 
-* [WebVR Developer's Guide (landing page)](https://docs.microsoft.com/microsoft-edge/webvr/) (Guía del desarrollador WebVR [página de aterrizaje]): apariencia renovada, con iconos e imágenes más grandes, y una nueva demostración.
+* [WebVR Developer's Guide (landing page)](/microsoft-edge/webvr/) (Guía del desarrollador WebVR [página de aterrizaje]): apariencia renovada, con iconos e imágenes más grandes, y una nueva demostración.
 
-* [Using WebVR with Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge) (Usar WebVR con Microsoft Edge): hemos actualizado esta página para incluir información sobre la Actualización de abril de 2018 de Windows 10.
+* [Using WebVR with Microsoft Edge](/microsoft-edge/webvr/webvr-with-edge) (Usar WebVR con Microsoft Edge): hemos actualizado esta página para incluir información sobre la Actualización de abril de 2018 de Windows 10.
 
 ## <a name="videos"></a>Vídeos
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Introducción para desarrolladores: crear y personalizar un formulario en Windows 10
 
-Nuestros [documentos de Introducción](../get-started/index.md) para los desarrolladores de Windows ahora ofrecen experiencia práctica para el desarrollo de aplicaciones básicas. Este vídeo te guiará a través de uno de estos temas. En él se describen los aspectos básicos de la creación de la interfaz de usuario de un formulario en la aplicación. [Mira el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción y, después, [consulta el tema](https://docs.microsoft.com/windows/uwp/get-started/construct-form-learning-track).
+Nuestros [documentos de Introducción](../get-started/index.md) para los desarrolladores de Windows ahora ofrecen experiencia práctica para el desarrollo de aplicaciones básicas. Este vídeo te guiará a través de uno de estos temas. En él se describen los aspectos básicos de la creación de la interfaz de usuario de un formulario en la aplicación. [Mira el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción y, después, [consulta el tema](../get-started/construct-form-learning-track.md).
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Mejorar tu bot con Project Personality Chat
 

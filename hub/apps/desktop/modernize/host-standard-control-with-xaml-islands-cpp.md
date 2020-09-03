@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 08308c7bca3cd7f39b08c836e43d791a3fda048f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0842046419402bbfacc24331d0521efa9510153a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80226279"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174199"
 ---
 # <a name="host-a-standard-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control estándar de UWP en una aplicación Win32 de C++
 
@@ -41,7 +41,7 @@ En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](usi
     1. En la ventana **Administrador de paquetes NuGet**, asegúrate de seleccionar la opción **Incluir versión preliminar**.
     2. Selecciona la pestaña **Examinar**, busca el paquete **Microsoft.Toolkit.Win32.UI.SDK** e instala la versión 6.0.0 (o posterior) de dicho paquete. Este paquete incluye varios recursos de compilación y tiempo de ejecución que permiten que las islas XAML funcionen en la aplicación.
 
-5. Establece el valor de `maxVersionTested` en el [manifiesto de aplicación](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests) para especificar que la aplicación es compatible con Windows 10, versión 1903 o posterior.
+5. Establece el valor de `maxVersionTested` en el [manifiesto de aplicación](/windows/desktop/SbsCs/application-manifests) para especificar que la aplicación es compatible con Windows 10, versión 1903 o posterior.
 
     1. Si aún no tienes un manifiesto de aplicación en el proyecto, agrega un nuevo archivo XML al proyecto y asígnale el nombre **app.manifest**.
     2. En el manifiesto de aplicación, incluye el elemento **compatibility** y los elementos secundarios que se muestran en el ejemplo siguiente. Reemplaza el atributo **Id** del elemento **maxVersionTested** por el número de versión de Windows 10 que tienes como destino (debe ser Windows 10, versión 1903 o una versión posterior).
@@ -63,16 +63,16 @@ En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](usi
 
 El proceso básico para usar la API de hospedaje de XAML para hospedar un control de UWP sigue estos pasos generales:
 
-1. Inicializa el marco XAML de UWP para el subproceso actual antes de que la aplicación cree cualquiera de los objetos [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) que hospedará. Hay varias maneras de hacerlo, en función del momento en que planeas crear el objeto [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) que hospedará a los controles.
+1. Inicializa el marco XAML de UWP para el subproceso actual antes de que la aplicación cree cualquiera de los objetos [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement) que hospedará. Hay varias maneras de hacerlo, en función del momento en que planeas crear el objeto [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) que hospedará a los controles.
 
     * Si la aplicación crea el objeto **DesktopWindowXamlSource** antes de crear cualquiera de los objetos **Windows.UI.Xaml.UIElement** que se van a hospedar, el marco de trabajo se inicializará al crear una instancia del objeto **DesktopWindowXamlSource**. En este escenario, no es necesario agregar ningún código propio para inicializar el marco de trabajo.
 
-    * Sin embargo, si la aplicación crea los objetos **Windows.UI.Xaml.UIElement** antes de crear el objeto **DesktopWindowXamlSource** que los hospedará, la aplicación debe llamar al método estático [WindowsXamlManager.InitializeForCurrentThread](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) para inicializar explícitamente el marco XAML de UWP antes de crear instancias de los objetos **Windows.UI.Xaml.UIElement**. Normalmente, la aplicación debe llamar a este método cuando se crea una instancia del elemento principal de la interfaz de usuario que hospeda a **DesktopWindowXamlSource**.
+    * Sin embargo, si la aplicación crea los objetos **Windows.UI.Xaml.UIElement** antes de crear el objeto **DesktopWindowXamlSource** que los hospedará, la aplicación debe llamar al método estático [WindowsXamlManager.InitializeForCurrentThread](/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) para inicializar explícitamente el marco XAML de UWP antes de crear instancias de los objetos **Windows.UI.Xaml.UIElement**. Normalmente, la aplicación debe llamar a este método cuando se crea una instancia del elemento principal de la interfaz de usuario que hospeda a **DesktopWindowXamlSource**.
 
     > [!NOTE]
-    > Este método devuelve un objeto [WindowsXamlManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) que contiene una referencia al marco XAML de UWP. Puedes crear tantos objetos **WindowsXamlManager** como quieras en un subproceso determinado. Sin embargo, dado que cada objeto contiene una referencia al marco XAML de UWP, debes eliminarlos para asegurarte de que se liberen los recursos XAML.
+    > Este método devuelve un objeto [WindowsXamlManager](/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) que contiene una referencia al marco XAML de UWP. Puedes crear tantos objetos **WindowsXamlManager** como quieras en un subproceso determinado. Sin embargo, dado que cada objeto contiene una referencia al marco XAML de UWP, debes eliminarlos para asegurarte de que se liberen los recursos XAML.
 
-2. Crea un objeto [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) y asócialo a un elemento principal de la interfaz de usuario de la aplicación que esté asociado con un identificador de ventana.
+2. Crea un objeto [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) y asócialo a un elemento principal de la interfaz de usuario de la aplicación que esté asociado con un identificador de ventana.
 
     Para ello, debes seguir estos pasos:
 
@@ -84,7 +84,7 @@ El proceso básico para usar la API de hospedaje de XAML para hospedar un contro
 
     3. Establece el tamaño inicial de la ventana secundaria interna contenida en el objeto **DesktopWindowXamlSource**. De forma predeterminada, esta ventana secundaria interna tiene configurado un ancho y un alto de 0. Si no estableces el tamaño de la ventana, los controles de UWP que agregues al objeto **DesktopWindowXamlSource** no serán visibles. Para acceder a la ventana secundaria interna en **DesktopWindowXamlSource**, utiliza la propiedad **WindowHandle** de la interfaz **IDesktopWindowXamlSourceNative** o **IDesktopWindowXamlSourceNative2**.
 
-3. Por último, asigna el elemento **Windows.UI.Xaml.UIElement** que quieres hospedar a la propiedad [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) del objeto **DesktopWindowXamlSource**.
+3. Por último, asigna el elemento **Windows.UI.Xaml.UIElement** que quieres hospedar a la propiedad [Content](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) del objeto **DesktopWindowXamlSource**.
 
 En los pasos y ejemplos de código siguientes se muestra cómo implementar el proceso anterior:
 
@@ -215,7 +215,7 @@ En los pasos y ejemplos de código siguientes se muestra cómo implementar el pr
     }
     ```
 
-4. Copia el código siguiente después de la sección anterior. En este código se define el [procedimiento de la ventana](https://docs.microsoft.com/windows/win32/learnwin32/writing-the-window-procedure).
+4. Copia el código siguiente después de la sección anterior. En este código se define el [procedimiento de la ventana](/windows/win32/learnwin32/writing-the-window-procedure).
 
     ```cppwinrt
     LRESULT CALLBACK WindowProc(HWND hWnd, UINT messageCode, WPARAM wParam, LPARAM lParam)
@@ -280,14 +280,14 @@ Para obtener ejemplos completos que muestren estas tareas, consulta los siguient
 
 ## <a name="package-the-app"></a>Empaquetado de la aplicación
 
-También pueden empaquetar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix) para implementarla. MSIX es una tecnología de empaquetado de aplicaciones moderna para Windows y está basada en una combinación de las tecnologías de instalación .msi, .appx, App-V y ClickOnce.
+También pueden empaquetar la aplicación en un [paquete MSIX](/windows/msix) para implementarla. MSIX es una tecnología de empaquetado de aplicaciones moderna para Windows y está basada en una combinación de las tecnologías de instalación .msi, .appx, App-V y ClickOnce.
 
-Las instrucciones siguientes muestran cómo empaquetar todos los componentes de la solución en un paquete MSIX mediante el [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) en Visual Studio 2019. Estos pasos solo son necesarios si quieres empaquetar la aplicación en un paquete MSIX.
+Las instrucciones siguientes muestran cómo empaquetar todos los componentes de la solución en un paquete MSIX mediante el [proyecto de paquete de aplicación de Windows](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) en Visual Studio 2019. Estos pasos solo son necesarios si quieres empaquetar la aplicación en un paquete MSIX.
 
 > [!NOTE]
-> Si decides no empaquetar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix) para su implementación, los equipos que ejecuten dicha aplicación deberán tener instalado el [Tiempo de ejecución de Visual C++](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
+> Si decides no empaquetar la aplicación en un [paquete MSIX](/windows/msix) para su implementación, los equipos que ejecuten dicha aplicación deberán tener instalado el [Tiempo de ejecución de Visual C++](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 
-1. Agrega un nuevo [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) a la solución. Al crear el proyecto, selecciona **Windows 10, versión 1903 (10.0; compilación 18362)** para la **versión de destino** y la **versión mínima**.
+1. Agrega un nuevo [Proyecto de paquete de aplicación de Windows](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) a la solución. Al crear el proyecto, selecciona **Windows 10, versión 1903 (10.0; compilación 18362)** para la **versión de destino** y la **versión mínima**.
 
 2. En el proyecto de empaquetado, haz clic con el botón derecho en el nodo **Aplicaciones** y elige **Agregar referencia**. En la lista de proyectos, selecciona el proyecto de aplicación de escritorio C++/Win32 en la solución y haz clic en **Aceptar**.
 

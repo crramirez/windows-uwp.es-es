@@ -6,21 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3114bc7a86f7f7f4d22c69c814735c146352efbd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d99c3f55848122b123de160b413138f09f48f215
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75681956"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173549"
 ---
 # <a name="optimize-file-access"></a>Optimizar el acceso a archivos
 
 
 Crea aplicaciones para la Plataforma universal de Windows (UWP) que puedan obtener acceso al sistema de archivos de forma eficaz, y así evitar problemas de rendimiento debido a la latencia de discos o a los ciclos de memoria o de la CPU
 
-Cuando quieras obtener acceso a una colección grande de archivos y a valores de propiedad diferentes de las propiedades típicas Name, FileType y Path, para hacerlo, crea [**QueryOptions**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) y llama a [**SetPropertyPrefetch**](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions.setpropertyprefetch). El método **SetPropertyPrefetch** puede mejorar considerablemente el rendimiento de las aplicaciones que muestran una colección de elementos obtenidos del sistema de archivos como, por ejemplo, una colección de imágenes. En los ejemplos siguientes se muestran algunas maneras de acceder a varios archivos.
+Cuando quieras obtener acceso a una colección grande de archivos y a valores de propiedad diferentes de las propiedades típicas Name, FileType y Path, para hacerlo, crea [**QueryOptions**](/uwp/api/Windows.Storage.Search.QueryOptions) y llama a [**SetPropertyPrefetch**](/uwp/api/windows.storage.search.queryoptions.setpropertyprefetch). El método **SetPropertyPrefetch** puede mejorar considerablemente el rendimiento de las aplicaciones que muestran una colección de elementos obtenidos del sistema de archivos como, por ejemplo, una colección de imágenes. En los ejemplos siguientes se muestran algunas maneras de acceder a varios archivos.
 
-En el primer ejemplo se usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) para recuperar información sobre el nombre de un conjunto de archivos. Con este enfoque se logra un buen rendimiento, ya que en el ejemplo solo se tiene acceso a la propiedad Name.
+En el primer ejemplo se usa [**Windows.Storage.StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) para recuperar información sobre el nombre de un conjunto de archivos. Con este enfoque se logra un buen rendimiento, ya que en el ejemplo solo se tiene acceso a la propiedad Name.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -44,7 +44,7 @@ En el primer ejemplo se usa [**Windows.Storage.StorageFolder.GetFilesAsync**](ht
 > Next i
 > ```
 
-En el segundo ejemplo, se usa [**Windows.Storage.StorageFolder.GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync) y, a continuación, se recuperan las propiedades de imagen de cada archivo. Con este enfoque se logra un rendimiento deficiente.
+En el segundo ejemplo, se usa [**Windows.Storage.StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) y, a continuación, se recuperan las propiedades de imagen de cada archivo. Con este enfoque se logra un rendimiento deficiente.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -70,7 +70,7 @@ En el segundo ejemplo, se usa [**Windows.Storage.StorageFolder.GetFilesAsync**](
 > Next i
 > ```
 
-En el tercer ejemplo, se usa [**QueryOptions**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions) para obtener información sobre un conjunto de archivos. Con este enfoque se logra un rendimiento mucho mejor que en el ejemplo anterior.
+En el tercer ejemplo, se usa [**QueryOptions**](/uwp/api/Windows.Storage.Search.QueryOptions) para obtener información sobre un conjunto de archivos. Con este enfoque se logra un rendimiento mucho mejor que en el ejemplo anterior.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -133,7 +133,7 @@ Si realizas varias operaciones en objetos Windows.Storage, como `Windows.Storage
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>Almacenar en búfer entre flujos UWP y .NET
 
-En muchos escenarios, quizás quieras convertir una secuencia de UWP (como [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) o [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream)) en una secuencia de .NET ([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream)). Por ejemplo, esto es útil cuando escribes una aplicación para UWP y quieres usar código .NET ya existente que funcione en secuencias con el sistema de archivos de UWP. Para ello, las API de .NET para aplicaciones para UWP proporcionan métodos de extensión que te permiten convertir tipos de secuencias entre .NET y UWP. Para más información, consulta [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions).
+En muchos escenarios, quizás quieras convertir una secuencia de UWP (como [**Windows.Storage.Streams.IInputStream**](/uwp/api/Windows.Storage.Streams.IInputStream) o [**IOutputStream**](/uwp/api/Windows.Storage.Streams.IOutputStream)) en una secuencia de .NET ([**System.IO.Stream**](/dotnet/api/system.io.stream)). Por ejemplo, esto es útil cuando escribes una aplicación para UWP y quieres usar código .NET ya existente que funcione en secuencias con el sistema de archivos de UWP. Para ello, las API de .NET para aplicaciones para UWP proporcionan métodos de extensión que te permiten convertir tipos de secuencias entre .NET y UWP. Para más información, consulta [**WindowsRuntimeStreamExtensions**](/dotnet/api/system.io.windowsruntimestreamextensions).
 
 Cuando conviertes una secuencia de UWP en una de .NET, creas, de forma correcta, un adaptador para la secuencia subyacente de UWP. En algunas circunstancias, invocar métodos en flujos de UWP en tiempo de ejecución tiene asociado un coste. Esto puede afectar a la velocidad de la aplicación, especialmente en escenarios donde realizas varias operaciones pequeñas y frecuentes de lectura o escritura.
 
@@ -194,7 +194,7 @@ Este comportamiento de búfer es conveniente en la mayoría de los escenarios en
 
 ### <a name="working-with-large-data-sets"></a>Trabajar con grandes conjuntos de datos
 
-Cuando leas o escribas grandes conjuntos de datos, podrás aumentar tu velocidad de lectura o escritura si proporcionas un tamaño de búfer mayor a los métodos de extensión [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) y [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0). Esto le da al adaptador de secuencias un búfer interno de mayor tamaño. Por ejemplo, cuando se pasa un flujo de un archivo grande a un analizador XML, el analizador puede hacer varias lecturas secuenciales pequeñas del flujo. Un búfer grande puede reducir la cantidad de llamadas a la secuencia de UWP y aumentar el rendimiento.
+Cuando leas o escribas grandes conjuntos de datos, podrás aumentar tu velocidad de lectura o escritura si proporcionas un tamaño de búfer mayor a los métodos de extensión [**AsStreamForRead**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) y [**AsStream**](/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0). Esto le da al adaptador de secuencias un búfer interno de mayor tamaño. Por ejemplo, cuando se pasa un flujo de un archivo grande a un analizador XML, el analizador puede hacer varias lecturas secuenciales pequeñas del flujo. Un búfer grande puede reducir la cantidad de llamadas a la secuencia de UWP y aumentar el rendimiento.
 
 > **Nota**   Debes tener cuidado cuando configures un tamaño de búfer que sea mayor que aproximadamente 80 KB, ya que esto puede causar la fragmentación del montón del colector de elementos no usados (consulta [Mejorar el rendimiento de la recolección de elementos no usados](improve-garbage-collection-performance.md)). El siguiente ejemplo de código crea un adaptador de secuencias administradas con un búfer de 81.920 bytes.
 
@@ -208,7 +208,7 @@ Stream managedStream = nativeStream.AsStreamForRead(bufferSize: 81920);
 Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 ```
 
-Los métodos [**Stream.CopyTo**](https://docs.microsoft.com/dotnet/api/system.io.stream.copyto) y [**CopyToAsync**](https://docs.microsoft.com/dotnet/api/system.io.stream.copytoasync) también asignan un búfer local para copiar entre secuencias. Al igual que con el método de extensión [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), podrás obtener un mejor rendimiento para copiar secuencias grandes, al invalidar el tamaño del búfer predeterminado. El siguiente ejemplo de código demuestra cómo cambiar el tamaño del búfer predeterminado de una llamada a **CopyToAsync**.
+Los métodos [**Stream.CopyTo**](/dotnet/api/system.io.stream.copyto) y [**CopyToAsync**](/dotnet/api/system.io.stream.copytoasync) también asignan un búfer local para copiar entre secuencias. Al igual que con el método de extensión [**AsStreamForRead**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), podrás obtener un mejor rendimiento para copiar secuencias grandes, al invalidar el tamaño del búfer predeterminado. El siguiente ejemplo de código demuestra cómo cambiar el tamaño del búfer predeterminado de una llamada a **CopyToAsync**.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -236,6 +236,4 @@ Cuando trabajas con una gran cantidad de secuencias al mismo tiempo, es posible 
 
 Probablemente quieras evitar el almacenamiento en búfer, en el caso de escrituras y lecturas de latencia baja y en el caso de que no quieras leer en bloques grandes de un flujo subyacente de UWP. Por ejemplo, podrías querer escrituras y lecturas de latencia baja si estás usando el flujo de comunicaciones de red.
 
-En una aplicación de chat, podrías usar un flujo en una interfaz de red para enviar y recibir mensajes. En este caso quieres enviar mensajes tan pronto estén listos, en lugar de esperar a que el búfer se llene. Si estableces el tamaño del búfer en 0 cuando llames a los métodos de extensión [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) y [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0), el adaptador resultante no asignará un búfer y todas las llamadas manipularán directamente la secuencia de UWP subyacente.
-
-
+En una aplicación de chat, podrías usar un flujo en una interfaz de red para enviar y recibir mensajes. En este caso quieres enviar mensajes tan pronto estén listos, en lugar de esperar a que el búfer se llene. Si estableces el tamaño del búfer en 0 cuando llames a los métodos de extensión [**AsStreamForRead**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) y [**AsStream**](/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0), el adaptador resultante no asignará un búfer y todas las llamadas manipularán directamente la secuencia de UWP subyacente.

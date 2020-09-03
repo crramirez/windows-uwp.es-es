@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, directrices para los desa
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 824cdb74a809ae3f9ae2ed202a9889535021f711
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: cbaf2726e8f3e517fd0664c3d00b9a82ca018fbc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684726"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174419"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>Novedades de los documentos de los desarrolladores de Windows de agosto de 2017
 
@@ -32,7 +32,7 @@ Ya puedes obtener una vista previa del [XAML condicional](../debug-test-perf/con
 
 ### <a name="game-mode"></a>Modo Juego
 
-Las API [Modo Juego](https://docs.microsoft.com/previous-versions/windows/desktop/gamemode/game-mode-portal) para la Plataforma universal de Windows (UWP) te permiten crear la experiencia de juego más optimizada al aprovechar Modo Juego en Windows 10. Estas API se encuentran en el encabezado **&lt;expandedresources.h&gt;** .
+Las API [Modo Juego](/previous-versions/windows/desktop/gamemode/game-mode-portal) para la Plataforma universal de Windows (UWP) te permiten crear la experiencia de juego más optimizada al aprovechar Modo Juego en Windows 10. Estas API se encuentran en el encabezado **&lt;expandedresources.h&gt;** .
 
 ![Modo Juego](images/game-mode.png)
 
@@ -45,29 +45,29 @@ La [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-
 
 ### <a name="data-schemas-for-store-products"></a>Esquemas de datos para productos de Store
 
-Hemos agregado el artículo [Esquemas de datos para productos de la Store](../monetize/data-schemas-for-store-products.md). En este artículo se proporcionan esquemas para los datos relacionados con Microsoft Store disponibles para varios objetos en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store), incluidos [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) y [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense).
+Hemos agregado el artículo [Esquemas de datos para productos de la Store](../monetize/data-schemas-for-store-products.md). En este artículo se proporcionan esquemas para los datos relacionados con Microsoft Store disponibles para varios objetos en el espacio de nombres [Windows.Services.Store](/uwp/api/windows.services.store), incluidos [StoreProduct](/uwp/api/windows.services.store.storeproduct) y [StoreAppLicense](/uwp/api/windows.services.store.storeapplicense).
 
 ### <a name="desktop-bridge"></a>Puente de dispositivo de escritorio
 
 Hemos agregado dos guías que te ayudarán a agregar experiencias modernas que se mejoran para los usuarios de Windows 10.
 
-Consulta [Enhance your desktop application for Windows 10](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance) (Mejorar tu aplicación de escritorio para Windows 10) para encontrar y hacer referencia a los archivos correctos y, a continuación, escribe el código para mejorar las experiencias de UWP para los usuarios de Windows 10.  
+Consulta [Enhance your desktop application for Windows 10](/windows/apps/desktop/modernize/desktop-to-uwp-enhance) (Mejorar tu aplicación de escritorio para Windows 10) para encontrar y hacer referencia a los archivos correctos y, a continuación, escribe el código para mejorar las experiencias de UWP para los usuarios de Windows 10.  
 
-Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend) para incorporar modernas interfaces de usuario basadas en XAML y otras experiencias de UWP que deben ejecutarse en un contenedor de aplicación para UWP.
+Consulta [Ampliar tu aplicación de escritorio con componentes de UWP modernos](/windows/apps/desktop/modernize/desktop-to-uwp-extend) para incorporar modernas interfaces de usuario basadas en XAML y otras experiencias de UWP que deben ejecutarse en un contenedor de aplicación para UWP.
 
 ### <a name="getting-started-with-point-of-service"></a>Introducción al punto de servicio
 
-Hemos agregado una nueva guía para que te sirva de [introducción con los dispositivos de punto de servicio](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-get-started). Trata de temas como la enumeración de dispositivo, la comprobación de funcionalidades de dispositivo, la reclamación de dispositivos y el uso compartido de dispositivos. 
+Hemos agregado una nueva guía para que te sirva de [introducción con los dispositivos de punto de servicio](../devices-sensors/pos-get-started.md). Trata de temas como la enumeración de dispositivo, la comprobación de funcionalidades de dispositivo, la reclamación de dispositivos y el uso compartido de dispositivos. 
 
 ### <a name="xbox-live"></a>Xbox Live
 
 Hemos agregado documentos para los desarrolladores de Xbox Live, para juegos de UWP y de Kit de desarrollo de Xbox (XDK).
 
-Consulta [Xbox Live developer guide](https://docs.microsoft.com//gaming/xbox-live/index) (Guía para desarrolladores de Xbox Live) para obtener información sobre cómo usar las API de Xbox Live para conectar tu juego a la red social de juegos de Xbox Live.
+Consulta [Xbox Live developer guide](//gaming/xbox-live/index) (Guía para desarrolladores de Xbox Live) para obtener información sobre cómo usar las API de Xbox Live para conectar tu juego a la red social de juegos de Xbox Live.
 
-Con el [Programa de creadores de Xbox Live](https://docs.microsoft.com//gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators), cualquier desarrollador de juegos de UWP puede desarrollar y publicar un juego habilitado para Xbox Live en PC y Xbox One.
+Con el [Programa de creadores de Xbox Live](//gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators), cualquier desarrollador de juegos de UWP puede desarrollar y publicar un juego habilitado para Xbox Live en PC y Xbox One.
 
-Consulta la [información general del programa de desarrollador de Xbox Live](https://docs.microsoft.com//gaming/xbox-live/developer-program-overview) para obtener información sobre los programas y características disponibles para los desarrolladores de Xbox Live.
+Consulta la [información general del programa de desarrollador de Xbox Live](//gaming/xbox-live/developer-program-overview) para obtener información sobre los programas y características disponibles para los desarrolladores de Xbox Live.
 
 ## <a name="videos"></a>Vídeos
 

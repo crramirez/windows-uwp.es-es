@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ae8094ac3fbb1de8958b1cc138953d3e1b887cc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b414a1177bbfad670e3b623babce068a299a713e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970390"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172605"
 ---
 # <a name="masterdetails-pattern"></a>Patrón de master y detalles
 
@@ -21,7 +21,7 @@ ms.locfileid: "82970390"
 
 El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y correo electrónico.
 
-> **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
+> **API importantes**: [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
 
@@ -91,7 +91,7 @@ Para implementar un patrón de maestro y detalles para cualquier tamaño de pant
 ![diseño adaptativo de vista maestra y detalles](images/patterns_masterdetail.png)
 
 ### <a name="create-an-adaptive-masterdetails-pattern"></a>Crear un patrón adaptativo de maestro y detalles
-Para crear un diseño adaptativo, define diferentes [**VisualStates**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate) para la interfaz de usuario y declara puntos de interrupción para los distintos estados con [**AdaptiveTriggers**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
+Para crear un diseño adaptativo, define diferentes [**VisualStates**](/uwp/api/windows.ui.xaml.visualstate) para la interfaz de usuario y declara puntos de interrupción para los distintos estados con [**AdaptiveTriggers**](/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
@@ -110,5 +110,5 @@ Los siguientes ejemplos implementan el patrón de maestro y detalles con diseño
 - [Listas](lists.md)
 - [Búsqueda](search.md)
 - [Barras de la aplicación y de comandos](app-bars.md)
-- [Clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [Clase SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
+- [Clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Clase SplitView](/uwp/api/windows.ui.xaml.controls.splitview)

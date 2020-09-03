@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, concurrency, async, asynchronous, asynchrony
 ms.localizationpriority: medium
-ms.openlocfilehash: ff00264d0806e7fbdfcabd000ec68857b1485dcd
-ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
+ms.openlocfilehash: e916465d664b5658eeb155874dfa00795a772622
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87296148"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170399"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>Simultaneidad y asincronía más avanzadas con C++/WinRT
 
@@ -24,7 +24,7 @@ Una corrutina es una función como cualquier otra en la que se bloquea al autor 
 
 Antes de hacer un trabajo unido al cálculo en una corrutina, deberás devolver la ejecución al autor de la llamada para que no se bloquee (en otras palabras, introducir un punto de suspensión). Si aún no lo estás haciendo mediante la aplicación de `co_await` en alguna otra operación, puedes aplicar `co_await` en la función [**winrt::resume_background**](/uwp/cpp-ref-for-winrt/resume-background). Esto devuelve el control al autor de la llamada y reanuda inmediatamente la ejecución en un subproceso del grupo de subprocesos.
 
-El grupo de subprocesos que se va a usar en la implementación es el [grupo de subprocesos de Windows](https://docs.microsoft.com/windows/desktop/ProcThread/thread-pool-api) de bajo nivel, por lo que es eficaz en forma óptima.
+El grupo de subprocesos que se va a usar en la implementación es el [grupo de subprocesos de Windows](/windows/desktop/ProcThread/thread-pool-api) de bajo nivel, por lo que es eficaz en forma óptima.
 
 ```cppwinrt
 IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
@@ -639,7 +639,7 @@ int main()
 }
 ```
 
-La estructura **winrt::fire_and_forget** también resulta útil como el tipo de valor devuelto del controlador de eventos cuando necesites realizar operaciones asincrónicas en él. Este es un ejemplo (consulta también [Referencias fuertes y débiles de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine)).
+La estructura **winrt::fire_and_forget** también resulta útil como el tipo de valor devuelto del controlador de eventos cuando necesites realizar operaciones asincrónicas en él. Este es un ejemplo (consulta también [Referencias fuertes y débiles de C++/WinRT](./weak-references.md#safely-accessing-the-this-pointer-in-a-class-member-coroutine)).
 
 ```cppwinrt
 winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, MediaBindingEventArgs args)

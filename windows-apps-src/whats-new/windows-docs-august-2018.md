@@ -5,12 +5,12 @@ keywords: novedades, actualización, actualizaciones, características, instrucc
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 723cae783ba16fe5be9bb2076f96d4a5f823d733
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: eb6900b4d5ad529ee2e94f09439dda6abcaebac8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258839"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174399"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novedades en los documentos para desarrolladores de Windows de agosto de 2018
 
@@ -24,7 +24,7 @@ La documentación para desarrolladores de Windows se actualiza constantemente co
 
 Se agregaron las siguientes características a las compilaciones de Windows Insider Preview, disponibles a través del Programa [Windows Insider](https://insider.windows.com/).
 
-* La [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) es un conjunto de paquetes NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con las versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tienen la versión más reciente del sistema operativo.
+* La [Biblioteca de interfaz de usuario de Windows](/uwp/toolkits/winui/) es un conjunto de paquetes NuGet que proporcionan controles y otros elementos de interfaz de usuario para aplicaciones para UWP. Estos paquetes también son compatibles con las versiones anteriores de Windows 10, por lo que la aplicación funciona incluso si los usuarios no tienen la versión más reciente del sistema operativo.
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [SplitButton](../design/controls-and-patterns/buttons.md#create-a-split-button), [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) proporcionan controles de botón con características especializadas para mejorar la interfaz de usuario de la aplicación.
 
@@ -38,7 +38,7 @@ Se agregaron las siguientes características a las compilaciones de Windows Insi
 
 El marco de compatibilidad de paquete es un kit de código abierto que te ayuda a aplicar correcciones a tu aplicación Win32 cuando no tienes acceso al código fuente, para que pueda ejecutarse en un contenedor de MSIX.
 
-Para conocer más detalles, consulta [Apply runtime fixes to an MSIX package by using the Package Support Framework](../porting/package-support-framework.md) (Aplicar correcciones en tiempo de ejecución a un paquete MSIX mediante el Marco de compatibilidad de paquete).
+Para conocer más detalles, consulta [Apply runtime fixes to an MSIX package by using the Package Support Framework](/windows/msix/psf/package-support-framework) (Aplicar correcciones en tiempo de ejecución a un paquete MSIX mediante el Marco de compatibilidad de paquete).
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
@@ -52,7 +52,7 @@ Hemos agregado 250 listados de código de [C++/WinRT](../cpp-and-winrt-apis/inde
 
 ### <a name="project-rome"></a>Project Rome
 
-El sitio de [documentos de Proyecto Roma](https://docs.microsoft.com/windows/project-rome/) se ha reorganizado con un enfoque centrado en las características. Gracias a este cambio, los desarrolladores ahora deberían encontrar lo que buscan e implementar las características que elijan en varias plataformas con mayor facilidad.
+El sitio de [documentos de Proyecto Roma](/windows/project-rome/) se ha reorganizado con un enfoque centrado en las características. Gracias a este cambio, los desarrolladores ahora deberían encontrar lo que buscan e implementar las características que elijan en varias plataformas con mayor facilidad.
 
 ## <a name="videos"></a>Vídeos
 

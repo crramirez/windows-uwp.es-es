@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fca2695cbb57375964beff0f8a3fd9be603228c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5c5784490da53f15f4b7ac79d83b59391031748d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968930"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173569"
 ---
 # <a name="check-boxes"></a>Casillas
 
@@ -29,7 +29,7 @@ Una casilla se usa para seleccionar o anular la selección de elementos de acci�
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de plataforma:** [clase CheckBox](/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [evento Checked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [propiedad IsChecked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
 
@@ -71,7 +71,7 @@ Ambos controles **Casilla** y **Botón de radio** permiten que el usuario pueda 
 
 ## <a name="create-a-checkbox"></a>Crear una casilla
 
-Para asignar una etiqueta a la casilla, establece la propiedad [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content). La etiqueta se muestra junto a la casilla.
+Para asignar una etiqueta a la casilla, establece la propiedad [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content). La etiqueta se muestra junto a la casilla.
 
 Este código XAML crea una casilla que se usa para aceptar los términos del servicio antes de poder enviar un formulario. 
 
@@ -89,14 +89,14 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### <a name="bind-to-ischecked"></a>Enlazar a IsChecked
 
-Usa la propiedad [IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) para determinar si la casilla está activada o desactivada. Puedes enlazar el valor de la propiedad IsChecked en otro valor binario.
-Sin embargo, dado que IsChecked es un valor booleano [que acepta valores NULL](https://docs.microsoft.com/dotnet/api/system.nullable-1), debes usar una conversión o un convertidor de valores para enlazarlo a una propiedad booleana. Depende del tipo de enlace real que estés usando. Encontrarás ejemplos a continuación para cada tipo posible. 
+Usa la propiedad [IsChecked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) para determinar si la casilla está activada o desactivada. Puedes enlazar el valor de la propiedad IsChecked en otro valor binario.
+Sin embargo, dado que IsChecked es un valor booleano [que acepta valores NULL](/dotnet/api/system.nullable-1), debes usar una conversión o un convertidor de valores para enlazarlo a una propiedad booleana. Depende del tipo de enlace real que estés usando. Encontrarás ejemplos a continuación para cada tipo posible. 
 
-En este ejemplo, la propiedad **IsChecked** de la casilla para aceptar los términos de servicio está enlazada a la propiedad [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) de un botón Enviar. El botón Enviar se habilita únicamente si se han aceptado los términos del servicio.
+En este ejemplo, la propiedad **IsChecked** de la casilla para aceptar los términos de servicio está enlazada a la propiedad [IsEnabled](/uwp/api/windows.ui.xaml.controls.control.isenabled) de un botón Enviar. El botón Enviar se habilita únicamente si se han aceptado los términos del servicio.
 
 #### <a name="using-xbind"></a>Uso de x:Bind
 
-> Nota&nbsp;&nbsp;Aquí solo mostramos el código pertinente. Para obtener más información sobre el enlace de datos, consulta [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md). La información específica de {x:Bind} (como la conversión) se detalla [aquí](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension).
+> Nota&nbsp;&nbsp;Aquí solo mostramos el código pertinente. Para obtener más información sobre el enlace de datos, consulta [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md). La información específica de {x:Bind} (como la conversión) se detalla [aquí](../../xaml-platform/x-bind-markup-extension.md).
 
 ```xaml
 <StackPanel Grid.Column="2" Margin="40">
@@ -106,7 +106,7 @@ En este ejemplo, la propiedad **IsChecked** de la casilla para aceptar los térm
 </StackPanel>
 ```
 
-Si la casilla también puede estar en el estado **indeterminado**, usamos la propiedad [FallbackValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.fallbackvalue) del enlace para especificar el valor booleano que representa este estado. En este caso, no queremos tener el botón Enviar también habilitado:
+Si la casilla también puede estar en el estado **indeterminado**, usamos la propiedad [FallbackValue](/uwp/api/windows.ui.xaml.data.binding.fallbackvalue) del enlace para especificar el valor booleano que representa este estado. En este caso, no queremos tener el botón Enviar también habilitado:
 
 ```xaml
 <Button Content="Submit" 
@@ -157,7 +157,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 
 ### <a name="handle-click-and-checked-events"></a>Controlar eventos Click y Checked
 
-Para realizar una acción cuando cambia el estado de la casilla, puedes controlar el evento [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), o bien los eventos [Checked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) y [Unchecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.unchecked). 
+Para realizar una acción cuando cambia el estado de la casilla, puedes controlar el evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), o bien los eventos [Checked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) y [Unchecked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.unchecked). 
 
 El evento **Click** se produce siempre que cambia el estado de activación. Si controlas el evento Click, usa la propiedad **IsChecked** para determinar el estado de la casilla.
 
@@ -210,7 +210,7 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 
 ### <a name="use-the-indeterminate-state"></a>Usar el estado indeterminado
 
-El control CheckBox hereda del elemento [ToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) y puede tener tres estados: 
+El control CheckBox hereda del elemento [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) y puede tener tres estados: 
 
 Estado | Propiedad | Value
 ------|----------|------
@@ -218,7 +218,7 @@ activado | IsChecked | **true**
 sin activar | IsChecked | **false** 
 indeterminado | IsChecked | **null** 
 
-Para que la casilla notifique el estado indeterminado, debes establecer la propiedad [IsThreeState](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.isthreestate) como **true**. 
+Para que la casilla notifique el estado indeterminado, debes establecer la propiedad [IsThreeState](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.isthreestate) como **true**. 
 
 Cuando se pueden agrupar las opciones, puedes usar una casilla indeterminada para representar todo el grupo. Usa el estado indeterminado de la casilla cuando un usuario selecciona algunos, pero no todos los elementos secundarios del grupo.
 
@@ -331,6 +331,6 @@ private void SetCheckedState()
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
+- [Clase CheckBox](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
 - [Botones de radio](radio-button.md)
 - [Modificador para alternar](toggles.md)

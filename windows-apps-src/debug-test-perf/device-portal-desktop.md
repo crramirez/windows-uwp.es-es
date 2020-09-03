@@ -6,12 +6,12 @@ ms.date: 08/20/2020
 ms.topic: article
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
-ms.openlocfilehash: dc3ca2379ae7dd704d96e383cc02314ee9423fb7
-ms.sourcegitcommit: 508fb9e763aa5967beebf7bf5e77d7ad12baa566
+ms.openlocfilehash: e485fcb5d6ca6ecf8c19124c482492ddfb2c5233
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714494"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173609"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de dispositivos para dispositivos de escritorio Windows
 
@@ -34,7 +34,7 @@ Puedes usar Device Portal para lo siguiente:
 A partir de Windows 10, versión 1607, algunas de las características más recientes para equipos de escritorio solo están disponibles cuando se habilita el modo de desarrollador. Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
 
 > [!IMPORTANT]
-> En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instala correctamente en el dispositivo. Consulta la [sección correspondiente de Habilitar el dispositivo para el desarrollo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#failure-to-install-developer-mode-package) con el fin de obtener ayuda para solucionar estos problemas.
+> En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instala correctamente en el dispositivo. Consulta la [sección correspondiente de Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md#failure-to-install-developer-mode-package) con el fin de obtener ayuda para solucionar estos problemas.
 
 ### <a name="turn-on-device-portal"></a>Activación del Portal de dispositivos
 
@@ -117,11 +117,11 @@ Desde un símbolo del sistema administrativo, puedes habilitar y configurar comp
 - `-DeleteSSL` 
     - Esto restablece la memoria caché de certificado SSL usada para las conexiones HTTPS. Si se producen errores de conexión de TLS que no se pueden ignorar (en lugar de la advertencia de certificado esperada), esta opción puede solucionar el problema automáticamente. 
 - `-SetCert <pfxPath> <pfxPassword>`
-    - Consulta [Aprovisionar el Portal de dispositivos con un certificado SSL personalizado](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-ssl) para obtener detalles.  
+    - Consulta [Aprovisionar el Portal de dispositivos con un certificado SSL personalizado](./device-portal-ssl.md) para obtener detalles.  
     - Esto te permite instalar tu propio certificado SSL para corregir la página de advertencia de SSL que se ve normalmente en el Portal de dispositivos. 
 - `-Debug <various options for authentication, port selection, and tracing level>`
-    - Ejecuta una versión independiente del Portal de dispositivos con una configuración específica y mensajes de depuración visibles. Esto resulta muy útil para crear un [complemento empaquetado](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin). 
-    - Consulta el [artículo de MSDN Magazine](https://msdn.microsoft.com/magazine/mt826332.aspx) para obtener más información acerca de cómo ejecutar esto como un sistema con el fin de probar completamente el complemento empaquetado.
+    - Ejecuta una versión independiente del Portal de dispositivos con una configuración específica y mensajes de depuración visibles. Esto resulta muy útil para crear un [complemento empaquetado](./device-portal-plugin.md). 
+    - Consulta el [artículo de MSDN Magazine](/archive/msdn-magazine/2017/october/windows-device-portal-write-a-windows-device-portal-packaged-plug-in) para obtener más información acerca de cómo ejecutar esto como un sistema con el fin de probar completamente el complemento empaquetado.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
@@ -150,4 +150,4 @@ Si usas una conexión a Internet de uso medido, puede que recibas este error. No
 ## <a name="see-also"></a>Vea también
 
 * [Introducción al Portal de dispositivos Windows](device-portal.md)
-* [Referencia de API principal de Device Portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Referencia de API principal de Device Portal](./device-portal-api-core.md)

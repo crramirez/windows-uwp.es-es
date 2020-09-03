@@ -6,12 +6,12 @@ ms.date: 01/03/2019
 ms.topic: article
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
-ms.openlocfilehash: 059ce14f85ebe7d955ba2da8897ab47109f74a72
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5cf8dc0912420895091815e54f6399235fca552f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79401974"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173589"
 ---
 # <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
@@ -21,8 +21,8 @@ ms.locfileid: "79401974"
 ### <a name="enable-device-portal"></a>Habilitar Device Portal
 
 1. Enciende HoloLens y colócalo en el dispositivo.
-2. Realiza el [gesto Inicio](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) o de [eclosión](https://developer.microsoft.com/mixed-reality#Bloom) para HoloLens (1.ª generación) para iniciar el menú principal.
-3. Mira el icono **Configuración** y realiza el gesto de [pulsación](https://developer.microsoft.com/mixed-reality#Press_and_release) en HoloLens (1.ª generación) o selecciónalo en HoloLens 2 [tocándolo o usando un haz de mano](https://docs.microsoft.com/hololens/hololens2-basic-usage). La aplicación Configuración se iniciará una vez la hayas seleccionado.
+2. Realiza el [gesto Inicio](/hololens/hololens2-basic-usage#start-gesture) o de [eclosión](https://developer.microsoft.com/mixed-reality#Bloom) para HoloLens (1.ª generación) para iniciar el menú principal.
+3. Mira el icono **Configuración** y realiza el gesto de [pulsación](https://developer.microsoft.com/mixed-reality#Press_and_release) en HoloLens (1.ª generación) o selecciónalo en HoloLens 2 [tocándolo o usando un haz de mano](/hololens/hololens2-basic-usage). La aplicación Configuración se iniciará una vez la hayas seleccionado.
 4. Selecciona el elemento de menú **Actualizar**.
 5. Selecciona el elemento de menú **Para desarrolladores**.
 6. Habilita el **Modo de desarrollador**.
@@ -177,5 +177,5 @@ Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el e
 ## <a name="see-also"></a>Consulta también
 
 * [Introducción a Windows Device Portal](device-portal.md)
-* [Referencia de API principal del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core) (API comunes a todos los dispositivos Windows 10)
-* [Referencia de API de realidad mixta del Portal de dispositivos](https://docs.microsoft.com/windows/mixed-reality/device-portal-api-reference) (lista ampliada de todas las API REST disponibles para HoloLens)
+* [Referencia de API principal del Portal de dispositivos](./device-portal-api-core.md) (API comunes a todos los dispositivos Windows 10)
+* [Referencia de API de realidad mixta del Portal de dispositivos](/windows/mixed-reality/device-portal-api-reference) (lista ampliada de todas las API REST disponibles para HoloLens)

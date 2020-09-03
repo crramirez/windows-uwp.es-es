@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bdd18fea2fe563fcee835e6b61e24d6a9b03d029
-ms.sourcegitcommit: f945df77f8a19961ba053ee62e593ec8e015038f
+ms.openlocfilehash: f7f273f3eb92efd30b432691f9faa05db0d6d013
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82989821"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173509"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de la barra de comandos
 
@@ -36,13 +36,13 @@ El control flotante de la barra de comandos tiene dos modos de presentación: *c
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **CommandBarFlyout** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **CommandBarFlyout** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 >**API de la biblioteca de interfaz de usuario de Windows**: [Clase CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 >
 >**API de plataforma**: [Clase CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [clase AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
 >
-> CommandBarFlyout requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
+> CommandBarFlyout requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o la [Biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/).
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -160,7 +160,7 @@ También puedes agregar comandos a la colección **SecondaryCommands**. Los coma
 
 ### <a name="app-bar-buttons"></a>Botones de la barra de la aplicación
 
-Puedes rellenar las propiedades PrimaryCommands y SecondaryCommands directamente con los controles [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) y [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator).
+Puedes rellenar las propiedades PrimaryCommands y SecondaryCommands directamente con los controles [AppBarButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) y [AppBarSeparator](/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator).
 
 Los controles de botón de la barra de la aplicación se caracterizan por un icono y una etiqueta de texto. Estos controles están optimizados para usarse en una barra de comandos y su aspecto cambia en función de si se muestra el control en la barra de comandos o el menú de desbordamiento.
 
@@ -181,7 +181,7 @@ En este caso, se usa un elemento AppBarElementContainer para agregar elementos a
 > [!TIP]
 > De manera predeterminada, los elementos diseñados para el lienzo de la aplicación podrían no resultar adecuados en una barra de comandos. Cuando se agrega un elemento mediante AppBarElementContainer, se deben seguir algunos pasos para hacer que el elemento coincida con otros elementos de la barra de comandos:
 >
-> - Invalida los pinceles predeterminados con [estilo ligero](/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling) para hacer que el fondo y el borde del elemento coincidan con los botones de la barra de la aplicación.
+> - Invalida los pinceles predeterminados con [estilo ligero](./xaml-styles.md#lightweight-styling) para hacer que el fondo y el borde del elemento coincidan con los botones de la barra de la aplicación.
 > - Ajusta el tamaño y la posición del elemento.
 > - Ajusta los iconos en un Viewbox con un ancho y alto de 16px.
 
@@ -418,4 +418,4 @@ No se puede personalizar TextCommandBarFlyout y cada control de texto lo adminis
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Conceptos básicos de diseño de comandos para aplicaciones de Windows](../basics/commanding-basics.md)
-- [Clase CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)
+- [Clase CommandBar](/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

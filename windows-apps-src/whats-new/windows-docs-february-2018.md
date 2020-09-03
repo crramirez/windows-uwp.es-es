@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, instrucciones para desarr
 ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cac61f398fff17ecfb824f2d869364097f38d5d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5277f3a35fc4390c8000bd13782cc9c71995677f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258818"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174379"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novedades en los documentos para desarrolladores de Windows de febrero de 2018
 
@@ -73,4 +73,4 @@ Los iniciadores de 3D proporcionan una manera única para los usuarios de coloca
 
 ### <a name="motion-controller-tracking"></a>Seguimiento del controlador de movimiento
 
-Los controladores de movimiento representan las manos de un usuario en Windows Mixed Reality. [Mira el vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para obtener información sobre el funcionamiento de los controladores de movimiento cuando se encuentran tanto dentro como fuera del campo de visión de los auriculares de Mixed Reality y [lee más información acerca del seguimiento del controlador aquí.](https://docs.microsoft.com/windows/mixed-reality/motion-controllers#controller_tracking_state%E2%80%9D)
+Los controladores de movimiento representan las manos de un usuario en Windows Mixed Reality. [Mira el vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para obtener información sobre el funcionamiento de los controladores de movimiento cuando se encuentran tanto dentro como fuera del campo de visión de los auriculares de Mixed Reality y [lee más información acerca del seguimiento del controlador aquí.](/windows/mixed-reality/motion-controllers#controller_tracking_state%E2%80%9D)

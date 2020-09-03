@@ -8,12 +8,12 @@ ms.date: 08/07/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 418c33952c4be6be08683b5e396f423f771bb997
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: e3fcbcaa88fa39795ac078617c9a958ff3a997ac
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502389"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173989"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
@@ -27,7 +27,7 @@ Estos son ejemplos de opciones de la aplicación que pertenecen a una página de
 - Opciones que dependen de las preferencias del usuario, como música, efectos de sonido o temas de colores.
 - La información sobre la aplicación a la que no se tiene acceso muy a menudo, como la directiva de privacidad, la ayuda, la versión de la aplicación o la información de copyright.
 
-Los comandos que forman parte del flujo de trabajo habitual de la aplicación (por ejemplo, cambiar el tamaño del pincel en una aplicación de dibujo) no deben estar en una página de configuración. Para obtener información sobre la colocación de los comandos, consulta los [Conceptos básicos del diseño de comandos](https://docs.microsoft.com/windows/uwp/layout/commanding-basics).
+Los comandos que forman parte del flujo de trabajo habitual de la aplicación (por ejemplo, cambiar el tamaño del pincel en una aplicación de dibujo) no deben estar en una página de configuración. Para obtener información sobre la colocación de los comandos, consulta los [Conceptos básicos del diseño de comandos](../basics/commanding-basics.md).
 
 ## <a name="general-recommendations"></a>Recomendaciones generales
 
@@ -125,17 +125,17 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
     - [Hipervínculos](../controls-and-patterns/hyperlinks.md): para dirigir a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
     - [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante de configuración actual.
 - Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
-- Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) o [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition), con un desplazamiento izquierdo de 100 píxeles.
+- Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](/previous-versions/windows/apps/br212672(v=win.10)) o [**EntranceThemeTransition**](/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition), con un desplazamiento izquierdo de 100 píxeles.
 - Usa encabezados de sección, párrafos y etiquetas para ayudar a organizar y aclarar el contenido, si fuera necesario.
 - Si necesitas repetir la configuración, usa un nivel adicional de interfaz de usuario o un modelo de expandir/contraer, pero evita las jerarquías de más de dos niveles. Por ejemplo, una aplicación sobre el clima que proporciona una configuración por ciudad podría enumerar las ciudades y permitir que el usuario pulse sobre la ciudad para abrir un control flotante nuevo o expandirse para mostrar las opciones de configuración.
-- Si la carga de controles o de contenido web tarda, usa un control de progreso indeterminado para indicar al usuario que se está cargando la información. Para obtener más información, consulta [Directrices sobre controles de progreso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls).
+- Si la carga de controles o de contenido web tarda, usa un control de progreso indeterminado para indicar al usuario que se está cargando la información. Para obtener más información, consulta [Directrices sobre controles de progreso](../controls-and-patterns/progress-controls.md).
 - No uses botones para la navegación o para confirmar cambios. Usa hipervínculos para ir a otras páginas y, en lugar de usar un botón para confirmar los cambios, guárdalos automáticamente en la configuración de la aplicación cuando el usuario descarte el control flotante de configuración.
 
 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Conceptos básicos del diseño de los comandos](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
-* [Directrices sobre controles de progreso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
-* [Almacenar y recuperar datos de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)
+* [Conceptos básicos del diseño de los comandos](../basics/commanding-basics.md)
+* [Directrices sobre controles de progreso](../controls-and-patterns/progress-controls.md)
+* [Almacenar y recuperar datos de la aplicación](./store-and-retrieve-app-data.md)
+* [**EntranceThemeTransition**](/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)

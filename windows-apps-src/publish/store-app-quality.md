@@ -6,12 +6,12 @@ ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: B15D4F19-4E6A-4C27-AD64-F03014D11BA9
-ms.openlocfilehash: d093a7b49a8c5ac00ca927614365d1b548e2f63a
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: ae4ade3cd7bef5434c8f5c9d9c6905c039e7e806
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77607258"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172849"
 ---
 # <a name="app-quality"></a>Calidad de la aplicación
 
@@ -42,7 +42,7 @@ Asegúrese de que el **título** sea informativo y fácil de recordar. Un títul
 
 - Sea distintivo y original. Por ejemplo, un título que sea una variación ortográfica de otra aplicación puede provocar confusión y un título único puede ayudar a que su aplicación destaque.
 - Elija un título que sea informativo. Por ejemplo, "Mi primera aplicación" o "Aplicación cliente" son demasiado genéricos.
-- Eche un vistazo al artículo [Elegir el nombre de la aplicación](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name#choosing-your-apps-name) para obtener más ideas útiles sobre títulos.
+- Eche un vistazo al artículo [Elegir el nombre de la aplicación](./create-your-app-by-reserving-a-name.md#choosing-your-apps-name) para obtener más ideas útiles sobre títulos.
 
 La **descripción** le permite describir las características principales de la aplicación. Haga que sea clara, nítida y atractiva.
 
@@ -51,7 +51,7 @@ La **descripción** le permite describir las características principales de la 
 - Enumere las características de la aplicación en la sección de características de los metadatos y resuma las mejores características en la descripción de la aplicación para que los clientes sepan lo que obtendrán. Por ejemplo, no solo enumere los planetas cuando describa su aplicación de astronomía; informe a los clientes sobre la característica especial de seguimiento por satélite de la aplicación. En segmentos abarrotados de Store, haga un esfuerzo adicional para indicar a los clientes que la aplicación es diferente y mejor.
 - Cuéntele a los clientes la verdad. Describa lo que hay realmente en la aplicación. Por ejemplo, no informe a los clientes sobre las características que aún no están disponibles en la aplicación (a menos que las identifique como planeadas).
 - Si la aplicación depende de otra aplicación para que funcione, indíquelo al principio de la descripción. Esto permitirá a los clientes saber qué otro software y aplicaciones necesitan para usar la aplicación.
-- Para obtener sugerencias muy útiles al respecto, consulte el artículo [Escribir una excelente descripción de la aplicación](https://docs.microsoft.com/windows/uwp/publish/write-a-great-app-description).
+- Para obtener sugerencias muy útiles al respecto, consulte el artículo [Escribir una excelente descripción de la aplicación](./write-a-great-app-description.md).
 
 Las **Capturas de pantalla** y los **Tráileres** suponen la oportunidad de ofrecer a los clientes una vista previa de la increíble funcionalidad de la aplicación. Úselas habilidosamente para hacer valer la calidad de la aplicación:
 
@@ -88,4 +88,4 @@ Los clientes valoran la atención a sus comentarios y necesidades. Los clientes 
 ### <a name="see-also"></a>Consulta también
 
 - [Código de conducta y directivas de Microsoft Store](store-policies-and-code-of-conduct.md)
-- [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
+- [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement)

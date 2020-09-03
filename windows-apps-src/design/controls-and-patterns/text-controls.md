@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f2421316be30d24ef44784974fc2c6c199a6570
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9b06767e5009a4d7654fa7937498319a1bbed671
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081485"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173889"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -25,7 +25,7 @@ Los controles de texto constan de cuadros de entrada de texto, cuadros de contra
 - Los controles para mostrar texto de solo lectura son [TextBlock](text-block.md) y [RichTextBlock](rich-text-block.md).
 - Los controles de entrada de texto y edición son: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md) y [PasswordBox](password-box.md).
 
-> **API importantes**: [Clase TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [Clase RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Clase RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Clase AutoSuggestBox ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) y [Clase PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+> **API importantes**: [Clase TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [Clase RichTextBlock](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [Clase TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Clase RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Clase AutoSuggestBox ](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) y [Clase PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -35,17 +35,17 @@ El control de texto que uses dependerá del escenario. Usa esta información par
 
 Usa un **TextBlock** para mostrar la mayor parte del texto de solo lectura en la aplicación. Puedes usarlo para mostrar texto de una o varias líneas, hipervínculos en línea y texto con formato como, por ejemplo, negrita, cursiva o subrayado.
 
-TextBlock suele ser más fácil de usar y proporciona mejor rendimiento de representación de texto que RichTextBlock, por lo que es preferible para gran parte del texto de la interfaz de usuario de la aplicación. Puedes acceder fácilmente y usar texto de un TextBlock en tu aplicación obteniendo el valor de la propiedad [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text).
+TextBlock suele ser más fácil de usar y proporciona mejor rendimiento de representación de texto que RichTextBlock, por lo que es preferible para gran parte del texto de la interfaz de usuario de la aplicación. Puedes acceder fácilmente y usar texto de un TextBlock en tu aplicación obteniendo el valor de la propiedad [Text](/uwp/api/windows.ui.xaml.controls.textblock.text).
 
 También proporciona muchas de las mismas opciones de formato para personalizar la representación del texto. Aunque puedes incluir saltos de línea en el texto, TextBlock está diseñado para mostrar un único párrafo y no admite la sangría del texto.
 
 Usa un **RichTextBlock** si necesitas admitir varios párrafos, texto de varias columnas u otros diseños de texto complejos, o elementos de interfaz de usuario en línea, como imágenes. RichTextBlock proporciona varias características de diseño de texto avanzado.
 
-La propiedad de contenido de RichTextBlock es la propiedad [Blocks](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.blocks), que admite el texto basado en párrafos a través del elemento [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph). No tiene una propiedad **Text** que puedas usar para obtener acceso con facilidad a contenido de texto del control en la aplicación.  
+La propiedad de contenido de RichTextBlock es la propiedad [Blocks](/uwp/api/windows.ui.xaml.controls.richtextblock.blocks), que admite el texto basado en párrafos a través del elemento [Paragraph](/uwp/api/Windows.UI.Xaml.Documents.Paragraph). No tiene una propiedad **Text** que puedas usar para obtener acceso con facilidad a contenido de texto del control en la aplicación.  
 
 ### <a name="text-input"></a>Entrada de texto
 
-Usa un control **TextBox** para permitir al usuario escribir y editar texto sin formato, como en un formulario. Puedes usar la propiedad [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) para obtener el texto y establecerlo en un control TextBox.
+Usa un control **TextBox** para permitir al usuario escribir y editar texto sin formato, como en un formulario. Puedes usar la propiedad [Text](/uwp/api/windows.ui.xaml.controls.textbox.text) para obtener el texto y establecerlo en un control TextBox.
 
 Puedes hacer que un control TextBox sea de solo lectura, pero este debe ser un estado temporal y condicional. Si el texto nunca es editable, considera la posibilidad de usar un TextBlock en su lugar.
 
@@ -64,7 +64,7 @@ Hay muchas maneras de obtener la entrada del usuario en la aplicación. Estas pr
 -   **¿Resulta práctico enumerar eficientemente todos los valores válidos?** De ser así, deberías usar uno de los controles de selección, como una [casilla](checkbox.md), una [lista desplegable](lists.md), un [botón de radio](radio-button.md), un [control deslizante](slider.md), un [modificador para alternar](toggles.md), un [selector de fecha](date-and-time.md) o un selector de hora.
 -   **¿Existe un conjunto reducido de valores válidos?** Si es así, considera la posibilidad de usar una [lista desplegable](lists.md) o un cuadro de lista, especialmente si la longitud de los valores supera los pocos caracteres.
 -   **¿Los datos válidos no tienen absolutamente ninguna restricción? ¿O están los datos válidos restringidos solo por el formato (restricción de longitud o tipos de caracteres)?** Si es así, usa un control de entrada de texto. Puedes limitar el número de caracteres que se pueden especificar y puedes validar el formato en el código de la aplicación.
--   **¿Representa el valor un tipo de datos que tiene un control común especializado?** Si es así, usa el control adecuado en lugar de un control de entrada de texto. Por ejemplo, usa un [DatePicker](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)) en lugar de un control de entrada de texto para aceptar una entrada de fecha.
+-   **¿Representa el valor un tipo de datos que tiene un control común especializado?** Si es así, usa el control adecuado en lugar de un control de entrada de texto. Por ejemplo, usa un [DatePicker](/previous-versions/windows/apps/br211681(v=win.10)) en lugar de un control de entrada de texto para aceptar una entrada de fecha.
 -   Si los datos son estrictamente numéricos:
     -   **¿El valor introducido es aproximado y/o relativo a otra cantidad mostrada en la misma página?** De ser así, usa un [control deslizante](slider.md).
     -   **¿Sería bueno que el usuario recibiera una respuesta instantánea del efecto de los cambios en la configuración?** De ser así, usa un [control deslizante](slider.md), posiblemente con un control adjunto.
@@ -135,12 +135,12 @@ Para ayudar a los usuarios a escribir datos con el teclado táctil o con el pane
 
 El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario pulsa un campo de entrada editable, como TextBox o RichEditBox. Para que los usuarios puedan escribir datos en la aplicación de forma mucho más rápida y sencilla, establece el ámbito de entrada del control de texto para que coincida con el tipo de datos que esperas que escriba el usuario. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar un diseño de táctil especializado para el tipo de entrada.
 
-Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 dígitos, establece la propiedad [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) en **Number**. Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la entrada del PIN.
+Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 dígitos, establece la propiedad [InputScope](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) en **Number**. Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la entrada del PIN.
 
 >Importante  
 >El ámbito de entrada no implica que se realice ninguna validación de entrada y tampoco impide que el usuario proporcione cualquier entrada a través de un teclado de hardware u otro dispositivo de entrada. Sigues siendo responsable de la validación de la entrada en el código, según sea necesario.
 
-Para obtener más información, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard).
+Para obtener más información, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](../input/use-input-scope-to-change-the-touch-keyboard.md).
 
 ## <a name="color-fonts"></a>Colores de fuentes
 
@@ -158,7 +158,7 @@ El texto representado tiene este aspecto:
 
 ![Bloque de texto con fuente de color](images/text-block-color-fonts.png)
 
-Para obtener más información, consulta la propiedad [IsColorFontEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.iscolorfontenabled).
+Para obtener más información, consulta la propiedad [IsColorFontEnabled](/uwp/api/windows.ui.xaml.controls.textblock.iscolorfontenabled).
 
 ## <a name="guidelines-for-line-and-paragraph-separators"></a>Directrices para los separadores de línea y de párrafo
 
@@ -203,9 +203,9 @@ Para los controles TextBox y RichEditBox, la revisión ortográfica está activa
 **Para diseñadores**
 - [Directrices de tipografía](../style/typography.md)
 - [Directrices y lista de iconos de Segoe MDL2](../style/segoe-ui-symbol-font.md)
-- [Adición de búsqueda](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
+- [Adición de búsqueda](/previous-versions/windows/apps/hh465231(v=win.10))
 
 **Para desarrolladores (XAML)**
-- [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length)
+- [Clase TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Clase Windows.UI.Xaml.Controls PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [Propiedad String.Length](/dotnet/api/system.string.length)

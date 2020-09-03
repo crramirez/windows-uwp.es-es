@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Microsoft, Windows, Developer, Tips, Performance, WSL
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 8c094e7871e9de4fdf7eca2e0e1b425af295f252
-ms.sourcegitcommit: 5ba2524d237be82d3621551e48cac938fe81d2ea
+ms.openlocfilehash: 1135be4797893a74e398e69fcbc1c43d60e9fdb9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87255067"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172669"
 ---
 # <a name="tips-for-improving-performance-and-development-workflows"></a>Recomendaciones para mejorar el rendimiento y el desarrollo de flujos de trabajo
 
@@ -28,7 +28,7 @@ Puede iniciar VS Code desde la línea de comandos en el proyecto que ha abierto 
 
 ## <a name="use-the-credential-manager-to-your-streamline-authentication-process"></a>Uso del Administrador de credenciales en el proceso de autenticación optimizado
 
-Si usa Git para el control de versiones y la colaboración, puede simplificar el proceso de autenticación mediante la [configuración del Administrador de credenciales de Git](https://docs.microsoft.com/windows/wsl/tutorials/wsl-git#git-credential-manager-setup) para que almacene los tokens en el Administrador de credenciales de Windows. También se recomienda [agregar un archivo .gitignore](https://docs.microsoft.com/windows/wsl/tutorials/wsl-git#adding-a-git-ignore-file) al proyecto.
+Si usa Git para el control de versiones y la colaboración, puede simplificar el proceso de autenticación mediante la [configuración del Administrador de credenciales de Git](/windows/wsl/tutorials/wsl-git#git-credential-manager-setup) para que almacene los tokens en el Administrador de credenciales de Windows. También se recomienda [agregar un archivo .gitignore](/windows/wsl/tutorials/wsl-git#adding-a-git-ignore-file) al proyecto.
 
 ## <a name="use-wsl-for-testing-your-production-pipeline-before-deploying-to-the-cloud"></a>Uso de WSL para probar la canalización de producción antes de la implementación en la nube
 
@@ -40,17 +40,17 @@ Para ver más maneras de usar WSL, consulte el [episodio sobre tabulaciones fren
 
 ## <a name="improve-performance-speed-for-wsl-by-not-crossing-over-file-systems"></a>Mejora de la velocidad de rendimiento para WSL al no cruzar sistemas de archivos
 
-Si está trabajando con Windows y el Subsistema de Windows para Linux, tiene dos sistemas de archivos instalados: NTSF (Windows) y WSL (su distribución de Linux). Para obtener un rendimiento rápido, asegúrese de que los archivos de proyecto se almacenan en el mismo sistema que las herramientas que está usando. Obtenga más información sobre la [elección del sistema de archivos correcto para un rendimiento más rápido](https://docs.microsoft.com/windows/wsl/compare-versions#use-the-linux-file-system-for-faster-performance).
+Si está trabajando con Windows y el Subsistema de Windows para Linux, tiene dos sistemas de archivos instalados: NTSF (Windows) y WSL (su distribución de Linux). Para obtener un rendimiento rápido, asegúrese de que los archivos de proyecto se almacenan en el mismo sistema que las herramientas que está usando. Obtenga más información sobre la [elección del sistema de archivos correcto para un rendimiento más rápido](/windows/wsl/compare-versions#use-the-linux-file-system-for-faster-performance).
 
 ## <a name="improve-build-speeds-by-adding-windows-defender-exclusions"></a>Mejora de las velocidades de compilación mediante la adición de exclusiones de Windows Defender
 
-Puede mejorar la velocidad de compilación actualizando la configuración de Windows Defender para agregar exclusiones de carpetas de proyecto o tipos de archivo con la confianza suficiente para poder excluirlos del examen de amenazas de seguridad. Obtenga más información sobre la [Actualización de la configuración de Windows Defender para mejorar el rendimiento](https://docs.microsoft.com/windows/android/defender-settings).
+Puede mejorar la velocidad de compilación actualizando la configuración de Windows Defender para agregar exclusiones de carpetas de proyecto o tipos de archivo con la confianza suficiente para poder excluirlos del examen de amenazas de seguridad. Obtenga más información sobre la [Actualización de la configuración de Windows Defender para mejorar el rendimiento](../android/defender-settings.md).
 
 ![Captura de pantalla de Windows Defender](../images/windows-defender-exclusions.png)
 
 ## <a name="launch-all-your-command-lines-in-windows-terminal-at-once"></a>Inicio de todas las líneas de comandos en Terminal Windows a la vez
 
-* Puede iniciar varias líneas de comandos, como PowerShell, Ubuntu y la CLI de Azure, en una sola ventana con varios paneles mediante [Argumentos de la línea de comandos de Terminal Windows](https://docs.microsoft.com/windows/terminal/command-line-arguments?tabs=powershell#multiple-panes). Después de instalar [Terminal Windows](https://docs.microsoft.com/windows/terminal/get-started), [WSL/Ubuntu](https://docs.microsoft.com/windows/wsl/install-win10) y la [CLI de Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest), escriba este comando en PowerShell para abrir una nueva ventana de varios paneles con los tres:
+* Puede iniciar varias líneas de comandos, como PowerShell, Ubuntu y la CLI de Azure, en una sola ventana con varios paneles mediante [Argumentos de la línea de comandos de Terminal Windows](/windows/terminal/command-line-arguments?tabs=powershell#multiple-panes). Después de instalar [Terminal Windows](/windows/terminal/get-started), [WSL/Ubuntu](/windows/wsl/install-win10) y la [CLI de Azure](/cli/azure/install-azure-cli?view=azure-cli-latest), escriba este comando en PowerShell para abrir una nueva ventana de varios paneles con los tres:
 
     ```powershell
     wt -p "Command Prompt" `; split-pane -p "Windows PowerShell" `; split-pane -H wsl.exe

@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e091cc7ad62f69b9e76541101555493609b8a06
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c8615620e09d6f00881c1bb229d98f876a95978c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75955307"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173619"
 ---
 # <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
@@ -73,7 +73,7 @@ Esta API tiene los siguientes códigos de estado previstos.
 
 **Solicitud**
 
-Puedes instalar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) mediante el siguiente formato de solicitud.
+Puedes instalar un [conjunto relacionado](/windows/msix/) mediante el siguiente formato de solicitud.
 
 | Método      | URI de la solicitud |
 | :------     | :------ |
@@ -174,7 +174,7 @@ Esta API tiene los siguientes códigos de estado previstos.
 
 **Solicitud**
 
-Puedes registrar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) en carpetas dinámicas mediante el siguiente formato de solicitud.
+Puedes registrar un [conjunto relacionado](/windows/msix/) en carpetas dinámicas mediante el siguiente formato de solicitud.
 
 | Método      | URI de la solicitud |
 | :------     | :----- |
@@ -1373,7 +1373,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | Parámetro de URI | Descripción |
 | :---          | :--- |
 | autoreboot   | (**opcional**) True o false. Esto indica si el sistema se reinicia automáticamente después de que se produzca un error o se bloquee. |
-| dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://docs.microsoft.com/previous-versions/azure/reference/dn802457(v=azure.100)).|
+| dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](/previous-versions/azure/reference/dn802457(v=azure.100)).|
 | maxdumpcount   | (**opcional**) Número máximo de volcados de memoria que se deben guardar. |
 | sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o no los volcados de memoria antiguos cuando se alcanza el límite del contador de volcado de memoria especificado por *maxdumpcount*. |
 

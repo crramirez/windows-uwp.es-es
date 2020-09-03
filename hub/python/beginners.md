@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, aprender python, python en windows para principiantes, instalar python con microsoft store, python con vs code, pygame en windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 5dee553fedc81f0b482d4b79f4d7d8be3a7bb106
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 076c62658431ba75bdbd7f385ced86f27fb2f7d0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493500"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174149"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>Introducción al uso de Python en Windows para principiantes
 
@@ -190,7 +190,7 @@ Te recomendamos los siguientes recursos que te permitirán seguir obteniendo inf
 
 ### <a name="online-courses-for-learning-python"></a>Cursos en línea para aprender Python
 
-- [Introducción a Python en Microsoft Learn](https://docs.microsoft.com/learn/modules/intro-to-python/): prueba la plataforma de Microsoft Learn interactiva y gana puntos de experiencia por completar este módulo, en el que se describen los aspectos básicos sobre cómo escribir código de Python básico, declarar variables y trabajar con la entrada y salida de la consola. Con el entorno de espacio aislado interactivo, resulta un buen punto de partida para aquellas personas que aún no cuentan con su propio entorno de desarrollo de Python configurado.
+- [Introducción a Python en Microsoft Learn](/learn/modules/intro-to-python/): prueba la plataforma de Microsoft Learn interactiva y gana puntos de experiencia por completar este módulo, en el que se describen los aspectos básicos sobre cómo escribir código de Python básico, declarar variables y trabajar con la entrada y salida de la consola. Con el entorno de espacio aislado interactivo, resulta un buen punto de partida para aquellas personas que aún no cuentan con su propio entorno de desarrollo de Python configurado.
 
 - [Python en Pluralsight: 8 cursos, 29 horas](https://app.pluralsight.com/paths/skills/python): la ruta de aprendizaje de Python en Pluralsight ofrece cursos en línea que abarcan una gran variedad de temas relacionados con Python, incluida una herramienta para medir tus aptitudes y averiguar tus debilidades.
 
@@ -208,4 +208,4 @@ Te recomendamos los siguientes recursos que te permitirán seguir obteniendo inf
 
 - [Depuración de Python](https://code.visualstudio.com/docs/python/debugging): la depuración es el proceso de identificar y quitar errores de un programa. En este artículo se describe cómo inicializar y configurar la depuración de Python con VS Code, establecer y validar puntos de interrupción, adjuntar un script local, realizar la depuración para diferentes tipos de aplicaciones o en un equipo remoto, y algunos procedimientos de solución de problemas básicos.
 
-- [Pruebas unitarias de Python](https://code.visualstudio.com/docs/python/unit-testing): incluye un poco de información sobre qué significa el término pruebas unitarias, un tutorial de ejemplo, la habilitación de un marco de pruebas, la creación y ejecución de pruebas, la depuración de pruebas y la configuración de pruebas. 
+- [Pruebas unitarias de Python](https://code.visualstudio.com/docs/python/unit-testing): incluye un poco de información sobre qué significa el término pruebas unitarias, un tutorial de ejemplo, la habilitación de un marco de pruebas, la creación y ejecución de pruebas, la depuración de pruebas y la configuración de pruebas.

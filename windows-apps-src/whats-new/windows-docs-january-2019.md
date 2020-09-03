@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, directrices para desarrol
 ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7947fb6e71a9f2ddbedcd8e3ee8bab7b720dc444
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f1811e3b99077a3be676c57dc3420e88658f1d73
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74902470"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174369"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>Novedades en la documentación para desarrolladores de Windows de enero de 2019.
 
@@ -64,7 +64,7 @@ Nuestras [preguntas más frecuentes](/windows/communitytoolkit/controls/wpf-winf
 
 ### <a name="japanese-era-change"></a>Cambio a la era japonesa
 
-[Prepare su aplicación para el cambio a la era japonesa](../design/globalizing/japanese-era-change.md) le muestra cómo asegurarse de que la aplicación de Windows está lista para el conjunto de cambios de la era japonesa que se realizará el 1 de mayo de 2019. [Esta página también está disponible en japonés](/windows/uwp/design/globalizing/japanese-era-change).
+[Prepare su aplicación para el cambio a la era japonesa](../design/globalizing/japanese-era-change.md) le muestra cómo asegurarse de que la aplicación de Windows está lista para el conjunto de cambios de la era japonesa que se realizará el 1 de mayo de 2019. [Esta página también está disponible en japonés](../design/globalizing/japanese-era-change.md).
 
 ## <a name="videos"></a>Vídeos
 

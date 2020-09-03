@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py.exe, rutas de acceso al archivo, PYTHONPATH, desarrollo de python, empaquetado de python
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 2541186a1dd0f205d88e1e14c146934490afff55
-ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
+ms.openlocfilehash: 4504e7550d19d2cc713284abebed43b6305b5dbd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88243267"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174129"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Preguntas más frecuentes sobre el uso de Python en Windows.
 
@@ -65,7 +65,7 @@ Para establecer esta variable desde PowerShell, usa `$env:PYTHONPATH=’list;of;
 
 [Docker](https://code.visualstudio.com/docs/azure/docker): [La extensión VSCode](https://code.visualstudio.com/docs/azure/docker) te ayuda realizar rápidamente el empaquetado y la implementación con plantillas Dockerfile y docker-compose yml (genera los archivos de Docker adecuados para el proyecto).
 
-[Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/) te permite implementar y administrar aplicaciones en contenedores a la vez que escalas recursos a petición.
+[Azure Kubernetes Service (AKS)](/azure/aks/) te permite implementar y administrar aplicaciones en contenedores a la vez que escalas recursos a petición.
 
 ## <a name="what-if-i-need-to-work-across-different-machines"></a>¿Qué ocurre si necesito trabajar en distintas máquinas?
 

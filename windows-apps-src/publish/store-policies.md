@@ -6,12 +6,12 @@ ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 4d7c30b49ea0e6276e1d7959a17086f7ff829915
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209360"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170919"
 ---
 # <a name="microsoft-store-policies"></a>Directivas de Microsoft Store
 
@@ -113,7 +113,7 @@ El producto no debe intentar cambiar o ampliar su funcionalidad descrita de ning
 
 **10.2.3**
 
-El producto no debe contener ni habilitar malware según los criterios de Microsoft para [Software no deseado y malintencionado](https://docs.microsoft.com/windows/security/threat-protection/intelligence/criteria).
+El producto no debe contener ni habilitar malware según los criterios de Microsoft para [Software no deseado y malintencionado](/windows/security/threat-protection/intelligence/criteria).
 
 **10.2.4**
 
@@ -296,7 +296,7 @@ Si compras o creas campañas promocionales de anuncios para promocionar tus prod
 
 Cualquier contenido publicitario que muestra el producto debe cumplir con la [Directiva de aceptación creativa](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies) de Microsoft.
 
-Si el producto muestra anuncios, todo el contenido que se muestre debe cumplir con los requisitos publicitarios del [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluidos los siguientes:
+Si el producto muestra anuncios, todo el contenido que se muestre debe cumplir con los requisitos publicitarios del [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement), incluidos los siguientes:
 
 **10.10.4**
 
@@ -355,7 +355,7 @@ Los productos de juegos que usan Xbox Live deben:
 
 Los productos de juegos que usan Xbox Live y ofrecen juegos multijugador, contenido generado por el usuario o comunicaciones del usuario:
 - No deben permitir el juego hasta que el usuario inicie sesión en Xbox Live.
-- Deben respetar los [controles parentales y de servicio](https://docs.microsoft.com/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/check-user-privileges-in-unity).
+- Deben respetar los [controles parentales y de servicio](/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/check-user-privileges-in-unity).
 
 **10.13.7**
 
@@ -477,4 +477,4 @@ El contenido generado por el usuario es contenido que los usuarios aportan a una
 
 - [Historial de cambios de las directivas de Microsoft Store](store-policies-change-history.md)
 - [Código de conducta y directivas de Microsoft Store](store-policies-and-code-of-conduct.md)
-- [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
+- [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement)
