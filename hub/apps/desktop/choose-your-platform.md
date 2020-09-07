@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, desarrollo de escritorio
-ms.openlocfilehash: 778c15bc511404fad9cf5713876f89c7fef56165
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: d4415bc703acf0b94f6f8a6fe8aab053620336c6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493010"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168909"
 ---
 # <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
 
@@ -51,12 +51,12 @@ WPF es la plataforma establecida para las aplicaciones Windows administradas con
 
 Para obtener más información sobre WPF, consulta los artículos siguientes:
 
-* [Introducción (WPF)](https://docs.microsoft.com/dotnet/framework/wpf/getting-started/)
+* [Introducción (WPF)](/dotnet/framework/wpf/getting-started/)
 * [Plantillas de proyecto](visual-studio-templates.md#net-templates)
 * [Creación de la primera aplicación (.NET Core)](/visualstudio/get-started/csharp/tutorial-wpf/)
 * [Creación de la primera aplicación (.NET Framework)](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
 * [Migración de aplicaciones de WPF a .NET Core](/dotnet/desktop-wpf/migration/convert-project-from-net-framework/)
-* [Referencia de API (.NET)](https://docs.microsoft.com/dotnet/api/index)
+* [Referencia de API (.NET)](/dotnet/api/index)
 * [Ejemplos](https://github.com/Microsoft/WPF-Samples)
 
 ## <a name="windows-forms"></a>Windows Forms
@@ -65,11 +65,11 @@ Windows Forms es la plataforma original para aplicaciones Windows administradas,
 
 Para obtener más información sobre Windows Forms, consulta los siguientes artículos:
 
-* [Introducción a Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms)
+* [Introducción a Windows Forms](/dotnet/framework/winforms/getting-started-with-windows-forms)
 * [Plantillas de proyecto](visual-studio-templates.md#net-templates)
 * [Crear tu primera aplicación de Windows Forms](/dotnet/framework/winforms/creating-a-new-windows-form)
 * [Tutorial: Crear un visor de imágenes](/visualstudio/ide/tutorial-1-create-a-picture-viewer?view=vs-2019)
-* [Referencia de API (.NET)](https://docs.microsoft.com/dotnet/api/index)
+* [Referencia de API (.NET)](/dotnet/api/index)
 * [Mejorar las aplicaciones de Windows Forms](/dotnet/framework/winforms/advanced/)
 
 ## <a name="win32"></a>Win32
@@ -125,8 +125,12 @@ En la tabla siguiente se comparan las distintas características de Windows Form
 
 ### <a name="progressive-web-apps-pwas"></a>Aplicaciones web progresivas (PWA)
 
-Estas aplicaciones permiten a los desarrolladores empaquetar su código de sitio web para poderlo instalar y ejecutar como una aplicación en equipos con Windows 10. Para más información, consulta [Aplicaciones web progresivas](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started).
+Estas aplicaciones permiten a los desarrolladores empaquetar su código de sitio web para poderlo instalar y ejecutar como una aplicación en equipos con Windows 10. Para más información, consulta [Aplicaciones web progresivas](/microsoft-edge/progressive-web-apps/get-started).
 
 ### <a name="xamarin"></a>Xamarin
 
 Usa Xamarin para crear aplicaciones multiplataforma para Windows 10 que también se puedan ejecutar en iOS y Android. Para más información, consulta [Xamarin](https://docs.microsoft.com/xamarin/xamarin-forms/get-started/index).
+
+### <a name="uno-platform"></a>Plataforma Uno
+
+La plataforma Uno permite que el código basado en UWP de Windows (C# y XAML) se ejecute en iOS, Android y WebAssembly. Proporciona definiciones de API completas para UWP en [Windows 10 2004 (19041)](/windows/uwp/whats-new/windows-10-build-19041) y la implementación de partes de la API de UWP, como [Windows.UI.Xaml](/uwp/api/windows.ui.xaml.documents?view=winrt-19041), para permitir que las aplicaciones para UWP se ejecuten en estas plataformas. Para obtener más información, consulte los [documentos de la plataforma Uno](https://platform.uno/docs/articles/intro.html).

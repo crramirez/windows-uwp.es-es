@@ -1,6 +1,6 @@
 ---
-Description: Un cuadro de entrada de texto que proporciona sugerencias como tipos de usuarios.
 title: Directrices para los cuadros de sugerencias automáticas
+description: Obtenga información sobre cómo AutoSuggestBox para proporcionar una lista de sugerencias para que el usuario seleccione una a medida que escribe.
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 59fef3ea55d6aa0ddfa2ef809634be7565d54f90
-ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
+ms.openlocfilehash: 6eaa57aa5e3ae9d60a9c199c8011da95cd7147e2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437188"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160669"
 ---
 # <a name="auto-suggest-box"></a>Cuadro de sugerencias automáticas
 
@@ -29,9 +29,9 @@ Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usu
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
-> **API de plataforma**: [Clase AutoSuggestBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [Evento TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged), [Evento SuggestionChose](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen), [Evento QuerySubmitted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted)
+> **API de plataforma**: [Clase AutoSuggestBox](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [Evento TextChanged](/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged), [Evento SuggestionChose](/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen), [Evento QuerySubmitted](/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -78,9 +78,9 @@ Para usar un AutoSuggestBox, debes responder a 3 acciones del usuario.
 
 ### <a name="text-changed"></a>Cambio de texto
 
-El evento [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged) se produce siempre que se actualiza el contenido del cuadro de texto. Usa la propiedad [Reason](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason) de los argumentos de evento para determinar si el cambio se debe a una entrada del usuario. Si el motivo del cambio es **UserInput**, filtra los datos en función de la entrada. A continuación, establece los datos filtrados como el [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) del AutoSuggestBox para actualizar la lista de sugerencias.
+El evento [TextChanged](/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged) se produce siempre que se actualiza el contenido del cuadro de texto. Usa la propiedad [Reason](/uwp/api/windows.ui.xaml.controls.autosuggestboxtextchangedeventargs.reason) de los argumentos de evento para determinar si el cambio se debe a una entrada del usuario. Si el motivo del cambio es **UserInput**, filtra los datos en función de la entrada. A continuación, establece los datos filtrados como el [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) del AutoSuggestBox para actualizar la lista de sugerencias.
 
-Para controlar cómo se muestran los elementos en la lista de sugerencias, puedes usar [DisplayMemberPath](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.displaymemberpath) o [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate).
+Para controlar cómo se muestran los elementos en la lista de sugerencias, puedes usar [DisplayMemberPath](/uwp/api/windows.ui.xaml.controls.itemscontrol.displaymemberpath) o [ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate).
 
 - Para mostrar el texto de una sola propiedad de tu elemento de datos, establece la propiedad DisplayMemberPath para elegir qué propiedad del objeto mostrar en la lista de sugerencias.
 - Para definir un aspecto personalizado para cada elemento en la lista, usa la propiedad ItemTemplate.
@@ -89,19 +89,19 @@ Para controlar cómo se muestran los elementos en la lista de sugerencias, puede
 
 Cuando un usuario navega por la lista de sugerencias con el teclado, debes actualizar el texto en el cuadro de texto para que ambos coincidan.
 
-Puedes establecer la propiedad [TextMemberPath](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textmemberpath) para elegir qué propiedad del objeto de datos mostrar en el cuadro de texto. Si especificas un TextMemberPath, el cuadro de texto se actualiza automáticamente. Normalmente debes especificar el mismo valor para DisplayMemberPath y TextMemberPath para que el texto de la lista de sugerencias y el del cuadro de texto sea el mismo.
+Puedes establecer la propiedad [TextMemberPath](/uwp/api/windows.ui.xaml.controls.autosuggestbox.textmemberpath) para elegir qué propiedad del objeto de datos mostrar en el cuadro de texto. Si especificas un TextMemberPath, el cuadro de texto se actualiza automáticamente. Normalmente debes especificar el mismo valor para DisplayMemberPath y TextMemberPath para que el texto de la lista de sugerencias y el del cuadro de texto sea el mismo.
 
-Si necesitas mostrar más de una propiedad simple, administra el evento [SuggestionChosen](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen) para rellenar el cuadro de texto con texto personalizado basado en el elemento seleccionado.
+Si necesitas mostrar más de una propiedad simple, administra el evento [SuggestionChosen](/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen) para rellenar el cuadro de texto con texto personalizado basado en el elemento seleccionado.
 
 ### <a name="query-submitted"></a>Envío de consultas
 
-Gestiona el evento [QuerySubmitted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted) para realizar una acción de consulta adecuada para tu aplicación y mostrar el resultado al usuario.
+Gestiona el evento [QuerySubmitted](/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted) para realizar una acción de consulta adecuada para tu aplicación y mostrar el resultado al usuario.
 
 El evento QuerySubmitted se produce cuando un usuario confirma una cadena de consulta. El usuario puede confirmar una consulta de una de estas maneras:
-- Mientras el foco está en el cuadro de texto, presiona Entrar o haz clic en el icono de la consulta. La propiedad de los argumentos del evento [ChosenSuggestion](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion) es **null**.
+- Mientras el foco está en el cuadro de texto, presiona Entrar o haz clic en el icono de la consulta. La propiedad de los argumentos del evento [ChosenSuggestion](/uwp/api/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion) es **null**.
 - Mientras el foco está en la lista de sugerencias, presiona Entrar, haz clic o pulsa en un elemento. La propiedad de los argumentos del evento ChosenSuggestion contiene el elemento que se seleccionó en la lista.
 
-En todos los casos, la propiedad de los argumentos del evento [QueryText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext) contiene el texto del cuadro de texto.
+En todos los casos, la propiedad de los argumentos del evento [QueryText](/uwp/api/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext) contiene el texto del cuadro de texto.
 
 Este es un AutoSuggestBox simple con los controladores de eventos necesarios.
 
@@ -149,7 +149,7 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usuario seleccione una a medida que escribe.
 
-De manera predeterminada, el cuadro de entrada de texto no muestra un botón de consulta. Puedes establecer la propiedad [QueryIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.queryicon) para agregar un botón con el icono especificado en la parte derecha del cuadro de texto. Por ejemplo, para que el AutoSuggestBox tenga el aspecto de un cuadro de búsqueda típico, agrega un icono "Buscar", como este.
+De manera predeterminada, el cuadro de entrada de texto no muestra un botón de consulta. Puedes establecer la propiedad [QueryIcon](/uwp/api/windows.ui.xaml.controls.autosuggestbox.queryicon) para agregar un botón con el icono especificado en la parte derecha del cuadro de texto. Por ejemplo, para que el AutoSuggestBox tenga el aspecto de un cuadro de búsqueda típico, agrega un icono "Buscar", como este.
 
 ```xaml
 <AutoSuggestBox QueryIcon="Find"/>
@@ -190,6 +190,6 @@ Aquí se muestra un AutoSuggestBox con un icono 'Buscar'.
 - [Controles de texto](text-controls.md)
 - [Revisión ortográfica](text-controls.md)
 - [Búsqueda](search.md)
-- [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length)
+- [Clase TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Clase Windows.UI.Xaml.Controls PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [Propiedad String.Length](/dotnet/api/system.string.length)

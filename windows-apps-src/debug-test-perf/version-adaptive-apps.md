@@ -5,12 +5,12 @@ ms.date: 05/17/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b947d0b6cc83dc6bca45efb7103a933e79972e3b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: bb676ba5dbb92b1aa6dfb8888da90a8528e2dfa1
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67317451"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89412039"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables para versiones: usar nuevas API y mantener la compatibilidad con versiones anteriores
 
@@ -65,7 +65,7 @@ Puedes descargar cualquier versión publicada del SDK desde [Windows SDK y el ar
 
 ## <a name="perform-api-checks"></a>Realizar comprobaciones de API
 
-La clave para las aplicaciones adaptables para versiones es la combinación de contratos de API y la clase [ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation). Esta clase permite detectar si un contrato de API especificado, tipo o miembro está presente para que puedas realizar de forma segura llamadas de API en una gran variedad de dispositivos y de versiones del sistema operativo.
+La clave para las aplicaciones adaptables para versiones es la combinación de contratos de API y la clase [ApiInformation](/uwp/api/windows.foundation.metadata.apiinformation). Esta clase permite detectar si un contrato de API especificado, tipo o miembro está presente para que puedas realizar de forma segura llamadas de API en una gran variedad de dispositivos y de versiones del sistema operativo.
 
 ### <a name="api-contracts"></a>Contratos de API
 
@@ -81,10 +81,10 @@ El conjunto de las API de una familia de dispositivos se desglosa en subdivision
 
 Los tipos relacionados lógicamente se agrupan en un contrato de API y, a partir de Windows 10, cada API de Windows Runtime es un miembro de algunos contrato de API. Con contratos de API, se comprueba la disponibilidad de una API o una característica específica en el dispositivo, comprobando de manera eficaz las funcionalidades de un dispositivo, en vez de comprobar un dispositivo específico o un sistema operativo. Se necesita una plataforma que implementa las API en un contrato de API para implementar cada API de ese contrato de API. Esto significa que puedes probar si el sistema operativo es compatible con un contrato de API particular y, si lo es, llamar a cualquiera de las API de ese contrato de API sin comprobar cada uno de ellos individualmente.
 
-El contrato de API más grande y más comúnmente usado es el **Windows.Foundation.UniversalApiContract**. Contiene la mayoría de las API en la Plataforma universal de Windows. La documentación de los [contratos de API y el SDK de extensión de la familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/) describe la variedad de contratos de API disponibles. Verás que la mayoría de ellos representa un conjunto de API relacionados funcionalmente.
+El contrato de API más grande y más comúnmente usado es el **Windows.Foundation.UniversalApiContract**. Contiene la mayoría de las API en la Plataforma universal de Windows. La documentación de los [contratos de API y los SDK de extensión de la familia de dispositivos](/uwp/extension-sdks/) describe la variedad de contratos de API disponibles. Verás que la mayoría de ellos representa un conjunto de API relacionados funcionalmente.
 
 > [!NOTE]
-> Si tienes una versión preliminar del Kit de desarrollo de software (SDK) de Windows que no está documentada todavía, también podrás encontrar información sobre el soporte del contrato de la API en el archivo "Platform.xml" ubicado en la carpeta de instalación del SDK en "\(Archivos de programa (x86))\Windows Kits\10\Platforms\<plataforma>\<versión del SDK>\Platform.xm".
+> Si tiene una versión preliminar del Kit de desarrollo de software (SDK) de Windows que no está documentada todavía, también podrá encontrar información sobre el soporte del contrato de API en el archivo "Platform.xml" ubicado en la carpeta de instalación del SDK en "\(Archivos de programa (x86))\Windows Kits\10\Platforms\<platform>\<SDK version>\Platform.xm".
 
 ### <a name="version-adaptive-code-and-conditional-xaml"></a>Código adaptable para versiones y XAML condicional
 
@@ -105,6 +105,6 @@ Para obtener más información sobre la depuración remota, consulta [Implementa
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [¿Qué es una aplicación para UWP?](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [¿Qué es una aplicación para UWP?](../get-started/universal-application-platform-guide.md)
 - [Detección dinámica de características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (vídeo de compilación de 2015)

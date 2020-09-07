@@ -1,5 +1,5 @@
 ---
-description: Un tipo de pincel que crea una textura translúcida.
+description: Obtenga información sobre cómo usar acrílico, un tipo de pincel que crea una textura translúcida para agregar profundidad y ayudar a establecer una jerarquía visual.
 title: Material acrílico
 template: detail.hbs
 ms.date: 08/09/2017
@@ -10,20 +10,20 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d969c5282fa03fb11d108d2b2c8e0fe44dfde49
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 6f7d431950e17b9908d079db9247d997ef8adadb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968460"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174589"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
 ![imagen principal](images/header-acrylic.svg)
 
-Acrílico es un tipo de [pincel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush) que crea una textura translúcida. Puedes aplicar acrílico a las superficies de la app para agregar profundidad y ayudar a establecer una jerarquía visual.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
+Acrílico es un tipo de [pincel](/uwp/api/Windows.UI.Xaml.Media.Brush) que crea una textura translúcida. Puedes aplicar acrílico a las superficies de la app para agregar profundidad y ayudar a establecer una jerarquía visual.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **API importantes**: [clase AcrylicBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.acrylicbrush), [propiedad Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.Background)
+> **API importantes**: [clase AcrylicBrush](/uwp/api/windows.ui.xaml.media.acrylicbrush), [propiedad Background](/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::
@@ -87,7 +87,7 @@ Para las apps con menús flotantes, elementos emergentes no modales o paneles co
 
 ![App de correo que usa un control flotante informativo](images/Mail_TransientContextMenu.png)
 
-Muchos de nuestros controles usarán acrílico de manera predeterminada. Los controles [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) y similares con elementos emergentes con cierre del elemento por cambio de foco usarán el acrílico transitorio cuando se invoquen.
+Muchos de nuestros controles usarán acrílico de manera predeterminada. Los controles [MenuFlyouts](../controls-and-patterns/menus.md), [AutoSuggestBox](../controls-and-patterns/auto-suggest-box.md), [ComboBox](/uwp/api/windows.ui.xaml.controls.combobox) y similares con elementos emergentes con cierre del elemento por cambio de foco usarán el acrílico transitorio cuando se invoquen.
 
 > [!Note]
 > La representación de superficies acrílicas puede consumir muchos recursos de la GPU, lo que puede aumentar el consumo de energía del dispositivo y reducir la duración de la batería en algunos dispositivos. Los efectos acrílicos se deshabilitan automáticamente cuando los dispositivos entran en el modo de ahorro de batería. Además, los usuarios pueden deshabilitar los efectos acrílicos para todas las apps, si lo desean.
@@ -246,7 +246,7 @@ else
 
 ## <a name="extend-acrylic-into-the-title-bar"></a>Extender Acrylic a la barra de título
 
-Para aportar un aspecto impecable a la ventana de la app, puedes usar Acrylic en el área de barra de título. En este ejemplo se extiende Acrylic en la barra de título al establecer las propiedades [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) y [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor) del objeto [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) en [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors.Transparent).
+Para aportar un aspecto impecable a la ventana de la app, puedes usar Acrylic en el área de barra de título. En este ejemplo se extiende Acrylic en la barra de título al establecer las propiedades [ButtonBackgroundColor](/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) y [ButtonInactiveBackgroundColor](/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor) del objeto [ApplicationViewTitleBar](/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) en [Colors.Transparent](/uwp/api/Windows.UI.Colors.Transparent).
 
 ```csharp
 private void ExtendAcrylicIntoTitleBar()
@@ -258,7 +258,7 @@ private void ExtendAcrylicIntoTitleBar()
 }
 ```
 
-Este código se puede colocar en el método [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) de la app (_App.xaml.cs_), después de la llamada a [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate), tal y como se muestra aquí, o en la primera página de la app.
+Este código se puede colocar en el método [OnLaunched](/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) de la app (_App.xaml.cs_), después de la llamada a [Window.Activate](/uwp/api/windows.ui.xaml.window.Activate), tal y como se muestra aquí, o en la primera página de la app.
 
 ```csharp
 // Call your extend acrylic code in the OnLaunched event, after

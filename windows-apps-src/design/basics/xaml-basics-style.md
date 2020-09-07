@@ -1,16 +1,16 @@
 ---
 title: Creación de estilos personalizados
-description: En este artículo se explican los conceptos básicos de la aplicación de estilos a los elementos de la interfaz de usuario en XAML
+description: Siga este tutorial para aprender a crear estilos personalizados y controles deslizantes para personalizar la interfaz de usuario de una aplicación XAML.
 keywords: XAML, UWP, Getting Started
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 60a62a80017b2c77acfc2604daf909ae1ec9fd36
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 6d3423e9d78e2519f2d3c9ad1fc2c0b099de0349
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942965"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160779"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Creación de estilos personalizados
 
@@ -76,11 +76,11 @@ Presiona F5 para compilar y ejecutar la aplicación. La primera pantalla muestra
 
 1. Use un elemento `Polygon` para crear una forma de fondo para el control deslizante de exposición.
 
-    El [espacio de nombres Windows.UI.Xaml.Shapes](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes) proporciona siete formas para elegir. Hay una elipse, un rectángulo y un elemento denominado Trazado, que puede hacer cualquier tipo de forma (hasta un unicornio).
+    El [espacio de nombres Windows.UI.Xaml.Shapes](/uwp/api/Windows.UI.Xaml.Shapes) proporciona siete formas para elegir. Hay una elipse, un rectángulo y un elemento denominado Trazado, que puede hacer cualquier tipo de forma (hasta un unicornio).
 
     ![Un unicornio](../basics/images/xaml-basics/unicorn.png)
 
-    > **Información al respecto:** en el artículo [Dibujo de formas](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/shapes) se explica todo lo necesario acerca de las formas XAML.
+    > **Información al respecto:** en el artículo [Dibujo de formas](../controls-and-patterns/shapes.md) se explica todo lo necesario acerca de las formas XAML.
 
     Queremos crear un widget con aspecto de triángulo, algo parecido a la forma que verías en el control de volumen de un equipo de música estéreo.
 
@@ -200,7 +200,7 @@ Enhorabuena, has completado la parte 1. Si se ha quedado atascado o quiere ver l
 
 Una de las ventajas de los estilos de XAML es que pueden reducir considerablemente la cantidad de código que hay que escribir, y pueden facilitar mucho la actualización del aspecto de la aplicación.
 
-Para definir un estilo, agrega un elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) a la propiedad [Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Resources) de un elemento que contenga el control al que quieres aplicar estilo.  Si agregas el estilo a la propiedad `Page.Resources`, se podrá acceder tus estilos desde toda la página. Si agregas el estilo a la propiedad `Application.Resources` en el archivo App.xaml, se podrá acceder a él desde toda la aplicación.
+Para definir un estilo, agrega un elemento [Style](/uwp/api/Windows.UI.Xaml.Style) a la propiedad [Resources](/uwp/api/windows.ui.xaml.frameworkelement.Resources) de un elemento que contenga el control al que quieres aplicar estilo.  Si agregas el estilo a la propiedad `Page.Resources`, se podrá acceder tus estilos desde toda la página. Si agregas el estilo a la propiedad `Application.Resources` en el archivo App.xaml, se podrá acceder a él desde toda la aplicación.
 
 Puedes crear tanto estilos con nombre como estilos generales. Los estilos con nombre deben aplicarse explícitamente a controles concretos, mientras que los estilos generales se aplican a cualquier control que coincida con el `TargetType` especificado.
 

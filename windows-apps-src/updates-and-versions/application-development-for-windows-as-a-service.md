@@ -1,17 +1,17 @@
 ---
 title: Desarrollo de aplicaciones para Windows como servicio
-description: Separa el lanzamiento de la aplicación y el soporte técnico de las compilaciones de Windows específicas.
+description: Obtenga información sobre el enfoque de Windows como servicio (WaaS) para la innovación, el desarrollo y la entrega, y sobre el programa de prueba de Windows Insider centrado en la comunidad.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 47be38c6d7a5374b06789beede02647ef9b264d8
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c035a97b1750c8f285689f2b2f82f3766a6c06ad
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75737638"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173799"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desarrollo de aplicaciones para Windows como servicio
 
@@ -20,7 +20,7 @@ ms.locfileid: "75737638"
 -   Windows 10 Mobile
 -   Windows 10 IoT Core 
 
-En el entorno actual, donde las expectativas del usuario con frecuencia las establecen las experiencias centradas en los dispositivos, los ciclos completos de un producto se deben medir en meses, no en años. Además, las nuevas versiones deben estar disponibles de forma continua y se deben poder implementar con el mínimo impacto para los usuarios. Microsoft diseñó Windows 10 para satisfacer estos requisitos al implementar un nuevo método de innovación, desarrollo y entrega denominado [Windows como servicio (WaaS)](https://docs.microsoft.com/windows/deployment/update/waas-overview). La clave para permitir ciclos de producto significativamente más cortos a la vez que se mantienen altos niveles de calidad es un innovador método de pruebas centrado en la comunidad que Microsoft ha implementado para Windows 10. La comunidad, conocida como Windows Insider, incluye millones de usuarios en todo el mundo. Cuando los usuarios de Windows Insider deciden participar en la comunidad, prueban muchas compilaciones a lo largo del ciclo de un producto y proporcionan comentarios a Microsoft a través de una metodología iterativa denominada distribución de paquetes piloto.
+En el entorno actual, donde las expectativas del usuario con frecuencia las establecen las experiencias centradas en los dispositivos, los ciclos completos de un producto se deben medir en meses, no en años. Además, las nuevas versiones deben estar disponibles de forma continua y se deben poder implementar con el mínimo impacto para los usuarios. Microsoft diseñó Windows 10 para satisfacer estos requisitos al implementar un nuevo método de innovación, desarrollo y entrega denominado [Windows como servicio (WaaS)](/windows/deployment/update/waas-overview). La clave para permitir ciclos de producto significativamente más cortos a la vez que se mantienen altos niveles de calidad es un innovador método de pruebas centrado en la comunidad que Microsoft ha implementado para Windows 10. La comunidad, conocida como Windows Insider, incluye millones de usuarios en todo el mundo. Cuando los usuarios de Windows Insider deciden participar en la comunidad, prueban muchas compilaciones a lo largo del ciclo de un producto y proporcionan comentarios a Microsoft a través de una metodología iterativa denominada distribución de paquetes piloto.
 
 Las compilaciones que se distribuyen como paquetes piloto proporcionan al equipo de ingeniería de Windows datos significativos sobre el rendimiento real de las compilaciones. La distribución de paquetes piloto a través de los usuarios de Windows Insider también permite a Microsoft probar compilaciones en entornos de hardware, aplicaciones y redes mucho más diversos que en el pasado, así como identificar problemas de manera mucho más rápida. Como resultado, Microsoft cree que la distribución de paquetes piloto centrada en la comunidad permitirá una entrega de innovación mucho más rápida, así como una calidad mucho más elevada de versiones destinadas al público en general.
 
@@ -42,7 +42,7 @@ La siguiente tabla describe los distintos canales de mantenimiento y sus atribut
 | Canal semianual | Aproximadamente 4 meses después de que Microsoft realice la publicación inicial. | 18 meses a partir de la publicación inicial | Proporciona tiempo adicional para probar las nuevas actualizaciones de características antes de la implementación. | Pro, Education, Enterprise, Mobile Enterprise, IoT Core Pro |
 | Canal de mantenimiento a largo plazo (LTSC) | Inmediatamente después de que Microsoft realice la publicación | 10 años | Permite la implementación a largo plazo de versiones de Windows 10 seleccionadas en configuraciones en las que no se realizan cambios con frecuencia | Enterprise LTSB |
 
-Para obtener más información, consulta [Opciones de mantenimiento de Windows 10 para actualizaciones](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
+Para obtener más información, consulta [Opciones de mantenimiento de Windows 10 para actualizaciones](/windows/deployment/update/waas-overview#servicing-channels).
 
 ## <a name="supporting-apps-in-windows-as-a-service"></a>Compatibilidad de las aplicaciones en Windows como servicio
 
@@ -90,7 +90,7 @@ Algunas aplicaciones realizan una comprobación de la versión y simplemente mue
 -   Si la aplicación depende de la funcionalidad de una API específica, asegúrate de que apuntas a la versión correcta de dicha API.
 -   Asegúrate de detectar el cambio a través de APISet o de otra API pública y de no utilizar la versión como proxy de alguna característica o corrección. Si hay cambios importantes y no se expone una comprobación adecuada, se trata de un error.
 -   Asegúrate de que la aplicación NO comprueba la versión de formas extrañas, como a través del registro, versiones de archivos, desplazamientos, el modo kernel, controladores ni otros medios. Si es absolutamente necesario que la aplicación compruebe la versión, usa las API GetVersion, que deberían devolver el número de la versión principal, de la secundaria y de la compilación.
--   Si utilizas la API [GetVersion](https://docs.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversion?redirectedfrom=MSDN), recuerda que el comportamiento de esta API ha cambiado desde la versión Windows 8.1.
+-   Si utilizas la API [GetVersion](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversion), recuerda que el comportamiento de esta API ha cambiado desde la versión Windows 8.1.
 
 Si tienes aplicaciones como, por ejemplo, aplicaciones antimalware o de firewall, deberías utilizar los canales de comentarios habituales y el programa Windows Insider.
 
@@ -158,4 +158,4 @@ Infórmanos del rendimiento de tu aplicación en las compilaciones piloto. A med
 
 
 ## <a name="related-topics"></a>Temas relacionados
-[Opciones de mantenimiento de Windows 10 para actualizaciones](https://docs.microsoft.com/windows/manage/introduction-to-windows-10-servicing)
+[Opciones de mantenimiento de Windows 10 para actualizaciones](/windows/manage/introduction-to-windows-10-servicing)

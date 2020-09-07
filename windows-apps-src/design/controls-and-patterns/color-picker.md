@@ -1,5 +1,5 @@
 ---
-Description: Un selector de colores permite a un usuario explorar y seleccionar colores.
+description: Obtenga información sobre cómo usar un selector de colores para permitir que los usuarios examinen y seleccionen colores, o especifiquen colores en formato RGB, HSV o hexadecimal.
 title: Selector de colores
 label: Color Picker
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e7661beb52438640c570e1a5ec4d7f60502e119
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: c6739263917ab48040a2780a750948215d8d6361
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968910"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173519"
 ---
 # <a name="color-picker"></a>Selector de colores
 
@@ -28,7 +28,7 @@ Un selector de colores se usa para explorar y seleccionar colores. De manera pre
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ColorPicker** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ColorPicker** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase ColorPicker](/uwp/api/microsoft.ui.xaml.controls.colorpicker), [propiedad Color](/uwp/api/microsoft.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](/uwp/api/microsoft.ui.xaml.controls.colorpicker.ColorChanged)
 >
@@ -64,7 +64,7 @@ En este ejemplo se muestra cómo crear un selector de colores predeterminado en 
 <ColorPicker x:Name="myColorPicker"/>
 ```
 
-De manera predeterminada, el selector de colores muestra una vista previa del color seleccionado en la barra rectangular que se encuentra junto al espectro de colores. Puedes usar el evento [ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged) o la propiedad [Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color) para acceder al color seleccionado y usarlo en tu aplicación. Consulta los siguientes ejemplos de código detallado.
+De manera predeterminada, el selector de colores muestra una vista previa del color seleccionado en la barra rectangular que se encuentra junto al espectro de colores. Puedes usar el evento [ColorChanged](/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged) o la propiedad [Color](/uwp/api/windows.ui.xaml.controls.colorpicker.Color) para acceder al color seleccionado y usarlo en tu aplicación. Consulta los siguientes ejemplos de código detallado.
 
 ### <a name="bind-to-the-chosen-color"></a>Enlazar al color elegido
 
@@ -155,7 +155,7 @@ Cuando el usuario necesita un control preciso, como en una aplicación de diseñ
 
 #### <a name="show-the-circle-spectrum"></a>Mostrar el espectro de círculo
 
-En este ejemplo se muestra cómo usar la propiedad [ColorSpectrumShape](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorSpectrumShape) para configurar el selector de colores con el fin de usar un espectro circular en lugar del cuadrado predeterminado.
+En este ejemplo se muestra cómo usar la propiedad [ColorSpectrumShape](/uwp/api/windows.ui.xaml.controls.colorpicker.ColorSpectrumShape) para configurar el selector de colores con el fin de usar un espectro circular en lugar del cuadrado predeterminado.
 
 ```xaml
 <ColorPicker x:Name="myColorPicker"

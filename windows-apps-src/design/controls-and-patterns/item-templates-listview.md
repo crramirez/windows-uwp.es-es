@@ -1,25 +1,25 @@
 ---
-Description: Plantillas de elemento para vistas de lista
+description: Obtenga plantillas de elementos que pueda usar con un control ListView para mostrar elementos de listas simples, dobles, triples y tabulares.
 title: Plantillas de elemento para vistas de lista
 template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 9328c3f156acd13fd8947e01e924bf0d6849c0a6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fb4e45721c1da399e8b51974bef9f55b0c70e16c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684404"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172679"
 ---
 # <a name="item-templates-for-list-view"></a>Plantillas de elemento para vistas de lista
 
-Esta sección contiene las plantillas de elemento que puedes usar con un control [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes. 
+Esta sección contiene las plantillas de elemento que puedes usar con un control [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes. 
 
 Para mostrar el enlace de datos, estas plantillas enlazan **ListViewItems** con la clase de ejemplo Recording desde la [introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para más información sobre accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
+> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para más información sobre accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
 
 ## <a name="single-line-list-item"></a>Elemento de lista de una sola línea
 Usa esta plantilla para mostrar una colección de elementos con una imagen y una única línea de texto.
@@ -129,7 +129,7 @@ Usa esta plantilla para mostrar una colección de elementos con texto en columna
 ```
 
 ## <a name="related-articles"></a>Artículos relacionados
-- [Clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)
+- [Clase ListView](/uwp/api/windows.ui.xaml.controls.listview)
 - [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md)
 - [Información general sobre accesibilidad](../accessibility/accessibility-overview.md)
 - [Ejemplo de ListView y GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)

@@ -1,17 +1,17 @@
 ---
 title: Obtener ejemplos de aplicaciones de Windows
-description: Obtenga información sobre cómo descargar ejemplos de código de Windows de GitHub.
+description: Obtenga información sobre cómo examinar, descargar y abrir ejemplos de código de GitHub que muestran la mayoría de las características de Windows y sus patrones de uso de la API.
 ms.date: 06/30/2020
 ms.topic: article
 keywords: Windows 10, código de ejemplo, ejemplos de código
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 285388c4c1b4791e1ca271a853476416b6d13c13
-ms.sourcegitcommit: 179f8098d10e338ad34fa84934f1654ec58161cd
+ms.openlocfilehash: e08a81ac6f9bca2e4fe4b7451df830e20c714893
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757640"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162949"
 ---
 # <a name="get-windows-app-samples"></a>Obtener ejemplos de aplicaciones de Windows
 
@@ -19,7 +19,7 @@ Muchos ejemplos de código de Windows oficiales están disponibles en varios rep
 
 :::image type="content" source="images/github-windows-samples-page.png" alt-text="Repositorio de ejemplos de la Plataforma universal de Windows de GitHub":::
 
-Para facilitar la búsqueda de ejemplos concretos, puede examinar y buscar una colección categorizada de ejemplos de código para diversas tecnologías y herramientas para desarrolladores de Microsoft a través del [explorador de ejemplos](https://docs.microsoft.com/samples/browse/).
+Para facilitar la búsqueda de ejemplos concretos, puede examinar y buscar una colección categorizada de ejemplos de código para diversas tecnologías y herramientas para desarrolladores de Microsoft a través del [explorador de ejemplos](/samples/browse/).
 
 :::image type="content" source="images/samples-browser-windows.png" alt-text="Explorador de ejemplos de Microsoft":::
 

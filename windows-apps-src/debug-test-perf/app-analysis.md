@@ -1,16 +1,16 @@
 ---
 title: Análisis de la aplicación
-description: Analice la aplicación para detectar problemas de rendimiento.
+description: Obtenga información sobre la herramienta de análisis de la aplicación y vea las instrucciones de rendimiento y los procedimientos recomendados que usa para evaluar el código de la aplicación.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e2977877b839f40e07b3eaa03b8349fb8439a401
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b8ada4ec36e989cbc47abd3bbbe01fa7bc3e785b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "73062750"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166179"
 ---
 # <a name="app-analysis-overview"></a>Información general sobre el análisis de la aplicación
 
@@ -32,11 +32,11 @@ Mostrar imágenes con su tamaño no nativo puede tener un impacto negativo en el
 
 #### <a name="image-is-not-being-set-asynchronously"></a>La imagen no se establece asincrónicamente
 
-La aplicación está usando SetSource() en lugar de SetSourceAsync(). Evita usar [**SetSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsource) y, en su lugar, emplea [**SetSourceAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) al establecer una secuencia para decodificar imágenes de forma asíncrona. 
+La aplicación está usando SetSource() en lugar de SetSourceAsync(). Evita usar [**SetSource**](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsource) y, en su lugar, emplea [**SetSourceAsync**](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) al establecer una secuencia para decodificar imágenes de forma asíncrona. 
 
 #### <a name="image-is-being-called-when-the-imagesource-is-not-in-the-live-tree"></a>Se llama a la imagen cuando la propiedad ImageSource no está en el árbol activo
 
-La clase BitmapImage se conecta al árbol XAML activo después de configurar el contenido con SetSourceAsync o con UriSource. Te recomendamos que asocies siempre una clase [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) al árbol activo antes de establecer el origen. Esto sucederá siempre que especifiques un elemento o pincel de imagen en el marcado. A continuación se proporcionan ejemplos. 
+La clase BitmapImage se conecta al árbol XAML activo después de configurar el contenido con SetSourceAsync o con UriSource. Te recomendamos que asocies siempre una clase [**BitmapImage**](/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) al árbol activo antes de establecer el origen. Esto sucederá siempre que especifiques un elemento o pincel de imagen en el marcado. A continuación se proporcionan ejemplos. 
 
 **Ejemplos de árbol activo**
 
@@ -72,7 +72,7 @@ myImage.Source = bitmapImage;
 
 Cuando se usa una imagen para un pincel no rectangular, la imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como en la de hardware. Por ejemplo, si se usa una imagen como el pincel de una elipse, la totalidad de la imagen potencialmente grande se almacenará internamente dos veces. Al usar un pincel no rectangular, la aplicación debería escalar previamente sus imágenes a aproximadamente el tamaño en el que se presentarán.
 
-Como alternativa, puedes establecer un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
+Como alternativa, puedes establecer un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
 
 ```xml
 <Image>
@@ -83,21 +83,21 @@ Como alternativa, puedes establecer un tamaño de descodificación explícito pa
 </Image>
 ```
 
-De manera predeterminada, las unidades [**DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight) son píxeles físicos. Puedes usar la propiedad [**DecodePixelType**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixeltype) para cambiar este comportamiento: al establecer **DecodePixelType** en **Logical** provocarás que se descodifique automáticamente el tamaño, teniendo en cuenta el factor de escala actual del sistema, el cual es similar a otro contenido XAML. Por lo tanto, sería conveniente establecer de forma general **DecodePixelType** en **Logical** si, por ejemplo, quieres que **DecodePixelWidth** y **DecodePixelHeight** coincidan con las propiedades Height y Width del control Image en el cual se mostrará la imagen. Con el comportamiento predeterminado de uso de píxeles físicos, debes tener en cuenta el factor de escala actual del sistema y debes prestar atención a las notificaciones de cambios de escala en caso de que el usuario cambie sus preferencias de visualización.
+De manera predeterminada, las unidades [**DecodePixelWidth**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight) son píxeles físicos. Puedes usar la propiedad [**DecodePixelType**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixeltype) para cambiar este comportamiento: al establecer **DecodePixelType** en **Logical** provocarás que se descodifique automáticamente el tamaño, teniendo en cuenta el factor de escala actual del sistema, el cual es similar a otro contenido XAML. Por lo tanto, sería conveniente establecer de forma general **DecodePixelType** en **Logical** si, por ejemplo, quieres que **DecodePixelWidth** y **DecodePixelHeight** coincidan con las propiedades Height y Width del control Image en el cual se mostrará la imagen. Con el comportamiento predeterminado de uso de píxeles físicos, debes tener en cuenta el factor de escala actual del sistema y debes prestar atención a las notificaciones de cambios de escala en caso de que el usuario cambie sus preferencias de visualización.
 
 En algunos casos donde no se puede determinar con anterioridad un tamaño de descodificación adecuado, deberías dejarlo en manos de la descodificación automática del tamaño correcto de XAML, que hará un mejor intento de descodificación de la imagen con el tamaño adecuado si no se especifican las propiedades DecodePixelWidth/DecodePixelHeight explícitas.
 
-Te recomendamos que establezcas un tamaño de descodificación explícito si conoces con anterioridad el tamaño del contenido de la imagen. Además, también deberías establecer [**DecodePixelType**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixeltype) en **Logical** si el tamaño de descodificación proporcionado está relacionado con otros tamaños de los elementos XAML. Por ejemplo, si estableces explícitamente el tamaño del contenido con Image.Width e Image.Height, puedes establecer DecodePixelType en DecodePixelType.Logical para que use las mismas dimensiones de píxeles lógicos como un control Image y luego usar explícitamente BitmapImage.DecodePixelWidth o BitmapImage.DecodePixelHeight para controlar el tamaño de la imagen con el fin de lograr ahorros de memoria potencialmente grande.
+Te recomendamos que establezcas un tamaño de descodificación explícito si conoces con anterioridad el tamaño del contenido de la imagen. Además, también deberías establecer [**DecodePixelType**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixeltype) en **Logical** si el tamaño de descodificación proporcionado está relacionado con otros tamaños de los elementos XAML. Por ejemplo, si estableces explícitamente el tamaño del contenido con Image.Width e Image.Height, puedes establecer DecodePixelType en DecodePixelType.Logical para que use las mismas dimensiones de píxeles lógicos como un control Image y luego usar explícitamente BitmapImage.DecodePixelWidth o BitmapImage.DecodePixelHeight para controlar el tamaño de la imagen con el fin de lograr ahorros de memoria potencialmente grande.
 
 Recuerda que hay que tener en cuenta Image.Stretch al determinar el tamaño del contenido descodificado.
 
 #### <a name="images-used-inside-of-bitmapicons-fall-back-to-decoding-to-natural-size"></a>Las imágenes que se usan dentro de BitmapIcons vuelven a la descodificación de tamaño natural 
 
-Establece un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
+Establece un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
 
 #### <a name="images-that-appear-extremely-large-on-screen-fall-back-to-decoding-to-natural-size"></a>Las imágenes que se muestran extremadamente grandes en pantalla vuelven a la descodificación a tamaño natural 
 
-Las imágenes que se muestran extremadamente grandes en pantalla vuelven a la descodificación a tamaño natural. Establece un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
+Las imágenes que se muestran extremadamente grandes en pantalla vuelven a la descodificación a tamaño natural. Establece un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
 
 #### <a name="image-is-hidden"></a>La imagen está oculta
 
@@ -105,7 +105,7 @@ Para ocultar la imagen, se establece la propiedad Opacity en 0 o Visibility en C
 
 #### <a name="image-is-using-ninegrid-property"></a>La imagen usa la propiedad NineGrid
 
-Cuando se usa una imagen para una propiedad [**NineGrid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.ninegrid), dicha imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como en la de hardware. Si se usa **NineGrid**, la aplicación deberá escalar previamente sus imágenes a aproximadamente el tamaño en el que se presentarán.
+Cuando se usa una imagen para una propiedad [**NineGrid**](/uwp/api/windows.ui.xaml.controls.image.ninegrid), dicha imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como en la de hardware. Si se usa **NineGrid**, la aplicación deberá escalar previamente sus imágenes a aproximadamente el tamaño en el que se presentarán.
 
 Las imágenes que usan la propiedad NineGrid volverán a la descodificación a tamaño natural. Considera la posibilidad de agregar el efecto de ninegrid a la imagen original.
 
@@ -115,7 +115,7 @@ Si estableces DecodePixelWidth/Height para que sean explícitamente mayores que 
 
 #### <a name="image-is-decoded-as-part-of-producing-a-drag-and-drop-image"></a>La imagen se descodifica como parte de la producción de una imagen de arrastrar y colocar
 
-Establece un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
+Establece un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
 
 ## <a name="collapsed-elements-at-load-time"></a>Elementos contraídos en el tiempo de carga
 
@@ -133,7 +133,7 @@ Esta regla se ha desencadenado porque un elemento se ha contraído en el tiempo 
 
 ### <a name="solution"></a>Solución
 
-Con [x:Load attribute](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute), puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esto es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en el primer fotograma. Puedes optar por cargar el elemento cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, llama a findName en el elemento que deseas cargar. x:Load amplía las capacidades de x:DeferLoadStrategy al permitir la descarga de elementos y que el estado de carga se pueda controlar a través de x:Bind.
+Con [x:Load attribute](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md), puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esto es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en el primer fotograma. Puedes optar por cargar el elemento cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, llama a findName en el elemento que deseas cargar. x:Load amplía las capacidades de x:DeferLoadStrategy al permitir la descarga de elementos y que el estado de carga se pueda controlar a través de x:Bind.
 
 En algunos casos, el uso de findName para mostrar un elemento de la interfaz de usuario puede que no sea la respuesta. Esto sucede si esperas que una parte importante de la interfaz de usuario se muestre al hacer clic en un botón con una latencia muy baja. En este caso, puedes compensar la latencia de interfaz de usuario más rápida a costa de memoria adicional. De ser así, deberías usar x:DeferLoadStrategy y establecer los objetos Visibility en Collapsed en el elemento que quieras obtener. Una vez que se haya cargado la página y el subproceso de la interfaz de usuario esté libre, puedes llamar a findName cuando sea necesario para cargar los elementos. Los elementos no será visibles para el usuario hasta que establezcas la propiedad Visibility del elemento en Visible.
 
@@ -141,7 +141,7 @@ En algunos casos, el uso de findName para mostrar un elemento de la interfaz de 
 
 La virtualización de la interfaz de usuario es la mejora más importante que puedes realizar para mejorar el rendimiento de las colecciones. Esto significa que los elementos de la interfaz de usuario que representan los elementos se crean a petición. Para un control de elementos enlazado a una colección de 1000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque todos no pueden mostrarse a la vez. ListView y GridView (y otros controles estándar derivados de ItemsControl) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recuperará la memoria.
 
-La virtualización de la interfaz de usuario es solo uno de varios factores clave para mejorar el rendimiento de las colecciones. Reducir la complejidad de los elementos de colección y la virtualización de datos son otros dos aspectos importantes para mejorar el rendimiento de las colecciones. Para obtener más información acerca de cómo mejorar el rendimiento de las colecciones en ListViews y GridViews, consulta los artículos [Optimización de la interfaz de usuario de ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview) y [Virtualización de datos de ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization).
+La virtualización de la interfaz de usuario es solo uno de varios factores clave para mejorar el rendimiento de las colecciones. Reducir la complejidad de los elementos de colección y la virtualización de datos son otros dos aspectos importantes para mejorar el rendimiento de las colecciones. Para obtener más información acerca de cómo mejorar el rendimiento de las colecciones en ListViews y GridViews, consulta los artículos [Optimización de la interfaz de usuario de ListView y GridView](./optimize-gridview-and-listview.md) y [Virtualización de datos de ListView y GridView](./listview-and-gridview-data-optimization.md).
 
 ### <a name="impact"></a>Impacto
 
@@ -159,7 +159,7 @@ Restaura la virtualización estableciendo un ancho y un alto en el ItemsControl 
 
 El bloqueo del subproceso de la interfaz de usuario se refiere a las llamadas sincrónicas a funciones que se ejecutan fuera del subproceso y que bloquean el subproceso de la interfaz de usuario.  
 
-Para obtener una lista completa de los procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación, consulta [Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación](https://docs.microsoft.com/windows/uwp/debug-test-perf/best-practices-for-your-app-s-startup-performance) y [Mantener la capacidad de respuesta del subproceso de la interfaz de usuario](https://docs.microsoft.com/windows/uwp/debug-test-perf/keep-the-ui-thread-responsive).
+Para obtener una lista completa de los procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación, consulta [Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación](./best-practices-for-your-app-s-startup-performance.md) y [Mantener la capacidad de respuesta del subproceso de la interfaz de usuario](./keep-the-ui-thread-responsive.md).
 
 ### <a name="impact"></a>Impacto
 
@@ -213,7 +213,7 @@ Si proporcionas una plantilla del panel de elementos personalizada (consulta Ite
 
 La virtualización de la interfaz de usuario es la mejora más importante que puedes realizar para mejorar el rendimiento de las colecciones. Esto significa que los elementos de la interfaz de usuario que representan los elementos se crean a petición. Para un control de elementos enlazado a una colección de 1000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque todos no pueden mostrarse a la vez. ListView y GridView (y otros controles estándar derivados de ItemsControl) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recuperará la memoria.
 
-La virtualización de la interfaz de usuario es solo uno de varios factores clave para mejorar el rendimiento de las colecciones. Reducir la complejidad de los elementos de colección y la virtualización de datos son otros dos aspectos importantes para mejorar el rendimiento de las colecciones. Para obtener más información acerca de cómo mejorar el rendimiento de las colecciones en ListViews y GridViews, consulta los artículos [Optimización de la interfaz de usuario de ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview) y [Virtualización de datos de ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization).
+La virtualización de la interfaz de usuario es solo uno de varios factores clave para mejorar el rendimiento de las colecciones. Reducir la complejidad de los elementos de colección y la virtualización de datos son otros dos aspectos importantes para mejorar el rendimiento de las colecciones. Para obtener más información acerca de cómo mejorar el rendimiento de las colecciones en ListViews y GridViews, consulta los artículos [Optimización de la interfaz de usuario de ListView y GridView](./optimize-gridview-and-listview.md) y [Virtualización de datos de ListView y GridView](./listview-and-gridview-data-optimization.md).
 
 ### <a name="impact"></a>Impacto
 
@@ -262,5 +262,3 @@ Los elementos UIA con el mismo elemento primario UIA tienen los mismos Name y Co
 ### <a name="solution"></a>Solución
 
 Establece un nombre en XAML con AutomationProperties.Name. En las listas donde esto se produce normalmente, usa el enlace para enlazar el valor de AutomationProperties.Name con un origen de datos.
-
-

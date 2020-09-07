@@ -1,5 +1,5 @@
 ---
-Description: Un botón ofrece al usuario una forma de desencadenar una acción inmediata.
+description: Obtenga información sobre cómo usar las tarjetas de contacto para que los usuarios puedan mostrar y editar información de los contactos, como el nombre, el número de teléfono y la dirección.
 title: Tarjeta de contacto
 ms.date: 03/07/2018
 ms.topic: article
@@ -9,12 +9,12 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 274481b2a282b025a637f7f6cc54dc0161c3e61d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2817977533b63df8498faa1ecbc5cc57a4987c30
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968760"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160599"
 ---
 # <a name="contact-card"></a>Tarjeta de contacto
 
@@ -174,12 +174,12 @@ private void onUserClickShowContactCard()
 
 ## <a name="retrieving-real-contacts"></a>Recuperación de contactos "reales"
 
-En los ejemplos de este artículo se crea un contacto sencillo. En una aplicación real, seguramente quieras recuperar un contacto existente. Para obtener instrucciones, consulta el [Artículo sobre contactos y calendario](/windows/uwp/contacts-and-calendar/).
+En los ejemplos de este artículo se crea un contacto sencillo. En una aplicación real, seguramente quieras recuperar un contacto existente. Para obtener instrucciones, consulta el [Artículo sobre contactos y calendario](../../contacts-and-calendar/index.md).
 
 
 
 
 ## <a name="related-articles"></a>Artículos relacionados
-- [Contactos y calendario](/windows/uwp/contacts-and-calendar/)
+- [Contactos y calendario](../../contacts-and-calendar/index.md)
 - [Ejemplo de tarjetas de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)
 - [Control de imagen de personas](/windows/uwp/controls-and-patterns/person-picture/)

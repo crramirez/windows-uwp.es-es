@@ -1,18 +1,18 @@
 ---
-Description: Ampliar tu aplicación de escritorio con componentes e interfaces de usuario de Windows
 title: Ampliación de la aplicación con componentes e interfaces de usuario de Windows
+description: Amplíe su aplicación de escritorio con los proyectos de UWP y componentes de Windows Runtime para agregar experiencias modernas de Windows 10.
 ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 73e867071058dfde71979318d6d711d79460f30b
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 29064390e4e198d1220d40ff5ce58a63ea41e29a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334550"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172789"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Ampliación de la aplicación de escritorio con componentes de UWP modernos
 
@@ -21,7 +21,7 @@ Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usu
 En muchos casos, puedes llamar a las API de Windows Runtime directamente desde la aplicación de escritorio, por lo que, antes de revisar esta guía, consulta [Mejora para Windows 10](desktop-to-uwp-enhance.md).
 
 > [!NOTE]
-> En las características que se describen en este artículo se requiere que la aplicación de escritorio tenga [identidad de paquete](modernize-packaged-apps.md), bien mediante el [empaquetado de la aplicación de escritorio en un paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) o mediante la [concesión de la identidad de la aplicación con un paquete disperso](grant-identity-to-nonpackaged-apps.md).
+> En las características que se describen en este artículo se requiere que la aplicación de escritorio tenga [identidad de paquete](modernize-packaged-apps.md), bien mediante el [empaquetado de la aplicación de escritorio en un paquete MSIX](/windows/msix/desktop/desktop-to-uwp-root) o mediante la [concesión de la identidad de la aplicación con un paquete disperso](grant-identity-to-nonpackaged-apps.md).
 
 Si estás listo, comencemos.
 
@@ -37,7 +37,7 @@ Esta imagen muestra un ejemplo de solución.
 
 ![Ampliar el proyecto de inicio](images/desktop-to-uwp/extend-start-project.png)
 
-Si la solución no contiene un proyecto de empaquetado, consulta [Empaquetado de la aplicación de escritorio mediante Visual Studio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
+Si la solución no contiene un proyecto de empaquetado, consulta [Empaquetado de la aplicación de escritorio mediante Visual Studio](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
 
 ### <a name="configure-the-desktop-application"></a>Configuración de la aplicación de escritorio
 
@@ -175,7 +175,7 @@ También puedes abrir el archivo **package.appxmanifest** en el diseñador, eleg
 
 ### <a name="start-the-uwp-app"></a>Iniciar la aplicación para UWP
 
-En primer lugar, desde la aplicación de escritorio, crea un [Uri](https://docs.microsoft.com/dotnet/api/system.uri) que incluya el nombre del protocolo y los parámetros que quieras pasar a la aplicación para UWP. Luego llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
+En primer lugar, desde la aplicación de escritorio, crea un [Uri](/dotnet/api/system.uri) que incluya el nombre del protocolo y los parámetros que quieras pasar a la aplicación para UWP. Luego llama al método [LaunchUriAsync](/uwp/api/windows.system.launcher.launchuriasync).
 
 ```csharp
 
@@ -366,7 +366,7 @@ Modifica la aplicación de escritorio para buscar y procesar el archivo comparti
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-En el caso de las instancias de la aplicación de escritorio que ya ha abierto el usuario, también se puede controlar el evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher) y pasar la ruta de acceso a la ubicación del archivo. De este modo, las instancias abiertas de la aplicación de escritorio mostrarán la foto compartida.
+En el caso de las instancias de la aplicación de escritorio que ya ha abierto el usuario, también se puede controlar el evento [FileSystemWatcher](/dotnet/api/system.io.filesystemwatcher) y pasar la ruta de acceso a la ubicación del archivo. De este modo, las instancias abiertas de la aplicación de escritorio mostrarán la foto compartida.
 
 ```csharp
 ...

@@ -1,17 +1,17 @@
 ---
 title: Pista de aprendizaje - Construir y configurar un formulario
-description: Aprenda lo que necesita hacer para crear un formulario sólido en su aplicación.
+description: Obtenga información sobre cómo construir y configurar un formulario sólido en una aplicación para la Plataforma universal de Windows (UWP) para controlar la entrada de una cantidad significativa de información.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formulario
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 02cb15d948bf35b1c449bb430c9c31dd33d9eec6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a674514bfeb2acbc545e59cf1b3fc6e59d697215
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79543978"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304527"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
@@ -51,7 +51,7 @@ Deberá rellenar su formulario con una variedad de [Controles de XAML](../design
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md) permite al usuario elegir entre dos opciones.
 * [DatePicker](../design/controls-and-patterns/date-picker.md) permite al usuario seleccionar un valor de fecha.
 * [TimePicker](../design/controls-and-patterns/time-picker.md) permite al usuario seleccionar un valor de hora.
-* [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) se expande para mostrar una lista de elementos seleccionables. Puede aprender más sobre ellos [aquí](../design/controls-and-patterns/combo-box.md)
+* [ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) se expande para mostrar una lista de elementos seleccionables. Puede aprender más sobre ellos [aquí](../design/controls-and-patterns/combo-box.md)
 
 También es posible que desee agregar [ botones ](../design/controls-and-patterns/buttons.md), para que el usuario pueda guardar o cancelar.
 
@@ -155,10 +155,10 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | API | Descripción |
 |------|---------------|
 | [Controles útiles para formularios](../design/controls-and-patterns/forms.md#input-controls) | Una lista de controles de entrada útiles para crear formularios, e instrucciones básicas de dónde usarlos. |
-| [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | Un panel para organizar elementos en diseños de varias filas y varias columnas. |
-| [RelativePanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | Un panel para organizar elementos en relación con otros elementos y los límites del panel. |
-| [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | Un panel para organizar elementos en una sola línea horizontal o vertical. |
-| [VisualState](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) | Permite establecer el aspecto de los elementos de la interfaz de usuario cuando están en estados concretos. |
+| [Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid) | Un panel para organizar elementos en diseños de varias filas y varias columnas. |
+| [RelativePanel](/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | Un panel para organizar elementos en relación con otros elementos y los límites del panel. |
+| [StackPanel](/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | Un panel para organizar elementos en una sola línea horizontal o vertical. |
+| [VisualState](/uwp/api/Windows.UI.Xaml.VisualState) | Permite establecer el aspecto de los elementos de la interfaz de usuario cuando están en estados concretos. |
 
 ### <a name="useful-docs"></a>Documentos útiles
 

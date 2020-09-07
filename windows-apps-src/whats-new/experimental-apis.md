@@ -1,16 +1,16 @@
 ---
 title: API experimentales
-description: Conocer las API experimentales
+description: Obtenga información sobre cómo las API experimentales se usan en el modo piloto externamente con los SDK de Windows Insider para que los desarrolladores puedan probarlas.
 ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, experimental, api
 ms.localizationpriority: medium
-ms.openlocfilehash: 542e007d07d490c2f18077e646f7598bfd2587c3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5a4813e7b4ae1e3dd16017066758aa8a35d0570a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684911"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170809"
 ---
 # <a name="experimental-apis"></a>API experimentales
 
@@ -25,7 +25,7 @@ Estas advertencias ayudan a evitar que crees dependencias en las API experimenta
 
 De manera predeterminada, estas API se deshabilitan en tiempo de ejecución y, al llamarlas, se genera una excepción en tiempo de ejecución. Se trata de otra medida de seguridad para evitar dependencias involuntarias y la distribución generalizada de aplicaciones que usan API experimentales.
 
-Para habilitar estas API con fines de experimentación, usa el [complemento de características del Portal de dispositivos Windows (WDP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal) en el dispositivo de destino para habilitar la característica correspondiente a la API que desees llamar.
+Para habilitar estas API con fines de experimentación, usa el [complemento de características del Portal de dispositivos Windows (WDP)](../debug-test-perf/device-portal.md) en el dispositivo de destino para habilitar la característica correspondiente a la API que desees llamar.
 
 La documentación de una API experimental determinada depende del equipo al que pertenece.
 

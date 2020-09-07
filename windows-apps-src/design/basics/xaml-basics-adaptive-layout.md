@@ -1,16 +1,16 @@
 ---
 title: Crear tutoriales sobre diseños adaptativos
-description: Este artículo describe los conceptos básicos del diseño adaptativo en XAML
+description: Obtenga información sobre cómo usar las características de diseños adaptables en XAML para crear aplicaciones que tengan un aspecto correcto en cualquier tamaño de ventana.
 keywords: XAML, UWP, Getting Started
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b172f2da7fa8953045db4eab3818df02ce43e00c
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 8e1498836772c3c279a1b9d85d76070b29593f5e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942895"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174479"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Crear diseños adaptables
 
@@ -60,11 +60,11 @@ Ejecute la aplicación. Se ve correctamente a pantalla completa, pero la interfa
 
 ![Ventana pequeña: antes](../basics/images/xaml-basics/adaptive-layout-small-before.png)
 
-Para obtener más información sobre el diseño de la aplicación, consulte la sección [Diseño](/windows/uwp/design/layout/) de los documentos.
+Para obtener más información sobre el diseño de la aplicación, consulte la sección [Diseño](../layout/index.md) de los documentos.
 
 ### <a name="add-window-breakpoints"></a>Agregar puntos de interrupción de ventana
 
-El primer paso es definir los _puntos de interrupción_ en los que se aplicarán los distintos estados visuales. Consulte [Tamaños de pantalla y puntos de interrupción](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design) para obtener más información acerca de los puntos de interrupción para pantallas pequeñas, medianas y grandes.
+El primer paso es definir los _puntos de interrupción_ en los que se aplicarán los distintos estados visuales. Consulte [Tamaños de pantalla y puntos de interrupción](../layout/screen-sizes-and-breakpoints-for-responsive-design.md) para obtener más información acerca de los puntos de interrupción para pantallas pequeñas, medianas y grandes.
 
 Abra el archivo App.xaml desde el Explorador de soluciones y agregue el siguiente código después de `MergedDictionaries`, justo antes de la etiqueta de cierre `</ResourceDictionary>`.
 
@@ -264,12 +264,12 @@ Ejecute la aplicación. Cuando se cargue la aplicación, intenta cambiar el tama
 
 ## <a name="going-further"></a>Ir más allá
 
-Ahora que has completado este laboratorio, tienes suficiente información de diseño adaptable para experimentar más por tu cuenta. Para enfrentarse a un desafío mayor, intente optimizar el diseño para tamaños de pantalla mayores, como Surface Hub. Consulte [Probar aplicaciones de Surface Hub con Visual Studio](/windows/uwp/debug-test-perf/test-surface-hub-apps-using-visual-studio) si desea probar un diseño de Surface Hub.
+Ahora que has completado este laboratorio, tienes suficiente información de diseño adaptable para experimentar más por tu cuenta. Para enfrentarse a un desafío mayor, intente optimizar el diseño para tamaños de pantalla mayores, como Surface Hub. Consulte [Probar aplicaciones de Surface Hub con Visual Studio](../../debug-test-perf/test-surface-hub-apps-using-visual-studio.md) si desea probar un diseño de Surface Hub.
 
 Si te quedas bloqueado, puedes encontrar más información en estas secciones de [Definir diseños de página con XAML](../layout/layouts-with-xaml.md).
 
-+ [Estados visuales y desencadenadores de estado](/windows/uwp/design/layout/layouts-with-xaml#visual-states-and-state-triggers)
-+ [Diseños personalizados](/windows/uwp/design/layout/layouts-with-xaml#tailored-layouts)
++ [Estados visuales y desencadenadores de estado](../layout/layouts-with-xaml.md#visual-states-and-state-triggers)
++ [Diseños personalizados](../layout/layouts-with-xaml.md#tailored-layouts)
 
 Como alternativa, si quieres obtener más información sobre cómo se creó la aplicación inicial de edición de fotos, consulta estos tutoriales de XAML, [interfaces de usuario](../basics/xaml-basics-ui.md) y [enlace de datos](../../data-binding/xaml-basics-data-binding.md).
 

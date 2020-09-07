@@ -1,16 +1,16 @@
 ---
 title: Crear enlaces de datos
-description: En este artículo se describen los conceptos básicos del enlace de datos en XAML
+description: Siga este tutorial para aprender a crear enlaces de datos mediante XAML y C# para formar un vínculo directo entre la interfaz de usuario y los datos.
 keywords: XAML, UWP, Getting Started
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ac0603aab5abdc9aef54264c7e8d5bf9ae848889
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 5d3363dcc47ef43fe65b3c954b213a81cc5165e1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88943125"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166289"
 ---
 # <a name="tutorial-create-data-bindings"></a>Tutorial: Crear enlaces de datos
 
@@ -627,5 +627,5 @@ Como habrás notado, si cambias el nivel de zoom en la página de detalles, se r
 
 Tienes toda la información que necesitas en este tutorial pero, si necesitas más información, los documentos de enlace de datos están a solo un clic de distancia. Comienza aquí:
 
-+ [Extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
-+ [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
++ [Extensión de marcado {x:Bind}](../xaml-platform/x-bind-markup-extension.md)
++ [Enlace de datos en profundidad](./data-binding-in-depth.md)

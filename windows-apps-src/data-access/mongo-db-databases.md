@@ -1,16 +1,16 @@
 ---
 title: Uso de una base de datos de MongoDB en una aplicación para UWP
-description: Usa una base de datos de MongoDB en una aplicación para UWP.
+description: Obtenga información sobre cómo conectar una aplicación para la Plataforma universal de Windows (UWP) directamente a una base de datos de MongoDB y probar la conexión mediante programación.
 ms.date: 03/28/2019
 ms.topic: article
 keywords: Windows 10, UWP, MongoDB, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: ea3e630a3bb0b8fc5f7f4168b0b946f115b97446
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: aaa035393e49d6bdad49faa806485cc51d21bb84
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67713995"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043517"
 ---
 # <a name="use-a-mongodb-database"></a>Usar una base de datos de MongoDB
 Este artículo contiene los pasos necesarios para trabajar con una base de datos de MongoDB desde una aplicación para UWP. Además, incluye un pequeño fragmento de código en el que se muestra cómo se puede interactuar con la base de datos en el código.

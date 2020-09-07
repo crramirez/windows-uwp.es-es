@@ -1,16 +1,16 @@
 ---
 title: Uso de una base de datos de MySQL en una aplicación para UWP
-description: Usa una base de datos de MySQL en una aplicación para UWP.
+description: Obtenga información sobre cómo conectarse a una base de datos de MySQL desde una aplicación para UWP y probar la conexión mediante código de ejemplo.
 ms.date: 03/28/2019
 ms.topic: article
 keywords: Windows 10, UWP, MySQL, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: bfed9c0a0c4198095b9be48fe71832bdfca67718
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 669755b9dc56277668ade777ef98a9ec256b9a59
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67713790"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054325"
 ---
 # <a name="use-a-mysql-database"></a>Usar una base de datos de MySQL
 Este artículo contiene los pasos necesarios para trabajar con una base de datos de MySQL desde una aplicación para UWP. Además, incluye un pequeño fragmento de código en el que se muestra cómo se puede interactuar con la base de datos en el código.

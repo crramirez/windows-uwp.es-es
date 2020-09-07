@@ -1,16 +1,16 @@
 ---
-Description: Ver diferentes partes de la aplicación en ventanas distintas.
+description: Ayude a los usuarios a ser más productivos al permitirles ver partes independientes de la aplicación en ventanas distintas.
 title: Mostrar varias vistas de una aplicación
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7d6ea614a9d85eadfcb807c6e6100dbe15ed0c4
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 7b58841420c93f3fee02b0f283012fe45c468618
+ms.sourcegitcommit: b0cfbab1ed8749ef572ba6971e6b206717d12c12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970740"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219138"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar varias vistas de una aplicación
 
@@ -86,6 +86,7 @@ En esta tabla se muestra el código que no funciona correctamente entre los host
 | Window.Current.[Bounds](/uwp/api/windows.ui.xaml.window.bounds) | _uiElement_.XamlRoot.[Size](/uwp/api/windows.ui.xaml.xamlroot.size) |
 | Window.Current.[Content](/uwp/api/windows.ui.xaml.window.content) | UIElement root =  _uiElement_.XamlRoot.[Content](/uwp/api/windows.ui.xaml.xamlroot.content) |
 | Window.Current.[Compositor](/uwp/api/windows.ui.xaml.window.compositor) | Sin cambios. Esto se admite en AppWindow y DesktopWindowXamlSource. |
+| VisualTreeHelper.[FindElementsInHostCoordinates](/uwp/api/windows.ui.xaml.media.visualtreehelper.findelementsinhostcoordinates)<br>Aunque el parámetro UIElement es opcional, el método produce una excepción si no se proporciona un UIElement cuando se hospeda en una isla. | Especifique _uiElement_.XamlRoot como UIElement, en lugar de dejarlo en blanco. |
 | VisualTreeHelper.[GetOpenPopups](/uwp/api/windows.ui.xaml.media.visualtreehelper.getopenpopups)<br/>En las aplicaciones con islas XAML, se producirá un error. En las aplicaciones con AppWindow, se devolverán los elementos emergentes abiertos en la ventana principal. | VisualTreeHelper.[GetOpenPopupsForXamlRoot](/uwp/api/windows.ui.xaml.media.visualtreehelper.getopenpopupsforxamlroot)(_uiElement_.XamlRoot) |
 | FocusManager.[GetFocusedElement](/uwp/api/windows.ui.xaml.input.focusmanager.getfocusedelement) | FocusManager.[GetFocusedElement](/uwp/api/windows.ui.xaml.input.focusmanager.getfocusedelement#Windows_UI_Xaml_Input_FocusManager_GetFocusedElement_Windows_UI_Xaml_XamlRoot_)(_uiElement_.XamlRoot) |
 | contentDialog.ShowAsync() | contentDialog.[XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) = _uiElement_.XamlRoot;<br/>contentDialog.ShowAsync(); |
@@ -108,5 +109,5 @@ En esta tabla se muestra el código que no funciona correctamente entre los host
 
 - [Usar AppWindow](app-window.md)
 - [Usar ApplicationView](application-view.md)
-- [ApplicationViewSwitcher](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher)
-- [CreateNewView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
+- [ApplicationViewSwitcher](/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher)
+- [CreateNewView](/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)

@@ -1,5 +1,5 @@
 ---
-Description: Mostrar listas y habilitar la interacción con el contenido basado en la colección.
+description: Obtenga información sobre las colecciones y listas como representaciones de varios elementos de datos relacionados que aparecen juntos. 
 title: Colecciones y listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Collections and Lists
@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9896003fb1d55a2dbb57468848edd66a3d8d8d88
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ede68414d86f333b516be81cbae83ea58dc83ba0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970400"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169919"
 ---
 # <a name="collections-and-lists"></a>Colecciones y listas
 
 Las colecciones y listas hacen referencia a la representación de varios elementos de datos relacionados que aparecen juntos. Las colecciones se pueden representar de varias maneras, mediante diferentes controles de colección (también se pueden denominar vistas de colección). Los controles de colección muestran y permiten las interacciones con el contenido basado de la colección, como una lista de contactos, una lista de fechas, una colección de imágenes, etc.
 
-> **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [clase FlipView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [clase TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview) y [clase ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
+> **API importantes**: [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView), [clase FlipView](/uwp/api/windows.ui.xaml.controls.flipview), [clase TreeView](/uwp/api/windows.ui.xaml.controls.treeview) y [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
 Los controles tratados en este artículo son:
 
@@ -35,14 +35,14 @@ Los controles tratados en este artículo son:
 
 A continuación, se proporcionan directrices de diseño, características y ejemplos para cada control.
 
-Cada uno de estos controles (a excepción de ItemsRepeater) proporciona las funciones de aplicación de estilos e interacción integradas. Sin embargo, para personalizar aún más el aspecto visual de la vista de colección y de los elementos que contiene, se usa [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). Puedes encontrar información detallada sobre las plantillas de datos y la personalización del aspecto de una vista de colección en la página [Plantillas y contenedores de elementos](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates).
+Cada uno de estos controles (a excepción de ItemsRepeater) proporciona las funciones de aplicación de estilos e interacción integradas. Sin embargo, para personalizar aún más el aspecto visual de la vista de colección y de los elementos que contiene, se usa [DataTemplate](/uwp/api/Windows.UI.Xaml.DataTemplate). Puedes encontrar información detallada sobre las plantillas de datos y la personalización del aspecto de una vista de colección en la página [Plantillas y contenedores de elementos](./item-containers-templates.md).
 
 Cada uno de estos controles (a excepción de ItemsRepeater) también tiene un comportamiento integrado para permitir la selección de uno o de varios elementos. Consulta [Selection modes overview](selection-modes.md) (Información general sobre los modos de selección) para obtener más información.
 
-Uno de los escenarios que no se tratan en este artículo es la visualización de colecciones en una tabla o en varias columnas. Si quieres mostrar una colección en este formato, piensa en la posibilidad de usar el [control DataGrid](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid) del [Kit de herramientas de la Comunidad Windows](https://docs.microsoft.com/windows/communitytoolkit/). 
+Uno de los escenarios que no se tratan en este artículo es la visualización de colecciones en una tabla o en varias columnas. Si quieres mostrar una colección en este formato, piensa en la posibilidad de usar el [control DataGrid](/windows/communitytoolkit/controls/datagrid) del [Kit de herramientas de la Comunidad Windows](/windows/communitytoolkit/). 
 
 > **Windows 10 Fall Creators Update: cambio de comportamiento** De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo se desplaza y realiza un movimiento panorámico por una lista en las aplicaciones de Windows (como la entrada táctil, el panel táctil y el lápiz pasivo).
-> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta en el tema de referencia de API la [clase ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta en el tema de referencia de API la [clase ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -277,7 +277,7 @@ Usa un control ItemsRepeater si:
 
 ### <a name="examples"></a>Ejemplos
 
-Los tres ejemplos siguientes son controles ItemsRepeater que están enlazados al mismo origen de datos (una colección de números). La colección de números se representa de tres maneras y cada uno de los controles ItemsRepeaters siguientes usa una clase [Layout](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.layout) personalizada distinta y una propiedad [ItemTemplate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2) personalizada diferente.
+Los tres ejemplos siguientes son controles ItemsRepeater que están enlazados al mismo origen de datos (una colección de números). La colección de números se representa de tres maneras y cada uno de los controles ItemsRepeaters siguientes usa una clase [Layout](/uwp/api/microsoft.ui.xaml.controls.layout) personalizada distinta y una propiedad [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2) personalizada diferente.
 
 ![ItemsRepeater con barras horizontales](images/itemsrepeater-1.png)
 ![ItemsRepeater con barras verticales](images/itemsrepeater-2.png)
@@ -332,7 +332,7 @@ Los tres ejemplos siguientes son controles ItemsRepeater que están enlazados al
 - [Imágenes en miniatura](../../files/thumbnails.md)
 
 **Referencia de las API**
-- [Clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
-- [Clase ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
-- [Clase ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [Clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Clase GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [Clase ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+- [Clase ListBox](/uwp/api/Windows.UI.Xaml.Controls.ListBox)

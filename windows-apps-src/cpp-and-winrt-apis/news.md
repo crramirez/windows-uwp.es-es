@@ -1,17 +1,17 @@
 ---
-description: Noticias y cambios en C++/WinRT.
+description: Consulte las incorporaciones y mejoras recientes, como las novedades y cambios en C++/WinRT 2.0 y Windows SDK, versión 10.0.17763.0.
 title: Novedades de C++/WinRT
 ms.date: 03/16/2020
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, news, what's, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3057a3d13ba1e7d368dd6bf8820710030687a04d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0d7c42b1346805c9c03714eb9bbb3944fe940ccf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80662409"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154469"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C++/WinRT
 
@@ -44,7 +44,7 @@ Esa mejora no afecta al tamaño del código &mdash;tal y como se describe a cont
 
 ### <a name="more-efficient-boxing"></a>Conversión boxing más eficiente
 
-Si se usa en una aplicación XAML, [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value) ahora es más eficaz (consulta [Conversión boxing y unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)). Las aplicaciones que realizan muchas conversiones boxing también observarán una reducción del tamaño del código.
+Si se usa en una aplicación XAML, [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value) ahora es más eficaz (consulta [Conversión boxing y unboxing](./boxing.md)). Las aplicaciones que realizan muchas conversiones boxing también observarán una reducción del tamaño del código.
 
 ### <a name="support-for-implementing-com-interfaces-that-implement-iinspectable"></a>Compatibilidad para implementar interfaces COM que implementan IInspectable
 
@@ -205,7 +205,7 @@ Un nuevo proyecto (de una plantilla de proyecto) utilizará `-opt` de manera pre
 
 Estas dos optimizaciones permiten a tu componente acceder directamente a sus propios tipos de implementación, incluso cuando solo utiliza los tipos proyectados. No hay necesidad de usar [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) ni [**get_self**](/uwp/cpp-ref-for-winrt/get-self) si simplemente quieres utilizar la superficie de la API pública. Tus llamadas se compilarán para dirigir las llamadas a la implementación e incluso podrían estar completamente insertadas.
 
-Para obtener más información y ejemplos de código, consulta [Participación en la construcción uniforme y acceso de implementación directa](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access).
+Para obtener más información y ejemplos de código, consulta [Participación en la construcción uniforme y acceso de implementación directa](./author-apis.md#opt-in-to-uniform-construction-and-direct-implementation-access).
 
 ##### <a name="type-erased-factories"></a>Generadores de borrado de tipos
 
@@ -245,7 +245,7 @@ Los asistentes de corrutina ahora se representan también con `[[nodiscard]]`, l
 
 Dado que los nombres de las clases de proyección y de implementación son (de manera predeterminada) los mismos y solo difieren por espacio de nombres, es posible confundir el uno con el otro y crear accidentalmente una implementación en la pila, en lugar de utilizar la familia de aplicaciones auxiliares [**make**](/uwp/cpp-ref-for-winrt/make). Esto puede ser difícil de diagnosticar en algunos casos, porque el objeto puede destruirse mientras las referencias pendientes aún están presentes. Una aserción ahora recoge esto para las compilaciones de depuración. Aunque la aserción no detecta la asignación de pilas dentro de una corrutina, es útil para detectar la mayoría de estos errores.
 
-Para obtener más información, consulta [Diagnóstico de asignaciones directas](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc).
+Para obtener más información, consulta [Diagnóstico de asignaciones directas](./diag-direct-alloc.md).
 
 #### <a name="improved-capture-helpers-and-variadic-delegates"></a>Aplicaciones auxiliares de captura mejoradas y delegados variádicos
 
@@ -314,7 +314,7 @@ struct MainPage : PageT<MainPage>
 };
 ```
 
-Para obtener más información, consulta [Destrucción diferida](/windows/uwp/cpp-and-winrt-apis/details-about-destructors#deferred-destruction).
+Para obtener más información, consulta [Destrucción diferida](./details-about-destructors.md#deferred-destruction).
 
 #### <a name="improved-support-for-com-style-single-interface-inheritance"></a>Compatibilidad mejorada para la herencia de interfaz única de estilo COM
 
@@ -341,7 +341,7 @@ En la tabla siguiente se incluyen las noticias y los cambios de C++/WinRT en la 
 | **Cambio importante**. Para que se compile, C++/WinRT no depende de los encabezados de Windows SDK. | Consulta [Aislamiento de los archivos de encabezado de Windows SDK](#isolation-from-windows-sdk-header-files), más abajo. |
 | Ha cambiado el formato del sistema de proyecto de Visual Studio. | Consulta [Procedimientos para redestinar el proyecto de C++/WinRT a una versión posterior de Windows SDK](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
 | Hay nuevas funciones y clases base para ayudar a pasar un objeto de colección a una función de Windows Runtime o implementar tus propias propiedades de la colección y los tipos de colección. | Consulta [Colecciones con C++/WinRT](collections.md). |
-| Puedes usar la extensión de marcado [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) con tus clases del entorno de ejecución de C++/WinRT. | Para obtener más información y ejemplos de código, consulta [Introducción al enlace de datos](/windows/uwp/data-binding/data-binding-quickstart). |
+| Puedes usar la extensión de marcado [{Binding}](../xaml-platform/binding-markup-extension.md) con tus clases del entorno de ejecución de C++/WinRT. | Para obtener más información y ejemplos de código, consulta [Introducción al enlace de datos](../data-binding/data-binding-quickstart.md). |
 | La compatibilidad con la cancelación de una corrutina te permite registrar una devolución de llamada de cancelación. | Para obtener más información y ejemplos de código, consulta [Cancelación de una operación asincrónica y devoluciones de llamadas de cancelación](concurrency-2.md#canceling-an-asynchronous-operation-and-cancellation-callbacks). |
 | Al crear un delegado que apunta a una función de miembro, puedes establecer una referencia fuerte o débil al objeto actual (en lugar de un puntero *this* básico) en el punto en el que se registra el controlador. | Para obtener información y ejemplos de código, consulta la subsección **Si usas una función miembro como delegado** en la sección [Acceso seguro al puntero *this* con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate). |
 | Se han corregido los errores que se detectaron por la mejor conformidad de Visual Studio con el estándar C++. La cadena de herramientas LLVM y Clang también se aprovechan mejor para validar la conformidad con los estándares de C++/WinRT. | Ya no te encontrarás con el problema descrito en [¿Por qué no se va a compilar mi nuevo proyecto? Estoy usando Visual Studio 2017 (versión 15.8.0 o superior) y el SDK versión 17134](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134) |
@@ -375,7 +375,7 @@ Si anteriormente has dejado que C++/WinRT incluyera cualquier encabezado de Wind
 
 Actualmente, las únicas excepciones al aislamiento de los archivos de encabezado de Windows SDK son intrínsecas y numéricas. No hay problemas conocidos con estas últimas dependencias.
 
-En el proyecto, puedes volver a habilitar la interoperabilidad con los encabezados de Windows SDK si lo necesitas. Por ejemplo, podrías implementar una interfaz COM (con raíz en [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)). Por ejemplo, incluye `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT. Esto hace que la biblioteca base de C++/WinRT permita que varios enlaces admitan las interfaces COM clásicas. Para ver un ejemplo de código, consulta [Crear componentes COM con C++/WinRT](author-coclasses.md). Del mismo modo, incluye explícitamente cualquier otro encabezado de Windows SDK que declare los tipos o funciones que deseas llamar.
+En el proyecto, puedes volver a habilitar la interoperabilidad con los encabezados de Windows SDK si lo necesitas. Por ejemplo, podrías implementar una interfaz COM (con raíz en [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown)). Por ejemplo, incluye `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT. Esto hace que la biblioteca base de C++/WinRT permita que varios enlaces admitan las interfaces COM clásicas. Para ver un ejemplo de código, consulta [Crear componentes COM con C++/WinRT](author-coclasses.md). Del mismo modo, incluye explícitamente cualquier otro encabezado de Windows SDK que declare los tipos o funciones que deseas llamar.
 
 ### <a name="how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>Procedimientos para redestinar el proyecto de C++/WinRT a una versión posterior de Windows SDK
 

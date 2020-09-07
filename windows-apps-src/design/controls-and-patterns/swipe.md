@@ -3,7 +3,7 @@ pm-contact: kisai
 design-contact: ksulliv
 dev-contact: Shmazlou
 doc-status: Published
-Description: Los comandos de deslizar el dedo son aceleradores de entrada táctil para menús contextuales.
+description: Obtenga información sobre cómo usar los comandos de deslizar con el dedo como acelerador táctil para los menús contextuales, de modo que los usuarios puedan realizar la misma operación en varios elementos en una sucesión rápida.
 title: Deslizar rápidamente
 label: Swipe
 template: detail.hbs
@@ -11,12 +11,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 315edbddccc51b7e742bf9beffad8497a104ce03
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f81e440670ccee34269ddbe5d55d93637b8d89df
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614091"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043557"
 ---
 # <a name="swipe"></a>Deslizar rápidamente
 
@@ -34,7 +34,7 @@ Los comandos de deslizar el dedo ahorran espacio. Resultan útiles en situacione
 
 Debes usar los comandos de deslizar el dedo cuando haya un grupo de elementos potencialmente grande y cada elemento tenga de 1 a 3 acciones que un usuario quizá quiera realizar habitualmente. Estas acciones pueden incluir, entre otras:
 
-- Eliminar
+- Eliminando
 - Marcar o archivar
 - Guardar o descargar
 - Responder
@@ -209,10 +209,10 @@ El elemento de datos es el DataContext del SwipeControl. En el código, puedes a
 
 En este caso concreto, se quita el elemento de la lista, por lo que no es importante el estado visual final del elemento deslizado. Sin embargo, en situaciones donde simplemente quieras realizar una acción y, luego, tengas que volver a contraer Deslizar el dedo, puedes configurar la propiedad [BehaviorOnInvoked](/uwp/api/windows.ui.xaml.controls.swipeitem.BehaviorOnInvoked) con uno de los valores de enumeración [SwipeBehaviorOnInvoked](/uwp/api/windows.ui.xaml.controls.swipebehavioroninvoked).
 
-- **Auto**
+- **Automático**
   - En el modo Ejecutar, el elemento abierto de deslizar el dedo permanecerá abierto cuando se invoque.
   - En el modo Mostrar, el elemento abierto de deslizar el dedo se contraerá cuando se invoque.
-- **Close**
+- **Cerrar**
   - Cuando se invoque el elemento, el control de deslizar el dedo siempre se contraerá y volverá al estado normal, independientemente del modo.
 - **RemainOpen**
   - Cuando se invoque el elemento, el control de deslizar el dedo siempre seguirá abierto, independientemente del modo.
@@ -225,7 +225,7 @@ Aquí, se establece un elemento de deslizar el dedo _reply_ para que se cierre d
            BehaviorOnInvoked = "Close"/>
 ```
 
-## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Consejos
 
 - No uses deslizar el dedo en FlipViews, hubs ni tablas dinámicas. La combinación puede resultar confusa para el usuario debido a los conflictos en las direcciones para deslizar el dedo.
 - No combines el deslizamiento horizontal del dedo con la navegación horizontal, ni el deslizamiento vertical con la navegación vertical.

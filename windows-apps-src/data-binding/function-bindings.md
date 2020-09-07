@@ -1,16 +1,16 @@
 ---
-description: La extensión de marcado xBind permite usar funciones en el marcado.
+description: Obtenga información sobre cómo usar las funciones como el paso hoja de la ruta de acceso de enlace de datos en la extensión de marcado xBind.
 title: Funciones de x:Bind
 ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d74e99526ed5531db92ba88a1053e07a3fc993b
-ms.sourcegitcommit: c7f33dbe9516d28664df1b91e03edca3cb9fb0c8
+ms.openlocfilehash: 4d677767f7eb73bf46784b3f256b511e54013548
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87871691"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170049"
 ---
 # <a name="functions-in-xbind"></a>Funciones de x:Bind
 
@@ -23,7 +23,7 @@ A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una f
 - Obtener una manera de que los enlaces dependan de más de un parámetro
 
 > [!NOTE]
-> Para usar las funciones con **{x: Bind}** , la versión del SDK de destino mínima de la aplicación debe ser la 14393 o posterior. No puedes usar las funciones si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Para usar las funciones con **{x: Bind}** , la versión del SDK de destino mínima de la aplicación debe ser la 14393 o posterior. No puedes usar las funciones si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](../debug-test-perf/version-adaptive-code.md).
 
 En el siguiente ejemplo, el primer y segundo planos del elemento están enlazados a las funciones dedicadas a realizar la conversión según el parámetro de color.
 

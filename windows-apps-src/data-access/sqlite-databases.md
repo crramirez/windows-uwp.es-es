@@ -1,16 +1,16 @@
 ---
 title: Usar una base de datos de SQLite en una aplicación para UWP
-description: Usa una base de datos de SQLite en una aplicación para UWP.
+description: Obtenga información sobre cómo usar una base de datos de SQLite en una aplicación para UWP para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario.
 ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQLite, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0db89408d5bc0af8b9101768a6498e70f9be6147
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 15a6cd4313a13abfa7897de62c80024a09ad1f71
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997942"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154539"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar una base de datos de SQLite en una aplicación para UWP
 Puedes usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. Esta guía te muestra cómo hacerlo.
@@ -35,11 +35,11 @@ Te recomendamos que uses Entity Framework Core o la [biblioteca de SQLite](htt
 
 Entity Framework (EF) es un asignador relacional de objetos que puedes usar para trabajar con datos relacionales mediante el uso de objetos específicos del dominio. Si ya has usado este marco para trabajar con datos de otras aplicaciones. NET, puedes migrar ese código a una aplicación para UWP y funcionará con los cambios adecuados en la cadena de conexión.
 
-Para probarlo, consulta [Introducción a EF Core en la Plataforma universal de Windows (UWP) con una nueva base de datos](https://docs.microsoft.com/ef/core/get-started/uwp/getting-started).
+Para probarlo, consulta [Introducción a EF Core en la Plataforma universal de Windows (UWP) con una nueva base de datos](/ef/core/get-started/uwp/getting-started).
 
 ### <a name="sqlite-library"></a>Biblioteca de SQLite
 
-La biblioteca [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa las interfaces en el espacio de nombres [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common). Microsoft mantiene estas implementaciones de forma activa y ofrece un contenedor intuitivo en torno a la API de SQLite nativa de bajo nivel.
+La biblioteca [Microsoft.Data.Sqlite](/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa las interfaces en el espacio de nombres [System.Data.Common](/dotnet/api/system.data.common). Microsoft mantiene estas implementaciones de forma activa y ofrece un contenedor intuitivo en torno a la API de SQLite nativa de bajo nivel.
 
 El resto de esta guía te ayudará a usar esta biblioteca.
 
@@ -75,7 +75,7 @@ Elige la pestaña **Examinar** y busca el paquete **Microsoft.Data.SQLite**. Ins
 
 ![Paquete de SQLite](images/sqlite-package.png)
 
-Ve a la sección [Agregar y recuperar datos en una base de datos de SQLite](/windows/uwp/data-access/sqlite-databases#add-and-retrieve-data-in-a-sqlite-database) de esta guía.
+Ve a la sección [Agregar y recuperar datos en una base de datos de SQLite](#add-and-retrieve-data-in-a-sqlite-database) de esta guía.
 
 ### <a name="the-minimum-version-of-your-project-targets-the-fall-creators-update"></a>La versión mínima del proyecto está destinada a Fall Creators Update
 
@@ -200,7 +200,7 @@ public async static void InitializeDatabase()
 
 Este código crea la base de datos de SQLite y la almacena en el almacén de datos local de la aplicación.
 
-En este ejemplo asignaremos a la base de datos el nombre ``sqlliteSample.db``, pero puedes usar el nombre que quieras siempre que emplees dicho nombre en todos los objetos [SqliteConnection](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqliteconnection?view=msdata-sqlite-2.0.0) de los que crees una instancia.
+En este ejemplo asignaremos a la base de datos el nombre ``sqlliteSample.db``, pero puedes usar el nombre que quieras siempre que emplees dicho nombre en todos los objetos [SqliteConnection](/dotnet/api/microsoft.data.sqlite.sqliteconnection?view=msdata-sqlite-2.0.0) de los que crees una instancia.
 
 En el constructor del archivo **App.xaml.cs** del proyecto de UWP, llama al método ``InitializeDatabase`` de la clase **DataAccess**.
 
@@ -277,9 +277,9 @@ public static List<String> GetData()
 }
 ```
 
-El método [Read](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.read?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_Read) avanza por las filas de datos devueltos. Devuelve **true** si hay filas a la izquierda y, si no, devuelve **false**.
+El método [Read](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.read?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_Read) avanza por las filas de datos devueltos. Devuelve **true** si hay filas a la izquierda y, si no, devuelve **false**.
 
-El método [GetString](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getstring?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetString_System_Int32_) devuelve el valor de la columna especificada como cadena. Este método acepta un valor entero que representa el índice de columna de base cero de los datos que quieres. Puedes usar métodos similares tales como [GetDataTime](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getdatetime?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_System_Int32_) y [GetBoolean](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getboolean?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_System_Int32_). Elige un método basado en el tipo de datos que contenga la columna.
+El método [GetString](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getstring?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetString_System_Int32_) devuelve el valor de la columna especificada como cadena. Este método acepta un valor entero que representa el índice de columna de base cero de los datos que quieres. Puedes usar métodos similares tales como [GetDataTime](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getdatetime?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_System_Int32_) y [GetBoolean](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getboolean?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_System_Int32_). Elige un método basado en el tipo de datos que contenga la columna.
 
 El parámetro "ordinal" no es tan importante en este ejemplo porque vamos a seleccionar todas las entradas de una sola columna. Sin embargo, si hay varias columnas que formen parte de la consulta, usa el valor ordinal para obtener la columna de la que quieras extraer datos.
 
@@ -316,7 +316,7 @@ private void AddData(object sender, RoutedEventArgs e)
 }
 ```
 
-Eso es todo. Explora [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) para ver otras cosas que puedes hacer con tu base de datos de SQLite. Consulta los vínculos siguientes para conocer otras formas de usar datos en tu aplicación para UWP.
+Eso es todo. Explora [Microsoft.Data.Sqlite](/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) para ver otras cosas que puedes hacer con tu base de datos de SQLite. Consulta los vínculos siguientes para conocer otras formas de usar datos en tu aplicación para UWP.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -326,7 +326,7 @@ Consulta [Usar una base de datos de SQL Server en una aplicación para UWP](sql-
 
 **Compartir código entre diferentes aplicaciones de distintas plataformas**
 
-Consulta [Compartir código entre una aplicación de escritorio y una aplicación para UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
+Consulta [Compartir código entre una aplicación de escritorio y una aplicación para UWP](../porting/desktop-to-uwp-migrate.md).
 
 **Agregar páginas de detalles maestras con servidores back-end de Azure SQL**
 

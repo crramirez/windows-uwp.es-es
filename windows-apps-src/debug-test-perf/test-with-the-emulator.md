@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b38cf60f1f890649af33ad34f244bc348af2832
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a837dc025023d529d9090fade401726a670c7561
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82148691"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166199"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 
@@ -41,7 +41,7 @@ Sistema operativo
 -   64 bits
 -   Edición Pro o superior
 
-Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el emulador de Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105)).
+Para comprobar los requisitos de BIOS, consulta [Cómo habilitar Hyper-V para el emulador de Windows Phone 8](/previous-versions/windows/apps/jj863509(v=vs.105)).
 
 Para comprobar los requisitos de RAM y del sistema operativo, en el Panel de control, selecciona **Sistema y seguridad** y, a continuación, selecciona **Sistema**.
 
@@ -215,7 +215,7 @@ Mediante el modo de proximidad, puedes inyectar mensajes como si proviniesen de 
 -   NDEF:URI
 -   NDEF:wkt.U
 
-Puedes crear estos mensajes editando las ventanas **Carga** o proporcionarlas en un archivo. Para más información sobre estos tipos y cómo usarlos, consulta la sección de Observaciones de la página de referencia[**ProximityDevice.PublishBinaryMessage**](https://docs.microsoft.com/uwp/api/windows.networking.proximity.proximitydevice.publishbinarymessage).
+Puedes crear estos mensajes editando las ventanas **Carga** o proporcionarlas en un archivo. Para más información sobre estos tipos y cómo usarlos, consulta la sección de Observaciones de la página de referencia[**ProximityDevice.PublishBinaryMessage**](/uwp/api/windows.networking.proximity.proximitydevice.publishbinarymessage).
 
 El Kit de controladores de Windows 8 (WDK) incluye una muestra de controlador que expone el mismo protocolo que el emulador de Windows Phone 8. Deberás descargar el DDK, compilar ese controlador de muestra, instalarlo en un dispositivo de Windows 8 y, a continuación, agregar la dirección IP del dispositivo de Windows 8 o nombre de host a la lista de dispositivos y tocarlo con otro dispositivo de Windows 8 o con un emulador de Windows Phone 8.
 
@@ -268,7 +268,7 @@ A continuación te mostramos una referencia acerca de qué funcionalidad está d
 
 ### <a name="smart-card-reader-mode"></a>Modo de lector de tarjeta inteligente
 
-El emulador se puede conectar a un dispositivo lector de tarjetas inteligentes del equipo host. De este modo, las tarjetas inteligentes insertadas o tocadas se mostrarán en tu aplicación para móvil y podrás establecer comunicación con ellas mediante APDU con la clase [**Windows.Devices.SmartCards.SmartCardConnection**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection). Para que esto funcione, necesitarás conectar un dispositivo lector de tarjetas inteligentes compatible al equipo. Para ello hay disponibles lectores de tarjetas inteligentes USB (NFC/sin contactos e insertar/contacto). Para permitir al emulador funcionar con un lector de tarjeta inteligente conectado, primero elige el modo de **Lector de tarjetas** que debe mostrar un cuadro desplegable con todos los lectores de tarjetas inteligentes compatibles conectados al sistema host y, a continuación, elegir el dispositivo lector de tarjetas inteligentes al que deseas estar conectado en la lista desplegable.
+El emulador se puede conectar a un dispositivo lector de tarjetas inteligentes del equipo host. De este modo, las tarjetas inteligentes insertadas o tocadas se mostrarán en tu aplicación para móvil y podrás establecer comunicación con ellas mediante APDU con la clase [**Windows.Devices.SmartCards.SmartCardConnection**](/uwp/api/Windows.Devices.SmartCards.SmartCardConnection). Para que esto funcione, necesitarás conectar un dispositivo lector de tarjetas inteligentes compatible al equipo. Para ello hay disponibles lectores de tarjetas inteligentes USB (NFC/sin contactos e insertar/contacto). Para permitir al emulador funcionar con un lector de tarjeta inteligente conectado, primero elige el modo de **Lector de tarjetas** que debe mostrar un cuadro desplegable con todos los lectores de tarjetas inteligentes compatibles conectados al sistema host y, a continuación, elegir el dispositivo lector de tarjetas inteligentes al que deseas estar conectado en la lista desplegable.
 
 Ten en cuenta que no todos los lectores de tarjetas inteligentes compatibles con NFC admiten algunos tipos de tarjetas NFC, y algunos no son compatibles con los comandos APDU de tarjeta de almacenamiento PC/SC estándar.
 
@@ -319,7 +319,7 @@ Prueba aplicaciones que usen navegación o geovallas con la pestaña **Location*
 
 Puedes probar tu aplicación mientras simulas el movimiento de una ubicación a otra a velocidades distintas y con perfiles de precisión diferentes. El simulador de ubicación puede ayudarte a identificar cambios de uso de las API de ubicación que mejoran la experiencia del usuario. Por ejemplo, la herramienta puede ayudarte a identificar que debes ajustar los parámetros de geovalla, como el tamaño o el tiempo de permanencia, para detectar las geovallas de forma satisfactoria en escenarios distintos.
 
-La pestaña **Location** admite tres modos. En todos los modos, cuando el emulador recibe una posición nueva, esta posición está disponible para desencadenar el evento [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) o para responder a una llamada [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) en tu aplicación compatible con la detección de ubicaciones.
+La pestaña **Location** admite tres modos. En todos los modos, cuando el emulador recibe una posición nueva, esta posición está disponible para desencadenar el evento [**PositionChanged**](/uwp/api/windows.devices.geolocation.geolocator.positionchanged) o para responder a una llamada [**GetGeopositionAsync**](/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) en tu aplicación compatible con la detección de ubicaciones.
 
 -   En modo **Pin** , colocas marcadores en el mapa. Al hacer clic en **Play all points**, el simulador de ubicación envía la ubicación de cada marcador al emulador, uno tras otro, con el intervalo en segundos especificado en el cuadro de texto **Seconds per pin**.
 
@@ -635,9 +635,9 @@ El emulador de Microsoft incluye XDECleanup.exe, una herramienta que elimina tod
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>Desinstalar la imagen de Windows 10 Mobile
 
-Cuando instalas el emulador, se instala una imagen VHD de Windows 10 Mobile, que obtiene su propia entrada la lista **Programas y características** del Panel de control. Si quieres desinstalar la imagen, busca **Imagen de Windows 10 Mobile - \<versión\>** en la lista de programas instalados, haz clic en esta opción y elige **Desinstalar**.
+Cuando instalas el emulador, se instala una imagen VHD de Windows 10 Mobile, que obtiene su propia entrada la lista **Programas y características** del Panel de control. Si quiere desinstalar la imagen, busque **Imagen de 10 Windows 10 Mobile - \<version\>** en la lista de programas instalados, haga clic allí y elija **Desinstalar**.
 
-En la versión actual, tendrás que eliminar manualmente el archivo VHD para el emulador. Si el emulador se ha instalado en la ruta predeterminada, el archivo VHD se encuentra en C:\\Archivos de programa (x86)\\Windows Kits\\10\\Emulation\\Mobile\\\<versión\>\\flash.vhd.
+En la versión actual, tendrás que eliminar manualmente el archivo VHD para el emulador. Si el emulador se ha instalado en la ruta predeterminada, el archivo VHD se encuentra en C:\\Archivos de programa (x86)\\Windows Kits\\10\\Emulation\\Mobile\\\<version\>\\flash.vhd.
 
 ### <a name="how-to-disable-hardware-accelerated-graphics"></a>Cómo deshabilitar los gráficos acelerados por hardware
 
@@ -660,7 +660,6 @@ Para encontrar respuestas y solucionar problemas al empezar a trabajar con las h
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejecutar aplicaciones de Windows Phone en el emulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
+* [Ejecutar aplicaciones de Windows Phone en el emulador](/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
 * [Archivo del SDK de Windows y Windows Phone](https://developer.microsoft.com/windows/downloads/sdk-archive)
  
-

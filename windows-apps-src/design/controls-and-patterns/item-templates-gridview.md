@@ -1,25 +1,25 @@
 ---
-Description: Plantillas de elemento para vistas de cuadrícula
+description: Obtener plantillas de elementos que pueda usar con un control GridView para mostrar galerías de imágenes, imágenes y texto, e imágenes con superposiciones de texto.
 title: Plantillas de elemento para vistas de cuadrícula
 template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 17c14d7147cafa17e78bd13bf6684a99d87cbdfd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 08849436f88dd9698f349f7fde64b51324212244
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684412"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172689"
 ---
 # <a name="item-templates-for-grid-view"></a>Plantillas de elemento para vistas de cuadrícula
 
-Esta sección contiene las plantillas de elemento que puedes usar con un control [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes.
+Esta sección contiene las plantillas de elemento que puedes usar con un control [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes.
 
 Para mostrar el enlace de datos, estas plantillas enlazan **GridViewItems** con la clase de ejemplo Recording desde la [introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para más información sobre accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
+> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para más información sobre accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
 
 ## <a name="icon-and-text"></a>Icono y texto
 Usa estas plantillas para mostrar una colección de aplicaciones en una cuadrícula con un icono y texto.
@@ -156,7 +156,7 @@ Usa esta plantilla para mostrar una colección de elementos multimedia con texto
 ```
 
 ## <a name="related-articles"></a>Artículos relacionados
-- [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [Clase GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md)
 - [Información general sobre accesibilidad](../accessibility/accessibility-overview.md)
 - [Ejemplo de ListView y GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)

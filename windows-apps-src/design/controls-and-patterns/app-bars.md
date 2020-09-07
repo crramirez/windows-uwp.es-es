@@ -1,5 +1,5 @@
 ---
-Description: Las barras de comandos proporcionan a los usuarios acceso fácil a las tareas más comunes de tu app.
+description: Obtenga información sobre cómo usar los controles de la barra de comandos para facilitar a los usuarios el acceso a los comandos y tareas más comunes de la aplicación.
 title: Barra de comandos
 label: App bars/command bars
 template: detail.hbs
@@ -13,27 +13,27 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f7b2c260d20c95012297c1f78037626844f6badf
-ms.sourcegitcommit: 83225cd9f3ef184277fc293d09982ecd511cc088
+ms.openlocfilehash: 001dc4be5ec0540517602d48360c24c7e6bae32d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87160891"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160679"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
 Las barras de comandos proporcionan a los usuarios acceso fácil a las tareas más comunes de tu app. Las barras de comandos pueden proporcionar acceso a los comandos del nivel de apps o específicos de la página, y se pueden usar con cualquier patrón de navegación.
 
-> **API de plataforma:** [clase CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [clase AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
+> **API de plataforma:** [clase CommandBar](/uwp/api/windows.ui.xaml.controls.commandbar), [clase AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
 
 ![Ejemplo de una barra de comandos con iconos](images/controls_appbar_icons.png)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-El control CommandBar es un control de propósito general, flexible y ligero que puede mostrar contenido complejo, como imágenes o bloques de texto, así como comandos simples, como por ejemplo, controles [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) y [AppBarSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator).
+El control CommandBar es un control de propósito general, flexible y ligero que puede mostrar contenido complejo, como imágenes o bloques de texto, así como comandos simples, como por ejemplo, controles [AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) y [AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator).
 
 > [!NOTE]
-> XAML proporciona tanto el control [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) y como el control [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar). El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows 8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
+> XAML proporciona tanto el control [AppBar](/uwp/api/windows.ui.xaml.controls.appbar) y como el control [CommandBar](/uwp/api/windows.ui.xaml.controls.commandbar). El control AppBar solo se debería usar cuando se actualiza una aplicación universal para Windows 8 que usa dicho control y se necesita minimizar los cambios. Para nuevas aplicaciones de Windows 10, es recomendable usar el control CommandBar en su lugar. Para este documento, se supone que usas el control CommandBar.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -70,12 +70,12 @@ Esta es la misma barra de comandos, en su estado abierto. Las etiquetas identifi
 ![Barra de comandos cerrada](images/commandbar_anatomy_open.png)
 
 La barra de comandos se divide en 4 áreas principales:
-- El área de contenido se alinea a la izquierda de la barra. Se muestra si la propiedad [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) se ha rellenado.
-- El área de comandos principales se alinea a la derecha de la barra. Se muestra si la propiedad [PrimaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands) se ha rellenado.  
-- El botón "ver más"\[•••\] se muestra en la parte derecha de la barra. Presionar el botón "ver más" \[•••\] revela las etiquetas de los comandos principales y abre el menú de desbordamiento si hay comandos secundarios. El botón no estará visible si no hay etiquetas de comandos principales o etiquetas secundarias presentes. Para cambiar el comportamiento predeterminado, usa la propiedad [OverflowButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility).
-- El menú de desbordamiento solo se muestra cuando la barra de comandos está abierta y la propiedad [SecondaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) se ha rellenado. Cuando el espacio sea limitado, los comandos principales se trasladarán al área SecondaryCommands. Para cambiar el comportamiento predeterminado, usa la propiedad [IsDynamicOverflowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled).
+- El área de contenido se alinea a la izquierda de la barra. Se muestra si la propiedad [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) se ha rellenado.
+- El área de comandos principales se alinea a la derecha de la barra. Se muestra si la propiedad [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands) se ha rellenado.  
+- El botón "ver más"\[•••\] se muestra en la parte derecha de la barra. Presionar el botón "ver más" \[•••\] revela las etiquetas de los comandos principales y abre el menú de desbordamiento si hay comandos secundarios. El botón no estará visible si no hay etiquetas de comandos principales o etiquetas secundarias presentes. Para cambiar el comportamiento predeterminado, usa la propiedad [OverflowButtonVisibility](/uwp/api/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility).
+- El menú de desbordamiento solo se muestra cuando la barra de comandos está abierta y la propiedad [SecondaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) se ha rellenado. Cuando el espacio sea limitado, los comandos principales se trasladarán al área SecondaryCommands. Para cambiar el comportamiento predeterminado, usa la propiedad [IsDynamicOverflowEnabled](/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled).
 
-El diseño se invierte cuando la propiedad [FlowDirection](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.flowdirection) es **RightToLeft**.
+El diseño se invierte cuando la propiedad [FlowDirection](/uwp/api/windows.ui.xaml.frameworkelement.flowdirection) es **RightToLeft**.
 
 ## <a name="create-a-command-bar"></a>Crear una barra de comandos
 En este ejemplo, se crea la barra de comandos mostrada anteriormente.
@@ -102,12 +102,12 @@ En este ejemplo, se crea la barra de comandos mostrada anteriormente.
 ```
 
 ## <a name="commands-and-content"></a>Comandos y contenido
-El control de barra de comandos tiene tres propiedades que puedes usar para agregar comandos y contenido: [PrimaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands), [SecondaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) y [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content).
+El control de barra de comandos tiene tres propiedades que puedes usar para agregar comandos y contenido: [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands), [SecondaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) y [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content).
 
 
 ### <a name="commands"></a>Comandos
 
-De manera predeterminada, los elementos de las barras de comandos se agregan a la colección **PrimaryCommands**. Debes agregar los comandos por orden de importancia, de modo que los comandos más importantes estén siempre visibles. Cuando cambia el ancho de la barra de comandos, como cuando los usuarios cambian el tamaño de la ventana de la app, los comandos principales se mueven dinámicamente entre la barra de comandos y el menú de desbordamiento por puntos de interrupción. Para cambiar este comportamiento predeterminado, usa la propiedad [IsDynamicOverflowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled). 
+De manera predeterminada, los elementos de las barras de comandos se agregan a la colección **PrimaryCommands**. Debes agregar los comandos por orden de importancia, de modo que los comandos más importantes estén siempre visibles. Cuando cambia el ancho de la barra de comandos, como cuando los usuarios cambian el tamaño de la ventana de la app, los comandos principales se mueven dinámicamente entre la barra de comandos y el menú de desbordamiento por puntos de interrupción. Para cambiar este comportamiento predeterminado, usa la propiedad [IsDynamicOverflowEnabled](/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled). 
 
 En las pantallas más pequeñas (320 epx de ancho), caben cuatro comandos principales como máximo en la barra de comandos. 
 
@@ -122,16 +122,16 @@ Puedes mover los comandos mediante programación entre los objetos PrimaryComman
 
 ### <a name="app-bar-buttons"></a>Botones de la barra de la aplicación
 
-Las propiedades PrimaryCommands y SecondaryCommands solo se pueden rellenar con elementos de comando [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) y [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator). 
+Las propiedades PrimaryCommands y SecondaryCommands solo se pueden rellenar con elementos de comando [AppBarButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) y [AppBarSeparator](/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator). 
 
 Los controles de botón de la barra de la aplicación se caracterizan por un icono y una etiqueta de texto. Estos controles están optimizados para usarse en una barra de comandos y su aspecto cambia en función de si se usa el control en la barra de comandos o el menú de desbordamiento.
 
 El tamaño de los iconos del menú de desbordamiento es de 16 x 16 píxeles, que es menor que los iconos del área de comandos principales (con un tamaño de 20 x 20 píxeles). Si usas SymbolIcon, FontIcon o PathIcon, el icono se ajusta automáticamente en el tamaño correcto, sin pérdida de fidelidad cuando el comando entra en el área de comandos secundaria. 
 
 ### <a name="button-labels"></a>Etiquetas de los botones
-La propiedad [IsCompact](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton.IsCompact) de AppBarButton determina si se muestra la etiqueta. En un control CommandBar, la barra de comandos sobrescribe la propiedad IsCompact del botón automáticamente cuando la barra se abre y se cierra.
+La propiedad [IsCompact](/uwp/api/windows.ui.xaml.controls.appbarbutton.IsCompact) de AppBarButton determina si se muestra la etiqueta. En un control CommandBar, la barra de comandos sobrescribe la propiedad IsCompact del botón automáticamente cuando la barra se abre y se cierra.
 
-Para colocar las etiquetas de los botones de barra de la aplicación, usa la propiedad [DefaultLabelPosition](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.defaultlabelposition) de CommandBar.
+Para colocar las etiquetas de los botones de barra de la aplicación, usa la propiedad [DefaultLabelPosition](/uwp/api/windows.ui.xaml.controls.commandbar.defaultlabelposition) de CommandBar.
 
 ```xaml
 <CommandBar DefaultLabelPosition="Right">
@@ -144,7 +144,7 @@ Para colocar las etiquetas de los botones de barra de la aplicación, usa la pro
 
 En las ventanas más grandes, plantéate mover las etiquetas a la derecha de los iconos de botón de la barra de la aplicación para mejorar la legibilidad. Las etiquetas de la parte inferior requieren que los usuarios abran la barra de comandos para revelar las etiquetas, mientras que las etiquetas a la derecha son visibles incluso cuando se cierra la barra de comandos.
 
-En los menús de desbordamiento, las etiquetas están a la derecha de los iconos de manera predeterminada y se hace caso omiso de **LabelPosition**. Puedes ajustar el estilo al establecer la propiedad [CommandBarOverflowPresenterStyle](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar.CommandBarOverflowPresenterStyle) en un estilo destinado al objeto [CommandBarOverflowPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbaroverflowpresenter). 
+En los menús de desbordamiento, las etiquetas están a la derecha de los iconos de manera predeterminada y se hace caso omiso de **LabelPosition**. Puedes ajustar el estilo al establecer la propiedad [CommandBarOverflowPresenterStyle](/uwp/api/Windows.UI.Xaml.Controls.CommandBar.CommandBarOverflowPresenterStyle) en un estilo destinado al objeto [CommandBarOverflowPresenter](/uwp/api/windows.ui.xaml.controls.commandbaroverflowpresenter). 
 
 Las etiquetas de los botones deben ser cortas, preferiblemente una única palabra. Las etiquetas más largas debajo de un icono se ajustarán en varias líneas, lo que aumentará el alto total de la barra de comandos abierta. Puedes incluir un carácter de guion suave (0x00AD) en el texto de una etiqueta para sugerir en el límite de carácter dónde se debe producir un salto de palabra. En XAML, esto se expresa esta mediante una secuencia de escape, tal como se muestra abajo:
 
@@ -158,7 +158,7 @@ Cuando la etiqueta se ajusta en la ubicación sugerida, tiene este aspecto.
 
 ### <a name="command-bar-flyouts"></a>Controles flotantes de la barra de comandos
 
-Considera la posibilidad de realizar agrupaciones lógicas de los comandos, como colocar Responder, Responder a todos y Reenviar en un menú Responder. Aunque generalmente un botón de la barra de la aplicación activa un solo comando, se lo puede usar para mostrar un objeto [MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) o [Flyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyout) con contenido personalizado.
+Considera la posibilidad de realizar agrupaciones lógicas de los comandos, como colocar Responder, Responder a todos y Reenviar en un menú Responder. Aunque generalmente un botón de la barra de la aplicación activa un solo comando, se lo puede usar para mostrar un objeto [MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout) o [Flyout](/uwp/api/windows.ui.xaml.controls.flyout) con contenido personalizado.
 
 ![Ejemplo de controles flotantes en una barra de comandos](images/AppbarGuidelines_Flyouts.png)
 
@@ -168,7 +168,7 @@ Puedes agregar cualquier elemento XAML al área de contenido al establecer la pr
 
 Cuando se habilite un desbordamiento dinámico, el contenido no se recortará porque los comandos principales pueden desplazarse al menú de desbordamiento. De lo contrario, los comandos principales reciben prioridad y pueden provocar el recorte del contenido.
 
-Cuando la propiedad [ClosedDisplayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode) es **Compact**, el contenido se puede recortar si es mayor que el tamaño compacto de la barra de comandos. Debes controlar los eventos [Opening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.opening) y [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closed) para mostrar u ocultar partes de la interfaz de usuario en el área de contenido de modo que no se recorten. Para obtener más información, consulta la sección [Estados abiertos y cerrados](#open-and-closed-states).
+Cuando la propiedad [ClosedDisplayMode](/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode) es **Compact**, el contenido se puede recortar si es mayor que el tamaño compacto de la barra de comandos. Debes controlar los eventos [Opening](/uwp/api/windows.ui.xaml.controls.appbar.opening) y [Closed](/uwp/api/windows.ui.xaml.controls.appbar.closed) para mostrar u ocultar partes de la interfaz de usuario en el área de contenido de modo que no se recorten. Para obtener más información, consulta la sección [Estados abiertos y cerrados](#open-and-closed-states).
 
 
 ## <a name="open-and-closed-states"></a>Estados abiertos y cerrados
@@ -176,9 +176,9 @@ Cuando la propiedad [ClosedDisplayMode](https://docs.microsoft.com/uwp/api/windo
 La barra de comandos se puede abrir o cerrar. Cuando está abierta, muestra los botones de comando principal con etiquetas de texto y abre el menú de desbordamiento (si hay comandos secundarios).
 La barra de comandos para abrir el menú de desbordamiento hacia arriba (por encima de los comandos principales) o hacia abajo (debajo de los comandos principales). La dirección predeterminada es hacia arriba, pero si no hay suficiente espacio para abrir el menú de desbordamiento hacia arriba, la barra de comandos abre hacia abajo. 
 
-Un usuario puede alternar entre ambos estados al presionar el botón "ver más" \[•••\]. Puedes cambiar entre ellos mediante programación al establecer la propiedad [IsOpen](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.isopen). 
+Un usuario puede alternar entre ambos estados al presionar el botón "ver más" \[•••\]. Puedes cambiar entre ellos mediante programación al establecer la propiedad [IsOpen](/uwp/api/windows.ui.xaml.controls.appbar.isopen). 
 
-Puedes usar los eventos[Opening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.opening), [Opened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.opened), [Closing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closing) y [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closed) para responder a la apertura o cierre de la barra de comandos.  
+Puedes usar los eventos[Opening](/uwp/api/windows.ui.xaml.controls.appbar.opening), [Opened](/uwp/api/windows.ui.xaml.controls.appbar.opened), [Closing](/uwp/api/windows.ui.xaml.controls.appbar.closing) y [Closed](/uwp/api/windows.ui.xaml.controls.appbar.closed) para responder a la apertura o cierre de la barra de comandos.  
 - Los eventos Opened y Closed se producen antes del inicio de la animación de transición.
 - Los eventos Opened y Closed se producen una vez finalizada la transición.
 
@@ -211,18 +211,18 @@ private void CommandBar_Closing(object sender, object e)
 
 ### <a name="issticky"></a>IsSticky
 
-Si un usuario interactúa con otras partes de una app cuando una barra de comandos está abierta, se cerrará la barra automáticamente. Esto se denomina *cierre del elemento por cambio de foco*. Puedes controlar el comportamiento del cierre del elemento por cambio de foco al establecer la propiedad [IsSticky](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.issticky). Cuando `IsSticky="true"`, la barra permanece abierta hasta que el usuario presione el botón "ver más" \[•••\] o seleccione un elemento en el menú de desbordamiento. 
+Si un usuario interactúa con otras partes de una app cuando una barra de comandos está abierta, se cerrará la barra automáticamente. Esto se denomina *cierre del elemento por cambio de foco*. Puedes controlar el comportamiento del cierre del elemento por cambio de foco al establecer la propiedad [IsSticky](/uwp/api/windows.ui.xaml.controls.appbar.issticky). Cuando `IsSticky="true"`, la barra permanece abierta hasta que el usuario presione el botón "ver más" \[•••\] o seleccione un elemento en el menú de desbordamiento. 
 
-Recomendamos evitar las barras de comandos permanentes, ya que no cumplen con las expectativas de los usuarios en cuando al [comportamiento de foco con cierre del elemento por cambio de foco y teclado](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus#light-dismiss).
+Recomendamos evitar las barras de comandos permanentes, ya que no cumplen con las expectativas de los usuarios en cuando al [comportamiento de foco con cierre del elemento por cambio de foco y teclado](./menus.md#light-dismiss).
 
 ### <a name="display-mode"></a>Modo de pantalla
 
-Puedes controlar cómo se muestra la barra de comandos en su estado cerrado al establecer la propiedad [ClosedDisplayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode). Hay tres modos de visualización de estado cerrado entre los que puedes elegir:
+Puedes controlar cómo se muestra la barra de comandos en su estado cerrado al establecer la propiedad [ClosedDisplayMode](/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode). Hay tres modos de visualización de estado cerrado entre los que puedes elegir:
 - **Compacto**: el modo predeterminado. Muestra el contenido, los iconos de comando principales sin etiquetas y el botón "ver más" \[•••\].
 - **Mínimo**: muestra solo una barra delgada que actúa como el botón "ver más" \[•••\]. El usuario puede presionar en cualquier parte de la barra para abrirla.
 - **Oculto**: cuando se cierra, la barra de comandos no se muestra. Esto puede ser de utilidad para mostrar comandos contextuales con una barra de comandos alineada. En este caso, tienes que abrir la barra de comandos mediante programación estableciendo la propiedad **IsOpen** o cambiando la propiedad ClosedDisplayMode a **Mínima** o **Compacta**.
 
-Aquí, se usa una barra de comandos para contener comandos de formato simples para un objeto [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox). Cuando el cuadro de edición no tiene el foco, los comandos de formato pueden resultar una distracción, por lo que se ocultan. Cuando se usa el cuadro de edición, la propiedad ClosedDisplayMode de la barra de comandos cambia a Compacta, de modo que se muestren los comandos de formato.
+Aquí, se usa una barra de comandos para contener comandos de formato simples para un objeto [RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox). Cuando el cuadro de edición no tiene el foco, los comandos de formato pueden resultar una distracción, por lo que se ocultan. Cuando se usa el cuadro de edición, la propiedad ClosedDisplayMode de la barra de comandos cambia a Compacta, de modo que se muestren los comandos de formato.
 
 ```xaml
 <StackPanel Width="300"
@@ -263,13 +263,13 @@ Las barras de comandos se pueden colocar en la parte superior de la ventana de l
 -   Para dispositivos portátiles pequeños, te recomendamos ubicar las barras de comandos en la parte inferior de la pantalla para conseguir una mayor disponibilidad.
 -   En los dispositivos con pantallas más grandes, al colocar las barras de comandos cerca de la parte superior de la ventana, estas destacan más y son reconocibles.
 
-Usa la API [DiagonalSizeInInches](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.diagonalsizeininches) para determinar el tamaño físico de la pantalla.
+Usa la API [DiagonalSizeInInches](/uwp/api/windows.graphics.display.displayinformation.diagonalsizeininches) para determinar el tamaño físico de la pantalla.
 
 Las barras de comandos pueden colocarse en las siguientes regiones de la pantalla en pantallas de vista única (ejemplo de la izquierda) y en las pantallas de varias vistas (ejemplo de la derecha). Las barras de comandos alineadas pueden colocarse en cualquier lugar del espacio de acción.
 
 ![Ejemplo 2 de colocación de barra de la aplicación](images/AppbarGuidelines_Placement2.png)
 
->**Dispositivos táctiles**: si la barra de comandos debe permanecer visible para el usuario cuando aparece el teclado táctil o el panel de entrada de software (SIP), puedes asignarla a la propiedad [BottomAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.bottomappbar) de una página y pasará a estar visible cuando el SIP esté presente. De lo contrario, debes colocar la barra de comandos de manera alineada y en una posición relativa al contenido de tu aplicación.
+>**Dispositivos táctiles**: si la barra de comandos debe permanecer visible para el usuario cuando aparece el teclado táctil o el panel de entrada de software (SIP), puedes asignarla a la propiedad [BottomAppBar](/uwp/api/windows.ui.xaml.controls.page.bottomappbar) de una página y pasará a estar visible cuando el SIP esté presente. De lo contrario, debes colocar la barra de comandos de manera alineada y en una posición relativa al contenido de tu aplicación.
 
 ## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
@@ -279,4 +279,4 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Conceptos básicos de diseño de comandos para aplicaciones de Windows](../basics/commanding-basics.md)
-* [Clase CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)
+* [Clase CommandBar](/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

@@ -1,18 +1,18 @@
 ---
-Description: Cómo usar imágenes en miniatura para ayudar a los usuarios a obtener una vista previa de los archivos en aplicaciones para UWP.
 title: Directrices para las imágenes en miniatura en aplicaciones para UWP
+description: Obtenga información sobre cómo usar las imágenes en miniatura para ayudar a los usuarios a mostrar vistas previas de los archivos mientras navegan por una aplicación para la Plataforma universal de Windows (UWP).
 label: Thumbnail images
 template: detail.hbs
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: df0d2364762d75793f3f00856b06e8ae506cb327
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63808734"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165601"
 ---
 # <a name="thumbnail-images"></a>Imágenes en miniatura
 
@@ -20,7 +20,7 @@ En estas directrices, se describe cómo usar las imágenes en miniatura para ayu
 
 **API importantes**
 
--   [**ThumbnailMode**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
+-   [**ThumbnailMode**](/uwp/api/windows.storage.fileproperties.thumbnailmode)
 
 ## <a name="should-my-app-include-thumbnails"></a>¿Debo incluir miniaturas en la aplicación?
 
@@ -36,7 +36,7 @@ Usa miniaturas para:
     ![vista previa de vídeo](images/thumbnail-preview.png)
 
 ## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
-- Especifica el [modo de miniatura](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode) (PicturesView, VideosView, DocumentsView, MusicView, ListView o SingleItem) al recuperar miniaturas. Así te aseguras de que las imágenes en miniatura están optimizadas para mostrar el tipo de archivos que los usuarios quieren ver. 
+- Especifica el [modo de miniatura](/uwp/api/windows.storage.fileproperties.thumbnailmode) (PicturesView, VideosView, DocumentsView, MusicView, ListView o SingleItem) al recuperar miniaturas. Así te aseguras de que las imágenes en miniatura están optimizadas para mostrar el tipo de archivos que los usuarios quieren ver. 
     - Usa el modo SingleItem para recuperar una miniatura para un solo elemento, independientemente del tipo de archivo. Los demás modos de miniatura están pensados para mostrar vistas previas de varios archivos. 
 
 - Muestra imágenes genéricas de marcador de posición en lugar de miniaturas mientras las miniaturas se cargan. Si usas los marcadores de posición de esta forma, tu aplicación parece más reactiva, ya que los usuarios pueden interactuar con vistas previas antes de que se carguen las miniaturas. 
@@ -55,7 +55,7 @@ Usa miniaturas para:
 - No muestres información adicional sobre los archivos de imágenes y de vídeo. En la mayoría de los casos, una imagen en miniatura es suficiente para los usuarios que exploran imágenes y vídeos. 
 
 ## <a name="additional-usage-guidelines"></a>Directrices de uso adicionales
-[Modos de miniatura](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode) recomendados y sus funciones:
+[Modos de miniatura](/uwp/api/windows.storage.fileproperties.thumbnailmode) recomendados y sus funciones:
 
 <table>
 <tr>
@@ -163,8 +163,8 @@ De lo contrario, no se recupera ninguna miniatura.</td>
 </div>
 
 ## <a name="related-topics"></a>Temas relacionados
-- [Enumeración ThumbnailMode](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
-- [Clase StorageItemThumbnail](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.StorageItemThumbnail)
-- [Clase StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)
+- [Enumeración ThumbnailMode](/uwp/api/windows.storage.fileproperties.thumbnailmode)
+- [Clase StorageItemThumbnail](/uwp/api/Windows.Storage.FileProperties.StorageItemThumbnail)
+- [Clase StorageFile](/uwp/api/windows.storage.storagefile)
 - [Ejemplo de miniatura de archivo y carpeta (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
 - [Vista de lista y de cuadrícula](../design/controls-and-patterns/lists.md)

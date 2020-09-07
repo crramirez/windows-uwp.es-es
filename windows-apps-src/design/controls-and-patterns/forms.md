@@ -1,16 +1,16 @@
 ---
-Description: Directrices de diseño de formularios de aplicaciones de Windows.
 title: Formularios
+description: Obtenga información sobre las directrices para diseñar y crear diseños XAML para formularios en una aplicación para la Plataforma universal de Windows (UWP).
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 69ffaf4ff67d4ee78e78c195d759ae242a069e8e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 0113cbf50601a3db717753ab2e12524fa281daba
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968516"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304697"
 ---
 # <a name="forms"></a>Formularios
 Un formulario es un grupo de controles que recopila y envía datos de los usuarios. Los formularios se usan normalmente para páginas de configuración, encuestas, creación de cuentas y mucho más. 
@@ -45,8 +45,8 @@ El otro tipo de formulario permite al usuario elegir cuándo se deben enviar los
 Este tipo de formulario ofrece flexibilidad al usuario para responder. Normalmente, este tipo de formulario contiene campos de entrada de formulario más libres y, por lo tanto, recibe una gran variedad de respuestas. Para asegurarse de que la entrada del usuario es válida y los datos tienen el formato correcto en el momento del envío, ten en cuenta las siguientes recomendaciones:
 
 - Utiliza el control correcto para impedir que se envíe información no válida (es decir, usa CalendarDatePicker en lugar de TextBox para las fechas del calendario). En la sección Controles de entrada más adelante encontrarás información sobre cómo seleccionar los controles de entrada apropiados para un formulario.
-- Cuando uses controles TextBox, proporciona a los usuarios una indicación del formato de entrada deseado con la propiedad [PlaceholderText](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox.PlaceholderText).
-- Indica la entrada que se espera en un control con la propiedad [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscope) para proporcionar a los usuarios el teclado en pantalla apropiado.
+- Cuando uses controles TextBox, proporciona a los usuarios una indicación del formato de entrada deseado con la propiedad [PlaceholderText](/uwp/api/Windows.UI.Xaml.Controls.TextBox.PlaceholderText).
+- Indica la entrada que se espera en un control con la propiedad [InputScope](/uwp/api/windows.ui.xaml.input.inputscope) para proporcionar a los usuarios el teclado en pantalla apropiado.
 - Marca las entradas obligatorias con un asterisco * en la etiqueta.
 - Deshabilita el botón Enviar hasta que se rellene toda la información obligatoria.
 - Si hay datos no válidos en el momento del envío, resalta los campos o los bordes de los controles que contengan una entrada no válida y pide al usuario que vuelva a enviar el formulario.
@@ -58,7 +58,7 @@ Este tipo de formulario ofrece flexibilidad al usuario para responder. Normalmen
 Para facilitar la experiencia del usuario y garantizar que los usuarios puedan introducir la entrada correcta, ten en cuenta las siguientes recomendaciones para diseñar formularios. 
 
 ### <a name="labels"></a>Etiquetas
-Las [etiquetas](labels.md) debe alinearse a la izquierda y colocarse encima del control de entrada. Muchos controles tienen una propiedad Header integrada que sirve para mostrar la etiqueta. En los controles sin propiedad Header o para etiquetar grupos de controles, puedes usar [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) en su lugar.
+Las [etiquetas](labels.md) debe alinearse a la izquierda y colocarse encima del control de entrada. Muchos controles tienen una propiedad Header integrada que sirve para mostrar la etiqueta. En los controles sin propiedad Header o para etiquetar grupos de controles, puedes usar [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) en su lugar.
 
 Para crear [diseños con accesibilidad](../accessibility/accessibility.md), etiqueta los controles individuales y los grupos de controles para mayor claridad tanto para humanos como para los lectores de pantalla. 
 
@@ -128,8 +128,8 @@ Control | Use | Ejemplo
 Control | Use | Ejemplo
 - | - | -
 [ComboBox](combo-box.md) | Iniciar con un formato compacto y expandir para mostrar la lista de elementos seleccionables. | Seleccionar en una lista larga de elementos, como estados o países.
-[ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | Clasificar elementos y asignar encabezados de grupo, arrastrar y colocar elementos, mantener el contenido y reordenar los elementos. | Opciones de clasificación.
-[GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | Organizar y examinar colecciones de imágenes. | Elegir una foto o un color, mostrar un tema.
+[ListView](./lists.md#list-views) | Clasificar elementos y asignar encabezados de grupo, arrastrar y colocar elementos, mantener el contenido y reordenar los elementos. | Opciones de clasificación.
+[GridView](./lists.md#grid-views) | Organizar y examinar colecciones de imágenes. | Elegir una foto o un color, mostrar un tema.
 
 ### <a name="numeric-input"></a>Entradas numéricas
 Control | Use | Ejemplo

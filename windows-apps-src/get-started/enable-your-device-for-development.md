@@ -1,17 +1,17 @@
 ---
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar el dispositivo para el desarrollo
-description: Configura el dispositivo Windows 10 para el desarrollo y la depuración.
+description: Obtenga información sobre cómo habilitar un dispositivo con Windows 10 para el desarrollo y la depuración activando el Modo de desarrollador en Visual Studio.
 keywords: Introducción a Visual Studio con licencia de desarrollador, dispositivo con licencia de desarrollador habilitada
 ms.date: 05/22/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4402200726da93bb820946c9849d8c15bd1c5d8d
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: 702e3aa166501c3e9974398ae5b89e832cfa7391
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448395"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159059"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -62,9 +62,9 @@ Esta imagen muestra las funciones de desarrollo para Windows 10:
 Para obtener más información sobre el Portal de dispositivos, consulta [Introducción al Portal de dispositivos Windows](../debug-test-perf/device-portal.md).
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
-- [Portal de dispositivos para dispositivos de escritorio](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Portal de dispositivos para HoloLens](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)
-- [Portal de dispositivos para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
+- [Portal de dispositivos para dispositivos de escritorio](../debug-test-perf/device-portal-desktop.md)
+- [Portal de dispositivos para HoloLens](/windows/mixed-reality/using-the-windows-device-portal)
+- [Portal de dispositivos para IoT](/windows/iot-core/manage-your-device/DevicePortal)
 - [Portal de dispositivos para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
 - [Portal de dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
 
@@ -75,7 +75,7 @@ Si se producen problemas al habilitar el modo de desarrollador o el portal de di
 > [!NOTE]
 > A partir de la actualización más reciente de Windows 10, la instalación de prueba está habilitada de forma predeterminada. Ahora, puedes implementar un paquete MSIX firmado en un dispositivo sin una configuración especial. Si usa una versión anterior de Windows 10, las configuraciones predeterminadas solo le permitirán ejecutar aplicaciones de Microsoft Store. Deberá habilitar la instalación de prueba para instalar aplicaciones de fuentes distintas a Microsoft.
 
-Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para más información, consulta los artículos de TechNet [Instalación de prueba de aplicaciones en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) y [Aspectos básicos de Microsoft Intune](https://docs.microsoft.com/mem/intune/fundamentals/).
+Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para más información, consulta los artículos de TechNet [Instalación de prueba de aplicaciones en Windows 10](/windows/deploy/sideload-apps-in-windows-10) y [Aspectos básicos de Microsoft Intune](/mem/intune/fundamentals/).
 
 Información específica de la familia de dispositivos
 
@@ -122,7 +122,7 @@ En versiones anteriores de Windows 10 Mobile, estaba presente una opción de vo
 
 Hay varias herramientas que puedes usar para implementar una aplicación desde un PC con Windows 10 a un dispositivo con Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB. Ambas formas solo instalan el paquete de aplicación (.appx/.appxbundle); no instalan certificados.
 
--   Usa la herramienta de implementación de aplicaciones de Windows 10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](https://docs.microsoft.com/previous-versions/windows/apps/mt203806(v=vs.140)).
+-   Usa la herramienta de implementación de aplicaciones de Windows 10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](/previous-versions/windows/apps/mt203806(v=vs.140)).
 -   Puedes usar el [portal de dispositivos](../debug-test-perf/device-portal.md) para realizar implementaciones desde el navegador a un dispositivo móvil con Windows 10, versión 1511 o posterior. Usa la página **[Aplicaciones](../debug-test-perf/device-portal.md#apps-manager)** de Device Portal para cargar un paquete de la aplicación (.appx) e instalarlo en el dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Error al instalar el paquete de modo de desarrollador
@@ -231,8 +231,8 @@ Error: DEP0700: Error en el registro de la aplicación.
 ## <a name="see-also"></a>Consulte también
 
 * [Tu primera aplicación](your-first-app.md)
-* [Publicar tu aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/)
-* [Artículos sobre el desarrollo de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/develop/)
+* [Publicar tu aplicación para UWP](../publish/index.md)
+* [Artículos sobre el desarrollo de aplicaciones para UWP](../develop/index.md)
 * [Ejemplos de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

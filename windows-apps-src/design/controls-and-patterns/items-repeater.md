@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c66fc2b07b5ee5ce87b6c1f37657b3eec49f3105
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 20aeda53af3b4b11c1562d2ed22b099a3377d3c7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970410"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172639"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -26,7 +26,7 @@ En términos conceptuales, [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.i
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ItemsRepeater** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ItemsRepeater** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows**: [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
 >
@@ -95,7 +95,7 @@ ItemsRepeater itemsRepeater1 = new ItemsRepeater();
 itemsRepeater1.ItemsSource = Items;
 ```
 
-También puedes enlazar la propiedad **ItemsSource** a una colección en XAML. Para obtener más información sobre el enlace de datos, consulta [Introducción al enlace de datos](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-quickstart).
+También puedes enlazar la propiedad **ItemsSource** a una colección en XAML. Para obtener más información sobre el enlace de datos, consulta [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 
 ```xaml
@@ -111,7 +111,7 @@ Pero seguramente te interese mostrar una presentación más enriquecida de los d
 En este ejemplo, el objeto de datos es una cadena simple. La clase **DataTemplate** incluye una imagen a la izquierda del texto y aplica estilo al **TextBlock** para mostrar la cadena en un color verde azulado.
 
 > [!NOTE]
-> Cuando uses la [extensión de marcado x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) en **DataTemplate**, debes especificar DataType (`x:DataType`) en DataTemplate.
+> Cuando uses la [extensión de marcado x:Bind](../../xaml-platform/x-bind-markup-extension.md) en **DataTemplate**, debes especificar DataType (`x:DataType`) en DataTemplate.
 
 ```xaml
 <DataTemplate x:DataType="x:String">
@@ -209,7 +209,7 @@ En esta lista se muestran las interfaces disponibles y cuándo se debe considera
 
     **Advertencia**: Windows.Foundation.IObservableVector\<T> no es compatible con una acción de tipo "Mover". Esto puede hacer que la interfaz de usuario de un elemento pierda su estado visual.  Por ejemplo, un elemento que actualmente está seleccionado o que tiene el foco donde el movimiento se consigue mediante una acción "Eliminar" seguida de una acción "Agregar" perderá el foco y dejará de estar seleccionado.
 
-    Platform.Collections.Vector\<T> usa IObservableVector\<T> y tiene esta misma limitación. Si es necesaria la compatibilidad con una acción de tipo "Mover", usa la interfaz **INotifyCollectionChanged**.  La clase .NET ObservableCollection\<T> usa **INotifyCollectionChanged**.
+    Platform.Collections.Vector\<T> usa IObservableVector\<T> y tiene esta misma limitación. Si es necesaria la compatibilidad con una acción de tipo "Mover", usa la interfaz **INotifyCollectionChanged**.  La clase ObservableCollection\<T> de .NET usa **INotifyCollectionChanged**.
 
 - [IKeyIndexMapping](/uwp/api/microsoft.ui.xaml.controls.ikeyindexmapping)
 
@@ -774,14 +774,14 @@ public class MyPage : Page
 
 ## <a name="enable-accessibility"></a>Habilitación de la accesibilidad
 
-La clase [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) no proporciona una experiencia predeterminada de accesibilidad. La documentación incluida en [Facilidad de uso para aplicaciones de Windows](/windows/uwp/design/usability) contiene gran cantidad de información que te ayudará a garantizar que la aplicación proporcione una experiencia de usuario inclusiva. Si usas la clase ItemsRepeater para crear un control personalizado, asegúrate de consultar la documentación incluida en [Automatización del mismo nivel personalizada](/windows/uwp/design/accessibility/custom-automation-peers).
+La clase [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) no proporciona una experiencia predeterminada de accesibilidad. La documentación incluida en [Facilidad de uso para aplicaciones de Windows](../usability/index.md) contiene gran cantidad de información que te ayudará a garantizar que la aplicación proporcione una experiencia de usuario inclusiva. Si usas la clase ItemsRepeater para crear un control personalizado, asegúrate de consultar la documentación incluida en [Automatización del mismo nivel personalizada](../accessibility/custom-automation-peers.md).
 
 ### <a name="keyboarding"></a>Teclado
-La compatibilidad de teclado mínima para el movimiento del foco que proporciona la clase ItemsRepeater se basa en la [navegación direccional 2D para teclado](/windows/uwp/design/input/focus-navigation#2d-directional-navigation-for-keyboard) de XAML.
+La compatibilidad de teclado mínima para el movimiento del foco que proporciona la clase ItemsRepeater se basa en la [navegación direccional 2D para teclado](../input/focus-navigation.md#2d-directional-navigation-for-keyboard) de XAML.
 
 ![Navegación direccional](/windows/uwp/design/input/images/keyboard/directional-navigation.png)
 
-El [modo XYFocusKeyboardNavigation](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) de ItemsRepeater está _habilitado_ de forma predeterminada. En función de la experiencia deseada, considera la posibilidad de agregar compatibilidad con [interacciones de teclado](/windows/uwp/design/input/keyboard-interactions) comunes, como Inicio, Fin, Retroceder Página y Avanzar Página.
+El [modo XYFocusKeyboardNavigation](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) de ItemsRepeater está _habilitado_ de forma predeterminada. En función de la experiencia deseada, considera la posibilidad de agregar compatibilidad con [interacciones de teclado](../input/keyboard-interactions.md) comunes, como Inicio, Fin, Retroceder Página y Avanzar Página.
 
 La clase ItemsRepeater se asegura automáticamente de que el orden de tabulación predeterminado para sus elementos (ya sean virtualizados o no) sigue el orden en el que se proporcionan los elementos en los datos. De forma predeterminada, la clase ItemsRepeater tiene la propiedad [TabFocusNavigation](/uwp/api/windows.ui.xaml.uielement.tabfocusnavigation) establecida en [Once](/uwp/api/windows.ui.xaml.input.keyboardnavigationmode), en lugar de _Local_ (valor predeterminado habitual).
 
