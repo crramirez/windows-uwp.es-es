@@ -1,5 +1,5 @@
 ---
-Description: Mejora tu aplicación de escritorio para los usuarios de Windows 10 mediante las API de Windows Runtime.
+description: Mejora tu aplicación de escritorio para los usuarios de Windows 10 mediante las API de Windows Runtime.
 title: Llamada a las a API de Windows Runtime en aplicaciones de escritorio
 ms.date: 08/20/2019
 ms.topic: article
@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 5a7c77f6c553408d2631fb3e324e67d79318f9b4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e58315ed70b889e1369e8c13a563f320c0ca1948
+ms.sourcegitcommit: a222ad0e2d97e35a60000c473808c678395376ee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170699"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479085"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>Llamada a las a API de Windows Runtime en aplicaciones de escritorio
 
@@ -72,7 +72,7 @@ Existen dos opciones para los proyectos de .NET:
 
 3. En la ventana **Propiedades**, establece el campo **Copia local** de cada archivo *.winmd* en **False**.
 
-    ![copy-local-field](images/desktop-to-uwp/copy-local-field.png)
+    ![Campo Copia local](images/desktop-to-uwp/copy-local-field.png)
 
 ### <a name="modify-a-c-win32-project-to-use-windows-runtime-apis"></a>Modificación de un proyecto de C++ de Win32 para usar las API de Windows Runtime
 
@@ -156,7 +156,41 @@ private void ShowToast()
 }
 ```
 
-```C++
+```cppwinrt
+#include <sstream>
+#include <winrt/Windows.Data.Xml.Dom.h>
+#include <winrt/Windows.UI.Notifications.h>
+
+using namespace winrt::Windows::Foundation;
+using namespace winrt::Windows::System;
+using namespace winrt::Windows::UI::Notifications;
+using namespace winrt::Windows::Data::Xml::Dom;
+
+void UWP::ShowToast()
+{
+    std::wstring const title = L"featured picture of the day";
+    std::wstring const content = L"beautiful scenery";
+    std::wstring const image = L"https://picsum.photos/360/180?image=104";
+    std::wstring const logo = L"https://picsum.photos/64?image=883";
+
+    std::wostringstream xmlString;
+    xmlString << L"<toast><visual><binding template='ToastGeneric'>" <<
+        L"<text>" << title << L"</text>" <<
+        L"<text>" << content << L"</text>" <<
+        L"<image src='" << image << L"'/>" <<
+        L"<image src='" << logo << L"'" <<
+        L" placement='appLogoOverride' hint-crop='circle'/>" <<
+        L"</binding></visual></toast>";
+
+    XmlDocument toastXml;
+
+    toastXml.LoadXml(xmlString.str().c_str());
+
+    ToastNotificationManager::CreateToastNotifier().Show(ToastNotification(toastXml));
+}
+```
+
+```cppcx
 using namespace Windows::Foundation;
 using namespace Windows::System;
 using namespace Windows::UI::Notifications;
@@ -208,33 +242,29 @@ Para esa configuración de compilación, crea una constante para identificar el 
 
 Para los proyectos basados en .NET, la constante se llama **constante de compilación condicional**.
 
-![Preprocesador](images/desktop-to-uwp/compilation-constants.png)
+![Contante de compilación condicional](images/desktop-to-uwp/compilation-constants.png)
 
 Para los proyectos basados en C++, la constante se llama **definición del preprocesador**.
 
-![Preprocesador](images/desktop-to-uwp/pre-processor.png)
+![Constante de definición del preprocesador](images/desktop-to-uwp/pre-processor.png)
 
 Agrega esa constante antes de cualquier bloque de código UWP.
 
 ```csharp
-
 [System.Diagnostics.Conditional("_UWP")]
 private void ShowToast()
 {
  ...
 }
-
 ```
 
 ```C++
-
 #if _UWP
 void UWP::ShowToast()
 {
  ...
 }
 #endif
-
 ```
 
 El compilador compila ese código solo si esa constante está definida en la configuración de compilación activa.

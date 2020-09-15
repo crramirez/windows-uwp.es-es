@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, get, getting, started
 ms.localizationpriority: medium
-ms.openlocfilehash: 412f34d21ddb24f637450fdfc71214c360445841
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d7dc6455219510d75307df02571fc506b909553c
+ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170199"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643826"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
 
@@ -180,6 +180,10 @@ Crear API con C++/WinRT es un poco más complicado que consumirlas, porque debes
 En este escenario se trata la compilación de aplicaciones y controles en el marco de trabajo de la interfaz de usuario de XAML. Trabajar en una aplicación XAML equivale a una combinación de consumo y creación. Pero, dado que XAML es el marco de trabajo de la interfaz de usuario dominante en Windows hoy en día y su influencia en Windows Runtime es proporcional a eso, merece su propia categoría de escenario.
 
 Ten en cuenta que XAML funciona mejor con los lenguajes de programación que ofrecen reflexión. En C++/WinRT, a veces tienes que esforzarte un poco más para interoperar con el marco XAML. Todos estos casos se describen en la documentación. Los mejores artículos para empezar son [Controles de XAML; enlazar a una propiedad de C++/WinRT](./binding-property.md) y [Controles (basados en modelo) personalizados de XAML con C++/WinRT](./xaml-cust-ctrl.md).
+
+## <a name="sample-apps-written-in-cwinrt"></a>Aplicaciones de ejemplo escritas en C++/WinRT
+
+Consulte [¿Dónde puedo encontrar aplicaciones de ejemplo de C++/WinRT?](/windows/uwp/cpp-and-winrt-apis/faq#where-can-i-find-cwinrt-sample-apps)
 
 ## <a name="important-apis"></a>API importantes
 * [Método SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)

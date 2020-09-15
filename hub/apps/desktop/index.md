@@ -1,18 +1,18 @@
 ---
-Description: Aprende a compilar aplicaciones de escritorio para PC Windows, incluido cómo elegir la plataforma de aplicaciones adecuada para las nuevas aplicaciones y cómo modernizar las aplicaciones existentes para Windows 10.
+description: Aprende a compilar aplicaciones de escritorio para PC Windows, incluido cómo elegir la plataforma de aplicaciones adecuada para las nuevas aplicaciones y cómo modernizar las aplicaciones existentes para Windows 10.
 title: Compilación de aplicaciones de escritorio para PC Windows
 ms.topic: article
-ms.date: 11/04/2019
+ms.date: 9/10/2020
 keywords: windows win32, desarrollo de escritorio
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f4b790978449bd6d5c279a5405c22db51cd0724
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6539f436e46f351efc355d361c0677b9fedee546
+ms.sourcegitcommit: 2bb975d5df38d294277f57bf8b6a06d9bf87ca9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170729"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90046821"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Compilación de aplicaciones de escritorio para PC Windows
 
@@ -100,8 +100,9 @@ Si estás creando una nueva aplicación de escritorio para Windows, aquí tienes
 
 | Recurso | Descripción |
 |---------|-------------|
-| [.NET Core 3.0](/dotnet/core/whats-new/dotnet-core-3-0) | Obtén información sobre las características más recientes de .NET Core 3.0, incluidas las mejoras para las aplicaciones de WPF y Windows Forms. |
-| [Guía de escritorio para WPF y .NET Core 3.0](/dotnet/desktop-wpf/overview/index) | Desarrolla aplicaciones de WPF para .NET Core 3.0 en lugar de desarrollarlas para la versión completa de .NET Framework.  |
+| [.NET Core 3.1](/dotnet/core/whats-new/dotnet-core-3-1) | Obtenga información sobre las características más recientes de .NET Core 3.1, incluidas las mejoras para las aplicaciones de WPF y Windows Forms. |
+| [.NET 5](/dotnet/core/dotnet-five) | En este artículo se detalla lo que se incluye en .NET 5, que es la siguiente versión de .NET Core 3.1. |
+| [Guía de escritorio para WPF y .NET Core](/dotnet/desktop-wpf/overview/index) | Desarrolla aplicaciones de WPF para .NET Core en lugar de desarrollarlas para la versión completa de .NET Framework.  |
 | [Azure](/azure/) | Amplía el alcance de tus aplicaciones con los servicios en la nube de Azure. |
 | [Visual Studio](/visualstudio/) | Aprende a usar Visual Studio para desarrollar aplicaciones y servicios. |
 | [MSIX](/windows/msix/) | Empaqueta e implementa cualquier aplicación de Windows con un formato de empaquetado moderno y universal. |

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, frequently, asked, questions, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: e37f5b585554f4ec214f7f72a896545d66dde3d5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d9b402a1f140126314bc10f69880a9f01af2b2a4
+ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170209"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643807"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
 Respuestas a preguntas que probablemente tengas acerca de la creación y del consumo de las API de Windows Runtime con [C++/WinRT](./intro-to-using-cpp-with-winrt.md).
@@ -20,6 +20,9 @@ Respuestas a preguntas que probablemente tengas acerca de la creación y del con
 
 > [!NOTE]
 > Si tu pregunta es sobre un mensaje de error que has visto, consulta también el tema [Solución de problemas de C++/WinRT](troubleshooting.md).
+
+## <a name="where-can-i-find-cwinrt-sample-apps"></a>¿Dónde puedo encontrar aplicaciones de ejemplo de C++/WinRT?
+Consulte [Aplicaciones de ejemplo de C++/WinRT](/samples/browse/?languages=cppwinrt).
 
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>¿Cómo redirijo el proyecto de C++/WinRT a una versión posterior del SDK de Windows?
 Consulta [Procedimientos para redirigir el proyecto de C++/WinRT a una versión posterior del SDK de Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
