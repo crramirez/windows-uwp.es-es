@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 70f71265ff763ff8a160705694476e03bf8b6667
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d85df48b4f43759013f80623595d919ac6c77337
+ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166359"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90593439"
 ---
 # <a name="composition-visual"></a>Elemento visual de composición
 
@@ -19,17 +19,21 @@ Los elementos visuales de composición conforman la estructura del árbol visual
 
 ## <a name="visuals"></a>Objetos visuales
 
-Existen tres tipos de elementos visuales que conforman la estructura del árbol visual, además de una clase de pincel base con varias subclases que afectan al contenido de un elemento visual:
+Hay varios tipos visuales que componen la estructura de árbol visual y una clase de pincel base con varias subclases que afectan al contenido de un visual:
 
 - [**Visual**](/uwp/api/Windows.UI.Composition.Visual): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos Visual.
 - [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual): se deriva del objeto [**Visual**](/uwp/api/Windows.UI.Composition.Visual) y agrega la capacidad para crear los elementos secundarios.
-- [**SpriteVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual) y agrega la capacidad de asociar un pincel para que el objeto visual pueda representar píxeles, incluidas imágenes, efectos o un color sólido.
+  - [**SpriteVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Tiene la capacidad de asociar un pincel para que el objeto visual pueda representar píxeles, incluidas imágenes, efectos o un color sólido.
+  - [**LayerVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Los elementos secundarios del elemento visual se acoplan en una sola capa.<br/>(_Introducido en Windows 10, versión 1607, SDK 14393)._
+  - [**ShapeVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Un nodo de árbol visual que es la raíz de un CompositionShape.<br/>(_Introducido en Windows 10, versión 1803, SDK 17134)._
+  - [**RedirectVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). El visual obtiene su contenido de otro visual.<br/>(_Introducido en Windows 10, versión 1809, SDK 17763)._
+  - [**SceneVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Un contenedor visual para los nodos de una escena 3D.<br/>(_Introducido en Windows 10, versión 1903, SDK 18362)._
 
-Puede aplicar contenido y efectos a SpriteVisuals mediante [**CompositionBrush**](/uwp/api/Windows.UI.Composition.CompositionBrush) y sus subclases, incluidos [**CompositionColorBrush**](/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) y [**CompositionEffectBrush**](/uwp/api/Windows.UI.Composition.CompositionEffectBrush). Para obtener más información sobre los pinceles, consulte nuestra [**información general de CompositionBrush**](./composition-brushes.md).
+Puede aplicar contenido y efectos a SpriteVisuals mediante [**CompositionBrush**](/uwp/api/Windows.UI.Composition.CompositionBrush) y sus subclases, incluidos [**CompositionColorBrush**](/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) y [**CompositionEffectBrush**](/uwp/api/Windows.UI.Composition.CompositionEffectBrush). Para obtener más información sobre los pinceles, consulte [**información general de CompositionBrush**](./composition-brushes.md).
 
 ## <a name="the-compositionvisual-sample"></a>Muestra de CompositionVisual
 
-Aquí veremos un código de ejemplo que muestra los tres tipos de objetos visuales diferentes enumerados anteriormente. Si bien en esta muestra no se abarcan conceptos como, por ejemplo, animaciones o efectos más complejos, se incluyen los elementos esenciales que todos los sistemas usan. (El código de ejemplo completo se muestra al final de este artículo).
+Aquí veremos un código de ejemplo que muestra los tres tipos de objetos visuales diferentes enumerados anteriormente. Aunque este ejemplo no trata conceptos como animaciones o efectos más complejos, contiene los bloques de creación que usan todos esos sistemas. (El código de ejemplo completo se muestra al final de este artículo).
 
 En el ejemplo, hay un número de cuadrados de color sólido en los que se puede hacer clic y arrastrar sobre la pantalla. Cuando se hace clic en un cuadrado, este se trae al frente, se gira 45 grados y se vuelve opaco cuando se arrastra.
 
@@ -40,7 +44,7 @@ Esto muestra varios de los conceptos básicos para trabajar con la API, entre lo
 - Recortar el visual
 - Girar el visual
 - Configurar la opacidad
-- Cambiar la posición del elemento visual en la colección
+- Cambiar la posición del visual en la colección.
 
 ## <a name="creating-a-compositor"></a>Crear un compositor
 
@@ -78,7 +82,7 @@ Al igual que otros objetos de la API, [**InsetClip**](/uwp/api/Windows.UI.Compos
 
 ## <a name="span-idrotating_a_clipspanspan-idrotating_a_clipspanspan-idrotating_a_clipspanrotating-a-clip"></a><span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Girar un recorte
 
-Un objeto [**Visual**](/uwp/api/Windows.UI.Composition.Visual) se puede transformar con una rotación. Ten en cuenta que el objeto [**RotationAngle**](/uwp/api/windows.ui.composition.visual.rotationangle) admite tanto radianes como grados. El valor predeterminado es radianes, pero es fácil especificar grados, tal como se muestra en el siguiente fragmento de código:
+Un objeto [**Visual**](/uwp/api/Windows.UI.Composition.Visual) se puede transformar con una rotación. Ten en cuenta que el objeto [**RotationAngle**](/uwp/api/windows.ui.composition.visual.rotationangle) admite tanto radianes como grados. El valor predeterminado es radianes, pero es fácil especificar grados como se muestra en el siguiente fragmento de código:
 
 ```cs
 child.RotationAngleInDegrees = 45.0f;
