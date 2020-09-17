@@ -6,12 +6,12 @@ ms.date: 11/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a80c130de1966973fe928480009eaa3bd0a8887
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e359fd18da67da15bb33e8980f0e0e7419001460
+ms.sourcegitcommit: b99e2f4dffa603b68c2a8273fe6313432f91b353
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171255"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569362"
 ---
 # <a name="networking-and-web-services"></a>Servicios web y redes
 
@@ -20,7 +20,7 @@ Las siguientes tecnologías de red y servicios web están disponibles para los d
 | Tema | Descripción |
 | - | - |
 | [Conceptos básicos de redes](networking-basics.md) | Cosas que debes hacer para cualquier aplicación habilitada para la red |
-| [¿Qué tecnología de red?](which-networking-technology.md) | Una introducción rápida de las tecnologías de redes disponibles para un desarrollador UWP, con sugerencias sobre cómo elegir las tecnologías que son adecuadas para la aplicación. |
+| [¿Qué tecnología de red?](which-networking-technology.md) | Una introducción a las tecnologías de redes disponibles para un desarrollador UWP, con sugerencias sobre cómo elegir las que son adecuadas para la aplicación. |
 | [Comunicaciones de red en segundo plano](network-communications-in-the-background.md) | Para continuar la comunicación de red mientras no está en segundo plano, una aplicación puede usar tareas en segundo plano y un agente de socket o desencadenadores de canal de control. |
 | [Sockets](sockets.md) | Los sockets son una tecnología de transferencia de datos de bajo nivel sobre la que se implementan muchos protocolos de red. UWP ofrece las clases de socket TCP y UDP para aplicaciones cliente-servidor o de punto a punto, tanto si las conexiones son de larga duración o no se necesita una conexión establecida. |
 | [WebSockets](websockets.md) | Los WebSockets ofrecen un mecanismo para una comunicación bidireccional rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S), y admiten tanto mensajes UTF-8 como binarios. |
