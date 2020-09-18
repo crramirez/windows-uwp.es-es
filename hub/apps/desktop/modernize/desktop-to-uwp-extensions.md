@@ -1,19 +1,19 @@
 ---
 description: Puedes usar extensiones para integrar tu aplicación de escritorio empaquetada con Windows 10 de formas predefinidas.
 title: Modernización de aplicaciones de escritorio existentes con Puente de dispositivo de escritorio
-ms.date: 08/25/2020
+ms.date: 09/11/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b18afdeecb3e70f958b3d8908027e59f8c4c1f9e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e0a8a7bf38fbf44fd3544d7912729bbd42672f34
+ms.sourcegitcommit: 7c49f789f5b382b5b12efed6a81cbb4a25d44bd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172729"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90026330"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>Integración de la aplicación de escritorio con Windows 10 y UWP
 
@@ -1164,8 +1164,8 @@ Reproducción automática puede presentar tu aplicación como una opción cuando
 |ProviderDisplayName | Cadena que representa tu aplicación o servicio (por ejemplo: "Reproductor de vídeo Contoso"). |
 |ContentEvent |Nombre de un evento de contenido que hace que a los usuarios les aparezca tu ``ActionDisplayName`` y ``ProviderDisplayName``. Se genera un evento de contenido cuando se inserta en el equipo un dispositivo con volumen, como una tarjeta de memoria de cámara, una unidad USB o un DVD. Puedes encontrar la lista completa de esos eventos [aquí](/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).  |
 |Verbo |La opción de configuración Verbo identifica un valor que se pasa a la aplicación para la opción seleccionada. Puedes especificar varias acciones de inicio para un evento de Reproducción automática y usar la configuración Verbo para determinar qué opción seleccionó un usuario para tu aplicación. Para saber qué opción seleccionó el usuario, comprueba la propiedad verb de los argumentos del evento de inicio que se pasaron a la aplicación. Puedes usar cualquier valor para la configuración Verbo a excepción de open, que está reservado. |
-|DropTargetHandler |Identificador de clase de la aplicación que implementa la interfaz [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017). Los archivos del medio extraíble se pasan al método [Colocar](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) de tu implementación [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017).  |
-|Parámetros |No tienes que implementar la interfaz [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) para todos los eventos de contenido. Para cualquiera de los eventos de contenido, podrías proporcionar los parámetros de línea de comandos en lugar de implementar la interfaz [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017). Para esos eventos, Reproducción automática iniciará tu aplicación utilizando los parámetros de línea de comandos. Puedes analizar esos parámetros en el código de inicialización de la aplicación para determinar si se inició mediante Reproducción automática y, a continuación, proporcionar tu implementación personalizada. |
+|DropTargetHandler |Identificador de clase de la aplicación que implementa la interfaz [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget). Los archivos del medio extraíble se pasan al método [Colocar](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) de tu implementación [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget).  |
+|Parámetros |No tienes que implementar la interfaz [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget) para todos los eventos de contenido. Para cualquiera de los eventos de contenido, podrías proporcionar los parámetros de línea de comandos en lugar de implementar la interfaz [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget). Para esos eventos, Reproducción automática iniciará tu aplicación utilizando los parámetros de línea de comandos. Puedes analizar esos parámetros en el código de inicialización de la aplicación para determinar si se inició mediante Reproducción automática y, a continuación, proporcionar tu implementación personalizada. |
 |DeviceEvent |Nombre de un evento de dispositivo que hace que a los usuarios les aparezca tu ``ActionDisplayName`` y ``ProviderDisplayName``. Se genera un evento de dispositivo cuando se conecta un dispositivo al equipo. Los eventos de dispositivo comienzan con la cadena ``WPD`` y puedes encontrarlos en una lista [aquí](/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference). |
 |HWEventHandler |Identificador de clase de la aplicación que implementa la interfaz [IHWEventHandler](/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler). |
 |InitCmdLine |Parámetro de cadena que quieres pasar al método [Inicializar](/windows/desktop/api/shobjidl/nf-shobjidl-ihweventhandler-initialize) de la interfaz [IHWEventHandler](/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler). |
@@ -1277,6 +1277,9 @@ Puedes encontrar un ejemplo que usa esta extensión [aquí](https://github.com/M
 ### <a name="share-fonts-with-other-windows-applications"></a>Compartir fuentes con otras aplicaciones de Windows
 
 Comparte tus fuentes personalizadas con otras aplicaciones de Windows.
+
+> [!NOTE]
+> Para poder enviar una aplicación que use esta extensión a Store, primero debe obtener la aprobación del equipo de Store. Para obtenerla, vaya a [https://aka.ms/storesupport](https://aka.ms/storesupport), haga clic en **Contactar con nosotros** y elija las opciones relacionadas con el envío de aplicaciones al panel. Este proceso de aprobación ayuda a garantizar que no haya conflictos entre las fuentes instaladas por la aplicación y las fuentes que se instalan con el sistema operativo. Si no obtiene la aprobación, recibirá un error similar al siguiente al enviar la aplicación: "Error al validar la aceptación del paquete: No se puede usar la extensión windows.sharedFonts con esta cuenta. Póngase en contacto con nuestro equipo de soporte técnico si quiere solicitar permisos para usar esta extensión".
 
 #### <a name="xml-namespaces"></a>espacios de nombres XML
 

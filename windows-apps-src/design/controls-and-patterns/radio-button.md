@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4953b5adc1953bac83b90271b4042e3b9f13c3f2
-ms.sourcegitcommit: 083ddf840ab42bb48b4892fc2876ecbf698e481b
+ms.openlocfilehash: ee933bd28594263e61e654b14b0541c6fa9ed41b
+ms.sourcegitcommit: 875bd348608547e7a66fa4b460efe64b3246807e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89615527"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90080847"
 ---
 # <a name="radio-buttons"></a>Botones de radio
 
@@ -125,17 +125,35 @@ Cuando no se selecciona ningún botón de radio, el primero de la lista obtiene 
 > [!NOTE]
 > El elemento que recibe el foco de tabulación en la navegación por tabulación inicial no está seleccionado.
 
-|Lista sin foco de tabulación | Lista con el foco de tabulación inicial|
-|:--:|:--:|
-| ![Lista sin el foco de tabulación y sin ningún elemento seleccionado](images/radiobutton-no-selected-item-no-tab-focus.png) | ![Lista con el foco de tabulación inicial y sin ningún elemento seleccionado](images/radiobutton-no-selected-item-tab-focus.png)|
+:::row:::
+   :::column span="":::
+     **_Lista sin el foco de tabulación, sin ninguna selección_**
+
+     ![Lista sin el foco de tabulación y sin ningún elemento seleccionado](images/radiobutton-no-selected-item-no-tab-focus.png)
+   :::column-end:::
+   :::column span="":::
+      **_Lista con el foco de tabulación inicial, sin ninguna selección_**
+
+      ![Lista con el foco de tabulación inicial y sin ningún elemento seleccionado](images/radiobutton-no-selected-item-tab-focus.png)
+   :::column-end:::
+:::row-end:::
 
 ##### <a name="one-radio-button-is-selected"></a>Se ha seleccionado un botón de radio.
 
 Cuando un usuario usa la tabulación en la lista y está seleccionado un botón de radio, dicho botón obtiene el foco.
 
-|Lista sin foco de tabulación | Lista con el foco de tabulación inicial |
-|:--:|:--:|
-| ![Lista sin el foco de tabulación y un elemento seleccionado](images/radiobutton-selected-item-no-tab-focus.png) | ![Lista con el foco de tabulación inicial y un elemento seleccionado](images/radiobutton-selected-item-tab-focus.png)|
+:::row:::
+   :::column span="":::
+     **_Lista sin foco de tabulación_**
+
+     ![Lista sin el foco de tabulación y un elemento seleccionado](images/radiobutton-selected-item-no-tab-focus.png)
+   :::column-end:::
+   :::column span="":::
+      **_Lista con el foco de tabulación inicial_**
+
+      ![Lista con el foco de tabulación inicial y un elemento seleccionado](images/radiobutton-selected-item-tab-focus.png)
+   :::column-end:::
+:::row-end:::
 
 #### <a name="keyboard-navigation"></a>Navegación mediante teclado
 
@@ -147,18 +165,58 @@ Cuando un elemento de un grupo `RadioButtons` ya tiene el foco, el usuario puede
 
 En una disposición de navegación de una sola columna o fila, la navegación con el teclado tiene el siguiente comportamiento:
 
-|Columna única | Fila única|
-|:--|:--|
-| ![Ejemplo de navegación con el teclado en un grupo RadioButtons de una sola columna](images/radiobutton-keyboard-navigation-single-column.png)</br>Las teclas de flecha arriba y flecha abajo se mueven entre los elementos.</br>Las teclas de flecha izquierda y flecha derecha no hacen nada. | ![Ejemplo de navegación con el teclado en un grupo RadioButtons de una sola fila](images/radiobutton-keyboard-navigation-single-row.png)<br/>Las teclas de flecha izquierda y arriba se mueven al elemento anterior y las teclas de flecha derecha y abajo se mueven al elemento siguiente. |
+:::row:::
+   :::column span="":::
+     **_Columna única_**
+
+     ![Ejemplo de navegación con el teclado en un grupo RadioButtons de una sola columna](images/radiobutton-keyboard-navigation-single-column.png)
+
+     Las teclas de flecha arriba y flecha abajo se mueven entre los elementos.</br>Las teclas de flecha izquierda y flecha derecha no hacen nada.
+   :::column-end:::
+   :::column span="":::
+      **_Fila única_**
+
+      ![Ejemplo de navegación con el teclado en un grupo RadioButtons de una sola fila](images/radiobutton-keyboard-navigation-single-row.png)
+
+      Las teclas de flecha izquierda y arriba se mueven al elemento anterior y las teclas de flecha derecha y abajo se mueven al elemento siguiente.
+   :::column-end:::
+:::row-end:::
 
 ##### <a name="navigation-within-multi-column-multi-row-layouts"></a>Disposiciones de navegación en varias columnas o filas
 
 En una disposición de cuadrícula de varias columnas y varias filas, la navegación con el teclado produce este comportamiento:
 
-|Teclas de flecha izquierda y flecha derecha| Teclas de flecha arriba y flecha abajo |
-|:--|:--|
-| ![Ejemplo de navegación horizontal con el teclado en un grupo RadioButtons de varias columnas o filas](images/radiobutton-keyboard-navigation-multi-column-row-1.png)</br>Las teclas de flecha izquierda y flecha derecha mueven el foco horizontalmente entre los elementos de una fila. | ![Ejemplo de navegación vertical con el teclado en un grupo RadioButtons de varias columnas o filas](images/radiobutton-keyboard-navigation-multi-column-row-2.png)<br/>Las teclas de flecha arriba y flecha abajo mueven el foco verticalmente entre los elementos de una columna. |
-| ![Ejemplo de navegación horizontal mediante el teclado con el foco en el último elemento de una columna](images/radiobutton-keyboard-navigation-multi-column-row-3.png)</br> Cuando el foco se encuentra en el último elemento de una columna y se presiona la tecla de flecha derecha o izquierda, el foco se mueve al último elemento de la columna siguiente o anterior (si existe). | ![Ejemplo de navegación vertical mediante el teclado con el foco en el último elemento de una columna](images/radiobutton-keyboard-navigation-multi-column-row-4.png)<br/>Cuando el foco se encuentra en el último elemento de una columna y se presiona la tecla de flecha abajo, el foco se mueve al primer elemento de la columna siguiente (si existe). Cuando el foco se encuentra en el primer elemento de una columna y se presiona la tecla de flecha arriba, el foco se mueve al último elemento de la columna anterior (si existe). |
+**_Teclas de flecha izquierda y flecha derecha_**
+
+:::row:::
+   :::column span="":::
+      ![Ejemplo de navegación horizontal con el teclado en un grupo RadioButtons de varias columnas o filas](images/radiobutton-keyboard-navigation-multi-column-row-1.png)
+
+      
+
+      Las teclas de flecha izquierda y flecha derecha mueven el foco horizontalmente entre los elementos de una fila.
+   :::column-end:::
+   :::column span="":::
+     ![Ejemplo de navegación horizontal mediante el teclado con el foco en el último elemento de una columna](images/radiobutton-keyboard-navigation-multi-column-row-3.png)
+
+      Cuando el foco se encuentra en el último elemento de una columna y se presiona la tecla de flecha derecha o izquierda, el foco se mueve al último elemento de la columna siguiente o anterior (si existe).
+   :::column-end:::
+:::row-end:::
+
+**_Teclas de flecha arriba y flecha abajo_**
+
+:::row:::
+   :::column span="":::
+      ![Ejemplo de navegación vertical con el teclado en un grupo RadioButtons de varias columnas o filas](images/radiobutton-keyboard-navigation-multi-column-row-2.png)
+
+      Las teclas de flecha arriba y flecha abajo mueven el foco verticalmente entre los elementos de una columna.
+   :::column-end:::
+   :::column span="":::
+     ![Ejemplo de navegación vertical mediante el teclado con el foco en el último elemento de una columna](images/radiobutton-keyboard-navigation-multi-column-row-4.png)
+
+      Cuando el foco se encuentra en el último elemento de una columna y se presiona la tecla de flecha abajo, el foco se mueve al primer elemento de la columna siguiente (si existe). Cuando el foco se encuentra en el primer elemento de una columna y se presiona la tecla de flecha arriba, el foco se mueve al último elemento de la columna anterior (si existe).
+   :::column-end:::
+:::row-end:::
 
 Para más información, consulte [Interacciones de teclado](../input/keyboard-interactions.md#wrapping-homogeneous-list-and-grid-view-items).
 
@@ -172,9 +230,22 @@ El control `RadioButtons` tampoco es compatible con la enumeración, porque est�
 
 Cuando los usuarios usan el teclado para navegar entre los elementos de una lista `RadioButtons`, cuando el foco se mueve de un elemento al siguiente, el elemento recién enfocado se selecciona y el elemento que anteriormente tenía el foco se desactiva.
 
-|Antes de la navegación con el teclado | Después de la navegación con el teclado|
-|:--|:--|
-| ![Ejemplo de foco y selección antes de la navegación con el teclado](images/radiobutton-two-selected-before-keyboard-navigation.png)</br>*Ejemplo de foco y selección antes de la navegación con el teclado* | ![Ejemplo de foco y selección después de la navegación con el teclado](images/radiobutton-three-selected-after-keyboard-navigation.png)<br/>*Ejemplo de foco y selección después de la navegación con el teclado, en el que la tecla de flecha abajo mueve el foco al botón de radio 3, lo selecciona y desactiva el botón de radio 2* |
+:::row:::
+   :::column span="":::
+      **_Antes de la navegación con el teclado_**
+
+      ![Ejemplo de foco y selección antes de la navegación con el teclado](images/radiobutton-two-selected-before-keyboard-navigation.png)
+
+      Foco y selección antes de la navegación con el teclado.
+   :::column-end:::
+   :::column span="":::
+     **_Después de la navegación con el teclado_**
+
+      ![Ejemplo de foco y selección después de la navegación con el teclado](images/radiobutton-three-selected-after-keyboard-navigation.png)
+
+      Foco y selección después de la navegación con el teclado, en el que la tecla de flecha abajo mueve el foco al botón de radio 3, lo selecciona y desactiva el botón de radio 2.
+   :::column-end:::
+:::row-end:::
 
 Puede desplazar el foco sin cambiar la selección mediante CTRL + teclas de dirección para navegar. Después de mover el foco, puede usar la barra espaciadora para seleccionar el elemento que tiene el foco actualmente.
 

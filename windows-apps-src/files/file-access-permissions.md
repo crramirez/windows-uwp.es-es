@@ -2,7 +2,7 @@
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Permisos de acceso de archivos
 description: Las aplicaciones pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
-ms.date: 12/19/2018
+ms.date: 09/10/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
@@ -11,18 +11,19 @@ dev_langs:
 - cppwinrt
 - cpp
 - javascript
-ms.openlocfilehash: d12ff61858d6d1434d07e00c70868697fefa1832
-ms.sourcegitcommit: b66796c73f14da63794efa66c8ded2caa25da0f7
+ms.custom: contperfq1
+ms.openlocfilehash: 6bb0e44fa5ea31d73feebdfb9ced9951cc2bc937
+ms.sourcegitcommit: 2050175043c8c175be3312f17769b4af241b3275
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285446"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027654"
 ---
 # <a name="file-access-permissions"></a>Permisos de acceso de archivos
 
 Las aplicaciones de la Plataforma universal de Windows (UWP) pueden obtener acceso a determinadas ubicaciones del sistema de archivos de manera predeterminada. Asimismo, las aplicaciones también pueden tener acceso a otras ubicaciones mediante el selector de archivos o declarando funcionalidades.
 
-## <a name="the-locations-that-all-apps-can-access"></a>Ubicaciones a las que pueden tener acceso todas las aplicaciones
+## <a name="locations-that-all-apps-can-access"></a>Ubicaciones a las que pueden acceder todas las aplicaciones
 
 Al crear una aplicación nueva, puedes obtener acceso a las siguientes ubicaciones del sistema de archivos de manera predeterminada:
 
@@ -253,7 +254,7 @@ De manera predeterminada, tu aplicación puede acceder únicamente a los archivo
 
 Además de las ubicaciones predeterminadas, las aplicaciones pueden obtener acceso a archivos y carpetas adicionales mediante la [declaración de funcionalidades en el manifiesto de la aplicación](../packaging/app-capability-declarations.md) o bien mediante una [llamada a un selector de archivos](quickstart-using-file-and-folder-pickers.md) a fin de permitir que el usuario elija los archivos y carpetas a los que puede tener acceso la aplicación.
 
-Las aplicaciones que declaran la extensión [AppExecutionAlias](/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias) tienen permisos del sistema de archivos del directorio desde el que se inician en la ventana de la consola y hacia abajo.
+Las aplicaciones que declaran la extensión [AppExecutionAlias](/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias) tienen permisos del sistema de archivos a partir del directorio desde el que se inician en la ventana de la consola y hacia abajo.
 
 ### <a name="retaining-access-to-files-and-folders"></a>Conservación del acceso a archivos y carpetas
 

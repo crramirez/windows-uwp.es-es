@@ -1,5 +1,5 @@
 ---
-Description: Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga.
+description: Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga.
 title: Directrices sobre los controles de progreso
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d5756c4cfff05b666eae245de76c1813f9a834df
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fbd9ed95137263f4ddad44e2272d4d77aced241f
+ms.sourcegitcommit: 234bb7c896b990f624b2b8789820b92426e52291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169679"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013398"
 ---
 # <a name="progress-controls"></a>Controles de progreso
 
@@ -61,13 +61,12 @@ Hay dos controles que muestran al usuario que hay una operación en curso: con u
 
 Además, un control de progreso es de solo lectura y no es interactivo. Esto significa que el usuario no puede invocar o usar estos controles directamente.
 
-![Estados de la clase ProgressBar](images/progress-bar-two-states.png)
+|Control|Pantalla|
+|---|---|
+| Control ProgressBar indeterminado | ![ProgressBar indeterminada](images/progressbar-indeterminate.gif) |
+| Control ProgressBar determinado | ![ProgressBar determinada](images/progressbar-determinate.png)|
+| Control ProgressRing indeterminado | ![Estado de la clase ProgressRing](images/progressring-indeterminate.gif)|
 
-*De arriba abajo: ProgressBar indeterminada y determinada*
-
-![Estado de la clase ProgressRing](images/ProgressRing_SingleState.png)
-
-*ProgressRing indeterminado*
 
 ## <a name="examples"></a>Ejemplos
 
