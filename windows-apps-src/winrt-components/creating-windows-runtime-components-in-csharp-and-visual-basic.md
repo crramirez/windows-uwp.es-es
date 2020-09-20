@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7a1235159b0f9d69e7fcedd334aeb9e9246d3d2b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 57d46ea1f88395624943135247a8f610112aaf90
+ms.sourcegitcommit: 21eb13a50402bf5442a5f0a4bf34800d1dc679c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174299"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90804735"
 ---
 # <a name="windows-runtime-components-with-c-and-visual-basic"></a>Componentes de Windows Runtime con C# y Visual Basic
 
@@ -280,6 +280,13 @@ Si implementas descriptores de acceso de eventos personalizados (declaras un eve
 Una vez que hayas creado un componente de Windows Runtime para tu propio uso, es posible que observes que la funcionalidad que encapsula es útil para otros desarrolladores. Tienes dos opciones para empaquetar un componente para su distribución a otros desarrolladores. Consulta [Distribuir un componente de Windows Runtime administrado](/previous-versions/windows/apps/jj614475(v=vs.140)).
 
 Para obtener más información sobre Visual Basic y las características del lenguaje C#, así como la compatibilidad de .NET con la Windows Runtime, vea [Visual Basic y referencia del lenguaje c#](/visualstudio/welcome-to-visual-studio-2015?view=vs-2015).
+
+
+## <a name="troubleshooting"></a>Solución de problemas
+
+| Síntoma | Solución |
+|---------|--------|
+|En una aplicación/WinRT de C++, al consumir un [componente de Windows Runtime de C#](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic) que usa XAML, el compilador genera un error con el formato ""*MyNamespace_XamlTypeInfo ': no es un miembro de "WinRT:: myNameSpace*" ", &mdash; donde *myNameSpace* es el nombre del espacio de nombres del componente Windows Runtime. | En `pch.h` , en la aplicación de C++/WinRT de consumo, agregue `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>` &mdash; *myNameSpace* , según corresponda. |
 
 ## <a name="related-topics"></a>Temas relacionados
 * [.NET para aplicaciones UWP](/dotnet/api/index?view=dotnet-uwp-10.0)

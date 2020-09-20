@@ -5,12 +5,12 @@ ms.date: 07/06/2020
 ms.topic: article
 keywords: Windows 10, UWP, Windows, Runtime, componente, componentes, Windows Runtime componente, WRC, C++/WinRT
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f84158311ef789851c268e9e21dbf5317063370
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 25286260c4abd6686939393b3bf81df818879bf9
+ms.sourcegitcommit: 21eb13a50402bf5442a5f0a4bf34800d1dc679c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174319"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90804755"
 ---
 # <a name="windows-runtime-components-with-cwinrt"></a>Componentes de Windows Runtime con C++/WinRT
 
@@ -140,3 +140,9 @@ Cada vez que haga clic en la ventana, incrementará el saldo del objeto de la cu
 Para agregar más funcionalidad, o nuevos tipos de Windows Runtime, al componente Windows Runtime de C++/WinRT, puede seguir los mismos patrones mostrados anteriormente. En primer lugar, use IDL para definir la funcionalidad que desea exponer. A continuación, compile el proyecto en Visual Studio para generar una implementación de código auxiliar. Y, a continuación, complete la implementación según corresponda. Los métodos, las propiedades y los eventos que se definen en IDL son visibles para la aplicación que utiliza el componente de Windows Runtime. Para obtener más información acerca de IDL, vea [Introducción a Lenguaje de definición de interfaz de Microsoft 3,0](/uwp/midl-3/intro).
 
 Para obtener un ejemplo de cómo agregar un evento a su componente de Windows Runtime, vea [crear eventos en C++/WinRT](../cpp-and-winrt-apis/author-events.md).
+
+## <a name="troubleshooting"></a>Solución de problemas
+
+| Síntoma | Solución |
+|---------|--------|
+|En una aplicación/WinRT de C++, al consumir un [componente de Windows Runtime de C#](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic) que usa XAML, el compilador genera un error con el formato ""*MyNamespace_XamlTypeInfo ': no es un miembro de "WinRT:: myNameSpace*" ", &mdash; donde *myNameSpace* es el nombre del espacio de nombres del componente Windows Runtime. | En `pch.h` , en la aplicación de C++/WinRT de consumo, agregue `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>` &mdash; *myNameSpace* , según corresponda. |
