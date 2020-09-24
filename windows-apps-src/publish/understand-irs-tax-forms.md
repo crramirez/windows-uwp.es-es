@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP, fiscal, IRS, servicio de ingresos internos, impuestos, impuestos, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a385c9c351dc0bb5db857fe7d1f5f267347f1f1
-ms.sourcegitcommit: 31c925736391ab166c06f34258564b00aeebd83a
+ms.openlocfilehash: 6493e20dbc0e38405a7cd30fc22acb9973098431
+ms.sourcegitcommit: 97002cc3e5942f43ab0f14f4ad70543a63db0c03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428919"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91128975"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -36,17 +36,18 @@ Los formularios fiscales se le enviarán desde las siguientes direcciones:
 | Grupo de negocios         | Entidad jurídica          | Dirección                                          |
 |------------------------|-----------------------|--------------------------------------------------|
 | Windows, Office, Azure | Microsoft Corporation | One Microsoft Way<br>Redmond, WA 98052 EE. UU.        |
-| Publicidad            | Microsoft Online Inc. | Parkway Sierra Center de 6880<br>Reno, NV 98511 EE. UU. |
+| Publicidad            | Microsoft Online Inc. | 6880 Sierra Center Parkway<br>Reno, NV 98511 EE. UU. |
 
 **Ciudadanos no estadounidenses:**
+
 | Grupo de negocios         | Entidad jurídica          | Dirección                                          |
 |------------------------|-----------------------|--------------------------------------------------|
-| Windows, Office, Azure | Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Corporation a través de Microsoft Ireland actuando como intermediario calificado para Microsoft Corporation) | One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18 Irlanda|
-| Publicidad\*          | Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Online Inc. a través de Microsoft Ireland actuando como agente de pago para Microsoft Online Inc). | One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18 Irlanda |
-| Publicidad            | Microsoft Online Inc. | Parkway Sierra Center de 6880<br>Reno, NV 98511 EE. UU. |
+| Windows, Office, Azure | Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Corporation a través de Microsoft Ireland actuando como intermediario calificado para Microsoft Corporation) | One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18, D18 P521, Irlanda|
+| Publicidad\*          | Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Online Inc. a través de Microsoft Ireland actuando como agente de pago para Microsoft Online Inc). | One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18, D18 P521, Irlanda |
+| Publicidad            | Microsoft Online Inc. | 6880 Sierra Center Parkway<br>Reno, NV 98511 EE. UU. |
 
 >[!NOTE]
-> \*Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, Checo, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza y Reino Unido
+> \* Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, Checo, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza y Reino Unido
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para los desarrolladores que se encuentran en los Estados Unidos
 
@@ -104,8 +105,8 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
   <tr>
     <td valign="top"><b>¿Por qué se retuvieron impuestos en mis pagos si he completado un formulario W8?</b></td>
     <td valign="top">La retención de impuestos se realiza si:<br>
-     1.No completó la sección del tratado fiscal del W8 correctamente, o bien<br>
-     2.Está residente en un país que no tiene ningún tratado fiscal con el Estados Unidos.<br><br>Puede visitar el centro de Partners en cualquier momento para enviar un formulario de W8 actualizado.<br><br><b>Nota</b>: no todos los ingresos están sujetos a la retención de impuestos.</td>
+     1. No completó la sección del tratado fiscal del W8 correctamente, o bien<br>
+     2. Está residente en un país que no tiene ningún tratado fiscal con el Estados Unidos.<br><br>Puede visitar el centro de Partners en cualquier momento para enviar un formulario de W8 actualizado.<br><br><b>Nota</b>: no todos los ingresos están sujetos a la retención de impuestos.</td>
   </tr>
   <tr>
     <td valign="top"><b>He enviado un formulario W8 actualizado con información de tratados válida. ¿Puede Microsoft reembolsar los impuestos que se han retenido?</b></td>
