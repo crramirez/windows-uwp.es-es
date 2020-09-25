@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, GLSL, HLSL, OpenGL, DirectX, sombreadores
 ms.localizationpriority: medium
-ms.openlocfilehash: d4b49edac6a6a9c2824cfa556a2ff02eb9f36f9c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b6be3cf92162b0e871a04712754a882506767cd6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175309"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218178"
 ---
 # <a name="glsl-to-hlsl-reference"></a>Referencia de GLSL a HLSL
 
@@ -94,7 +94,7 @@ GLSL y HLSL generalmente difieren de estas maneras:
 <td align="left">Matrices principales de fila (predeterminado)</td>
 <td align="left">Matrices principales de columna (predeterminado)
 <div class="alert">
-<strong>Nota:</strong>    Utilice el modificador de tipo <strong>row_major</strong> para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax">sintaxis de variable</a>. También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
+<strong>Nota:</strong>    Utilice el modificador de tipo <strong>row_major</strong> para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax">sintaxis de variable</a>. También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
 </div>
 <div>
  
@@ -137,7 +137,7 @@ En GLSL, aplicas modificadores (calificadores) a una declaración de variable de
 <p>Se pasa una variable uniform desde el código de la aplicación a los sombreadores de fragmentos o vértices. Debes establecer los valores de todos los uniformes antes de dibujar cualquier triángulo con esos sombreadores para que sus valores no cambien durante el proceso de dibujo de una malla de triángulo. Estos valores son uniformes. Algunos uniformes se establecen para todo el cuadro y otros exclusivamente para un par de sombreador de vértices y píxeles particular.</p>
 <p>Las variables uniformes son variables por polígono.</p></td>
 <td align="left"><p>Se usa el búfer de constantes.</p>
-<p>Consulta el tema sobre los <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to">procedimientos para crear un búfer de constante</a> y <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants">constantes de sombreador</a>.</p></td>
+<p>Consulta el tema sobre los <a href="/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to">procedimientos para crear un búfer de constante</a> y <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants">constantes de sombreador</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>distinto</strong></p>
@@ -147,8 +147,8 @@ En GLSL, aplicas modificadores (calificadores) a una declaración de variable de
 <tr class="odd">
 <td align="left"><p><strong>attribute</strong></p>
 <p>Un elemento attribute es una parte de la descripción de un vértice que se pasa desde el código de la aplicación solo al sombreador de vértices. A diferencia de un uniforme, estableces el valor de cada atributo para cada vértice, el cual permite que cada vértice tenga un valor diferente. Las variables de atributo son variables por vértice.</p></td>
-<td align="left"><p>Define un búfer de vértices en tu código de la aplicación de Direct3D y hazlo coincidir con la entrada del vértice definida en el sombreador de vértices. Tienes la opción de definir un búfer de índice. Consulta el tema sobre los <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-vertex-how-to">procedimientos para crear un búfer de vértices</a> y los <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-index-how-to">procedimientos para crear un búfer de índice</a>.</p>
-<p>Crea un diseño de entrada en el código de la aplicación de Direct3D y haz coincidir los valores semánticos con los que se encuentran en la entrada de vértice. Consulta el tema sobre <a href="https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-getting-started">cómo crear el diseño de entrada</a>.</p></td>
+<td align="left"><p>Define un búfer de vértices en tu código de la aplicación de Direct3D y hazlo coincidir con la entrada del vértice definida en el sombreador de vértices. Tienes la opción de definir un búfer de índice. Consulta el tema sobre los <a href="/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-vertex-how-to">procedimientos para crear un búfer de vértices</a> y los <a href="/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-index-how-to">procedimientos para crear un búfer de índice</a>.</p>
+<p>Crea un diseño de entrada en el código de la aplicación de Direct3D y haz coincidir los valores semánticos con los que se encuentran en la entrada de vértice. Consulta el tema sobre <a href="/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-getting-started">cómo crear el diseño de entrada</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
@@ -185,7 +185,7 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 <td align="left">tipos escalares: float, int, bool</td>
 <td align="left"><p>tipos escalares: float, int, bool</p>
 <p>también, uint, double</p>
-<p>Para más información, consulta el tema sobre los <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">tipos escalares</a>).</p></td>
+<p>Para más información, consulta el tema sobre los <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">tipos escalares</a>).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>tipo de vector</p>
@@ -207,8 +207,8 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>Para obtener más información, consulta el tema sobre el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-vector">tipo de vector</a> y las <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-appendix-keywords">palabras clave</a>.</p>
-<p>El tipo de vector también está definido como float4 (typedef vector &lt;float, 4&gt; vector;). Para obtener más información, consulta el tema sobre el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">tipo definido por el usuario</a>.</p></td>
+<p>Para obtener más información, consulta el tema sobre el <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-vector">tipo de vector</a> y las <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-appendix-keywords">palabras clave</a>.</p>
+<p>El tipo de vector también está definido como float4 (typedef vector &lt;float, 4&gt; vector;). Para obtener más información, consulta el tema sobre el <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">tipo definido por el usuario</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>tipo de matriz</p>
@@ -233,7 +233,7 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 </ul>
 <p>También puedes usar el <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-matrix">tipo de matriz</a> para definir una matriz.</p>
 <p>Por ejemplo: matriz &lt;float, 2, 2&gt; fMatrix = {0.0f, 0.1, 2.1f, 2.2f};</p>
-<p>el tipo de matriz también está definido como float4x4 (matriz typedef &lt;float, 4, 4&gt; matrix;). Para obtener más información, consulta el tema sobre el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">tipo definido por el usuario</a>.</p></td>
+<p>el tipo de matriz también está definido como float4x4 (matriz typedef &lt;float, 4, 4&gt; matrix;). Para obtener más información, consulta el tema sobre el <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">tipo definido por el usuario</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>calificadores de precisión para float, int, sampler</p>
@@ -254,18 +254,18 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 <p>Valor de 2,8 bits con signo de punto fijo mínimo (2 bits de número entero y 8 bits de componente fraccionario). El componente fraccionario de 8 bits puede incluir el 1 en lugar de excluirlo para darle un rango de inclusión completo de -2 a 2.</p></li>
 <li>min16int:: entero con signo de 16 bits mínimo</li>
 <li><p>min12int: entero con signo de 12 bits mínimo</p>
-<p>Este tipo es para 10Level9 (<a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">niveles de característica 9_x </a>) en el que los enteros están representados por números de punto flotante. Esta es la precisión que puedes obtener cuando emulas un entero con un número de punto flotante de 16 bits.</p></li>
+<p>Este tipo es para 10Level9 (<a href="/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">niveles de característica 9_x </a>) en el que los enteros están representados por números de punto flotante. Esta es la precisión que puedes obtener cuando emulas un entero con un número de punto flotante de 16 bits.</p></li>
 <li>min16uint: entero sin signo de 16 bits mínimo</li>
 </ul>
-<p>Para más información, consulta el tema sobre los <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">tipos escalares</a> y el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/using-hlsl-minimum-precision">uso de la precisión mínima de HLSL</a>.</p></td>
+<p>Para más información, consulta el tema sobre los <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">tipos escalares</a> y el <a href="/windows/desktop/direct3dhlsl/using-hlsl-minimum-precision">uso de la precisión mínima de HLSL</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">sampler2D</td>
-<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d">Texture2D</a></td>
+<td align="left"><a href="/windows/desktop/direct3dhlsl/sm5-object-texture2d">Texture2D</a></td>
 </tr>
 <tr class="even">
 <td align="left">samplerCube</td>
-<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-type">TextureCube</a></td>
+<td align="left"><a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-type">TextureCube</a></td>
 </tr>
 </tbody>
 </table>

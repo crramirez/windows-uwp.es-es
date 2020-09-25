@@ -4,18 +4,18 @@ title: Aceleradores de teclado
 label: Keyboard accelerators
 template: detail.hbs
 keywords: teclado, acelerador, tecla de aceleración, métodos abreviados de teclado, accesibilidad, navegación, foco, texto, entrada, interacciones del usuario, controlador de juegos, remoto
-ms.date: 10/10/2017
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a3231f608984c9d1f67df71de9cab4cfecd9a13
-ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
+ms.openlocfilehash: 02fba8027c5bddec5e5c501783b32dbab5642db9
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89187900"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219958"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -331,7 +331,7 @@ Se recomienda que los aceleradores de teclado sean coherentes en todas las aplic
 
 Esto podría no ser siempre posible debido a las diferencias de funcionalidad entre las aplicaciones.
 
-| **Edición** | **Acelerador de teclado común** |
+| **Editar** | **Acelerador de teclado común** |
 | ------------- | ----------------------------------- |
 | Iniciar el modo de edición | Ctrl + E |
 | Seleccionar todos los elementos de un control o ventana con foco | CTRL+A |

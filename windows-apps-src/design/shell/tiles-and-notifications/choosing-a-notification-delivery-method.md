@@ -4,16 +4,16 @@ title: Elegir un método de entrega de notificaciones
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 166ff20e792c5cf4a5969e954ed1b7d04e5c5c9f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a7a929cb88e20cc47562ab4920fd0fc94304fae2
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173299"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219158"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Elegir un método de entrega de notificaciones
 
@@ -79,7 +79,7 @@ Esta tabla resume los tipos de entrega de notificaciones.
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">Insertar</td>
+<td align="left">Inserción</td>
 <td align="left">Icono, distintivo, notificación del sistema, sin procesar</td>
 <td align="left">Las notificaciones se envían desde un servidor de nube aunque la aplicación no se esté ejecutando.</td>
 <td align="left"><ul>

@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a31c762c002e711a87e99e2f97de6c26e2c8b48
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5d9571fa5abc07272d1b48c40274cbb952c0d754
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172989"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216358"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación de Microsoft Store
 
 
 
-En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema de URI para iniciar la aplicación Microsoft Store en páginas específicas del almacén mediante el método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) .
+En este tema se describe el esquema de URI **MS-Windows-Store** . La aplicación puede usar este esquema de URI para iniciar la aplicación Microsoft Store en páginas específicas del almacén mediante el método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) .
 
 En este ejemplo se muestra cómo abrir la tienda en la página juegos:
 
@@ -41,7 +41,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>El Id. de la Tienda se recomienda para los clientes de Windows 10 y funcionará en todas las versiones del sistema operativo, pero aún se admiten las formas anteriores de hacerlo anteriores (por ejemplo, PFN).</p>
-<p>Estos valores se pueden encontrar en <a href="https://partner.microsoft.com/dashboard">centro de Partners</a> en la página identidad de la <a href="https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details">aplicación</a> en la sección Administración de aplicaciones de cada aplicación.</p>
+<p>Estos valores se pueden encontrar en <a href="https://partner.microsoft.com/dashboard">centro de Partners</a> en la página identidad de la <a href="/windows/uwp/publish/view-app-identity-details">aplicación</a> en la sección Administración de aplicaciones de cada aplicación.</p>
 </td>
 <td>
 Id. de Store <p>(Se recomienda)</p>

@@ -5,15 +5,15 @@ ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
 keywords: información visual,información de foco,información táctil,información de función táctil,visualización de contacto,entrada,interacción
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ced83ca771f4954f8e42dc42e0882d1a5b7c6b1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1afc1c884a7a01ef1021f37476d1e29430c62e3c
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172459"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219838"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
@@ -58,7 +58,7 @@ Estos son algunos ejemplos de visualizaciones de contacto integradas en Windows.
 
 Todas las aplicaciones de Windows admiten elementos visuales de foco alrededor de controles interactivos más definidos en la aplicación. Estos nuevos elementos visuales de foco son totalmente personalizables y se pueden deshabilitar cuando sea necesario.
 
-En el caso de la **experiencia de 10 pies** típica del uso de Xbox y TV, Windows admite **revelar el foco**, un efecto de iluminación que anima el borde de los elementos que pueden recibir el foco, como un botón, cuando se centra a través de la entrada del teclado o del controlador de juegos. Para obtener más información, consulte [diseñar para Xbox y TV](../devices/designing-for-tv.md#reveal-focus).
+En el caso de la **experiencia de 10 pies** típica del uso de Xbox y TV, Windows admite **revelar el foco**, un efecto de iluminación que anima el borde de los elementos que pueden recibir el foco, como un botón, cuando se centra a través de la entrada del teclado o del controlador de juegos.
 
 ## <a name="color-branding--customizing"></a>Personalización de marca de color y personalización
 

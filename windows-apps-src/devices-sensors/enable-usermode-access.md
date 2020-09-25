@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP, ACPI, GPIO, I2C, SPI y UEFI
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: b3e04399bb7fb0d40cf42789587aa132ee20e789
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a5841a8a53c18969e8ca9171bb7b3e1af0273170
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165509"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216799"
 ---
 # <a name="enable-user-mode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C y SPI
 
@@ -614,7 +614,7 @@ Además de los recursos de memoria e interrupción que suelen requerir los contr
 - CLIENT_ConnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto aplique la configuración de multiplexación especificada.
 - CLIENT_DisconnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto revierta la configuración de multiplexación.
 
-Consulta [funciones de devolución de llamada de eventos de GpioClx](https://docs.microsoft.com/previous-versions/hh439464(v=vs.85)) para obtener una descripción de estas rutinas.
+Consulta [funciones de devolución de llamada de eventos de GpioClx](/previous-versions/hh439464(v=vs.85)) para obtener una descripción de estas rutinas.
 
 Además de estas dos nuevas DDI, deben auditarse DDI existentes para la compatibilidad de multiplexación de patillas:
 
@@ -633,11 +633,11 @@ El siguiente diagrama muestra las dependencias entre cada uno de estos component
 
 En el tiempo de inicialización del dispositivo, los marcos `SpbCx` y `SerCx` analizan todos los recursos `MsftFunctionConfig()` suministrados como recursos de hardware para el dispositivo. A continuación, SpbCx/SerCx adquieren y liberan los recursos de multiplexación de patillas bajo petición.
 
-`SpbCx` aplica la configuración de multiplexación de PIN en su controlador de *IRP_MJ_CREATE* , justo antes de llamar a la devolución de llamada [EvtSpbTargetConnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) del controlador cliente. Si no se pudo aplicar la configuración de la multiplexación, no se realizará la devolución de llamada a `EvtSpbTargetConnect()` del controlador de controladora. Por lo tanto, un controlador SPB puede suponer que las patillas se multiplexan en la función SPB en el momento en que se llama a `EvtSpbTargetConnect()`.
+`SpbCx` aplica la configuración de multiplexación de PIN en su controlador de *IRP_MJ_CREATE* , justo antes de llamar a la devolución de llamada [EvtSpbTargetConnect ()](/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) del controlador cliente. Si no se pudo aplicar la configuración de la multiplexación, no se realizará la devolución de llamada a `EvtSpbTargetConnect()` del controlador de controladora. Por lo tanto, un controlador SPB puede suponer que las patillas se multiplexan en la función SPB en el momento en que se llama a `EvtSpbTargetConnect()`.
 
 `SpbCx` revierte la configuración de multiplexación de PIN en su controlador de *IRP_MJ_CLOSE* , justo después de invocar la devolución de llamada [EvtSpbTargetDisconnect ()](/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) del controlador del controlador. El resultado es que las patillas se multiplexan en la función SPB siempre que un controlador periférico abra un identificador para el controlador de controladora SPB, y se multiplexan inmediatamente cuando el controlador periférico cierra su identificador.
 
-`SerCx` se comporta de forma similar. `SerCx` adquiere todos los `MsftFunctionConfig()` recursos en su controlador de *IRP_MJ_CREATE* justo antes de invocar la devolución de llamada [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) del controlador del controlador y libera todos los recursos en su controlador de IRP_MJ_CLOSE, justo después de invocar la devolución de llamada [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) del controlador del controlador.
+`SerCx` se comporta de forma similar. `SerCx` adquiere todos los `MsftFunctionConfig()` recursos en su controlador de *IRP_MJ_CREATE* justo antes de invocar la devolución de llamada [EvtSerCx2FileOpen ()](/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) del controlador del controlador y libera todos los recursos en su controlador de IRP_MJ_CLOSE, justo después de invocar la devolución de llamada [EvtSerCx2FileClose](/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) del controlador del controlador.
 
 La implicación de la multiplexación dinámica de patillas para los controladores de controladora `SerCx` y `SpbCx` consiste en que deben ser capaces de tolerar las patillas que se multiplexan desde la función SPB/UART a horas determinadas. Los controladores de controladora deben asumir que las patillas no se multiplexarán hasta que se llame a `EvtSpbTargetConnect()` o `EvtSerCx2FileOpen()`. No es necesaria la multiplexación de las patillas en la función SPB/UART durante las siguientes devoluciones de llamada. La siguiente no es una lista completa, pero representa las rutinas de PNP más comunes implementadas por los controladores de controladora.
 

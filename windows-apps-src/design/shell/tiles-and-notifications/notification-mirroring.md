@@ -3,16 +3,16 @@ description: Obtenga información acerca de cómo usar la creación de reflejo d
 title: Reflejo de notificaciones
 label: Notification mirroring
 template: detail.hbs
-ms.date: 12/15/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, notificación del sistema, centro de actividades en la nube, creación de reflejo de notificaciones, notificación, dispositivo cruzado
 ms.localizationpriority: medium
-ms.openlocfilehash: 13e3e9f0b675ef0e5f9e0787f0544f87689cf74a
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 6add4799a810a0b7216b6292bf5f172ddb8a3ee2
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054015"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219918"
 ---
 # <a name="notification-mirroring"></a>Reflejo de notificaciones
 

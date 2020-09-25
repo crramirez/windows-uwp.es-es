@@ -3,7 +3,7 @@ title: 'Direccionalidad y gravedad: animación en aplicaciones de Windows'
 description: Obtenga información sobre el uso de la dirección de movimiento, la dirección de navegación y la gravedad en escenas animadas mediante la visualización de ejemplos.
 label: Directionality and gravity
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a9b6fbc639ac225e68a6ae1b008537cba6f72ead
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 649fb9e2833a425ccad78f5f0bcb69ccb4091bca
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88943115"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217808"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 

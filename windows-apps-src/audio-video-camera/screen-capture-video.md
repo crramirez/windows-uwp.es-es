@@ -1,5 +1,5 @@
 ---
-title: Captura de pantalla para vídeo
+title: Captura de pantalla a vídeo
 description: En este artículo se describe cómo codificar fotogramas capturados desde la pantalla con las API de Windows. Graphics. Capture en un archivo de vídeo.
 ms.date: 07/28/2020
 ms.topic: article
@@ -7,16 +7,16 @@ dev_langs:
 - csharp
 keywords: Windows 10, UWP, captura de pantalla, vídeo
 ms.localizationpriority: medium
-ms.openlocfilehash: ae1eb68e480b4c9b4b4fc88452a68f39f8461a79
-ms.sourcegitcommit: 14c0b1ea2447a81ddf31982b40e19a74ecc6d59e
+ms.openlocfilehash: d8f70748d025d50d19dbf2cb184ae841cced7f8a
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89310093"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218638"
 ---
-# <a name="screen-capture-to-video"></a>Captura de pantalla para vídeo
+# <a name="screen-capture-to-video"></a>Captura de pantalla a vídeo
 
-En este artículo se describe cómo codificar fotogramas capturados desde la pantalla con las API de Windows. Graphics. Capture en un archivo de vídeo. Para obtener información sobre la captura de pantalla de imágenes fijas, consulte [captura de Screeen](screen-capture-video). 
+En este artículo se describe cómo codificar fotogramas capturados desde la pantalla con las API de Windows. Graphics. Capture en un archivo de vídeo. Para obtener información sobre la captura de pantalla de imágenes fijas, consulte [captura de Screeen](./screen-capture.md).
 
 ## <a name="overview-of-the-video-capture-process"></a>Información general del proceso de captura de vídeo
 En este artículo se proporciona un tutorial de una aplicación de ejemplo que registra el contenido de una ventana en un archivo de vídeo. Aunque puede parecer que hay una gran cantidad de código necesaria para implementar este escenario, la estructura de alto nivel de una aplicación de grabadora de pantalla es bastante simple. El proceso de captura de pantalla usa tres características principales de UWP:
@@ -55,21 +55,21 @@ El método **SetupEncoding** descrito en esta sección inicializa algunos de los
 
 - **Cree un MediaEncodingProfile y un VideoStreamDescriptor.** Una instancia de la clase [MediaStreamSource](/uwp/api/windows.media.core.mediastreamsource) tomará las imágenes capturadas de la pantalla y las codificará en una secuencia de vídeo. A continuación, la secuencia de vídeo se transcodificará en un archivo de vídeo por la clase [MediaTranscoder](/uwp/api/windows.media.transcoding.mediatranscoder) . Un [VideoStreamDecriptor](/uwp/api/windows.media.core.videostreamdescriptor) proporciona parámetros de codificación, como resolución y velocidad de fotogramas, para el **MediaStreamSource**. Los parámetros de codificación del archivo de vídeo para **MediaTranscoder** se especifican con un [MediaEncodingProfile](/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile). Tenga en cuenta que el tamaño utilizado para la codificación de vídeo no tiene que ser el mismo que el tamaño de la ventana que se va a capturar, pero para simplificar este ejemplo, la configuración de codificación está codificada de forma rígida para usar las dimensiones reales del elemento de captura.
 
-- **Cree los objetos MediaStreamSource y MediaTranscoder.** Como se mencionó anteriormente, el objeto **MediaStreamSource** codifica fotogramas individuales en una secuencia de vídeo. Llame al constructor para esta clase, pasando el **MediaEncodingProfile** creado en el paso anterior. Establezca el tiempo de búfer en cero y los controladores de registro para los eventos de [Inicio](uwp/api/windows.media.core.mediastreamsource.starting) y [SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) , que se mostrarán más adelante en este artículo. A continuación, cree una nueva instancia de la clase **MediaTranscoder** y habilite la aceleración de hardware.
+- **Cree los objetos MediaStreamSource y MediaTranscoder.** Como se mencionó anteriormente, el objeto **MediaStreamSource** codifica fotogramas individuales en una secuencia de vídeo. Llame al constructor para esta clase, pasando el **MediaEncodingProfile** creado en el paso anterior. Establezca el tiempo de búfer en cero y los controladores de registro para los eventos de [Inicio](/uwp/api/windows.media.core.mediastreamsource.starting) y [SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) , que se mostrarán más adelante en este artículo. A continuación, cree una nueva instancia de la clase **MediaTranscoder** y habilite la aceleración de hardware.
 
 - **Crear un archivo de salida** El último paso de este método es crear un archivo en el que se transcodificará el vídeo. En este ejemplo, solo se creará un archivo con un nombre único en la carpeta videos Library del dispositivo. Tenga en cuenta que para tener acceso a esta carpeta, la aplicación debe especificar la funcionalidad "biblioteca de vídeos" en el manifiesto de la aplicación. Una vez creado el archivo, ábralo para lectura y escritura, y pase el flujo resultante en el método **EncodeAsync** que se mostrará a continuación.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/MainPage.xaml.cs" id="snippet_SetupEncoding":::
 
 ## <a name="start-encoding"></a>Iniciar codificación
-Ahora que se han inicializado los objetos principales, se implementa el método **EncodeAsync** para iniciar la operación de captura. Este método comprueba primero para asegurarse de que aún no se está grabando y, si no es así, llama al método auxiliar **StartCapture** para empezar a capturar fotogramas de la pantalla. Este método se muestra más adelante en este artículo. A continuación, se llama a [PrepareMediaStreamSourceTranscodeAsync](/uwp/api/windows.media.transcoding.mediatranscoder.preparemediastreamsourcetranscodeasync) para obtener la **MediaTranscoder** lista para transcodificar la secuencia de vídeo generada por el objeto **MediaStreamSource** en el flujo de archivos de salida, mediante el perfil de codificación que hemos creado en la sección anterior. Una vez preparado el transcodificador, llame a [TranscodeAsync](/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) para iniciar la transcodificación. Para obtener más información sobre el uso de **MediaTranscoder**, vea [transcodificar archivos multimedia](/windows/uwp/audio-video-camera/transcode-media-files).
+Ahora que se han inicializado los objetos principales, se implementa el método **EncodeAsync** para iniciar la operación de captura. Este método comprueba primero para asegurarse de que aún no se está grabando y, si no es así, llama al método auxiliar **StartCapture** para empezar a capturar fotogramas de la pantalla. Este método se muestra más adelante en este artículo. A continuación, se llama a [PrepareMediaStreamSourceTranscodeAsync](/uwp/api/windows.media.transcoding.mediatranscoder.preparemediastreamsourcetranscodeasync) para obtener la **MediaTranscoder** lista para transcodificar la secuencia de vídeo generada por el objeto **MediaStreamSource** en el flujo de archivos de salida, mediante el perfil de codificación que hemos creado en la sección anterior. Una vez preparado el transcodificador, llame a [TranscodeAsync](/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) para iniciar la transcodificación. Para obtener más información sobre el uso de **MediaTranscoder**, vea [transcodificar archivos multimedia](./transcode-media-files.md).
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/MainPage.xaml.cs" id="snippet_EncodeAsync":::
 
 ## <a name="handle-mediastreamsource-events"></a>Controlar eventos MediaStreamSource
 El objeto **MediaStreamSource** toma fotogramas que se capturan de la pantalla y los transforma en una secuencia de vídeo que se puede guardar en un archivo mediante **MediaTranscoder**. Pasamos los fotogramas a **MediaStreamSource** a través de los controladores de los eventos del objeto.
 
-El evento [SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) se genera cuando el **MediaStreamSource** está listo para un nuevo fotograma de vídeo. Después de asegurarse de que estamos grabando actualmente, se llama al método auxiliar **WaitForNewFrame** para obtener un nuevo fotograma capturado de la pantalla. Este método, que se muestra más adelante en este artículo, devuelve un objeto [ID3D11Surface](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) que contiene el fotograma capturado. En este ejemplo, se ajusta la interfaz **IDirect3DSurface** en una clase auxiliar que también almacena la hora del sistema en la que se capturó el fotograma. Tanto el marco como la hora del sistema se pasan en el Factory Method [MediaStreamSample. CreateFromDirect3D11Surface](/uwp/api/windows.media.core.mediastreamsample.createfromdirect3d11surface) y el [MediaStreamSample](/uwp/api/windows.media.core.mediastreamsample) resultante se establece en la propiedad [MediaStreamSourceSampleRequest. Sample](MediaStreamSourceSampleRequest.Sample) del [MediaStreamSourceSampleRequestedEventArgs](/uwp/api/windows.media.core.mediastreamsourcesamplerequestedeventargs). Así es como se proporciona el fotograma capturado al **MediaStreamSource**.
+El evento [SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) se genera cuando el **MediaStreamSource** está listo para un nuevo fotograma de vídeo. Después de asegurarse de que estamos grabando actualmente, se llama al método auxiliar **WaitForNewFrame** para obtener un nuevo fotograma capturado de la pantalla. Este método, que se muestra más adelante en este artículo, devuelve un objeto [ID3D11Surface](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) que contiene el fotograma capturado. En este ejemplo, se ajusta la interfaz **IDirect3DSurface** en una clase auxiliar que también almacena la hora del sistema en la que se capturó el fotograma. Tanto el marco como la hora del sistema se pasan en el Factory Method [MediaStreamSample. CreateFromDirect3D11Surface](/uwp/api/windows.media.core.mediastreamsample.createfromdirect3d11surface) y el [MediaStreamSample](/uwp/api/windows.media.core.mediastreamsample) resultante se establece en la propiedad [MediaStreamSourceSampleRequest. Sample](/uwp/api/windows.media.core.mediastreamsourcesamplerequest.sample) del [MediaStreamSourceSampleRequestedEventArgs](/uwp/api/windows.media.core.mediastreamsourcesamplerequestedeventargs). Así es como se proporciona el fotograma capturado al **MediaStreamSource**.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/MainPage.xaml.cs" id="snippet_OnMediaStreamSourceSampleRequested":::
 
@@ -152,5 +152,5 @@ Las siguientes API auxiliares están definidas para abstraer la creación de rec
 
 ## <a name="see-also"></a>Consulte también
 
-* [Espacio de nombres Windows. Graphics. Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture)
+* [Espacio de nombres Windows. Graphics. Capture](/uwp/api/windows.graphics.capture)
 * [Captura de pantalla](screen-capture.md)

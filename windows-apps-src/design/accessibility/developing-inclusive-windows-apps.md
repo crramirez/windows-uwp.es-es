@@ -4,16 +4,16 @@ ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desarrollo de aplicaciones inclusivas de Windows 10
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 37fb7cc81d1a86a159526af5d580a02482d13f9a
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 856ed1222cd393ec2730226f9c4faadf7e9ad0d7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233975"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219818"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desarrollo de aplicaciones inclusivas de Windows  
 
@@ -32,7 +32,7 @@ El acceso mediante programación es fundamental para la creación de accesibilid
 
 Para obtener más información sobre cómo hacer que los elementos de interfaz de usuario de tu aplicación estén disponibles para las tecnologías de asistencia (AT), consulta el tema [Exponer la información de accesibilidad básica](basic-accessibility-information.md).
 
-## <a name="keyboard-navigation"></a>Navegación con el teclado  
+## <a name="keyboard-navigation"></a>Navegación mediante teclado  
 Para los usuarios ciegos o con problemas de movilidad, es muy importante poder navegar por la interfaz de usuario con un teclado. Sin embargo, solo se debe dar foco del teclado a los controles de interfaz de usuario que requieren interacción del usuario para funcionar. Los componentes que no requieren una acción, tales como las imágenes estáticas, no necesitan foco del teclado.  
 
 Es importante recordar que, a diferencia de la navegación con un mouse o entrada táctil, la navegación por teclado es lineal. Al considerar la navegación por teclado, piensa en cómo el usuario interactúa con tu producto y cuál será la lógica de navegación. En las culturas occidentales, las personas leen de izquierda a derecha y de arriba abajo. Por lo tanto, es una práctica habitual seguir este patrón en la navegación por teclado.  

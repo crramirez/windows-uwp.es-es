@@ -2,16 +2,16 @@
 Description: Puede seleccionar las capturas de pantallas, los logotipos y otros recursos artísticos (como finalizadores e imágenes promocionales) que desee incluir en la lista de la tienda de la aplicación.
 title: Capturas de pantalla, imágenes y tráileres de aplicaciones
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
-ms.date: 03/07/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, finalizador, vídeo, captura de pantalla, imagen, icono, lista de tiendas, imágenes de la lista de tiendas
 ms.localizationpriority: medium
-ms.openlocfilehash: da9d6517a43550693596d15c735e3134c5c60a7a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: be46e33ccc97545b86321e2e520b79c5a74f7a2e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155319"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219768"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 

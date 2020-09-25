@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juego, DirectX, carga, rasterización, malla, mapa de bits, 2D y 3D
 ms.localizationpriority: medium
-ms.openlocfilehash: 1718677dce325cccc535e603aca1910eb83d1de0
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: a982c1a57733e8ea9fc4d53974e4c5aec8e373dd
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053585"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218028"
 ---
 # <a name="fundamentals-of-directx-programming"></a>Aspectos básicos de la programación de DirectX
 
@@ -42,7 +42,7 @@ Cargar recursos en el tema del juego de DirectX le guía a través de los pasos 
 <td align="left"><p>Cree gráficos 2D con DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/windows/uwp/graphics-concepts/index">Guía de aprendizaje de gráficos de Direct3D</a></p></td>
+<td align="left"><p><a href="/windows/uwp/graphics-concepts/index">Guía de aprendizaje de gráficos de Direct3D</a></p></td>
 <td align="left"><p>Comprender los conceptos de gráficos de Direct3D.</p></td>
 </tr>
 <tr class="odd">

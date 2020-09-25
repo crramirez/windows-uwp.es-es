@@ -6,12 +6,12 @@ keywords: tarea en segundo plano, ejecución extendida, recursos, límites, tare
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 33b41c432edde42bc31daa1d5631f60fb38d8397
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: f843c23a4a1e0738cfc05e96009b2597f4919809
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217658"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Ejecutar en segundo plano de manera indefinida
 
@@ -30,7 +30,7 @@ La `extendedExecutionUnconstrained` funcionalidad se agrega como una capacidad r
 > [!NOTE]
 > Agregue la declaración de espacio de nombres XML *xmlns: ResCap* y use el prefijo *ResCap* para declarar la funcionalidad.
 >
-> Para obtener más información, consulte la sección funcionalidades restringidas de [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+> Para obtener más información, consulte la sección funcionalidades restringidas de [declaraciones de funcionalidades de aplicación](../packaging/app-capability-declarations.md).
 >
 
 _Package.appxmanifest_
@@ -79,7 +79,7 @@ En el Plataforma universal de Windows, las tareas en segundo plano son procesos 
 > [!NOTE]
 > Agregue la declaración de espacio de nombres XML *xmlns: ResCap* y use el prefijo *ResCap* para declarar la funcionalidad.
 >
-> Para obtener más información, consulte la sección funcionalidades restringidas de [declaraciones de funcionalidades de aplicación](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+> Para obtener más información, consulte la sección funcionalidades restringidas de [declaraciones de funcionalidades de aplicación](../packaging/app-capability-declarations.md).
 >
 
 _Package.appxmanifest_

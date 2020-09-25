@@ -4,16 +4,16 @@ title: Interacciones de mouse
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 242f7c30260956bc84478153f39b0da4d8461e12
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 84390e7b929412e4058c1a7e6507ff171344bd53
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173409"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218938"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 

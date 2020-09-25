@@ -5,12 +5,12 @@ ms.date: 07/06/2020
 ms.topic: article
 keywords: Windows 10, UWP, Windows, Runtime, componente, componentes, Windows Runtime componente, WRC, C++/WinRT
 ms.localizationpriority: medium
-ms.openlocfilehash: 25286260c4abd6686939393b3bf81df818879bf9
-ms.sourcegitcommit: 21eb13a50402bf5442a5f0a4bf34800d1dc679c4
+ms.openlocfilehash: adf13308b1a2c360d7db53ded4edfe866de6c260
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90804755"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220318"
 ---
 # <a name="windows-runtime-components-with-cwinrt"></a>Componentes de Windows Runtime con C++/WinRT
 
@@ -145,4 +145,4 @@ Para obtener un ejemplo de cómo agregar un evento a su componente de Windows Ru
 
 | Síntoma | Solución |
 |---------|--------|
-|En una aplicación/WinRT de C++, al consumir un [componente de Windows Runtime de C#](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic) que usa XAML, el compilador genera un error con el formato ""*MyNamespace_XamlTypeInfo ': no es un miembro de "WinRT:: myNameSpace*" ", &mdash; donde *myNameSpace* es el nombre del espacio de nombres del componente Windows Runtime. | En `pch.h` , en la aplicación de C++/WinRT de consumo, agregue `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>` &mdash; *myNameSpace* , según corresponda. |
+|En una aplicación/WinRT de C++, al consumir un [componente de Windows Runtime de C#](./creating-windows-runtime-components-in-csharp-and-visual-basic.md) que usa XAML, el compilador genera un error con el formato ""*MyNamespace_XamlTypeInfo ': no es un miembro de "WinRT:: myNameSpace*" ", &mdash; donde *myNameSpace* es el nombre del espacio de nombres del componente Windows Runtime. | En `pch.h` , en la aplicación de C++/WinRT de consumo, agregue `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>` &mdash; *myNameSpace* , según corresponda. |

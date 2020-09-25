@@ -3,15 +3,15 @@ Description: Una vez que hayas creado tu aplicación reservando un nombre, puede
 title: Envíos de aplicaciones
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: lista de comprobación, Windows, UWP, envío, envío, juego, aplicación, envío
-ms.date: 10/31/2018
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1359fb530dec1a35b2ab2994442b65ec441cc0ac
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 99b4d7412727e5f195c32d3f3c21fe82b284e658
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158069"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219980"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
@@ -38,7 +38,7 @@ A continuación se incluyen los detalles que puedes proporcionar al crear el env
 Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No es necesario que trabaje en estas secciones en el orden que se muestra aquí.
 
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
-| Nombre de campo                    | Notas                                       | Para obtener más información                                                             |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Mercados**                   | Predeterminado: todos los mercados posibles  | [Definir los precios y la selección del mercado](./define-market-selection.md)         |
 | **Audiencia**                | Valor predeterminado: público público | [Audiencia](choose-visibility-options.md#audience) |
@@ -53,14 +53,14 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 ### <a name="properties-page"></a>Página de propiedades
 
-| Nombre de campo                    | Notas                                       | Para obtener más información                                                             |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Categoría y subcategoría**  | Obligatorio                                    | [Tabla de categoría y subcategoría](category-and-subcategory-table.md)       |
 | **Dirección URL de la directiva de privacidad**            | Necesario para muchas aplicaciones. Consulta el [contrato de desarrollador de aplicaciones](/legal/windows/agreements/app-developer-agreement) y las [directivas de Microsoft Store](store-policies.md#105-personal-information) | [Dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url)        |
 | **Sitio web**                   | Opcional                                    | [Sitio web](enter-app-properties.md#website)                   |
 | **Información de contacto de soporte técnico**      | Obligatorio si el producto está disponible en Xbox; de lo contrario, opcional (pero recomendado)                                   | [Información de contacto de soporte técnico](enter-app-properties.md#support-contact-info)              |
 | **Configuración del juego**             | Opcional (solo es aplicable a juegos)         | [Configuración del juego](enter-app-properties.md#game-settings) |
-| **Modo de presentación**             | Opcional                   | [Modo de presentación](enter-app-properties.md#display-mode) |
+| **Modo de pantalla**             | Opcional                   | [Modo de pantalla](enter-app-properties.md#display-mode) |
 | **Declaraciones de producto**          | Valor predeterminado: Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble; Windows puede incluir datos de la aplicación en las copias de seguridad automáticas en OneDrive | [Declaraciones de producto](./product-declarations.md) |
 | **Requisitos del sistema**      | Opcional                                    | [Requisitos del sistema](enter-app-properties.md#system-requirements)      |
 
@@ -68,7 +68,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 ### <a name="age-ratings-page"></a>Página de clasificación por edades
 
-| Nombre de campo                    | Notas                                       | Para obtener más información                          |
+| Nombre del campo                    | Notas                                       | Para obtener más información                          |
 |-------------------------------|---------------------------------------------|----------------------------------------|
 | **Clasificaciones por edades**               | Obligatorio                                    | [Clasificaciones por edades](age-ratings.md)          |
 
@@ -76,7 +76,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 ### <a name="packages-page"></a>Página de paquetes
 
-| Nombre de campo                    | Notas                                  | Para obtener más información                          |
+| Nombre del campo                    | Notas                                  | Para obtener más información                          |
 |-------------------------------|----------------------------------------|----------------------------------------|
 | **Control de carga de paquetes**    | Obligatorio (al menos un paquete)        | [Cargar paquetes de la aplicación](upload-app-packages.md) |
 | **Disponibilidad de familias de dispositivos** | Valor predeterminado: En función de los paquetes       | [Disponibilidad de familias de dispositivos](device-family-availability.md) |
@@ -88,7 +88,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 Necesitarás toda la información necesaria como mínimo para uno de los idiomas que admita la aplicación. Te recomendamos que proporciones [descripciones de la Tienda](create-app-store-listings.md) en todos los idiomas que admita la aplicación, y también puedes [proporcionar descripciones de la Tienda en idiomas adicionales](create-app-store-listings.md#store-listing-languages). Para facilitar la administración de varias listas para el mismo producto, puede [importar y exportar listas](import-and-export-store-listings.md)de la tienda.
 
-| Nombre de campo                    | Notas                                       | Para obtener más información                                                     |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Descripción**               | Obligatorio                                    | [Escribir una excelente descripción de la aplicación](write-a-great-app-description.md) |
 | **Novedades de esta versión**   | Opcional                                 | [Notas de la versión](create-app-store-listings.md#whats-new-in-this-version)       |
@@ -109,7 +109,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 
 ### <a name="submission-options-page"></a>Página opciones de envío
 
-| Nombre de campo                    | Notas                                       | Para obtener más información                                                     |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opciones de retención de publicación**     | Valor predeterminado: publicar este envío en cuanto pase la certificación (o por las fechas seleccionadas en la sección programación)      | [Opciones de retención de publicación](manage-submission-options.md#publishing-hold-options)    
 | **Notas para certificación**     | Recomendado          | [Notas para certificación](notes-for-certification.md)             |

@@ -3,16 +3,16 @@ Description: Obtenga información sobre cómo las aplicaciones de la WRL de Win3
 title: Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
-ms.date: 03/07/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificaciones locales, puente de escritorio, msix, paquete disperso, C++, CPP, CPlusPlus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: e1aae390cf9047c8c93b4d24084c87bc90af8d80
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f90733cb4b549b7b8f088d6ecfa652941b0769b1
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172309"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220148"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio
 

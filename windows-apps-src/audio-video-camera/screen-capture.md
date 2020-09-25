@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: Windows 10, UWP, captura de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: 96b8c52d8c1c6b6947b7b151df0b1b8bbfe42869
-ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
+ms.openlocfilehash: 26de7699f9f261bba6e02bc3664e335c46e4ac3d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89411929"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218668"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -692,5 +692,5 @@ Si desea grabar un vídeo de la aplicación, puede seguir el tutorial presentado
 
 ## <a name="see-also"></a>Consulte también
 
-* [Espacio de nombres Windows. Graphics. Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture)
-* [Captura de pantalla para vídeo](screen-capture-video.md)
+* [Espacio de nombres Windows. Graphics. Capture](/uwp/api/windows.graphics.capture)
+* [Captura de pantalla a vídeo](screen-capture-video.md)

@@ -4,15 +4,15 @@ title: Simular la entrada del usuario a través de la inserción de entrada
 label: Input injection
 template: detail.hbs
 keywords: dispositivo, digitalizador, entrada, interacción, inyección
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f06414362b6a821233eabfb396ae59001f35c30d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e4e1497ea30400c550cb0cbb2309801ff8145fd6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156899"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219688"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular la entrada del usuario a través de la inserción de entrada
 
@@ -361,7 +361,7 @@ En este ejemplo, se muestra cómo usar las API de inserción de entrada ([Window
 
 4. Por último, se controla cualquier evento enrutado de [clic](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) de botón en el área de inyección de entrada y se actualiza la interfaz de usuario con el nombre del botón en el que se hizo clic.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 ### <a name="topic-samples"></a>Ejemplos del tema
 

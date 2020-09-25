@@ -1,21 +1,21 @@
 ---
 Description: Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
-title: Notificaciones de distintivo para aplicaciones Windows
+title: Notificaciones de distintivos para aplicaciones de Windows
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d3aa9658e8a57a7993eb79d164b1e17ac23b9ac
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e8d3cf69da80b13ff334d89027f3ea366ac3accd
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970880"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219398"
 ---
-# <a name="badge-notifications-for-windows-apps"></a>Notificaciones de distintivo para aplicaciones Windows
+# <a name="badge-notifications-for-windows-apps"></a>Notificaciones de distintivos para aplicaciones de Windows
 
  
 

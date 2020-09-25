@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, orientación de pantalla, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 967fa031ad56e2c35b9e923339970787a7206f1d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bb5ed4d942484ebded50216ad84f8d1346545527
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168379"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217688"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Compatibilidad con la orientación de pantalla (DirectX y C++)
 
@@ -336,7 +336,7 @@ En lo que respecta al proceso, estás realizando un poco más de trabajo que si 
 
 -   Determina la nueva orientación de la pantalla. Si la pantalla ha cambiado del modo horizontal al vertical, o viceversa, cambia los valores de alto y ancho por supuesto, cambia también de valores DIP a píxeles para los límites de pantalla.
 
--   A continuación, comprueba si la cadena de intercambio se ha creado. Si no se ha creado, créala llamando a [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow). De lo contrario, cambia el tamaño de los búferes de la cadena de intercambio actual con las nuevas dimensiones de pantalla, llamando a [**IDXGISwapchain:ResizeBuffers**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers). Aunque no es necesario cambiar el tamaño de la cadena de intercambio para el evento de rotación después de todo, estás representando el contenido que ya está girado por la canalización de representación hay otros eventos de cambio de tamaño, como los eventos de ajuste y relleno, para los que es necesario cambiar el tamaño.
+-   A continuación, comprueba si la cadena de intercambio se ha creado. Si no se ha creado, créala llamando a [**IDXGIFactory2::CreateSwapChainForCoreWindow**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow). De lo contrario, cambia el tamaño de los búferes de la cadena de intercambio actual con las nuevas dimensiones de pantalla, llamando a [**IDXGISwapchain:ResizeBuffers**](/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers). Aunque no es necesario cambiar el tamaño de la cadena de intercambio para el evento de rotación después de todo, estás representando el contenido que ya está girado por la canalización de representación hay otros eventos de cambio de tamaño, como los eventos de ajuste y relleno, para los que es necesario cambiar el tamaño.
 
 -   Después de hacerlo, establece la transformación de matriz adecuada en 2D o 3D para aplicar a los píxeles o los vértices (respectivamente) en la canalización de elementos gráficos cuando se representen en la cadena de intercambio. Tenemos cuatro posibles matrices de rotación:
 

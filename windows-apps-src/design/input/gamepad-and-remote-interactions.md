@@ -5,16 +5,16 @@ ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
 label: Gamepad and remote interactions
 template: detail.hbs
 isNew: true
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5efe2fe1e8a4e24df175a0d019834cd0ba90388
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7f11cde619b783292e4880927c68b6ae8ff38323
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172559"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217189"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interacciones con controlador para juegos y control remoto
 
@@ -514,7 +514,7 @@ Cuando `Slider` requiera la participación del foco, el usuario puede llegar al 
 
 Aparte del control [Slider](/uwp/api/Windows.UI.Xaml.Controls.Slider), hay otros controles a los cuales conviene solicitar participación, como por ejemplo:
 
-- [Identificación](/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [ListBox](/uwp/api/Windows.UI.Xaml.Controls.ListBox)
 - [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [FlipView](/uwp/api/Windows.UI.Xaml.Controls.FlipView)
@@ -549,13 +549,13 @@ Algunos controles causan la captura del foco con frecuencia suficiente como para
 | Control               | Valor predeterminado de participación del foco  |
 |-----------------------|---------------------------|
 | CalendarDatePicker    | Activado                        |
-| FlipView              | Desactivado                       |
-| GridView              | Desactivado                       |
-| ListBox               | Desactivado                       |
-| ListView              | Desactivado                       |
-| ScrollViewer          | Desactivado                       |
-| SemanticZoom          | Desactivado                       |
-| Slider                | Activado                        |
+| FlipView              | Off                       |
+| GridView              | Off                       |
+| ListBox               | Off                       |
+| ListView              | Off                       |
+| ScrollViewer          | Off                       |
+| SemanticZoom          | Off                       |
+| Control deslizante                | Activado                        |
 
 El resto de los controles de Windows producirá cambios de comportamiento o visuales cuando `IsFocusEngagementEnabled="True"` .
 

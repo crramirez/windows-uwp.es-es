@@ -3,16 +3,16 @@ Description: Usar un asistente en Visual Studio te permite generar notificacione
 title: Código generado por el Asistente para notificaciones de inserción
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f2f4ad915d565ad56865dd89d25174f1ed9c2bb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bc6c52859b74d7cd40dd39c0ae588ad690c0138b
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159909"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220118"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
  

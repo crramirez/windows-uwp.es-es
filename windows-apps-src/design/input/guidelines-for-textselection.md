@@ -5,15 +5,15 @@ ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
 keywords: teclado,texto,entrada,interacciones del usuario
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a779053f0e14317c4142158fdface4c806a02aa
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 179eeffd014cb614fb5314826068d9690fc29807
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172469"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216978"
 ---
 # <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
 

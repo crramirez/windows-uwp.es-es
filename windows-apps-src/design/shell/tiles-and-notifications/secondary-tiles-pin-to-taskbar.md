@@ -3,16 +3,16 @@ description: Obtenga información sobre cómo anclar iconos secundarios en la ba
 title: Anclar iconos secundarios a la barra de tareas
 label: Pin secondary tiles to taskbar
 template: detail.hbs
-ms.date: 11/28/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, anclar a la barra de tareas, icono secundario, anclar iconos secundarios a la barra de tareas, acceso directo
 ms.localizationpriority: medium
-ms.openlocfilehash: 23feaf6cbc2293951116167662ab5647e3d35c44
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 22f49fba21e4d3f997efee1a59123ab453e555ea
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172329"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220228"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a>Anclar iconos secundarios a la barra de tareas
 
@@ -26,7 +26,7 @@ Al igual que anclar iconos secundarios al inicio, puede anclar iconos secundario
 > **Requiere la actualización de octubre de 2018**: debe tener como destino el SDK 17763 y ejecutar la compilación 17763 o superior para anclar a la barra de tareas.
 
 
-## <a name="guidance"></a>Instrucciones
+## <a name="guidance"></a>Guía
 
 Un icono secundario proporciona una forma coherente y eficaz de que los usuarios accedan directamente a áreas específicas de una aplicación. Aunque un usuario elige si "anclar" un icono secundario a la barra de tareas, el desarrollador determina las áreas ancladas de una aplicación. Para obtener más información, consulte la [Guía de iconos secundarios](secondary-tiles-guidance.md).
 

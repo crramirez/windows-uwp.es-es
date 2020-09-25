@@ -1,16 +1,16 @@
 ---
 title: Canales de inserciones alternativos mediante VAPID en UWP
 description: Instrucciones para usar canales de envío alternativos con el protocolo VAPID desde una aplicación de Windows
-ms.date: 01/10/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, API de WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: 4bca7e4159c0a4950c95d5d5ef2f34362175a8a7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 79ea88cb457e9a0d7ba33ef51a184e6f52ab19c4
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173309"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219278"
 ---
 # <a name="alternate-push-channels-using-vapid-in-windows"></a>Canales de inserciones alternativos mediante VAPID en Windows 
 A partir de la actualización de Fall Creators, las aplicaciones de Windows pueden usar la autenticación VAPID para enviar notificaciones de envío.  

@@ -1,16 +1,16 @@
 ---
 Description: Windows Inserte Notification Services (WNS) permite a los desarrolladores de terceros enviar notificaciones del sistema, iconos, distintivos y sin formato desde su propio servicio en la nube. Hay muchas maneras de enviar las notificaciones en función de las necesidades de la aplicación.
 title: Elegir el tipo adecuado de canal de notificación de inserción
-ms.date: 07/07/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 166abeb792e86fc44568a5ee29263262214657cf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 326012a38f2d4a8cd7d5c406c160db5168c9877d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173829"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219228"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Elegir el tipo adecuado de canal de notificación de inserción
 

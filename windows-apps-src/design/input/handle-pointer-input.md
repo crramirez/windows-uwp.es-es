@@ -5,15 +5,15 @@ ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
 keywords: lápiz, mouse, panel táctil, función táctil, puntero, entrada, interacción del usuario
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f544b73e069827f3c680db45797081605ce41b63
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 11402ae9f2ea99c583d82d1998ad238eac44576c
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173459"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219858"
 ---
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 
@@ -58,7 +58,7 @@ Las aplicaciones de Windows pueden escuchar los siguientes eventos de puntero:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled"><strong>PointerCanceled</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointercanceled"><strong>PointerCanceled</strong></a></p></td>
 <td align="left"><p>Se produce cuando la plataforma cancela un puntero. Esto puede ocurrir en las siguientes circunstancias:</p>
 <ul>
 <li>Los punteros táctiles se cancelan cuando se detecta un lápiz dentro del alcance de la superficie de entrada.</li>
@@ -69,7 +69,7 @@ Las aplicaciones de Windows pueden escuchar los siguientes eventos de puntero:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>Se produce cuando otro elemento de la interfaz de usuario captura el puntero, si se libera el puntero o si se captura otro puntero mediante programación.</p>
 <div class="alert">
 <strong>Nota:</strong>    No hay ningún evento de captura de puntero correspondiente.
@@ -79,43 +79,43 @@ Las aplicaciones de Windows pueden escuchar los siguientes eventos de puntero:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered"><strong>PointerEntered</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerentered"><strong>PointerEntered</strong></a></p></td>
 <td align="left"><p>Se produce cuando un puntero entra en el área límite de un elemento. Esto puede ocurrir de forma ligeramente distinta para la función táctil, de panel táctil, mouse y de pluma.</p>
 <ul>
 <li>La función táctil requiere un contacto del dedo para desencadenar este evento, bien sea de una pulsación directa hacia abajo o de movimiento en el área límite del elemento.</li>
 <li>Tanto el mouse como el panel táctil tienen un cursor en pantalla que siempre está visible y desencadena este evento incluso si no se presiona ningún botón del mouse o del teclado táctil.</li>
-<li>Al igual que la función táctil, la pluma desencadena este evento con un movimiento directo hacia abajo del lápiz sobre el elemento o un movimiento en el área límite del elemento. Sin embargo, Pen también tiene un estado de desplazamiento (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, cuando es true, desencadena este evento.</li>
+<li>Al igual que la función táctil, la pluma desencadena este evento con un movimiento directo hacia abajo del lápiz sobre el elemento o un movimiento en el área límite del elemento. Sin embargo, Pen también tiene un estado de desplazamiento (<a href="/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, cuando es true, desencadena este evento.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited"><strong>PointerExited</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerexited"><strong>PointerExited</strong></a></p></td>
 <td align="left"><p>Se produce cuando un puntero sale del área límite de un elemento. Esto puede ocurrir de forma ligeramente distinta para la función táctil, de panel táctil, mouse y de pluma.</p>
 <ul>
 <li>La función táctil requiere un contacto con el dedo y desencadena este evento cuando el puntero se mueve fuera del área límite del elemento.</li>
 <li>Tanto el mouse como el panel táctil tienen un cursor en pantalla que siempre está visible y desencadena este evento incluso si no se presiona ningún botón del mouse o del teclado táctil.</li>
-<li>Al igual que la función táctil, la pluma desencadena este evento cuando se mueve fuera del área límite del elemento. Sin embargo, Pen también tiene un estado de desplazamiento (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que desencadena este evento cuando el estado cambia de true a false.</li>
+<li>Al igual que la función táctil, la pluma desencadena este evento cuando se mueve fuera del área límite del elemento. Sin embargo, Pen también tiene un estado de desplazamiento (<a href="/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que desencadena este evento cuando el estado cambia de true a false.</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved"><strong>PointerMoved</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointermoved"><strong>PointerMoved</strong></a></p></td>
 <td align="left"><p>Se produce cuando un puntero modifica sus coordenadas, el estado de los botones, la presión, la inclinación o la geometría de contacto (por ejemplo, el ancho y alto) dentro del área límite de un elemento. Esto puede ocurrir de forma ligeramente distinta para la función táctil, de panel táctil, mouse y de pluma.</p>
 <ul>
 <li>La función táctil requiere un contacto con el dedo y desencadena este evento solo cuando está en contacto dentro del área límite del elemento.</li>
 <li>Tanto el mouse como el panel táctil tienen un cursor en pantalla que siempre está visible y desencadena este evento incluso si no se presiona ningún botón del mouse o del teclado táctil.</li>
-<li>Al igual que la función táctil, la pluma desencadena este evento cuando está en contacto dentro del área límite del elemento. Sin embargo, Pen también tiene un estado de desplazamiento (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, cuando es true y dentro del área de límite del elemento, desencadena este evento.</li>
+<li>Al igual que la función táctil, la pluma desencadena este evento cuando está en contacto dentro del área límite del elemento. Sin embargo, Pen también tiene un estado de desplazamiento (<a href="/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>) que, cuando es true y dentro del área de límite del elemento, desencadena este evento.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed"><strong>PointerPressed</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerpressed"><strong>PointerPressed</strong></a></p></td>
 <td align="left"><p>Se produce cuando el puntero indica una acción de presión (como un toque, presionar el botón del mouse, presionar con el lápiz o presionar el botón de panel táctil) dentro del área límite de un elemento.</p>
 <p>Se debe llamar a <a href="/uwp/api/windows.ui.xaml.uielement.capturepointer">CapturePointer</a> desde el controlador para este evento.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased"><strong>PointerReleased</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerreleased"><strong>PointerReleased</strong></a></p></td>
 <td align="left"><p>Se produce cuando el puntero indica una acción de liberar (por ejemplo, finalizar un toque, soltar el botón del mouse, levantar el lápiz o soltar el botón del panel táctil) dentro del área límite de un elemento o, si se captura el puntero, fuera del área límite.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
 <td align="left"><p>Se produce cuando se gira la rueda del mouse.</p>
 <p>La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierda, rueda o derecha), se crea una asociación secundaria entre el puntero y ese botón a través del evento <a href="/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a> .</p></td>
 </tr>

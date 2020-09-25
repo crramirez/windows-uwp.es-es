@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, roles de usuario, permisos de usuario, roles personalizados, acceso de usuario, permisos de personalización, roles estándar
 ms.localizationpriority: medium
-ms.openlocfilehash: 10c75d117320a947ce33ebd732c1956a9b3ae0e6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6aa88bd5af2e878fa702c3faff2d2677a23f33f2
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172859"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219758"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuenta
 
@@ -101,7 +101,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. Con
     </tr>
     </thead>
     <tbody>
-<tr><td align="left">    <b>Configuración de la cuenta</b>                    </td><td align="left">  Permite ver todas las páginas de la sección <b>Configuración de la cuenta</b>, incluida la <a href="managing-your-profile.md">información de contacto</a>.       </td><td align="left">  Permite ver todas las páginas de la sección <b>Configuración de la cuenta</b>. Permite realizar cambios en la <a href="/windows/uwp/publish/manage-account-settings-and-profile">información de contacto</a> y en otras páginas, pero no en la cuenta de pago ni en el perfil fiscal (a menos que este permiso se haya concedido por separado).            </td></tr>
+<tr><td align="left">    <b>Configuración de la cuenta</b>                    </td><td align="left">  Permite ver todas las páginas de la sección <b>Configuración de la cuenta</b>, incluida la <a href="/windows/uwp/publish/manage-account-settings-and-profile">información de contacto</a>.       </td><td align="left">  Permite ver todas las páginas de la sección <b>Configuración de la cuenta</b>. Permite realizar cambios en la <a href="/windows/uwp/publish/manage-account-settings-and-profile">información de contacto</a> y en otras páginas, pero no en la cuenta de pago ni en el perfil fiscal (a menos que este permiso se haya concedido por separado).            </td></tr>
 <tr><td align="left">    <b>Usuarios de cuenta</b>                       </td><td align="left">  Puede ver los usuarios que se han agregado a la cuenta en la sección <b>usuarios</b> .          </td><td align="left">  Puede Agregar usuarios a la cuenta y realizar cambios en los usuarios existentes en la sección <b>usuarios</b> .             </td></tr>
 <tr><td align="left">    <b>Informe de rendimiento de ad de nivel de cuenta</b> </td><td align="left">  Permite ver el <a href="advertising-performance-report.md">Informe de rendimiento de la publicidad</a> de nivel de cuenta.      </td><td align="left">  N/D   </td></tr>
 <tr><td align="left">    <b>Campañas de ad</b>                        </td><td align="left">  Permite ver las <a href="create-an-ad-campaign-for-your-app.md">campañas de anuncios</a> que se han creado en la cuenta.      </td><td align="left">  Permite crear, administrar y ver las <a href="create-an-ad-campaign-for-your-app.md">campañas de anuncios</a> que se han creado en la cuenta.          </td></tr>
@@ -111,7 +111,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. Con
 <tr><td align="left">    <b>Unidades de anuncio</b>                            </td><td align="left">  Permite ver las <a href="in-app-ads.md">unidades de anuncios</a> que se han creado para la cuenta.    </td><td align="left">  Permite crear, administrar y ver las <a href="in-app-ads.md">unidades de anuncios</a> de la cuenta.             </td></tr>
 <tr><td align="left">    <b>Anuncios afiliados</b>                       </td><td align="left">  Permite ver la utilización de <a href="/windows/uwp/publish/in-app-ads">anuncios de filiales</a> de todos los productos de la cuenta.    </td><td align="left">  Permite administrar y ver la utilización de los <a href="/windows/uwp/publish/in-app-ads">anuncios de filiales</a> de todos los productos de la cuenta.                </td></tr>
 <tr><td align="left">    <b>Informes de rendimiento de afiliados</b>      </td><td align="left">  Permite ver el <a href="/windows/uwp/publish/advertising-performance-report">informe de rendimiento de filiales</a> de todos los productos de la cuenta.   </td><td align="left">  N/D   </td></tr>
-<tr><td align="left">    <b>Informes de anuncios de instalación de aplicaciones</b>             </td><td align="left">  Puede ver el <a href="promote-your-app-report.md">Informe de campaña de ad</a>.           </td><td align="left">  N/D   </td></tr>
+<tr><td align="left">    <b>Informes de anuncios de instalación de aplicaciones</b>             </td><td align="left">  Puede ver el <a href="/windows/uwp/publish/ad-campaign-report">Informe de campaña de ad</a>.           </td><td align="left">  N/D   </td></tr>
 <tr><td align="left">    <b>Anuncios de la comunidad</b>                       </td><td align="left">  Permite ver de forma gratuita la utilización del <a href="about-community-ads.md">anuncio de la comunidad</a> de todos los productos de la cuenta.          </td><td align="left">  Permite crear, administrar y ver la utilización del <a href="about-community-ads.md">anuncio de la comunidad</a> gratuito de todos los productos de la cuenta.               </td></tr>
 <tr><td align="left">    <b>Información de contacto</b>                        </td><td align="left">  Permite ver la <a href="/windows/uwp/publish/manage-account-settings-and-profile">información de contacto</a> en la sección de configuración de la cuenta.        </td><td align="left">  Permite ver y editar la <a href="/windows/uwp/publish/manage-account-settings-and-profile">información de contacto</a> en la sección de configuración de la cuenta.            </td></tr>
 <tr><td align="left">    <b>Cumplimiento de COPPA</b>                    </td><td align="left">  Permite ver selecciones del <a href="in-app-ads.md#coppa-compliance">cumplimiento de COPPA</a> (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.                                            </td><td align="left">  Permite ver y editar selecciones del <a href="in-app-ads.md#coppa-compliance">cumplimiento de COPPA</a> (que indica si los productos se destinan a niños menores de 13 años) de todos los productos de la cuenta.         </td></tr>

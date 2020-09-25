@@ -3,15 +3,15 @@ ms.assetid: ''
 title: Compatibilidad con entrada de lápiz en la aplicación de Windows
 description: Obtenga información sobre cómo admitir la escritura y el dibujo con Windows Ink en una aplicación básica de Plataforma universal de Windows (UWP) siguiendo este tutorial paso a paso.
 keywords: tinta, entrada manuscrita, tutorial
-ms.date: 01/25/2018
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ed230fc9beb158df050f314a0142f250c2a8691
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: a0660312746a88a61ccb7b2ca9c01d720ebb2be3
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304607"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219698"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>Tutorial: compatibilidad con la entrada manuscrita en la aplicación de Windows
 
@@ -33,7 +33,7 @@ Para obtener más información sobre la implementación de estas característica
 
 Con Windows Ink, puede proporcionar a los clientes el equivalente digital de casi cualquier experiencia de lápiz y papel imaginable, desde anotaciones rápidas y manuscritas hasta demostraciones de pizarra y desde dibujos arquitectónicos y de ingeniería hasta obras maestras personales.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo (o una máquina virtual) que ejecute la versión actual de Windows 10
 * [Visual Studio 2019 y el SDK de RS2](https://developer.microsoft.com/windows/downloads)

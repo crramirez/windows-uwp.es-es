@@ -4,19 +4,19 @@ Description: Obtenga información sobre cómo usar la navegación centrada para 
 label: ''
 template: detail.hbs
 keywords: teclado, dispositivo de juego, control remoto, navegación, navegación interna direccional, área direccional, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
-ms.date: 03/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: miguelrb
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ad0e986de3f3084cd33f217df7715c955cb6b57
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6119a6b7d7621857e3317589a3b4a64ba3d5d2ea
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172579"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217228"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Navegación centrada en el teclado, el controlador para juegos, el control remoto y las herramientas de accesibilidad
 
@@ -70,7 +70,7 @@ Puede usar la propiedad [XYFocusKeyboardNavigation](/uwp/api/windows.ui.xaml.uie
 
 Cuando se establece en automático, el comportamiento de la navegación direccional viene determinado por la ascendencia del elemento o la jerarquía de herencia. Si todos los antecesores están en modo predeterminado (establecido en **automático**), *no* se admite la navegación direccional con el teclado.
 
-### <a name="disabled"></a>[Deshabilitada](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
+### <a name="disabled"></a>[Deshabilitado](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)
 
 Establezca **XYFocusKeyboardNavigation** en **Disabled** para bloquear la navegación direccional por el control y sus elementos secundarios.
 

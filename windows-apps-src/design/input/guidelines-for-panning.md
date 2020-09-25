@@ -4,16 +4,16 @@ title: Movimiento panorámico
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e77485bd2febe2ee032f9a0c3ceada31c2807ee0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3a5e26d48ef74631e732fb043e909869945a6366
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172499"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217055"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
@@ -80,7 +80,7 @@ El movimiento panorámico de forma táctil, mediante un gesto de deslizar o desl
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong> De forma predeterminada, en lugar de la selección de texto, un lápiz activo ahora se desplaza/gira en las aplicaciones de Windows (como Touch, Touchpad y pluma pasiva).  
-> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta el tema de referencia de API <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Clase ScrollViewer</a>.
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta el tema de referencia de API <a href="/uwp/api/windows.ui.xaml.controls.scrollviewer">Clase ScrollViewer</a>.
 > </div>
 
 Según el dispositivo de entrada, el usuario se mueve panorámicamente en una región de movimiento panorámico usando uno de los siguientes:
@@ -174,7 +174,7 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 - [Optimizar ListView y GridView](../../debug-test-perf/optimize-gridview-and-listview.md)
 - [Accesibilidad de teclado](../accessibility/keyboard-accessibility.md)
 
-**Muestras**
+**Ejemplos**
 - [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [Ejemplo de entrada de latencia baja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
 - [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)

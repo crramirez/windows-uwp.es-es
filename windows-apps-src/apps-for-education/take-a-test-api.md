@@ -2,16 +2,16 @@
 Description: La API de JavaScript de la aplicación "Hacer un examen" de Microsoft, te permite proteger los exámenes. Gracias a "Hacer un examen", tendrás a mano un navegador seguro que evitará que los estudiantes usen otro equipo o Internet durante un examen.
 title: API de JavaScript "Hacer un examen".
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.date: 08/08/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, education
 ms.localizationpriority: medium
-ms.openlocfilehash: f5894e80c11d69c91be8492b80c3200e15a3dc31
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2eeb190fc95e46a95813affd432948d38c0328a4
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161269"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218398"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
@@ -36,7 +36,7 @@ El espacio de nombres de seguridad permite bloquear el dispositivo, comprobar la
 |[isEnvironmentSecure](#isEnvironmentSecure) | Determina si el contexto de bloqueo aún se aplica al dispositivo. |
 |[getDeviceInfo](#getDeviceInfo) | Obtiene detalles sobre la plataforma en la que se ejecuta la aplicación de prueba. |
 |[examineProcessList](#examineProcessList)|Obtiene la lista de procesos de usuario y del sistema en ejecución.|
-|[cercanos](#close) | Cierra el explorador y se desbloquea el dispositivo. |
+|[close](#close) | Cierra el explorador y se desbloquea el dispositivo. |
 |[getPermissiveMode](#getPermissiveMode)|Comprueba si el modo permisivo está activado o desactivado.|
 |[setPermissiveMode](#setPermissiveMode)|Activa o desactiva el modo permisivo.|
 |[emptyClipBoard](#emptyClipBoard)|Borra el Portapapeles del sistema.|
@@ -58,7 +58,7 @@ Bloquea el dispositivo. También se usa para desbloquear el dispositivo. La apli
 `void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **Parámetros**  
-* `enable` - **true** para ejecutar la aplicación de Take-a-test encima de la pantalla de bloqueo y aplicar las directivas descritas en este [documento](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** detiene la ejecución de Take-a-test sobre la pantalla de bloqueo y la cierra a menos que la aplicación no esté bloqueada. en cuyo caso no hay ningún efecto.  
+* `enable` - **true** para ejecutar la aplicación de Take-a-test encima de la pantalla de bloqueo y aplicar las directivas descritas en este [documento](/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** detiene la ejecución de Take-a-test sobre la pantalla de bloqueo y la cierra a menos que la aplicación no esté bloqueada. en cuyo caso no hay ningún efecto.  
 * `onSuccess` -[opcional] la función a la que se llama una vez que el bloqueo se ha habilitado o deshabilitado correctamente. Debe tener el formato `Function(Boolean currentlockdownstate)` .  
 * `onError` -[opcional] la función a la que se llama si se produce un error en la operación de bloqueo. Debe tener el formato `Function(Boolean currentlockdownstate)` .  
 

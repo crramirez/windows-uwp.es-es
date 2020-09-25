@@ -6,19 +6,19 @@ label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
 keywords: Xbox, TV, experiencia de 10 pies, controlador para juegos, control remoto, entrada, interacción
-ms.date: 11/13/2018
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 491b67322c8b328c21446d50951daad61f15ad3d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b0c278599c878e807ef8b2e2564ca9add31ea4ad
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175579"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220288"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Diseño para Xbox y televisión
 
@@ -40,7 +40,7 @@ Si estás desarrollando una aplicación para Xbox One o cualquier otro dispositi
 No todos los pasos de este artículo son necesarios para que tu aplicación funcione bien en experiencias de 10 pies, pero entenderlos y tomar las decisiones apropiadas para tu aplicación dará como resultado una mejor experiencia de 10 pies adaptada a las necesidades específicas de tu aplicación.
 Al traer a la vida a tu aplicación en el entorno de 10 pies, ten en cuenta los siguientes principios de diseño.
 
-### <a name="simple"></a>Sencillo
+### <a name="simple"></a>Simple
 
 El diseño para el entorno de 10 pies presenta un conjunto único de desafíos. La resolución y distancia de visualización pueden dificultar a la gente el procesar demasiada información.
 Intenta mantener tu diseño limpio y reducido a los componentes más simples posibles. La cantidad de información que se muestra en un televisor debe ser comparable a lo que verías en un teléfono móvil, más que en un equipo de escritorio.

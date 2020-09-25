@@ -5,15 +5,15 @@ ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
 keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, interacción del usuario
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d4eb10bff1bbbda3bc10a8a1d770fecf6b4042e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a19e4ec876ca5dfa313c56e5653b3a27a4155765
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173319"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219938"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar el idioma del reconocedor de voz
 
@@ -92,7 +92,7 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 * [Interacciones de voz](speech-interactions.md)
 
-**Muestras**
+**Ejemplos**
 
 * [Muestra de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  

@@ -3,17 +3,17 @@ Description: Diseñe una interfaz de usuario (UI) con instrucciones que enseña 
 title: Directrices para diseñar una interfaz de usuario informativa
 label: Instructional UI
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: c87e2f06-339d-4413-b585-172752964f56
 ms.localizationpriority: medium
-ms.openlocfilehash: cda4b3c49ac0fd021823f72fde6358f910fcdc73
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 47779a6d31d60fe87f639dfadd48275bfb15359e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970180"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217128"
 ---
 # <a name="instructional-ui-guidelines"></a>Directrices para una interfaz de usuario informativa
 

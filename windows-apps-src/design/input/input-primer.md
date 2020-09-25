@@ -4,16 +4,16 @@ title: Información básica sobre interacción
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc220d1b5489faf96653472880dc06124c10b047
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dde0e5479533aed225dbadc68b325afede050dbb
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173449"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219678"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -171,7 +171,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 [Directrices para el diseño de lápiz](./pen-and-stylus-interactions.md)
  
 
-## <a name="touch"></a>Tocar
+## <a name="touch"></a>Entrada táctil
 
 Con la función táctil, es posible usar gestos físicos mediante uno o más dedos bien para emular la manipulación directa de los elementos de interfaz de usuario (como el movimiento panorámico, girar, cambiar el tamaño o mover), como un método de entrada alternativo (parecido al mouse o al lápiz), o bien como un método de entrada complementario (para modificar los aspectos de otra entrada, como difuminar un trazo de lápiz dibujado con un lápiz). Las experiencias táctiles como esta pueden proporcionar sensaciones más naturales y realistas para los usuarios que interactúan con los elementos en una pantalla.
 

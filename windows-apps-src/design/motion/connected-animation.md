@@ -2,19 +2,19 @@
 description: Las animaciones conectadas te permiten crear una experiencia de navegación dinámica y atractiva al animar la transición de un elemento entre dos vistas distintas.
 title: Animación conectada
 template: detail.hbs
-ms.date: 10/04/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ff252faf4dd49929ec46c2ceaa02f94011e6b225
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 770f859cfb90dde4f3960492479beb6192c12c8f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169329"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217788"
 ---
 # <a name="connected-animation-for-windows-apps"></a>Animación conectada para aplicaciones de Windows
 

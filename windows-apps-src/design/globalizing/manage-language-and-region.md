@@ -3,16 +3,16 @@ Description: En este tema se definen los términos lista de idioma del perfil de
 title: Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
-ms.date: 11/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: c4f1857ba4afe5eba271f7022c64aca26eb6b6b8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ee2ba09c9b8b307a56bd71e720a9f6db8f45a813
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156939"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220248"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación
 Un usuario de Windows puede usar la **configuración**  >  **hora &** la  >  **región de idioma & idioma** para configurar una lista ordenada de los idiomas para mostrar preferidos, o simplemente un solo idioma de visualización preferido. Un lenguaje puede tener una variante regional. Por ejemplo, puede seleccionar español como se habla en España, español, como se habla en México, español, como se habla en el Estados Unidos, entre otros.
@@ -170,7 +170,7 @@ En la tabla siguiente se incluyen ejemplos de lo que el usuario verá en la inte
 </tr>
 <tr>
 <td align="left">Español (España) (predeterminado); Español (México); Español (Latinoamérica); Portugués (Brasil)</td>
-<td align="left">Inglés (EE.UU.)</td>
+<td align="left">Inglés (EE. UU.)</td>
 <td align="left">ninguno</td>
 <td align="left">Español (España)</td>
 <td align="left">UI: Español (España) (usa el valor predeterminado dado que no existe reserva disponible para el inglés)<br>Fechas/Horas/Números Español (España)</td>

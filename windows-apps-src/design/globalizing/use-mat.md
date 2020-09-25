@@ -1,17 +1,17 @@
 ---
 Description: El kit de herramientas de aplicaciones multilingües (PASPARTÚ) 4,0 se integra con Microsoft Visual Studio 2019 para proporcionar a las aplicaciones de Windows compatibilidad con traducción, administración de archivos de traducción y herramientas del editor.
-title: Uso del kit de herramientas de aplicaciones multilingüe
+title: Usar el Kit de herramientas para aplicaciones multilingües
 template: detail.hbs
-ms.date: 01/23/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: f11ee858be112db899e0fd25dd2fe274d5a092fd
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 4759be8b4e386620243cd587df1ac0bd3e6b0033
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970970"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217108"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Usar el Kit de herramientas para aplicaciones multilingües 4.0
 
@@ -30,7 +30,7 @@ El kit de herramientas de aplicaciones multilingües (PASPARTÚ) 4,0 se integra 
 
 Antes de poder usar el PASPARTÚ de forma eficaz, la aplicación debe ser localizable. En concreto, el proyecto debe contener uno o más archivos de recursos (. resw) que contengan las cadenas de la aplicación en el idioma predeterminado. Para obtener más información, consulte [localizar cadenas en el manifiesto del paquete de la interfaz de usuario y de la aplicación](../../app-resources/localize-strings-ui-manifest.md). Una vez hecho esto, el kit de herramientas permite agregar más idiomas de forma rápida y sencilla.
 
-Para la propuesta de valor de globalización y&mdash;localización, así como definiciones de los términos **globalización**, **localizabilidad**y **localización**&mdash;, consulte [globalización y localización](globalizing-portal.md).
+Para la propuesta de valor de globalización y localización, así &mdash; como definiciones de los términos **globalización**, **localizabilidad**y **localización**, &mdash; consulte [globalización y localización](globalizing-portal.md).
 
 Vea también [instrucciones para la globalización](guidelines-and-checklist-for-globalizing-your-app.md) y [haga que su aplicación sea localizable](prepare-your-app-for-localization.md).
 
@@ -49,27 +49,27 @@ El PASPARTÚ debe estar habilitado para el proyecto antes de poder localizar la 
 
 - Abra la solución de proyecto en Visual Studio.
 - Seleccione el proyecto que desee en Explorador de soluciones.
-- En el menú **herramientas** , seleccione **Multilingual App Toolkit** > **Habilitar selección**. 
+- En el menú **herramientas** , seleccione **Multilingual App Toolkit**  >  **Habilitar selección**. 
 
-En la ventana de salida (que muestra la salida del kit de herramientas de aplicaciones multilingüe), vea el mensaje `Project '<project-name>' was enabled. The project's source culture is '<language-tag>' <language-name>`. Si aparece este mensaje, el PASPARTÚ está listo para usarse.
+En la ventana de salida (que muestra la salida del kit de herramientas de aplicaciones multilingüe), vea el mensaje `Project '<project-name>' was enabled. The project's source culture is '<language-tag>' <language-name>` . Si aparece este mensaje, el PASPARTÚ está listo para usarse.
 
 ### <a name="step-4-add-languages-to-your-project"></a>Paso 4. Agregar idiomas al proyecto
 
 Siga estos pasos para agregar idiomas a su proyecto.
 
 1. En el Explorador de soluciones, haga clic con el botón secundario en el nodo del proyecto.
-2. Haga clic en **Multilingual App Toolkit** > **Agregar idiomas de traducción..**..
+2. Haga clic en **Multilingual App Toolkit**  >  **Agregar idiomas de traducción..**..
 3. En el cuadro de diálogo idiomas de traducción, seleccione los idiomas que desea admitir y haga clic en Aceptar.
 
 El kit de herramientas realiza estas acciones en respuesta.
 
 - Para cada idioma agregado, se crea una nueva carpeta con el nombre de la [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47) del idioma. Dentro de esa carpeta, se crean nuevos archivos de recursos (. resw) para que coincidan con los que contienen las cadenas de idioma predeterminadas.
-- Si es la primera vez que agrega un idioma, se agrega al proyecto una nueva `MultilingualResources` carpeta denominada. Dentro de esa carpeta, se agrega un archivo. xlf para cada idioma. Los archivos. xlf contienen una unidad de traducción para cada cadena de cada archivo de recursos (. resw) del proyecto.
+- Si es la primera vez que agrega un idioma, `MultilingualResources` se agrega al proyecto una nueva carpeta denominada. Dentro de esa carpeta, se agrega un archivo. xlf para cada idioma. Los archivos. xlf contienen una unidad de traducción para cada cadena de cada archivo de recursos (. resw) del proyecto.
 - La ventana de salida confirma la adición de los lenguajes que ha agregado.
 
 Siempre que agregue o quite un archivo de recursos de idioma predeterminado (. resw) o agregue o quite una cadena en un archivo de recursos de idioma predeterminado (. resw), recompile el proyecto para volver a sincronizar los archivos. xlf. Esto garantiza que los archivos. xlf contienen la Unión de las cadenas en el idioma predeterminado.
 
-Los proveedores&mdash;de traducción instalados, como Microsoft [Language portal](https://www.microsoft.com/Language/) y [Microsoft Translator](https://www.microsofttranslator.com/)&mdash;, se pueden usar para traducir los recursos de la aplicación. Cuando un proveedor admite un idioma específico, se muestra el icono del proveedor junto al nombre del idioma en el cuadro de diálogo idiomas de traducción.
+Los proveedores de traducción instalados, como Microsoft &mdash; [Language portal](https://www.microsoft.com/Language/) y [Microsoft Translator](https://www.microsofttranslator.com/), &mdash; se pueden usar para traducir los recursos de la aplicación. Cuando un proveedor admite un idioma específico, se muestra el icono del proveedor junto al nombre del idioma en el cuadro de diálogo idiomas de traducción.
 
 En el cuadro de diálogo idiomas de traducción, los idiomas basados en. xlf detectados por el kit de herramientas tienen la casilla de selección activada previamente para indicar que el idioma ya está incluido en el proyecto.
 
@@ -82,20 +82,20 @@ Pseudo idioma es una modificación artificial del producto de software diseñado
 Siga estos pasos para deslocalizar y probar el proyecto.
 
 1. Use el cuadro de diálogo idiomas de traducción para agregar pseudo Language (pseudo) [QPS-PLOC] a su proyecto.
-2. Haga clic con el `<project-name>.qps-ploc.xlf` botón derecho en el archivo en explorador de soluciones y haga clic en **Multilingual App Toolkit** > **generar traducciones de máquinas**.
-3. En **configuración** > **hora &** > **región de idioma &** > **idiomas**, haga clic en **Agregar un idioma**.
+2. Haga clic con el botón derecho en el `<project-name>.qps-ploc.xlf` archivo en explorador de soluciones y haga clic en **Multilingual App Toolkit**  >  **generar traducciones de máquinas**.
+3. En **configuración**  >  **hora & región de idioma**  >  **&**  >  **idiomas**, haga clic en **Agregar un idioma**.
 5. En el cuadro de búsqueda, escriba `qps-ploc`.
-6. Haga `English (qps-ploc)` clic para agregarlo.
+6. Haga clic `English (qps-ploc)` para agregarlo.
 7. En la lista idioma, seleccione `English (qps-ploc)` y haga clic en **establecer como predeterminado**.
 8. Pruebe la aplicación pseudo localizada. Por ejemplo, busque los problemas de diseño de la interfaz de usuario en los que no se muestre toda una cadena (la cadena está truncada) o las cadenas que no se han traducido (pero en su lugar se ha codificado de forma rígida).
 
-Además del reemplazo y la expansión de caracteres, el pseudo motor proporciona un identificador de seguimiento único para cada recurso. Este seguimiento se antepone al inicio de cada cadena y se escribe entre corchetes `[xxxxx]`. Puede usar estos rastreadores durante las pruebas de inspección de la interfaz de usuario visual. Pueden ayudar a realizar un seguimiento de los recursos específicos del producto, especialmente si varios recursos tienen texto similar o duplicado.
+Además del reemplazo y la expansión de caracteres, el pseudo motor proporciona un identificador de seguimiento único para cada recurso. Este seguimiento se antepone al inicio de cada cadena y se escribe entre corchetes `[xxxxx]` . Puede usar estos rastreadores durante las pruebas de inspección de la interfaz de usuario visual. Pueden ayudar a realizar un seguimiento de los recursos específicos del producto, especialmente si varios recursos tienen texto similar o duplicado.
 
 En este "Hello, World!" ejemplo de texto, la pseudo traducción se expande para ocupar aproximadamente un 30 por ciento más de espacio de pantalla y, a continuación, aplica el seguimiento de recursos.
 
 `"Hello World" -> "Ĥèĺļõ Ŵòŗłđ" -> "[!!_Ĥèĺļõ Ŵòŗłđ_!!]" -> "[hJ8s1][!!_Ĥèĺļõ Ŵòŗłđ_!!]"`
 
-### <a name="step-6-translate-your-app-into-selected-languages"></a>Paso 6. Trasladar la aplicación a los idiomas seleccionados
+### <a name="step-6-translate-your-app-into-selected-languages"></a>Paso 6. Trasladar la aplicación a los idiomas seleccionados
 
 El kit de herramientas de aplicaciones multilingües se integra en el proceso de compilación. Durante una compilación, las cadenas actualizadas se agregan automáticamente a cada archivo. xlf de idioma.
 Después de probar la aplicación mediante un pseudo idioma, hay tres opciones para traducir la aplicación en otros idiomas para su lanzamiento.
@@ -115,11 +115,11 @@ También puede iniciar el editor multilingüe de este modo. Vaya a Inicio, Mostr
 
 #### <a name="option-2-send-the-xlf-files-to-a-third-party-for-translation"></a>Opción 2. Enviar los archivos. xlf a un tercero para su traducción
 
-Para externalizar el trabajo de traducción y edición a los localizadores, seleccione los archivos. xlf que desee en explorador de soluciones, haga clic con el botón secundario en ellos y haga clic en el kit de >  **herramientas de aplicaciones multilingües****exportar traducciones.**...
+Para externalizar el trabajo de traducción y edición a los localizadores, seleccione los archivos. xlf que desee en explorador de soluciones, haga clic con el botón secundario en ellos y haga clic en el **Kit de herramientas de aplicaciones multilingües**  >  **exportar traducciones.**...
 
 Seleccione **salida: destinatario de correo** en el cuadro de diálogo exportar recursos de cadena y haga clic en Aceptar. los archivos se comprimirán y adjuntarán a un correo electrónico nuevo. Seleccionar **salida: ubicación**de la carpeta de archivos, explorador de una carpeta y haga clic en Aceptar. Si lo desea, elija los archivos que se van a comprimir, vuelva a hacer clic en aceptar, y los archivos se guardarán (en zip y) en la ubicación que elija, dentro de una nueva carpeta denominada para el proyecto.
 
-Una vez que los localizadores hayan completado el trabajo de traducción y le envíen los archivos. xlf traducidos, puede importarlos en el proyecto. Seleccione los archivos. xlf que desee en explorador de soluciones, haga clic en ellos con el botón secundario y haga clic en el kit de >  **herramientas de aplicaciones multilingües****importar/reciclar traducciones.**... Haga clic en **Agregar**, desplácese hasta los archivos. xlf o. zip y haga clic en **importar**.
+Una vez que los localizadores hayan completado el trabajo de traducción y le envíen los archivos. xlf traducidos, puede importarlos en el proyecto. Seleccione los archivos. xlf que desee en explorador de soluciones, haga clic en ellos con el botón secundario y haga clic en el **Kit de herramientas de aplicaciones multilingües**  >  **importar/reciclar traducciones.**... Haga clic en **Agregar**, desplácese hasta los archivos. xlf o. zip y haga clic en **importar**.
 
 **Nota:** El proceso de importación realiza la validación básica antes de la importación. Esto garantiza que la información de la referencia cultural de destino de los archivos que se van a importar coincide con la de los archivos. xlf existentes.
 
@@ -150,7 +150,7 @@ Se incluyen dos proveedores con el kit de herramientas de aplicaciones multiling
 - El proveedor del [portal de lenguaje de Microsoft](https://www.microsoft.com/Language/) permite el reciclaje de la traducción y la compatibilidad con la búsqueda de coincidencias con la terminología basada en traducciones del texto de la interfaz de usuario para productos y servicios de Microsoft.
 - El proveedor de [traductores de Microsoft](https://www.microsofttranslator.com/) habilita los servicios de traducción automática a petición.
 
-Usted y sus traductores pueden administrar el estado de las traducciones en el editor multilingüe para revisar inciertas traducciones más adelante. Puede establecer el estado de cada cadena en la pestaña **propiedades** . los valores de estado son: **nuevo**, **necesita revisar**, **traducir**, **Finalizar**y **Cerrar sesión**. El indicador situado a la izquierda de la fila muestra el estado. Cuando todas las filas muestran el color verde en el editor multilingüe, se realiza el trabajo de traducción.
+Usted y sus traductores pueden administrar el estado de las traducciones en el editor multilingüe para revisar inciertas traducciones más adelante. Puede establecer el estado de cada cadena en la pestaña **propiedades** . Los valores de estado son: **nuevo**, **necesita revisar**, **traducir**, **Finalizar**y **Cerrar sesión**. El indicador situado a la izquierda de la fila muestra el estado. Cuando todas las filas muestran el color verde en el editor multilingüe, se realiza el trabajo de traducción.
 
 Recompile el proyecto para que las cadenas traducidas se copien en los archivos de recursos (. resw) que correspondan a los archivos. xlf que acaba de editar.
 

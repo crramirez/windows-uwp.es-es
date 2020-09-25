@@ -2,16 +2,16 @@
 Description: Siga estas instrucciones para preparar los paquetes de la aplicación para su envío a la Microsoft Store.
 title: Requisitos del paquete de la aplicación
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
-ms.date: 10/31/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, requisitos de paquete, paquetes, formato de paquete, versión admitida, enviar
 ms.localizationpriority: medium
-ms.openlocfilehash: 851aaa28a7c42d395a16ee78a49a7e8bc5712f62
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 848adbab20765a65ef4673219c55dfbf076e47e0
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158109"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219778"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 

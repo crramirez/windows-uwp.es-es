@@ -3,16 +3,16 @@ Description: Descubra las distintas opciones de escritorio que las aplicaciones 
 title: Notificaciones del sistema de aplicaciones de escritorio
 label: Toast notifications from desktop apps
 template: detail.hbs
-ms.date: 05/01/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, puente de escritorio, msix, paquete disperso, opciones para enviar notificaciones del sistema, servidor com, activador com, com, com falsificado, sin com, sin com, enviar notificaciones de envío
 ms.localizationpriority: medium
-ms.openlocfilehash: e2a70ebddd649b43424222e40165b19c9d567850
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 478c478fa6892e4b61ac1a7d6e22089720e96ca7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156719"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220078"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema de aplicaciones de escritorio
 
@@ -28,7 +28,7 @@ En este artículo, se enumeran las opciones que tiene para enviar una notificaci
 
 En la tabla siguiente se muestran las opciones para admitir las notificaciones del sistema dentro de la aplicación de escritorio y las características admitidas correspondientes. Puede usar la tabla para seleccionar la mejor opción para su escenario.<br/><br/>
 
-| Opción | Objetos visuales | Actions | Entradas | Activa en proceso |
+| Opción | Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- | -- |
 | [Activador COM](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
 | [Sin CLSID de COM/stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
@@ -38,7 +38,7 @@ En la tabla siguiente se muestran las opciones para admitir las notificaciones d
 
 Esta es la opción preferida que funciona con las aplicaciones de escritorio y es compatible con todas las características de notificación. No tenga miedo del "activador COM"; tenemos una biblioteca para las aplicaciones [de C#](send-local-toast-desktop.md) y [C++](send-local-toast-desktop-cpp-wrl.md) que hace que resulte muy sencillo, incluso si nunca ha escrito un servidor com antes.<br/><br/>
 
-| Objetos visuales | Actions | Entradas | Activa en proceso |
+| Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ✔️ | ✔️ |
 
@@ -61,7 +61,7 @@ Para obtener información sobre cómo usar esta opción, consulte [enviar una no
 
 Se trata de una opción alternativa si no puede implementar un activador COM. Sin embargo, sacrificará algunas características, como la compatibilidad de entrada (cuadros de texto en la notificación del sistema) y la activación en proceso.<br/><br/>
 
-| Objetos visuales | Actions | Entradas | Activa en proceso |
+| Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ❌ | ❌ |
 

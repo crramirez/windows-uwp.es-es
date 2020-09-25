@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: Windows 10, UWP, juegos, entrada, registro, personalizado
 ms.localizationpriority: medium
-ms.openlocfilehash: ac2ca98a067fb88dfcdc86c4e4ee4047b82206bc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1f3a49ae2c6fc283d479086759744eb51d8b33ce
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159279"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220077"
 ---
 # <a name="registry-data-for-game-controllers"></a>Datos del registro para dispositivos de juego
 
@@ -54,7 +54,7 @@ En la tabla siguiente se explican los valores esperados en la ubicación raíz d
     </tr>
 </table>
 
-El instalador del dispositivo debe agregar estos datos al registro (ya sea a través del programa de instalación o un [archivo INF](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)).
+El instalador del dispositivo debe agregar estos datos al registro (ya sea a través del programa de instalación o un [archivo INF](/windows-hardware/drivers/install/inf-files)).
 
 Las subclaves de la ubicación raíz del dispositivo se detallan en las secciones siguientes.
 
@@ -454,7 +454,7 @@ En la tabla siguiente se enumeran las subclaves obligatorias y opcionales en la 
         <td>Sí</td>
     </tr>
     <tr>
-        <td>Accept</td>
+        <td>Aceptar</td>
         <td>Sí</td>
     </tr>
     <tr>
@@ -543,9 +543,9 @@ En la tabla siguiente se enumeran las subclaves obligatorias y opcionales en la 
     </tr>
 </table>
 
-Para obtener más información sobre los controladores de navegación de la interfaz de usuario y los comandos anteriores, vea [controlador de navegación de IU](https://docs.microsoft.com/windows/uwp/gaming/ui-navigation-controller).
+Para obtener más información sobre los controladores de navegación de la interfaz de usuario y los comandos anteriores, vea [controlador de navegación de IU](./ui-navigation-controller.md).
 
-## <a name="keys"></a>Teclas
+## <a name="keys"></a>Claves
 
 En las siguientes secciones se explica el contenido de cada una de las subclaves en las claves de **controlador de juegos**, **RacingWheel**, **ArcadeStick**, **FlightStick**y **UINavigation** .
 
@@ -597,7 +597,7 @@ En la tabla siguiente se enumeran los valores que se necesitan para asignar un b
         </td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
+        <td rowspan="3" style="vertical-align: middle;">Conmutador</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sí</td>
@@ -654,7 +654,7 @@ En la tabla siguiente se enumeran los valores que se necesitan para asignar un e
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>FALSE</td>
+                    <td>false</td>
                     <td>0,0</td>
                 </tr>
                 <tr>
@@ -677,9 +677,9 @@ En la tabla siguiente se enumeran los valores que se necesitan para asignar un e
                     <th>AxisValue</th>
                 </tr>
                 <tr>
-                    <td>FALSE</td>
-                    <td>FALSE</td>
-                    <td>0.5</td>
+                    <td>false</td>
+                    <td>false</td>
+                    <td>0,5</td>
                 </tr>
                 <tr>
                     <td>false</td>
@@ -688,13 +688,13 @@ En la tabla siguiente se enumeran los valores que se necesitan para asignar un e
                 </tr>
                 <tr>
                     <td>TRUE</td>
-                    <td>FALSE</td>
+                    <td>false</td>
                     <td>0,0</td>
                 </tr>
                 <tr>
                     <td>TRUE</td>
                     <td>TRUE</td>
-                    <td>0.5</td>
+                    <td>0,5</td>
                 </tr>
             </table>
         </td>
@@ -713,7 +713,7 @@ En la tabla siguiente se enumeran los valores que se necesitan para asignar un e
         <td>Indica que se debe invertir el valor del eje asignado antes de que se devuelva.</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
+        <td rowspan="3" style="vertical-align: middle;">Conmutador</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sí</td>
@@ -747,7 +747,7 @@ En la tabla siguiente se enumeran los valores que se necesitan para asignar un e
                 </tr>
                 <tr>
                     <td>Center</td>
-                    <td>0.5</td>
+                    <td>0,5</td>
                 </tr>
                 <tr>
                     <td>Bajar</td>
@@ -781,7 +781,7 @@ En la tabla siguiente se enumeran los valores que se necesitan para asignar un e
                 </tr>
                 <tr>
                     <td>Center</td>
-                    <td>0.5</td>
+                    <td>0,5</td>
                 </tr>
                 <tr>
                     <td>Bajar</td>
@@ -898,7 +898,7 @@ Las posiciones de los conmutadores se pueden asignar desde un conjunto de botone
         <td>DWORD</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
+        <td rowspan="3" style="vertical-align: middle;">Conmutador</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Índice en la matriz del modificador <b>RawGameController</b> .
@@ -1051,7 +1051,7 @@ Las etiquetas deben estar presentes en la clave **etiquetas** bajo la raíz del 
 
 ### <a name="button-labels"></a>Etiquetas de los botones
 
-La tecla **botones** asigna a una cadena cada una de las posiciones de los botones de la matriz de botones de **RawGameController**. Cada cadena se asigna internamente al valor de enumeración [GameControllerButtonLabel](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) correspondiente. Por ejemplo, si un controlador de juegos tiene diez botones y el orden en el que el **RawGameController** analiza los botones y los presenta en el informe de botones es como el siguiente:
+La tecla **botones** asigna a una cadena cada una de las posiciones de los botones de la matriz de botones de **RawGameController**. Cada cadena se asigna internamente al valor de enumeración [GameControllerButtonLabel](/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) correspondiente. Por ejemplo, si un controlador de juegos tiene diez botones y el orden en el que el **RawGameController** analiza los botones y los presenta en el informe de botones es como el siguiente:
 
 ```cpp
 Menu,               // Index 0
@@ -1070,7 +1070,7 @@ Las etiquetas deben aparecer en este orden bajo la tecla **botones** :
 
 <table>
     <tr>
-        <th>Nombre</th>
+        <th>NOMBRE</th>
         <th>Valor (tipo: REG_SZ)</th>
     </tr>
     <tr>
@@ -1117,7 +1117,7 @@ Las etiquetas deben aparecer en este orden bajo la tecla **botones** :
 
 ### <a name="axis-labels"></a>Etiquetas de eje
 
-La clave de los **ejes** asignará cada una de las posiciones del eje de la matriz de ejes de **RawGameController**a una de las etiquetas enumeradas en la [enumeración GameControllerButtonLabel](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) , al igual que las etiquetas de botón. Vea el ejemplo en [etiquetas de botón](#button-labels).
+La clave de los **ejes** asignará cada una de las posiciones del eje de la matriz de ejes de **RawGameController**a una de las etiquetas enumeradas en la [enumeración GameControllerButtonLabel](/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) , al igual que las etiquetas de botón. Vea el ejemplo en [etiquetas de botón](#button-labels).
 
 ### <a name="switch-labels"></a>Cambiar etiquetas
 
@@ -1136,7 +1136,7 @@ En la tabla siguiente se muestra un ejemplo de un conjunto de etiquetas para las
 
 <table>
     <tr>
-        <th>Nombre</th>
+        <th>NOMBRE</th>
         <th>Valor (tipo: REG_SZ)</th>
     </tr>
     <tr>
@@ -1345,7 +1345,7 @@ Windows Registry Editor Version 5.00
 "Invert" = dword:00000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Espacio de nombres Windows. Gaming. Input](/uwp/api/windows.gaming.input)
 * [Espacio de nombres Windows. Gaming. Input. Custom](/uwp/api/windows.gaming.input.custom)

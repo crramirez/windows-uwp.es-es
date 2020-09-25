@@ -4,16 +4,16 @@ ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: Exponer información básica de accesibilidad
 label: Expose basic accessibility information
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 723108b1a4e90de4cf378d8cdafcaae92bec2682
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: da0ad6c0121f81a4854728f4441e0407a6302f54
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157099"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217468"
 ---
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
@@ -83,7 +83,7 @@ XAML
   AutomationProperties.Name="An image of a customer using the product."/>
 ```
 
-De manera alternativa, considera incluir un subtítulo que aparezca en la interfaz de usuario visible y que también funcione como información de accesibilidad asociada con la etiqueta para el contenido de imagen. Veamos un ejemplo:
+De manera alternativa, considera incluir un subtítulo que aparezca en la interfaz de usuario visible y que también funcione como información de accesibilidad asociada con la etiqueta para el contenido de imagen. Este es un ejemplo:
 
 XAML
 ```xml

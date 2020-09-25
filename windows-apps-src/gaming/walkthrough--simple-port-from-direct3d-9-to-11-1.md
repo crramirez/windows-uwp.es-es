@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX, puerto, Direct3D 9, Direct3D 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e194ab79b8ba0a5dc79d4ad24f808d3613a0c98
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f93b1d733efec2d52ca364f2f97a6d0f424019ad
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158999"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216568"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Tutorial Portar una aplicación de Direct3D 9 sencilla a DirectX 11 y la Plataforma universal de Windows (UWP)
 
@@ -41,7 +41,7 @@ Este ejercicio de migración muestra cómo traer un marco de representación sen
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">Migrar el bucle del juego</a></p></td>
-<td align="left"><p>Muestra cómo implementar una ventana para un juego para UWP y cómo traer el bucle de juego, incluida la forma de crear un <a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView"><strong>IFrameworkView</strong></a> para controlar un <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow"><strong>CoreWindow</strong></a>de pantalla completa.</p></td>
+<td align="left"><p>Muestra cómo implementar una ventana para un juego para UWP y cómo traer el bucle de juego, incluida la forma de crear un <a href="/uwp/api/Windows.ApplicationModel.Core.IFrameworkView"><strong>IFrameworkView</strong></a> para controlar un <a href="/uwp/api/Windows.UI.Core.CoreWindow"><strong>CoreWindow</strong></a>de pantalla completa.</p></td>
 </tr>
 </tbody>
 </table>

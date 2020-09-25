@@ -5,18 +5,18 @@ ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 keywords: teclado, accesibilidad, navegación, foco, texto, entrada, interacciones del usuario, controlador para juegos, remoto
-ms.date: 03/29/2017
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: f4f2e9e13f492dd9a38d737c0c86dd3b1e632279
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ae3d4826c4468cabea318ed230da0cfbb4d5f24b
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173489"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219118"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 
@@ -345,7 +345,7 @@ Un ejemplo de comportamiento predeterminado de UWP en este caso es `ContentDialo
 
 En los casos en los que el diseño sigue un patrón de interfaz de usuario conocido para los grupos de control, la asignación de una única posición de tabulación al grupo puede mejorar la eficacia de la navegación para los usuarios.
 
-Algunos ejemplos son:
+Entre los ejemplos se incluyen:
 -   `RadioButtons`
 -   Múltiplos `ListViews` que tienen el mismo aspecto y se comportan como un solo `ListView`
 -   Cualquier interfaz de usuario para buscar y comportarse como una cuadrícula de mosaicos (como los mosaicos del menú Inicio)
@@ -547,7 +547,7 @@ La siguiente es una lista de controles de no edición que pueden recibir el foco
 -   Barra de menús
 -   Elemento de menú
 -   Barra de herramientas
--   Lista
+-   List
 -   Elemento de lista
 
 Estos son algunos ejemplos de los diferentes modos del teclado táctil. La primera imagen es el diseño predeterminado, la segunda es el diseño para pulgares (puede que no esté disponible para todos los idiomas).

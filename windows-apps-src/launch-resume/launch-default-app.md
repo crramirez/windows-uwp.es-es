@@ -6,12 +6,12 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ff40b506ef305ac4bc651864da34fe746f6229a3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ad25d4ba5d8dfe638d3de3e210f69ea204c48a14
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164859"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220018"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Iniciar la aplicación predeterminada para un URI
 
@@ -56,7 +56,7 @@ En general, la aplicación no puede seleccionar qué aplicación se inicia, sino
 
 Usa el método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) para iniciar un URI. Cuando llames a este método, tu aplicación debe ser la aplicación en primer plano; es decir, debe estar visible para el usuario. Este requisito permite asegurar que el usuario permanezca en control. Para cumplir este requisito, asegúrate de enlazar todos los inicios de URI directamente a la interfaz de usuario de la aplicación. El usuario siempre debe tener que realizar alguna acción para iniciar el URI. Si intentas iniciar un URI y tu aplicación no está en primer plano, se producirá un error en el inicio y se invocará a la devolución de llamada de error.
 
-Primero, crea un objeto [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) para que represente el URI, y luego pásalo al método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync). Usa el resultado devuelto para ver si la llamada se realizó correctamente, como se muestra en el siguiente ejemplo.
+Primero, crea un objeto [**System.Uri**](/dotnet/api/system.uri) para que represente el URI, y luego pásalo al método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync). Usa el resultado devuelto para ver si la llamada se realizó correctamente, como se muestra en el siguiente ejemplo.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -82,7 +82,7 @@ En algunos casos, el sistema operativo le pedirá al usuario que compruebe si re
 
 ![Un cuadro de diálogo de advertencia superpuesto en un fondo atenuado de la aplicación. El cuadro de diálogo pregunta al usuario si quiere cambiar de aplicación y tiene los botones "Sí" y "No" en la parte inferior derecha. El botón "No" está resaltado.](images/warningdialog.png)
 
-Si siempre desea que se produzca este mensaje, use el [**Windows.SysTEM. Propiedad LauncherOptions. TreatAsUntrusted**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.treatasuntrusted) para indicar al sistema operativo que debe mostrar una advertencia.
+Si siempre desea que se produzca este mensaje, use el [**Windows.SysTEM. Propiedad LauncherOptions. TreatAsUntrusted**](/uwp/api/windows.system.launcheroptions.treatasuntrusted) para indicar al sistema operativo que debe mostrar una advertencia.
 
 ```cs
 // The URI to launch
@@ -102,7 +102,7 @@ En algunos casos, es posible que el usuario no tenga instalada una aplicación p
 
 Las recomendaciones también son útiles cuando más de una aplicación se ha registrado para controlar un esquema de URI. Al recomendar una aplicación específica, Windows abrirá esa aplicación si ya está instalada.
 
-Para hacer una recomendación, llama al método [**Windows.System.Launcher.LaunchUriAsync(Uri, LauncherOptions)**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_) con [**LauncherOptions.preferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) establecido con el nombre de familia de paquete correspondiente a la aplicación de la Tienda que quieras recomendar. El sistema operativo usará esta información para reemplazar la opción general de buscar una aplicación por una opción específica para comprar la aplicación recomendada en la Tienda.
+Para hacer una recomendación, llama al método [**Windows.System.Launcher.LaunchUriAsync(Uri, LauncherOptions)**](/uwp/api/windows.system.launcher.launchuriasync#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_) con [**LauncherOptions.preferredApplicationPackageFamilyName**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) establecido con el nombre de familia de paquete correspondiente a la aplicación de la Tienda que quieras recomendar. El sistema operativo usará esta información para reemplazar la opción general de buscar una aplicación por una opción específica para comprar la aplicación recomendada en la Tienda.
 
 ```cs
 // Set the recommended app
@@ -228,7 +228,7 @@ Use el esquema **MS-Settings:** URI para [iniciar la aplicación de configuraci�
 
 ![Configuración de privacidad de la cámara.](images/privacyawarenesssettingsapp.png)
 
-Para obtener más información, consulta [Iniciar la aplicación Configuración de Windows](launch-settings-app.md) y [Directrices para aplicaciones compatibles con la privacidad](https://docs.microsoft.com/windows/uwp/security/index).
+Para obtener más información, consulta [Iniciar la aplicación Configuración de Windows](launch-settings-app.md) y [Directrices para aplicaciones compatibles con la privacidad](../security/index.md).
 
 ### <a name="store-app-uri-scheme"></a>Esquema de URI de la aplicación de la Tienda
 

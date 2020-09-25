@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b1ba0205a837383e1c646664c0550e055227412
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 12a7c7ebd250fec8d944c4cba467a92ff67bd33d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173069"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219798"
 ---
 # <a name="input-assembler-ia-stage"></a>Fase del ensamblador de entrada (IA)
 
@@ -61,7 +61,7 @@ La fase de IA ensambla los datos en primitivos y asocia los valores generados po
 </tr>
 <tr class="even">
 <td align="left"><p><a href="using-system-generated-values.md">Uso de valores generados por el sistema</a></p></td>
-<td align="left"><p>Los valores generados por el sistema se generan mediante la fase del ensamblador de entrada (IA) (según la <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">semántica</a>de entrada proporcionada por el usuario) para permitir ciertas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un identificador de instancia (visible para la <a href="vertex-shader-stage--vs-.md">fase del sombreador de vértices (vs)</a>), un identificador de vértice (visible para vs) o un identificador primitivo (visible para la fase del sombreador de píxeles de la <a href="geometry-shader-stage--gs-.md">fase GS)</a>, / <a href="pixel-shader-stage--ps-.md">Pixel Shader (PS) stage</a>una etapa del sombreador posterior puede buscar estos valores del sistema para optimizar el procesamiento en esa fase.</p></td>
+<td align="left"><p>Los valores generados por el sistema se generan mediante la fase del ensamblador de entrada (IA) (según la <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">semántica</a>de entrada proporcionada por el usuario) para permitir ciertas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un identificador de instancia (visible para la <a href="vertex-shader-stage--vs-.md">fase del sombreador de vértices (vs)</a>), un identificador de vértice (visible para vs) o un identificador primitivo (visible para la fase del sombreador de píxeles de la <a href="geometry-shader-stage--gs-.md">fase GS)</a>, / <a href="pixel-shader-stage--ps-.md">Pixel Shader (PS) stage</a>una etapa del sombreador posterior puede buscar estos valores del sistema para optimizar el procesamiento en esa fase.</p></td>
 </tr>
 </tbody>
 </table>
