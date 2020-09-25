@@ -2,16 +2,16 @@
 Description: En este tema se enumeran las fuentes disponibles para aplicaciones de Windows que están localizadas en idiomas distintos del Inglés de EE. UU.
 title: Fuentes internacionales
 template: detail.hbs
-ms.date: 11/02/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: aa0b560ad684ba230e0a498b9069d24d510f49c0
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 1200b80347a67bb1c9a6414a18697ca9d30bc29f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970910"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220608"
 ---
 # <a name="international-fonts"></a>Fuentes internacionales
 
@@ -69,7 +69,7 @@ En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de i
 | Japonés | ja-JP | Yu Gothic UI |
 | Canarés | kn-IN | Nirmala UI |
 | Kazajo | kk-KZ | Segoe UI |
-| Khmer | km-KH | Leelawadee UI |
+| Jemer | km-KH | Leelawadee UI |
 | Quiché | QUT-GT | Segoe UI |
 | Kinyarwanda | rw-RW | Segoe UI |
 | Suajili | sw-KE | Segoe UI |
@@ -112,7 +112,7 @@ En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de i
 | Español | es-ES | Segoe UI |
 | Sueco | sv-SE | Segoe UI |
 | Tayiko (cirílico) | tg-Cyrl-TJ | Segoe UI |
-| Tamil | ta-IN | Nirmala UI |
+| Tamul | ta-IN | Nirmala UI |
 | Tatar | tt-RU | Segoe UI |
 | Telugu | te-IN | Nirmala UI |
 | Tailandés | th-TH | Leelawadee UI |
@@ -120,7 +120,7 @@ En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de i
 | Turco | tr-TR | Segoe UI |
 | Turcomano | tk-TM | Segoe UI |
 | Ucraniano | uk-UA | Segoe UI |
-| Urdu | ur-PK | Segoe UI |
+| Urdú | ur-PK | Segoe UI |
 | Uigur | ug-CN | Segoe UI |
 | Uzbeko (latino) | uz-Latn-UZ | Segoe UI |
 | Valenciano | ca-ES-valencia | Segoe UI |
@@ -132,4 +132,4 @@ En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de i
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Etiqueta de idioma de BCP-47](https://tools.ietf.org/html/bcp47)
-* [Idiomas compatibles](../../publish/supported-languages.md)
+* [Idiomas admitidos](../../publish/supported-languages.md)

@@ -5,15 +5,15 @@ ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
 keywords: táctil, función táctil,puntero,entrada,interacción del usuario
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 537d5aa08f61471c43ca8a965369bdd9dcdee7d3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 14be47fa701742c73048e70c0842cb421c52a7e5
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165755"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220518"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 

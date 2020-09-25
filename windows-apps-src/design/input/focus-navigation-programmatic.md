@@ -3,19 +3,19 @@ Description: Obtenga información sobre cómo administrar mediante programación
 title: Navegación con foco mediante programación con teclado, controlador para juegos y herramientas de accesibilidad
 label: Programmatic focus navigation
 keywords: teclado, dispositivo de juego, control remoto, navegación, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
-ms.date: 03/19/2018
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: miguelrb
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 887d8329cc95d735ba33ff8dafc5105874206eaf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ef2e62404766d822343537cea2aca8e512482093
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172549"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220538"
 ---
 # <a name="programmatic-focus-navigation"></a>Navegación con foco mediante programación
 

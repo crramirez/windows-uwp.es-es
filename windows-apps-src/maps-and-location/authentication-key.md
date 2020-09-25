@@ -2,16 +2,16 @@
 title: Solicitar una clave de autenticación de mapas
 description: La aplicación universal de Windows debe autenticarse para poder usar MapControl y los servicios de mapa en el espacio de nombres Windows.Services.Maps.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, asignar clave de autenticación, control de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 195c643fe10daf45ae709962a3b675162874c77b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: da98ea9f09ef5d7804b07b7066847afbab7a2681
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171839"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220528"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 
