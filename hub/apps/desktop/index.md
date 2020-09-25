@@ -7,12 +7,12 @@ keywords: windows win32, desarrollo de escritorio
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 6539f436e46f351efc355d361c0677b9fedee546
-ms.sourcegitcommit: 2bb975d5df38d294277f57bf8b6a06d9bf87ca9b
+ms.openlocfilehash: 34b860916b90d1adc8ae9e7ae8c8ac7950125ce7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90046821"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216748"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Compilación de aplicaciones de escritorio para PC Windows
 
@@ -39,24 +39,24 @@ Hay cuatro plataformas principales para compilar aplicaciones de escritorio para
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="https://docs.microsoft.com/windows/uwp/">Plataforma universal de Windows (UWP)</a></td>
+<td><a href="/windows/uwp/">Plataforma universal de Windows (UWP)</a></td>
 <td><p>La plataforma de vanguardia para juegos y aplicaciones de Windows 10. Puedes compilar aplicaciones para UWP que usen exclusivamente los controles y las API de UWP, o bien usar los controles y las API de UWP en aplicaciones de escritorio compiladas con una de las otras plataformas.</p></td>
 <td><a href="/windows/uwp/get-started/">Introducción</a><br/><a href="/uwp/">Referencia de las API</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples">Ejemplos</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://docs.microsoft.com/windows/win32/">C++/Win32</a></td>
+<td><a href="/windows/win32/">C++/Win32</a></td>
 <td><p>Plataforma preferida para aplicaciones Windows nativas que requieren acceso directo a Windows y al hardware.</p></td>
 <td><a href="/windows/win32/desktop-programming/">Introducción</a><br/><a href="/windows/win32/apiindex/windows-api-list/">Referencia de las API</a><br/><a href="https://github.com/Microsoft/Windows-classic-samples">Ejemplos</a></td>
 </tr>
 <tr class="odd">
 <td><a href="/dotnet/framework/wpf/">WPF</a></td>
-<td><p>Plataforma basada en .NET establecida para aplicaciones Windows administradas con gráficos abundantes que cuenta con un modelo de interfaz de usuario XAML. Estas aplicaciones pueden estar dirigidas a <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> o a la versión completa de .NET Framework.</p></td>
-<td><a href="/dotnet/framework/wpf/getting-started/">Introducción</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referencia de API (.NET)</a><br/><a href="https://github.com/Microsoft/WPF-Samples">Ejemplos</a></td>
+<td><p>Plataforma basada en .NET establecida para aplicaciones Windows administradas con gráficos abundantes que cuenta con un modelo de interfaz de usuario XAML. Estas aplicaciones pueden estar dirigidas a <a href="/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> o a la versión completa de .NET Framework.</p></td>
+<td><a href="/dotnet/framework/wpf/getting-started/">Introducción</a><br/><a href="/dotnet/api/index">Referencia de API (.NET)</a><br/><a href="https://github.com/Microsoft/WPF-Samples">Ejemplos</a></td>
 </tr>
 <tr class="even">
 <td><a href="/dotnet/framework/winforms/">Windows Forms</a></td>
-<td><p>Plataforma basada en .NET que está diseñada para las aplicaciones de línea de negocio administradas con un modelo de interfaz de usuario ligera. Estas aplicaciones pueden estar dirigidas a <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> o a la versión completa de .NET Framework.</p></td>
-<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">Introducción</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referencia de API (.NET)</a></td>
+<td><p>Plataforma basada en .NET que está diseñada para las aplicaciones de línea de negocio administradas con un modelo de interfaz de usuario ligera. Estas aplicaciones pueden estar dirigidas a <a href="/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> o a la versión completa de .NET Framework.</p></td>
+<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">Introducción</a><br/><a href="/dotnet/api/index">Referencia de API (.NET)</a></td>
 </tr>
 </tbody>
 </table>

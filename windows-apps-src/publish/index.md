@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, publishing, publish, selling, sell, distribute, distributing, store, dashboard
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 19607823ce98aa71a8e3abecb94b82ff06a08352
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a4fb353ef9c4ff5227cb1cff21b26ce3067f5dcc
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164129"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219018"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicaciones y juegos de Windows  
 
@@ -36,7 +36,7 @@ Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) par
         <h3 style="margin-top: 10px; margin-bottom: 0px">Precios y disponibilidad</h3>
         <p style="margin-top: 0px; margin-bottom: 50px">Personaliza la disponibilidad de la aplicación con la programación y el precio de cada mercado, las opciones de visibilidad, el precio de venta y mucho más.</p>
         <br>
-        <a href="define-pricing-and-market-selection.md">Elegir tus mercados</a><br/>
+        <a href="/windows/uwp/publish/define-market-selection">Elegir tus mercados</a><br/>
         <a href="set-and-schedule-app-pricing.md">Establecer y programar los precios</a><br/>
         <a href="configure-precise-release-scheduling.md">Configurar fechas de lanzamiento precisas</a><br/>
         <a href="set-app-pricing-and-availability.md">Ver todas las opciones de disponibilidad</a><br/>
@@ -85,7 +85,7 @@ Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) par
     :::column:::
         <img src="https://docs.microsoft.com/media/illustrations/bcs-user-management-add-customer-1.svg" alt="Account icon" />
         <h3 style="margin-top: 10px; margin-bottom: 0px">Administrar cuentas de usuario</h3>
-        <a href="associate-azure-ad-with-dev-center.md">Configuración de Azure AD</a><br/>
+        <a href="/windows/uwp/publish/associate-azure-ad-with-partner-center">Configuración de Azure AD</a><br/>
         <a href="add-users-groups-and-azure-ad-applications.md">Agregar usuarios de la cuenta</a><br/>
         <a href="set-custom-permissions-for-account-users.md">Roles y permisos</a><br/>
     :::column-end:::

@@ -3,16 +3,16 @@ description: Aprende a lograr que tu aplicación sea inclusiva y accesible para 
 keywords: accesibilidad de las aplicaciones para UWP, globalización, diseñar aplicaciones inclusivas, requisitos de aplicaciones de accesibilidad
 title: 'Facilidad de uso para las aplicaciones de Windows: desarrollo de aplicaciones de Windows'
 template: detail.hbs
-ms.date: 10/18/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: 614e6d81a4f30c0b9a277c94964c16189f2247f8
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 42d68a38b387630fd839e27f6ecaeef8ba00db5a
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234282"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218048"
 ---
 # <a name="usability-for-windows-apps"></a>Facilidad de uso para las aplicaciones de Windows
 

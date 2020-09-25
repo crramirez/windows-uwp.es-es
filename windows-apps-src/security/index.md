@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 3169ee9b2674112964ced83bc3a34637846eb225
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9a565c9bdec6932d0e8ca376f677c309991773d6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167199"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219728"
 ---
 # <a name="security"></a>Seguridad
 
@@ -31,7 +31,7 @@ La [sección autenticación e identidad de usuario](authentication-and-user-iden
 <tr><th>Tema</th><th>Descripción</th></tr>
 <tr><td><a href="credential-locker.md">Caja de seguridad de credenciales</a></td><td>En este artículo se describe cómo las aplicaciones pueden usar la caja de seguridad de credenciales para almacenar y recuperar credenciales de usuario de forma segura, y cómo transferirlas entre dispositivos con la cuenta de Microsoft del usuario.</td></tr>
 
-<tr><td><a href="fingerprint-biometrics.md">Biometría de huellas digitales</a> </td><td>En este artículo se explica cómo agregar biometría de huellas digitales a la aplicación. La inclusión de una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta aumenta la seguridad de la aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase <a href="/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier">UserConsentVerifier</a> del espacio de nombres <a href="https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI">Windows.Security.Credentials.UI</a>.</td></tr>
+<tr><td><a href="fingerprint-biometrics.md">Biometría de huellas digitales</a> </td><td>En este artículo se explica cómo agregar biometría de huellas digitales a la aplicación. La inclusión de una solicitud de autenticación con huella digital cuando el usuario deba dar su consentimiento a una acción concreta aumenta la seguridad de la aplicación. Por ejemplo, puedes solicitar la autenticación con huella digital antes de autorizar una compra desde la aplicación o de permitir el acceso a recursos restringidos. Puedes administrar la autenticación con huella digital mediante la clase <a href="/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier">UserConsentVerifier</a> del espacio de nombres <a href="/uwp/api/Windows.Security.Credentials.UI">Windows.Security.Credentials.UI</a>.</td></tr>
 <tr><td><a href="microsoft-passport.md">Microsoft Passport y Windows Hello</a></td><td>En este artículo se describe la nueva tecnología Microsoft Passport de Windows 10 y se explica cómo pueden implementarla los desarrolladores para proteger sus servicios backend y aplicaciones. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas de credenciales convencionales y se proporcionan instrucciones sobre cómo diseñar e implementar estas tecnologías como parte de la implementación de Windows 10. </td></tr>
 <tr><td><a href="microsoft-passport-login.md">Crear una aplicación de inicio de sesión de Microsoft Passport</a></td><td>Primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña.</td></tr>
 <tr><td><a href="microsoft-passport-login-auth-service.md">Crear un servicio de inicio de sesión de Microsoft Passport</a></td><td>Parte 2 de un tutorial completo acerca de cómo usar Microsoft Passport como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña en aplicaciones para UWP (Plataforma universal de Windows) de Windows 10.</td></tr>
