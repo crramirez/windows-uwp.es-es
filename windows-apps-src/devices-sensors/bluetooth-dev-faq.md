@@ -1,17 +1,17 @@
 ---
 title: Preguntas más frecuentes de los desarrolladores de Bluetooth
 description: Este artículo contiene respuestas a las preguntas más frecuentes relacionadas con las API de Bluetooth para la UWP.
-ms.date: 02/08/2017
+ms.date: 09/25/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d41e49f599e1fe5e835443f7c8cb732e625491e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1a5ff129afcee21b0b1b41212fb900235d5b21b4
+ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168599"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353725"
 ---
 # <a name="bluetooth-developer-faq"></a>Preguntas más frecuentes de los desarrolladores de Bluetooth
 
@@ -76,10 +76,12 @@ No. Se trata de una característica dependiente del hardware, pero se proporcion
 
 ## <a name="can-i-access-these-apis-from-win32"></a>¿Puedo obtener acceso a estas API desde Win32?
 
-Sí, todas estas API deberían funcionar. En este blog se detalla la manera de llamar a las [API de Windows desde aplicaciones de escritorio](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/). 
-## <a name="is-this-functionality-supposed-to-exist-on--insert-sku-here-"></a>¿Se supone que esta funcionalidad debe existir *aquí para insertar la SKU*?
+Sí, todas estas API deberían funcionar. En este blog se detalla la manera de llamar a las [API de Windows desde aplicaciones de escritorio](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/).
 
-**Bluetooth le**: sí, toda la funcionalidad se encuentra en OneCore y debe estar disponible en los dispositivos más recientes con una pila de Bluetooth le en funcionamiento. 
-> ADVERTENCIA: el rol periférico depende del hardware y algunas ediciones de Windows Server no admiten Bluetooth. 
+## <a name="is-this-functionality-supposed-to-exist-on-a-specific-sku"></a>¿Se supone que esta funcionalidad existe en una SKU específica?
+
+**Bluetooth le**: sí, toda la funcionalidad se encuentra en OneCore y debe estar disponible en los dispositivos más recientes con una pila de Bluetooth le en funcionamiento.
+
+> ADVERTENCIA: el rol periférico depende del hardware y algunas ediciones de Windows Server no admiten Bluetooth.
 
 **Bluetooth br/EDR (clásico)**: existen algunas variaciones, pero principalmente, tienen una compatibilidad de nivel de perfil muy similar. Vea los documentos en [RFCOMM](send-or-receive-files-with-rfcomm.md) y estos documentos de perfil compatibles para [PC](https://support.microsoft.com/help/10568/windows-10-supported-bluetooth-profiles) y [teléfono](https://support.microsoft.com/help/10569/windows-10-mobile-supported-bluetooth-profiles)
