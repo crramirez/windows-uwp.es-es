@@ -5,14 +5,15 @@ ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.date: 03/06/2020
 ms.topic: article
+ms.custom: contperfq1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd910c42743577a83491386f5c667dd09722ba9b
-ms.sourcegitcommit: 8171695ade04a762f19723f0b88e46e407375800
+ms.openlocfilehash: 22d891253074387223dba1ad9084a2105cf530dd
+ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89494381"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91366891"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS) 
 
@@ -33,50 +34,7 @@ En el siguiente diagrama se muestra el flujo completo de datos para el envío de
 
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>Registro de una aplicación y recepción de las credenciales para el servicio de nube
 
-Antes de enviar notificaciones con WNS, la aplicación debe registrarse en el panel de la Tienda. 
-
-Cada aplicación tiene su propio conjunto de credenciales para su servicio de nube. Estas credenciales no se pueden usar para enviar notificaciones a cualquier otra aplicación.
-
-### <a name="step-1-register-your-app-with-the-dashboard"></a>Paso 1: registrar la aplicación en el panel
-
-Para poder enviar notificaciones a través de WNS, la aplicación debe estar registrada en el panel del centro de Partners. Esto te proporcionará las credenciales de la aplicación que tu servicio en la nube usará en la autenticación con WNS. Estas credenciales son un identificador de seguridad de paquete (SID) y una clave secreta. Para realizar este registro, inicie sesión en el [centro de Partners](https://partner.microsoft.com/dashboard). Después de crear la aplicación, consulte [Product Management-WNS/MPNS](https://apps.dev.microsoft.com/) para instrunctions sobre cómo recuperar las credenciales (si quiere usar la solución Live Services, siga el vínculo **sitio de servicios Live** en esta página).
-
-Para registrarse:
-1.    Vaya a la página de aplicaciones de la tienda Windows del centro de Partners e inicie sesión con su cuenta de Microsoft personal (por ejemplo johndoe@outlook.com ,, janedoe@xboxlive.com ).
-2.    Una vez que haya iniciado sesión, haga clic en el vínculo panel.
-3.    En el panel, seleccione crear una nueva aplicación.
-
-![registro de la aplicación WNS](../images/wns-create-new-app.png)
-
-4.    Cree la aplicación reservando un nombre de aplicación. Proporcione un nombre único para la aplicación. Escriba el nombre y haga clic en el botón reservar nombre del producto. Si el nombre está disponible, se reserva para la aplicación. Una vez que haya reservado correctamente un nombre para la aplicación, los demás detalles estarán disponibles para modificarlos en este momento.
-
-![nombre de producto reservado de WNS](../images/wns-reserve-poduct-name.png)
- 
-### <a name="step-2-obtain-the-identity-values-and-credentials-for-your-app"></a>Paso 2: obtener los valores de identidad y las credenciales de la aplicación
-
-Al reservar un nombre para la aplicación, la tienda Windows crea las credenciales asociadas. También se asignaron valores de identidad asociados (nombre y publicador) que deben estar presentes en el archivo de manifiesto de la aplicación (package. appxmanifest). Si ya ha cargado la aplicación en la tienda Windows, estos valores se agregarán automáticamente al manifiesto. Si no ha cargado la aplicación, tendrá que agregar manualmente los valores de identidad al manifiesto.
-
-1.    Seleccione la flecha desplegable administración del producto
-
-![Administración de productos de WNS](../images/wns-product-management.png)
-
-2.    En el menú desplegable administración del producto, seleccione el vínculo WNS/MPNS.
-
-![Administración de productos de WNS continuted](../images/wns-product-management2.png)
- 
-3.    En la página WNS/MPNS, haga clic en el vínculo sitio de servicios Live que se encuentra en la sección Notification Services de Windows inserciones (WNS) y Microsoft Azure Mobile Services.
-
-![servicios Live de WNS](../images/wns-live-services-page.png)
- 
-4.    La página del portal de registro de aplicaciones (anteriormente, la página Live Services) proporciona un elemento Identity que se incluirá en el manifiesto de la aplicación. Esto incluye los secretos de la aplicación, el identificador de seguridad del paquete y la identidad de la aplicación. Abra el manifiesto en un editor de texto y agregue el elemento que indica la página.    
-
-> [!NOTE]
-> Si ha iniciado sesión con una cuenta de AAD, deberá ponerse en contacto con el cuenta de Microsoft propietario que registró la aplicación para obtener los secretos de la aplicación asociada. Si necesita ayuda para encontrar esta persona de contacto, haga clic en el engranaje en la esquina superior derecha de la pantalla y, a continuación, haga clic en configuración del desarrollador y la dirección de correo electrónico de la persona que creó la aplicación con su cuenta de Microsoft se mostrará ahí.
- 
-5.    Cargue el SID y el secreto de cliente en el servidor en la nube.
-
-> [!Important]
-> El SID y el secreto de cliente deben almacenarse de forma segura y el servicio en la nube puede acceder a ellos. La divulgación o el robo de esta información podría permitir que un atacante envíe notificaciones a los usuarios sin su permiso o conocimiento.
+Para poder enviar notificaciones mediante WNS, la aplicación debe estar registrada en el panel de la tienda, tal como se describe [aquí](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-windows-store-dotnet-get-started-wns-push-notification).
 
 ## <a name="requesting-a-notification-channel"></a>Solicitud de un canal de notificación
 

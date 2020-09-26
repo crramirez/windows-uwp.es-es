@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 152254e5b4c0bfb8aec1e88a8d370863df88fe85
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ecb35a262f02576f0425460c8e27ce0016a08d1a
+ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170889"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91366901"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -83,8 +83,6 @@ Una aplicación nunca puede usar las claves de otra aplicación y un usuario nun
 Ahora que tenemos un conocimiento básico de cómo funciona Windows Hello, echemos un vistazo a cómo implementarlos en nuestras propias aplicaciones.
 
 Hay diferentes escenarios que se pueden implementar con Windows Hello. Por ejemplo, iniciar sesión en tu aplicación en un dispositivo. Otro escenario habitual sería autenticarse en un servicio. En lugar de usar un nombre de inicio de sesión y una contraseña, utilizará Windows Hello. En los capítulos siguientes, trataremos la implementación de un par de escenarios diferentes, incluido cómo autenticarse en los servicios con Windows Hello y cómo convertir de un sistema de nombre de usuario o contraseña existente en un sistema de Windows Hello.
-
-Por último, tenga en cuenta que las API de Windows Hello requieren el uso del SDK de Windows 10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar el SDK de Windows 10.0.10240 para las aplicaciones que se van a implementar en Windows 10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows 10, versión 1511.
 
 ## <a name="3-implementing-windows-hello"></a>3 implementación de Windows Hello
 

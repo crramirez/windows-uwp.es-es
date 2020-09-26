@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d85df48b4f43759013f80623595d919ac6c77337
-ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
+ms.openlocfilehash: a488126de73fccfd8a783ddde98b4245b46ced39
+ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90593439"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91366871"
 ---
 # <a name="composition-visual"></a>Elemento visual de composición
 
@@ -24,10 +24,10 @@ Hay varios tipos visuales que componen la estructura de árbol visual y una clas
 - [**Visual**](/uwp/api/Windows.UI.Composition.Visual): objeto base, la mayoría de las propiedades están aquí y las heredan los otros objetos Visual.
 - [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual): se deriva del objeto [**Visual**](/uwp/api/Windows.UI.Composition.Visual) y agrega la capacidad para crear los elementos secundarios.
   - [**SpriteVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Tiene la capacidad de asociar un pincel para que el objeto visual pueda representar píxeles, incluidas imágenes, efectos o un color sólido.
-  - [**LayerVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Los elementos secundarios del elemento visual se acoplan en una sola capa.<br/>(_Introducido en Windows 10, versión 1607, SDK 14393)._
-  - [**ShapeVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Un nodo de árbol visual que es la raíz de un CompositionShape.<br/>(_Introducido en Windows 10, versión 1803, SDK 17134)._
-  - [**RedirectVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). El visual obtiene su contenido de otro visual.<br/>(_Introducido en Windows 10, versión 1809, SDK 17763)._
-  - [**SceneVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Un contenedor visual para los nodos de una escena 3D.<br/>(_Introducido en Windows 10, versión 1903, SDK 18362)._
+  - [**LayerVisual**](/uwp/api/Windows.UI.Composition.LayerVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Los elementos secundarios del elemento visual se acoplan en una sola capa.<br/>(_Introducido en Windows 10, versión 1607, SDK 14393)._
+  - [**ShapeVisual**](/uwp/api/Windows.UI.Composition.ShapeVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Un nodo de árbol visual que es la raíz de un CompositionShape.<br/>(_Introducido en Windows 10, versión 1803, SDK 17134)._
+  - [**RedirectVisual**](/uwp/api/Windows.UI.Composition.RedirectVisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). El visual obtiene su contenido de otro visual.<br/>(_Introducido en Windows 10, versión 1809, SDK 17763)._
+  - [**SceneVisual**](/uwp/api/windows.ui.composition.scenes.scenevisual) : se deriva de [**ContainerVisual**](/uwp/api/Windows.UI.Composition.ContainerVisual). Un contenedor visual para los nodos de una escena 3D.<br/>(_Introducido en Windows 10, versión 1903, SDK 18362)._
 
 Puede aplicar contenido y efectos a SpriteVisuals mediante [**CompositionBrush**](/uwp/api/Windows.UI.Composition.CompositionBrush) y sus subclases, incluidos [**CompositionColorBrush**](/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) y [**CompositionEffectBrush**](/uwp/api/Windows.UI.Composition.CompositionEffectBrush). Para obtener más información sobre los pinceles, consulte [**información general de CompositionBrush**](./composition-brushes.md).
 
