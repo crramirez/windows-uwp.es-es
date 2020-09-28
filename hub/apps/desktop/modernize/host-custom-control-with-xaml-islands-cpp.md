@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d61abe8b59f916ed56c1fefe0bda4b9f25b673a4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 82eaee6b29336559455a86dfdba3debc288babbb
+ms.sourcegitcommit: fd6ca4e9426a5fe46138012d1fecf56f9f621a3f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173729"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90825277"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++
 
@@ -176,7 +176,7 @@ Ahora estás listo para agregar código al proyecto **MyUWPApp** para realizar e
 
 ### <a name="define-a-xamlapplication-class"></a>Definición de una clase XamlApplication
 
-A continuación, revisa la clase **App** predeterminada en el proyecto **MyUWPApp** para derivarla de la clase [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows. Esta clase admite la interfaz [IXamlMetadaraProvider](/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider), que permite que la aplicación detecte y cargue metadatos para controles XAML de UWP personalizados en ensamblados del directorio actual de la aplicación en tiempo de ejecución. Esta clase también inicializa el marco XAML de UWP para el subproceso actual. Más adelante en este tutorial, actualizarás el proyecto de escritorio para crear una instancia de esta clase.
+A continuación, revisa la clase **App** predeterminada en el proyecto **MyUWPApp** para derivarla de la clase [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows. Esta clase admite la interfaz [IXamlMetadataProvider](/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider), que permite que la aplicación detecte y cargue metadatos para controles XAML de UWP personalizados en ensamblados del directorio actual de la aplicación en tiempo de ejecución. Esta clase también inicializa el marco XAML de UWP para el subproceso actual. Más adelante en este tutorial, actualizarás el proyecto de escritorio para crear una instancia de esta clase.
 
   > [!NOTE]
   > Cada solución que usa islas XAML puede contener solo un proyecto que define un objeto `XamlApplication`. Todos los controles XAML de UWP personalizados de la aplicación comparten el mismo objeto `XamlApplication`. 
@@ -284,12 +284,12 @@ A continuación, revisa la clase **App** predeterminada en el proyecto **MyUWPAp
             }
         private:
             bool _contentLoaded{ false };
-            std::shared_ptr<XamlMetaDataProvider> _appProvider;
-            std::shared_ptr<XamlMetaDataProvider> AppProvider()
+            winrt::com_ptr<XamlMetaDataProvider> _appProvider;
+            winrt::com_ptr<XamlMetaDataProvider> AppProvider()
             {
                 if (!_appProvider)
                 {
-                    _appProvider = std::make_shared<XamlMetaDataProvider>();
+                    _appProvider = winrt::make_self<XamlMetaDataProvider>();
                 }
                 return _appProvider;
             }
@@ -561,7 +561,7 @@ En esta sección se muestra cómo agregar un control de UWP desde la biblioteca 
     xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     ```
 
-5. En el mismo archivo, agrega un elemento `<winui:RatingControl />` como secundario de `<StackPanel>` y guarda los cambios. Este elemento agrega una instancia de la clase [RatingControl] (https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol ) de la biblioteca WinUI. Después de agregar este elemento, `<StackPanel>` debería tener un aspecto similar al siguiente.
+5. En el mismo archivo, agrega un elemento `<winui:RatingControl />` como secundario de `<StackPanel>` y guarda los cambios. Este elemento agrega una instancia de la clase [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol) de la biblioteca WinUI. Después de agregar este elemento, `<StackPanel>` debería tener un aspecto similar al siguiente.
 
     ```xml
     <StackPanel HorizontalAlignment="Center" Spacing="10" 

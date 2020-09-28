@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 29064390e4e198d1220d40ff5ce58a63ea41e29a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d0a1d1b7685ae76c26c94fa104b6c0ff6334364d
+ms.sourcegitcommit: 609441402c17d92e7bfac83a6056909bb235223c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172789"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90837830"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Ampliación de la aplicación de escritorio con componentes de UWP modernos
 
@@ -43,7 +43,7 @@ Si la solución no contiene un proyecto de empaquetado, consulta [Empaquetado de
 
 Asegúrate de que la aplicación de escritorio tiene referencias a los archivos que necesitas para llamar a las API de Windows Runtime.
 
-Para ello, consulta la sección [Configurar el proyecto](desktop-to-uwp-enhance.md#set-up-your-project).
+Para ello, consulte [Llamada a las API de Windows Runtime en aplicaciones de escritorio](desktop-to-uwp-enhance.md).
 
 ### <a name="add-a-uwp-project"></a>Agregar un proyecto de UWP
 
@@ -51,15 +51,15 @@ Agrega una **Aplicación vacía (Windows universal)** a la solución.
 
 Aquí es donde debes crear una interfaz de usuario XAML moderna o usar las API que se ejecutan solo dentro de un proceso de UWP.
 
-![Proyecto de UWP](images/desktop-to-uwp/add-uwp-project-to-solution.png)
+![Incorporación de proyecto nuevo](images/desktop-to-uwp/add-uwp-project-to-solution.png)
 
 En tu proyecto de empaquetado, haz clic con el botón derecho en el nodo **Aplicaciones** y, a continuación, elige **Agregar referencia**.
 
-![Referencia al proyecto de UWP](images/desktop-to-uwp/add-uwp-project-reference.png)
+![Agregar referencia](images/desktop-to-uwp/add-uwp-project-reference.png)
 
 A continuación, agrega una referencia al proyecto de UWP.
 
-![Referencia al proyecto de UWP](images/desktop-to-uwp/choose-uwp-project.png)
+![Seleccionar proyecto de UWP](images/desktop-to-uwp/choose-uwp-project.png)
 
 Tu solución debe tener un aspecto similar a este:
 
@@ -471,7 +471,7 @@ A continuación, elige las propiedades deseadas. En nuestro ejemplo se usa la pr
 
 Proporciona el nombre completo de la clase en el componente de Windows Runtime que implementa la tarea en segundo plano.
 
-![Propiedad Timer](images/desktop-to-uwp/background-task-entry-point.png)
+![Especificar el punto de entrada](images/desktop-to-uwp/background-task-entry-point.png)
 
 <a id="register-background-task"></a>
 

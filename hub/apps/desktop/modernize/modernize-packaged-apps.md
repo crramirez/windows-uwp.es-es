@@ -1,5 +1,5 @@
 ---
-Description: Obtén información sobre cómo agregar experiencias modernas para los usuarios de Windows 10 en una aplicación de escritorio que ha empaquetado en un paquete de aplicación de Windows.
+description: Obtén información sobre cómo agregar experiencias modernas para los usuarios de Windows 10 en una aplicación de escritorio que ha empaquetado en un paquete de aplicación de Windows.
 title: Modernización de aplicaciones de escritorio empaquetadas
 ms.date: 04/22/2019
 ms.topic: article
@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d1ce2e7dc434558ac1efd52f6def99d63b38c57e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: adcf1e26ba5ebd2d4fb3b901e27e49da4b6d89dd
+ms.sourcegitcommit: 5d7168ebc9f43aa13051446aff45a46600e6aafe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161519"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90783047"
 ---
 # <a name="features-that-require-package-identity"></a>Características que requieren la identidad del paquete
 
@@ -33,6 +33,12 @@ La siguiente lista de API de Windows Runtime requieren que se use la identidad d
 Si la aplicación se debe integrar con el sistema (por ejemplo, establecer reglas de firewall), describe estas cuestiones en el manifiesto del paquete de la aplicación y el sistema se encargará del resto. Para la mayoría de estas tareas, no tendrás que escribir nada de código. Con un poco de XML en el manifiesto, puedes hacer varias cosas; por ejemplo, puedes iniciar un proceso cuando el usuario inicie sesión, integrar la aplicación en el Explorador de archivos y agregarla a una lista de los destinos de impresión que aparecen en otras aplicaciones.
 
 Para obtener más información, consulta [Integración de aplicaciones de escritorio con extensiones de paquete](desktop-to-uwp-extensions.md).
+
+## <a name="get-activation-info-for-packaged-apps"></a>Obtener información de activación de aplicaciones empaquetadas
+
+A partir de Windows 10, versión 1809, las aplicaciones de escritorio empaquetadas pueden recuperar determinados tipos de información de activación durante el inicio. Por ejemplo, puede obtener información relacionada con la activación de la aplicación al abrir un archivo, al hacer clic en una notificación del sistema interactiva o mediante un protocolo.
+
+Para más información, consulte [Obtención de la información de activación para aplicaciones empaquetadas](get-activation-info-for-packaged-apps.md).
 
 ## <a name="extend-with-uwp-components"></a>Ampliación con componentes de UWP
 
