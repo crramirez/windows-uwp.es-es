@@ -6,12 +6,12 @@ ms.date: 05/29/2020
 ms.topic: article
 keywords: Windows 10, UWP, operadores móviles, facturación móvil, facturación de operadores móviles
 ms.localizationpriority: medium
-ms.openlocfilehash: 2be7938faddaf50c96005f32c77f523ebf4061e3
-ms.sourcegitcommit: ae195892efb9d3abd1190776617984d4219c6777
+ms.openlocfilehash: 9dbdd2a86d33cf1392844294952eb9223676e256
+ms.sourcegitcommit: 426ccbdaa26bd16c7f0b270e8a51ac4ba87a5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85913231"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590654"
 ---
 # <a name="mobile-operator-billing"></a>Facturación de operadores de telefonía móvil
 
@@ -52,6 +52,5 @@ Actualmente, los operadores móviles admiten la facturación de operadores móvi
 | Suiza          | Amanecer, Swisscom                                       |
 | Taiwán               | FarEasTone                                              |
 | Turquía               | Turkcell                                                |
-| Emiratos Árabes Unidos | Etisalat                                                |
 | Estados Unidos        | Sprint, Verizon                                         |
 | Reino Unido       | 3 RU, EE, O2, Vodaphone                                 |
