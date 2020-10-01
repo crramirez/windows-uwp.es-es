@@ -5,12 +5,12 @@ keywords: novedades, actualización, actualizaciones, características, instrucc
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: eb6900b4d5ad529ee2e94f09439dda6abcaebac8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 92ed09940800160af8fcff6aec7dde26144cffe9
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174399"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220338"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novedades en los documentos para desarrolladores de Windows de agosto de 2018
 
@@ -58,7 +58,7 @@ El sitio de [documentos de Proyecto Roma](/windows/project-rome/) se ha reorgani
 
 ### <a name="xbox-live-unity-plugin"></a>Complemento de Xbox Live para Unity
 
-El complemento de Xbox Live para Unity incluye compatibilidad para agregar firma, estadísticas, listas de amigos, almacenamiento en la nube y marcadores de Xbox Live en tu título. [Mira el vídeo](https://youtu.be/fVQZ-YgwNpY) para obtener más información y, luego, [descarga el paquete de GitHub](https://aka.ms/UnityPlugin) para empezar a trabajar.
+El complemento de Xbox Live para Unity incluye compatibilidad para agregar firma, estadísticas, listas de amigos, almacenamiento en la nube y marcadores de Xbox Live en tu título. [Mira el vídeo](https://youtu.be/fVQZ-YgwNpY) para obtener más información y, luego, [descarga el paquete de GitHub](/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/live-cr-unity-win10-nav?WT.mc_id=windowsdocs-twi) para empezar a trabajar.
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollador
 

@@ -2,7 +2,7 @@
 description: Reveal es un efecto de iluminación que te ayuda a dar profundidad y foco a los elementos interactivos de tu aplicación.
 title: Mostrar resaltado
 template: detail.hbs
-ms.date: 08/09/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: kisai
@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ac07b8caacd4369bcbadf2a4019bbcbde59c6b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 23f23cd65564df5f224696faabae74aa4465a438
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159979"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216875"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 

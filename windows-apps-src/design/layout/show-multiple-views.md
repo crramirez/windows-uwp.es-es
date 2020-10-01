@@ -1,16 +1,16 @@
 ---
 description: Ayude a los usuarios a ser más productivos al permitirles ver partes independientes de la aplicación en ventanas distintas.
 title: Mostrar varias vistas de una aplicación
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b58841420c93f3fee02b0f283012fe45c468618
-ms.sourcegitcommit: b0cfbab1ed8749ef572ba6971e6b206717d12c12
+ms.openlocfilehash: 2b25ceaac900868479c9145b9dad5977ca213f03
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89219138"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218488"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar varias vistas de una aplicación
 

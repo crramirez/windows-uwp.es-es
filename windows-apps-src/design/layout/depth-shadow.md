@@ -3,18 +3,18 @@ author: knicholasa
 description: La profundidad Z, o profundidad relativa, y la sombra son dos maneras de incorporar profundidad en la aplicación para ayudar a los usuarios a centrarse de forma natural y eficaz.
 title: Profundidad Z y sombra en aplicaciones de Windows
 template: detail.hbs
-ms.date: 04/19/2019
+ms.date: 09/24/2020
 ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: fc2adb295df97cf1af49608d15c135b9f56b4594
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ffabb494d10f802668e57ebb9cfd122ac5304d46
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165569"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219388"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidad Z y sombra
 

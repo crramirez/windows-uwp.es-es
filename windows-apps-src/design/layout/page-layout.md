@@ -1,16 +1,16 @@
 ---
 title: Diseño de página para aplicaciones de Windows
 description: Al diseñar la aplicación, lo primero que hay que tener en cuenta es la estructura de diseño. En este artículo se trata la estructura común de los diseños de página básicos, incluidos los elementos de interfaz de usuario que necesitarás y dónde deben colocarse en una página. En las aplicaciones de Windows, cada página normalmente tiene elementos de navegación, comandos y contenido.
-ms.date: 03/19/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 551d937836f0dcf0094e54a503d2a8cd80a2f28b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5473542019a4f8afa3e916b914127e41a4fe05d4
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169529"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218628"
 ---
 # <a name="page-layout"></a>Diseño de página
 

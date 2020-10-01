@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, troubleshooting, HRESULT, error
 ms.localizationpriority: medium
-ms.openlocfilehash: e517f796d1352d9373321d456d77875ebd54afbd
-ms.sourcegitcommit: 21eb13a50402bf5442a5f0a4bf34800d1dc679c4
+ms.openlocfilehash: 94cfb51d9fd832a29c71049a2255e35c4bc6f484
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90804725"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219968"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Solución de problemas de C++/WinRT
 
@@ -59,7 +59,7 @@ Si tu aplicación finaliza y todo lo que sabes es que se ha producido una excepc
 | El proyecto genera "*acceso ambiguo de 'PopulatePropertyInfoOverride'*". | Este error puede producirse cuando se declaran una clase base en el archivo IDL y una clase base diferente en el marcado XAML. |
 | Cargar una solución de C++/WinRT por primera vez genera el error "*Error de compilación en tiempo de diseño para la configuración del proyecto 'MyProject.vcxproj' 'Debug\|x86'. Es posible que IntelliSense no esté disponible.* ". | Después de compilar por primera vez, se resolverá este problema de IntelliSense. |
 | Si intentas especificar [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-revoke-t) al registrar un delegado, se genera una excepción [**winrt::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface). | Consulta [If your auto-revoke delegate fails to register](handle-events.md#if-your-auto-revoke-delegate-fails-to-register) (Si el delegado de revocación automática no se registra). |
-|En una aplicación de C++ o WinRT, al consumir un [componente de Windows Runtime para C#](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic) que usa XAML, el compilador genera un error con el formato " *'MyNamespace_XamlTypeInfo': no es miembro de 'winrt::MyNamespace'* "&mdash; donde *MyNamespace* es el nombre del espacio de nombres del componente de Windows Runtime. | En el archivo `pch.h` de la aplicación que consume C++ o WinRT, agregue `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>`&mdash; reemplace *MyNamespace* según corresponda. |
+|En una aplicación de C++ o WinRT, al consumir un [componente de Windows Runtime para C#](../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md) que usa XAML, el compilador genera un error con el formato " *'MyNamespace_XamlTypeInfo': no es miembro de 'winrt::MyNamespace'* "&mdash; donde *MyNamespace* es el nombre del espacio de nombres del componente de Windows Runtime. | En el archivo `pch.h` de la aplicación que consume C++ o WinRT, agregue `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>`&mdash; reemplace *MyNamespace* según corresponda. |
 
 > [!NOTE]
 > Si en este tema no hemos respondido a tu pregunta, podrás encontrar ayuda en la [comunidad de desarrolladores de C++ de Visual Studio](https://developercommunity.visualstudio.com/spaces/62/index.html) o mediante la [etiqueta `c++-winrt` en Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

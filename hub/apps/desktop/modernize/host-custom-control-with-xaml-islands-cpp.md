@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 82eaee6b29336559455a86dfdba3debc288babbb
-ms.sourcegitcommit: fd6ca4e9426a5fe46138012d1fecf56f9f621a3f
+ms.openlocfilehash: c74e6fbb8907a25af6fe6e4ad6439dbaca425b84
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90825277"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216778"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++
 
@@ -561,7 +561,7 @@ En esta sección se muestra cómo agregar un control de UWP desde la biblioteca 
     xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     ```
 
-5. En el mismo archivo, agrega un elemento `<winui:RatingControl />` como secundario de `<StackPanel>` y guarda los cambios. Este elemento agrega una instancia de la clase [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol) de la biblioteca WinUI. Después de agregar este elemento, `<StackPanel>` debería tener un aspecto similar al siguiente.
+5. En el mismo archivo, agrega un elemento `<winui:RatingControl />` como secundario de `<StackPanel>` y guarda los cambios. Este elemento agrega una instancia de la clase [RatingControl](/uwp/api/microsoft.ui.xaml.controls.ratingcontrol) de la biblioteca WinUI. Después de agregar este elemento, `<StackPanel>` debería tener un aspecto similar al siguiente.
 
     ```xml
     <StackPanel HorizontalAlignment="Center" Spacing="10" 

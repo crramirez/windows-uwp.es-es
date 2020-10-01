@@ -3,7 +3,7 @@ description: Obtenga información sobre cómo usar un selector de colores para p
 title: Selector de colores
 label: Color Picker
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: kisai
@@ -11,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c6739263917ab48040a2780a750948215d8d6361
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e9007d73a347fbd2575d198ed6af858f629e6cf6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173519"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217528"
 ---
 # <a name="color-picker"></a>Selector de colores
 

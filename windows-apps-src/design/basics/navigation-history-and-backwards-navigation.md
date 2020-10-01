@@ -3,16 +3,16 @@ Description: Obtén información sobre cómo implementar la navegación hacia at
 title: Historial de navegación y navegación hacia atrás
 template: detail.hbs
 op-migration-status: ready
-ms.date: 04/09/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fe9cbb9fdc9d73a38642a4f5894b1ef0f8182e69
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f3eb7ff033a81e358cb74e670b3235ade17e8a87
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174519"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220048"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Historial de navegación y navegación hacia atrás para aplicaciones de Windows
 
@@ -336,14 +336,14 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Página a página, mismo grupo del mismo nivel, sin elemento de navegación en pantalla</strong>
-<p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. No hay elemento de navegación en pantalla (como <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>) que proporcione navegación directa a las dos páginas.</p></td>
+<p>El usuario navega de una página a otra con el mismo grupo del mismo nivel. No hay elemento de navegación en pantalla (como <a href="/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>) que proporcione navegación directa a las dos páginas.</p></td>
 <td style="vertical-align:top;"><strong>Sí</strong>
 <p>En la siguiente ilustración, el usuario navega entre las dos páginas en el mismo grupo del mismo nivel y la navegación se debe agregar al historial de navegación.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Página a página, mismo grupo del mismo nivel, con un elemento de navegación en pantalla</strong>
-<p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, como <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
+<p>El usuario navega de una página a otra en el mismo grupo del mismo nivel. Ambas páginas se muestran en el mismo elemento de navegación, como <a href="/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>.</p></td>
 <td style="vertical-align:top;"><strong>Depende</strong>
 <p>Sí, se agrega al historial de navegación, con 2 excepciones importantes. Si esperas que los usuarios de tu aplicación cambien de una página a otra en el grupo del mismo nivel con frecuencia, o si quieres conservar la jerarquía de navegación, no agregues al historial de navegación. En este caso, cuando el usuario presiona o pulsa Atrás, vuelve a la página previa antes de que este haya navegado al grupo actual del mismo nivel. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>

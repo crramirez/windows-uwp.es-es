@@ -2,17 +2,17 @@
 Description: NumberBox es un control que se puede usar para mostrar y editar números.
 title: Cuadro de número
 template: detail.hbs
-ms.date: 11/27/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e3bcbfc338d629bbda1036ef722d75ed6df37cd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9e0cd1979ca1929adc35537dfd3efccc97466391
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169759"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217978"
 ---
 # <a name="number-box"></a>Cuadro de número
 
@@ -174,7 +174,7 @@ Con respecto a las comas y puntos decimales, el formato utilizado por un usuario
 
 ### <a name="input-scope"></a>Ámbito de entrada
 
-Se usará `Number` para el [ámbito de entrada](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue). Este ámbito de entrada está pensado para trabajar con los dígitos del 0 al 9. Se puede sobrescribir, pero no se admiten explícitamente los tipos de InputScope alternativos.
+Se usará `Number` para el [ámbito de entrada](/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue). Este ámbito de entrada está pensado para trabajar con los dígitos del 0 al 9. Se puede sobrescribir, pero no se admiten explícitamente los tipos de InputScope alternativos.
 
 ### <a name="not-a-number"></a>No es un número
 

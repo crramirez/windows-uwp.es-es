@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 83e27ef72aea195268d5163dea3b050f48547d5c
-ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
+ms.openlocfilehash: aa72b01e6c567e55e36e7f182ca962367346980c
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89412029"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220428"
 ---
 # <a name="text-block"></a>Bloque de texto
 
@@ -85,7 +85,7 @@ Ciertas condiciones requieren TextBlock para volver a una ruta de acceso más en
 - [CharacterSpacing](/uwp/api/windows.ui.xaml.controls.textblock.characterspacing): solo el valor predeterminado de 0 es la ruta de acceso rápido.
 - [TextTrimming](/uwp/api/windows.ui.xaml.controls.textblock.texttrimming): solo los valores **None**, **CharacterEllipsis** y **WordEllipsis** son la ruta de acceso rápido. El valor **Clip** deshabilita la ruta de acceso rápido.
 
-> **Nota**&nbsp;&nbsp;Antes de Windows 10, versión 1607, las propiedades adicionales también afectaban a la ruta de acceso rápido. Si la aplicación se ejecuta en una versión anterior de Windows, estas condiciones provocarán que el texto se represente en la ruta de acceso lento. Para obtener más información sobre las versiones, consulte [Código adaptativo para versiones](/windows/uwp/debug-test-perf/version-adaptive-code).
+> **Nota**&nbsp;&nbsp;Antes de Windows 10, versión 1607, las propiedades adicionales también afectaban a la ruta de acceso rápido. Si la aplicación se ejecuta en una versión anterior de Windows, estas condiciones provocarán que el texto se represente en la ruta de acceso lento. Para obtener más información sobre las versiones, consulte [Código adaptativo para versiones](../../debug-test-perf/version-adaptive-code.md).
 - [Tipografía](/uwp/api/Windows.UI.Xaml.Documents.Typography): solo los valores predeterminados de las diversas propiedades Typography son considerados ruta de acceso rápido.
 - [LineStackingStrategy](/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy): si [LineHeight](/uwp/api/windows.ui.xaml.controls.textblock.lineheight) no es 0, los valores **BaselineToBaseline** y **MaxHeight** deshabilitan la ruta de acceso rápido.
 - [IsTextSelectionEnabled](/uwp/api/windows.ui.xaml.controls.textblock.istextselectionenabled): solo **false** es la ruta de acceso rápido. Establecer esta propiedad en **true** deshabilita la ruta de acceso rápido.

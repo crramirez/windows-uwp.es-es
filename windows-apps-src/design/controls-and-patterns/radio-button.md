@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ee933bd28594263e61e654b14b0541c6fa9ed41b
-ms.sourcegitcommit: 875bd348608547e7a66fa4b460efe64b3246807e
+ms.openlocfilehash: 9d6fe34d9f53142cfe2148f79bf936a473012a49
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90080847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219059"
 ---
 # <a name="radio-buttons"></a>Botones de radio
 
@@ -45,41 +45,39 @@ El comportamiento único de un grupo RadioButtons lo distingue de las [casillas]
 >Existen dos maneras de crear grupos de botones de radio.
 >
 >- A partir de la versión WinUI 2.3, se recomienda el control **[RadioButtons](/uwp/api/microsoft.ui.xaml.controls.radiobuttons)** . Este control simplifica el diseño, controla la navegación y la accesibilidad del teclado, y admite el enlace a un origen de datos.
->- Puede usar grupos de controles **[RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton)** individuales. Si la aplicación no usa WinUI 2.3 o una versión posterior, esta es la única opción.
+>- Puede usar grupos de controles **[RadioButton](/uwp/api/Windows.UI.Xaml.Controls.RadioButton)** individuales. Si la aplicación no usa WinUI 2.3 o una versión posterior, esta es la única opción.
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Use botones de radio para permitir que los usuarios seleccionen entre dos o más opciones mutuamente excluyentes.
 
-:::image type="content" source="images/radiobutton_basic.png" alt-text="Grupo RadioButtons con un botón de radio seleccionado":::
+:::image type="content" source="images/radiobutton_basic.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 Use botones de radio cuando los usuarios necesiten ver todas las opciones antes de realizar una selección. Los botones de radio enfatizan todas las opciones por igual, lo que significa que algunas opciones pueden atraer más atención de la necesaria o deseada.
 
 Salvo que todas las opciones se merezcan la misma atención, debería plantearse usar otros controles. Por ejemplo, para recomendar una única mejor opción para la mayoría de los usuarios y en la mayoría de las situaciones, use un [cuadro combinado](combo-box.md) para mostrar la mejor opción como opción predeterminada.
 
-:::image type="content" source="images/combo_box_collapsed.png" alt-text="Un cuadro combinado, que muestra una opción predeterminada":::
-
-Si solo hay dos opciones posibles que se pueden expresar claramente como una sola opción binaria, como on/off o yes/no, combínelas en una sola [casilla](checkbox.md) o un control [conmutador de alternancia](toggles.md). Por ejemplo, use una única casilla para "Acepto", en lugar de dos botones de radio para "Acepto" y "No acepto".
+:::image type="content" source="images/combo_box_collapsed.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado" y "No acepto".
 
 No use dos botones de opción para una única opción binaria:
 
-:::image type="content" source="images/radiobutton-vs-checkbox-rb.png" alt-text="Dos botones de radio que presentan una selección binaria":::
+:::image type="content" source="images/radiobutton-vs-checkbox-rb.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 En su lugar, utilice una casilla:
 
-:::image type="content" source="images/radiobutton-vs-checkbox-cb.png" alt-text="Una casilla es una buena alternativa para presentar una elección entre dos opciones":::
+:::image type="content" source="images/radiobutton-vs-checkbox-cb.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 Use [casillas](checkbox.md) cuando el usuario pueda seleccionar varias opciones.
 
-:::image type="content" source="images/checkbox2.png" alt-text="Casillas que admiten la selección múltiple":::
+:::image type="content" source="images/checkbox2.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 Cuando las opciones de los usuarios se encuentran dentro de un intervalo de valores (por ejemplo, *10, 20, 30... 100*), use un [control deslizante](slider.md).
 
-:::image type="content" source="images/controls/slider.png" alt-text="Control deslizante que muestra un valor en un intervalo de valores":::
+:::image type="content" source="images/controls/slider.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 Si hay más de ocho opciones, utilice un [cuadro combinado](combo-box.md).
 
-:::image type="content" source="images/combo_box_scroll.png" alt-text="Cuadro de lista que muestra varias opciones":::
+:::image type="content" source="images/combo_box_scroll.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 Si las opciones disponibles se basan en el contexto actual de la aplicación o pueden variar dinámicamente, use un control de lista.
 
@@ -294,9 +292,7 @@ Aquí se declara un control `RadioButtons` simple con tres opciones. La propieda
 
 El resultado tiene el aspecto siguiente:
 
-:::image type="content" source="images/radiobuttons-default-group.png" alt-text="Un grupo de tres botones de radio":::
-
-Para realizar una acción cuando el usuario selecciona una opción, controle el evento [SelectionChanged](/uwp/api/microsoft.ui.xaml.controls.radiobuttons.selectionchanged). Aquí, cambia el color de fondo de un elemento [Border](/uwp/api/windows.ui.xaml.controls.border) denominado "ExampleBorder" (`<Border x:Name="ExampleBorder" Width="100" Height="100"/>`).
+:::image type="content" source="images/radiobuttons-default-group.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado" (`<Border x:Name="ExampleBorder" Width="100" Height="100"/>`).
 
 ```csharp
 private void BackgroundColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -344,7 +340,7 @@ Aquí, se utilizan elementos [SymbolIcon](/uwp/api/windows.ui.xaml.controls.symb
 </muxc:RadioButtons>
 ```
 
-:::image type="content" source="images/radiobuttons-symbolicon.png" alt-text="Botones de radio de un grupo con iconos de símbolos":::
+:::image type="content" source="images/radiobuttons-symbolicon.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 También puede usar controles [RadioButton](/uwp/api/Windows.UI.Xaml.Controls.RadioButton) individuales para rellenar los elementos `RadioButtons`. Este es un caso especial que se tratará más adelante. Consulte [Controles RadioButton de un grupo RadioButtons]().
 
@@ -443,7 +439,7 @@ De forma predeterminada, el control `RadioButtons` organiza verticalmente sus bo
 </muxc:RadioButtons>
 ```
 
-:::image type="content" source="images/radiobuttons-multi-column.png" alt-text="Botones de radio en grupos de dos o tres columnas":::
+:::image type="content" source="images/radiobuttons-multi-column.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 > [!TIP]
 > Para que los elementos se organicen en una sola fila horizontal, establezca un valor de `MaxColumns` igual al número de elementos del grupo.
@@ -552,7 +548,7 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 Estos dos grupos de controles `RadioButton` tienen el siguiente aspecto:
 
-:::image type="content" source="images/radio-button-groups.png" alt-text="Botones de radio en dos grupos":::
+:::image type="content" source="images/radio-button-groups.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 ### <a name="radio-button-states"></a>Estados de los botones de radio
 
@@ -578,9 +574,9 @@ El espaciado predeterminado de los controles `RadioButton` individuales es difer
 
 Las siguientes imágenes muestran el espaciado preferido de los botones de radio de un grupo.
 
-:::image type="content" source="images/radiobutton-layout.png" alt-text="Imagen que muestra un conjunto de botones de radio, organizados verticalmente":::
+:::image type="content" source="images/radiobutton-layout.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
-:::image type="content" source="images/radiobutton-redline.png" alt-text="Imagen que muestra directrices de espaciado para botones de radio":::
+:::image type="content" source="images/radiobutton-redline.png" alt-text="Ejemplo de un grupo RadioButtons con un botón de radio seleccionado":::
 
 > [!NOTE]
 > Si usa un control RadioButtons de WinUI, tanto el espaciado como los márgenes y la orientación ya están optimizados.

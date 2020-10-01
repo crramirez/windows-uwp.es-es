@@ -4,16 +4,16 @@ title: Crear controles de transporte de contenido multimedia personalizados
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5dd1a27cb02a33a8d760f4d902a42c6619ad796
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fc68410a0e68d1c642057664bc9641669282bd7f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160419"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219548"
 ---
 # <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
@@ -217,7 +217,7 @@ Una razón por la que quizás quieras personalizar MediaTransportControls es par
 
 Debes agregarlo a CommandBar en la ubicación adecuada. (Para obtener más información, consulta la sección Trabajar con el menú de desbordamiento). La posición que ocupa en la interfaz de usuario la determina el lugar donde se encuentra el botón en el marcado. Por ejemplo, si quieres que este botón aparezca como el último elemento en los comandos principales, agrégalo al final de la lista de comandos principal.
 
-También puedes personalizar el icono del botón. Para obtener más información, consulta la referencia <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"><b>AppBarButton</b></a>.
+También puedes personalizar el icono del botón. Para obtener más información, consulta la referencia <a href="/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"><b>AppBarButton</b></a>.
     
 
 2. En la invalidación de [**OnApplyTemplate**](/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate), obtén el botón a partir de la plantilla y registra un controlador para su evento [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Este código se coloca en la clase `CustomMediaTransportControls`.
