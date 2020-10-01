@@ -2,16 +2,16 @@
 title: Estilo de escritura
 description: El uso del tono y la voz adecuados es fundamental para que el texto de la aplicación parezca una parte natural de su diseño.
 keywords: UWP, Windows 10, texto, escritura, voz, tono, diseño, IU, UX
-ms.date: 05/07/2018
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c17d4c0aca4c59e18a13bf42bad16e6739938717
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 324aae957d53c7ec63817c8f0e80909d25dc1c0a
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168679"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216628"
 ---
 # <a name="writing-style"></a>Estilo de escritura
 

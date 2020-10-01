@@ -2,18 +2,18 @@
 description: Obtenga información sobre el sistema Fluent Design en la Plataforma universal de Windows (UWP) y cómo integrarlo en sus aplicaciones.
 title: Fluent Design System para Windows
 keywords: uwp app layout, universal windows platform, app design, interface, fluent design system
-ms.date: 03/07/2018
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: a46aae591767ac6ded935d3b76d60bb8fbfa2746
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: 8a05a0a9aeb3a31e76c0510eef70b5ee3036d2f7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094532"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216838"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Los creadores de aplicaciones de Fluent Design System para Windows
 

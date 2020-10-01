@@ -7,16 +7,16 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 748646ce335e9e68ee7a22131ebd305db94e9801
-ms.sourcegitcommit: 5d7168ebc9f43aa13051446aff45a46600e6aafe
+ms.openlocfilehash: 5593b59a542f014e482c590b8d534804c836a1a7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90799858"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216728"
 ---
 # <a name="get-activation-info-for-packaged-apps"></a>Obtener información de activación de aplicaciones empaquetadas
 
-A partir de Windows 10, versión 1809, las aplicaciones de escritorio empaquetadas pueden llamar al método [AppInstance.GetActivatedEventArgs](/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs) para recuperar determinados tipos de información de activación de la aplicación durante el inicio. Por ejemplo, puede llamar a este método para obtener información relacionada con la activación de la aplicación al abrir un archivo, al hacer clic en una notificación del sistema interactiva o mediante un protocolo. A partir de Windows 10, versión 2004, esta característica también se admite en las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps).
+A partir de Windows 10, versión 1809, las aplicaciones de escritorio empaquetadas pueden llamar al método [AppInstance.GetActivatedEventArgs](/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs) para recuperar determinados tipos de información de activación de la aplicación durante el inicio. Por ejemplo, puede llamar a este método para obtener información relacionada con la activación de la aplicación al abrir un archivo, al hacer clic en una notificación del sistema interactiva o mediante un protocolo. A partir de Windows 10, versión 2004, esta característica también se admite en las aplicaciones que usan [paquetes dispersos](./grant-identity-to-nonpackaged-apps.md).
 
 > [!NOTE]
 > Además de recuperar determinados tipos de información de activación mediante el método [AppInstance.GetActivatedEventArgs](/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs) como se describe en este artículo, también puede recuperar información de activación de las tareas en segundo plano mediante la definición de una clase COM. Para más información, consulte [Creación y registro de una tarea en segundo plano COM de WinMain](/windows/uwp/launch-resume/create-and-register-a-winmain-background-task).
@@ -66,10 +66,10 @@ La información de activación de [ShareTargetActivatedEventArgs](/uwp/api/windo
 
 | Tipo de argumentos de eventos | Extensión de paquete | Documentos relacionados | 
 |-------------------|-----------------|-----------------------|
-| [ShareTargetActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.sharetargetactivatedeventargs) | [uap:ShareTarget](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-sharetarget) | [Convertir la aplicación de escritorio en un destino de recursos compartidos](/windows/apps/desktop/modernize/desktop-to-uwp-extend#making-your-desktop-application-a-share-target) |
-| [ProtocolActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs) | [uap:Protocol](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol) | [Iniciar la aplicación mediante un protocolo](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-by-using-a-protocol) |
+| [ShareTargetActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.sharetargetactivatedeventargs) | [uap:ShareTarget](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-sharetarget) | [Convertir la aplicación de escritorio en un destino de recursos compartidos](./desktop-to-uwp-extend.md#making-your-desktop-application-a-share-target) |
+| [ProtocolActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs) | [uap:Protocol](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol) | [Iniciar la aplicación mediante un protocolo](./desktop-to-uwp-extensions.md#start-your-application-by-using-a-protocol) |
 | [ToastNotificationActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.toastnotificationactivatedeventarg) | desktop:ToastNotificationActivation | [Notificaciones del sistema desde aplicaciones de escritorio](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps). |
-| [StartupTaskActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.startuptaskactivatedeventargs)  | desktop:StartupTask | [Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-an-executable-file-when-users-log-into-windows) |
-| [FileActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.fileactivatedeventargs) | [uap:FileTypeAssociation](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation) | [Asociar la aplicación empaquetada con un conjunto de tipos de archivo](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#associate-your-packaged-application-with-a-set-of-file-types) |
+| [StartupTaskActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.startuptaskactivatedeventargs)  | desktop:StartupTask | [Iniciar un archivo ejecutable cuando los usuarios inicien sesión en Windows](./desktop-to-uwp-extensions.md#start-an-executable-file-when-users-log-into-windows) |
+| [FileActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.fileactivatedeventargs) | [uap:FileTypeAssociation](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation) | [Asociar la aplicación empaquetada con un conjunto de tipos de archivo](./desktop-to-uwp-extensions.md#associate-your-packaged-application-with-a-set-of-file-types) |
 | [VoiceCommandActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.voicecommandactivatedeventargs) | Ninguno | [Controlar la activación y ejecutar los comandos de voz](/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana) |
 | [LaunchActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) | Ninguno |  |

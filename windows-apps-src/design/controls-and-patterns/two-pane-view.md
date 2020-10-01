@@ -2,16 +2,16 @@
 Description: TwoPaneView es un control de diseño que te ayuda a administrar la presentación de aplicaciones que tienen dos áreas de contenido distintas.
 title: Vista de dos paneles
 template: detail.hbs
-ms.date: 01/22/2020
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c2fd792b9652e38637810b4ccd0aee94075895b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d43c9b7f5674ed7f56f6f2d05bef44521095f56e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174699"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217238"
 ---
 # <a name="two-pane-view"></a>Vista de dos paneles
 

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, desarrollo de escritorio
-ms.openlocfilehash: d4415bc703acf0b94f6f8a6fe8aab053620336c6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0aa439010138af80f91c4e02776163577658d6cc
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168909"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216738"
 ---
 # <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
 
@@ -129,7 +129,7 @@ Estas aplicaciones permiten a los desarrolladores empaquetar su código de sitio
 
 ### <a name="xamarin"></a>Xamarin
 
-Usa Xamarin para crear aplicaciones multiplataforma para Windows 10 que también se puedan ejecutar en iOS y Android. Para más información, consulta [Xamarin](https://docs.microsoft.com/xamarin/xamarin-forms/get-started/index).
+Usa Xamarin para crear aplicaciones multiplataforma para Windows 10 que también se puedan ejecutar en iOS y Android. Para más información, consulta [Xamarin](/xamarin/xamarin-forms/get-started/index).
 
 ### <a name="uno-platform"></a>Plataforma Uno
 
