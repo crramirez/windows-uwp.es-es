@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 40100adb1bd9337d933b8ebd155847bde71e341a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 291b25e962aa8ac37705fd0db544f138036949d2
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172819"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636615"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a>Inicio del Desarrollador en la consola (dev Home)
    
@@ -30,10 +30,10 @@ Para iniciar dev Home en la recuperación de noviembre de 2015 o una versión po
    1. Seleccionar **toda la configuración**  
    1. En la página del **desarrollador** predeterminada, seleccione **desarrollador Inicio** (el icono Inicio).   
 
- ![](images/dev_home_icons.png)   
+ ![Captura de pantalla de la página del Desarrollador en configuración.](images/dev_home_icons.png)   
   
 En las recuperaciones anteriores, seleccione el icono de inicio de desarrollo en el lado derecho de la pantalla principal en **contenido destacado** o vea la lista de aplicaciones en el administrador de Xbox One e inicie **dev Home**.   
- ![](images/dev_home_1.png) 
+ ![Captura de pantalla de la pestaña aplicaciones que se muestra con la opción Launch resaltada.](images/dev_home_1.png) 
 <a id="ID4EBC"></a>
 
    
@@ -81,10 +81,10 @@ Varias herramientas existentes y futuras de dev Home, como networking y multijug
    
   
 Para acceder al modo de ajuste, resalte el título de la herramienta correspondiente, presione el botón **Ver** en el controlador y seleccione **ajustar** en el menú contextual:  
- ![](images/dev_home_4.png)   
+ ![Captura de pantalla de la Página principal de DEV que muestra la opción de ajuste resaltada.](images/dev_home_4.png)   
   
 Dev Home se acoplará a la derecha. Puede cambiar el contexto si presionas dos veces el botón Nexo de la forma habitual.  
- ![](images/dev_home_5.png)  
+ ![Captura de pantalla que muestra la Página principal de DEV ajustada a la derecha, donde se muestra que tiene acceso a las herramientas mientras realiza las pruebas.](images/dev_home_5.png)  
 <a id="ID4EKF"></a>
 
    
@@ -102,7 +102,7 @@ Dev Home se diseñó para ser personalizable y cercana. Puede configurar la apli
    
   
 Para cambiar el tamaño o la posición de una herramienta, use el botón de menú contextual (botón ver del controlador) mientras el título tenga el foco. En el menú contextual, seleccione **movimiento o cambio** de **tamaño**.   
- ![](images/dev_home_6.png)  
+ ![Captura de pantalla de la Página principal de DEV ajustada a la derecha que muestra la opción de movimiento resaltada.](images/dev_home_6.png)  
 <a id="ID4EEG"></a>
 
    
@@ -111,7 +111,7 @@ Para cambiar el tamaño o la posición de una herramienta, use el botón de men�
    
   
 En el menú principal, puede seleccionar **área de trabajo** y, a continuación, cambiar el **color del tema**. Seleccione un color nuevo y seleccione **Guardar** para actualizar el color del tema que se usa para resaltar el foco.   
- ![](images/dev_home_7.png)  
+ ![Captura de pantalla de la Página principal de DEV que muestra las opciones área de trabajo y cambiar color de tema seleccionadas.](images/dev_home_7.png)  
 <a id="ID4EVG"></a>
 
    
@@ -120,7 +120,7 @@ En el menú principal, puede seleccionar **área de trabajo** y, a continuación
    
   
 Si un paquete contiene varias aplicaciones, dev Home le permitirá establecer la aplicación predeterminada que se va a iniciar. Resalte el paquete en el iniciador y presione **el botón a para abrir la lista** de aplicaciones disponibles. Resalte el que desee establecer como predeterminado y haga clic en el botón **Ver** y, a continuación, elija **establecer como predeterminado** en el menú contextual.   
- ![](images/dev_home_setdefault.png)  
+ ![Captura de pantalla de la Página principal de DEV con la opción establecer como predeterminado resaltada.](images/dev_home_setdefault.png)  
 <a id="ID4EGH"></a>
 
    
@@ -129,13 +129,13 @@ Si un paquete contiene varias aplicaciones, dev Home le permitirá establecer la
    
   
 En el selector, en la parte inferior de la lista de aplicaciones y juegos instalados, puede seleccionar la opción **registrar un juego desde un recurso compartido de red** para ejecutar una versión de archivo flexible de un título de forma remota.   
- ![](images/dev_home_8.png)   
+ ![Captura de pantalla de la Página principal de DEV con la opción registrar un juego desde un recurso compartido de red resaltada.](images/dev_home_8.png)   
   
 Después, puede escribir la ruta de acceso de red al archivo appxmanifest.xml para el título que desea registrar. Dev Home intentará registrar el título con las credenciales existentes para ese recurso compartido y, si es necesario, solicitará nuevas credenciales de red. Si necesita tener acceso a recursos compartidos adicionales (por ejemplo, para tener acceso a recursos vinculados simbólicamente en un servidor independiente), deberá agregarlos a través de la opción siguiente.   
    
   
 Puede administrar estas credenciales almacenadas (y agregar otras) en la consola a través de la opción **administrar credenciales de red** del menú principal.   
- ![](images/dev_home_9.png)   
+ ![Captura de pantalla de la Página principal de DEV con la opción administrar credenciales de red resaltada.](images/dev_home_9.png)   
   
 Para ver las credenciales que se encuentran actualmente en la consola de, edite las credenciales; para ello, seleccione la ruta de acceso de la credencial y haga clic en **un** botón para quitar una credencial. para ello, seleccione el vínculo quitar y haga clic en **un** botón.   
    

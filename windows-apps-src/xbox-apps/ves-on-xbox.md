@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo agregar compatibilidad con el cont
 ms.date: 10/19/2017
 ms.topic: article
 keywords: Shell de Windows 10, UWP, Xbox, voz y voz habilitada
-ms.openlocfilehash: 38afa2473dd74ab580cf38cc21d1f2b192f9b72a
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: b59b578a13145910be30c3f228305b874f9e9734
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304657"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636485"
 ---
 # <a name="using-speech-to-invoke-ui-elements"></a>Usar voz para invocar elementos de la interfaz de usuario
 
@@ -83,7 +83,7 @@ La aplicación narrador también es un cliente de automatización de la interfaz
 
 Para resolver este error, a partir de Windows 10 Creators Update, el narrador se actualizó para examinar también la `AutomationProperties.HelpText` propiedad.  Si esta propiedad no está vacía, el narrador hablará su contenido además de `AutomationProperties.Name` .  Si `HelpText` está vacío, el narrador solo leerá el contenido del nombre.  Esto permitirá que se usen cadenas más largas en el caso de que sea necesario, pero mantenga una frase más corta y sencilla de reconocimiento de voz en la `Name` propiedad.
 
-![](images/ves_narrator.jpg)
+![Diagrama que muestra el código subyacente del botón que incluye AutomationProperties.Name y AutomationProperties. HelpText que muestra que el shell habilitado para voz escucha el nombre configurado.](images/ves_narrator.jpg)
 
 Para obtener más información, vea [propiedades de automatización para la compatibilidad con accesibilidad en la interfaz de usuario](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario").
 
@@ -101,7 +101,7 @@ Escribir ALM tendrá el siguiente efecto:
 - La superposición de Cortana se mostrará en la esquina superior derecha para indicar al usuario que puede decir lo que ven.  Mientras el usuario está hablando, los fragmentos de frases que reconoce el reconocedor de voz también se mostrarán en esta ubicación.
 - VES analiza el árbol de UIA, busca todos los controles accionables, registra su texto en la gramática de reconocimiento de voz e inicia una sesión de escucha continua.
 
-    ![](images/ves_overlay.png)
+    ![Captura de pantalla con la opción para ver la etiqueta Mostrar etiquetas resaltada.](images/ves_overlay.png)
 
 ### <a name="exiting-alm"></a>Saliendo de ALM ###
 El sistema permanecerá en ALM mientras el usuario interactúa con la interfaz de usuario mediante el uso de Voice.  Hay dos maneras de salir de ALM:
@@ -129,24 +129,24 @@ Una vez que se muestran las etiquetas de las sugerencias de voz, no hay ningún 
 ## <a name="location-of-voice-tip-labels"></a>Ubicación de las etiquetas de la sugerencia de voz ##
 Las etiquetas de las sugerencias de voz se centran horizontal y verticalmente en el BoundingRectangle del control.  Cuando los controles son pequeños y agrupados de manera estrecha, las etiquetas pueden superponerse o quedar ocultas por otros y VES intentará empujarlas por separado para separarlas y asegurarse de que están visibles.  Sin embargo, no se garantiza que funcione el 100% del tiempo.  Si hay una interfaz de usuario muy llena, es probable que el resto de etiquetas oculten algunas. Revise la interfaz de usuario con "Mostrar etiquetas" para asegurarse de que hay espacio suficiente para la visibilidad de la sugerencia de voz.
 
-![](images/ves_labels.png)
+![Captura de pantalla de las etiquetas de la sugerencia de voz horizontal y verticalmente centradas en el rectángulo delimitador del control.](images/ves_labels.png)
 
 ## <a name="combo-boxes"></a>Cuadros combinados ##
 Cuando se expande un cuadro combinado, cada elemento individual del cuadro combinado obtiene su propia etiqueta de la sugerencia de voz y, a menudo, se encuentra en la parte superior de los controles existentes detrás de la lista desplegable.  Para evitar la presentación de una muddle de etiquetas abarrotada y confusa (donde las etiquetas de los elementos del cuadro combinado se combinan con las etiquetas de los controles situados detrás del cuadro combinado) cuando se expande un cuadro combinado, solo se mostrarán las etiquetas de sus elementos secundarios;  todas las demás etiquetas de la sugerencia de voz estarán ocultas.  A continuación, el usuario puede seleccionar uno de los elementos desplegables o "cerrar" el cuadro combinado.
 
 - Etiquetas en los cuadros combinados contraídos:
 
-    ![](images/ves_combo_closed.png)
+    ![Captura de pantalla de la ventana de salida Mostrar y sonido de vídeo con etiquetas en los cuadros combinados contraídos.](images/ves_combo_closed.png)
 
 - Etiquetas en el cuadro combinado expandido:
 
-    ![](images/ves_combo_open.png)
+    ![Captura de pantalla de la ventana de salida de vídeo y presentación con etiquetas en un cuadro combinado expandido.](images/ves_combo_open.png)
 
 
 ## <a name="scrollable-controls"></a>Controles desplazables ##
 En el caso de los controles desplazables, las sugerencias de voz para los comandos de desplazamiento se centrarán en cada uno de los bordes del control.  Las sugerencias de voz solo se mostrarán para las direcciones de desplazamiento que son accionables, por lo que, por ejemplo, si el desplazamiento vertical no está disponible, no se mostrará "desplazar hacia arriba" y "desplazar hacia abajo".  Cuando hay varias regiones desplazables presentes, VES usará los ordinales para diferenciarlas (por ejemplo, "Desplazar a la derecha 1", "desplazar a la derecha 2", etc.).
 
-![](images/ves_scroll.png) 
+![Captura de pantalla de desplazamiento a la izquierda y desplazar a la derecha las sugerencias de voz en una U I de desplazamiento horizontal.](images/ves_scroll.png) 
 
 ## <a name="disambiguation"></a>Anulación de ambigüedades ##
 Cuando varios elementos de la interfaz de usuario tienen el mismo nombre o el reconocedor de voz coincide con varios candidatos, VES entrará en modo de desambiguación.  En este modo, las etiquetas de la sugerencia de voz se mostrarán para los elementos implicados de forma que el usuario pueda seleccionar la adecuada. El usuario puede cancelar el modo de desambiguación diciendo "Cancelar".
@@ -155,15 +155,15 @@ Por ejemplo:
 
 - En el modo de escucha activa, antes de la anulación de ambigüedades; el usuario dice "AM I ambiguo":
 
-    ![](images/ves_disambig1.png) 
+    ![Captura de pantalla del modo de escucha activo con el ahora puede indicar lo que ve y no hay etiquetas en los botones.](images/ves_disambig1.png) 
 
 - Ambos botones coinciden; Desambiguación iniciada:
 
-    ![](images/ves_disambig2.png) 
+    ![Captura de pantalla del modo de escucha activa con la opción que desea mostrar y las etiquetas elemento 1 y elemento 2 en los botones.](images/ves_disambig2.png) 
 
 - Mostrando la acción de clic cuando se eligió "seleccionar 2":
 
-    ![](images/ves_disambig3.png) 
+    ![Captura de pantalla del modo de escucha activa con el ahora puede indicar lo que se muestra en la opción y la etiqueta ambigua en el primer botón.](images/ves_disambig3.png) 
  
 ## <a name="sample-ui"></a>Ejemplo de interfaz de usuario ##
 A continuación se muestra un ejemplo de una interfaz de usuario basada en XAML, que establece AutomationProperties.Name de varias maneras:
@@ -203,11 +203,11 @@ En el ejemplo anterior se muestra el aspecto que tendrá la interfaz de usuario 
  
 - En el modo de escucha activa, sin las etiquetas mostradas:
 
-    ![](images/ves_alm_nolabels.png) 
+    ![Captura de pantalla del modo de escucha activa con el para ver las etiquetas; por ejemplo, se muestra la opción Mostrar etiquetas y no se muestra ninguna etiqueta.](images/ves_alm_nolabels.png) 
 
 - En el modo de escucha activa, después de que el usuario indique "Mostrar etiquetas":
 
-    ![](images/ves_alm_labels.png) 
+    ![Captura de pantalla del modo de escucha activa con el si ha terminado, suponemos que se muestra la opción detener escucha y las etiquetas se muestran en los controles U I.](images/ves_alm_labels.png) 
 
 En el caso de `button1` , XAML rellena automáticamente la `AutomationProperties.Name` propiedad utilizando el texto del contenido de texto visible del control.  Este es el motivo por el que hay una etiqueta de sugerencia de voz, aunque no haya un `AutomationProperties.Name` conjunto explícito.
 
@@ -217,7 +217,7 @@ Con `comboBox` , usamos la `LabeledBy` propiedad `label1` como referencia como e
 
 Por último, con `button3` , ves toma el `Name` del primer elemento secundario, ya que en `button3` sí mismo no tiene un `AutomationProperties.Name` conjunto.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Fundamentos de UI Automation](/dotnet/framework/ui-automation/ui-automation-fundamentals "Fundamentos de UI Automation")
 - [Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario")
 - [Preguntas más frecuentes](frequently-asked-questions.md)

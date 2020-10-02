@@ -1,20 +1,20 @@
 ---
 title: Usar MRT para aplicaciones y juegos de escritorio convertidos
-description: Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete. msix o. appx, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
+description: Al empaquetar la aplicación o juego en .NET o Win32 como un paquete .msix o .appx, puedes aprovechar el sistema de administración de recursos para cargar recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, MRT, PRI. recursos, juegos, Centennial, convertidor de aplicaciones de escritorio, MUI, ensamblado satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: dafce15fa259fdbc8a0afab90b6617dc6cc37cf4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b86cbcfcc5a6c6284b993dcad1325b108b1ab353
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157619"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636495"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredados
 
-Las aplicaciones y juegos de .NET y Win32 suelen estar localizados en distintos idiomas para expandir su mercado direccionable total. Para más información sobre la propuesta de valor de localizar la aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete. msix o. appx, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
+Las aplicaciones y juegos de .NET y Win32 suelen estar localizados en distintos idiomas para expandir su mercado direccionable total. Para más información sobre la propuesta de valor de localizar la aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o juego en .NET o Win32 como un paquete .msix o .appx, puedes aprovechar el sistema de administración de recursos para cargar recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 
 Hay muchas maneras de localizar una aplicación Win32 tradicional, pero Windows 8 presentó un [nuevo sistema de administración de recursos](/previous-versions/windows/apps/jj552947(v=win.10)) que funciona a través de lenguajes de programación, a través de tipos de aplicación, y proporciona funcionalidad sobre la localización simple y por encima de ella. En este tema se hará referencia a este sistema como "MRT". Históricamente, eso era la "tecnología de recursos moderna", pero el término "moderno" ya no se incluye. También es posible que el administrador de recursos se conozca como MRM (Administrador de recursos moderno) o PRI (índice de recursos del paquete).
 
@@ -33,22 +33,22 @@ En muchas situaciones, puede seguir usando los formatos de localización y el c�
 <tr>
 <td>Localizar el manifiesto del paquete</td>
 <td>Trabajo mínimo necesario para que el contenido localizado aparezca en el shell de Windows y en el Microsoft Store</td>
-<td>Pequeña</td>
+<td>Pequeño</td>
 </tr>
 <tr>
 <td>Usar MRT para identificar y buscar recursos</td>
 <td>Requisito previo para minimizar el tamaño de la descarga e instalación; Reserva de idioma automática</td>
-<td>Media</td>
+<td>Mediana</td>
 </tr>
 <tr>
 <td>Paquetes de recursos de compilación</td>
 <td>Último paso para minimizar los tamaños de descarga e instalación</td>
-<td>Pequeña</td>
+<td>Pequeño</td>
 </tr>
 <tr>
 <td>Migrar a API y formatos de recursos de MRT</td>
 <td>Tamaños de archivo significativamente más pequeños (según la tecnología de recursos existente)</td>
-<td>grande</td>
+<td>Grande</td>
 </tr>
 </table>
 
@@ -62,11 +62,11 @@ Por lo tanto, el propósito principal de cualquier tecnología de administració
 
 A continuación se muestra un ejemplo sencillo de una aplicación que tiene etiquetas de texto en dos botones ( `openButton` y `saveButton` ) y un archivo PNG que se usa para un logotipo ( `logoImage` ). Las etiquetas de texto se localizan en inglés y en alemán, y el logotipo está optimizado para pantallas de escritorio normales (factor de escala del 100%) y teléfonos de alta resolución (factor de escala del 300%). Tenga en cuenta que este diagrama presenta una vista conceptual de alto nivel del modelo; no se asigna exactamente a la implementación de.
 
-<p><img src="images\conceptual-resource-model.png"/></p>
+:::image type="content" source="images\conceptual-resource-model.png" alt-text="Captura de pantalla de una etiqueta de código fuente, una etiqueta de tabla de búsqueda y una etiqueta de archivo en disco.&quot;:::
 
 En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la `GetResource` pseudo-función usa MRT para buscar esos nombres de recurso en la tabla de recursos (conocido como archivo PRI) y encontrar el candidato más adecuado en función de las condiciones ambientales (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, las cadenas se utilizan directamente. En el caso de la imagen del logotipo, las cadenas se interpretan como nombres de archivo y los archivos se leen en el disco. 
 
-Si el usuario habla un idioma distinto del inglés o el alemán, o tiene un factor de escala de pantalla distinto del 100% o 300%, MRT elige el candidato de coincidencia "más cercano" en función de un conjunto de reglas de reserva (consulte el [sistema de administración de recursos](/previous-versions/windows/apps/jj552947(v=win.10)) para más información).
+Si el usuario habla un idioma distinto del inglés o el alemán, o tiene un factor de escala de pantalla distinto del 100% o 300%, MRT elige el candidato de coincidencia &quot;más cercano" en función de un conjunto de reglas de reserva (consulte el [sistema de administración de recursos](/previous-versions/windows/apps/jj552947(v=win.10)) para más información).
 
 Tenga en cuenta que MRT admite recursos que se adaptan a más de un calificador; por ejemplo, si la imagen del logotipo contenía texto incrustado que también necesitaba localizarse, el logotipo tendría cuatro candidatos: EN/Scale-100, DE/Scale-100, EN/Scale-300 y DE/Scale-300.
 
@@ -198,7 +198,11 @@ Si desea usar el diseñador en Visual Studio:
 1. Cree la `Strings\en-us` carpeta (u otro lenguaje según corresponda) en el proyecto y agregue un **nuevo elemento** a la carpeta raíz del proyecto con el nombre predeterminado `resources.resw` . Asegúrese de elegir el **archivo de recursos (. resw)** y no el **Diccionario de recursos** . un diccionario de recursos es un archivo que usan las aplicaciones XAML.
 2. Con el diseñador, escriba las cadenas siguientes (use el mismo, `Names` pero reemplace el `Values` por el texto correspondiente de la aplicación):
 
-<img src="images\editing-resources-resw.png"/>
+:::image type="content" source="images\editing-resources-resw.png" alt-text="Captura de pantalla de una etiqueta de código fuente, una etiqueta de tabla de búsqueda y una etiqueta de archivo en disco.&quot;:::
+
+En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la `GetResource` pseudo-función usa MRT para buscar esos nombres de recurso en la tabla de recursos (conocido como archivo PRI) y encontrar el candidato más adecuado en función de las condiciones ambientales (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, las cadenas se utilizan directamente. En el caso de la imagen del logotipo, las cadenas se interpretan como nombres de archivo y los archivos se leen en el disco. 
+
+Si el usuario habla un idioma distinto del inglés o el alemán, o tiene un factor de escala de pantalla distinto del 100% o 300%, MRT elige el candidato de coincidencia &quot;más cercano" :::
 
 > [!NOTE]
 > Si empieza con el diseñador de Visual Studio, siempre puede presionar para editar el XML directamente `F7` . Pero si comienza con un archivo XML mínimo, *el diseñador no reconocerá el archivo* porque faltan muchos metadatos adicionales. puede corregirlo copiando la información XSD reutilizable de un archivo generado por el diseñador en el archivo XML editado a mano.
@@ -236,8 +240,17 @@ Si está editando XML directamente, abra el `AppxManifest.xml` archivo y realice
 
 Si usa el diseñador de manifiestos de Visual Studio, abra el archivo. appxmanifest y cambie los valores <span style="background-color: lightgreen">resaltados</span> en la pestaña **aplicación* y la pestaña *empaquetado* :
 
-<img src="images\editing-application-info.png"/>
-<img src="images\editing-packaging-info.png"/>
+:::image type="content" source="images\editing-application-info.png" alt-text="Captura de pantalla de una etiqueta de código fuente, una etiqueta de tabla de búsqueda y una etiqueta de archivo en disco.&quot;:::
+
+En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la `GetResource` pseudo-función usa MRT para buscar esos nombres de recurso en la tabla de recursos (conocido como archivo PRI) y encontrar el candidato más adecuado en función de las condiciones ambientales (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, las cadenas se utilizan directamente. En el caso de la imagen del logotipo, las cadenas se interpretan como nombres de archivo y los archivos se leen en el disco. 
+
+Si el usuario habla un idioma distinto del inglés o el alemán, o tiene un factor de escala de pantalla distinto del 100% o 300%, MRT elige el candidato de coincidencia &quot;más cercano" :::
+
+:::image type="content" source="images\editing-packaging-info.png" alt-text="Captura de pantalla de una etiqueta de código fuente, una etiqueta de tabla de búsqueda y una etiqueta de archivo en disco.&quot;:::
+
+En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la `GetResource` pseudo-función usa MRT para buscar esos nombres de recurso en la tabla de recursos (conocido como archivo PRI) y encontrar el candidato más adecuado en función de las condiciones ambientales (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, las cadenas se utilizan directamente. En el caso de la imagen del logotipo, las cadenas se interpretan como nombres de archivo y los archivos se leen en el disco. 
+
+Si el usuario habla un idioma distinto del inglés o el alemán, o tiene un factor de escala de pantalla distinto del 100% o 300%, MRT elige el candidato de coincidencia &quot;más cercano" :::
 
 ### <a name="step-12-build-pri-file-make-an-msix-package-and-verify-its-working"></a>Paso 1,2: compilar el archivo PRI, crear un paquete MSIX y comprobar que funciona
 
@@ -462,7 +475,11 @@ Se pueden localizar otras secciones del manifiesto del paquete. Por ejemplo, si 
 
 También puede Agregar esta información mediante el diseñador de manifiestos de Visual Studio, mediante la `Declarations` pestaña, tomando nota de los <span style="background-color: lightgreen">valores resaltados</span>:
 
-<p><img src="images\editing-declarations-info.png"/></p>
+:::image type="content" source="images\editing-declarations-info.png" alt-text="Captura de pantalla de una etiqueta de código fuente, una etiqueta de tabla de búsqueda y una etiqueta de archivo en disco.&quot;:::
+
+En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la `GetResource` pseudo-función usa MRT para buscar esos nombres de recurso en la tabla de recursos (conocido como archivo PRI) y encontrar el candidato más adecuado en función de las condiciones ambientales (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, las cadenas se utilizan directamente. En el caso de la imagen del logotipo, las cadenas se interpretan como nombres de archivo y los archivos se leen en el disco. 
+
+Si el usuario habla un idioma distinto del inglés o el alemán, o tiene un factor de escala de pantalla distinto del 100% o 300%, MRT elige el candidato de coincidencia &quot;más cercano" :::
 
 Ahora, agregue los nombres de recursos correspondientes a cada uno de los `.resw` archivos y reemplace el <span style="background-color: yellow">texto resaltado</span> por el texto correspondiente de la aplicación (Recuerde hacer esto para *cada idioma admitido*):
 
@@ -478,7 +495,11 @@ Ahora, agregue los nombres de recursos correspondientes a cada uno de los `.resw
 
 Esto se mostrará en parte del shell de Windows, como el explorador de archivos:
 
-<p><img src="images\file-type-tool-tip.png"/></p>
+:::image type="content" source="images\file-type-tool-tip.png" alt-text="Captura de pantalla de una etiqueta de código fuente, una etiqueta de tabla de búsqueda y una etiqueta de archivo en disco.&quot;:::
+
+En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la `GetResource` pseudo-función usa MRT para buscar esos nombres de recurso en la tabla de recursos (conocido como archivo PRI) y encontrar el candidato más adecuado en función de las condiciones ambientales (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, las cadenas se utilizan directamente. En el caso de la imagen del logotipo, las cadenas se interpretan como nombres de archivo y los archivos se leen en el disco. 
+
+Si el usuario habla un idioma distinto del inglés o el alemán, o tiene un factor de escala de pantalla distinto del 100% o 300%, MRT elige el candidato de coincidencia &quot;más cercano":::
 
 Compile y pruebe el paquete como antes, y ejerza cualquier nuevo escenario que muestre las nuevas cadenas de la interfaz de usuario.
 
