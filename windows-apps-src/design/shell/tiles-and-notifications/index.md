@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ce19fdca0ff79c430fcae7353cda595702f260c0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 580edca578a0d518d89b5d2fdb30c9304be35cef
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218438"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636625"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones de Windows
  
@@ -22,7 +22,7 @@ Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones 
 
 > **API importantes**: [paquete NuGet de notificaciones del kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" alt="Screenshot of a static tile and a live tile displaying a notification and a badge." />
 Un icono es una representación de la aplicación en el menú Inicio. Cada aplicación de Windows tiene un icono. Asimismo, puedes habilitar distintos tamaños de icono (pequeño, mediano, grande y ancho).</p>
 
 <p>Puedes usar una <em>notificación de icono</em> para actualizar el icono con el fin de comunicar información nueva al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.</p>
