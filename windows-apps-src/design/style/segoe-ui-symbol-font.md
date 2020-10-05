@@ -1,5 +1,5 @@
 ---
-Description: En este artículo se enumeran y se proporcionan las instrucciones de uso de los glifos que vienen con la fuente Segoe MDL2 Assets.
+description: En este artículo se enumeran y se proporcionan las instrucciones de uso de los glifos que vienen con la fuente Segoe MDL2 Assets.
 Search.Refinement.TopicID: 184
 title: Directrices para iconos de Segoe MDL2
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
@@ -9,12 +9,13 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0663f9947249f54a888bf2d3f52f522ceb885604
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.custom: contperfq1
+ms.openlocfilehash: 5c2dc3237f2ff68ce2836fc80fa0936e13d84dd7
+ms.sourcegitcommit: f46edb85d523a4a1f5006787d357cdc9d090aefe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175789"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414897"
 ---
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
@@ -66,9 +67,7 @@ También puedes usar el recurso estático `SymbolThemeFontFamily` para acceder a
 * En un equipo Mac, deberás descargar e instalar la fuente: <a href="https://aka.ms/SegoeFonts">obtén las fuentes de icono de Segoe UI y MDL2</a>.
 
 ## <a name="icon-list"></a>Lista de iconos
-Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de los que podemos mostrar aquí. Muchos de los iconos están pensados para efectos especializados y no suelen usarse para otra cosa.
-
-
+Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de los que podemos mostrar aquí. Muchos de los iconos están pensados para efectos especializados y no suelen usarse para ninguna otra cosa.
 
 <table style="background-color: white; color: black">
 

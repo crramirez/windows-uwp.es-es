@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projected, projection, implementation, runtime class, activation
 ms.localizationpriority: medium
-ms.openlocfilehash: 81c8edc65f78de14c1c42611ea1e8d97046128ae
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1b3d9e4be7c45d4d2b9b5063087a78556497dc9b
+ms.sourcegitcommit: bcf60b6d460dc4855f207ba21da2e42644651ef6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170369"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91376253"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumo de API con C++/WinRT
 
@@ -186,7 +186,7 @@ runtimeclass Gift
 }
 ```
 
-Supongamos que queremos construir un objeto **Gift** que no está dentro de un cuadro (un **Gift** que se construye con un tipo **GiftBox** sin inicializar). En primer lugar, echemos un vistazo a la forma *incorrecta* de hacerlo. Sabemos que hay un constructor de **Gift** que usa un tipo **GiftBox**. Sin embargo, nos tienta pasar un valor **GiftBox** nulo (invocar el constructor de **Gift** a través de la inicialización uniforme tal como lo hacemos a continuación), pero *no* obtendremos el resultado que deseamos.
+Supongamos que queremos construir un objeto **Gift** que no está dentro de un cuadro (un **Gift** que se construye con un tipo **GiftBox** sin inicializar). En primer lugar, echemos un vistazo a la forma *incorrecta* de hacerlo. Sabemos que hay un constructor de **Gift** que usa un tipo **GiftBox**. Sin embargo, nos vemos tentados por pasar un valor **GiftBox** nulo (mediante la invocación del constructor **Gift** a través de la inicialización uniforme, tal como lo hacemos a continuación), aunque *no* obtendremos el resultado que queremos.
 
 ```cppwinrt
 // These are *not* what you intended. Doing it in one of these two ways
@@ -283,13 +283,26 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 Para obtener más detalles, el código y un tutorial sobre la utilización de las API implementadas en un componente de Windows Runtime, consulte [Componentes de Windows Runtime con C++/WinRT](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) y [Creación de eventos en C++/WinRT](./author-events.md).
 
 ## <a name="if-the-api-is-implemented-in-the-consuming-project"></a>Si la API se implementa en el proyecto de consumo
-Un tipo que se consume desde la interfaz de usuario de XAML debe ser una clase en tiempo de ejecución, aunque se encuentre en el mismo proyecto que el XAML.
+El ejemplo de código de esta sección se toma del tema [Controles de XAML; enlazar a una propiedad de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage). Consulte ese tema para obtener más detalles, el código y un tutorial acerca de cómo consumir una clase en tiempo de ejecución implementada en el proyecto que la consume.
 
-Para este escenario, genera un tipo proyectado desde los metadatos de Windows Runtime de la clase en tiempo de ejecución (`.winmd`). Una vez más, incluye un encabezado, pero esta vez construye el tipo proyectado mediante su constructor **std::nullptr_t**. Dicho constructor no realiza ninguna inicialización, por lo que debes asignar un valor a la instancia a través de la función auxiliar [**winrt::make**](/uwp/cpp-ref-for-winrt/make), pasando todos los argumentos de constructor necesarios. Las clases en tiempo de ejecución implementadas en el mismo proyecto que el código de consumo no es preciso registrarlas ni crear instancias de ellas a través de la activación de Windows Runtime/COM.
+Un tipo que se consume desde la interfaz de usuario de XAML debe ser una clase en tiempo de ejecución, aunque se encuentre en el mismo proyecto que el XAML. Para este escenario, genera un tipo proyectado desde los metadatos de Windows Runtime de la clase en tiempo de ejecución (`.winmd`). De nuevo, debe incluir un encabezado, pero, luego, puede elegir entre la versión 1.0 o 2.0 de C++ o WinRT con tal de construir la instancia de la clase en tiempo de ejecución. El método de la versión 1.0 usa [**winrt:: make**](/uwp/cpp-ref-for-winrt/make), mientras que el de la versión 2.0 se conoce como *construcción uniforme*. Vamos a ver cada uno de ellos en detalle.
 
-Necesitarás un proyecto de **Aplicación vacía (C++/WinRT)** para este código de ejemplo.
+### <a name="constructing-by-using-winrtmake"></a>Construcción mediante **winrt:: make**
+Comencemos con el método predeterminado (versión 1.0 de C++ /WinRT), ya que resulta útil por lo menos estar familiarizado con ese patrón. Para construir el tipo proyectado, se debe usar el constructor **std::nullptr_t**. Dicho constructor no realiza ninguna inicialización, por lo que debes asignar un valor a la instancia a través de la función auxiliar [**winrt::make**](/uwp/cpp-ref-for-winrt/make), pasando todos los argumentos de constructor necesarios. Las clases en tiempo de ejecución implementadas en el mismo proyecto que el código de consumo no es preciso registrarlas ni crear instancias de ellas a través de la activación de Windows Runtime/COM.
+
+Consulte [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage) para ver el tutorial completo. En esta sección se muestran extractos de este tutorial.
 
 ```cppwinrt
+// MainPage.idl
+import "BookstoreViewModel.idl";
+namespace Bookstore
+{
+    runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+    {
+        BookstoreViewModel MainViewModel{ get; };
+    }
+}
+
 // MainPage.h
 ...
 struct MainPage : MainPageT<MainPage>
@@ -297,10 +310,9 @@ struct MainPage : MainPageT<MainPage>
     ...
     private:
         Bookstore::BookstoreViewModel m_mainViewModel{ nullptr };
-        ...
-    };
-}
+};
 ...
+
 // MainPage.cpp
 ...
 #include "BookstoreViewModel.h"
@@ -312,7 +324,45 @@ MainPage::MainPage()
 }
 ```
 
-Para más detalles, el código y un tutorial acerca de cómo consumir una clase en tiempo de ejecución implementada en el proyecto de consumo, consulta [Controles XAML; enlazar a una propiedad de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
+### <a name="uniform-construction"></a>Construcción uniforme
+Con la versión 2.0 de C++ o WinRT y las posteriores, dispone de una forma de construcción optimizada que se conoce como *construcción uniforme* (consulte [Novedades y cambios de C++/WinRT 2.0](./news.md#news-and-changes-in-cwinrt-20)).
+
+Consulte [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage) para ver el tutorial completo. En esta sección se muestran extractos de ese tutorial.
+
+Para usar la construcción uniforme en lugar de [**winrt::make**](/uwp/cpp-ref-for-winrt/make), necesitará un generador de activación. Una buena opción para generar uno es agregando un constructor a su IDL.
+
+```idl
+// MainPage.idl
+import "BookstoreViewModel.idl";
+namespace Bookstore
+{
+    runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+    {
+        MainPage();
+        BookstoreViewModel MainViewModel{ get; };
+    }
+}
+```
+
+A continuación, en `MainPage.h` declare e inicialice *m_mainViewModel* en un solo paso, tal y como se muestra a continuación.
+
+```cppwinrt
+// MainPage.h
+...
+struct MainPage : MainPageT<MainPage>
+{
+    ...
+    private:
+        Bookstore::BookstoreViewModel m_mainViewModel;
+        ...
+    };
+}
+...
+```
+
+A continuación, en el constructor **MainPage** de `MainPage.cpp`, no se requiere el código `m_mainViewModel = winrt::make<Bookstore::implementation::BookstoreViewModel>();`.
+
+Para obtener más información sobre la construcción uniforme y ejemplos de código, consulte [Participación en la construcción uniforme y acceso de implementación directa](./author-apis.md#opt-in-to-uniform-construction-and-direct-implementation-access).
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Creación de instancias y devolución de tipos proyectados e interfaces
 Aquí se muestra un ejemplo del aspecto que podrían tener los tipos e interfaces proyectados en tu proyecto de consumo. Recuerda que los tipos proyectado (como el de este ejemplo) se generan mediante herramientas, no los puedes crear tú.

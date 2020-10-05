@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d3363dcc47ef43fe65b3c954b213a81cc5165e1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 10615c3bb9a137655f32ca4b5cc174ddba1ee5ef
+ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166289"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353775"
 ---
 # <a name="tutorial-create-data-bindings"></a>Tutorial: Crear enlaces de datos
 
@@ -457,7 +457,7 @@ En primer lugar, sin embargo, deberás adjuntar la `DetailPage` para que la apli
 
 ### <a name="attach-the-detailpage"></a>Adjuntar DetailPage
 
-1. En MainPage.xaml, busca la clase `GridView` llamada `ImageGridView` y agrega un valor `ItemClick`.
+1. En MainPage.xaml, busque el elemento `GridView` denominado `ImageGridView`. A fin de poder hacer clic en los elementos, establezca `IsItemClickEnabled` en `True` y agregue el controlador de eventos `ItemClick`.
 
     > [!TIP]
     > Si escribe el cambio que viene a continuación, en lugar de copiar y pegar, verá una ventana emergente de IntelliSense que dice "\<New Event Handler\>". Si presionas la tecla tabulador, se rellenará el valor con un nombre de controlador de método predeterminado y automáticamente se cerrará el método mostrado en el siguiente paso. A continuación, puedes presionar F12 para navegar al método en el código subyacente.
@@ -465,14 +465,15 @@ En primer lugar, sin embargo, deberás adjuntar la `DetailPage` para que la apli
     **Antes**
 
     ```xaml
-    <GridView x:Name="ImageGridView"
+    <GridView x:Name="ImageGridView">
     ```
 
     **Después:**
 
     ```xaml
     <GridView x:Name="ImageGridView"
-              ItemClick="ImageGridView_ItemClick"
+              IsItemClickEnabled="True"
+              ItemClick="ImageGridView_ItemClick">
     ```
 
     > [!NOTE]

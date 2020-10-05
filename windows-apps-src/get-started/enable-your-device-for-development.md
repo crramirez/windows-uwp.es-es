@@ -3,21 +3,24 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar el dispositivo para el desarrollo
 description: Obtenga información sobre cómo habilitar un dispositivo con Windows 10 para el desarrollo y la depuración activando el Modo de desarrollador en Visual Studio.
 keywords: Introducción a Visual Studio con licencia de desarrollador, dispositivo con licencia de desarrollador habilitada
-ms.date: 05/22/2020
+ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 702e3aa166501c3e9974398ae5b89e832cfa7391
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2a227494bb597b25c090d4ff57982e5d5c739184
+ms.sourcegitcommit: 9940ed6431aadbd8d4e54ca23d8ae44d3a2d048d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159059"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91403920"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
 ## <a name="activate-developer-mode-sideload-apps-and-access-other-developer-features"></a>Activar el modo de desarrollador, transferir aplicaciones localmente y acceder a otras funciones de desarrolladores
 
 ![Habilitar los dispositivo para el desarrollo](images/developer-poster.png)
+
+> [!IMPORTANT]
+> Si no va a crear sus propias aplicaciones en el equipo, no es necesario que habilite el modo de desarrollador. Si intenta solucionar un problema con el equipo, consulte [Ayuda de Windows](https://support.microsoft.com/hub/4338813/windows-help?os=windows-10). Si está desarrollando contenido por primera vez, también le recomendamos que descargue las herramientas que necesita a fin de [establecer la configuración](get-set-up.md).
 
 Si estás usando tu equipo para actividades diarias normales, como juegos, exploración web, correo electrónico o aplicaciones de Office, *no* es necesario activar el modo de desarrollador y de hecho, no deberías activarlo. El resto de la información de esta página no te concierne y puedes volver tranquilamente a lo que estabas haciendo. Gracias por visitarnos.
 
