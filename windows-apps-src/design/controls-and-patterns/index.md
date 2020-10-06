@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 08471b8a04d37c34378b549b8534979a4188d7b8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4da50161008645374fbe95de73882da9d9f9f826
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173961"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750661"
 ---
 # <a name="controls-for-windows-apps"></a>Controles para aplicaciones de Windows
 
@@ -42,9 +42,17 @@ El marco XAML te permite personalizar la apariencia de tus aplicaciones de varia
 
 ## <a name="get-the-windows-ui-library"></a>Obtener la biblioteca de interfaz de usuario de Windows
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | Algunos controles solo están disponibles en la biblioteca de interfaz de usuario de Windows (WinUI), un paquete NuGet que contiene nuevos controles y características de interfaz de usuario. Para obtenerla, consulta la [introducción a la biblioteca de interfaz de usuario de Windows y las instrucciones de instalación](/uwp/toolkits/winui/).<br/>A partir de WinUI 2.2, el estilo predeterminado de muchos controles se actualizó para usar esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). |
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      Algunos controles solo están disponibles en la biblioteca de interfaz de usuario de Windows (WinUI), un paquete NuGet que contiene nuevos controles y características de interfaz de usuario. Para obtenerla, consulta la [introducción a la biblioteca de interfaz de usuario de Windows y las instrucciones de instalación](/uwp/toolkits/winui/).<br/>A partir de WinUI 2.2, el estilo predeterminado de muchos controles se actualizó para usar esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 ## <a name="alphabetical-index"></a>Índice alfabético
 
