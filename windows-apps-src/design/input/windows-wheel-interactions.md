@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: 29a054299b933e523f8594419c4e954c3a0bf1e4
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: fd21ca0a27979a5febbc5a3a76a02a1beb2138fd
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749971"
+ms.locfileid: "91763015"
 ---
 # <a name="surface-dial-interactions"></a>Interacciones de Surface Dial
 
 ![Imagen de Surface Dial con Surface Studio](images/windows-wheel/dial-pen-studio-600px.png)  
 *Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116)).
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Los dispositivos de rueda de Windows, como el marcado de Surface, son una nueva categoría de dispositivo de entrada que habilita un host de experiencias de interacción de usuarios atractivas y únicas para aplicaciones Windows y Windows. 
 
@@ -57,12 +57,12 @@ Surface Dial también admite una acción de *pulsar y sostener* y una acción de
    :::column:::
       **Menú fuera de la pantalla de Surface Dial**
 
-      ![Menú fuera de la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-offscreen.png)
+      ![Captura de pantalla del menú desplegable de Surface dial.](images/windows-wheel/surface-dial-menu-offscreen.png)
    :::column-end:::
    :::column:::
       **Menú en la pantalla de Surface Dial**
 
-      ![Menú en la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-onscreen.png)
+      ![Captura de pantalla del menú contextual de Surface dial.](images/windows-wheel/surface-dial-menu-onscreen.png)
    :::column-end:::
 :::row-end:::
 
@@ -132,17 +132,17 @@ Los iconos pueden transmitir profesionalidad y excelencia, e inspiran confianza 
 
 :::row:::
    :::column:::
-      ![Icono con fondo alfa](images/windows-wheel/surface-dial-menu-icon1.png)
+      ![Captura de pantalla de un icono con fondo alfa.](images/windows-wheel/surface-dial-menu-icon1.png)
 
       *Icono con fondo alfa*
    :::column-end:::
    :::column:::
-      ![Icono que se muestra en el menú de rueda con el icono de tema predeterminado](images/windows-wheel/surface-dial-menu-icon2.png)
+      ![Captura de pantalla de un icono que se muestra en el menú de rueda con el tema predeterminado.](images/windows-wheel/surface-dial-menu-icon2.png)
 
       *Icono que se muestra en el menú de rueda con el tema predeterminado*
    :::column-end:::
    :::column:::
-      ![Menú en la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-icon3.png)
+      ![Captura de pantalla de un icono que se muestra en el menú de rueda con contraste alto tema blanco.](images/windows-wheel/surface-dial-menu-icon3.png)
 
       *Icono que se muestra en el menú de rueda con el tema blanco en contraste alto*
    :::column-end:::
@@ -171,7 +171,7 @@ En este ejemplo, agregamos una herramienta personalizada básica que pasa los da
 
 1. Primero, declaramos nuestra interfaz de usuario (solo un control deslizante y un botón de alternancia) en XAML.
 
-   ![Imagen de la interfaz de usuario de la aplicación de ejemplo](images/windows-wheel/surface-dial-snippet-customtool1.png)  
+   ![Captura de pantalla del ejemplo de controlador radial con el control deslizante horizontal establecido a la izquierda.](images/windows-wheel/surface-dial-snippet-customtool1.png)  
    *La interfaz de usuario de la aplicación de ejemplo*
 
     ```Xaml
@@ -272,7 +272,7 @@ En este ejemplo, agregamos una herramienta personalizada básica que pasa los da
 
 Al ejecutar la aplicación, utilizamos Surface Dial para interactuar con ella. En primer lugar, pulsamos y sostenemos para abrir el menú y seleccionar nuestra herramienta personalizada. Una vez activada la herramienta personalizada, podemos girar el Dial para ajustar el control deslizante y hacer clic en él para alternar el modificador.
 
-![Imagen de la interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial](images/windows-wheel/surface-dial-snippet-customtool2.png)  
+![Captura de pantalla del ejemplo de controlador radial con el control deslizante horizontal establecido en el centro.](images/windows-wheel/surface-dial-snippet-customtool2.png)  
 *Interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial*
 
 **Especificar las herramientas integradas**
@@ -480,7 +480,7 @@ En el siguiente ejemplo, hemos creado una aplicación básica con cuatro seccion
 
 1. Primero, declaramos nuestra interfaz de usuario (cuatro secciones, cada una con un control deslizante y un botón de alternancia) en XAML.
 
-   ![Imagen de la interfaz de usuario de la aplicación de ejemplo](images/windows-wheel/surface-dial-snippet-customtool3.png)  
+   ![Captura de pantalla del ejemplo de controlador radial con cuatro controles deslizantes horizontales establecidos a la izquierda.](images/windows-wheel/surface-dial-snippet-customtool3.png)  
    *La interfaz de usuario de la aplicación de ejemplo*
 
    ```xaml 
@@ -680,14 +680,12 @@ private void ActivateGridAtLocation(Point Location)
 
 Al ejecutar la aplicación, utilizamos Surface Dial para interactuar con ella. En primer lugar, colocamos el dispositivo en la pantalla de Surface Studio, acción que la aplicación detecta y la asocia a la sección inferior derecha (consulta la imagen). A continuación, pulsamos y sostenemos Surface Dial para abrir el menú y seleccionar la herramienta personalizada. Una vez activada la herramienta personalizada, podemos girar Surface Dial para ajustar el control deslizante o hacer clic en él para alternar el botón de alternancia.
 
-![Imagen de la interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial](images/windows-wheel/surface-dial-snippet-customtool4.png)  
+![Captura de pantalla del ejemplo de controlador radial con cuatro controles deslizantes horizontales establecidos a la izquierda y el cuarto controlador resaltado.](images/windows-wheel/surface-dial-snippet-customtool4.png)  
 *Interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial*
 
 ## <a name="summary"></a>Resumen
 
 En este tema se ofrece información general sobre el dispositivo de entrada Surface Dial; en él se incluyen directrices sobre la experiencia del usuario y una guía para desarrolladores sobre cómo personalizar la experiencia del usuario para escenarios tanto fuera de la pantalla como encima de la pantalla, cuando se usa con Surface Studio.
-
-## <a name="feedback"></a>Comentarios
 
 Envíe sus preguntas, sugerencias y comentarios a [radialcontroller@microsoft.com](mailto:radialcontroller@microsoft.com) .
 

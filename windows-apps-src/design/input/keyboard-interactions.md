@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: ae3d4826c4468cabea318ed230da0cfbb4d5f24b
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 005ec4883eeb52a84e458ba917439d093ab0041f
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219118"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763077"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 
@@ -55,7 +55,7 @@ En caso necesario, se identificarán las diferencias clave que se deben tener en
 
 Estos son los dispositivos y las herramientas que se describen en este tema:
 
-| Dispositivo o herramienta                       | Descripción     |
+| Dispositivo o herramienta                       | Description     |
 |-----------------------------------|-----------------|
 |Teclado (hardware y software)   |Además del teclado de hardware estándar, las aplicaciones de Windows admiten dos teclados de software: el [teclado táctil (o el software)](#software-keyboard) y el [teclado en pantalla](#on-screen-keyboard).|
 |Controlador para juegos y control remoto         |El controlador de juegos de Xbox y el control remoto son dispositivos de entrada fundamentales en la [experiencia de 10 pies](../devices/designing-for-tv.md). Para obtener detalles específicos sobre la compatibilidad de Windows con el controlador para juegos y el control remoto, consulte [interacciones de control remoto y controlador de juegos](gamepad-and-remote-interactions.md).|
@@ -284,7 +284,7 @@ La tabla siguiente es una pequeña muestra de los métodos abreviados de teclado
 | Seleccionar continuamente                  | Mayús+Tecla de flecha                                  |
 | Guardar                                 | Ctrl+S                                           |
 | Buscar                                 | Ctrl+F                                           |
-| Impresión                                | Ctrl+P                                           |
+| Imprimir                                | Ctrl+P                                           |
 | Copiar                                 | Ctrl+C                                           |
 | Cortar                                  | Ctrl+X                                           |
 | Pegar                                | Ctrl+V                                           |
@@ -507,11 +507,13 @@ Se recomienda emular estos mismos comportamientos en los controles personalizado
 Pruebe la aplicación con todos los dispositivos de entrada admitidos para asegurarse de que los elementos de la interfaz de usuario se pueden navegar de forma coherente e intuitiva y de que ningún elemento inesperado interfiere con el orden de tabulación deseado.
 
 ## <a name="related-articles"></a>Artículos relacionados
+
 * [Eventos de teclado](keyboard-events.md)
 * [Identificación de dispositivos de entrada](identify-input-devices.md)
 * [Responder a la presencia del teclado táctil](respond-to-the-presence-of-the-touch-keyboard.md)
 * [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-* [Detalles del teclado del control NavigationView](../controls-and-patterns/navigationview.md#hierarchical-navigation) 
+* [Detalles del teclado del control NavigationView](../controls-and-patterns/navigationview.md#hierarchical-navigation)
+* [Accesibilidad de teclado](../accessibility/keyboard-accessibility.md)
 
 ## <a name="appendix"></a>Apéndice
 
@@ -576,7 +578,3 @@ Puede activarse desde la página Teclado, que se encuentra en Configuración &gt
 ***Teclado en pantalla***
 
 Visite [la página teclado en pantalla](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard) para obtener más detalles sobre el teclado en pantalla.
-
-## <a name="related-articles"></a>Artículos relacionados
-
-- [Accesibilidad de teclado](../accessibility/keyboard-accessibility.md)

@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 0cf6bc95eef416b481642d84eef8315451916604
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 411ecb63189084ba83f9971ded2bbe02d899aabd
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174109"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762866"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 
@@ -40,7 +40,7 @@ A diferencia de los recursos de imagen, donde solo un recurso de imagen está co
 
     `Strings/en-US/Resources.resw`
 
-    ![agregar recurso, inglés](images/addresource-en-us.png)
+    ![Captura de pantalla de la tabla Agregar recurso de las cadenas > E N U S > archivo resources. resw.](images/addresource-en-us.png)
 
     En este ejemplo, "GREETING" es un identificador de recursos de cadena al que se puede hacer referencia desde el marcado, como se muestra. En el caso del identificador "GREETING", se proporciona una cadena para una propiedad Text y se proporciona una cadena para una propiedad width. "GREETING. Text" es un ejemplo de un identificador de propiedad porque corresponde a una propiedad de un elemento de la interfaz de usuario. También puede, por ejemplo, agregar "GREETING. Foreground" en la columna Name y establecer su valor en "red". El identificador "despedida" es un identificador de recurso de cadena simple; no tiene subpropiedades y se puede cargar desde código imperativo, como se muestra. La columna comment es un buen lugar para proporcionar instrucciones especiales a los traductores.
 
@@ -108,13 +108,13 @@ En caso de duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para v
 
 1. Abra el archivo de origen del manifiesto del paquete de la aplicación (el `Package.appxmanifest` archivo), en el que, de forma predeterminada, la aplicación `Display name` se expresa como un literal de cadena.
 
-   ![agregar recurso, inglés](images/display-name-before.png)
+   ![Captura de pantalla del archivo package. appxmanifest que muestra la pestaña aplicación con el nombre para mostrar establecido en Adventure Works Cycles.](images/display-name-before.png)
 
 2. Para crear una versión localizable de esta cadena, Abra `Resources.resw` y agregue un nuevo recurso de cadena con el nombre "AppDisplayName" y el valor "Adventure Works Cycles".
 
 3. Reemplace el literal de cadena del nombre para mostrar por una referencia al identificador de recurso de cadena que acaba de crear ("AppDisplayName"). Para ello, se usa el `ms-resource` esquema URI (identificador uniforme de recursos).
 
-   ![agregar recurso, inglés](images/display-name-after.png)
+   ![Captura de pantalla del archivo package. appxmanifest que muestra la pestaña aplicación con el nombre para mostrar establecido en el nombre para mostrar de la aplicación de recursos M S.](images/display-name-after.png)
 
 4. Repita este proceso para cada cadena del manifiesto que desee localizar. Por ejemplo, el nombre corto de la aplicación (que puede configurar para que aparezca en el icono de la aplicación en el inicio). Para obtener una lista de todos los elementos del manifiesto de paquete de aplicación que puede localizar, consulte [elementos de manifiesto localizables](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live).
 
@@ -147,7 +147,7 @@ Prueba la aplicación con el idioma para mostrar predeterminado. Después, puede
 
 Puede mantener todas las cadenas en un archivo de recursos único (resw) o puede factorizarlas en varios archivos de recursos. Por ejemplo, puede que desee conservar los mensajes de error en un archivo de recursos, las cadenas del manifiesto del paquete de la aplicación en otro y las cadenas de la interfaz de usuario en un tercer lugar. Este es el aspecto de la estructura de carpetas en ese caso.
 
-![agregar recurso, inglés](images/manifest-resources.png)
+![Captura de pantalla del panel de soluciones que muestra la carpeta Adventure Works Cycles > Strings con los archivos y las carpetas de la configuración regional en alemán, en inglés y en francés.](images/manifest-resources.png)
 
 Para limitar el ámbito de una referencia de identificador de recurso de cadena a un archivo determinado, solo tiene que agregar `/<resources-file-name>/` antes del identificador. En el ejemplo de marcado siguiente se da por supuesto que `ErrorMessages.resw` contiene un recurso cuyo nombre es "PasswordTooWeak. Text" y cuyo valor describe el error.
 

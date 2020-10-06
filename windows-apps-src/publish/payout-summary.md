@@ -6,12 +6,12 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: Windows 10, UWP, Resumen de pagos, declaración, pagos, ingresos, pagos, pago, continúa
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c68c82ab463f0c4f12038597b4746ab4e695405
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7eab86cc1856f5ad206aa8bbceb2f2e04f5410d2
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167439"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763112"
 ---
 # <a name="payout-reports"></a>Informes de pago
 
@@ -38,7 +38,7 @@ En esta página se muestran todas sus ganancias individuales, incluidos la fecha
 
 Para ver más detalles sobre una ganancia, seleccione la flecha abajo que se encuentra en el lado derecho de la página. Esto mostrará la palanca, el importe de los ingresos y el producto. Si, por alguna razón, alguno de estos datos no está disponible, pero necesita acceder a él, póngase en contacto [con el soporte técnico](https://developer.microsoft.com/windows/support)]. Si la ganancia es el resultado de un ajuste, y no una transacción, no se mostrarán los campos del producto.
 
-Para exportar cualquiera de los datos de la transacción en esta página, use la página **exportar datos** .
+Para exportar cualquiera de los datos de la transacción en esta página, seleccione Exportar y, a continuación, siga las instrucciones de la página exportar datos. Los archivos exportados desde la página historial de transacciones muestran datos en la moneda de la transacción, ganancias en la moneda de la transacción y en dólares estadounidenses, y el valor de pago en pago por moneda.
 
 ## <a name="payments-page"></a>Página Pagos
 
@@ -53,14 +53,6 @@ Los totales de esta página representan todos los programas en los que participa
 | Pagos               | Seleccione pago o pendiente y, a continuación, ordenar como desee. Para obtener detalles adicionales de un pago específico, seleccione Ver. Para descargar una copia del extracto de remesa de pago, seleccione Descargar. Tenga en cuenta que los datos del historial de transacciones pueden tardar hasta 24 horas en aparecer, por lo que es posible que no vea las ganancias asociadas de inmediato. |
 
 Para exportar cualquiera de los datos de esta página, seleccione Exportar y, a continuación, siga las instrucciones de la página exportar datos.
-
-## <a name="transaction-history-page"></a>Página Historial de transacciones
-
-En esta página se muestran todas sus ganancias individuales, incluidos la fecha, el tipo y la obtención de cada uno de ellos. Puede seleccionar un período de tiempo para verlo y también puede filtrar por identificador de inscripción, programa, identificador de pago, tipo de ganancia, palanca y estado. Los datos están disponibles durante el año fiscal actual (del 1 de julio al 30 de junio) y los dos años fiscales anteriores.
-
-Para ver más detalles sobre una ganancia, seleccione la flecha abajo que se encuentra en el lado derecho de la página. Esto mostrará la palanca, el importe de los ingresos y el producto. Si, por alguna razón, alguno de estos datos no está disponible, pero necesita acceder a él, póngase en contacto [con el soporte técnico](https://developer.microsoft.com/windows/support)]. Si la ganancia es el resultado de un ajuste, y no una transacción, no se mostrarán los campos del producto.
-
-Para exportar cualquiera de los datos de la transacción en esta página, seleccione Exportar y, a continuación, siga las instrucciones de la página exportar datos. Los archivos exportados desde la página historial de transacciones muestran datos en la moneda de la transacción, ganancias en la moneda de la transacción y en dólares estadounidenses, y el valor de pago en pago por moneda.
 
 ## <a name="payment-status"></a>Estado del pago.
 
