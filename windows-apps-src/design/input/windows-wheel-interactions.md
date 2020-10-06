@@ -8,29 +8,37 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: e9a619fc58b1b84755e33fd36ebacd99f98d6b7f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 29a054299b933e523f8594419c4e954c3a0bf1e4
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220418"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749971"
 ---
 # <a name="surface-dial-interactions"></a>Interacciones de Surface Dial
 
 ![Imagen de Surface Dial con Surface Studio](images/windows-wheel/dial-pen-studio-600px.png)  
 *Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116)).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Los dispositivos de rueda de Windows, como el marcado de Surface, son una nueva categoría de dispositivo de entrada que habilita un host de experiencias de interacción de usuarios atractivas y únicas para aplicaciones Windows y Windows. 
 
 > [!IMPORTANT]
 > En este tema, hacemos referencia específicamente a las interacciones de marcado de Surface, pero la información es aplicable a todos los dispositivos de rueda de Windows. 
 
-| Vídeos |   |
-| --- | --- |
-| <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> |
-| *Asociados de aplicaciones de Surface Dial* | *Surface Dial para desarrolladores* |
+:::row:::
+   :::column:::
+      <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe>
+
+      *Asociados de aplicaciones de Surface Dial*
+   :::column-end:::
+   :::column:::
+      <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe>
+
+      *Surface Dial para desarrolladores*
+   :::column-end:::
+:::row-end:::
 
 Con un factor de forma que se basa en una acción (o gesto) de *giro*, Surface Dial se ha diseñado como un dispositivo de entrada secundario multimodal que complementa la entrada de un dispositivo principal. En la mayoría de los casos, el dispositivo se manipula con la mano no dominante del usuario mientras realiza una tarea con la mano dominante (por ejemplo, una entrada manuscrita con un lápiz). No está diseñado como una entrada de puntero de precisión (por ejemplo, entrada táctil, lápiz o mouse). 
 
@@ -45,9 +53,18 @@ Surface Dial también admite una acción de *pulsar y sostener* y una acción de
 >
 >Mediante la detección del punto de contacto y de los límites de Surface Dial, el sistema usa esta información para controlar la oclusión por el dispositivo y mostrar una versión aún más grande del menú que rodea la parte exterior del Dial. Esta misma información también puede usarla la aplicación para adaptar la interfaz de usuario tanto a la presencia del dispositivo y su uso anticipado, como a la ubicación de la mano y el brazo del usuario.
 
-| Menú fuera de la pantalla de Surface Dial | | Menú en la pantalla de Surface Dial |
-| --- | --- | --- |
-| ![Menú fuera de la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-offscreen.png) | | ![Menú en la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-onscreen.png) |
+:::row:::
+   :::column:::
+      **Menú fuera de la pantalla de Surface Dial**
+
+      ![Menú fuera de la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-offscreen.png)
+   :::column-end:::
+   :::column:::
+      **Menú en la pantalla de Surface Dial**
+
+      ![Menú en la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-onscreen.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="system-integration"></a>Integración del sistema
 
@@ -113,10 +130,23 @@ Los iconos pueden transmitir profesionalidad y excelencia, e inspiran confianza 
 - El icono debería llenar la mayor parte de la imagen
 - Un icono en blanco debe tener un contorno negro para que sea visible en el modo de contraste alto
 
-|   |   |   |
-| --- | --- | --- |
-| ![Icono con fondo alfa](images/windows-wheel/surface-dial-menu-icon1.png) | ![Icono que se muestra en el menú de rueda con el icono de tema predeterminado](images/windows-wheel/surface-dial-menu-icon2.png) | ![Menú en la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-icon3.png) |
-| *Icono con fondo alfa* | *Icono que se muestra en el menú de rueda con el tema predeterminado* | *Icono que se muestra en el menú de rueda con el tema blanco en contraste alto* |
+:::row:::
+   :::column:::
+      ![Icono con fondo alfa](images/windows-wheel/surface-dial-menu-icon1.png)
+
+      *Icono con fondo alfa*
+   :::column-end:::
+   :::column:::
+      ![Icono que se muestra en el menú de rueda con el icono de tema predeterminado](images/windows-wheel/surface-dial-menu-icon2.png)
+
+      *Icono que se muestra en el menú de rueda con el tema predeterminado*
+   :::column-end:::
+   :::column:::
+      ![Menú en la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-icon3.png)
+
+      *Icono que se muestra en el menú de rueda con el tema blanco en contraste alto*
+   :::column-end:::
+:::row-end:::
 
 **Usar nombres concisos y descriptivos**  
 El nombre de la herramienta se muestra en el menú de la herramienta junto con el icono de la herramienta, y también lo usan los lectores de pantalla. 
@@ -316,15 +346,30 @@ Maximiza la satisfacción del cliente acomodando y adaptando tus interacciones c
 
 Las herramientas y comandos integrados en el menú del Dial siguen estas directrices para las interacciones basadas en la rotación:
 
-|   |   |   |
-| --- | --- | --- |
-| Left<br/>Arriba<br/>Fuera | ![Imagen de Surface Dial](images/windows-wheel/surface-dial-rotate.png) | Right<br/>Bajar<br/>En |
-|   |   |   |
+:::row:::
+   :::column:::
+      Left
+
+      Subir
+
+      Fuera 
+   :::column-end:::
+   :::column span="2":::
+      ![Imagen de Surface Dial](images/windows-wheel/surface-dial-rotate.png)
+   :::column-end:::
+   :::column:::
+      Right
+
+      Bajar
+
+      En
+   :::column-end:::
+:::row-end:::
 
 | Dirección conceptual | Asignación a Surface Dial | Rotación en sentido del reloj | Rotación en sentido contrario a las agujas del reloj |
 | --- | --- | --- | --- |
 | Horizontal | Asignación de izquierda y derecha basada en la parte superior de Surface Dial | Right | Left |
-| Vertical | Asignación de arriba y abajo basada en el lado izquierdo de Surface Dial | Bajar | Arriba |
+| Vertical | Asignación de arriba y abajo basada en el lado izquierdo de Surface Dial | Bajar | Subir |
 | Eje z | Acercar (o más cerca) asignado a arriba/derecha<br/>Alejar (o más lejos) asignado a abajo/izquierda | En | Fuera |
 
 #### <a name="developer-guidance"></a>Instrucciones para desarrolladores

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5daec3f4d0fa823341ff7590094463ef412b88
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e7d008a6956c3acd22dcb99e6bf4e1cda1442545
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156009"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750171"
 ---
 # <a name="debug-a-background-task"></a>Depurar una tarea en segundo plano
 
@@ -42,16 +42,16 @@ Las tareas en segundo plano se pueden desencadenar manualmente mediante Microsof
 
 2.  Ejecuta la aplicación en el depurador y después desencadena la tarea en segundo plano mediante la barra de herramientas **Eventos de ciclo de vida**. Este menú desplegable muestra los nombres de las tareas en segundo plano que pueden activarse con Visual Studio.
 
-> [!NOTE]
-> Las opciones de la barra de herramientas eventos del ciclo de vida no se muestran de forma predeterminada en Visual Studio. Para mostrar estas opciones, haga clic con el botón derecho en la barra de herramientas actual de Visual Studio y asegúrese de que la opción **Ubicación de depuración** está habilitada.
+    > [!NOTE]
+    > Las opciones de la barra de herramientas eventos del ciclo de vida no se muestran de forma predeterminada en Visual Studio. Para mostrar estas opciones, haga clic con el botón derecho en la barra de herramientas actual de Visual Studio y asegúrese de que la opción **Ubicación de depuración** está habilitada.
 
-    For this to work, the background task must already be registered and it must still be waiting for the trigger. For example, if a background task was registered with a one-shot TimeTrigger and that trigger has already fired, launching the task through Visual Studio will have no effect.
+    Para que esto funcione, la tarea en segundo plano ya debe estar registrada y debe seguir esperando el desencadenador. Por ejemplo, si una tarea en segundo plano se registró con TimeTrigger y ese desencadenador ya está activado, iniciar la tarea a través de Visual Studio no tendrá efecto.
 
-> [!Note]
-> Las tareas en segundo plano que usen los siguientes desencadenadores no se pueden activar de esta manera: [**ApplicationTrigger**](/uwp/api/windows.applicationmodel.background.applicationtrigger), [**MediaProcessingTrigger**](/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [**ControlChannelTrigger**](/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [**PushNotificationTrigger**](/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger) y las tareas en segundo plano que usen un [**SystemTrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) con el tipo de desencadenador [**SmsReceived**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType).  
-> **ApplicationTrigger** y **MediaProcessingTrigger** se pueden señalar manualmente en el código con `trigger.RequestAsync()`.
+    > [!Note]
+    > Las tareas en segundo plano que usen los siguientes desencadenadores no se pueden activar de esta manera: [**ApplicationTrigger**](/uwp/api/windows.applicationmodel.background.applicationtrigger), [**MediaProcessingTrigger**](/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [**ControlChannelTrigger**](/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [**PushNotificationTrigger**](/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger) y las tareas en segundo plano que usen un [**SystemTrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) con el tipo de desencadenador [**SmsReceived**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType).  
+    > **ApplicationTrigger** y **MediaProcessingTrigger** se pueden señalar manualmente en el código con `trigger.RequestAsync()`.
 
-![depurar tareas en segundo plano](images/debugging-activation.png)
+    ![depurar tareas en segundo plano](images/debugging-activation.png)
 
 3.  Cuando la tarea en segundo plano se activa, el depurador se adjuntará a ella y mostrará el resultado de depuración en VS.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a20463414f0b96ea51bdf9796c48759975bfc43e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 62085377da89d64c8ba0799dc6bab13c17675f90
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162219"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750681"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
 
@@ -93,7 +93,7 @@ Si quieres estar seguro de que tus estilos o plantillas personalizados usan el c
 
 Estos son algunos ejemplos más específicos de los cambios en los controles.
 
-| Nombre del control | Cambio |
+| Nombre del control | Change |
 |--------------|--------|
 | **AppBar**   | Si usas el control **AppBar** (se recomienda [**CommandBar**](/uwp/api/Windows.UI.Xaml.Controls.AppBar) en su lugar), no está oculto de manera predeterminada en una aplicación de Windows 10. Puedes controlarlo con la propiedad [**AppBar.ClosedDisplayMode**](/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode). |
 | **AppBar**, [**CommandBar**](/uwp/api/Windows.UI.Xaml.Controls.AppBar) | En una aplicación de Windows 10, **AppBar** y [**CommandBar**](/uwp/api/Windows.UI.Xaml.Controls.AppBar) tienen un botón **Ver más** (los puntos suspensivos). |
@@ -187,7 +187,7 @@ Un ListViewItemPresenter con una casilla superpuesta
 
 En esta tabla se describen los cambios en los estados visuales y los grupos de estado visual de las plantillas de control [**ListViewItem**](/uwp/api/Windows.UI.Xaml.Controls.ListViewItem) y [**GridViewItem**](/uwp/api/Windows.UI.Xaml.Controls.GridViewItem).
 
-| 8.1                 |                         | Windows 10        |                     |
+| 8.1                 | Estado de la característica           | Windows 10        | Estado de la característica       |
 |---------------------|-------------------------|-------------------|---------------------|
 | CommonStates        |                         | CommonStates      |                     |
 |                     | Normal                  |                   | Normal              |
@@ -200,7 +200,7 @@ En esta tabla se describen los cambios en los estados visuales y los grupos de e
 |                     | [no disponible]           |                   | PressedSelected     |
 | [no disponible]       |                         | DisabledStates    |                     |
 |                     | [no disponible]           |                   | Disabled            |
-|                     | [no disponible]           |                   | Habilitado             |
+|                     | [no disponible]           |                   | habilitado             |
 | SelectionHintStates |                         | [no disponible]     |                     |
 |                     | VerticalSelectionHint   |                   | [no disponible]       |
 |                     | HorizontalSelectionHint |                   | [no disponible]       |

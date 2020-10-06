@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo agregar compatibilidad con el cont
 ms.date: 10/19/2017
 ms.topic: article
 keywords: Shell de Windows 10, UWP, Xbox, voz y voz habilitada
-ms.openlocfilehash: b59b578a13145910be30c3f228305b874f9e9734
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: fa0f56a6821fd8858cab317654cd0ead5d731693
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636485"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750271"
 ---
 # <a name="using-speech-to-invoke-ui-elements"></a>Usar voz para invocar elementos de la interfaz de usuario
 
@@ -20,31 +20,31 @@ A continuación se ofrece información general sobre lo que un usuario experimen
 
 - El usuario activa la consola Xbox y desea examinar sus aplicaciones para encontrar algo de interés:
 
-        User: "Hey Cortana, open My Games and Apps"
+    > Usuario: "Hola Cortana, abrir mis juegos y aplicaciones"
 
 - El usuario se deja en modo de escucha activo (ALM), lo que significa que la consola está escuchando ahora que el usuario invoca un control que está visible en la pantalla, sin necesidad de decir "Hola Cortana" cada vez.  Ahora el usuario puede cambiar a ver aplicaciones y desplazarse por la lista de aplicaciones:
 
-        User: "applications"
+    > Usuario: "aplicaciones"
 
 - Para desplazar la vista, el usuario puede simplemente decir:
 
-        User: "scroll down"
+    > Usuario: "desplazarse hacia abajo"
 
 - El usuario ve el material gráfico de la aplicación en la que está interesado pero olvidó el nombre.  El usuario solicita que se muestren las etiquetas de las sugerencias de voz:
 
-        User: "show labels"
+    > Usuario: "Mostrar etiquetas"
 
 - Ahora que está claro qué decir, se puede iniciar la aplicación:
 
-        User: "movies and TV"
+    > Usuario: "películas y TV"
 
 - Para salir del modo de escucha activa, el usuario indica a Xbox que detenga la escucha:
 
-        User: "stop listening"
+    > Usuario: "detener escucha"
 
 - Más adelante, se puede iniciar una nueva sesión de escucha activa con:
 
-        User: "Hey Cortana, make a selection" or "Hey Cortana, select"
+    > Usuario: "Hola Cortana, hacer una selección" o "Hola Cortana, seleccionar"
 
 ## <a name="ui-automation-dependency"></a>Dependencia de UI Automation ##
 VES es un cliente de automatización de la interfaz de usuario y se basa en la información expuesta por la aplicación a través de los proveedores de automatización de la interfaz de usuario. Se trata de la misma infraestructura ya utilizada por la característica de narrador en plataformas Windows.  UI Automation permite el acceso mediante programación a los elementos de la interfaz de usuario, incluido el nombre del control, su tipo y los patrones de control que implementa.  A medida que cambia la interfaz de usuario en la aplicación, VES reaccionará a los eventos de actualización de UIA y volverá a analizar el árbol de automatización de la interfaz de usuario actualizado para encontrar todos los elementos procesables, para lo que usará esta información para crear una gramática de reconocimiento de voz. 
@@ -168,36 +168,37 @@ Por ejemplo:
 ## <a name="sample-ui"></a>Ejemplo de interfaz de usuario ##
 A continuación se muestra un ejemplo de una interfaz de usuario basada en XAML, que establece AutomationProperties.Name de varias maneras:
 
-    <Page
-        x:Class="VESSampleCSharp.MainPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:VESSampleCSharp"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d">
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <Button x:Name="button1" Content="Hello World" HorizontalAlignment="Left" Margin="44,56,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="button2" AutomationProperties.Name="Launch Game" Content="Launch" HorizontalAlignment="Left" Margin="44,106,0,0" VerticalAlignment="Top" Width="99"/>
-            <TextBlock AutomationProperties.Name="Day of Week" x:Name="label1" HorizontalAlignment="Left" Height="22" Margin="168,62,0,0" TextWrapping="Wrap" Text="Select Day of Week:" VerticalAlignment="Top" Width="137"/>
-            <ComboBox AutomationProperties.LabeledBy="{Binding ElementName=label1}" x:Name="comboBox" HorizontalAlignment="Left" Margin="310,57,0,0" VerticalAlignment="Top" Width="120">
-                <ComboBoxItem Content="Monday" IsSelected="True"/>
-                <ComboBoxItem Content="Tuesday"/>
-                <ComboBoxItem Content="Wednesday"/>
-                <ComboBoxItem Content="Thursday"/>
-                <ComboBoxItem Content="Friday"/>
-                <ComboBoxItem Content="Saturday"/>
-                <ComboBoxItem Content="Sunday"/>
-            </ComboBox>
-            <Button x:Name="button3" HorizontalAlignment="Left" Margin="44,156,0,0" VerticalAlignment="Top" Width="213">
-                <Grid>
-                    <TextBlock AutomationProperties.Name="Accept">Accept Offer</TextBlock>
-                    <TextBlock Margin="0,25,0,0" Foreground="#FF5A5A5A">Exclusive offer just for you</TextBlock>
-                </Grid>
-            </Button>
-        </Grid>
-    </Page>
-
+```xaml
+<Page
+    x:Class="VESSampleCSharp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VESSampleCSharp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="button1" Content="Hello World" HorizontalAlignment="Left" Margin="44,56,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button2" AutomationProperties.Name="Launch Game" Content="Launch" HorizontalAlignment="Left" Margin="44,106,0,0" VerticalAlignment="Top" Width="99"/>
+        <TextBlock AutomationProperties.Name="Day of Week" x:Name="label1" HorizontalAlignment="Left" Height="22" Margin="168,62,0,0" TextWrapping="Wrap" Text="Select Day of Week:" VerticalAlignment="Top" Width="137"/>
+        <ComboBox AutomationProperties.LabeledBy="{Binding ElementName=label1}" x:Name="comboBox" HorizontalAlignment="Left" Margin="310,57,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Monday" IsSelected="True"/>
+            <ComboBoxItem Content="Tuesday"/>
+            <ComboBoxItem Content="Wednesday"/>
+            <ComboBoxItem Content="Thursday"/>
+            <ComboBoxItem Content="Friday"/>
+            <ComboBoxItem Content="Saturday"/>
+            <ComboBoxItem Content="Sunday"/>
+        </ComboBox>
+        <Button x:Name="button3" HorizontalAlignment="Left" Margin="44,156,0,0" VerticalAlignment="Top" Width="213">
+            <Grid>
+                <TextBlock AutomationProperties.Name="Accept">Accept Offer</TextBlock>
+                <TextBlock Margin="0,25,0,0" Foreground="#FF5A5A5A">Exclusive offer just for you</TextBlock>
+            </Grid>
+        </Button>
+    </Grid>
+</Page>
+```
 
 En el ejemplo anterior se muestra el aspecto que tendrá la interfaz de usuario con y sin etiquetas de la sugerencia de voz.
  
@@ -217,7 +218,7 @@ Con `comboBox` , usamos la `LabeledBy` propiedad `label1` como referencia como e
 
 Por último, con `button3` , ves toma el `Name` del primer elemento secundario, ya que en `button3` sí mismo no tiene un `AutomationProperties.Name` conjunto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Fundamentos de UI Automation](/dotnet/framework/ui-automation/ui-automation-fundamentals "Fundamentos de UI Automation")
 - [Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "Propiedades de Automation para la compatibilidad con accesibilidad en la interfaz de usuario")
 - [Preguntas más frecuentes](frequently-asked-questions.md)

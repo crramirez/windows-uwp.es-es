@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a5e26d48ef74631e732fb043e909869945a6366
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 596a9f2f3f234ba90b799eae982523c3a9de9732
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217055"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749941"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
@@ -139,12 +139,23 @@ Los puntos de acoplamiento del movimiento panorámico son útiles para aplicacio
 
 En los siguientes diagramas se muestra que al mover panorámicamente un contenido hasta cierto punto y soltarlo, el contenido se desplaza de forma automática hasta una ubicación lógica.
 
-|                                                                |                                                                                         |                                                                                                                 |
-|----------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| ![imagen en la que se muestra un área desplazable.](images/ux-panning-snap1.png) | ![imagen en la que se muestra un área desplazable que se desplaza hacia la izquierda.](images/ux-panning-snap2.png) | ![imagen en la que se muestra un área desplazable que detuvo el desplazamiento en un punto de acoplamiento lógico.](images/ux-panning-snap3.png) |
-| Desliza rápidamente para realizar un movimiento panorámico.                                                  | Levanta el contacto táctil.                                                                     | La región desplazable se detiene en el punto de acoplamiento, no cuando se levanta el contacto táctil.                                |
+:::row:::
+   :::column:::
+      ![imagen en la que se muestra un área desplazable.](images/ux-panning-snap1.png)
 
- 
+      Desliza rápidamente para realizar un movimiento panorámico.
+   :::column-end:::
+   :::column:::
+      ![imagen en la que se muestra un área desplazable que se desplaza hacia la izquierda.](images/ux-panning-snap2.png)
+
+      Levanta el contacto táctil.
+   :::column-end:::
+   :::column:::
+      ![imagen en la que se muestra un área desplazable que detuvo el desplazamiento en un punto de acoplamiento lógico.](images/ux-panning-snap3.png)
+
+      La región desplazable se detiene en el punto de acoplamiento, no cuando se levanta el contacto táctil.
+   :::column-end:::
+:::row-end:::
 
 **Guías** El contenido puede ser más alto y más ancho que las dimensiones y la resolución de un dispositivo de pantalla. Por ese motivo, el movimiento panorámico en dos dimensiones (horizontal y vertical) suele ser necesario. En estos casos, las guías mejoran la experiencia del usuario al enfatizar el movimiento panorámico a lo largo del eje de movimiento (vertical u horizontal).
 
@@ -174,7 +185,7 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 - [Optimizar ListView y GridView](../../debug-test-perf/optimize-gridview-and-listview.md)
 - [Accesibilidad de teclado](../accessibility/keyboard-accessibility.md)
 
-**Ejemplos**
+**Muestras**
 - [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [Ejemplo de entrada de latencia baja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
 - [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)

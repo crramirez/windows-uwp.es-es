@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, roles de usuario, permisos de usuario, roles personalizados, acceso de usuario, permisos de personalización, roles estándar
 ms.localizationpriority: medium
-ms.openlocfilehash: 6aa88bd5af2e878fa702c3faff2d2677a23f33f2
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f8454587e31751e3653d983dbb1d45e21a2808d9
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219758"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750181"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuenta
 
@@ -53,13 +53,13 @@ La siguiente tabla muestra algunas de las características específicas disponib
 
 |                                                       |    Propietario de cuenta                 |    Manager                       |    Desarrollador                     |    Colaborador empresarial    |    Colaborador financiero    |    Vendedor                      |
 |-------------------------------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------|---------------------------|----------------------------------|
-|    Informe de adquisición (incluidos los datos casi en tiempo real) |    Puede ver                      |    Puede ver                      |    Sin acceso                     |    Sin acceso               |    Puede ver               |    Sin acceso                     |
-|    Respuesta/informe de comentarios                          |    Puede ver y enviar comentarios    |    Puede ver y enviar comentarios    |    Puede ver y enviar comentarios    |    Sin acceso               |    Sin acceso              |    Puede ver y enviar comentarios    |
-|    Informe de mantenimiento (incluidos los datos casi en tiempo real)      |    Puede ver                      |    Puede ver                      |    Puede ver                      |    Puede ver                |    Sin acceso              |    Sin acceso                     |
-|    Informe de uso                                       |    Puede ver                      |    Puede ver                      |    Puede ver                      |    Puede ver                |    Sin acceso              |    Sin acceso                     |
-|    Cuenta de pago                                     |    Puede actualizar                    |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede actualizar             |    Sin acceso                     |
-|    Perfil fiscal                                        |    Puede actualizar                    |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede actualizar             |    Sin acceso                     |
-|    Resumen de pagos                                     |    Puede ver                      |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede ver               |    Sin acceso                     |
+|    **Informe de adquisición (incluidos los datos casi en tiempo real)** |    Puede ver                      |    Puede ver                      |    Sin acceso                     |    Sin acceso               |    Puede ver               |    Sin acceso                     |
+|    **Respuesta/informe de comentarios**                          |    Puede ver y enviar comentarios    |    Puede ver y enviar comentarios    |    Puede ver y enviar comentarios    |    Sin acceso               |    Sin acceso              |    Puede ver y enviar comentarios    |
+|    **Informe de mantenimiento (incluidos los datos casi en tiempo real)**      |    Puede ver                      |    Puede ver                      |    Puede ver                      |    Puede ver                |    Sin acceso              |    Sin acceso                     |
+|    **Informe de uso**                                       |    Puede ver                      |    Puede ver                      |    Puede ver                      |    Puede ver                |    Sin acceso              |    Sin acceso                     |
+|    **Cuenta de pago**                                     |    Puede actualizar                    |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede actualizar             |    Sin acceso                     |
+|    **Perfil fiscal**                                        |    Puede actualizar                    |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede actualizar             |    Sin acceso                     |
+|    **Resumen de pagos**                                     |    Puede ver                      |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede ver               |    Sin acceso                     |
 
 Si ninguno de los roles estándar es adecuado o desea limitar el acceso a aplicaciones y complementos específicos, puede conceder permisos personalizados al usuario seleccionando **personalizar permisos**, como se describe a continuación.
 

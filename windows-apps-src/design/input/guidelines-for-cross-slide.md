@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5f86da29900e0ef83fb0bf41d2c8d9fe59727f2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2b16c957991889cb5f39a775397de72ff56beffc
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172519"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749982"
 ---
 # <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
@@ -58,14 +58,18 @@ Usa el deslizamiento transversal para listas y colecciones que se desplazan en u
 
 **Nota:**    En los casos en los que el área de contenido se puede desplazar en dos direcciones, como exploradores Web o lectores electrónicos, se debe usar la interacción con hora de mantener presionada para invocar el menú contextual para objetos como imágenes e hipervínculos.
 
- 
+:::row:::
+   :::column:::
+     ![movimiento panorámico horizontal, lista de dos dimensiones](images/groupedlistview1.png)
 
-|                                                                                         |                                                                                         |
-|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| ![movimiento panorámico horizontal, lista de dos dimensiones](images/groupedlistview1.png)                | ![movimiento panorámico vertical, lista de una dimensión](images/listviewlistlayout.png)                |
-| Una lista de dos dimensiones con movimiento panorámico horizontal. Arrastra verticalmente para seleccionar o mover un elemento. | Una lista de una dimensión con movimiento panorámico vertical. Arrastra horizontalmente para seleccionar o mover un elemento. |
+     Una lista de dos dimensiones con movimiento panorámico horizontal. Arrastra verticalmente para seleccionar o mover un elemento. 
+   :::column-end:::
+   :::column:::
+      ![movimiento panorámico vertical, lista de una dimensión](images/listviewlistlayout.png)
 
- 
+      Una lista de una dimensión con movimiento panorámico vertical. Arrastra horizontalmente para seleccionar o mover un elemento.
+   :::column-end:::
+:::row-end:::
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 

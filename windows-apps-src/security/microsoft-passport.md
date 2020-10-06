@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb35a262f02576f0425460c8e27ce0016a08d1a
-ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
+ms.openlocfilehash: bcb43748baeeb7f68ec246cb0277fbef0944fc47
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91366901"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750361"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -411,8 +411,8 @@ Las opciones de implementación flexibles permiten a Windows Hello reemplazar o 
 
 ### <a name="62-terminology"></a>6.2 Terminología
 
-| | |
-|-|-|
+| Término | Definición |
+| ---- | ---------- |
 | AIK | Una clave de Identidad de atestación se usa para proporcionar una prueba criptográfica (atestación de clave de TPM) como esta mediante la firma de las propiedades de la clave que no se puede migrar, y el suministro de las propiedades y la firma al usuario de confianza para su verificación. La firma resultante se denomina "declaración de atestación". Dado que la firma se crea mediante la clave privada AIK, que solo puede usarse en el TPM que la creó, el usuario de confianza puede confiar en que la clave atestada no se puede migrar realmente y no se puede usar fuera de ese TPM.AIK. |
 | Certificado AIK | Un certificado AIK se usa para atestar la presencia de un AIK dentro de un TPM. También se usa para atestar que otras claves certificadas por el AIK provienen de ese TPM concreto. |
 | IDP | Un IDP es un proveedor de identidades. Un ejemplo es la compilación de IDP de Microsoft para cuentas de Microsoft. Cada vez que una aplicación necesita autenticarse con una MSA, puede llamar al IDP de MSA. |

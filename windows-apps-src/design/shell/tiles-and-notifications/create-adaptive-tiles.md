@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c60794a52c3d8a5f597d4ab2d09490405c98f85a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 5ec8832d4e0e8c72954bf4d0582aac8240da2efe
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218378"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750691"
 ---
 # <a name="create-adaptive-tiles"></a>Crear iconos adaptables
 
@@ -412,16 +412,15 @@ new AdaptiveText()
 
 **Estilos de texto básicos**
 
-|                                |                           |             |
-|--------------------------------|---------------------------|-------------|
 | &lt;sugerencia de texto: estilo = " \* "/&gt; | Alto de fuente               | Espesor de la fuente |
+|--------------------------------|---------------------------|-------------|
 | caption                        | 12 píxeles efectivos (epx) | Normal     |
 | body                           | 15 epx                    | Normal     |
 | base                           | 15 epx                    | Semibold    |
 | subtitle                       | 20 epx                    | Normal     |
 | title                          | 24 epx                    | Semilight   |
-| subheader                      | 34 epx                    | Claro       |
-| encabezado                         | 46 epx                    | Claro       |
+| subheader                      | 34 epx                    | Ligero       |
+| encabezado                         | 46 epx                    | Ligero       |
 
  
 
@@ -429,11 +428,11 @@ new AdaptiveText()
 
 Estas variaciones reducen el alto de línea para que el contenido de la parte superior e inferior se aproxime más al texto.
 
-|                  |
-|------------------|
-| titleNumeral     |
-| subheaderNumeral |
-| headerNumeral    |
+- titleNumeral
+
+- subheaderNumeral
+
+- headerNumeral
 
  
 
@@ -441,18 +440,25 @@ Estas variaciones reducen el alto de línea para que el contenido de la parte su
 
 Cada estilo tiene una variación sutil que proporciona al texto una opacidad del 60 % que, por lo general, hace que el color del texto tenga un tono gris claro.
 
-|                        |
-|------------------------|
-| captionSubtle          |
-| bodySubtle             |
-| baseSubtle             |
-| subtitleSubtle         |
-| titleSubtle            |
-| titleNumeralSubtle     |
-| subheaderSubtle        |
-| subheaderNumeralSubtle |
-| headerSubtle           |
-| headerNumeralSubtle    |
+- captionSubtle
+
+- bodySubtle
+
+- baseSubtle
+
+- subtitleSubtle
+
+- titleSubtle
+
+- titleNumeralSubtle
+
+- subheaderSubtle
+
+- subheaderNumeralSubtle
+
+- headerSubtle
+
+- headerNumeralSubtle
 
  
 

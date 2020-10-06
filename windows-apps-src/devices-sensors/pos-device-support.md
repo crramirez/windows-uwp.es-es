@@ -5,12 +5,12 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf5d6a2413ba6aeb2e3fd86122e865e34b8729fa
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9e89011086e6c6d318d589226400789b41f8fe64
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172209"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750358"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Periféricos de punto de servicio admitidos
 
@@ -123,7 +123,7 @@ Windows proporciona compatibilidad con los lectores de franjas magnéticas sigui
 ## <a name="receipt-printer-posprinter"></a>Impresora de recepción (POSPrinter)
 | Conectividad | Soporte técnico |
 | -------------|-------------|
-| Red y Bluetooth | <p>Windows admite impresoras de recepción conectadas a través de Bluetooth y de red mediante el idioma de control de impresora ESC/POS de Epson.  Las impresoras que se enumeran a continuación se detectan automáticamente mediante las API de POSPrinter. Las impresoras de recepción adicionales que proporcionan una emulación ESC/POS también pueden funcionar, pero deben estar asociadas con un proceso [de emparejamiento fuera de banda](./point-of-service.md#out-of-band-pairing) .</p><p>Nota: la estación SLIP y las estaciones de diario no se admiten a través de este método.</p> |
+| Red y Bluetooth | <p>Windows admite impresoras de recepción conectadas a través de Bluetooth y de red mediante el idioma de control de impresora ESC/POS de Epson.  Las impresoras que se enumeran a continuación se detectan automáticamente mediante las API de POSPrinter. Las impresoras de recepción adicionales que proporcionan una emulación ESC/POS también pueden funcionar, pero deben estar asociadas con un proceso [de emparejamiento fuera de banda](./point-of-service.md) .</p><p>Nota: la estación SLIP y las estaciones de diario no se admiten a través de este método.</p> |
 | OPOS    | <p> Admite cualquier impresora de recepción compatible con OPOS a través de objetos de servicio de OPOS. Instale los controladores de OPOS según las instrucciones de instalación del fabricante del dispositivo. </p> |
 
 ### <a name="stationary-receipt-printers-networkbluetooth"></a>Impresoras de recepción estacionales (red/Bluetooth)

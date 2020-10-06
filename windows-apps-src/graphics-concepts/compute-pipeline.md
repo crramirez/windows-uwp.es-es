@@ -6,30 +6,32 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 911546f1c2973a79aea4b597a47352149a4e4210
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 36d1bd524d6e71b0a1aa9477d7a2b7a5f27544aa
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651120"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750051"
 ---
 # <a name="compute-pipeline"></a>Canalización del proceso
 
 
-\[Parte de la información está relacionada con productos preliminares que pueden modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa ni implícita, con respecto a la información proporcionada aquí.\]
+\[Algunos datos se relacionan con productos de versiones preliminares que pueden modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no proporciona ninguna garantía, expresa o implícita, con respecto a la información proporcionada aquí.\]
 
 
-La canalización del proceso de Direct3D está diseñada para controlar los cálculos que se pueden llevar a cabo principalmente en paralelo con la canalización de gráficos. La canalización del proceso solo incluye unos pocos pasos, donde los datos fluyen de la entrada a la salida a través de la fase del sombreador de cálculo programable.
+La canalización del proceso de Direct3D está diseñada para controlar los cálculos que se pueden llevar a cabo principalmente en paralelo con la canalización de gráficos. Hay solo unos pocos pasos en la canalización de proceso, con datos que fluyen de la entrada a la salida a través de la fase de sombreador de cálculo programable.
 
-| | |
-|-|-|
-|Propósito|Al igual que otros sombreadores programables, la [fase del sombreador de cálculo (CS)](compute-shader-stage--cs-.md) está diseñada e implementada con HLSL. Un sombreador de cálculo proporciona cálculos de uso general de alta velocidad y aprovecha las ventajas de la gran cantidad de procesadores en paralelo de la unidad de procesamiento gráfico (GPU). El sombreador de cálculo ofrece características de uso compartido de memoria y de sincronización de subprocesos para permitir métodos de programación en paralelos más eficaces.|
-|Entrada|A diferencia de otros sombreadores programables, la definición de entrada es abstracta. Por naturaleza, la entrada puede ser uni, bi o tridimensional, lo que determina el número de invocaciones que debe ejecutar el sombreador de cálculo. Es posible definir los datos compartidos que leerá un conjunto de invocaciones.|
-|Salida|Los datos de salida del sombreador de cálculo, que pueden variar ampliamente, se pueden sincronizar con la canalización de representación de gráficos cuando se necesitan los datos calculados.|
-| | |
+## <a name="purpose"></a>Propósito
 
+Al igual que otros sombreadores programables, la [fase del sombreador de cálculo (CS)](compute-shader-stage--cs-.md) se diseña e implementa con HLSL. Un sombreador de cálculo proporciona una informática de uso general de alta velocidad y aprovecha el gran número de procesadores en paralelo de la unidad de procesamiento de gráficos (GPU). El sombreador de cálculo proporciona características de uso compartido de memoria y sincronización de subprocesos para permitir métodos de programación paralelas más eficaces.
 
+## <a name="input"></a>Entrada
 
+A diferencia de otros sombreadores programables, la definición de entrada es abstracta. La entrada puede tener una, dos o tres dimensiones por naturaleza, determinando el número de invocaciones del sombreador de cálculo que se va a ejecutar. Es posible definir los datos compartidos para un conjunto de invocaciones que se van a leer. |
+
+## <a name="output"></a>Output
+
+Los datos de salida del sombreador de cálculo, que pueden ser muy variados, se pueden sincronizar con la canalización de representación de gráficos cuando se requieren los datos calculados.
 
 <!---
 <table>

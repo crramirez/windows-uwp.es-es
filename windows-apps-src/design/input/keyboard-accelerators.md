@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 02fba8027c5bddec5e5c501783b32dbab5642db9
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 8ec5791c212e2fdfbafd40131d96ace6c88fb519
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219958"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749961"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -28,7 +28,7 @@ Consulte el tema [claves de acceso](access-keys.md) para obtener más informaci�
 > [!NOTE]
 > Un teclado es indispensable para los usuarios con ciertas discapacidades (vea [accesibilidad del teclado](../accessibility/keyboard-accessibility.md)) y también es una herramienta importante para los usuarios que lo prefieren como una forma más eficaz de interactuar con una aplicación.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Normalmente, los aceleradores incluyen las teclas de función F1 a F12 o alguna combinación de una tecla estándar emparejada con una o más teclas modificadoras (CTRL, Mayús).
 
@@ -350,14 +350,10 @@ Esto podría no ser siempre posible debido a las diferencias de funcionalidad en
 | Negrita | Ctrl + B |
 | Subrayado | Ctrl + U |
 | Cursiva | Ctrl+I |
-
 | **Navegación** | |
-| ------------- | ----------------------------------- |
 | Buscar contenido en un control o ventana prioritarios | Ctrl + F |
 | Ir al siguiente resultado de la búsqueda | F3 |
-
 | **Otras acciones** | |
-| ------------- | ----------------------------------- |
 | Agregar favoritos | Ctrl+D | 
 | Actualizar | F5 o Ctrl + R | 
 | Acercar | Ctrl + + | 
@@ -365,7 +361,7 @@ Esto podría no ser siempre posible debido a las diferencias de funcionalidad en
 | Zoom a la vista predeterminada | Ctrl + 0 | 
 | Guardar | Ctrl + S | 
 | Cerrar | Ctrl + W | 
-| Impresión | Ctrl + P | 
+| Imprimir | Ctrl + P | 
 
 Tenga en cuenta que algunas de las combinaciones no son válidas para las versiones traducidas de Windows. Por ejemplo, en la versión en Español de Windows, se usa Ctrl + N para negrita en lugar de CTRL + B. Se recomienda proporcionar aceleradores de teclado localizados si la aplicación está localizada.
 
