@@ -2,16 +2,16 @@
 Description: Agrega interfaces de usuario modernas de XAML, crea paquetes MSIX e incorpora otros componentes actuales en la aplicación de escritorio.
 title: Modernización de las aplicaciones de escritorio para Windows
 ms.topic: article
-ms.date: 04/17/2019
+ms.date: 10/02/2020
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: d2ae73cc32fd4e3717fe40b8a6ec8c3397b40619
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5df07995c2e4175bc9a67010a78c353cbd9d8cfa
+ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161539"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671504"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
@@ -24,7 +24,7 @@ En este artículo se describen las características de Windows 10 y UWP que pued
 
 ## <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
 
-La biblioteca de interfaz de usuario de Windows es un conjunto de paquetes NuGet que proporciona controles y otros elementos de interfaz de usuario para aplicaciones de Windows 10. WinUI comenzó como un kit de herramientas que ofrecía versiones nuevas y actualizadas de controles de UWP para aplicaciones para UWP destinadas a versiones de nivel inferior de Windows 10. WinUI ha crecido en el ámbito y ahora es la plataforma de interfaz de usuario nativa (IU) moderna para aplicaciones de Windows 10 en UWP, .NET y Win32.
+La biblioteca de interfaz de usuario de Windows es un conjunto de paquetes NuGet que proporciona controles y otros elementos de interfaz de usuario para aplicaciones de Windows 10. WinUI comenzó como un kit de herramientas que ofrecía versiones nuevas y actualizadas de controles XAML de WinRT para aplicaciones para UWP destinadas a versiones de nivel inferior de Windows 10. WinUI ha crecido en el ámbito y ahora es la plataforma de interfaz de usuario nativa (UI) moderna para aplicaciones de Windows 10 en UWP, .NET y Win32 nativo.
 
 Puede usar WinUI de las siguientes maneras en las aplicaciones de escritorio:
 
@@ -43,7 +43,7 @@ Para más información, consulta [Empaquetar aplicaciones de escritorio](/window
 
 ## <a name="net-core-3"></a>.NET Core 3
 
-.NET Core 3 es la última versión principal de .NET Core. Lo más destacado de esta versión es la compatibilidad con aplicaciones de escritorio de Windows, incluidas las aplicaciones de Windows Forms y WPF. Puedes ejecutar aplicaciones de escritorio de Windows nuevas y existentes en .NET Core 3 y disfrutar de todas las ventajas que ofrece .NET Core. Los controles de UWP que se hospedan en [islas XAML](xaml-islands.md) también se pueden usar en las aplicaciones de Windows Forms y WPF que tienen como destino .NET Core 3.
+.NET Core 3 es la última versión principal de .NET Core. Lo más destacado de esta versión es la compatibilidad con aplicaciones de escritorio de Windows, incluidas las aplicaciones de Windows Forms y WPF. Puedes ejecutar aplicaciones de escritorio de Windows nuevas y existentes en .NET Core 3 y disfrutar de todas las ventajas que ofrece .NET Core. Los controles XAML de WinRT que se hospedan en [XAML Islands](xaml-islands.md) también se pueden usar en las aplicaciones de Windows Forms y WPF que tienen como destino .NET Core 3.
 
 Para obtener más información, consulta el tema sobre [novedades de .NET Core 3.0](/dotnet/core/whats-new/dotnet-core-3-0).
 
@@ -53,15 +53,15 @@ Puedes llamar a muchas API de Windows Runtime directamente en la aplicación de 
 
 Para obtener más información, consulta [Uso de API de Windows Runtime para aplicaciones de escritorio](desktop-to-uwp-enhance.md).
 
-## <a name="host-uwp-controls-xaml-islands"></a>Hospedaje de controles de UWP (islas XAML)
+## <a name="host-winrt-xaml-controls-xaml-islands"></a>Hospedaje de controles XAML de WinRT (XAML Islands)
 
 A partir de Windows 10, versión 1903, puede agregar [controles XAML para UWP](/windows/uwp/design/controls-and-patterns/controls-by-function) directamente en cualquier elemento de la interfaz de usuario de una aplicación de WPF, Windows Forms o C++ Win32 que esté asociada a un identificador de ventana (HWND). Esto significa que puedes integrar totalmente las características más recientes de UWP como, por ejemplo, [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) y los controles que admiten [Fluent Design System](/windows/uwp/design/fluent-design-system/index) en ventanas y en otras superficies de presentación de las aplicaciones de escritorio. Este escenario para desarrolladores se denomina a veces *islas XAML*.
 
-Para más información, consulta [Uso de controles de UWP en aplicaciones de escritorio](xaml-islands.md).
+Para obtener más información, consulte [Controles XAML de WinRT en aplicaciones de escritorio](xaml-islands.md).
 
 ## <a name="use-the-visual-layer-in-desktop-apps"></a>Uso de una capa visual en aplicaciones de escritorio
 
-Ahora puedes usar las API de Windows Runtime en aplicaciones de escritorio que no son de UWP para mejorar la apariencia, el aspecto y la funcionalidad de las aplicaciones de WPF, Windows Forms y Win32 de C++, y aprovechar las ventajas de las características más recientes de la interfaz de usuario de Windows 10 que solo están disponibles a través de UWP. Esto es útil cuando necesitas crear experiencias personalizadas que van más allá de los controles integrados de UWP que puedes hospedar mediante islas XAML.
+Ahora puedes usar las API de Windows Runtime en aplicaciones de escritorio que no son de UWP para mejorar la apariencia, el aspecto y la funcionalidad de las aplicaciones de WPF, Windows Forms y Win32 de C++, y aprovechar las ventajas de las características más recientes de la interfaz de usuario de Windows 10 que solo están disponibles a través de UWP. Esto resulta útil cuando necesita crear experiencias personalizadas que van más allá de los controles XAML de WinRT integrados que puede hospedar mediante XAML Islands.
 
 Para más información, consulta [Modernización de una aplicación de escritorio mediante la capa visual](visual-layer-in-desktop-apps.md).
 
@@ -76,9 +76,9 @@ Hay varias maneras de conceder identidad a una aplicación de escritorio:
 
 <a id="desktop-uwp-controls"></a>
 
-## <a name="uwp-controls-optimized-for-desktop-apps"></a>Controles UWP optimizados para aplicaciones de escritorio
+## <a name="winrt-xaml-controls-optimized-for-desktop-apps"></a>Controles XAML de WinRT optimizados para aplicaciones de escritorio
 
-Tanto si va a compilar una aplicación para UWP centrada exclusivamente en la familia de dispositivos de escritorio como si desea usar los controles de UWP en una aplicación de escritorio de WPF, Windows Forms o C++ Win32, los siguientes controles de UWP nuevos y actualizados están diseñados para ofrecer experiencias optimizadas para escritorio gracias a [Fluent Design System](/windows/uwp/design/fluent-design-system/index). Estos controles se introdujeron en Windows 10, versión 1809 (actualización de octubre de 2018 o versión 10.0.17763).
+Tanto si va a compilar una aplicación para UWP centrada exclusivamente en la familia de dispositivos de escritorio como si quiere usar los controles XAML de WinRT en una aplicación de escritorio de WPF, Windows Forms o Win32 de C++, los siguientes controles XAML de WinRT nuevos y actualizados están diseñados para ofrecer experiencias optimizadas para escritorio gracias al [Sistema Fluent Design](/windows/uwp/design/fluent-design-system/index). Estos controles se introdujeron en Windows 10, versión 1809 (actualización de octubre de 2018 o versión 10.0.17763).
 
 | Control |  Descripción |
 |------ |--------------|

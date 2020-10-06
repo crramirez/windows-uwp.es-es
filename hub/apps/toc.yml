@@ -19,23 +19,23 @@
                   href: desktop/modernize/desktop-to-uwp-enhance.md
                 - name: API de Windows Runtime disponibles
                   href: desktop/modernize/desktop-to-uwp-supported-api.md
-            - name: Hospedaje de controles XAML de UWP (islas XAML)
+            - name: Hospedaje de controles XAML de WinRT (XAML Islands)
               items:
                 - name: Introducción
                   href: desktop/modernize/xaml-islands.md
                 - name: XAML Islands en aplicaciones de WPF y Windows Forms
                   items:
-                    - name: Hospedaje de un control estándar de UWP
+                    - name: Hospedaje de un control XAML estándar de WinRT
                       href: desktop/modernize/host-standard-control-with-xaml-islands.md
-                    - name: Hospedaje de un control estándar de UWP
+                    - name: Hospedaje de un control XAML personalizado de WinRT
                       href: desktop/modernize/host-custom-control-with-xaml-islands.md
                 - name: XAML Islands en aplicaciones Win32 de C++
                   items:
-                    - name: Usar la API de hospedaje XAML de UWP
+                    - name: Uso de la API de hospedaje XAML de WinRT
                       href: desktop/modernize/using-the-xaml-hosting-api.md
-                    - name: Hospedaje de un control estándar de UWP
+                    - name: Hospedaje de un control XAML estándar de WinRT
                       href: desktop/modernize/host-standard-control-with-xaml-islands-cpp.md
-                    - name: Hospedaje de un control estándar de UWP
+                    - name: Hospedaje de un control XAML personalizado de WinRT
                       href: desktop/modernize/host-custom-control-with-xaml-islands-cpp.md
                     - name: Escenarios avanzados
                       href: desktop/modernize/advanced-scenarios-xaml-islands-cpp.md
