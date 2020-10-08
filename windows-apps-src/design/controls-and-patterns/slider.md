@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dd2fa443a8419c0ff1212beac7e139a051627be5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f0dd27c306136e079f66dd0993c5fa497fe6a32e
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220468"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749721"
 ---
 # <a name="sliders"></a>Controles deslizantes
 
@@ -27,9 +27,17 @@ Un control deslizante es un control que permite que el usuario seleccione entre 
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **API de plataforma**: [clase Slider](/uwp/api/windows.ui.xaml.controls.slider), [propiedad Value](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [evento ValueChanged](/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 

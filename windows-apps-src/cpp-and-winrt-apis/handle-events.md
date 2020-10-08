@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d2470b1aa52f8aa4be7e07bf1dfe5213054b005
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fefc7f72fb91a61ae924ac082dcac6d3cf9c044b
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166249"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750131"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
@@ -112,12 +112,12 @@ También es útil ver la sintaxis del operador de la llamada de la función. Te 
 > ```
 >
 > Esa información nos indica que el evento **UIElement.KeyDown** (el tema en el que estamos) tiene un tipo de delegado de **KeyEventHandler**, ya que es el tipo que se pasa al registrar un delegado con este tipo de evento. Por lo tanto, sigue ahora el vínculo en el tema a ese tipo de [delegado KeyEventHandler](/uwp/api/windows.ui.xaml.input.keyeventhandler). En este caso, el bloque de sintaxis contiene un operador de la llamada de la función. Y, tal como se ha mencionado anteriormente, eso indica los parámetros de tu delegado que deben estar.
-> 
-> ```cppwinrt
-> void operator()(
-    winrt::Windows::Foundation::IInspectable const& sender,
-    winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
-> ```
+>
+>```cppwinrt
+>void operator()(
+>   winrt::Windows::Foundation::IInspectable const& sender,
+>   winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+>```
 >
 >  Como puedes ver, el delegado necesita que se declare para que tome un **IInspectable** como remitente y una instancia de la [clase KeyRoutedEventArgs](/uwp/api/windows.ui.xaml.input.keyroutedeventargs) como argumentos.
 >

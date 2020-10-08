@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e3915fca3b459d259e83c9c9ce5ef19aa413e2e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3fd8d57db92b8a59f32935586edfc247ec3c281f
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218678"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750461"
 ---
 # <a name="layout-panels"></a>Paneles de diseño
 
@@ -186,8 +186,8 @@ La *variación de tamaño proporcional* se usa para distribuir espacio disponibl
 
 En este ejemplo, se combinan variaciones de tamaño fijas, automáticas y proporcionales en una clase [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid) con 4 columnas.
 
-&nbsp;|&nbsp;|&nbsp;
-------|------|------
+| Columna | Ajuste de tamaño | Descripción |
+| ------ | ------ | ----------- |
 Columna_1 | **Auto** | La columna se ajustará a su contenido.
 Columna_2 | * | Después de que se calculen las columnas Auto, la columna recibe parte del ancho restante. Columna_2 será la mitad de ancha que Columna_4.
 Columna_3 | **44** | La columna tendrá un ancho de 44 píxeles.

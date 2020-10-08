@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e0cd1979ca1929adc35537dfd3efccc97466391
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 42f37a2753cced0f53fab54af393af74c21f3597
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217978"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749761"
 ---
 # <a name="number-box"></a>Cuadro de número
 
@@ -20,9 +20,17 @@ Representa un control que se puede usar para mostrar y editar números. Admite l
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **NumberBox** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/). |
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      El control **NumberBox** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 **API de la biblioteca de interfaz de usuario de Windows**: [Clase NumberBox](/uwp/api/microsoft.ui.xaml.controls.NumberBox)
 

@@ -11,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e9007d73a347fbd2575d198ed6af858f629e6cf6
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 886236000c31dbeda12ae95e4c920be0a2cb03f3
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217528"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750561"
 ---
 # <a name="color-picker"></a>Selector de colores
 
@@ -26,9 +26,17 @@ Un selector de colores se usa para explorar y seleccionar colores. De manera pre
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ColorPicker** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      El control **ColorPicker** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase ColorPicker](/uwp/api/microsoft.ui.xaml.controls.colorpicker), [propiedad Color](/uwp/api/microsoft.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](/uwp/api/microsoft.ui.xaml.controls.colorpicker.ColorChanged)
 >

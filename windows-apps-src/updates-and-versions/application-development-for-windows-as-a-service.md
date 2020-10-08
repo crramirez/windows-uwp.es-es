@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: c035a97b1750c8f285689f2b2f82f3766a6c06ad
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d301a2dfcc478f6d90b8aa562bfbd34cf79493c1
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173799"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750141"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desarrollo de aplicaciones para Windows como servicio
 
@@ -54,9 +54,9 @@ En vista de este cambio, Microsoft recomienda a sus partners ISV que separen la 
 
 Este enfoque reduce la carga que supone mantener una programación de la aplicación que se alinee con las versiones de Windows. Los partners ISV deberían poder publicar características o actualizaciones con su propia cadencia. Creemos que nuestros partners pueden mantener al día su base de clientes con las últimas actualizaciones de aplicaciones, con independencia de la versión de Windows. Además, nuestros clientes no tienen que buscar una declaración de soporte técnico explícita siempre que se publique una compilación de Windows. Este es un ejemplo de una declaración de soporte técnico que abarca cómo se puede admitir una aplicación en diferentes versiones del sistema operativo:
 
-| Ejemplo de declaración de soporte técnico del ciclo de vida de una aplicación | |
-| --- | --- |
-| Contoso es una empresa de desarrollo de software, propietaria de la popular aplicación Mojave, que cuenta con una amplia difusión en el mundo empresarial. Contoso publica su próxima versión principal, Mojave 14.0, y declara que esta disfrutará de soporte estándar durante un período de tres años a partir de la fecha de lanzamiento. Durante el soporte estándar, todas las actualizaciones y el soporte técnico serán gratuitos para el producto con licencia. Contoso también declara un período adicional de dos años de soporte extendido durante el cual los clientes podrán comprar actualizaciones y soporte técnico para un período de gracia. A partir de la fecha de finalización del soporte extendido, ya no se ofrecerá soporte técnico para esta versión del producto. Durante el período de soporte estándar, Contoso mantendrá el soporte técnico para Mojave 14.0 en todas las compilaciones de Windows que se publiquen. Contoso también lanzará actualizaciones para Mojave cuando sea necesario y con independencia de los lanzamientos de productos Windows. | |
+> **Ejemplo de declaración de soporte técnico del ciclo de vida de una aplicación**
+>
+> Contoso es una empresa de desarrollo de software, propietaria de la popular aplicación Mojave, que cuenta con una amplia difusión en el mundo empresarial. Contoso publica su próxima versión principal, Mojave 14.0, y declara que esta disfrutará de soporte estándar durante un período de tres años a partir de la fecha de lanzamiento. Durante el soporte estándar, todas las actualizaciones y el soporte técnico serán gratuitos para el producto con licencia. Contoso también declara un período adicional de dos años de soporte extendido durante el cual los clientes podrán comprar actualizaciones y soporte técnico para un período de gracia. A partir de la fecha de finalización del soporte extendido, ya no se ofrecerá soporte técnico para esta versión del producto. Durante el período de soporte estándar, Contoso mantendrá el soporte técnico para Mojave 14.0 en todas las compilaciones de Windows que se publiquen. Contoso también lanzará actualizaciones para Mojave cuando sea necesario y con independencia de los lanzamientos de productos Windows.
 
 En las siguientes secciones, encontrarás información adicional acerca de las medidas que adopta Microsoft para mantener la compatibilidad del sistema operativo subyacente. También encontrarás instrucciones sobre los pasos que puedes seguir para ayudar a mantener la compatibilidad del ecosistema combinado de la aplicación y el sistema operativo. Hay una sección sobre cómo utilizar las compilaciones piloto de Windows para detectar regresiones de la aplicación antes de que se publique una compilación de Windows. Por último, se describe cómo usamos un enfoque controlado por instrumentación y telemetría para mejorar la calidad de las compilaciones de Windows. Recomendamos a los ISV que adopten un enfoque similar para su cartera de aplicaciones.
 

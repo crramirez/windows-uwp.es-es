@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b77ef62e954fc0b6d8a41b091a4822fac22079f0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c25cc943e4f1534aa398bdee4a4a08fa32d9667f
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218958"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750301"
 ---
 # <a name="auto-suggest-box"></a>Cuadro de sugerencias automáticas
 
@@ -27,9 +27,18 @@ Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usu
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **API de plataforma**: [Clase AutoSuggestBox](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [Evento TextChanged](/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged), [Evento SuggestionChose](/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen), [Evento QuerySubmitted](/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted)
 

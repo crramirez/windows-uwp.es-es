@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: acdc8d5bb9a73bf5851dfd8f75f777c2a13bcdb1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: edaa15aa2e88252c328a368df1b7698a9b74f5e0
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173139"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750451"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Creación de una aplicación "Hola mundo" en C++/CX
 
@@ -279,24 +279,24 @@ Es fácil personalizar la apariencia de tu aplicación. De manera predeterminada
 1.  Abre App.xaml.
 2.  En la etiqueta de apertura [**Aplicación**](/uwp/api/Windows.UI.Xaml.Application), edita la propiedad [**RequestedTheme**](/uwp/api/windows.ui.xaml.application.requestedtheme) y establece su valor en **Oscuro**:
 
-```xaml
-RequestedTheme="Dark"
-```
+    ```xaml
+    RequestedTheme="Dark"
+    ```
 
-    Here's the full [**Application**](/uwp/api/Windows.UI.Xaml.Application) tag with the dark theme :
+    Esta es la etiqueta [**Aplicación**](/uwp/api/Windows.UI.Xaml.Application) completa con el tema oscuro:
 
-```xaml
+    ```xaml
     <Application
     x:Class="HelloWorld.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HelloWorld"
     RequestedTheme="Dark">
-```
+    ```
 
 3.  Presiona F5 para compilarla y ejecutarla. Observa que usa el tema oscuro.
 
-![Pantalla de la aplicación con tema oscuro](images/xaml-hw-app3.png)
+    ![Pantalla de la aplicación con tema oscuro](images/xaml-hw-app3.png)
 
 ¿Qué tema deberías usar? El que más te guste. Esta es nuestra perspectiva: te recomendamos que uses el tema oscuro para las aplicaciones que muestren principalmente imágenes o vídeo y el tema claro para las aplicaciones que contengan mucho texto. Si vas a usar un esquema de colores personalizado, usa el tema que mejor se ajuste a la apariencia de la aplicación. En el resto de este tutorial, usaremos el tema claro en las capturas de pantalla.
 

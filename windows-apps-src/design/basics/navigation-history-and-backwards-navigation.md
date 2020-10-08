@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3eb7ff033a81e358cb74e670b3235ade17e8a87
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 50f87c02f726512f54830f8678fa8bbec5ecee4f
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220048"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763047"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Historial de navegación y navegación hacia atrás para aplicaciones de Windows
 
@@ -330,9 +330,9 @@ Si decides proporcionar tu propia navegación de pila de retroceso, la experienc
 <td style="vertical-align:top;"><strong>Página a página, grupos diferentes del mismo nivel</strong></td>
 <td style="vertical-align:top;"><strong>Sí</strong>
 <p>En esta ilustración, el usuario va del nivel 1 de la aplicación al nivel 2, cruzando grupos del mismo nivel, de forma que la navegación se agrega al historial de navegación.</p>
-<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
+<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Diagram of navigation across peer groups showing the user navigating from group one to group two and the back to group one." /></p>
 <p>En la siguiente ilustración, el usuario navega entre dos grupos del mismo nivel, cruzando nuevamente grupos del mismo nivel, de modo que la navegación se agrega al historial de navegación.</p>
-<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
+<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Diagram of navigation across peer groups showing the user navigating from group one to group two then on to group three and back to group two." /></p></td>
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Página a página, mismo grupo del mismo nivel, sin elemento de navegación en pantalla</strong>

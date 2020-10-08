@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, learning nodejs, node on windows, node on wsl, node on linux on windows, install node on windows, nodejs with vs code, develop with node on windows, develop with nodejs on windows, install node on WSL, NodeJS on Windows Subsystem for Linux
 ms.localizationpriority: medium
 ms.date: 07/28/2020
-ms.openlocfilehash: 1b44cc51ecbb83e52a16ab7e5c577578c8765cb9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4fa1a53e3d0e5ba22cd3a261b3e2672012330bca
+ms.sourcegitcommit: 00349b7b7cad3d161485ec06fee4e4109452c36a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166565"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91814656"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>Configuración del entorno de desarrollo de Node.js con WSL 2
 
@@ -63,7 +63,7 @@ La instalación de la versión más reciente de NVM con cURL reemplazará la ant
     ![Lista de NVM que no muestra ninguna versión de Node](../images/nvm-no-node.png)
 
 6. Instala la versión actual de Node.js (para probar las mejoras de las características más recientes, pero es más probable que tengas problemas): `nvm install node`
-7. Instala la última versión de LTS estable de Node.js (recomendada): `nvm install --lts`
+7. Instala la última versión de LTS estable de Node.js (recomendada): `nvm install node --lts`
 8. Enumera qué versiones de Node están instaladas: `nvm ls`... ahora deberías ver las dos versiones que acabas de instalar.
 
     ![Lista de NVM en la que se enumeran las versiones de Node actuales y de LTS](../images/nvm-node-installed.png)

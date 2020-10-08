@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 9aee0f0e91528258b0591f2e3c7e0ea10353b5b7
-ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
+ms.openlocfilehash: fd2f755153b29c9be766d39fb685a3f923868946
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90593459"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750422"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Diseños dinámicos con XAML
 
@@ -47,8 +47,8 @@ La *variación de tamaño proporcional* distribuye el espacio disponible entre l
 
 En este ejemplo, se combinan variaciones de tamaño fijas, automáticas y proporcionales en una clase [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid) con 4 columnas.
 
-&nbsp;|&nbsp;|&nbsp;
-------|------|------
+| Columna | Ajuste de tamaño | Descripción |
+| ------ | ------ | ----------- |
 Columna_1 | **Auto** | La columna se ajustará a su contenido.
 Columna_2 | * | Después de que se calculen las columnas Auto, la columna recibe parte del ancho restante. Columna_2 será la mitad de ancha que Columna_4.
 Columna_3 | **44** | La columna tendrá un ancho de 44 píxeles.
