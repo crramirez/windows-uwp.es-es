@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información acerca de cómo mejorar la facilidad de uso y la accesibilidad de su aplicación de Windows al proporcionar una manera intuitiva de que los usuarios naveguen e interactúen rápidamente con la interfaz de usuario visible de una aplicación a través de un teclado en lugar de un dispositivo de puntero (como toque o mouse).
+description: Obtenga información acerca de cómo mejorar la facilidad de uso y la accesibilidad de su aplicación de Windows al proporcionar una manera intuitiva de que los usuarios naveguen e interactúen rápidamente con la interfaz de usuario visible de una aplicación a través de un teclado en lugar de un dispositivo de puntero (como toque o mouse).
 title: Directrices de diseño de las teclas de acceso
 label: Access keys design guidelines
 keywords: teclado, tecla de acceso, KeyTip, sugerencia de teclas, accesibilidad, navegación, foco, texto, entrada, interacción del usuario
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 77986569ec224ba36471f60c0200dfb1825472a0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 48f1d3bd69b10a8d500bb2d29b64c0eb91c9900b
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218418"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829538"
 ---
 # <a name="access-keys"></a>Claves de acceso
 
@@ -276,7 +276,7 @@ Use la propiedad **KeyTipPlacementMode** para personalizar la ubicación de la s
 
 Los modos de colocación son: superior, inferior, derecha, izquierda, oculto, centro y automático.
 
-![Modos de colocación de las sugerencias de teclas](images/accesskeys/keytip-postion-modes.png)
+![Captura de pantalla que muestra las posiciones relativas de los modos de colocación de las sugerencias de teclas](images/accesskeys/keytip-postion-modes.png)
 
 _Modos de colocación de las sugerencias de teclas_
 
@@ -299,11 +299,11 @@ Use las propiedades KeyTipHorizontalOffset y KeyTipVerticalOffset de un elemento
 > [!NOTE]
 > No se pueden establecer desplazamientos cuando KeyTipPlacementMode está establecido en auto.
 
-La propiedad KeyTipHorizontalOffset indica hasta dónde se mueve la punta de teclas a la izquierda o a la derecha. en el ejemplo se muestra cómo establecer los desplazamientos de las sugerencias de teclas de un botón.
+La propiedad KeyTipHorizontalOffset indica hasta dónde se mueve la punta de teclas a la izquierda o a la derecha.
 
-![Modos de colocación de las sugerencias de teclas](images/accesskeys/keytip-offsets.png)
+![Captura de pantalla de los desplazamientos de la sugerencia de clave vertical y horizontal de un botón](images/accesskeys/keytip-offsets.png)
 
-_Establecer desplazamientos verticales y horizontales para una información sobre herramientas_
+_Establecer desplazamientos de sugerencias de teclas verticales y horizontales para un botón_
 
 ``` xaml
 <Button
@@ -318,9 +318,9 @@ _Establecer desplazamientos verticales y horizontales para una información sobr
 
 La ubicación de una sugerencia de clave se ajusta automáticamente en función del margen de la pantalla para garantizar que la información sobre herramientas esté totalmente visible. Cuando esto ocurre, la distancia entre el control y el punto de alineación de la sugerencia de clave podría diferir de los valores especificados para los desplazamientos horizontal y vertical.
 
-![Modos de colocación de las sugerencias de teclas](images/accesskeys/keytips-screen-edge.png)
+![Captura de pantalla de la alineación del borde de la pantalla de información de teclas](images/accesskeys/keytips-screen-edge.png)
 
-_El margen de la pantalla hace que la sugerencia de teclas se cambie automáticamente de posición_
+_Las sugerencias de teclas se colocan automáticamente en función del borde de la pantalla_
 
 ## <a name="key-tip-style"></a>Estilo de la sugerencia de clave
 
@@ -328,7 +328,7 @@ Se recomienda usar la compatibilidad integrada de la sugerencia de clave para lo
 
 Si tiene que especificar sus propios estilos de información sobre herramientas, use recursos de la aplicación como KeyTipFontSize (tamaño de fuente), KeyTipFontFamily (familia de fuentes), KeyTipBackground (fondo), KeyTipForeground (primer plano), KeyTipPadding (relleno), KeyTipBorderBrush (color de borde) y KeyTipBorderThemeThickness (grosor del borde).
 
-![Modos de colocación de las sugerencias de teclas](images/accesskeys/keytip-customization.png)
+![Captura de pantalla de las opciones de personalización de la sugerencia de teclas, incluidas la fuente, el orden y el color](images/accesskeys/keytip-customization.png)
 
 _Opciones de personalización de la sugerencia de clave_
 
@@ -360,5 +360,5 @@ Si especifica la propiedad AccessKey en un control UIElement o TextElement, pued
 * [Interacciones de teclado](keyboard-interactions.md)
 * [Aceleradores de teclado](keyboard-accelerators.md)
 
-**Ejemplos**
+**Muestras**
 * [Galería de controles XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
