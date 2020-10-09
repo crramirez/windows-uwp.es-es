@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 98479932313c8c78177870b4c20521980526fc32
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 2537a4bcaea4ce3809fe8c6f2d1b6cbffb5b7b60
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80218615"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860065"
 ---
 # <a name="style-for-windows-apps"></a>Estilo para aplicaciones de Windows
 
@@ -22,12 +22,12 @@ El estilo es lo que hace que tu aplicación destaque. Las instrucciones de estil
 
 :::row:::
     :::column:::
-![imagen principal](images/header-color.svg)
+![Captura de pantalla de una imagen que representa un degradado de color.](images/header-color.svg)
 ### <a name="color"></a>[Color](color.md)
 El color ofrece una forma intuitiva de orientarse entre los distintos niveles de información de una aplicación y resulta una herramienta crucial para reforzar el modelo de interacción.
     :::column-end:::
     :::column:::
-![imagen principal](images/header-typography.svg)
+![Captura de pantalla de una imagen que representa una tipografía.](images/header-typography.svg)
 ### <a name="typography"></a>[Tipografía](typography.md)
 Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. Las siguientes instrucciones se centran en cómo usar la tipografía para ayudar a los usuarios a comprender fácilmente el contenido. 
     :::column-end:::
@@ -35,12 +35,12 @@ Como representación visual del lenguaje, la tarea principal de la tipografía e
 
 :::row:::
     :::column:::
-![imagen principal](images/header-icons.svg)
+![Captura de pantalla de una imagen que representa un iconos.](images/header-icons.svg)
 ### <a name="icons"></a>[Iconos](icons.md)
 Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible.
     :::column-end:::
     :::column:::
-![imagen principal](images/header-acrylic.svg)
+![Captura de pantalla de una imagen que representa un acrílico.](images/header-acrylic.svg)
 ### <a name="acrylic"></a>[Acrílico](acrylic.md)
 Crea una sensación de profundidad con el acrílico, un pincel que crea superficies translúcidas impactantes.
     :::column-end:::
@@ -48,12 +48,12 @@ Crea una sensación de profundidad con el acrílico, un pincel que crea superfic
 
 :::row:::
     :::column:::
-![imagen principal](images/header-reveal-highlight.svg)
+![Captura de pantalla de una imagen que representa un revelado resaltado.](images/header-reveal-highlight.svg)
 ### <a name="reveal-highlight"></a>[Mostrar resaltado](reveal.md)
 Usa luz para iluminar elementos importantes.
     :::column-end:::
     :::column:::
-![imagen principal](images/header-reveal-focus.svg)
+![Captura de pantalla de una imagen que representa un foco resaltado.](images/header-reveal-focus.svg)
 ### <a name="reveal-focus"></a>[Reveal focus](reveal-focus.md)
 Reveal Focus es un efecto de iluminación para experiencias de 3 metros, como las pantallas de televisión y la Xbox One, que anima el borde de los elementos activables.
     :::column-end:::
@@ -61,12 +61,12 @@ Reveal Focus es un efecto de iluminación para experiencias de 3 metros, como l
 
 :::row:::
     :::column:::
-![imagen principal](images/header-sound.svg)
+![Captura de pantalla de una imagen que representa un sonido.](images/header-sound.svg)
 ### <a name="sound"></a>[Sonido](sound.md)
 El sonido ayuda a completar la experiencia de usuario de una aplicación y ofrece el toque de audio extra que se ajusta a la percepción de Windows en todas las plataformas.
     :::column-end:::
     :::column:::
-![imagen principal](images/header-writing-style.gif)
+![Película corta con un cursor parpadeante y, después, se escriben las palabras Estilo de escritura.](images/header-writing-style.gif)
 ### <a name="writing-style"></a>[Estilo de escritura](writing-style.md)
 El estilo de escritura puede suponer una gran diferencia entre una experiencia de usuario terrible y otra mejor.
     :::column-end:::
