@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 4da50161008645374fbe95de73882da9d9f9f826
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: f7a06c75b37b62436c4ef0ebcb8ccae2a6153b85
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750661"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829428"
 ---
 # <a name="controls-for-windows-apps"></a>Controles para aplicaciones de Windows
 
@@ -61,23 +61,23 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 :::row:::
     :::column:::
 
-- Reproductor visual animado (consulte [Lottie](/windows/communitytoolkit/animations/lottie)) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- Reproductor visual animado (consulte [Lottie](/windows/communitytoolkit/animations/lottie)) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Cuadro de sugerencias automáticas](auto-suggest-box.md)
 - [Botón](buttons.md)
 - [Selector de fecha del calendario](calendar-date-picker.md)
 - [Vista del calendario](calendar-view.md)
 - [Casilla](checkbox.md)
-- [Selector de color](color-picker.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Selector de colores](color-picker.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Cuadro combinado](combo-box.md)
 - [Barra de comandos](app-bars.md)
-- [Control flotante de la barra de comandos](command-bar-flyout.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Control flotante de la barra de comandos](command-bar-flyout.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Tarjeta de contacto](contact-card.md)
 - [Cuadro de diálogo de contenido](dialogs-and-flyouts/dialogs.md)
 - [Vínculo de contenido](content-links.md)
 - [Menú contextual](menus.md)
 - [Selector de fecha](date-picker.md)
 - [Cuadros de diálogo y controles flotantes](dialogs-and-flyouts/index.md)
-- [Botón de lista desplegable](buttons.md#create-a-drop-down-button) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Botón desplegable](buttons.md#create-a-drop-down-button) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Vista para alternar](flipview.md)
 - [control flotante](dialogs-and-flyouts/flyouts.md)
 - [Formularios](forms.md) (patrón)
@@ -90,22 +90,22 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 - [Control de mapa](../../maps-and-location/display-maps.md)
 - [Maestro/detalles](master-details.md) (patrón)
 - [Reproducción de multimedia](media-playback.md)
-- [Barra de menús](menus.md#create-a-menu-bar) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Barra de menús](menus.md#create-a-menu-bar) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Control flotante de menú](menus.md)
-- [Vista de navegación](navigationview.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista de navegación](navigationview.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 
     :::column-end:::
     :::column:::
 
-- [Cuadro de número](number-box.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Vista de Parallax](..\motion\parallax.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Cuadro de número](number-box.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Vista de paralaje](..\motion\parallax.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Cuadro de contraseña](password-box.md)
-- [Imagen de persona](person-picture.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Pivot](pivot.md)
-- [Barra de progreso](progress-controls.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Círculo de progreso](progress-controls.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Botón de radio](radio-button.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Control de clasificación](rating.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Imagen de persona](person-picture.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Dinamización](pivot.md)
+- [Barra de progreso](progress-controls.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Círculo de progreso](progress-controls.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Botón de radio](radio-button.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Control de clasificación](rating.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Botón Repetir](buttons.md#create-a-repeat-button)
 - [Cuadro de texto enriquecido](rich-edit-box.md)
 - [Bloque de texto enriquecido](rich-text-block.md)
@@ -114,11 +114,11 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 - [Zoom semántico](semantic-zoom.md)
 - [Formas](shapes.md)
 - [Control deslizante](slider.md)
-- [Botón Dividir](buttons.md#create-a-split-button) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Botón de expansión](buttons.md#create-a-split-button) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Vista dividida](split-view.md)
-- [Control Deslizar rápidamente](swipe.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Vista de pestañas](tab-view.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Sugerencia de enseñanza](dialogs-and-flyouts/teaching-tip.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Control deslizante](swipe.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Vista de pestañas](tab-view.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Sugerencia de enseñanza](dialogs-and-flyouts/teaching-tip.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Bloque de texto](text-block.md)
 - [Cuadro de texto](text-box.md)
 - [Selector de hora](time-picker.md)
@@ -126,8 +126,8 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 - [Botón de alternancia](buttons.md)
 - [Botón Activar o desactivar división](buttons.md#create-a-toggle-split-button)
 - [Información sobre herramientas](tooltips.md)
-- [Vista de árbol](tree-view.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Vista de dos paneles](two-pane-view.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista de árbol](tree-view.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [Vista de dos paneles](two-pane-view.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [Vista web](web-view.md)
 
     :::column-end:::

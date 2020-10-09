@@ -7,16 +7,16 @@ dev_langs:
 - csharp
 keywords: Windows 10, UWP, captura de pantalla, vídeo
 ms.localizationpriority: medium
-ms.openlocfilehash: d8f70748d025d50d19dbf2cb184ae841cced7f8a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 9f95e310fb93292db7dc348493487fada9c6d66e
+ms.sourcegitcommit: 83eb36047380501fd1e4d023d593904ad783365b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218638"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91852382"
 ---
 # <a name="screen-capture-to-video"></a>Captura de pantalla a vídeo
 
-En este artículo se describe cómo codificar fotogramas capturados desde la pantalla con las API de Windows. Graphics. Capture en un archivo de vídeo. Para obtener información sobre la captura de pantalla de imágenes fijas, consulte [captura de Screeen](./screen-capture.md).
+En este artículo se describe cómo codificar fotogramas capturados desde la pantalla con las API de Windows. Graphics. Capture en un archivo de vídeo. Para obtener información sobre la captura de pantalla de imágenes fijas, consulte [captura de Screeen](./screen-capture.md). Para obtener una aplicación de ejemplo de un extremo a otro simple que use los conceptos y las técnicas que se muestran en este artículo, vea [SimpleRecorder](https://github.com/MicrosoftDocs/SimpleRecorder/).
 
 ## <a name="overview-of-the-video-capture-process"></a>Información general del proceso de captura de vídeo
 En este artículo se proporciona un tutorial de una aplicación de ejemplo que registra el contenido de una ventana en un archivo de vídeo. Aunque puede parecer que hay una gran cantidad de código necesaria para implementar este escenario, la estructura de alto nivel de una aplicación de grabadora de pantalla es bastante simple. El proceso de captura de pantalla usa tres características principales de UWP:
@@ -150,7 +150,7 @@ Las siguientes API auxiliares están definidas para abstraer la creación de rec
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/Direct3D11Helpers.cs" id="snippet_Direct3D11Helpers":::
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Espacio de nombres Windows. Graphics. Capture](/uwp/api/windows.graphics.capture)
 * [Captura de pantalla](screen-capture.md)

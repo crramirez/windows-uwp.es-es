@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 2 (julio de 2020)
 description: Introducción a WinUI 3, versión preliminar 2.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: c57132ec5219ef32f2b2b69168592e07f49d904b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 11c7ff587c7c237c19ad627587f082be84e68bf8
+ms.sourcegitcommit: 337f31b3fe3ff434dbc2c232fb84c3b22ebd4be8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168779"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804579"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
 
@@ -49,12 +49,12 @@ WinUI 3 versión, preliminar 2 incluye plantillas de proyecto de Visual Studio p
 
 3. Si desea crear proyectos de escritorio de WinUI para aplicaciones de C#/.NET 5 y C++/Win32, también debe instalar las versiones x64 y x86 de .NET 5, versión preliminar 5. **Tenga en cuenta que .NET 5, versión preliminar 5, es actualmente la única versión preliminar de .NET 5 compatible con WinUI 3**:
 
-    - x64: [https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x64.exe](https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x64.exe)
-    - x86: [https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x86.exe](https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x86.exe)
+    - [Instalador x64 para .NET 5, versión preliminar 5](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.5-windows-x64-installer)
+    - [Instalador x86 para .NET 5, versión preliminar 5](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.5-windows-x86-installer)
 
 4. Descargue e instale el [paquete VSIX de WinUI 3, versión preliminar 2](https://aka.ms/winui3/previewdownload). Este paquete VSIX agrega las plantillas de proyecto WinUI 3 y el paquete NuGet que contiene las bibliotecas de WinUI 3 a Visual Studio 2019.
 
-    Para obtener instrucciones sobre cómo agregar el paquete VSIX a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box).
+    Para obtener instrucciones sobre cómo agregar el paquete VSIX a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](/visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box).
 
 
 ## <a name="create-winui-projects"></a>Creación de proyectos WinUI
@@ -111,10 +111,10 @@ Esta es una lista completa de correcciones de errores y otras actualizaciones pa
 > [!NOTE]
 > La versión preliminar 2 de WinUI 3 usa la versión 2.4.2 de la biblioteca WinUI 2. 
 
-- [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) e [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0) ahora funcionan según lo previsto en las aplicaciones de escritorio en C#.
+- [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged) e [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) ahora funcionan según lo previsto en las aplicaciones de escritorio en C#.
   - Esto ha resuelto un par de otros problemas en torno a los controles de colecciones que no se actualizaban en la interfaz de usuario, aunque sí lo hacían en el back-end.
   - *Gracias a @hshristov por presentar una [incidencia similar](https://github.com/microsoft/microsoft-ui-xaml/issues/2490) en GitHub.*
-- Ahora, la versión preliminar 2 es compatible con [.NET 5 versión preliminar 5](/dotnet/api/?view=net-5.0) para aplicaciones de escritorio.
+- Ahora, la versión preliminar 2 es compatible con [.NET 5 versión preliminar 5](/dotnet/api/?view=net-5.0&preserve-view=true) para aplicaciones de escritorio.
 - WinUI 3 ahora tiene paridad con [WinUI 2.4](../winui2/release-notes/winui-2.4.md), que incluye nuevos controles y características como un control [NavigationView jerárquico](../winui2/release-notes/winui-2.4.md#hierarchical-navigation) y [ProgressRing](../winui2/release-notes/winui-2.4.md#progressring).
 - Bloqueo corregido: al usar [TabView](/windows/uwp/design/controls-and-patterns/tab-view) con la función táctil.
 - [NavigationView](/windows/uwp/design/controls-and-patterns/navigationview) en el [Ejemplo de XAML Controls Gallery](#xaml-controls-gallery-winui-3-preview-2-branch) ahora usa el modo izquierdo en lugar del modo compacto izquierdo.
