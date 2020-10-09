@@ -1,5 +1,5 @@
 ---
-Description: Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables.
+description: Las plantillas de iconos especiales son plantillas únicas que, o bien están animadas, o bien simplemente te permiten hacer cosas que no son posibles con los iconos adaptables.
 title: Plantillas de iconos especiales
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4368c3d504b01a48b05fcaffdb01a71b916d9d43
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1aac8997492eba2d591d0f80f89dbc9a8f5830ba
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169309"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860202"
 ---
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
  
@@ -50,9 +50,9 @@ En los activos cuadrados, se produce el centrado automático dentro del contened
 
 Para activos no cuadrados, se produce el centrado horizontal o vertical automático y el ajuste del ancho o alto del contenedor:
 
-![tamaño del recurso no cuadrado, con y sin distintivo](images/assetguidance26a.png)
+![Captura de pantalla que muestra el tamaño de recurso no cuadrado horizontal centrado automáticamente, con y sin distintivo.](images/assetguidance26a.png)
 
-![tamaño del recurso no cuadrado, con y sin distintivo](images/assetguidance26b.png)
+![Captura de pantalla que muestra el tamaño de recurso no cuadrado vertical centrado automáticamente, con y sin distintivo.](images/assetguidance26b.png)
 
 **Paso 2: crear el icono de base**
 

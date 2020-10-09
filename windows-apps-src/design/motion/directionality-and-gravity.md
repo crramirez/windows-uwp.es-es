@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 649fb9e2833a425ccad78f5f0bcb69ccb4091bca
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 87047e20d4513c9120c79bb329c008dad104a352
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217808"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860085"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 
@@ -47,7 +47,7 @@ La dirección del movimiento corresponde al movimiento físico. Al igual que en 
 Cuando mueva objetos, evite colisiones no naturales. Tenga en cuenta que los objetos proceden de y van a, y siempre admiten construcciones de nivel superior que se pueden usar en la escena, como la dirección de desplazamiento o la jerarquía de diseño.
     :::column-end:::
     :::column:::
-        ![dirección hacia atrás en](images/Direction.gif)
+        ![Vídeo corto que muestra un círculo y, a continuación, la adición de un eje X, un eje Y y un eje Z.](images/Direction.gif)
     :::column-end:::
 :::row-end:::
 
@@ -94,7 +94,7 @@ Hay 4 instrucciones discretas de navegación que se deben tener en cuenta.
 **Hacia atrás** Igual que hacia delante, pero invertido.
     :::column-end:::
     :::column:::
-        ![dirección hacia atrás en](images/backwardIN.gif)
+        ![Vídeo corto en el que se muestra un círculo que entra a la derecha del fotograma y se detiene en medio del marco.](images/backwardIN.gif)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -114,7 +114,7 @@ Normalmente, la gravedad se manifiesta cuando un objeto debe saltar de una escen
 
 Aquí, la gravedad afecta a un elemento de la fila superior de la cuadrícula, lo que hace que se coloque ligeramente mientras deja su lugar y se desplaza hacia delante.
 
-![dirección hacia atrás en](images/continuity-photos.gif)
+![Vídeo corto en el que se muestra un elemento de rectángulo que sale de la fila superior de una cuadrícula, se quita ligeramente y, a continuación, se hace zoom en la parte frontal de la ventana.](images/continuity-photos.gif)
 
 ## <a name="related-articles"></a>Artículos relacionados
 

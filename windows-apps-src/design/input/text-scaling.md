@@ -1,5 +1,5 @@
 ---
-Description: Cree aplicaciones de Windows y controles personalizados o con plantilla que admitan el escalado de texto de plataforma.
+description: Cree aplicaciones de Windows y controles personalizados o con plantilla que admitan el escalado de texto de plataforma.
 title: Ajuste de escala de texto
 label: Text scaling
 template: detail.hbs
@@ -8,16 +8,16 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d8f7536da045514471c1af1c2f0cfac74af91a7a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 0d47523ca69f8088d5e13ab944c5dd2be2d1d8ba
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219948"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860166"
 ---
 # <a name="text-scaling"></a>Ajuste de escala de texto
 
-![Ejemplo de escalado de texto 100% a 225%](images/coretext/text-scaling-news-hero-small.png)  
+![Imagen de Hero que muestra un ejemplo de escalado de texto de 100% a 225%.](images/coretext/text-scaling-news-hero-small.png)  
 *Ejemplo de escalado de texto en Windows 10 (100% a 225%)*
 
 ## <a name="overview"></a>Información general
@@ -26,7 +26,7 @@ La lectura de texto en la pantalla de un equipo (desde el dispositivo móvil has
 
 Para asegurarse de que el texto sea lo más legible posible para la gama más amplia de usuarios, Windows proporciona la posibilidad de que los usuarios cambien el tamaño de fuente relativo en el sistema operativo y en las aplicaciones individuales. En lugar de usar una aplicación de lupa (que normalmente solo aumenta el tamaño de todo el contenido dentro de un área de la pantalla y tiene sus propios problemas de facilidad de uso), cambiar la resolución de pantalla o confiar en el ajuste de PPP (que cambia el tamaño de todo el contenido según la pantalla y la distancia típica de visualización), un usuario puede acceder rápidamente a un ajuste para cambiar el tamaño del texto solamente, que varía entre 100 % (tamaño predeterminado) y 225 %.
 
-## <a name="support"></a>Soporte técnico
+## <a name="support"></a>Compatibilidad
 
 Las aplicaciones universales de Windows (estándar y PWA) admiten el escalado de texto de forma predeterminada.
 
@@ -40,7 +40,7 @@ DirectWrite, GDI y XAML SwapChainPanels no admiten de forma nativa el escalado d
 
 Los usuarios pueden ajustar la escala de texto con el control deslizante convertir texto en más grande en la pantalla Configuración-> facilidad de acceso > visión/visualización.
 
-![Ejemplo de escalado de texto 100% a 225%](images/coretext/text-scaling-settings-100-small.png)  
+![Captura de pantalla de la página de configuración de la visión o visualización de accesibilidad que muestra el control deslizante hacer el texto más grande.](images/coretext/text-scaling-settings-100-small.png)  
 *Configuración de la escala de texto en la pantalla de configuración-> facilidad de acceso > visión y visualización*
 
 ## <a name="ux-guidance"></a>Directrices sobre la experiencia de usuario
@@ -93,7 +93,7 @@ Este es un fragmento de código de una aplicación de UWP básica que incluye un
 </Grid>
 ```
 
-![Ajuste de escala del texto animado 100% a 225%](images/coretext/text-scaling.gif)  
+![Animación de la escala del texto del 100% al 225%.](images/coretext/text-scaling.gif)  
 *Escalado de texto animado*
 
 ### <a name="use-auto-sizing"></a>Usar el ajuste automático de tamaño
@@ -123,7 +123,7 @@ Aquí, usamos las `AcceptsReturn` propiedades del `TextWrapping` cuadro de texto
           AcceptsReturn="True" TextWrapping="Wrap" />
 ```
 
-![Tamaño de texto animado de 100% a 225% con ajuste de texto](images/coretext/text-scaling-textwrap.gif)  
+![Animación de la escala del texto 100% a 225% con ajuste de texto.](images/coretext/text-scaling-textwrap.gif)  
 *Escalado de texto animado con ajuste de texto*
 
 ### <a name="specify-text-trimming-behavior"></a>Especificar el comportamiento de recorte de texto
@@ -141,7 +141,7 @@ En este ejemplo, se muestra cómo recortar el texto en un TextBlock mediante la 
 </TextBlock>
 ```
 
-![Ajuste de escala del texto 100% a 225% con recorte de texto](images/coretext/text-scaling-clipping-small.png)  
+![Captura de pantalla de la escala del texto 100% a 225% con el recorte de texto.](images/coretext/text-scaling-clipping-small.png)  
 *Ajuste de escala de texto con recorte de texto*
 
 ### <a name="use-a-tooltip"></a>Usar una información sobre herramientas

@@ -6,16 +6,16 @@ keywords: tinta, entrada manuscrita, tutorial
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a0660312746a88a61ccb7b2ca9c01d720ebb2be3
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f726f4ab4a422cc94f00493261620ddff8b6122b
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219698"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860199"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>Tutorial: compatibilidad con la entrada manuscrita en la aplicación de Windows
 
-![Lápiz para Surface](images/ink/ink-hero-small.png)  
+![Imagen del héroe del lápiz de Surface.](images/ink/ink-hero-small.png)  
 *Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)).
 
 En este tutorial se explica cómo crear una aplicación básica de Windows que admita la escritura y el dibujo con Windows Ink. Usamos fragmentos de código de una aplicación de ejemplo, que puede descargar de GitHub (consulte el [código de ejemplo](#sample-code)), para mostrar las distintas características y las API de Windows Ink asociadas (consulte [los componentes de la plataforma de tinta de Windows](#components-of-the-windows-ink-platform)) que se describen en cada paso.
@@ -53,7 +53,7 @@ En este tutorial, usamos una aplicación de entrada de lápiz de ejemplo para mo
 Descargue este ejemplo de Visual Studio y el código fuente de [GitHub](https://github.com/) en el [ejemplo Windows-appsample-Get-Started-Ink](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink):
 
 1. Seleccione el botón de **clonación o descarga** de verde  
-![Clonar el repositorio](images/ink/ink-clone.png)
+![Clonar el repositorio.](images/ink/ink-clone.png)
 2. Si tiene una cuenta de GitHub, puede clonar el repositorio en el equipo local eligiendo **abrir en Visual Studio** . 
 3. Si no tiene una cuenta de GitHub, o simplemente quiere una copia local del proyecto, elija **download zip** (tendrá que comprobar de nuevo con regularidad para descargar las actualizaciones más recientes).
 
@@ -80,11 +80,11 @@ Después de descargar la aplicación de ejemplo RadialController, compruebe que 
 
    > [!NOTE]
    > Como alternativa, puede seleccionar el elemento de menú **depurar**  >  **iniciar depuración** o seleccionar el botón ejecutar **equipo local** que se muestra aquí.
-   > ![Botón compilar proyecto de Visual Studio](images/ink/ink-vsrun-small.png)
+   > ![Botón compilar proyecto de Visual Studio.](images/ink/ink-vsrun-small.png)
 
 La ventana de la aplicación se abre y, después de que aparezca una pantalla de presentación durante unos segundos, verá esta pantalla inicial.
 
-![Aplicación vacía](images/ink/ink-app-step1-empty-small.png)
+![Captura de pantalla de la aplicación vacía.](images/ink/ink-app-step1-empty-small.png)
 
 Bien, ahora tenemos la aplicación básica de Windows que usaremos en el resto de este tutorial. En los pasos siguientes, agregamos la funcionalidad de tinta.
 
@@ -123,7 +123,7 @@ Eso es todo.
 
 Ahora, vuelva a ejecutar la aplicación. Avance y garabatear, escriba su nombre o (si está manteniendo un reflejo o tiene una memoria muy buena), dibuje su propio retrato.
 
-![Entrada de lápiz básica](images/ink/ink-app-step1-name-small.png)
+![Captura de pantalla de la aplicación de ejemplo de lápiz básica resaltada en este tema.](images/ink/ink-app-step1-name-small.png)
 
 ## <a name="step-3-support-inking-with-touch-and-mouse"></a>Paso 3: compatibilidad con la entrada manuscrita con Touch y mouse
 
@@ -181,21 +181,21 @@ Para agregar un control [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inkto
 
 Ahora vuelva a ejecutar la aplicación para ver el control [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) y probar algunas de las herramientas.
 
-![InkToolbar desde dibujo con el área de trabajo de tinta](images/ink/ink-inktoolbar-default-small.png)
+![Captura de pantalla de la aplicación de ejemplo de lápiz básica resaltada en este tema con el control InkToolbar predeterminado.](images/ink/ink-inktoolbar-default-small.png)
 
 ### <a name="challenge-add-a-custom-button"></a>Desafío: agregar un botón personalizado
 <table class="wdg-noborder">
 <tr>
 <td>
 
-![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 <td>
 
 A continuación se muestra un ejemplo de un control **[InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar)** personalizado (de dibujo en el área de trabajo de Windows Ink).
 
-![InkToolbar desde dibujo en el área de trabajo de tinta](images/ink/ink-inktoolbar-sketchpad-small.png)
+![Captura de pantalla de la barra de herramientas de entrada manuscrita desde dibujo en el área de trabajo de tinta.](images/ink/ink-inktoolbar-sketchpad-small.png)
 
 Para obtener más información sobre cómo personalizar un control [inktoolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar), vea [Agregar un control inktoolbar a una aplicación de entrada de lápiz de la aplicación Windows](ink-toolbar.md).
 
@@ -213,9 +213,9 @@ En este paso, se usan las características de reconocimiento de escritura a mano
 > Se puede mejorar el reconocimiento de escritura a mano a través del lápiz & la configuración de **Windows Ink** :
 > 1. Abra el menú Inicio y seleccione **configuración**.
 > 2. En la pantalla de configuración, seleccione **dispositivos**  >  **lápiz & Windows Ink**.
-> ![InkToolbar desde dibujo en el área de trabajo de tinta](images/ink/ink-settings-small.png)
+> ![Captura de pantalla del lápiz & página Configuración de Windows Ink.](images/ink/ink-settings-small.png)
 > 3. Seleccione **obtener para conocer la escritura a mano** y abrir el cuadro de diálogo de **Personalización de escritura a mano** .
-> ![InkToolbar desde dibujo en el área de trabajo de tinta](images/ink/ink-settings-handwritingpersonalization-small.png)
+> ![Captura de pantalla del cuadro de diálogo Personalización de reconocimiento de escritura a mano.](images/ink/ink-settings-handwritingpersonalization-small.png)
 
 ### <a name="in-the-sample"></a>En el ejemplo:
 1. Abra el archivo MainPage. Xaml.
@@ -286,7 +286,7 @@ En este paso, se usan las características de reconocimiento de escritura a mano
 <tr>
 <td>
 
-![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 <td>
@@ -306,7 +306,7 @@ Para obtener más información sobre el reconocimiento de escritura a mano inter
 <tr>
 <td>
 
-![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 <td>
@@ -385,11 +385,11 @@ En este ejemplo, no se intenta volver a dibujar trazos de lápiz (aunque es posi
 
 A continuación se muestra un ejemplo de un diagrama de flujo rudimentario de una servilleta digital.
 
-![Diagrama de flujo de tinta original](images/ink/ink-app-step6-shapereco1-small.png)
+![Captura de pantalla de un diagrama de flujo rudimentario de una servilleta digital.](images/ink/ink-app-step6-shapereco1-small.png)
 
 Este es el mismo diagrama de flujo después del reconocimiento de la forma.
 
-![Diagrama de flujo de tinta original](images/ink/ink-app-step6-shapereco2-small.png)
+![Captura de pantalla del diagrama de flujo después de que el usuario seleccione reconocer forma.](images/ink/ink-app-step6-shapereco2-small.png)
 
 
 ## <a name="step-7-save-and-load-ink"></a>Paso 7: guardar y cargar la entrada de lápiz
@@ -444,7 +444,7 @@ En este paso, se enlazan los botones **Guardar** y **cargar** situados junto a l
 <tr>
 <td>
 
-![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 

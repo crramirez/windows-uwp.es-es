@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fe776361276341e368db1fbdf8e332a1e5dc70b5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 336b49c999d135908fb54490b7b33057d4527079
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220198"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860156"
 ---
 # <a name="timing-and-easing"></a>Sincronización y aceleración
 
@@ -49,7 +49,7 @@ El control de tiempo es un elemento importante para hacer que el movimiento pare
 
 El tiempo del movimiento en Fluent usa 500 ms (o una segunda mitad) como línea base, ya que se trata de la cantidad máxima de tiempo que un usuario percibe como instantáneo.
 
-![imagen principal](images/time.gif)
+![Vídeo corto que muestra tres círculos, apilados verticalmente, que se mueven a la izquierda y a la derecha con diferentes velocidades: 150 milisegundos, 300 milisegundos y 500 milisegundos.](images/time.gif)
 
 ### <a name="150ms-exit"></a>**150MS** (salir)
 
@@ -90,7 +90,7 @@ Se usa para los objetos que se traducen en una sola escena o en varias escenas.
 
 La aceleración es una manera de manipular la velocidad de un objeto a medida que se desplaza. Es el pegado que reúne todas las experiencias de movimiento fluida. Mientras que Extreme, la aceleración utilizada en el sistema ayuda a unificar la sensación física de los objetos que se mueven por todo el sistema. Esta es una manera de imitar el mundo real y hacer que los objetos en movimiento parezcan que pertenecen a su entorno.
 
-![imagen principal](images/easing.gif)
+![Un breve vídeo que muestra un círculo aparece en la esquina inferior derecha del fotograma y se detiene cerca de la esquina superior izquierda del marco.](images/easing.gif)
 
 ## <a name="apply-easing-to-motion"></a>Aplicar aceleración al movimiento
 

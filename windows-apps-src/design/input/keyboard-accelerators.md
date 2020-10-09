@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo las teclas de aceleración pueden mejorar la facilidad de uso y la accesibilidad de las aplicaciones de Windows.
+description: Obtenga información sobre cómo las teclas de aceleración pueden mejorar la facilidad de uso y la accesibilidad de las aplicaciones de Windows.
 title: Aceleradores de teclado
 label: Keyboard accelerators
 template: detail.hbs
@@ -10,16 +10,16 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ec5791c212e2fdfbafd40131d96ace6c88fb519
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: e9cb4a52e56862f9be27c72ef46afced895633c3
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749961"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860095"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
-![Teclado Surface](images/accelerators/accelerators_hero2.png)
+![Imagen prominente del teclado Surface](images/accelerators/accelerators_hero2.png)
 
 Las teclas de aceleración (o aceleradores de teclado) son métodos abreviados de teclado que mejoran la facilidad de uso y la accesibilidad de las aplicaciones Windows al proporcionar una manera intuitiva de que los usuarios invoquen acciones o comandos comunes sin navegar por la interfaz de usuario de la aplicación.
 
@@ -28,7 +28,7 @@ Consulte el tema [claves de acceso](access-keys.md) para obtener más informaci�
 > [!NOTE]
 > Un teclado es indispensable para los usuarios con ciertas discapacidades (vea [accesibilidad del teclado](../accessibility/keyboard-accessibility.md)) y también es una herramienta importante para los usuarios que lo prefieren como una forma más eficaz de interactuar con una aplicación.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Normalmente, los aceleradores incluyen las teclas de función F1 a F12 o alguna combinación de una tecla estándar emparejada con una o más teclas modificadoras (CTRL, Mayús).
 
@@ -37,7 +37,7 @@ Normalmente, los aceleradores incluyen las teclas de función F1 a F12 o alguna 
 
 Los aceleradores de teclado no están disponibles para todas las acciones, pero suelen estar asociados a los comandos expuestos en los menús (y se deben especificar con el contenido del elemento de menú).Los aceleradores también se pueden asociar a acciones que no tienen elementos de menú equivalentes. Sin embargo, dado que los usuarios se basan en los menús de una aplicación para detectar y obtener información sobre el conjunto de comandos disponible, debe intentar realizar la detección de los aceleradores lo más fácilmente posible (con etiquetas o patrones establecidos puede ayudarle con esto).
 
-![Aceleradores de teclado descritos en una etiqueta de elemento de menú](images/accelerators/accelerators_menuitemlabel.png)  
+![Captura de pantalla de los aceleradores de teclado en una etiqueta de elemento de menú.](images/accelerators/accelerators_menuitemlabel.png)  
 *Aceleradores de teclado descritos en una etiqueta de elemento de menú*
 
 ## <a name="when-to-use-keyboard-accelerators"></a>Cuándo usar aceleradores de teclado
@@ -126,7 +126,7 @@ Se recomienda establecer aceleradores de teclado para las acciones más comunes 
 </CommandBar>
 ```
 
-![Acelerador de teclado descrito en una información sobre herramientas](images/accelerators/accelerators_tooltip.png)  
+![Captura de pantalla de una tecla de aceleración en una información sobre herramientas.](images/accelerators/accelerators_tooltip.png)  
 ***Acelerador de teclado descrito en una información sobre herramientas***
 
 El objeto [UIElement](/uwp/api/windows.ui.xaml.uielement) tiene una colección [KeyboardAccelerator](/uwp/api/windows.ui.xaml.input.keyboardaccelerator) , [KeyboardAccelerators](/uwp/api/windows.ui.xaml.uielement.KeyboardAccelerators), donde se especifican los objetos KeyboardAccelerator personalizados y se definen las pulsaciones de tecla para la tecla de aceleración:
@@ -378,7 +378,7 @@ De forma predeterminada, cuando se declaran los aceleradores de teclado, todos l
 > [!NOTE] 
 > Si un control tiene más de un acelerador definido, solo se presenta el primero.
 
-![Información sobre herramientas de tecla de aceleración](images/accelerators/accelerators_tooltip_savebutton_small.png)
+![Captura de pantalla de un botón Guardar con una información sobre herramientas encima que indica compatibilidad con el acelerador Ctrl + S.](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *Cuadro combinado de tecla de aceleración en la información sobre herramientas*
 
@@ -414,7 +414,7 @@ En el caso de los objetos [Button](/uwp/api/windows.ui.xaml.controls.button), [A
 </StackPanel>
 ```
 
-![Información sobre herramientas de tecla de aceleración](images/accelerators/accelerators-button-small.png)
+![Captura de pantalla de tres botones con la etiqueta Button1, Button2 y button3 con una información sobre herramientas sobre BUTTON2 que indica compatibilidad con el acelerador de Windows + B.](images/accelerators/accelerators-button-small.png)
 
 *Combinación de tecla de aceleración anexada a la información sobre herramientas predeterminada del botón*
 
@@ -426,7 +426,7 @@ En el caso de los objetos [Button](/uwp/api/windows.ui.xaml.controls.button), [A
 </AppBarButton>
 ```
 
-![Información sobre herramientas de tecla de aceleración](images/accelerators/accelerators-appbarbutton-small.png)
+![Captura de pantalla de un botón con un icono de disco y una información sobre herramientas que incluye el texto predeterminado guardar anexado con el acelerador Ctrl + S entre paréntesis.](images/accelerators/accelerators-appbarbutton-small.png)
 
 *Combinación de tecla de aceleración anexada a la información sobre herramientas predeterminada de AppBarButton*
 
@@ -452,7 +452,7 @@ En el caso de los objetos [Button](/uwp/api/windows.ui.xaml.controls.button), [A
 </AppBarButton>
 ```
 
-![Información sobre herramientas de tecla de aceleración](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
+![Captura de pantalla de un menú con MenuFlyoutItems que incluyen las combinación de teclas de aceleración.](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
 *Combinación de tecla de aceleración anexada al texto de MenuFlyoutItem*
 
@@ -489,7 +489,7 @@ En algunos casos, se recomienda usar la etiqueta de un control para identificar 
 
 Algunos controles de plataforma hacen esto de forma predeterminada, en concreto, los objetos [MenuFlyoutItem](/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) y [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem) , mientras que la [AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton) y [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) lo hacen cuando aparecen en el menú de desbordamiento del control [CommandBar](/uwp/api/windows.ui.xaml.controls.commandbar).
 
-![Aceleradores de teclado descritos en una etiqueta de elemento de menú](images/accelerators/accelerators_menuitemlabel.png)  
+![Aceleradores de teclado descritos en una etiqueta de elemento de menú.](images/accelerators/accelerators_menuitemlabel.png)  
 *Aceleradores de teclado descritos en una etiqueta de elemento de menú*
 
 Puede invalidar el texto del acelerador predeterminado de la etiqueta a través de la propiedad [KeyboardAcceleratorTextOverride](/uwp/api/windows.ui.xaml.controls.appbarbutton.KeyboardAcceleratorTextOverride) de los controles [MenuFlyoutItem](/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem), [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem), [AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton)y [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) (usar un solo espacio para ningún texto). 
@@ -526,8 +526,8 @@ Como el evento [CharacterReceived](/uwp/api/windows.ui.core.corewindow.Character
 Los eventos de entrada de la vista previa se activan antes que otros eventos. Si no controla estos eventos, se activa el acelerador del elemento que tiene el foco, seguido del evento KeyDown. Ambos eventos se propagan hasta que se administran.
 
 
-![Secuencia de eventos Key Event Sequence ](images/accelerators/accelerators_keyevents.png)
- ***key***
+![Diagrama que muestra la secuencia de ](images/accelerators/accelerators_keyevents.png)
+ ***eventos*** clave de la secuencia de eventos
 
 Orden de eventos:
 
@@ -572,8 +572,8 @@ protected override void OnProcessKeyboardAccelerators(
 
 Se recomienda localizar todos los aceleradores de teclado. Puede hacerlo con el archivo de recursos estándar de UWP (. resw) y el atributo x:Uid en las declaraciones de XAML. En este ejemplo, el Windows Runtime carga automáticamente los recursos.
 
-![Localización del acelerador de teclado con el archivo de recursos de UWP ](images/accelerators/accelerators_localization.png)
- ***localización del acelerador de teclado de archivo con recursos de UWP***
+![Diagrama de la localización del acelerador de teclado con el archivo de recursos UWP ](images/accelerators/accelerators_localization.png)
+ ***localización del acelerador de teclado de archivos con recursos UWP***
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">

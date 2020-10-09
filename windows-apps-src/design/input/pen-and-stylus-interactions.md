@@ -1,5 +1,5 @@
 ---
-Description: Cree aplicaciones de Windows que admitan interacciones personalizadas de los dispositivos de lápiz y lápiz, incluida la entrada de lápiz digital para experiencias naturales de escritura y dibujo.
+description: Cree aplicaciones de Windows que admitan interacciones personalizadas de los dispositivos de lápiz y lápiz, incluida la entrada de lápiz digital para experiencias naturales de escritura y dibujo.
 title: Interacciones de lápiz y Windows Ink en aplicaciones de Windows
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in Windows apps
@@ -8,19 +8,19 @@ keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, I
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a877fabfd34bcbe16afb70c012d403d489e3a6e0
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 7a29a7ed497fdcd463df0855b4aad3b65ce6408a
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749921"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860173"
 ---
 # <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Interacciones de lápiz y Windows Ink en aplicaciones de Windows
 
-![Lápiz para Surface](images/ink/hero-small.png)  
+![Imagen de Hero del lápiz de Surface.](images/ink/hero-small.png)  
 *Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)).
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Optimice su aplicación de Windows para que la entrada manuscrita proporcione la funcionalidad de [**dispositivo de puntero**](/uwp/api/Windows.Devices.Input.PointerDevice) estándar y la mejor experiencia de Windows Ink para los usuarios.
 
@@ -95,7 +95,7 @@ En este ejemplo, un control [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.In
 
 Esta serie de imágenes muestra cómo se representa la entrada manuscrita mediante el control [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
-| ![Control InkCanvas en blanco con una imagen de fondo](images/ink_basic_1_small.png) | ![Control InkCanvas con trazos de lápiz](images/ink_basic_2_small.png) | ![Control InkCanvas con un trazo borrado](images/ink_basic_3_small.png) |
+| ![Captura de pantalla del InkCanvas en blanco con una imagen de fondo.](images/ink_basic_1_small.png) | ![Captura de pantalla del InkCanvas con trazos de lápiz.](images/ink_basic_2_small.png) | ![Captura de pantalla del InkCanvas con un trazo borrado.](images/ink_basic_3_small.png) |
 | --- | --- | ---|
 | El [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) en blanco con una imagen de fondo. | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con trazos de lápiz. | Control [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con un trazo borrado (ten en cuenta que la opción de borrado actúa en todo el trazo, no en una parte). |
 
@@ -206,7 +206,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 Estas imágenes muestran cómo se procesa y personaliza la entrada manuscrita mediante [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter).
 
-| ![control inkcanvas con trazos de lápiz negro predeterminados](images/ink-basic-custom-1-small.png) | ![control inkcanvas con trazos de lápiz rojo seleccionados por el usuario](images/ink-basic-custom-2-small.png) |
+| ![Captura de pantalla que muestra el InkCanvas con trazos de lápiz negros predeterminados.](images/ink-basic-custom-1-small.png) | ![Captura de pantalla de InkCanvas con trazos de tinta roja seleccionados por el usuario.](images/ink-basic-custom-2-small.png) |
 | --- | --- |
 | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con trazos de lápiz negros predeterminados. | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con trazos de tinta roja seleccionados por el usuario. | 
 
@@ -230,7 +230,7 @@ En el ejemplo de código siguiente (todo el código está en los archivos MainPa
 
     Una vez hecho esto, agregamos un lienzo (debajo de [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)) para dibujar el trazo de selección. Si usas una capa independiente para dibujar el trazo de selección, **InkCanvas** y su contenido no se modifican.
 
-    ![inkcanvas en blanco con un lienzo de selección subyacente](images/ink-unprocessed-1-small.png)
+    ![Captura de pantalla del InkCanvas en blanco con un lienzo de selección subyacente.](images/ink-unprocessed-1-small.png)
 
       ```xaml
         <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -271,7 +271,7 @@ En el ejemplo de código siguiente (todo el código está en los archivos MainPa
 
     Por último, asignamos agentes de escucha para los eventos [**StrokeStarted**](/uwp/api/windows.ui.input.inking.inkstrokeinput.strokestarted) y [**StrokesErased**](/uwp/api/windows.ui.input.inking.inkpresenter.strokeserased) de la propiedad [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter). Los controladores de estos eventos se usan para limpiar la interfaz de usuario de selección si se inicia un nuevo trazo o se borra un trazo existente.
 
-    ![control inkcanvas con trazos de lápiz negro predeterminados](images/ink-unprocessed-2-small.png)
+    ![Captura de pantalla de la aplicación de ejemplo de personalización de entradas manuscritas que muestra el InkCanvas con trazos de lápiz negros predeterminados.](images/ink-unprocessed-2-small.png)
 
       ```csharp
         public MainPage()
@@ -320,7 +320,7 @@ En el ejemplo de código siguiente (todo el código está en los archivos MainPa
 
     Todas las funcionalidades de selección se implementan en estos controladores, incluido el trazo de lazo y el rectángulo delimitador.
 
-    ![lazo de selección](images/ink-unprocessed-3-small.png)
+    ![Captura de pantalla del lazo de selección.](images/ink-unprocessed-3-small.png)
 
       ```csharp
         // Handle unprocessed pointer events from modified input.
@@ -368,7 +368,7 @@ En el ejemplo de código siguiente (todo el código está en los archivos MainPa
 
 5.  Para concluir el controlador de eventos PointerReleased, borramos la capa de selección de todo el contenido (trazo de lazo) y, a continuación, dibujamos un único rectángulo delimitador alrededor de los trazos de lápiz incluidos en el área del lazo.
 
-    ![rectángulo delimitador de selección](images/ink-unprocessed-4-small.png)
+    ![Captura de pantalla del rectángulo delimitador de selección.](images/ink-unprocessed-4-small.png)
 
       ```csharp
         // Draw a bounding rectangle, on the selection canvas, encompassing

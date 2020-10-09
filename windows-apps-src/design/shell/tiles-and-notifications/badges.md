@@ -1,5 +1,5 @@
 ---
-Description: Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
+description: Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
 title: Notificaciones de distintivos para aplicaciones de Windows
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e8d3cf69da80b13ff334d89027f3ea366ac3accd
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: dea3eebc253f46f5de888a0a37fea9d3ad1ac3df
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219398"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860113"
 ---
 # <a name="badge-notifications-for-windows-apps"></a>Notificaciones de distintivos para aplicaciones de Windows
 
@@ -55,7 +55,7 @@ En lugar de un número, una notificación puede mostrar un elemento de un conjun
 
 <table>
 <tr>
-    <th>Status</th>
+    <th>Estado</th>
     <th>Glifo</th>
     <th>XML</th>
 </tr>
@@ -66,62 +66,62 @@ En lugar de un número, una notificación puede mostrar un elemento de un conjun
 </tr>
 <tr>
     <td>activity</td>
-    <td><img src="images/badges/badge-activity.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-activity.png" alt="Screenshot of the activity glyph." /></td>
     <td>`<badge value="activity"/>`</td>
 </tr>
 <tr>
     <td>alarma</td>
-    <td><img src="images/badges/badge-alarm.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-alarm.png" alt="Screenshot of the alarm glyph." /></td>
     <td>`<badge value="alarm"/>`</td>
 </tr>
 <tr>
     <td>alerta</td>
-    <td><img src="images/badges/badge-alert.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-alert.png" alt="Screenshot of the alert glyph." /></td>
     <td>`<badge value="alert"/>`</td>
 </tr>
 <tr>
     <td>atención</td>
-    <td><img src="images/badges/badge-attention.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-attention.png" alt="Screenshot of the attention glyph." /></td>
     <td>`<badge value="attention"/>`</td>
 </tr>
 <tr>
     <td>disponible</td>
-    <td><img src="images/badges/badge-available.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-available.png" alt="Screenshot of the available glyph." /></td>
     <td>`<badge value="available"/>`</td>
 </tr>
 <tr>
     <td>ausente</td>
-    <td><img src="images/badges/badge-away.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-away.png" alt="Screenshot of the away glyph." /></td>
     <td>`<badge value="away"/>`</td>
 </tr>
 <tr>
     <td>ocupado</td>
-    <td><img src="images/badges/badge-busy.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-busy.png" alt="Screenshot of the busy glyph." /></td>
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
     <td>error</td>
-    <td><img src="images/badges/badge-error.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-error.png" alt="Screenshot of the error glyph." /></td>
     <td>`<badge value="error"/>`</td>
 </tr>
 <tr>
     <td>newMessage</td>
-    <td><img src="images/badges/badge-newMessage.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-newMessage.png" alt="Screenshot of the new message glyph." /></td>
     <td>`<badge value="newMessage"/>`</td>
 </tr>
 <tr>
     <td>en pausa</td>
-    <td><img src="images/badges/badge-paused.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-paused.png" alt="Screenshot of the paused glyph." /></td>
     <td>`<badge value="paused"/>`</td>
 </tr>
 <tr>
     <td>reproducción</td>
-    <td><img src="images/badges/badge-playing.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-playing.png" alt="Screenshot of the playing glyph." /></td>
     <td>`<badge value="playing"/>`</td>
 </tr>
 <tr>
     <td>no disponible</td>
-    <td><img src="images/badges/badge-unavailable.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-unavailable.png" alt="Screenshot of the unavailable glyph" /></td>
     <td>`<badge value="unavailable"/>`</td>
 </tr>
 </table>
