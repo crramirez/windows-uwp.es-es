@@ -6,12 +6,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8d01042fec7435652c819f29e3a791a5623a947
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 724a9b6bc34d38a5addfd0e0123f26e1d98c9caf
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220268"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878598"
 ---
 # <a name="in-app-ads"></a>Anuncios en aplicaciones
 
@@ -48,7 +48,7 @@ Para crear una unidad de anuncio para un [banner](../monetize/banner-ads.md), an
 6. Configure las siguientes opciones adicionales según sea necesario:
 
     * Si selecciona la familia de dispositivos **UWP (Windows 10)** para la unidad de anuncio, puede configurar opciones de [mediación](#mediation) para la unidad de anuncio.
-    * Si selecciona la familia de dispositivos **PC/tableta (Windows 8.1)** o **móvil (Windows Phone 8. x)** para una unidad de anuncio de Banner, también puede seleccionar **mostrar anuncios de la comunidad en la aplicación** para participar en los anuncios de la [comunidad](about-community-ads.md).
+    * Si selecciona la familia de dispositivos **PC/tableta (Windows 8.1)** o **móvil (Windows Phone 8. x)** para una unidad de anuncio de Banner, también puede seleccionar **mostrar anuncios de la comunidad en la aplicación** para participar en los anuncios de la [comunidad](../monetize/index.md).
 
 7.  Si aún no ha establecido el cumplimiento de COPPA para la aplicación seleccionada, elija una opción en la sección [cumplimiento de COPPA](#coppa) .
 8.  Haz clic en **Crear unidad de anuncios**.
@@ -115,7 +115,7 @@ En la tabla siguiente se enumeran las redes de pago que actualmente se admiten p
 |--------------|---------------|---------------------|
 | Oath y AppNexus |  Se trata de una red ad administrada por Microsoft que ofrece anuncios a través de nuestras redes de asociados, Oath y AppNexus.<p/>**Nota**: Oath y AppNexus siempre se clasifican en primer lugar en la lista de **redes de anuncios de pago** para las unidades de anuncio de banner y no se pueden cambiar a una clasificación inferior para estos tipos de anuncios. | Banner, vídeo intersticial |
 | AppNexus (directo) | Seleccione esta opción para servir anuncios desde [AppNexus](https://www.appnexus.com). | Vídeo intersticial, nativo  |
-| Anuncios de instalación de aplicaciones de Microsoft | Seleccione esta opción para servir anuncios de instalación de aplicaciones o anuncios de renegociación de aplicaciones creados por otros desarrolladores del ecosistema de Windows que [crean campañas publicitarias promocionales para sus aplicaciones](create-an-ad-campaign-for-your-app.md).  |  Banner, Banner intersticial, nativo  |
+| Anuncios de instalación de aplicaciones de Microsoft | Seleccione esta opción para servir anuncios de instalación de aplicaciones o anuncios de renegociación de aplicaciones creados por otros desarrolladores del ecosistema de Windows que [crean campañas publicitarias promocionales para sus aplicaciones](../monetize/index.md).  |  Banner, Banner intersticial, nativo  |
 | Recomendaciones de contenido de MSN |  Seleccione esta opción para servir anuncios de recomendaciones de contenido de MSN. |  Banner, Banner intersticial  |
 | Outcerebro |  Seleccione esta opción para servir anuncios desde [outcerebro](https://www.outbrain.com/). |  Banner, Banner intersticial  |
 | Revcontent |  Seleccione esta opción para servir anuncios desde [Revcontent](https://www.revcontent.com/). |  Banner, nativo  |
@@ -135,8 +135,8 @@ En la tabla siguiente se enumeran las otras redes que actualmente se admiten par
 
 |  Red de anuncios  |  Descripción  |  Tipos de ad compatibles  |
 |--------------|---------------|---------------------|
-| Anuncios de la comunidad de Microsoft |  Si [crea una campaña de publicidad promocional para una de sus aplicaciones](create-an-ad-campaign-for-your-app.md) y configura esta campaña como una [campaña de anuncios](about-community-ads.md)de la comunidad, seleccione esta opción para mostrar anuncios de esta campaña. | Banner, Banner intersticial |
-| Anuncios de Microsoft House | Si [crea una campaña de publicidad promocional para una de sus aplicaciones](create-an-ad-campaign-for-your-app.md) y configura esta campaña como una [campaña de anuncios de casa](about-house-ads.md), seleccione esta opción para mostrar anuncios de esta campaña. | Banner, Banner intersticial  |
+| Anuncios de la comunidad de Microsoft |  Si [crea una campaña de publicidad promocional para una de sus aplicaciones](../monetize/index.md) y configura esta campaña como una [campaña de anuncios](../monetize/index.md)de la comunidad, seleccione esta opción para mostrar anuncios de esta campaña. | Banner, Banner intersticial |
+| Anuncios de Microsoft House | Si [crea una campaña de publicidad promocional para una de sus aplicaciones](../monetize/index.md) y configura esta campaña como una [campaña de anuncios de casa](../monetize/index.md), seleccione esta opción para mostrar anuncios de esta campaña. | Banner, Banner intersticial  |
 
 
 <span id="network-markets" />

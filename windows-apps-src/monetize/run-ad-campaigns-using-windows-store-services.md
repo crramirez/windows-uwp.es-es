@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows 10, UWP, API de promociones de Microsoft Store, campañas de ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 74afbda1cc93aa0602618d6d94efe6baadf59ecb
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 2be721137e6c09913eafd2c58bab07f1ae6f2728
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363708"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878518"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Ejecutar campañas de ad mediante los servicios de almacenamiento
 
@@ -23,7 +23,7 @@ Los siguientes pasos describen el proceso de principio a fin:
 2.  Antes de llamar a un método en la API de Microsoft Store promociones, [obtenga un token de acceso Azure ad](#obtain-an-azure-ad-access-token). Después de obtener un token, tiene 60 minutos para usar este token en las llamadas a la API de promociones de Microsoft Store antes de que expire el token. Después de que el token expire, puedes generar uno nuevo.
 3.  [Llame a la API de promociones de Microsoft Store](#call-the-windows-store-promotions-api).
 
-También puede crear y administrar campañas de ad con el centro de Partners, y también se puede tener acceso a las campañas de ad creadas mediante programación a través de la API de promociones de Microsoft Store en el centro de Partners. Para obtener más información acerca de la administración de campañas de AD en el centro de Partners, consulte [creación de una campaña de AD para la aplicación](../publish/create-an-ad-campaign-for-your-app.md).
+También puede crear y administrar campañas de ad con el centro de Partners, y también se puede tener acceso a las campañas de ad creadas mediante programación a través de la API de promociones de Microsoft Store en el centro de Partners. Para obtener más información acerca de la administración de campañas de AD en el centro de Partners, consulte [creación de una campaña de AD para la aplicación](./index.md).
 
 > [!NOTE]
 > Cualquier desarrollador con una cuenta del centro de Partners puede usar la API de promociones de Microsoft Store para administrar campañas de AD para sus aplicaciones. Las agencias de medios también pueden solicitar acceso a esta API para ejecutar campañas de AD en nombre de sus anunciantes. Si es una agencia de medios que quiere saber más sobre esta API o solicitar acceso a ella, envíe su solicitud a storepromotionsapi@microsoft.com .
@@ -34,7 +34,7 @@ También puede crear y administrar campañas de ad con el centro de Partners, y 
 
 Antes de empezar a escribir código para llamar a la API de Microsoft Store promociones, asegúrese de que ha completado los siguientes requisitos previos.
 
-* Antes de poder crear e iniciar correctamente una campaña de ad mediante esta API, primero debe [crear una campaña de pago de pago mediante la página **campañas de ad** del centro de Partners](../publish/create-an-ad-campaign-for-your-app.md), y debe agregar al menos un instrumento de pago en esta página. Después de hacerlo, podrá crear correctamente líneas de entrega facturable para campañas de ad mediante esta API. Las líneas de entrega de las campañas de ad que cree con esta API facturarán automáticamente el instrumento de pago predeterminado elegido en la página **campañas de ad** del centro de Partners.
+* Antes de poder crear e iniciar correctamente una campaña de ad mediante esta API, primero debe [crear una campaña de pago de pago mediante la página **campañas de ad** del centro de Partners](./index.md), y debe agregar al menos un instrumento de pago en esta página. Después de hacerlo, podrá crear correctamente líneas de entrega facturable para campañas de ad mediante esta API. Las líneas de entrega de las campañas de ad que cree con esta API facturarán automáticamente el instrumento de pago predeterminado elegido en la página **campañas de ad** del centro de Partners.
 
 * Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
 

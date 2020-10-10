@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b6ffbbb13646fe085fa81c99f4ecf45e328a01f7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3b768fa4a2506004527ba38256a7ff1849570ca1
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164269"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878498"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>Atraiga a los clientes y promocione sus aplicaciones
 
@@ -27,7 +27,7 @@ Una vez que la aplicación se encuentra en el Microsoft Store, es el momento de 
 
 Estas campañas mostrarán anuncios en cualquier aplicación que coincida con el dispositivo y la categoría de la aplicación. También puedes elegir una campaña universal, donde los anuncios también aparecerán en MSN.com, Outlook.com, Skype y otras propiedades premium de Microsoft.
 
-[EXPLORAR MÁS >](create-an-ad-campaign-for-your-app.md)
+[EXPLORAR MÁS >](../monetize/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -40,7 +40,7 @@ Estas campañas mostrarán anuncios en cualquier aplicación que coincida con el
 
 Estas campañas solo muestran anuncios en otras aplicaciones, de forma gratuita.
 
-[EXPLORAR MÁS >](about-house-ads.md)
+[EXPLORAR MÁS >](../monetize/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -54,7 +54,7 @@ Estas campañas solo muestran anuncios en otras aplicaciones, de forma gratuita.
 
 Estas campañas muestran anuncios en aplicaciones publicadas por otros desarrolladores que también participan en campañas publicitarias de la comunidad, de forma gratuita.
 
-[EXPLORAR MÁS >](create-an-ad-campaign-for-your-app.md)
+[EXPLORAR MÁS >](../monetize/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -103,7 +103,7 @@ Los anuncios nativos te permiten enviar todos los componentes individuales de tu
 
 ![Más información sobre campañas de promoción de aplicaciones](images/app-promotion-campaigns.png)
 
-[Crea una campaña publicitaria en el panel](create-an-ad-campaign-for-your-app.md)
+[Crea una campaña publicitaria en el panel](../monetize/index.md)
 
 [Crea una campaña publicitaria con nuestra API de REST](../monetize/run-ad-campaigns-using-windows-store-services.md)
 
@@ -119,7 +119,7 @@ Los anuncios nativos te permiten enviar todos los componentes individuales de tu
 
 [Informe de adquisiciones](acquisitions-report.md)
 
-[Obtención de datos de análisis mediante nuestra API de REST](../monetize/access-analytics-data-using-windows-store-services.md)
+[Obtener datos de análisis mediante nuestra API de REST](../monetize/access-analytics-data-using-windows-store-services.md)
 
 ## <a name="other-ways-to-promote-your-app"></a>Otras formas de promocionar tu aplicación
 

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb9c6a43b9411b2297cc4cbf35dfdb2177e5dab7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ea0fe6f29059a2b9ef8e5ce728d883d5349d0468
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155379"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878428"
 ---
 # <a name="advertising-performance-report"></a>Informe de rendimiento de la publicidad
 
@@ -59,8 +59,8 @@ El informe de **rendimiento de publicidad** incluye datos de las siguientes mét
 | Clics  |  El número de veces que alguien hizo clic en un anuncio en la aplicación. |
 | CALEND  |  Tasa de clics, es decir, el número de veces que se hizo clic en un anuncio, dividido por el número de impresiones. |
 | Visualización | Porcentaje de impresiones de anuncios que se pueden ver en la aplicación. Para obtener más detalles sobre cómo se calcula este valor, vea [optimizar la capacidad de visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
-| Créditos obtenidos  | Si está ejecutando una campaña de ad de la [comunidad](./about-community-ads.md) , indica el número de créditos que ha obtenido para el espacio de anuncios promocional mostrando anuncios de la comunidad en la aplicación.  |
-| Créditos invertidos  | Si está ejecutando una campaña de ad de la [comunidad](./about-community-ads.md) , indica el número de créditos que ha empleado en los anuncios de la aplicación.  |
+| Créditos obtenidos  | Si está ejecutando una campaña de ad de la [comunidad](../monetize/index.md) , indica el número de créditos que ha obtenido para el espacio de anuncios promocional mostrando anuncios de la comunidad en la aplicación.  |
+| Créditos invertidos  | Si está ejecutando una campaña de ad de la [comunidad](../monetize/index.md) , indica el número de créditos que ha empleado en los anuncios de la aplicación.  |
 
 ## <a name="related-topics"></a>Temas relacionados
 

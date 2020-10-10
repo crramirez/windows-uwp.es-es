@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, monetización
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f2d5ceef5ef15ac81e43447e24e2eaf61e4a22a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c827c257947ea0f365bafe497e627841b501d40d
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159369"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878588"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -213,15 +213,15 @@ Para obtener información sobre cómo integrar el SDK de AdDuplex en juegos para
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>Maximizar el potencial del juego a través de campañas publicitarias
 
-El siguiente paso consiste en promocionar el juego a través de anuncios. Al [crear una campaña publicitaria](../publish/create-an-ad-campaign-for-your-app.md) para tu juego, otras aplicaciones y juegos mostrarán anuncios promocionándolo.
+El siguiente paso consiste en promocionar el juego a través de anuncios. Al [crear una campaña publicitaria](../monetize/index.md) para tu juego, otras aplicaciones y juegos mostrarán anuncios promocionándolo.
 
 Elige entre varios tipos de campañas que pueden ayudarte a aumentar la base de jugadores.
 
 |Tipo de campaña             | Los anuncios para el juego aparecen en...                                                                                                                                                                   |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Pagado                      |Aplicaciones que coinciden con el dispositivo o la categoría del juego.                                                                                                                                                   |
-|Comunidad gratuita            |Aplicaciones publicadas por otros desarrolladores que también participan en campañas de anuncios de la comunidad. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](../publish/about-community-ads.md).|
-|Interno gratuito                |Solo las aplicaciones que hayas publicado. Para obtener más información, consulta [Acerca de los anuncios internos](../publish/about-house-ads.md).                                                            |
+|Comunidad gratuita            |Aplicaciones publicadas por otros desarrolladores que también participan en campañas de anuncios de la comunidad. Para obtener más información, consulta [Acerca de los anuncios de la comunidad](../monetize/index.md).|
+|Interno gratuito                |Solo las aplicaciones que hayas publicado. Para obtener más información, consulta [Acerca de los anuncios internos](../monetize/index.md).                                                            |
 
 ## <a name="related-links"></a>Vínculos relacionados
 

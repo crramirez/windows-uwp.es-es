@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, personalizado, aplicación, promoción, campaña
 ms.localizationpriority: medium
-ms.openlocfilehash: 4015ee5372c2068d7a9ead389fe7eb07aa50a466
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c04a9705797e69543e9aec8f4e6205c815f76800
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171129"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878438"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Crear una campaña de promoción de la aplicación personalizada
 
-Además de crear una [campaña de AD para la aplicación](create-an-ad-campaign-for-your-app.md) que se ejecutará en aplicaciones de Windows, también puede promocionar su aplicación mediante otros canales. Por ejemplo, puedes promocionarla mediante proveedores de marketing para aplicaciones, o publicar vínculos a la aplicación en sitios de redes sociales. Estas actividades se denominan *campañas personalizadas*.
+Además de crear una [campaña de AD para la aplicación](../monetize/index.md) que se ejecutará en aplicaciones de Windows, también puede promocionar su aplicación mediante otros canales. Por ejemplo, puedes promocionarla mediante proveedores de marketing para aplicaciones, o publicar vínculos a la aplicación en sitios de redes sociales. Estas actividades se denominan *campañas personalizadas*.
 
 Si ejecuta campañas personalizadas para la aplicación, puede realizar un seguimiento del rendimiento relativo de cada campaña mediante la creación de una dirección URL diferente para cada campaña personalizada, donde cada dirección URL contiene un ID. de *campaña*diferente. Cuando un cliente que ejecuta Windows 10 hace clic en una dirección URL que contiene un identificador de campaña, Microsoft asocia el clic con la campaña personalizada correspondiente y hace que estos datos estén disponibles en el [centro de Partners](https://partner.microsoft.com/dashboard).
 

@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, servicios de tienda, API de Microsoft Store Analytics, campañas de ad
 ms.localizationpriority: medium
-ms.openlocfilehash: fd933f103bf8964997102731b653e125fae89e12
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c40ab5d6aea67477e0900441cfb02b858dbef9b2
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162449"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878458"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Obtener los datos de rendimiento de la campaña de anuncios
 
 
 Use este método en la API de Microsoft Store Analytics para obtener un resumen agregado de los datos de rendimiento de campaña de publicidad promocional para las aplicaciones durante un intervalo de fechas determinado y otros filtros opcionales. Este método devuelve los datos en formato JSON.
 
-Este método devuelve los mismos datos proporcionados por el [Informe de campaña de ad](/windows/uwp/publish/ad-campaign-report) en el centro de Partners. Para obtener más información acerca de las campañas de anuncios, consulta [Crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md).
+Este método devuelve los mismos datos proporcionados por el [Informe de campaña de ad](/windows/uwp/publish/ad-campaign-report) en el centro de Partners. Para obtener más información acerca de las campañas de anuncios, consulta [Crear una campaña publicitaria para tu aplicación](./index.md).
 
 Para crear, actualizar o recuperar detalles de las campañas de ad, puede usar los métodos de [Administración de campañas de ad](manage-ad-campaigns.md) en la API de promociones de [Microsoft Store](run-ad-campaigns-using-windows-store-services.md).
 
@@ -50,7 +50,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 Para recuperar los datos de rendimiento de una campaña de anuncios de una aplicación en concreto, usa el parámetro *applicationId*. Para recuperar los datos de rendimiento de anuncios de todas las aplicaciones que hay asociadas a tu cuenta de desarrollador, omite el parámetro *applicationId*.
 
-| Parámetro     | Tipo   | Descripción     | Obligatorio |
+| Parámetro     | Tipo   | Descripción     | Requerido |
 |---------------|--------|-----------------|----------|
 | applicationId   | string    | El [identificador](in-app-purchases-and-trials.md#store-ids) de la tienda de la aplicación para la que desea recuperar los datos de rendimiento de la campaña de ad. |    No      |
 |  startDate  |  date   |  La fecha de inicio del intervalo de fechas de los datos de rendimiento de campaña de anuncios que quieres recuperar en formato AAAA/MM/DD. El valor predeterminado es la fecha 30 días posterior al día en curso.   |   No    |
@@ -78,7 +78,7 @@ Authorization: Bearer <your access token>
 ## <a name="response"></a>Response
 
 
-### <a name="response-body"></a>Cuerpo de la respuesta
+### <a name="response-body"></a>Response body
 
 | Value      | Tipo   | Descripción  |
 |------------|--------|---------------|
@@ -150,6 +150,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear una campaña publicitaria para tu aplicación](../publish/create-an-ad-campaign-for-your-app.md)
+* [Crear una campaña publicitaria para tu aplicación](./index.md)
 * [Ejecutar campañas de ad con Microsoft Store Services](run-ad-campaigns-using-windows-store-services.md)
 * [Acceder a datos de análisis mediante servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
