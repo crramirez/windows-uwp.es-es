@@ -1,32 +1,32 @@
 ---
 title: Texturas alfa de 1 bit y opacas
-description: El formato de textura BC1 es para texturas opacas o que tienen un único color transparente.
+description: El formato de textura BC1 es para las texturas que son opacas o tienen un único color transparente.
 ms.assetid: 8C53ACDD-72ED-4307-B4F3-2FCF9A9F53EC
 keywords:
 - Texturas alfa de 1 bit y opacas
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 74768202554a3eb49c0df8ee5f17a4fe5f979be8
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: c08489055bfd4e867310c5bdec6fea655ddc6d41
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291813"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933016"
 ---
-# <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas de alfa opacas y de 1 bit
+# <a name="span-iddirect3dconceptsopaque_and_1-bit_alpha_texturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Texturas alfa de 1 bit y opacas
 
-El formato de textura BC1 es para texturas opacas o que tienen un único color transparente.
+El formato de textura BC1 es para las texturas que son opacas o tienen un único color transparente.
 
-Por cada bloque opaco o de alfa de 1 bit, se almacenan dos valores de 16 bits (en formato RGB 5:6:5) y un mapa de bits de 4x4 con 2 bits por píxel. Esto hace un total de 64 bits de 16 elementos de textura o cuatro bits por elemento de textura. En el mapa de bits de bloque, hay 2 bits por elemento de textura para seleccionar entre los cuatro colores, dos de los cuales se almacenan en los datos codificados. Los otros dos colores se derivan de estos colores almacenados por interpolación lineal. El diseño se muestra en el siguiente diagrama.
+Para cada bloque alfa opaco o de 1 bit, se almacenan los valores de 2 16 bits (formato RGB 5:6:5) y un mapa de bits 4x4 con 2 bits por píxel. Se suman los 64 bits para 16 textura, o cuatro bits por textura. En el mapa de bits de bloque, hay 2 bits por textura para seleccionar entre los cuatro colores, dos de los cuales se almacenan en los datos codificados. Los otros dos colores se derivan de estos colores almacenados mediante la interpolación lineal. Este diseño se muestra en el diagrama siguiente.
 
-![diagrama del diseño del mapa de bits](images/colors1.png)
+![diagrama del diseño de mapa de bits](images/colors1.png)
 
-El formato alfa de 1 bit se distingue del formato opaco comparando los dos valores de color de 16 bits almacenados en el bloque. Se tratan como enteros sin signo. Si el primer color es mayor que el segundo, implica que solo se definen los elementos de textura opacos. Esto significa que se usan cuatro colores para representar los elementos de textura. En la codificación de cuatro colores, hay dos colores derivados y los cuatro colores se distribuyen por igual en el espacio de colores RGB. Este formato es similar al formato RGB 5:6:5. De lo contrario, para la transparencia de alfa de 1 bit, se usan tres colores y el cuarto está reservado para representar los elementos de textura transparentes.
+El formato alfa de 1 bit se distingue del formato opaco mediante la comparación de los valores de color de 2 16 bits almacenados en el bloque. Se tratan como enteros sin signo. Si el primer color es mayor que el segundo, implica que solo se definen textura opacos. Esto significa que se usan cuatro colores para representar el textura. En la codificación de cuatro colores, hay dos colores derivados y los cuatro colores se distribuyen uniformemente en el espacio de colores RGB. Este formato es análogo al formato RGB 5:6:5. De lo contrario, para la transparencia alfa de 1 bit, se usan tres colores y el cuarto se reserva para representar textura transparentes.
 
-En la codificación de tres colores, hay un color derivado y el cuarto código de 2 bits está reservado para indicar un elemento de textura transparente (información alfa). Este formato es similar al formato RGBA 5:5:5:1, en el que el bit final se usa para la codificación de la máscara alfa.
+En la codificación de tres colores, hay un color derivado y el cuarto código de 2 bits se reserva para indicar un textura transparente (información alfa). Este formato es análogo a RGBA 5:5:5:1, donde el bit final se usa para codificar la máscara alfa.
 
-En el siguiente ejemplo de código se muestra el algoritmo para decidir si se seleccionó la codificación de tres o cuatro colores:
+En el ejemplo de código siguiente se muestra el algoritmo para decidir si la codificación de tres o cuatro colores está seleccionada:
 
 ```cpp
 if (color_0 > color_1) 
@@ -52,26 +52,26 @@ else
 }
 ```
 
-Se recomienda establecer los componentes RGBA del píxel de transparencia a cero antes de combinar.
+Se recomienda establecer los componentes RGBA del píxel de transparencia en cero antes de la fusión.
 
-En las siguientes tablas se muestra el diseño de la memoria para el bloque de 8 bytes. Se supone que el primer índice corresponde a la coordenada Y y el segundo, a la coordenada X. Por ejemplo, la textura\[1\]\[2\] hace referencia a la textura píxel del mapa (x, y) = (2,1).
+En las tablas siguientes se muestra el diseño de memoria para el bloque de 8 bytes. Se supone que el primer índice corresponde a la coordenada y y el segundo corresponde a la coordenada x. Por ejemplo, textura \[ 1 \] \[ 2 \] hace referencia al píxel del mapa de texturas en (x, y) = (2, 1).
 
-El siguiente es el diseño de la memoria para el bloque de 8 bytes (64 bits):
+A continuación se encuentra el diseño de memoria para el bloque de 8 bytes (64 bits):
 
-| Dirección de Word | Palabra de 16 bits    |
+| Dirección de palabra | Palabra de 16 bits    |
 |--------------|----------------|
-| 0            | Color\_0       |
-| 1            | Color\_1       |
-| 2            | Mapa de bits de Word\_0 |
-| 3            | Mapa de bits de Word\_1 |
+| 0            | Color \_ 0       |
+| 1            | Color \_ 1       |
+| 2            | Bitmap (palabra \_ 0) |
+| 3            | Mapa de bits (palabra \_ 1) |
 
  
 
-Color\_0 y el Color\_1, los colores en los dos extremos, se distribuyen como sigue:
+\_El color 0 y \_ el color 1, los colores de los dos extremos, se disponen de la siguiente manera:
 
 | Bits        | Color                 |
 |-------------|-----------------------|
-| 4:0 (LSB\*) | Componente de color azul  |
+| 4:0 (LSB \* ) | Componente de color azul  |
 | 10:5        | Componente de color verde |
 | 15:11       | Componente de color rojo   |
 
@@ -79,42 +79,42 @@ Color\_0 y el Color\_1, los colores en los dos extremos, se distribuyen como sig
 
 \*bit menos significativo
 
-Mapa de bits de Word\_0 se distribuyen como sigue:
+El mapa \_ de bits palabra 0 está diseñado de la siguiente manera:
 
-| Bits          | Elemento de textura           |
+| Bits          | Textura           |
 |---------------|-----------------|
-| 1:0 (LSB)     | Elemento de textura\[0\]\[0\] |
-| 3:2           | Elemento de textura\[0\]\[1\] |
-| 5:4           | Elemento de textura\[0\]\[2\] |
-| 7:6           | Elemento de textura\[0\]\[3\] |
-| 9:8           | Elemento de textura\[1\]\[0\] |
-| 11:10         | Texel\[1\]\[1\] |
-| 13:12         | Texel\[1\]\[2\] |
-| 15:14 (MSB\*) | Elemento de textura\[1\]\[3\] |
+| 1:0 (LSB)     | Textura \[ 0 \] \[ 0\] |
+| 3:2           | Textura \[ 0 \] \[ 1\] |
+| 5:4           | Textura \[ 0 \] \[ 2\] |
+| 7:6           | Textura \[ 0 \] \[ 3\] |
+| 9:8           | Textura \[ 1 \] \[ 0\] |
+| 11:10         | Textura \[ 1 \] \[ 1\] |
+| 13:12         | Textura \[ 1 \] \[ 2\] |
+| 15:14 (MSB \* ) | Textura \[ 1 \] \[ 3\] |
 
  
 
 \*bit más significativo (MSB)
 
-Mapa de bits de Word\_1 se distribuyen como sigue:
+El mapa \_ de bits de la palabra 1 se dispone de la siguiente manera:
 
-| Bits        | Elemento de textura           |
+| Bits        | Textura           |
 |-------------|-----------------|
-| 1:0 (LSB)   | Elemento de textura\[2\]\[0\] |
-| 3:2         | Texel\[2\]\[1\] |
-| 5:4         | Texel\[2\]\[2\] |
-| 7:6         | Elemento de textura\[2\]\[3\] |
-| 9:8         | Elemento de textura\[3\]\[0\] |
-| 11:10       | Texel\[3\]\[1\] |
-| 13:12       | Elemento de textura\[3\]\[2\] |
-| 15:14 (MSB) | Texel\[3\]\[3\] |
+| 1:0 (LSB)   | Textura \[ 2 \] \[ 0\] |
+| 3:2         | Textura \[ 2 \] \[ 1\] |
+| 5:4         | Textura \[ 2 \] \[ 2\] |
+| 7:6         | Textura \[ 2 \] \[ 3\] |
+| 9:8         | Textura \[ 3 \] \[ 0\] |
+| 11:10       | Textura \[ 3 \] \[ 1\] |
+| 13:12       | Textura \[ 3 \] \[ 2\] |
+| 15:14 (MSB) | Textura \[ 3 \] \[ 3\] |
 
  
 
-## <a name="span-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>Ejemplo de codificación de color opaco
+## <a name="span-idexample_of_opaque_color_encodingspanspan-idexample_of_opaque_color_encodingspanspan-idexample_of_opaque_color_encodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>Ejemplo de codificación de color opaca
 
 
-Como ejemplo de codificación opaca, supongamos que los colores rojo y negro se encuentran en los extremos. El color rojo es el color\_0 y negro es el color\_1. Hay cuatro colores interpolados que forman el degradado uniformemente distribuido entre ellos. Para determinar los valores del mapa de bits de 4x4, se usan los siguientes cálculos:
+Como ejemplo de codificación opaca, supongamos que los colores rojo y negro están en el extremo. Rojo es el color \_ 0 y el negro es el color \_ 1. Hay cuatro colores interpolados que forman el degradado distribuido uniformemente entre ellos. Para determinar los valores para el mapa de bits 4x4, se usan los cálculos siguientes:
 
 ```cpp
 00 ? color_0
@@ -123,30 +123,30 @@ Como ejemplo de codificación opaca, supongamos que los colores rojo y negro se 
 11 ? 1/3 color_0 + 2/3 color_1
 ```
 
-El mapa de bits tiene el aspecto del siguiente diagrama.
+El mapa de bits es similar al diagrama siguiente.
 
-![diagrama del diseño del mapa de bits expandido](images/colors2.png)
+![Diagrama del diseño de mapa de bits expandido para rojo y negro.](images/colors2.png)
 
-Tiene el aspecto de la siguiente serie ilustrada de colores.
+Es similar a la siguiente serie de colores ilustrada.
 
-**Tenga en cuenta**    en una imagen, píxeles (0,0) aparecen en la esquina superior izquierda.
+**Nota:**    En una imagen, el píxel (0,0) aparece en la parte superior izquierda.
 
  
 
-![ilustración de un degradado codificado opaco](images/redsquares.png)
+![Ilustración de un degradado opaco codificado](images/redsquares.png)
 
-## <a name="span-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanspan-idexampleof1bitalphaencodingspanexample-of-1-bit-alpha-encoding"></a><span id="Example_of_1_Bit_Alpha_Encoding"></span><span id="example_of_1_bit_alpha_encoding"></span><span id="EXAMPLE_OF_1_BIT_ALPHA_ENCODING"></span>Ejemplo de codificación alfa de 1 bit
+## <a name="span-idexample_of_1_bit_alpha_encodingspanspan-idexample_of_1_bit_alpha_encodingspanspan-idexample_of_1_bit_alpha_encodingspanexample-of-1-bit-alpha-encoding"></a><span id="Example_of_1_Bit_Alpha_Encoding"></span><span id="example_of_1_bit_alpha_encoding"></span><span id="EXAMPLE_OF_1_BIT_ALPHA_ENCODING"></span>Ejemplo de codificación alfa de 1 bit
 
 
-Este formato está activado cuando el entero de 16 bits sin signo, el color\_0, es menor que el entero de 16 bits sin signo, color\_1. Un ejemplo de dónde se puede usar este formato es en hojas de un árbol, que se muestran contra un cielo azul. Algunos elementos de textura se pueden marcar como transparentes, a la vez que hay disponibles tres tonos de verde disponibles para las hojas. Dos colores fijan los extremos y el tercero es un color interpolado.
+Este formato se selecciona cuando el entero de 16 bits sin signo, el color \_ 0, es menor que el entero de 16 bits sin signo, el color \_ 1. Un ejemplo de dónde se puede usar este formato es la salida de un árbol, que se muestra con un cielo azul. Algunos textura se pueden marcar como transparentes, mientras que tres tonalidades verdes siguen estando disponibles para las hojas. Dos colores corrigen los extremos y el tercero es un color interpolado.
 
-La siguiente ilustración es un ejemplo de esta imagen.
+La siguiente ilustración es un ejemplo de este tipo de imagen.
 
-![ilustración de codificación alfa de 1 bit](images/greenthing.png)
+![Ilustración de la codificación alfa de 1 bit](images/greenthing.png)
 
-Donde la imagen se muestra en blanco, el elemento de textura está codificado como transparente. Los componentes RGBA de los elementos de textura transparentes deben establecerse en cero antes de combinar.
+Cuando la imagen se muestra en blanco, textura se codificaría como transparente. Los componentes RGBA del textura transparente deben establecerse en cero antes de la combinación.
 
-La codificación del mapa de bits para los colores y la transparencia se determina con los siguientes cálculos.
+La codificación de mapa de bits para los colores y la transparencia se determina mediante los cálculos siguientes.
 
 ```cpp
 00 ? color_0
@@ -155,14 +155,14 @@ La codificación del mapa de bits para los colores y la transparencia se determi
 11   ?   Transparent
 ```
 
-El mapa de bits tiene el aspecto del siguiente diagrama.
+El mapa de bits es similar al diagrama siguiente.
 
-![diagrama del diseño del mapa de bits expandido](images/colors3.png)
+![Diagrama del diseño de mapa de bits expandido para iluminar verde y más oscuro verde.](images/colors3.png)
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Recursos de textura comprimido](compressed-texture-resources.md)
+[Recursos de texturas comprimidas](compressed-texture-resources.md)
 
  
 

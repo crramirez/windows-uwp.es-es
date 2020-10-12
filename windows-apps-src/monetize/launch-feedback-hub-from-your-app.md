@@ -1,17 +1,17 @@
 ---
-Description: Puedes animar a los clientes a dejar comentarios iniciando el Centro de opiniones desde la aplicación.
+description: Puedes animar a los clientes a dejar comentarios iniciando el Centro de opiniones desde la aplicación.
 title: Iniciar el Centro de opiniones desde la aplicación
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, centro de comentarios, lanzamiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 71ecb104f1864eefcf1e38f793a4af53a977f693
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 511612911d180459bd7c732803d3a98e3d4580c8
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363108"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933136"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar el Centro de opiniones desde la aplicación
 
@@ -60,16 +60,16 @@ Para iniciar el Centro de opiniones desde la aplicación:
 
 Para iniciar el Centro de opiniones, te recomendamos que agregues un elemento de interfaz de usuario en la aplicación (por ejemplo, un botón) que muestre el siguiente icono de comentarios estándar de la fuente Segoe MDL2 Assets y el código de carácter E939.
 
-![Icono de comentarios](images/feedback_icon.PNG)
+:::image type="icon" source="images/feedback_icon.PNG":::
 
 También te recomendamos que uses una o varias de las siguientes opciones de ubicación para vincular al Centro de opiniones en la aplicación.
 * **Directamente en la barra de la aplicación**. Según la implementación, se recomendará que uses solo el icono o que agregues texto (como se muestra a continuación).
 
-  ![Icono de comentarios](images/feedback_appbar_placement.png)
+  ![Captura de pantalla de una aplicación que tiene el icono de comentarios en la esquina superior derecha con la etiqueta comentarios junto a ella.](images/feedback_appbar_placement.png)
 
 * **En la configuración de la aplicación**. Esta es una manera más sutil de proporcionar acceso al Centro de opiniones. En el siguiente ejemplo, el vínculo Comentarios aparece como uno de los vínculos de la aplicación.
 
-  ![Icono de comentarios](images/feedback_settings_placement.png)
+  ![Captura de pantalla de una página de configuración en la que aparece el vínculo comentarios en aplicación.](images/feedback_settings_placement.png)
 
 * **En un control flotante controlado por eventos**. Esto es útil cuando quieres consultar a los clientes sobre una pregunta específica antes de iniciar el Centro de opiniones sobre Windows. Por ejemplo, después de que la aplicación use una característica determinada, es posible que le hagas al cliente una pregunta específica sobre su satisfacción con esa característica. Si el cliente elige responder, la aplicación inicia el Centro de opiniones.
 

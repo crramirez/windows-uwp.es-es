@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: d9d9041b5e90ce8ffc16fe0158dda597f99b41bc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 96aea61073cf0c62f0c9636519018e1f19d0c8b3
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157949"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933096"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
 
@@ -102,7 +102,7 @@ Notas:
 
 El siguiente diagrama ilustra cómo el dispositivo complementario Windows Hello interactúa con el servicio de autenticación complementario durante el registro.  
 
-![flujo de registro](images/companion-device-2.png)
+![Diagrama del flujo de registro.](images/companion-device-2.png)
 
 Hay dos claves que se usan en nuestro protocolo:
 
@@ -145,7 +145,7 @@ Una vez que la tarea en segundo plano asociada a una aplicación del dispositivo
 
 El servicio usa el segundo valor computado para autenticar el dispositivo y también evitar ataques de reproducción en el canal de transporte.
 
-![flujo de registro](images/companion-device-3.png)
+![Diagrama del flujo de registro actualizado.](images/companion-device-3.png)
 
 ## <a name="lifecycle-management"></a>Administración del ciclo de vida
 

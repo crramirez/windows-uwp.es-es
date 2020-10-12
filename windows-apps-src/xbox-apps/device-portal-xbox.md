@@ -6,12 +6,12 @@ ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
-ms.openlocfilehash: ed490b0474b919d4439e5b74b676d5974a3c6a30
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a7df29b6c1446d65c8e5224eede3030a25888364
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174789"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933176"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal para Xbox
 
@@ -89,9 +89,9 @@ En la página **configuración** , puede ver y editar varios valores de configur
 
 Hay varias secciones con configuraciones diferentes para ver o editar, que se explican a continuación.
 
-![Configuración](images/device-portal-xbox-20.png)
+![Captura de pantalla de la página de configuración que muestra las secciones información del dispositivo y configuración de pantalla.](images/device-portal-xbox-20.png)
 
-![Configuración](images/device-portal-xbox-21.png)
+![Captura de pantalla de la página de configuración que muestra las secciones configuración de localización, configuración de energía y configuración de usuario. ](images/device-portal-xbox-21.png)
 
 #### <a name="device-information"></a>Información del dispositivo
 

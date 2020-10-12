@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 38522be28280c0a08f6cb065e5dfb5c2f26642a8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 75cb520f97f68c06f8861b90ce1068fb136bd374
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162799"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933156"
 ---
 # <a name="introduction-to-rasterization-rules"></a>Introducción a las reglas de rasterización
 
@@ -42,11 +42,11 @@ La Convención de llenado superior izquierda determina la acción realizada por 
 
 Si define un rectángulo con la esquina superior izquierda en (0,5, 0,5) y la esquina inferior derecha en (2,5, 4,5), el punto central de este rectángulo está en (1,5, 2,5). Cuando el rasterizador de Direct3D tessellates este rectángulo, el centro de cada píxel es inequívoca dentro de cada uno de los cuatro triángulos, y no es necesaria la Convención de llenado superior izquierda. En la ilustración siguiente se muestra esto. Los píxeles del rectángulo se etiquetan según el triángulo en el que Direct3D los incluye.
 
-![cuadrado numerado que contiene un rectángulo que se divide en cuatro triángulos.](images/noambig.png)
+![Captura de pantalla de un cuadrado numerado que contiene un rectángulo que se divide en cuatro triángulos.](images/noambig.png)
 
 Si mueve el rectángulo de la ilustración anterior para que la esquina superior izquierda esté en (1,0, 1,0), la esquina inferior derecha en (3,0, 5,0) y su punto central en (2,0, 3,0), Direct3D aplica la Convención de llenado superior izquierda. La mayoría de los píxeles de este rectángulo ocupan el borde entre dos o más triángulos, como se muestra en la ilustración siguiente.
 
-![cuadrado numerado que contiene un rectángulo que se divide en cuatro triángulos.](images/fillrule.png)
+![Captura de pantalla del cuadrado numerado con el rectángulo desplazado hacia abajo y hacia la derecha.](images/fillrule.png)
 
 En ambos rectángulos, los mismos píxeles se ven afectados, tal como se muestra en la siguiente ilustración.
 

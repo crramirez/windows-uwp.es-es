@@ -5,12 +5,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ed23f77936378f2348abf868a67041be84978123
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: 62f1c6462e56b14396e3fdaed16221698c0333fd
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304687"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933166"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>Traslado de una aplicación de escritorio a UWP
 
@@ -56,7 +56,7 @@ Puede encontrar este valor en las páginas de propiedades del proyecto de biblio
 
 En el proyecto de aplicación de escritorio, agregue una referencia al proyecto de biblioteca de clases.
 
-![Referencia de la biblioteca de clases](images/desktop-to-uwp/class-library-reference.png)
+![Captura de pantalla del panel Explorador de soluciones que llama a la referencia de la biblioteca de clases para el proyecto de punto NET.](images/desktop-to-uwp/class-library-reference.png)
 
 A continuación, use las herramientas de para determinar qué parte del código se ajusta al estándar. De este modo, antes de trasladar el código a la biblioteca, puede decidir qué partes puede reutilizar, qué partes requieren una modificación mínima y qué partes permanecerán específicas de la aplicación.
 
@@ -186,7 +186,7 @@ En primer lugar, agregue un proyecto de UWP a la solución.
 
 A continuación, en el proyecto de UWP, agregue una referencia al proyecto de biblioteca .NET Standard 2,0.
 
-![Referencia de la biblioteca de clases](images/desktop-to-uwp/class-library-reference2.png)
+![Captura de pantalla del panel de Explorador de soluciones UWP que llama a la referencia a la referencia de la biblioteca de clases para el proyecto de punto NET.](images/desktop-to-uwp/class-library-reference2.png)
 
 #### <a name="build-your-pages"></a>Compilar las páginas
 
@@ -222,7 +222,7 @@ Para empezar a trabajar con UWP, vea [Qué es una aplicación de UWP](../get-sta
 
 Puede acceder a dispositivos Android e iOS agregando proyectos de Xamarin.  
 
-![Aplicaciones de Xamarin](images/desktop-to-uwp/xamarin-apps.png)
+![Imagen que muestra un dispositivo Android y un dispositivo de e/S que muestra las aplicaciones de Xamarin.](images/desktop-to-uwp/xamarin-apps.png)
 
 Estos proyectos permiten usar C# para compilar aplicaciones de iOS y Android con acceso completo a las API específicas de la plataforma y del dispositivo. Estas aplicaciones aprovechan la aceleración de hardware específica de la plataforma y se compilan para obtener un rendimiento nativo.
 
@@ -236,14 +236,14 @@ En primer lugar, agregue un proyecto de **Android**, **iOS**o **multiplataforma*
 
 Puede encontrar estas plantillas en el cuadro de diálogo **Agregar nuevo proyecto** en el grupo de **Visual C#** .
 
-![Aplicaciones de Xamarin](images/desktop-to-uwp/xamarin-projects.png)
+![Captura de pantalla del cuadro de diálogo Agregar nuevo proyecto que muestra instalado > las opciones Visual C Sharp y Android, multiplataforma y i O S.](images/desktop-to-uwp/xamarin-projects.png)
 
 >[!NOTE]
 >Los proyectos multiplataforma son ideales para aplicaciones con poca funcionalidad específica de la plataforma. Puede usarlos para compilar una interfaz de usuario nativa basada en XAML que se ejecute en iOS, Android y Windows. Obtenga más información [aquí](/xamarin/xamarin-forms/).
 
 A continuación, desde el proyecto de Android, iOS o multiplataforma, agregue una referencia al proyecto de biblioteca de clases.
 
-![Referencia de la biblioteca de clases](images/desktop-to-uwp/class-library-reference3.png)
+![Captura de pantalla del panel Explorador de soluciones que llama a la referencia a la referencia de la biblioteca de clases para el proyecto de Android, i o S o multiplataforma.](images/desktop-to-uwp/class-library-reference3.png)
 
 #### <a name="build-your-pages"></a>Compilar las páginas
 

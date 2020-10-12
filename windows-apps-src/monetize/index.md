@@ -6,12 +6,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, monetize, engage, promote, Store services
 ms.localizationpriority: medium
-ms.openlocfilehash: dd6262677cd548fa8e690fde5a90ab1f2662ea2a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f2516a1708948f0322d197bf4fdd524ede6ba0b0
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155649"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878548"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de Store
 
@@ -71,7 +71,7 @@ Ya cobres un precio por la aplicación o la ofrezcas de manera gratuita, puedes 
 
 Permitimos una amplia variedad de experiencias de anuncios que se adaptan a la mayoría de las necesidades, incluidos anuncios de banners, anuncios intersticiales (banner y vídeo), anuncios en vídeo lineales y anuncios nativos. Nuestra plataforma es compatible con los estándares OpenRTB, VAST 2.x, MRAID 2 y VPAID 3, y con MOAT e IAS.
 
-[Explorar las opciones de anuncios](../publish/create-an-ad-campaign-for-your-app.md)
+[Explorar las opciones de anuncios]()
 [instalar el SDK de anuncios](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)
     :::column-end:::
 :::row-end:::

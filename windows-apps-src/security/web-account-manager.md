@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 69e60d8ef919a05493f47f086ee992afe8bfeb4c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0a67c88eb7eb70308e6dcbbd096289c0617793b1
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172839"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933076"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -71,7 +71,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 Si ejecutas la aplicación y haces clic en el botón "Iniciar sesión", debería mostrarse una ventana vacía. 
 
-![Panel de configuración de la cuenta](images/tb-1.png)
+![Captura de pantalla de la ventana elegir una cuenta sin enumerar cuentas.](images/tb-1.png)
 
 El panel está vacío porque el sistema solo proporciona un shell de interfaz de usuario. El desarrollador es quien rellena mediante programación el panel con los proveedores de identidades. 
 
@@ -156,7 +156,7 @@ El método GetMsaToken que pasamos a nuestro nuevo **WebAccountProviderCommand**
 
 Ejecuta el código anterior y obtendrás un panel con un aspecto similar al siguiente: 
 
-![Panel de configuración de la cuenta](images/tb-2.png)
+![Captura de pantalla de la ventana elegir una cuenta con las cuentas enumeradas.](images/tb-2.png)
 
 ### <a name="request-a-token"></a>Solicitar un token
 
@@ -390,7 +390,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 }
 ```
 
-![Panel de configuración de la cuenta](images/tb-3.png)
+![Captura de pantalla de la ventana elegir una cuenta sin cuentas enumeradas y un mensaje que dice que mi aplicación maravilla funciona mejor si ha iniciado sesión.](images/tb-3.png)
 
 No te excedas con el texto del encabezado; mantenlo breve y simple. Si el proceso de inicio de sesión es complicado y necesitas mostrar más información, vincula el usuario a otra página con un vínculo personalizado. 
 
@@ -398,7 +398,7 @@ No te excedas con el texto del encabezado; mantenlo breve y simple. Si el proces
 
 Puedes agregar comandos personalizados a la interfaz AccountsSettingsPane, que aparecerán como vínculos debajo de la colección de WebAccountProviders admitidos. Los comandos personalizados son geniales para tareas simples relacionadas con las cuentas de usuario, como mostrar una directiva de privacidad o iniciar una página de soporte técnico para los usuarios que tienen problemas. 
 
-Veamos un ejemplo: 
+Este es un ejemplo: 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCommandsRequestedEventArgs e)
@@ -416,11 +416,11 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 }
 ```
 
-![Panel de configuración de la cuenta](images/tb-4.png)
+![Captura de pantalla de la ventana elegir una cuenta sin enumerar cuentas y un vínculo a una directiva de privacidad.](images/tb-4.png)
 
 En teoría, puedes usar comandos de configuración para cualquier cosa. Sin embargo, se recomienda limitar su uso a escenarios intuitivos relacionados con las cuentas como las descritas anteriormente. 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Windows.Security.Authentication.Web.Core namespace (Espacio de nombres Windows.Security.Authentication.Web.Core)](/uwp/api/windows.security.authentication.web.core)
 
