@@ -1,26 +1,26 @@
 ---
-description: En este artículo se muestra cómo hospedar un control estándar de UWP en una aplicación Win32 de C++ mediante la API de hospedaje de XAML.
-title: Hospedaje de un control estándar de UWP en una aplicación Win32 de C++ mediante islas XAML
-ms.date: 03/23/2020
+description: En este artículo se muestra cómo hospedar un control XAML estándar de WinRT en una aplicación Win32 de C++ mediante la API de hospedaje de XAML.
+title: Hospedaje de un control XAML estándar de WinRT en una aplicación Win32 de C++ mediante islas XAML
+ms.date: 10/02/2020
 ms.topic: article
 keywords: Windows 10;uwp;cpp;win32;xaml islands;wrapped controls;standard controls;islas XAML;controles ajustados;controles estándar
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 0842046419402bbfacc24331d0521efa9510153a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 60cbf422b5417dc62ff261cf2e7ba02f25840032
+ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174199"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671524"
 ---
-# <a name="host-a-standard-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control estándar de UWP en una aplicación Win32 de C++
+# <a name="host-a-standard-winrt-xaml-control-in-a-c-win32-app"></a>Hospedaje de un control XAML estándar de WinRT en una aplicación Win32 de C++
 
-En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](using-the-xaml-hosting-api.md) para hospedar un control estándar de UWP (es decir, un control proporcionado por Windows SDK) en una nueva aplicación Win32 de C++. El código se basa en el [ejemplo sencillo de isla XAML](https://github.com/microsoft/Xaml-Islands-Samples/tree/master/Standalone_Samples/CppWinRT_Basic_Win32App) y en esta sección se describen algunas de las partes más importantes del código. Si tienes un proyecto de aplicación Win32 de C++ actual, puedes adaptar estos pasos y ejemplos de código para dicho proyecto.
+En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](using-the-xaml-hosting-api.md) para hospedar un control XAML estándar de WinRT (es decir, un control proporcionado por Windows SDK) en una nueva aplicación Win32 de C++. El código se basa en el [ejemplo sencillo de isla XAML](https://github.com/microsoft/Xaml-Islands-Samples/tree/master/Standalone_Samples/CppWinRT_Basic_Win32App) y en esta sección se describen algunas de las partes más importantes del código. Si tienes un proyecto de aplicación Win32 de C++ actual, puedes adaptar estos pasos y ejemplos de código para dicho proyecto.
 
 > [!NOTE]
-> El escenario que se muestra en este artículo no permite editar directamente el marcado XAML de los controles de UWP hospedados en la aplicación. Este escenario solo permite modificar la apariencia y el comportamiento de los controles de UWP hospedados mediante código. Si quieres ver las instrucciones para editar directamente el marcado XAML al hospedar controles de UWP, consulta [Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++](host-custom-control-with-xaml-islands-cpp.md).
+> El escenario que se muestra en este artículo no permite editar directamente el marcado XAML de los controles XAML de WinRT hospedados en la aplicación. Este escenario solo permite modificar la apariencia y el comportamiento de los controles hospedados mediante código. Si quiere ver las instrucciones para editar directamente el marcado XAML al hospedar controles XAML de WinRT, consulte [Hospedaje de un control XAML personalizado de WinRT en una aplicación Win32 de C++](host-custom-control-with-xaml-islands-cpp.md).
 
 ## <a name="create-a-desktop-application-project"></a>Creación de un proyecto de aplicación de escritorio
 
@@ -39,12 +39,12 @@ En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](usi
 4. Instala el paquete NuGet [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK):
 
     1. En la ventana **Administrador de paquetes NuGet**, asegúrate de seleccionar la opción **Incluir versión preliminar**.
-    2. Selecciona la pestaña **Examinar**, busca el paquete **Microsoft.Toolkit.Win32.UI.SDK** e instala la versión 6.0.0 (o posterior) de dicho paquete. Este paquete incluye varios recursos de compilación y tiempo de ejecución que permiten que las islas XAML funcionen en la aplicación.
+    2. Seleccione la pestaña **Examinar**, busque el paquete **Microsoft.Toolkit.Win32.UI.SDK** e instale la versión estable más reciente de dicho paquete. Este paquete incluye varios recursos de compilación y tiempo de ejecución que permiten que las islas XAML funcionen en la aplicación.
 
 5. Establece el valor de `maxVersionTested` en el [manifiesto de aplicación](/windows/desktop/SbsCs/application-manifests) para especificar que la aplicación es compatible con Windows 10, versión 1903 o posterior.
 
     1. Si aún no tienes un manifiesto de aplicación en el proyecto, agrega un nuevo archivo XML al proyecto y asígnale el nombre **app.manifest**.
-    2. En el manifiesto de aplicación, incluye el elemento **compatibility** y los elementos secundarios que se muestran en el ejemplo siguiente. Reemplaza el atributo **Id** del elemento **maxVersionTested** por el número de versión de Windows 10 que tienes como destino (debe ser Windows 10, versión 1903 o una versión posterior).
+    2. En el manifiesto de aplicación, incluye el elemento **compatibility** y los elementos secundarios que se muestran en el ejemplo siguiente. Reemplaza el atributo **Id** del elemento **maxVersionTested** por el número de versión de Windows 10 que tienes como destino (debe ser 10.0.18362 o una versión posterior).
 
         ```xml
         <?xml version="1.0" encoding="UTF-8"?>
@@ -59,9 +59,9 @@ En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](usi
         </assembly>
         ```
 
-## <a name="use-the-xaml-hosting-api-to-host-a-uwp-control"></a>Uso de la API de hospedaje de XAML para hospedar un control de UWP
+## <a name="use-the-xaml-hosting-api-to-host-a-winrt-xaml-control"></a>Uso de la API de hospedaje de XAML para hospedar un control XAML de WinRT
 
-El proceso básico para usar la API de hospedaje de XAML para hospedar un control de UWP sigue estos pasos generales:
+El proceso básico para usar la API de hospedaje de XAML para hospedar un control XAML de WinRT sigue estos pasos generales:
 
 1. Inicializa el marco XAML de UWP para el subproceso actual antes de que la aplicación cree cualquiera de los objetos [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement) que hospedará. Hay varias maneras de hacerlo, en función del momento en que planeas crear el objeto [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) que hospedará a los controles.
 
@@ -82,7 +82,7 @@ El proceso básico para usar la API de hospedaje de XAML para hospedar un contro
 
     2. Llama al método **AttachToWindow** de la interfaz **IDesktopWindowXamlSourceNative** o **IDesktopWindowXamlSourceNative2** y pasa el identificador de ventana del elemento principal de la interfaz de usuario de la aplicación.
 
-    3. Establece el tamaño inicial de la ventana secundaria interna contenida en el objeto **DesktopWindowXamlSource**. De forma predeterminada, esta ventana secundaria interna tiene configurado un ancho y un alto de 0. Si no estableces el tamaño de la ventana, los controles de UWP que agregues al objeto **DesktopWindowXamlSource** no serán visibles. Para acceder a la ventana secundaria interna en **DesktopWindowXamlSource**, utiliza la propiedad **WindowHandle** de la interfaz **IDesktopWindowXamlSourceNative** o **IDesktopWindowXamlSourceNative2**.
+    3. Establece el tamaño inicial de la ventana secundaria interna contenida en el objeto **DesktopWindowXamlSource**. De forma predeterminada, esta ventana secundaria interna tiene configurado un ancho y un alto de 0. Si no establece el tamaño de la ventana, los controles XAML de WinRT que agregue al objeto **DesktopWindowXamlSource** no serán visibles. Para acceder a la ventana secundaria interna en **DesktopWindowXamlSource**, utiliza la propiedad **WindowHandle** de la interfaz **IDesktopWindowXamlSourceNative** o **IDesktopWindowXamlSourceNative2**.
 
 3. Por último, asigna el elemento **Windows.UI.Xaml.UIElement** que quieres hospedar a la propiedad [Content](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) del objeto **DesktopWindowXamlSource**.
 
@@ -166,7 +166,7 @@ En los pasos y ejemplos de código siguientes se muestra cómo implementar el pr
         WindowsXamlManager winxamlmanager = WindowsXamlManager::InitializeForCurrentThread();
 
         // This DesktopWindowXamlSource is the object that enables a non-UWP desktop application 
-        // to host UWP controls in any UI element that is associated with a window handle (HWND).
+        // to host WinRT XAML controls in any UI element that is associated with a window handle (HWND).
         DesktopWindowXamlSource desktopSource;
 
         // Get handle to the core window.
@@ -270,7 +270,7 @@ En los pasos y ejemplos de código siguientes se muestra cómo implementar el pr
     > [!NOTE]
     > Es posible que aparezcan varias advertencias de compilación, como `warning C4002:  too many arguments for function-like macro invocation 'GetCurrentTime'` y `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"`. Estas advertencias son sobre problemas conocidos con las herramientas actuales y los paquetes NuGet, por lo que pueden omitirse.
 
-Para obtener ejemplos completos que muestren estas tareas, consulta los siguientes archivos de código:
+Para obtener ejemplos completos que muestran cómo usar la API de hospedaje de XAML para hospedar un control XAML estándar de WinRT, consulte los siguientes archivos de código:
 
 * **Win32 de C++:**
   * Consulta el archivo [HelloWindowsDesktop.cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Standalone_Samples/CppWinRT_Basic_Win32App/Win32DesktopApp/HelloWindowsDesktop.cpp).
@@ -291,17 +291,17 @@ Las instrucciones siguientes muestran cómo empaquetar todos los componentes de 
 
 2. En el proyecto de empaquetado, haz clic con el botón derecho en el nodo **Aplicaciones** y elige **Agregar referencia**. En la lista de proyectos, selecciona el proyecto de aplicación de escritorio C++/Win32 en la solución y haz clic en **Aceptar**.
 
-3. Compila y ejecuta el proyecto de empaquetado. Confirma si la aplicación se ejecuta y muestra los controles de UWP según lo previsto.
+3. Compila y ejecuta el proyecto de empaquetado. Confirme si la aplicación se ejecuta y muestra los controles XAML de WinRT según lo previsto.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los ejemplos de código de este artículo son una introducción al escenario básico para hospedar un control de UWP estándar en una aplicación Win32 de C++. En las secciones siguientes se presentan escenarios adicionales que la aplicación quizá debería admitir.
+Los ejemplos de código de este artículo son una introducción al escenario básico para hospedar un control XAML estándar de WinRT en una aplicación Win32 de C++. En las secciones siguientes se presentan escenarios adicionales que la aplicación quizá debería admitir.
 
-### <a name="host-a-custom-uwp-control"></a>Hospedaje de un control estándar de UWP
+### <a name="host-a-custom-winrt-xaml-control"></a>Hospedaje de un control XAML personalizado de WinRT
 
-En muchos casos, quizá necesites hospedar un control XAML de UWP personalizado que contenga varios controles individuales que funcionan de forma conjunta. El proceso para hospedar un control de UWP personalizado (ya sea un control definido por el usuario o un control proporcionado por un tercero) en una aplicación Win32 de C++ es más complejo que hospedar un control estándar y requiere código adicional.
+En muchos casos, quizá necesites hospedar un control XAML de UWP personalizado que contenga varios controles individuales que funcionan de forma conjunta. El proceso para hospedar un control personalizado (ya sea un control definido por el usuario o un control proporcionado por un tercero) en una aplicación Win32 de C++ es más complejo que hospedar un control estándar y requiere código adicional.
 
-Para ver un tutorial completo, consulta [Hospedaje de un control de UWP personalizado en una aplicación Win32 de C++ mediante la API de hospedaje de XAML](host-custom-control-with-xaml-islands-cpp.md).
+Para ver un tutorial completo, consulte [Hospedaje de un control XAML personalizado de WinRT en una aplicación Win32 de C++ mediante la API de hospedaje de XAML](host-custom-control-with-xaml-islands-cpp.md).
 
 ### <a name="advanced-scenarios"></a>Escenarios avanzados
 
@@ -313,6 +313,6 @@ Para obtener más información acerca de cómo controlar estos escenarios y obte
 
 * [Cómo usar los controles XAML de UWP en aplicaciones de escritorio (islas XAML)](xaml-islands.md)
 * [Uso de la API de hospedaje XAML de UWP en una aplicación Win32 de C++](using-the-xaml-hosting-api.md)
-* [Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++](host-custom-control-with-xaml-islands-cpp.md)
+* [Hospedaje de un control XAML personalizado de WinRT en una aplicación Win32 de C++](host-custom-control-with-xaml-islands-cpp.md)
 * [Escenarios avanzados para islas XAML en aplicaciones Win32 en C++](advanced-scenarios-xaml-islands-cpp.md)
 * [Ejemplos de código de las islas XAML](https://github.com/microsoft/Xaml-Islands-Samples)

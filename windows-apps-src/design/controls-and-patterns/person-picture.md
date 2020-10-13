@@ -11,26 +11,34 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c4967a63a4417f284c0735153a1b7a543e82e54c
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: ee8d78b38c05483f127571b15e1f4ebfb267c331
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217868"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829441"
 ---
 # <a name="person-picture-control"></a>Control de imagen de persona
 
 El control de imagen de persona muestra la imagen de avatar de una persona, si está disponible; de lo contrario, muestra las iniciales de la persona o un glifo genérico. Puedes usar el control para mostrar un [objeto Contact](/uwp/api/Windows.ApplicationModel.Contacts.Contact), un objeto que administra la información de contacto de una persona, o bien puedes proporcionar manualmente la información de contacto, como un nombre para mostrar y una imagen de perfil.
 
-![Control de imagen del usuario](images/person-picture/person-picture_hero.png)
+![Captura de pantalla del control de imagen de persona.](images/person-picture/person-picture_hero.png)
 
  > Dos controles de imagen de persona acompañados de dos elementos de [bloque de texto](text-block.md) que muestran los nombres de los usuarios.
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **PersonPicture** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      El control **PersonPicture** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **API de plataforma**: [Clase PersonPicture](/uwp/api/windows.ui.xaml.controls.personpicture), [Clase Contact](/uwp/api/Windows.ApplicationModel.Contacts.Contact) y [Clase ContactManager](/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
@@ -43,7 +51,7 @@ Usa la imagen de persona cuando quieras representar una persona y su informació
 * Para mostrar el remitente de un mensaje
 * Para mostrar un contacto de redes sociales
 
-En la ilustración se muestra el control de imagen de persona en una lista de contactos: ![Control de imagen del usuario](images/person-picture/person-picture-control.png)
+En la ilustración se muestra el control de imagen de persona en una lista de contactos: ![Captura de pantalla que muestra el control de imagen de persona en una lista de contactos.](images/person-picture/person-picture-control.png)
 
 ## <a name="examples"></a>Ejemplos
 

@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 433f24ea6c4e2fd03faa652a041f3a1c1578652e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 319bf762d54ed341672a99d15d9e760c91d93cff
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217938"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829457"
 ---
 # <a name="nested-ui-in-list-items"></a>Interfaz de usuario anidada en elementos de lista
 
@@ -35,7 +35,7 @@ En este artículo, se usan los términos *lista*, *elemento de lista* e *interfa
 - *Elemento de lista* hace referencia a un elemento individual sobre el que un usuario puede actuar en una lista.
 - *Interfaz de usuario anidada* hace referencia a los elementos de interfaz de usuario de un elemento de lista sobre los que un usuario puede actuar de manera independiente a las acciones sobre el propio elemento de lista.
 
-![Partes de la interfaz de usuario anidada](images/nested-ui-example-1.png)
+![Captura de pantalla que muestra las partes de una interfaz de usuario anidada.](images/nested-ui-example-1.png)
 
 > NOTA&nbsp;&nbsp; ListView y GridView derivan ambos de la clase [ListViewBase](/uwp/api/windows.ui.xaml.controls.listviewbase), por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos sobre las listas, la información corresponde a ambos controles, ListView y GridView.
 
@@ -107,7 +107,7 @@ Si tienes más de una acción anidada en el elemento de lista, se recomienda seg
 
 Si la interfaz de usuario de la lista con elementos anidados admite acciones como invocar y seleccionar (uno o varios elementos) o las operaciones de arrastrar y colocar, se recomiendan estas técnicas direccionales para navegar por los elementos de la interfaz de usuario anidada.
 
-![Partes de la interfaz de usuario anidada](images/nested-ui-navigation.png)
+![Captura de pantalla que muestra elementos de la interfaz de usuario anidada etiquetados con las letras A, B, C y D.](images/nested-ui-navigation.png)
 
 **Controlador para juegos**
 
@@ -147,7 +147,7 @@ Puedes usar una vista de lista, porque proporciona virtualización y un comporta
 
 Este tipo de interfaz de usuario tiende a ser mucho más complicado que los ejemplos anteriores, con una gran cantidad de elementos anidados sobre los que el usuario puede actuar.
 
-![Partes de la interfaz de usuario anidada](images/nested-ui-grouping.png)
+![Captura de pantalla de una interfaz de usuario anidada compleja que muestra muchos elementos anidados con los que el usuario puede interactuar.](images/nested-ui-grouping.png)
 
 
 Para conseguir esta interfaz de usuario, establece las siguientes propiedades en la lista:

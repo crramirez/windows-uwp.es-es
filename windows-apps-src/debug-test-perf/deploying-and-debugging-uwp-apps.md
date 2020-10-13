@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, depuración, pruebas, rendimiento, debut, test, performance
 ms.localizationpriority: medium
-ms.openlocfilehash: c18cb3c5b8a979e7c7c6485e6989736d818613ba
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c21586bceef11b1a2c19900160796bf702578ffb
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220358"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763058"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -109,11 +109,11 @@ En el caso de proyectos C# y VB de UWP, verás un campo **Argumentos de la líne
 
 En el caso de proyectos C# y VB de UWP, verás **Argumentos de la línea de comandos** como un campo de **Propiedades de depuración**.
 
-![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-cpp.png)
+![Captura de pantalla de las Páginas de propiedades de App 4 con la opción de Propiedades de configuración > Depuración seleccionada que muestra la propiedad Argumentos de la línea de comandos en la tabla.](images/command-line-arguments-cpp.png)
 
 Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento *args* del objeto [**LaunchActivatedEventArgs**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) tendrá una propiedad **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos**.
 
-![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-debugging.png)
+![Captura de pantalla de los argumentos de la línea de comandos para C++ y JS.](images/command-line-arguments-debugging.png)
 
 ## <a name="authentication-modes"></a>Modos de autenticación
 

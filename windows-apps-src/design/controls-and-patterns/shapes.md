@@ -6,12 +6,12 @@ ms.date: 11/16/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b02677cb6f38bc86d5123e835f658bedd83543de
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a33670f69d86a913288608ff07efb72edab8fd17
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173939"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829671"
 ---
 # <a name="draw-shapes"></a>Dibujar formas
 
@@ -231,7 +231,7 @@ El segundo segmento comienza con un comando de línea horizontal absoluto "H", q
 
 Este es el [**trazado**](/uwp/api/Windows.UI.Xaml.Shapes.Path) representado.
 
-![Trazado representado.](images/shapes-path.jpg)
+![Captura de pantalla de una ruta de acceso representada simple.](images/shapes-path.jpg)
 
 En el siguiente ejemplo, se muestra el uso de otra técnica que analizamos: un [**GeometryGroup**](/uwp/api/windows.ui.xaml.media.geometrygroup) con una [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry). En este ejemplo se ejercitan algunos de los tipos de geometría que se pueden usar como parte de **PathGeometry**: [**PathFigure**](/uwp/api/Windows.UI.Xaml.Media.PathFigure) y los distintos elementos que pueden ser un segmento de [**PathFigure.Segments**](/uwp/api/windows.ui.xaml.media.pathfigure.segments).
 
@@ -316,6 +316,6 @@ layoutRoot.Children.Add(path1);
 
 Este es el [**trazado**](/uwp/api/Windows.UI.Xaml.Shapes.Path) representado.
 
-![Trazado representado.](images/shapes-path-2.png)
+![Captura de pantalla de una ruta de acceso representada compleja.](images/shapes-path-2.png)
 
 El uso de [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) puede ofrecer un resultado más legible que rellenar una cadena [**Path.Data**](/uwp/api/windows.ui.xaml.shapes.path.data). Por otro lado, [**Path.Data**](/uwp/api/windows.ui.xaml.shapes.path.data) usa una sintaxis compatible con las definiciones de rutas de imágenes de Scalable Vector Graphics (SVG), por lo que puede resultar útil para migrar gráficos SVG o como salida de una herramienta como Blend.

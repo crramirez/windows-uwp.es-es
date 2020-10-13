@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ff5df0d56d5be6b2cbb93814d01fed48a626797
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 04357cc43ed227b109d4aab20c509077261360ee
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219098"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636605"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Creación de estilos personalizados
 
@@ -18,11 +18,11 @@ Este tutorial muestra cómo personalizar la interfaz de usuario de nuestra aplic
 
 La aplicación de ejemplo PhotoLab tiene dos páginas. La _página principal_ muestra una vista de la galería de fotos, junto con información acerca de cada archivo de imagen.
 
-![MainPage](../basics/images/xaml-basics/mainpage.png)
+![Captura de pantalla de la página principal del Laboratorio fotográfico.](../basics/images/xaml-basics/mainpage.png)
 
 La *página de detalles* muestra una sola foto después de que se haya seleccionado. Un menú de edición flotante permite modificar la foto, cambiar su nombre y guardarla.
 
-![DetailPage](../basics/images/xaml-basics/detailpage.png)
+![Captura de pantalla de la página de detalles del Laboratorio fotográfico.](../basics/images/xaml-basics/detailpage.png)
 
 ## <a name="prerequisites"></a>Requisitos previos
 

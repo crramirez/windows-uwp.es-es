@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 0b5250f1e01aece4f73d83dc7327f193a58f53cf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 24fb2507dd8f5a83b5581ff08d44210b0f5146c3
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161499"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636455"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>Parte 2: Incorporación de un control InkCanvas en UWP mediante islas XAML
 
@@ -147,7 +147,7 @@ Ahora que has configurado el proyecto para que use islas XAML de UWP, ya puedes 
 
 13. Ahora intenta dibujar algo en el espacio de la firma con el mouse. Esta vez, verás que la entrada de lápiz aparece en la pantalla.
 
-    ![Firma](images/wpf-modernize-tutorial/Signature.png)
+    ![Captura de pantalla del Detalle de gastos que muestra el espacio de la firma.](images/wpf-modernize-tutorial/Signature.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

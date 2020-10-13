@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aabad7a731bd0654468d7b9849d3b9a5bf6bead6
-ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
+ms.openlocfilehash: 1f71eb48264570df384fce672b1ca895d98e1109
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353735"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636595"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Crear diseños adaptables
 
@@ -18,11 +18,11 @@ En este tutorial se explican los conceptos básicos del uso de las característi
 
 El programa de edición de imágenes tiene dos páginas. La _página principal_ muestra una vista de la galería de fotos, junto con información acerca de cada archivo de imagen.
 
-![MainPage](../basics/images/xaml-basics/mainpage.png)
+![Captura de pantalla de la página principal del Laboratorio fotográfico.](../basics/images/xaml-basics/mainpage.png)
 
 La *página de detalles* muestra una sola foto después de que se haya seleccionado. Un menú de edición flotante permite modificar la foto, cambiar su nombre y guardarla.
 
-![DetailPage](../basics/images/xaml-basics/detailpage.png)
+![Captura de pantalla de la página de detalles del Laboratorio fotográfico.](../basics/images/xaml-basics/detailpage.png)
 
 ## <a name="prerequisites"></a>Requisitos previos
 

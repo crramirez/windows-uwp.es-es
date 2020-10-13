@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e4c2c8d52069bf074897ec09fa44f550066b28b5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 942b2ff4af0fa093a0b343c37074185970f8209d
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160759"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829545"
 ---
 # <a name="tutorial-create-a-user-interface"></a>Tutorial: Crear una interfaz de usuario
 
@@ -367,7 +367,7 @@ Para agregar una plantilla de datos a una vista de cuadrícula:
 
 Ejecuta la aplicación para ver el control `GridView` con la plantilla de elementos que acabas de crear. A continuación, cambiará el color de fondo y agregará algo de espacio entre los elementos de la cuadrícula.
 
-![Punto de control 3 de la interfaz de usuario de la aplicación](images/xaml-basics/layout-1.png)
+![Captura de pantalla de la aplicación Collection en ejecución que muestra la plantilla de elementos.](images/xaml-basics/layout-1.png)
 
 ## <a name="part-4-modify-the-item-container-style"></a>4\.ª parte: Modificar el estilo del contenedor de elementos
 
@@ -455,7 +455,7 @@ Para modificar el contenedor de elementos:
 
 Ejecuta la aplicación y mira su aspecto actual. Cambiar el tamaño de la ventana de la aplicación. El control `GridView` se encarga de reorganizar las imágenes automáticamente, pero en el caso de determinados anchos queda mucho de espacio en el lado derecho de la ventana de la aplicación. Sería mejor si se centraran las imágenes. Se ocupará de esto a continuación.
 
-![Punto de control 3 de la interfaz de usuario de la aplicación](images/xaml-basics/layout-2.png)
+![Captura de pantalla de la aplicación Collection en ejecución que muestra la plantilla de elementos con espacio adicional en el lado derecho de la ventana de la aplicación.](images/xaml-basics/layout-2.png)
 
 > [!Note]
 > Si quieres experimentar, intenta establecer las propiedades `Background` y `Margin` en distintos valores y comprueba el efecto de dicho cambio.

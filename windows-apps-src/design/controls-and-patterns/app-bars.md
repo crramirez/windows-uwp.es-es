@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f507a325a89220e229b277a1ae08727054cc2a75
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 2a84dcc209fa0fcd897668293cb136a5448e7254
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219108"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829513"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -59,15 +59,15 @@ Una barra de comandos expandida.
 
 De manera predeterminada, en la barra de comandos se muestra una fila de botones de icono y un botón "ver más" opcional, que se representa mediante puntos suspensivos \[•••\]. Esta es la barra de comandos creada mediante el código de ejemplo que se muestra más adelante. Se muestra en su estado cerrado y compacto.
 
-![Barra de comandos cerrada](images/command-bar-compact.png)
+![Captura de pantalla que muestra una barra de comandos cerrada.](images/command-bar-compact.png)
 
 La barra de comandos también se puede mostrar en un estado cerrado y mínimo, con este aspecto. Para obtener más información, consulta la sección [Estados abiertos y cerrados](#open-and-closed-states).
 
-![Barra de comandos cerrada](images/command-bar-minimal.png)
+![Captura de pantalla que muestra una barra de comandos en un estado mínimo cerrado.](images/command-bar-minimal.png)
 
 Esta es la misma barra de comandos, en su estado abierto. Las etiquetas identifican las partes principales del control.
 
-![Barra de comandos cerrada](images/commandbar_anatomy_open.png)
+![Captura de pantalla que muestra una barra de comandos en su estado abierto.](images/commandbar_anatomy_open.png)
 
 La barra de comandos se divide en 4 áreas principales:
 - El área de contenido se alinea a la izquierda de la barra. Se muestra si la propiedad [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) se ha rellenado.

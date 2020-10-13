@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 5473542019a4f8afa3e916b914127e41a4fe05d4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e4875e7d34f36104cb5ed64bb56ea289de2db92e
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218628"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636575"
 ---
 # <a name="page-layout"></a>Diseño de página
 
@@ -86,7 +86,7 @@ Las colecciones permiten a los usuarios examinar grupos de contenido o datos. La
 El modelo [maestro y detalles](../controls-and-patterns/master-details.md) consta de una vista de lista (maestra) y una vista de contenido (detalles). Ambos paneles son fijos y tienen un desplazamiento vertical. Cuando se selecciona un elemento en la vista de lista, la vista de contenido se actualiza en consecuencia. 
 
 ## <a name="forms"></a>Formularios
-![formulario](images/form.svg)
+![Captura de pantalla de un formulario que muestra un cuadro de texto vacío y un botón.](images/form.svg)
 
 Un [formulario](../controls-and-patterns/forms.md) es un grupo de controles que recopila y envía datos de los usuarios. La mayoría, si no todas las aplicaciones, usan algún tipo de formulario para las páginas de configuración, iniciar sesión en portales, los centros de comentarios, la creación de cuentas u otros fines. 
 

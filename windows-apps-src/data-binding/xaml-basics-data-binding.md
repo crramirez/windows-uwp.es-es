@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 10615c3bb9a137655f32ca4b5cc174ddba1ee5ef
-ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
+ms.openlocfilehash: 3435718794cb22745e1438ef634db29076ed33c1
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353775"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636665"
 ---
 # <a name="tutorial-create-data-bindings"></a>Tutorial: Crear enlaces de datos
 
@@ -22,11 +22,11 @@ Empezaremos con una versión simplificada del ejemplo PhotoLab. Esta versión pa
 
 La aplicación de ejemplo PhotoLab tiene dos páginas. La _página principal_ muestra una vista de la galería de fotos, junto con información acerca de cada archivo de imagen.
 
-![MainPage](../design/basics/images/xaml-basics/mainpage.png)
+![Captura de pantalla de la página principal del Laboratorio fotográfico.](../design/basics/images/xaml-basics/mainpage.png)
 
 La *página de detalles* muestra una sola foto después de que se haya seleccionado. Un menú de edición flotante permite modificar la foto, cambiar su nombre y guardarla.
 
-![DetailPage](../design/basics/images/xaml-basics/detailpage.png)
+![Captura de pantalla de la página de detalles del Laboratorio fotográfico.](../design/basics/images/xaml-basics/detailpage.png)
 
 ## <a name="prerequisites"></a>Requisitos previos
 

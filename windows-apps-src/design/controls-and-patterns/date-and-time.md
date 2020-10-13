@@ -1,5 +1,5 @@
 ---
-Description: Los controles de fecha y hora permiten ver y establecer la fecha y la hora. Este artículo ofrece directrices de diseño y ayuda a elegir el control correcto.
+description: Los controles de fecha y hora permiten ver y establecer la fecha y la hora. Este artículo ofrece directrices de diseño y ayuda a elegir el control correcto.
 title: Directrices para los controles de fecha y hora
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 45f69c2216cdfd5809a978e9199d05d0d79740ee
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a7afab6e226a86b7aa8979d5d849376cf83739c4
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160429"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829577"
 ---
 # <a name="calendar-date-and-time-controls"></a>Calendario, controles de fecha y hora
 
@@ -45,12 +45,12 @@ Los controles de fecha y hora ofrecen maneras estándar y localizadas para que e
 
 Hay cuatro controles de fecha y hora para elegir; el control que uses dependerá de la situación. Usa esta información para seleccionar el control adecuado para tu aplicación.
 
-&nbsp;|&nbsp;|&nbsp;                                                                                                                      
---------------------|-------|-------------------------------------------------------------------------------------------------------------------------------
-Vista de calendario       |![Ejemplo de vista de calendario](images/controls_calendar_monthview_small.png)|Se usa para seleccionar una fecha determinada o un intervalo de fechas de un calendario siempre visible.                   
-Selector de fecha del calendario|![Ejemplo de selector de fecha del calendario](images/calendar-date-picker-closed.png)|Se usa para seleccionar una fecha determinada de un calendario contextual. 
-Selector de fecha         |![Ejemplo de selector de fecha](images/date-picker-closed.png)|Se usa para seleccionar una sola fecha conocida cuando la información contextual no es importante.
-Selector de hora         |![Ejemplo de selector de hora](images/time-picker-closed.png)|Se usa para seleccionar un único valor de hora.                                        
+| Control | Ejemplo | Descripción |
+| ------- | :-----: | ----------- |
+| Vista de calendario | ![Ejemplo de vista de calendario](images/controls_calendar_monthview_small.png) | Se usa para seleccionar una fecha determinada o un intervalo de fechas de un calendario siempre visible. |
+| Selector de fecha del calendario | ![Captura de pantalla de un selector de fecha del calendario.](images/calendar-date-picker-closed.png) | Se usa para seleccionar una fecha determinada de un calendario contextual. |
+| Selector de fecha | ![Ejemplo de selector de fecha](images/date-picker-closed.png) | Se usa para seleccionar una sola fecha conocida cuando la información contextual no es importante. |
+| Selector de hora | ![Ejemplo de selector de hora](images/time-picker-closed.png) | Se usa para seleccionar un único valor de hora. |
 
 <!-- This table seems redundant, not sure it's needed.-->
 
@@ -60,9 +60,9 @@ Selector de hora         |![Ejemplo de selector de hora](images/time-picker-clos
 
 La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vista de año y la vista de década. De manera predeterminada, se abre en la vista de mes, pero se puede especificar cualquier vista como la inicial.
 
-![Ejemplo de selector de fecha del calendario](images/calendar-view-3-views.png)
+![Captura de pantalla de tres vistas de calendario que muestran una vista de mes, una vista de año y una vista de década.](images/calendar-view-3-views.png)
 
-- Si es necesario que un usuario pueda seleccionar varias fechas, debes usar una **CalendarView**.
+-  Si es necesario que un usuario pueda seleccionar varias fechas, debes usar una **CalendarView**.
 - Si necesitas que un usuario pueda elegir solo una fecha determinada y no necesitas que haya un calendario siempre visible, considera la posibilidad de usar un control **CalendarDatePicker** o **DatePicker**.
 
 ### <a name="calendar-date-picker"></a>Selector de fecha del calendario
@@ -71,7 +71,7 @@ La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vi
 
 El punto de entrada muestra texto del marcador de posición si no se ha establecido una fecha; de lo contrario, muestra la fecha elegida. Cuando el usuario selecciona el punto de entrada, se expande una vista de calendario para que el usuario realice una selección de fecha. La vista de calendario se superpone a otra interfaz de usuario; no hace que la otra interfaz desaparezca.
 
-![Ejemplo de selector de fecha del calendario](images/calendar-date-picker-2-views.png)
+![Captura de pantalla de un selector de fecha del calendario que muestra un cuadro de texto seleccionar una fecha vacío y, luego, uno rellenado con un calendario debajo de él.](images/calendar-date-picker-2-views.png)
 
 - Usa un selector de fecha del calendario para cosas como la elección de una cita o la fecha de salida. 
 
@@ -108,7 +108,7 @@ Consulte los siguientes artículos para obtener información y ejemplos específ
 
 Los controles de fecha XAML admiten todos los sistemas de calendario compatibles con Windows. Estos calendarios se especifican en la clase [Windows.Globalization.CalendarIdentifiers](/uwp/api/Windows.Globalization.CalendarIdentifiers). Cada control usa el calendario correcto para el idioma predeterminado de tu aplicación o puedes establecer la propiedad **CalendarIdentifier** para usar un sistema de calendario específico.
 
-El control de selector de hora admite cada uno de los sistemas de reloj especificados en la clase [Windows.Globalization.ClockIdentifiers](/uwp/api/Windows.Globalization.ClockIdentifiers). Puedes establecer la propiedad [ClockIdentifier](/uwp/api/windows.ui.xaml.controls.timepicker.clockidentifier) para usar un reloj de 12 horas o un reloj de 24 horas. El tipo de la propiedad es String, pero debes usar valores que correspondan a las propiedades de cadena estática de la clase ClockIdentifiers. Son estas: TwelveHour (la cadena "12HourClock") y TwentyFourHour (la cadena "24HourClock"). El valor predeterminado es "12HourClock".
+El control de selector de hora admite cada uno de los sistemas de reloj especificados en la clase [Windows.Globalization.ClockIdentifiers](/uwp/api/Windows.Globalization.ClockIdentifiers). Puedes establecer la propiedad [ClockIdentifier](/uwp/api/windows.ui.xaml.controls.timepicker.clockidentifier) para usar un reloj de 12 horas o un reloj de 24 horas. El tipo de la propiedad es String, pero debes usar valores que correspondan a las propiedades de cadena estática de la clase ClockIdentifiers. Estos son: TwelveHour (la cadena "12HourClock") y TwentyFourHour (la cadena "24HourClock"). El valor predeterminado es "12HourClock".
 
 ### <a name="datetime-and-calendar-values"></a>Valores de DateTime y Calendar
 

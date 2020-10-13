@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bdfc212c435469746faf1fdf94898c0dc7beb221
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 38f62483d09b3ec75e9a670ddcd0c27b710d6a38
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219088"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829625"
 ---
 # <a name="buttons"></a>Botones
 
@@ -33,16 +33,24 @@ Control | Descripción
 [Botón](/uwp/api/windows.ui.xaml.controls.button) | Un botón que inicia una acción inmediata. Puede usarse con un evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) o un enlace [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command).
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Un botón que genera un evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) continuamente mientras se presiona.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Un botón al que se le aplica el estilo de un hipervínculo y se usa para navegación. Para obtener más información sobre los hipervínculos, consulta [Hipervínculos](hyperlinks.md).
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | ![Logotipo de WinUI](images/winui-logo-16x16.png) Un botón con un botón de contenido adicional para abrir un control flotante adjunto.
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | ![Logotipo de WinUI](images/winui-logo-16x16.png) Un botón con dos lados. Uno de los lados inicia una acción y el otro abre un menú.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | ![Logotipo de WinUI](images/winui-logo-16x16.png) Un botón de alternancia con dos lados. Un lado alterna entre activado/desactivado y el otro abre un menú.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | :::image type="icon" source="images/winui-logo-16x16.png"::: Un botón con un botón de contenido adicional para abrir un control flotante adjunto.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | :::image type="icon" source="images/winui-logo-16x16.png"::: Un botón con dos lados. Uno de los lados inicia una acción y el otro abre un menú.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | :::image type="icon" source="images/winui-logo-16x16.png"::: Un botón de alternancia con dos lados. Un lado alterna entre activado/desactivado y el otro abre un menú.
 [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) | Un botón que puede estar activado o desactivado.
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | Los controles **DropDownButton**, **SplitButton** y **ToggleSplitButton** se incluyen como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+:::row:::
+   :::column:::
+      :::image type="icon" source="images/winui-logo-64x64.png":::
+   :::column-end:::
+   :::column span="3":::
+      Los controles **DropDownButton**, **SplitButton** y **ToggleSplitButton** se incluyen como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase DropDownButton](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [clase SplitButton](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [clase ToggleSplitButton](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton)
 >
@@ -153,15 +161,15 @@ El contenido de un botón suele ser texto. Al diseñar dicho texto, ten en cuent
 <table>
 <tr>
 <td> <b>Tienes que arreglar:</b><br> Botones con texto que se desborda. </td>
-<td> <img src="images/button-wraptext.png"/> </td>
+<td> <img src="images/button-wraptext.png" alt="Screenshot of two buttons, side by side, with labels that both say: Button with thxt that woul"/> </td>
 </tr>
 <tr>
 <td> <b>Opción 1:</b><br> Aumenta el ancho de botón, los botones de la pila y el ajuste si la longitud del texto es mayor de 26 caracteres. </td>
-<td> <img src="images/button-wraptext1.png"> </td>
+<td> <img src="images/button-wraptext1.png" alt="Screenshot of two buttons with increased width, one over the other, with labels that both say: Button with thxt that would wrap."> </td>
 </tr>
 <tr>
 <td> <b>Opción 2:</b><br> Aumenta el alto del botón y ajusta el texto. </td>
-<td> <img src="images/button-wraptext2.png"> </td>
+<td> <img src="images/button-wraptext2.png" alt="Screenshot of two buttons with increased height, side by side, with labels that both say: Button with thxt that would wrap."> </td>
 </tr>
 </table>
 

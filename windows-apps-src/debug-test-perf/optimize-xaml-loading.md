@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 86c6f9398a61865b014400bbf4a96c8a7ce8a231
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ce7344b810c3b6683050876dce38264be6f5c8b7
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154359"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762841"
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
@@ -81,11 +81,11 @@ Aquí se carga la clase ListView, pero no está visible porque su ancho es 0. El
 
 El árbol visual activo con el control ListView se cargan. El número total de los elementos de la página es 89.
 
-![Árbol visual con vista de lista](images/visual-tree-1.png)
+![Captura de pantalla del árbol visual con la vista de lista.](images/visual-tree-1.png)
 
 ListView y sus elementos secundarios se cargan en la memoria.
 
-![Árbol visual con vista de lista](images/memory-use-1.png)
+![Captura de pantalla de la tabla Managed Memory (TestApp1.exe) que muestra que ListView y sus elementos secundarios se cargan en la memoria.](images/memory-use-1.png)
 
 #### <a name="option-2---better"></a>Opción 2: Mejor
 
@@ -97,11 +97,11 @@ Aquí, la visibilidad de ListView se establece como contraída (el otro código 
 
 El árbol visual activo con el control ListView se contraen. El número total de los elementos de la página es 46.
 
-![Árbol visual con vista de lista contraída](images/visual-tree-2.png)
+![Captura de pantalla del árbol visual con la vista de lista contraída.](images/visual-tree-2.png)
 
 ListView y sus elementos secundarios se cargan en la memoria.
 
-![Árbol visual con vista de lista](images/memory-use-1.png)
+![Captura de pantalla actualizada de la tabla Managed Memory (TestApp1.exe) que muestra que ListView y sus elementos secundarios se cargan en la memoria.](images/memory-use-1.png)
 
 #### <a name="option-3---most-efficient"></a>Opción 3 - Más eficaz
 

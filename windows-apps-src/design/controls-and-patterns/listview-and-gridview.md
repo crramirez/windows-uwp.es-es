@@ -1,5 +1,5 @@
 ---
-Description: Usa los controles ListView and GridView para mostrar y manipular conjuntos de datos, como una galería de imágenes o un conjunto de mensajes de correo electrónico.
+description: Usa los controles ListView and GridView para mostrar y manipular conjuntos de datos, como una galería de imágenes o un conjunto de mensajes de correo electrónico.
 title: Vista de lista y vista de cuadrícula
 label: List view and grid view
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 988400ae16d19525acc1dc811c91fc5af9fd97d0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 26f7e36d09857d37da4a0b4533cc8f65d2789e20
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172629"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829648"
 ---
 # <a name="list-view-and-grid-view"></a>Vista de lista y vista de cuadrícula
 
@@ -53,7 +53,7 @@ ListView y GridView son controles que funcionan de serie para mostrar cualquier 
 -   Debes usar ItemsRepeater si tienes una interfaz de usuario muy personalizada que no se puede crear con ListView o GridView o si tienes un origen de datos que requiere un comportamiento muy diferente para cada elemento.
 
 
-Para obtener más información sobre ItemsRepeater, lee la documentación sobre las [directivas](./items-repeater.md) y la [documentación sobre la API](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2).
+Para obtener más información sobre ItemsRepeater, lee la documentación sobre las [directivas](./items-repeater.md) y la [documentación sobre la API](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -121,7 +121,7 @@ FruitsPanel.Children.Add(Fruits);
 ```
 Las dos opciones anteriores darán como resultado el mismo ListView, que se muestra a continuación:
 
-![Una vista de lista simple](images/listview-basic-code-example2.png)
+![Captura de pantalla de un ListView simple que muestra una lista de frutas.](images/listview-basic-code-example2.png)
 <br/>
 <u> Método 2: agregar elementos estableciendo ItemsSource</u>
 
@@ -290,7 +290,7 @@ Para obtener más información y ejemplos de cómo usar las plantillas de datos 
 Al agregar elementos a un control ListView o GridView, el control encapsula automáticamente cada elemento en un contenedor de elemento y luego expone todos los contenedores de elementos. La manera en que se disponen estos contenedores de elementos depende de la propiedad [ItemsPanel](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) del control.  
 - De manera predeterminada, **ListView** usa una clase [ItemsStackPanel](/uwp/api/windows.ui.xaml.controls.itemsstackpanel), lo cual genera una lista vertical, como esta.
 
-![Una vista de lista simple](images/listview-simple.png)
+![Captura de pantalla de un ListView simple que muestra una lista de elementos.](images/listview-simple.png)
 
 - **GridView** usa una clase [ItemsWrapGrid](/uwp/api/windows.ui.xaml.controls.itemswrapgrid), que agrega los elementos horizontalmente, y se ajusta y desplaza verticalmente, como se muestra a continuación.
 

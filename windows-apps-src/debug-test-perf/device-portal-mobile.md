@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: ff94c34c61dee4de8450ed0f4f89a1dfc6537f83
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1f0a91dd0370b8eda8763b63034d7c3ffaa1acd5
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173599"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762997"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 
@@ -19,7 +19,7 @@ A partir de Windows 10, versión 1511, hay funciones para desarrollador adiciona
 
 Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
 
-![Configuración de Device Portal](images/device-portal/mob-dev-mode-options.png)
+![Captura de pantalla de las opciones Detección de dispositivo y Portal de dispositivos.](images/device-portal/mob-dev-mode-options.png)
 
 ## <a name="set-up-device-portal-on-windows-phone"></a>Configurar Device Portal en Windows Phone
 
@@ -59,7 +59,7 @@ Puedes elegir entre tres formas de conectarte a Device Portal: USB, host local y
 
 A continuación se muestra la sección de Portal de dispositivos de la página de configuración para desarrollador en Windows Phone.
 
-![Configuración de Device Portal](images/device-portal/mob-dev-mode-portal.png)
+![Captura de pantalla de la página de configuración de Portal de dispositivos desde un Windows Phone.](images/device-portal/mob-dev-mode-portal.png)
 
 Si usas el Portal de dispositivos en un entorno protegido, como un laboratorio de pruebas, en el que confías en todos los usuarios de la red local, no tienes información personal en el dispositivo y existen requisitos únicos, puedes deshabilitar la autenticación. Esto permite la comunicación sin cifrar y que cualquier persona que tenga la dirección IP del teléfono lo controle.
 

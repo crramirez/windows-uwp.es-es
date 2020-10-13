@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bb3eb985ab10bd4c28ca38f87aefe3d1fc7fd61e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 66f9d166d0e20f82f495f98b26deceff8e136cc5
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216478"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636645"
 ---
 # <a name="icons-for-windows-apps"></a>Iconos de aplicaciones de Windows
 
@@ -47,7 +47,8 @@ Los iconos pueden ahorrar espacio, pero ¿cuándo deberías usarlos?
 
 :::row:::
     :::column:::
-        ![Imagen estándar de iconos](images/icons/icons-standard.svg) ![adecuados](images/do.svg)<br>
+        ![Captura de pantalla que muestra los iconos Cortar, Copiar, Pegar y Guardar.](images/do.svg)
+        ![imagen de iconos estándar](images/icons/icons-standard.svg)<br>
 
 Usa un icono para las acciones como cortar, copiar, pegar y guardar o para los elementos de navegación de un menú de navegación.
     :::column-end:::
@@ -60,12 +61,14 @@ Usa un icono en caso de que ya exista uno para el concepto que quieres represent
 
 :::row:::
     :::column:::
-        ![Icono de carro de la compra](images/icons/icon-shopping-cart.svg) ![adecuado](images/do.svg)<br>
+        ![Captura de pantalla de un icono de carro de la compra sencillo y conocido.](images/do.svg)
+        ![icono de carro de la compra](images/icons/icon-shopping-cart.svg)<br>
 
 Usa un icono que sea fácil de entender para el usuario y que sea lo suficientemente sencillo para que, en tamaños pequeños, sea claro.
     :::column-end:::
     :::column:::
-        ![Imagen de concepto de iconos](images/icons/icon-bad-example.png) ![inadecuados](images/dont.svg)<br>
+        ![Captura de pantalla de un icono de carro de la compra complejo y desconocido.](images/dont.svg)
+        ![imagen de concepto de iconos](images/icons/icon-bad-example.png)<br>
 
 No uses un icono si su significado no está claro, o si requiere una forma compleja para hacerlo claro.
     :::column-end:::

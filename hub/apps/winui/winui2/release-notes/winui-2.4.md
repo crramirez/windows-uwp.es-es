@@ -3,12 +3,12 @@ title: Notas de la versión de WinUI 2.4
 description: Notas de la versión de WinUI 2.4, incluidas las nuevas características y correcciones de errores.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 22fd028ba2059a092ee2f2be47a114fb2d618ce1
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 5e2ff23b3b0ea63002ad54a367e82e81ee1cd542
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492830"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762917"
 ---
 # <a name="windows-ui-library-24"></a>Biblioteca de interfaz de usuario de Windows 2.4
 
@@ -28,7 +28,7 @@ Descarga de paquetes NuGet: [Microsoft.UI.Xaml](https://www.nuget.org/packages/M
 
 Se dibuja un objeto RadialGradientBrush en una elipse definida por las propiedades Center, RadiusX y RadiusY. Los colores del degradado se inician en el centro de la elipse y terminan en el radio.
 
-![Pincel de degradado radial](../images/radialgradientbrush.gif)<br>
+![Breve vídeo que muestra el comportamiento de RadialGradientBrush.](../images/radialgradientbrush.gif)<br>
 *Pincel de degradado radial*
 
 [Instrucciones de uso](/windows/uwp/design/style/brushes#radial-gradient-brushes)
@@ -39,7 +39,7 @@ Se dibuja un objeto RadialGradientBrush en una elipse definida por las propiedad
 
 El control ProgressRing se usa para las interacciones modales, de modo que el usuario se bloquea hasta que desaparece el control ProgressRing. Usa este control si una operación requiere que la mayor parte de la interacción con la aplicación se suspenda hasta que se complete la operación.
 
-![Control ProgressRing](../images/progressring.gif)<br>
+![Breve vídeo que muestra el comportamiento del control ProgressRing.](../images/progressring.gif)<br>
 *Control ProgressRing*
 
 [Instrucciones de uso](/windows/uwp/design/controls-and-patterns/progress-controls)
@@ -70,8 +70,8 @@ Cuando el tema oscuro está habilitado, el color de fondo de los controles de la
 
 | Antes | Después |
 | - | - |
-| ![Actualizaciones del tema oscuro de TextBox (antes)](..\images\textbox-darkthemeupdates-before1.gif)<br>*Actualizaciones del tema oscuro de TextBox (antes)* | ![Actualizaciones del tema oscuro de TextBox (después)](..\images\textbox-darkthemeupdates-after1.gif)<br>*Actualizaciones del tema oscuro de TextBox (después)* |
-| ![Actualizaciones del tema oscuro de TextBox (antes)](..\images\textbox-darkthemeupdates-before2.gif)<br>*Actualizaciones del tema oscuro de TextBox (antes)* | ![Actualizaciones del tema oscuro de TextBox (después)](..\images\textbox-darkthemeupdates-after2.gif)<br>*Actualizaciones del tema oscuro de TextBox (después)* |
+| ![Breve vídeo que muestra el comportamiento del tema oscuro de TextBox antes de las actualizaciones.](..\images\textbox-darkthemeupdates-before1.gif)<br>*Actualizaciones del tema oscuro de TextBox (antes)* | ![Breve vídeo que muestra el comportamiento del tema oscuro de TextBox después de las actualizaciones.](..\images\textbox-darkthemeupdates-after1.gif)<br>*Actualizaciones del tema oscuro de TextBox (después)* |
+| ![Otro breve vídeo que muestra el comportamiento del tema oscuro de TextBox antes de las actualizaciones.](..\images\textbox-darkthemeupdates-before2.gif)<br>*Actualizaciones del tema oscuro de TextBox (antes)* | ![Otro breve vídeo que muestra el comportamiento del tema oscuro de TextBox después de las actualizaciones.](..\images\textbox-darkthemeupdates-after2.gif)<br>*Actualizaciones del tema oscuro de TextBox (después)* |
 
 A continuación, se muestran algunos de los controles incluidos en la familia de controles TextBox:
 

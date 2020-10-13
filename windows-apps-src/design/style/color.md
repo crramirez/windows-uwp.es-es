@@ -10,12 +10,12 @@ ms.custom: RS5
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: bb0f38c250d20780b301a925b24e3d1c36bda7e3
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f7035017b1b1bfe878e4bd390fcefbe2bf3a6be5
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216608"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636565"
 ---
 # <a name="color"></a>Color
 
@@ -216,7 +216,7 @@ Cuando uses el texto con color en un fondo con color, asegúrate de que hay sufi
 
 En el gráfico siguiente se muestra un ejemplo de los distintos tonos claros y oscuros del color de énfasis y de cómo se puede aplicar un tipo con color a una superficie con color.
 
-![Color sobre color](images/color/color-on-color.png)
+![Captura de pantalla del gráfico Color sobre color que muestra un degradado de color del celeste arriba hasta el azul oscuro abajo.](images/color/color-on-color.png)
 
 Para obtener más información sobre los controles de estilos, consulta [Estilos XAML](../controls-and-patterns/xaml-styles.md).
 

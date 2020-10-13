@@ -5,12 +5,12 @@ ms.date: 05/19/2020
 ms.topic: article
 keywords: windows 10, uwp, standard, c#, winrt, cswinrt, proyección
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fb098cb247890dc1b3919f6123b76b54366d60f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c3cac3049dbd5d22c23716a2da38a41fb6000a71
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154329"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984501"
 ---
 # <a name="cwinrt"></a>C#/WinRT
 
@@ -31,11 +31,13 @@ C#/WinRT también admite WinUI 3.0. Esta versión de WinUI quita del sistema op
 
 Por último, C#/WinRT es un kit de herramientas general y está diseñado para admitir otros escenarios en los que la compatibilidad integrada con WinRT no está disponible en el compilador de C# o el entorno de ejecución de .NET. C#/WinRT admite versiones del entorno de ejecución de .NET compatibles con .NET Standard 2.0, como Mono 5.4.
 
-Para más información sobre C#/WinRT, consulta el [repositorio de C#/WinRT en GitHub](https://aka.ms/cswinrt/repo).
+Para obtener más información sobre C#/WinRT, consulta el [repositorio de C#/WinRT en GitHub](https://aka.ms/cswinrt/repo).
 
 ## <a name="create-an-interop-assembly"></a>Creación de un ensamblado de interoperabilidad
 
-Las API de WinRT se definen en archivos de metadatos de Windows (*.winmd). El paquete NuGet de C#/WinRT incluye el compilador de C#/WinRT, **cswinrt**, que puedes usar para procesar archivos de metadatos de Windows y generar código de .NET Standard 2.0 en C#. Puedes compilar estos archivos de origen en ensamblados de interoperabilidad, de forma similar a como [C++/WinRT](../cpp-and-winrt-apis/index.md) genera encabezados para la proyección del lenguaje C++. Después, puedes distribuir los ensamblados de interoperabilidad de C#/WinRT a los que las aplicaciones hagan referencia, junto con el ensamblado de en tiempo de ejecución de C#/WinRT.
+Las API de WinRT se definen en archivos de metadatos de Windows (*.winmd). El paquete NuGet de C#/WinRT ([Microsoft.Windows.CsWinRT](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/)) incluye el compilador de C#/WinRT, **cswinrt**, que puede usar para procesar archivos de metadatos de Windows y generar código de .NET 5.0 en C#. Puedes compilar estos archivos de origen en ensamblados de interoperabilidad, de forma similar a como [C++/WinRT](../cpp-and-winrt-apis/index.md) genera encabezados para la proyección del lenguaje C++. Después, puedes distribuir los ensamblados de interoperabilidad de C#/WinRT a los que las aplicaciones hagan referencia, junto con el ensamblado de en tiempo de ejecución de C#/WinRT.
+
+Para ver un tutorial que muestra cómo crear un ensamblado de interoperabilidad, consulte [Tutorial: Generación de una proyección de .NET 5 desde un componente de C++/WinRT y actualización del NuGet](net-projection-from-cppwinrt-component.md).
 
 ### <a name="invoke-cswinrtexe"></a>Invocación de cswinrt.exe
 

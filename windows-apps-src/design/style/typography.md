@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3e9e9e501f1c4277121e7694e8213ccea51c5297
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: bb0a6b48e9a9a01881955ae0ccb65e93b9cf2b6e
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218138"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636545"
 ---
 # <a name="typography-in-windows-apps"></a>Tipografía en aplicaciones de Windows
 
@@ -29,7 +29,8 @@ Con el fin de mostrar idiomas que no son inglés o seleccionar una fuente difere
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Elige una fuente para tu interfaz de usuario.
+![Primera captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Elija una fuente para la interfaz de usuario.
     :::column-end:::
     :::column:::
 ![No](images/dont.svg) No mezcles varias fuentes.
@@ -46,7 +47,8 @@ Debido a cómo funciona el sistema de escalado, diseñas en píxeles efectivos, 
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Sigue el tamaño de la [rampa de tipos](#type-ramp) de Windows.
+![Segunda captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Siga el tamaño de la [rampa de tipos](#type-ramp) de Windows.
     :::column-end:::
     :::column:::
 ![No](images/dont.svg) No uses un tamaño de fuente menor de 12 px.
@@ -93,7 +95,8 @@ Puedes acceder a los niveles de la rampa de tipos como [recursos estáticos](../
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Usa el área Cuerpo para la mayor parte del texto.
+![Tercera captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Usa "Cuerpo" para la mayor parte del texto.
 
 Usa el área Base para los títulos cuando el espacio es limitado.
     :::column-end:::
@@ -118,7 +121,8 @@ El valor predeterminado [TextAlignment](/uwp/api/windows.ui.xaml.textalignment) 
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Mantén de 50 a 60 letras por línea para facilitar la lectura.
+![[Cuarta captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Mantenga de 50 a 60 letras por línea para facilitar la lectura.
     :::column-end:::
     :::column:::
 ![No](images/dont.svg) Una línea con menos de 20 caracteres o más de 60 caracteres resulta difícil de leer.
@@ -137,7 +141,8 @@ Cuando la cantidad de texto se extiende más allá del espacio disponible, se re
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Recorta el texto y ajústalo si hay varias líneas habilitadas.
+![[Quinta captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Recorte el texto y ajústelo si hay varias líneas habilitadas.
     :::column-end:::
     :::column:::
 ![No](images/dont.svg) No uses puntos suspensivos para evitar la aglomeración visual.

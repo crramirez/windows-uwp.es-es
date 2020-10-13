@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQLite, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 15a6cd4313a13abfa7897de62c80024a09ad1f71
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 56b45b14f9eb73a0257993d31b05cc084f10dfef
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154539"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763040"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar una base de datos de SQLite en una aplicación para UWP
 Puedes usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. Esta guía te muestra cómo hacerlo.
@@ -59,11 +59,11 @@ Si usas Visual Studio 2015, haz clic en **Ayuda**->**Acerca de Microsoft Visual
 
 A continuación, agrega la biblioteca de clases a tu solución. No tienes que usar una biblioteca de clases para contener el código de acceso a datos, pero vamos a utilizar una en nuestro ejemplo. Asignaremos a la biblioteca el nombre **DataAccessLibrary** y a la clase de la biblioteca el nombre **DataAccess**.
 
-![Biblioteca de clases](images/class-library.png)
+![Captura de pantalla que muestra el cuadro de diálogo Agregar nuevo proyecto que muestra Instalado > Visual C# > Windows Universal seleccionado y la opción Biblioteca de clases resaltada.](images/class-library.png)
 
 Haz clic con el botón derecho en la solución y luego haz clic en **Administrar paquetes NuGet para la solución**.
 
-![Administrar paquetes NuGet](images/manage-nuget.png)
+![Captura de pantalla del panel Explorador de soluciones con el proyecto en el que se hizo clic con el botón derecho y la opción Administrar paquetes NuGet para la solución resaltada.](images/manage-nuget.png)
 
 Si usas Visual Studio 2015, elige la pestaña **Instalados** y asegúrate de que el número de versión del paquete **Microsoft.NETCore.UniversalWindowsPlatform** sea **5.2.2** o superior.
 
@@ -73,7 +73,7 @@ Si no es así, actualiza el paquete a una versión más reciente.
 
 Elige la pestaña **Examinar** y busca el paquete **Microsoft.Data.SQLite**. Instala la versión **1.1.1** (o inferior) del paquete.
 
-![Paquete de SQLite](images/sqlite-package.png)
+![Captura de pantalla del cuadro de diálogo Microsoft Data SQLite con el campo de texto Versión destacado.](images/sqlite-package.png)
 
 Ve a la sección [Agregar y recuperar datos en una base de datos de SQLite](#add-and-retrieve-data-in-a-sqlite-database) de esta guía.
 
@@ -93,11 +93,11 @@ En segundo lugar, la aplicación no tiene que empaquetar bibliotecas de SQLite. 
 
 Empecemos por agregar a la solución una biblioteca de clases de .NET Standard 2.0. No es necesario que uses una biblioteca de clases para contener el código de acceso a datos, pero vamos a utilizar una en nuestro ejemplo. Asignaremos a la biblioteca el nombre **DataAccessLibrary** y a la clase de la biblioteca el nombre **DataAccess**.
 
-![Biblioteca de clases](images/dot-net-standard.png)
+![Captura de pantalla que muestra el cuadro de diálogo Agregar nuevo proyecto que muestra Instalado > Visual C# > .NET Standard seleccionado y la opción Biblioteca de clases resaltada.](images/dot-net-standard.png)
 
 Haz clic con el botón derecho en la solución y luego haz clic en **Administrar paquetes NuGet para la solución**.
 
-![Administrar paquetes NuGet](images/manage-nuget-2.png)
+![Otra captura de pantalla del panel Explorador de soluciones con el proyecto en el que se hizo clic con el botón derecho y la opción Administrar paquetes NuGet resaltada.](images/manage-nuget-2.png)
 
 > [!NOTE]
 > Si quiere que la biblioteca de clases de .NET Standard pueda acceder a las carpetas de la aplicación y a los recursos de imagen de la aplicación para UWP, deberá marcarla como **EmbeddedResource** y **CopyAlways** en las **propiedades**.
@@ -120,8 +120,7 @@ Busca el paquete **SQLitePCLRaw.bundle_winsqlite3** y, a continuación, instála
 
 No tienes que hacer esto. Pero si tienes un motivo para incluir una versión específica de SQLite con tu aplicación, elige la pestaña **Examinar** y busca el paquete **Microsoft.Data.SQLite**. Instala la versión **2.0** (o inferior) del paquete.
 
-![Paquete de SQLite](images/sqlite-package-v2.png)
-
+![Captura de pantalla del cuadro de diálogo Microsoft Data SQLite que muestra la versión 2.0.0 estable más reciente seleccionada. el campo de texto Versión destacado.](images/sqlite-package-v2.png)
 
 ## <a name="add-and-retrieve-data-in-a-sqlite-database"></a>Agregar y recuperar datos en una base de datos de SQLite
 

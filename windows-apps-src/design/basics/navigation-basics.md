@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6fa0f8997db9a383097c7e0fece3d8a17d5875ab
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e144d369dccac6a14a32168bd073bb501275097f
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220098"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763068"
 ---
 # <a name="navigation-design-basics-for-windows-apps"></a>Conceptos básicos de diseño de navegación para aplicaciones de Windows
 
@@ -67,7 +67,7 @@ Una menor cantidad de elementos de navegación simplifica la toma de decisiones 
 
 :::row:::
     :::column:::
-        ![ejemplo de cosas para hacer](images/nav/do.svg)
+        ![Primera captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/nav/do.svg)
 
         ![vista de navegación correcta](images/nav/navview-good.svg)
 
@@ -86,7 +86,7 @@ Abrumar a los usuarios con muchas opciones de navegación.
 
 Las rutas de acceso claras permiten la navegación lógica para los usuarios. Realizar opciones de navegación obvias y aclarar las relaciones entre páginas debe evitar que se pierdan los usuarios.
 
-![ejemplo de cosas para hacer](images/nav/clarity-image.svg)
+![Captura de pantalla de una maqueta de aplicación que muestra rutas de acceso claras de navegación para un usuario.](images/nav/clarity-image.svg)
 
 > Los destinos están etiquetados con claridad para que los usuarios sepan dónde se encuentran.
 

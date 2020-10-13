@@ -4,12 +4,12 @@ description: Obtén información sobre los principios del radio de redondeo, los
 ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10;uwp;radio de redondeo;corner radius;redondeo;rounded
-ms.openlocfilehash: 134a49ac57678eea0da718e93a14e3d0cf8896d5
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 044ae628ffe397005113f658191398e06fd245f5
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81001482"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636535"
 ---
 # <a name="corner-radius"></a>Radio de redondeo
 
@@ -115,11 +115,11 @@ Hay situaciones en las que no se debe redondear la esquina de un control y no se
 
 - Cuando un control contenido dentro de otro contenedor; por ejemplo, la barra y los botones de una ScrollBar que forman parte del contenedor del control ScrollBar, que a su vez forma parte de un ScrollViewer.
 
-![ScrollBar](images/rounded-corner/scrollbar.png)
+![Captura de pantalla de una barra de desplazamiento vertical sin esquinas redondeadas.](images/rounded-corner/scrollbar.png)
 
 - Cuando un elemento de control flotante de la interfaz de usuario está conectado con una interfaz de usuario que invoca el control flotante en uno de sus lados.
 
-![AutoSuggest](images/rounded-corner/autosuggest.png)
+![Captura de pantalla de un control flotante AutoSuggest donde algunas esquinas no están redondeadas.](images/rounded-corner/autosuggest.png)
 
 ### <a name="keyboard-focus-rectangle-and-shadow"></a>Rectángulo y sombra del foco de teclado
 

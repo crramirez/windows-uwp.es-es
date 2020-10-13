@@ -1,5 +1,5 @@
 ---
-Description: El selector de fecha del calendario es un control desplegable que está optimizado para seleccionar una fecha determinada desde una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o el tiempo de calendario transcurrido.
+description: El selector de fecha del calendario es un control desplegable que está optimizado para seleccionar una fecha determinada desde una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o el tiempo de calendario transcurrido.
 title: Selector de fecha del calendario
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a12ae302f5e904db29655eacb075a9eba5f8f3e5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c7061de6098c77214136f3441b43abbf35a10686
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217548"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829621"
 ---
 # <a name="calendar-date-picker"></a>Selector de fecha del calendario
 
@@ -25,9 +25,17 @@ El selector de fecha del calendario es un control desplegable que está optimiza
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **API de plataforma**: [clase CalendarDatePicker](/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [propiedad Date](/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [evento DateChanged](/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
 
@@ -57,7 +65,7 @@ Para obtener más información sobre cómo elegir el control adecuado, consulta 
 
 El punto de entrada muestra texto del marcador de posición si no se ha establecido una fecha; de lo contrario, muestra la fecha elegida. Cuando el usuario selecciona el punto de entrada, se expande una vista de calendario para que el usuario realice una selección de fecha. La vista de calendario se superpone a otra interfaz de usuario; no hace que la otra interfaz desaparezca.
 
-![Ejemplo de selector de fecha del calendario](images/calendar-date-picker-2-views.png)
+![Captura de pantalla de un selector de fecha del calendario que muestra un cuadro de texto seleccionar una fecha vacío y, luego, uno rellenado con un calendario debajo de él.](images/calendar-date-picker-2-views.png)
 
 ## <a name="create-a-date-picker"></a>Crear un selector de fecha
 
@@ -72,7 +80,7 @@ arrivalCalendarDatePicker.Header = "Arrival date";
 
 El selector de fecha del calendario resultante tiene este aspecto:
 
-![Ejemplo de selector de fecha del calendario](images/calendar-date-picker-closed.png)
+![Captura de pantalla de un selector de fecha del calendario rellenado con una etiqueta que indica Arrival date.](images/calendar-date-picker-closed.png)
 
 El selector de fecha del calendario tiene un componente [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView) interno para seleccionar una fecha. Existe en CalendarDatePicker un subconjunto de propiedades CalendarView, como [IsTodayHighlighted](/uwp/api/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted) y [FirstDayOfWeek](/uwp/api/windows.ui.xaml.controls.calendardatepicker.firstdayofweek), que se envían al componente CalendarView interno para que puedas modificarlo. 
 

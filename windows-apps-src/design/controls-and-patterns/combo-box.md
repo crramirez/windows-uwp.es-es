@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a6854eb361388fc1597816d31daf08bb5fe782
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: bb903be202724927d60ee5bcd1edb9e16bc4c982
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217458"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829486"
 ---
 # <a name="combo-box-and-list-box"></a>Cuadro combinado y cuadro de lista
 
@@ -23,15 +23,23 @@ Usa un cuadro combinado (también conocido como lista desplegable) para presenta
 
 Cuando se cierra el cuadro combinado, o bien se muestra la selección actual o bien está vacío si no hay ningún elemento seleccionado. Cuando el usuario amplía el cuadro combinado, este muestra la lista de elementos seleccionables.
 
-![Ejemplo de una lista desplegable en su estado compacto](images/combo-box-expand.gif)
+![Breve vídeo en el que se muestra una lista desplegable en su estado compacto y su estado expandido.](images/combo-box-expand.gif)
 
 > _Un cuadro combinado en su estado compacto con un encabezado._
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-|  |  |
-| - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+:::row:::
+   :::column:::
+      ![Logotipo de WinUI](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](../style/rounded-corner.md). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows).
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **API de plataforma:** [clase de cuadro combinado](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [propiedad IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propiedad Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
@@ -60,7 +68,7 @@ Cuando se cierra el cuadro combinado, o bien se muestra la selección actual o b
 
 Un cuadro combinado en su estado compacto puede mostrar un encabezado.
 
-![Ejemplo de una lista desplegable en su estado compacto](images/combo_box_collapsed.png)
+![Captura de pantalla de una lista desplegable en su estado compacto.](images/combo_box_collapsed.png)
 
 Aunque los cuadros combinados se expanden para admitir mayores longitudes de cadena, evita cadenas que sean demasiado largas y difíciles de leer.
 

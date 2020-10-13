@@ -4,12 +4,12 @@ description: Cómo instalar la biblioteca de interfaz de usuario de Windows.
 ms.topic: reference
 ms.date: 07/15/2020
 keywords: windows 10, uwp, sdk del kit de herramientas
-ms.openlocfilehash: 94c23ab9573df576af89d9211ced70938fd5105f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7b7b248ce166368d315dce42f27075d3933c0781
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174139"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762849"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Introducción a la biblioteca de interfaz de usuario de Windows 2.x
 
@@ -33,9 +33,9 @@ La biblioteca está disponibles como un paquete NuGet que se puede agregar a cua
 El paquete **Microsoft.UI.Xaml** contiene características y controles de Fluent adecuados para todas las aplicaciones.  
 De manera opcional, puede activar "Incluir versión preliminar" para ver las versiones preliminares más recientes que incluyen nuevas características experimentales.
 
-    ![Paquetes de NuGet](images/ManageNugetPackages.png "Imagen de administración de paquetes NuGet")
+    ![Captura de pantalla del panel Explorador de soluciones con el proyecto en el que se hizo clic con el botón derecho y la opción Administrar paquetes NuGet resaltada.](images/ManageNugetPackages.png "Imagen de administración de paquetes NuGet")
 
-    ![Paquetes NuGet](images/NugetPackages.png)
+    ![Captura de pantalla del cuadro de diálogo Administrador de paquetes NuGet que muestra la pestaña Examinar con WinUI en el campo de búsqueda.](images/NugetPackages.png)
 
 4. Agregue los recursos de tema de la interfaz de usuario de Windows UI (WinUI) a sus recursos de App.xaml. Tiene dos maneras de hacerlo, según si tiene recursos de aplicaciones adicionales.
 

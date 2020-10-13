@@ -6,12 +6,12 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 324aae957d53c7ec63817c8f0e80909d25dc1c0a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 6665eaced6092242d1f5000de6e248044fda1ee0
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216628"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636445"
 ---
 # <a name="writing-style"></a>Estilo de escritura
 
@@ -41,7 +41,8 @@ Los usuarios deben poder leer y comprender el texto de un solo vistazo. No relle
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Selecciona **filtros** para agregar efectos a la imagen.
+![Primera captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Seleccione **filtros** para agregar efectos a la imagen.
     :::column-end:::
     :::column:::
 ![No](images/dont.svg) Si quieres agregar modificaciones o efectos visuales a la imagen, selecciona **filtros**.
@@ -54,7 +55,8 @@ Las aplicaciones se definen mediante acciones. Los usuarios realizan una acción
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Reinicia la aplicación para ver los cambios.
+![Segunda captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Reinicie la aplicación para ver los cambios.
     :::column-end:::
     :::column:::
 ![No](images/dont.svg) Los cambios se aplicarán al reiniciar la aplicación.
@@ -67,7 +69,8 @@ Los usuarios echan un vistazo al texto y a menudo pasarán por alto bloques más
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) No hemos podido cargar la imagen. Si esto sucede de nuevo, prueba a reiniciar la aplicación. Pero no te preocupes, la imagen estará esperando cuando vuelvas.
+![Tercera captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+No se pudo cargar la imagen. Si esto sucede de nuevo, prueba a reiniciar la aplicación. Pero no te preocupes, la imagen estará esperando cuando vuelvas.
     :::column-end:::
     :::column:::
 ![No](images/dont.svg) Se ha producido un error y no hemos podido cargar la imagen. Inténtalo de nuevo y, si se vuelve a producir este problema, puede que tengas que reiniciar la aplicación. Pero no te preocupes, hemos guardado tu trabajo localmente y te estará esperando cuando vuelvas.
@@ -87,7 +90,8 @@ Habla directamente al usuario.
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) No hemos podido guardar el archivo en esa ubicación.
+![Cuarta captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+No se pudo guardar el archivo en esa ubicación.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -103,7 +107,8 @@ Habla directamente al usuario.
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Las instrucciones de diseño de aplicaciones de Windows son un recurso que te ayuda a diseñar y compilar fantásticas aplicaciones. Con las características de diseño que se incluyen en cada aplicación de Windows, puedes crear interfaces de usuario (IU) que se adecúen a diversos dispositivos.
+![Quinta captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Las instrucciones de diseño de aplicaciones de Windows son un recurso que te ayuda a diseñar y compilar fantásticas aplicaciones. Con las características de diseño que se incluyen en cada aplicación de Windows, puedes crear interfaces de usuario (IU) que se adecúen a diversos dispositivos.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -117,7 +122,8 @@ Usa un tono informal para dirigirte a los usuarios. Si usas un tono formal, la a
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Cuando estés satisfecho con la imagen, selecciona **guardar** para agregarla a la galería. Desde allí, podrás compartirla con tus amigos.
+![Sexta captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+Cuando esté satisfecho con la imagen, seleccione **guardar** para agregarla a la galería. Desde allí, podrás compartirla con tus amigos.
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -131,8 +137,8 @@ Usa un tono informal para dirigirte a los usuarios. Si usas un tono formal, la a
 
 :::row:::
     :::column:::
-![Sí](images/do.svg)
-<b>No estás conectado.</b>
+![Séptima captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+<b>No está conectado.</b>
 * Comprueba que los cables de red están conectados.
 * Asegúrate de que no te encuentras en el modo avión.
 * Consulta si el interruptor inalámbrico está activado.
@@ -150,8 +156,8 @@ Aunque las letras mayúsculas son importantes, es fácil caer en un uso excesivo
 
 :::row:::
     :::column:::
-![Sí](images/do.svg)
-<b>¿Qué parte te da problemas?</b>
+![Octava captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+<b>¿Qué parte le da problemas?</b>
 * He olvidado la contraseña.
 * No acepta la contraseña.
 * Es posible que otra persona esté usando mi cuenta.
@@ -174,8 +180,8 @@ Sobre todo, es importante que el mensaje de error no culpe al usuario. Pero tamb
 
 :::row:::
     :::column:::
-![Sí](images/do.svg)
-<b>No estás conectado.</b>
+![Novena captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+<b>No está conectado.</b>
 * Comprueba que los cables de red están conectados.
 * Asegúrate de que no te encuentras en el modo avión.
 * Consulta si el interruptor inalámbrico está activado.
@@ -194,8 +200,8 @@ Para crear el texto de los cuadros de diálogo de la aplicación, se aplican muc
 Pero lo más importante es la "llamada y respuesta" entre el título de un cuadro de diálogo y sus botones. Asegúrate de que los botones sean respuestas claras a la pregunta planteada en el título y que su formato sea coherente en toda la aplicación.
     :::column-end:::
     :::column:::
-![Sí](images/do.svg)
-<b>¿Qué parte te da problemas?</b>
+![Décima captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
+<b>¿Qué parte le da problemas?</b>
 1. He olvidado mi contraseña.
 2. No acepta mi contraseña.
 3. Es posible que otra persona esté usando mi cuenta.
@@ -210,7 +216,7 @@ El texto de los botones debe suficientemente conciso para que los usuarios pueda
 Al escribir el texto de los botones, recuerda que cada botón representa una acción. Asegúrate de usar la *voz activa* en el texto del botón y de usar palabras que representen acciones en lugar de reacciones.
     :::column-end:::
     :::column:::
-![Cosas que hacer](images/do.svg)
+![Undécima captura de pantalla de una barra verde con una marca de verificación verde y la palabra Do.](images/do.svg)
 * Instalar ahora
 * Recurso compartido
     :::column-end:::
