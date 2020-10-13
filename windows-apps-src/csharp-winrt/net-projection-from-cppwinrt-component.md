@@ -5,12 +5,12 @@ ms.date: 10/12/2020
 ms.topic: article
 keywords: Windows 10, c#, winrt, cswinrt, proyección
 ms.localizationpriority: medium
-ms.openlocfilehash: 2558c37660559bb49263a5708d95ddf9086bf833
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: bc5c8e39b808fd1a8bc557fd29ba828d33d8dde4
+ms.sourcegitcommit: df4d99f9950655be725afa83f1ee7c3b73dff923
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/13/2020
-ms.locfileid: "91989173"
+ms.locfileid: "92001390"
 ---
 # <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>Tutorial: generación de una proyección de .NET 5 desde un componente/WinRT de C++ y distribución de NuGet
 
@@ -21,7 +21,7 @@ Puede descargar el ejemplo completo de este tutorial en GitHub [aquí](https://g
 > [!NOTE]
 > Este tutorial está escrito para la versión preliminar más reciente de C#/WinRT (RC2). Esperamos que la próxima versión 1,0 tenga más actualizaciones y mejoras en la experiencia del desarrollador.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Este tutorial y el ejemplo correspondiente requieren las herramientas y los componentes siguientes:
 
@@ -118,7 +118,6 @@ Antes de poder invocar **cswinrt.exe** y generar el ensamblado de proyección, d
 
     ```xml
     <PropertyGroup>
-      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
       <CsWinRTIncludes>SimpleMathComponent</CsWinRTIncludes>
       <CsWinRTGeneratedFilesDir>$(OutDir)</CsWinRTGeneratedFilesDir>
     </PropertyGroup>
@@ -126,7 +125,6 @@ Antes de poder invocar **cswinrt.exe** y generar el ensamblado de proyección, d
 
     Estos son algunos detalles sobre la configuración de este ejemplo:
 
-    - El `AllowUnsafeBlocks` elemento especifica si se va a usar código de interoperabilidad. 
     - La `CsWinRTIncludes` propiedad especifica los espacios de nombres que se van a proyectar.
     - La `CsWinRTGeneratedFilesDir` propiedad establece el directorio de salida donde se generan los archivos de la proyección, que se establecen en la sección siguiente sobre la creación fuera del origen.
 
