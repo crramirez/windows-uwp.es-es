@@ -140,7 +140,7 @@
               href: controls-and-patterns/nested-ui.md
     - name: Cuadros de diálogo y controles flotantes
       items:
-        - name: Introducción
+        - name: Información general
           href: controls-and-patterns/dialogs-and-flyouts/index.md
         - name: Cuadros de diálogo
           href: controls-and-patterns/dialogs-and-flyouts/dialogs.md
@@ -310,7 +310,71 @@
           href: motion/key-frame-and-easing-function-animations.md
 - name: Shell
   items:
-    - name: Iconos
+    - name: Notificaciones del sistema
+      items:
+        - name: Directrices sobre la experiencia de usuario
+          href: shell/tiles-and-notifications/toast-ux-guidance.md
+        - name: Enviar notificaciones del sistema locales
+          items:
+            - name: Aplicaciones para UWP
+              href: shell/tiles-and-notifications/send-local-toast.md
+            - name: Aplicaciones Win32
+              items:
+                - name: Introducción
+                  href: shell/tiles-and-notifications/toast-desktop-apps.md
+                - name: Aplicaciones de C#
+                  href: shell/tiles-and-notifications/send-local-toast-desktop.md
+                - name: Aplicaciones de C++ WRL
+                  href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
+        - name: Contenido de notificaciones del sistema
+          items:
+            - name: Contenido
+              href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
+            - name: Schema
+              href: shell/tiles-and-notifications/toast-schema.md
+        - name: Programar notificaciones del sistema
+          href: shell/tiles-and-notifications/scheduled-toast.md
+        - name: Características adicionales
+          items:
+            - name: Audio personalizado
+              href: shell/tiles-and-notifications/custom-audio-on-toasts.md
+            - name: Barra de progreso
+              href: shell/tiles-and-notifications/toast-progress-bar.md
+            - name: Actualización pendiente
+              href: shell/tiles-and-notifications/toast-pending-update.md
+            - name: Marcas de tiempo personalizadas
+              href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
+            - name: Colecciones
+              href: shell/tiles-and-notifications/toast-collections.md
+            - name: Encabezados
+              href: shell/tiles-and-notifications/toast-headers.md
+            - name: Agente de escucha de notificación
+              href: shell/tiles-and-notifications/notification-listener.md
+            - name: Obsoletos
+              items:
+                - name: Reflejo de notificaciones
+                  href: shell/tiles-and-notifications/notification-mirroring.md
+                - name: Descartar Universal
+                  href: shell/tiles-and-notifications/universal-dismiss.md
+    - name: Notificaciones
+      href: shell/tiles-and-notifications/badges.md
+    - name: Notificaciones de inserción
+      items:
+        - name: Información general
+          href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
+        - name: Prioridades de WNS
+          href: shell/tiles-and-notifications/wns-notification-priorities.md
+        - name: Tráfico de Allowlisting WNS
+          href: shell/tiles-and-notifications/firewall-allowlist-config.md
+        - name: Código generado por el Asistente para notificaciones de inserción
+          href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
+    - name: Barra de tareas
+      items:
+        - name: Anclar la aplicación a la barra de tareas
+          href: shell/pin-to-taskbar.md
+    - name: Barra de título
+      href: shell/title-bar.md
+    - name: Iconos dinámicos
       href: shell/tiles-and-notifications/creating-tiles.md
       items:
         - name: Iconos secundarios
@@ -338,54 +402,8 @@
           href: shell/tiles-and-notifications/primary-tile-apis.md
         - name: 'Compatibilidad de iconos y notificaciones del sistema con idioma, escala y contraste'
           href: shell/tiles-and-notifications/tile-toast-language-scale-contrast.md
-    - name: Anclar la aplicación a la barra de tareas
-      href: shell/pin-to-taskbar.md
-    - name: Personalización de la barra de título
-      href: shell/title-bar.md
-    - name: Notificaciones
+    - name: Varios
       items:
-        - name: Notificaciones del sistema
-          items:
-            - name: Directrices sobre la experiencia de usuario
-              href: shell/tiles-and-notifications/toast-ux-guidance.md
-            - name: Contenido de notificaciones del sistema
-              href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
-            - name: Esquema de contenido de notificaciones del sistema
-              href: shell/tiles-and-notifications/toast-schema.md
-            - name: Enviar notificaciones del sistema locales
-              items:
-                - name: Aplicaciones de Windows
-                  href: shell/tiles-and-notifications/send-local-toast.md
-                - name: Aplicaciones de escritorio
-                  items:
-                    - name: Introducción
-                      href: shell/tiles-and-notifications/toast-desktop-apps.md
-                    - name: Aplicaciones de C#
-                      href: shell/tiles-and-notifications/send-local-toast-desktop.md
-                    - name: Aplicaciones de C++ WRL
-                      href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
-            - name: Programar notificaciones del sistema
-              href: shell/tiles-and-notifications/scheduled-toast.md
-            - name: Audio personalizado
-              href: shell/tiles-and-notifications/custom-audio-on-toasts.md
-            - name: Barra de progreso
-              href: shell/tiles-and-notifications/toast-progress-bar.md
-            - name: Actualización pendiente
-              href: shell/tiles-and-notifications/toast-pending-update.md
-            - name: Marcas de tiempo personalizadas
-              href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
-            - name: Colecciones
-              href: shell/tiles-and-notifications/toast-collections.md
-            - name: Encabezados
-              href: shell/tiles-and-notifications/toast-headers.md
-            - name: Agente de escucha de notificación
-              href: shell/tiles-and-notifications/notification-listener.md
-            - name: Reflejo de notificaciones
-              href: shell/tiles-and-notifications/notification-mirroring.md
-            - name: Descartar Universal
-              href: shell/tiles-and-notifications/universal-dismiss.md
-        - name: Notificaciones
-          href: shell/tiles-and-notifications/badges.md
         - name: Visualizador de notificaciones
           href: shell/tiles-and-notifications/notifications-visualizer.md
         - name: Métodos de entrega de notificaciones
@@ -397,17 +415,6 @@
               href: shell/tiles-and-notifications/alternate-channel-vapid-webpush.md
             - name: Notificaciones periódicas
               href: shell/tiles-and-notifications/periodic-notification-overview.md
-        - name: Servicios de notificaciones de inserción de Windows (WNS)
-          href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
-          items:
-            - name: Prioridades de WNS
-              href: shell/tiles-and-notifications/wns-notification-priorities.md
-            - name: Tráfico de Allowlisting WNS
-              href: shell/tiles-and-notifications/firewall-allowlist-config.md
-            - name: Código generado por el Asistente para notificaciones de inserción
-              href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
-        - name: Notificaciones sin procesar
-          href: shell/tiles-and-notifications/raw-notification-overview.md
 - name: Entrada e interacciones
   items:
     - name: Introducción
