@@ -7,12 +7,12 @@ ms.date: 12/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, notificación del sistema, barra de progreso, barra de progreso del sistema, notificación, enlace de datos del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 4219154a3fe3241b9c1871c07a1fbbb2b63f2348
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8df76af7dd26792d8d1af0fa8641d76e007ef8e3
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174609"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984531"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Barra de progreso del sistema y enlace de datos
 
@@ -42,32 +42,21 @@ En la imagen siguiente se muestra una barra de progreso de determinación con to
 
 Aquí se muestra cómo generaría la notificación más arriba...
 
+#### <a name="builder-syntax"></a>[Sintaxis del compilador](#tab/builder-syntax)
+
 ```csharp
-ToastContent content = new ToastContent()
-{
-    Visual = new ToastVisual()
+new ToastContentBuilder()
+    .AddText("Downloading your weekly playlist...")
+    .AddVisualChild(new AdaptiveProgressBar()
     {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Downloading your weekly playlist..."
-                },
- 
-                new AdaptiveProgressBar()
-                {
-                    Title = "Weekly playlist",
-                    Value = 0.6,
-                    ValueStringOverride = "15/26 songs",
-                    Status = "Downloading..."
-                }
-            }
-        }
-    }
-};
+        Title = "Weekly playlist",
+        Value = 0.6,
+        ValueStringOverride = "15/26 songs",
+        Status = "Downloading..."
+    });
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast>
@@ -83,6 +72,8 @@ ToastContent content = new ToastContent()
     </visual>
 </toast>
 ```
+
+---
 
 Sin embargo, deberá actualizar dinámicamente los valores de la barra de progreso para que realmente sea "activo". Esto puede hacerse mediante el enlace de datos para actualizar la notificación del sistema.
 
@@ -110,30 +101,16 @@ public void SendUpdatableToastWithProgress()
     string group = "downloads";
  
     // Construct the toast content with data bound fields
-    var content = new ToastContent()
-    {
-        Visual = new ToastVisual()
+    var content = new ToastContentBuilder()
+        .AddText("Downloading your weekly playlist...")
+        .AddVisualChild(new AdaptiveProgressBar()
         {
-            BindingGeneric = new ToastBindingGeneric()
-            {
-                Children =
-                {
-                    new AdaptiveText()
-                    {
-                        Text = "Downloading your weekly playlist..."
-                    },
-    
-                    new AdaptiveProgressBar()
-                    {
-                        Title = "Weekly playlist",
-                        Value = new BindableProgressBarValue("progressValue"),
-                        ValueStringOverride = new BindableString("progressValueString"),
-                        Status = new BindableString("progressStatus")
-                    }
-                }
-            }
-        }
-    };
+            Title = "Weekly playlist",
+            Value = new BindableProgressBarValue("progressValue"),
+            ValueStringOverride = new BindableString("progressValueString"),
+            Status = new BindableString("progressStatus")
+        })
+        .GetToastContent();
  
     // Generate the toast notification
     var toast = new ToastNotification(content.GetXml());

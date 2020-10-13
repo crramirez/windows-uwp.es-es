@@ -1,22 +1,22 @@
 ---
 Description: Descubra las distintas opciones de escritorio que las aplicaciones Win32 tienen para enviar notificaciones del sistema.
-title: Notificaciones del sistema de aplicaciones de escritorio
-label: Toast notifications from desktop apps
+title: Notificaciones del sistema de aplicaciones Win32
+label: Toast notifications from Win32 apps
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, puente de escritorio, msix, paquete disperso, opciones para enviar notificaciones del sistema, servidor com, activador com, com, com falsificado, sin com, sin com, enviar notificaciones de envío
 ms.localizationpriority: medium
-ms.openlocfilehash: 478c478fa6892e4b61ac1a7d6e22089720e96ca7
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 6f02bc7c615643ba0d2ca0ed1b43ecf13641c1c5
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220078"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984551"
 ---
-# <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema de aplicaciones de escritorio
+# <a name="toast-notifications-from-win32-apps"></a>Notificaciones del sistema de aplicaciones Win32
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay varias opciones diferentes para las aplicaciones de escritorio debido a los diferentes esquemas de activación.
+Las aplicaciones de Win32 (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay varias opciones diferentes para las aplicaciones Win32 debido a los diferentes esquemas de activación.
 
 En este artículo, se enumeran las opciones que tiene para enviar una notificación del sistema en Windows 10. Cada opción es totalmente compatible...
 
@@ -26,7 +26,7 @@ En este artículo, se enumeran las opciones que tiene para enviar una notificaci
 
 ## <a name="all-options"></a>Todas las opciones
 
-En la tabla siguiente se muestran las opciones para admitir las notificaciones del sistema dentro de la aplicación de escritorio y las características admitidas correspondientes. Puede usar la tabla para seleccionar la mejor opción para su escenario.<br/><br/>
+En la tabla siguiente se muestran las opciones para admitir notificaciones del sistema en la aplicación Win32 y las características admitidas correspondientes. Puede usar la tabla para seleccionar la mejor opción para su escenario.<br/><br/>
 
 | Opción | Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- | -- |
@@ -36,7 +36,7 @@ En la tabla siguiente se muestran las opciones para admitir las notificaciones d
 
 ## <a name="preferred-option---com-activator"></a>Opción preferida: COM Activator
 
-Esta es la opción preferida que funciona con las aplicaciones de escritorio y es compatible con todas las características de notificación. No tenga miedo del "activador COM"; tenemos una biblioteca para las aplicaciones [de C#](send-local-toast-desktop.md) y [C++](send-local-toast-desktop-cpp-wrl.md) que hace que resulte muy sencillo, incluso si nunca ha escrito un servidor com antes.<br/><br/>
+Esta es la opción preferida que funciona con las aplicaciones Win32 y admite todas las características de notificación. No tenga miedo del "activador COM"; tenemos una biblioteca para las aplicaciones [de C#](send-local-toast-desktop.md) y [C++](send-local-toast-desktop-cpp-wrl.md) que hace que resulte muy sencillo, incluso si nunca ha escrito un servidor com antes.<br/><br/>
 
 | Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- |
@@ -54,7 +54,7 @@ Con la opción Activator de COM, puede usar las siguientes plantillas de notific
 > [!NOTE]
 > Si agrega el activador COM a la aplicación de paquete MSIX/disperso existente, las activaciones de la notificación de primer o segundo plano y las de notificaciones heredadas activarán ahora su activador de COM en lugar de la línea de comandos.
 
-Para obtener información sobre cómo usar esta opción, consulte [enviar una notificación del sistema local desde las aplicaciones de C# de escritorio](send-local-toast-desktop.md) o [enviar una notificación del sistema local desde las aplicaciones de la WRL de C++ de escritorio](send-local-toast-desktop-cpp-wrl.md).
+Para obtener información sobre cómo usar esta opción, vea [enviar una notificación del sistema local desde aplicaciones de C# de Win32](send-local-toast-desktop.md) o [enviar una notificación del sistema local desde las aplicaciones de WRL de Win32 C++](send-local-toast-desktop-cpp-wrl.md).
 
 
 ## <a name="alternative-option---no-com--stub-clsid"></a>Opción alternativa: ningún CLSID de COM/stub
@@ -81,6 +81,6 @@ En el caso de las aplicaciones Win32 clásicas, configure el AUMID para que pued
 
 ## <a name="resources"></a>Recursos
 
-* [Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio](send-local-toast-desktop.md)
-* [Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio](send-local-toast-desktop-cpp-wrl.md)
+* [Enviar una notificación del sistema local desde aplicaciones de C# de Win32](send-local-toast-desktop.md)
+* [Enviar una notificación del sistema local desde las aplicaciones de WRL de Win32 C++](send-local-toast-desktop-cpp-wrl.md)
 * [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

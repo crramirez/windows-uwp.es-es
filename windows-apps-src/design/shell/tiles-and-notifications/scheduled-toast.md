@@ -7,12 +7,12 @@ ms.date: 04/09/2020
 ms.topic: article
 keywords: Windows 10, UWP, notificación del sistema programada, scheduledtoastnotification, Inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: bc80cf04c1e1461612401ef4ced898058e2dd4ac
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 04bbf3da388bf065b2b96684cf3f27cd7534ff51
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172359"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984741"
 ---
 # <a name="schedule-a-toast-notification"></a>Programar una notificación del sistema
 
@@ -21,12 +21,12 @@ Las notificaciones del sistema programadas le permiten programar una notificaci�
 Tenga en cuenta que las notificaciones del sistema programadas tienen una ventana de entrega de 5 minutos. Si el equipo se apaga durante el tiempo de entrega programado y permanece desactivado durante más de 5 minutos, la notificación se "quitará", ya que ya no es relevante para el usuario. Si necesita la entrega garantizada de notificaciones independientemente de cuánto tiempo se desactive el equipo, se recomienda usar una tarea en segundo plano con un desencadenador de tiempo, tal como se muestra en [este ejemplo de código](https://github.com/WindowsNotifications/quickstart-snoozable-toasts-even-if-computer-is-off).
 
 > [!IMPORTANT]
-> Las aplicaciones de escritorio (tanto los paquetes dispersos como los MSIX y los de Win32 clásico) tienen pasos ligeramente diferentes para enviar notificaciones y controlar la activación. Siga las instrucciones que se indican a continuación, pero reemplace `ToastNotificationManager` por la `DesktopNotificationManagerCompat` clase de la documentación de las [aplicaciones de escritorio](toast-desktop-apps.md) .
+> Las aplicaciones Win32 (tanto los paquetes dispersos como los MSIX y los de Win32 clásico) tienen pasos ligeramente diferentes para enviar notificaciones y controlar la activación. Siga las instrucciones que se indican a continuación, pero reemplace `ToastNotificationManager` por la `DesktopNotificationManagerCompat` clase de la documentación de las [aplicaciones Win32](toast-desktop-apps.md) .
 
 > **API importantes**: [clase ScheduledToastNotification](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para entender completamente este tema, le resultará útil lo siguiente...
 
@@ -35,77 +35,40 @@ Para entender completamente este tema, le resultará útil lo siguiente...
 * Un proyecto de aplicación para UWP de Windows 10
 
 
-## <a name="install-nuget-packages"></a>Instalación de paquetes NuGet
+## <a name="step-1-install-nuget-package"></a>Paso 1: instalar el paquete NuGet
 
-Se recomienda instalar los dos paquetes de NuGet siguientes en el proyecto. Nuestro ejemplo de código usará estos paquetes.
-
-* [Microsoft. Toolkit. UWP. notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): genere cargas del sistema a través de objetos en lugar de XML sin formato.
-* [QueryString.net](https://www.nuget.org/packages/QueryString.NET/): generar y analizar cadenas de consulta con C #
+Instale el [paquete NuGet Microsoft. Toolkit. UWP. notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/). Nuestro ejemplo de código usará este paquete. Al final del artículo, proporcionaremos los fragmentos de código "sin formato" que no usan ningún paquete NuGet. Este paquete le permite crear notificaciones del sistema sin usar XML.
 
 
-## <a name="add-namespace-declarations"></a>Incorporación de declaraciones de espacio de nombres
+## <a name="step-2-add-namespace-declarations"></a>Paso 2: agregar declaraciones de espacio de nombres
 
 `Windows.UI.Notifications` incluye las API del sistema.
 
 ```csharp
 using Windows.UI.Notifications;
 using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
-using Microsoft.QueryStringDotNET; // QueryString.NET
 ```
 
 
-## <a name="construct-the-toast-content"></a>Construcción del contenido del sistema
+## <a name="step-3-schedule-the-notification"></a>Paso 3: programación de la notificación
 
-En Windows 10, el contenido de la notificación del sistema se describe mediante un lenguaje adaptable que permite una gran flexibilidad con el aspecto de la notificación. Consulte la [documentación del contenido del sistema](adaptive-interactive-toasts.md) para obtener más información.
-
-Gracias a la biblioteca de notificaciones, la generación del contenido XML es sencilla. Si no instala la biblioteca de notificaciones desde NuGet, tendrá que construir el XML manualmente, lo que deja espacio para los errores.
-
-Siempre debe establecer la propiedad **Launch** , por lo que cuando el usuario puntea el cuerpo de la notificación del sistema y se inicia la aplicación, la aplicación sabe qué contenido debe mostrar.
+Usaremos una notificación simple basada en texto que recordará a un estudiante sobre el uso que han vencido hoy en día. Construya la notificación y programe la programación.
 
 ```csharp
-// In a real app, these would be initialized with actual data
-string title = "ASTR 170B1";
-string content = "You have 3 items due today!";
+// Construct the content
+var content = new ToastContentBuilder()
+    .AddToastActivationInfo("itemsDueToday", ToastActivationType.Foreground)
+    .AddText("ASTR 170B1")
+    .AddText("You have 3 items due today!");
+    .GetToastContent();
 
-// Now we can construct the final toast content
-ToastContent toastContent = new ToastContent()
-{
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = title
-                },
-     
-                new AdaptiveText()
-                {
-                    Text = content
-                }
-            }
-        }
-    },
- 
-    // Arguments when the user taps body of toast
-    Launch = new QueryString()
-    {
-        { "action", "viewClass" },
-        { "classId", "3910938180" }
- 
-    }.ToString()
-};
-```
-
-## <a name="create-the-scheduled-toast"></a>Creación del sistema programado
-
-Una vez que haya inicializado el contenido del sistema, cree un nuevo [ScheduledToastNotification](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification) y pase el XML del contenido y el tiempo que desea que se entregue la notificación.
-
-```csharp
+    
 // Create the scheduled notification
-var toast = new ScheduledToastNotification(toastContent.GetXml(), DateTime.Now.AddSeconds(5));
+var toast = new ScheduledToastNotification(content.GetXml(), DateTime.Now.AddSeconds(5));
+
+
+// Add your scheduled toast to the schedule
+ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 ```
 
 
@@ -120,16 +83,6 @@ Etiqueta y grupo combinados actúan como clave principal compuesta. Grupo es el 
 ```csharp
 toast.Tag = "18365";
 toast.Group = "ASTR 170B1";
-```
-
-
-## <a name="schedule-the-notification"></a>Programación de la notificación
-
-Por último, cree un [ToastNotifier](/uwp/api/windows.ui.notifications.toastnotifier) y llame a AddToSchedule (), pasando la notificación del sistema programada.
-
-```csharp
-// And your scheduled toast to the schedule
-ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 ```
 
 

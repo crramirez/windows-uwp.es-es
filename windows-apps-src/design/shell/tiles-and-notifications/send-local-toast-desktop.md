@@ -1,33 +1,33 @@
 ---
 Description: Obtenga información sobre cómo las aplicaciones de C# de Win32 pueden enviar notificaciones del sistema local y controlar el usuario que hace clic en la notificación del sistema.
-title: Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
+title: Enviar una notificación del sistema local desde aplicaciones de C# de Win32
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
-label: Send a local toast notification from desktop C# apps
+label: Send a local toast notification from Win32 C# apps
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: 'Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar un sistema local, un puente de escritorio, msix, paquetes dispersos, C#, C Sharp, notificación del sistema, WPF, enviar notificaciones del sistema WPF, enviar notificaciones del sistema, notificación del sistema #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f4f78d689352f0278f814a2e89db6f92df52b99
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b13927bbd12a5cb306018ca02cd8730f580182cd
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220128"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984651"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
+# <a name="send-a-local-toast-notification-from-win32-c-apps"></a>Enviar una notificación del sistema local desde aplicaciones de C# de Win32
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está utilizando paquetes MSIX o dispersos.
+Las aplicaciones de Win32 (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones Win32 debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está utilizando paquetes MSIX o dispersos.
 
 > [!IMPORTANT]
-> Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). En el caso de otros idiomas del escritorio, consulte [escritorio de C++ WRL](send-local-toast-desktop-cpp-wrl.md).
+> Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). En el caso de otros lenguajes de escritorio, consulte [Win32 C++ WRL](send-local-toast-desktop-cpp-wrl.md).
 
 
 ## <a name="step-1-install-the-notifications-library"></a>Paso 1: instalación de la biblioteca de notificaciones
 
 Instale el `Microsoft.Toolkit.Uwp.Notifications` [paquete NuGet](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) en el proyecto.
 
-Esta [biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) agrega código de biblioteca compatible para trabajar con notificaciones del sistema de aplicaciones de escritorio. También hace referencia a los SDK de UWP y permite construir notificaciones mediante C# en lugar de XML sin formato. El resto de esta guía de inicio rápido depende de la biblioteca de notificaciones.
+Esta [biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) agrega código de biblioteca compatible para trabajar con notificaciones del sistema desde aplicaciones Win32. También hace referencia a los SDK de UWP y permite construir notificaciones mediante C# en lugar de XML sin formato. El resto de esta guía de inicio rápido depende de la biblioteca de notificaciones.
 
 
 ## <a name="step-2-implement-the-activator"></a>Paso 2: implementar el activador
@@ -320,7 +320,7 @@ Si la aplicación no se está ejecutando:
 
 
 ### <a name="foreground-vs-background-activation"></a>Activación en segundo plano y en segundo plano
-En el caso de las aplicaciones de escritorio, la activación en primer plano y en segundo plano se administra de forma idéntica: se llama al activador de COM. Depende del código de la aplicación decidir si mostrar una ventana o simplemente realizar algún trabajo y, a continuación, salir. Por lo tanto, la especificación de un **ActivationType** de **fondo** en el contenido del sistema no cambia el comportamiento.
+En el caso de las aplicaciones de Win32, la activación en primer plano y en segundo plano se administra de forma idéntica: se llama al activador de COM. Depende del código de la aplicación decidir si mostrar una ventana o simplemente realizar algún trabajo y, a continuación, salir. Por lo tanto, la especificación de un **ActivationType** de **fondo** en el contenido del sistema no cambia el comportamiento.
 
 
 ## <a name="step-7-remove-and-manage-notifications"></a>Paso 7: eliminación y administración de notificaciones
@@ -357,5 +357,5 @@ Problema **corregido: la aplicación no se centra después de hacer clic**en la 
 ## <a name="resources"></a>Recursos
 
 * [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/desktop-toasts)
-* [Notificaciones del sistema de aplicaciones de escritorio](toast-desktop-apps.md)
+* [Notificaciones del sistema de aplicaciones Win32](toast-desktop-apps.md)
 * [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

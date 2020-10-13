@@ -1,30 +1,30 @@
 ---
-Description: Las aplicaciones de escritorio de Windows pueden anclar iconos secundarios gracias al puente de escritorio.
-title: Anclar iconos secundarios desde la aplicación de escritorio
-label: Pin secondary tiles from desktop application
+Description: Las aplicaciones Win32 pueden anclar iconos secundarios gracias al puente de escritorio.
+title: Anclar iconos secundarios de aplicaciones Win32
+label: Pin secondary tiles from Win32 apps
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, puente de escritorio, iconos secundarios, PIN, anclaje, Inicio rápido, ejemplo de código, ejemplo, secondarytile, aplicación de escritorio, Win32, WinForms, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: 111d66e69ddb9cff56f36a26bd8094429fe808ef
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e45fedbb981c26945d3127d7f1c01bfc08d221f0
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172379"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984731"
 ---
-# <a name="pin-secondary-tiles-from-desktop-application"></a>Anclar iconos secundarios desde la aplicación de escritorio
+# <a name="pin-secondary-tiles-from-win32-apps"></a>Anclar iconos secundarios de aplicaciones Win32
 
 
-Gracias al [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), las aplicaciones de escritorio de Windows (como Win32, Windows Forms y WPF) pueden anclar iconos secundarios.
+Gracias al [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), las aplicaciones Win32 (como Windows Forms y WPF) pueden anclar iconos secundarios.
 
 ![Captura de pantalla de iconos secundarios](images/secondarytiles.png)
 
 > [!IMPORTANT]
 > **Requiere Fall Creators Update**: debe tener como destino el SDK 16299 y ejecutar la compilación 16299 o posterior para anclar los iconos secundarios de las aplicaciones de puente de escritorio.
 
-Agregar un icono secundario desde la aplicación de WPF o WinForms es muy similar a una aplicación UWP pura. La única diferencia es que debe especificar el identificador de ventana principal (HWND). Esto se debe a que al anclar un icono, Windows muestra un cuadro de diálogo modal que pide al usuario que confirme si desea anclar el icono. Si la aplicación de escritorio no configura el objeto SecondaryTile con la ventana propietaria, Windows no sabrá dónde dibujar el cuadro de diálogo y se producirá un error en la operación.
+Agregar un icono secundario desde la aplicación de WPF o WinForms es muy similar a una aplicación UWP pura. La única diferencia es que debe especificar el identificador de ventana principal (HWND). Esto se debe a que al anclar un icono, Windows muestra un cuadro de diálogo modal que pide al usuario que confirme si desea anclar el icono. Si la aplicación Win32 no configura el objeto SecondaryTile con la ventana propietaria, Windows no sabrá dónde dibujar el cuadro de diálogo y se producirá un error en la operación.
 
 
 ## <a name="package-your-app-with-desktop-bridge"></a>Empaquetar la aplicación con el puente de escritorio
@@ -66,7 +66,7 @@ SecondaryTile tile = new SecondaryTile(
 
 ## <a name="assign-the-window-handle"></a>Asignar el identificador de ventana
 
-Este es el paso clave para las aplicaciones de escritorio. Convierta el objeto en un objeto [IInitializeWithWindow](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) . A continuación, llame al método [IInitializeWithWindow.Initialize](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) y pase el identificador de la ventana que desee que sea el propietario del cuadro de diálogo modal. En el siguiente ejemplo de C# se muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
+Este es el paso clave para las aplicaciones Win32. Convierta el objeto en un objeto [IInitializeWithWindow](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) . A continuación, llame al método [IInitializeWithWindow.Initialize](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) y pase el identificador de la ventana que desee que sea el propietario del cuadro de diálogo modal. En el siguiente ejemplo de C# se muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
 
 ```csharp
 // Assign the window handle

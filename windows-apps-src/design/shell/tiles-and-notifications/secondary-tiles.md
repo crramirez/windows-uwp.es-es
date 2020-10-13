@@ -1,83 +1,83 @@
 ---
-Description: Los iconos secundarios permiten a los usuarios anclar determinado contenido y vínculos profundos de la aplicación en su menú Inicio, lo que proporciona un fácil acceso en el futuro al contenido de la aplicación.
-title: Ventanas secundarias
+Description: Los mosaicos secundarios permiten a los usuarios anclar contenido específico y vínculos profundos de la aplicación en el menú Inicio, lo que facilita el acceso futuro al contenido dentro de la aplicación.
+title: Iconos secundarios
 label: Secondary tiles
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
-keywords: windows 10, uwp, iconos secundarios
+keywords: Windows 10, UWP, iconos secundarios
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f95699fd6eb0803824c9bcdea46d275ab4383ac
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a4cd65093e9969531c3de683064973aab58b1680
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653190"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984671"
 ---
-# <a name="secondary-tiles"></a>Ventanas secundarias
+# <a name="secondary-tiles"></a>Iconos secundarios
 
 
-Los iconos secundarios permiten a los usuarios anclar determinado contenido y vínculos profundos de la aplicación en su menú Inicio, lo que proporciona un fácil acceso en el futuro al contenido de la aplicación.
+Los mosaicos secundarios permiten a los usuarios anclar contenido específico y vínculos profundos de la aplicación en el menú Inicio, lo que facilita el acceso futuro al contenido dentro de la aplicación.
 
 ![Captura de pantalla de iconos secundarios](images/secondarytiles.png)
 
-Por ejemplo, los usuarios pueden anclar la información meteorológica de numerosas ubicaciones específicas en su menú Inicio, lo que les proporciona (1) una información fácilmente visible y en tiempo real sobre el tiempo actual, gracias a Iconos dinámicos y (2) un punto de entrada rápida al tiempo de la ciudad específica que les interesa. Los usuarios también pueden anclar cotizaciones específicas, artículos de noticias y más elementos que son importantes para ellos.
+Por ejemplo, los usuarios pueden anclar el tiempo de varias ubicaciones específicas en el menú Inicio, que proporciona (1) información sencilla de vista rápida sobre el tiempo actual gracias a los mosaicos dinámicos y (2) un punto de entrada rápido al tiempo de la ciudad específica que les interesa. Los usuarios también pueden anclar acciones específicas, artículos de noticias y más elementos que son importantes para ellos.
 
-Al agregar iconos secundarios a la aplicación, estás ayudando al usuario a interactuar más rápida y eficazmente con la aplicación, animándoles a volver más a menudo gracias a la facilidad de acceso que proporcionan los iconos secundarios.
+Al agregar iconos secundarios a la aplicación, ayuda al usuario a volver a interactuar de forma rápida y eficaz con la aplicación, y anima a que devuelvan más a menudo gracias al sencillo acceso que proporcionan los mosaicos secundarios.
 
-**Solo los usuarios pueden anclar un icono secundario; las aplicaciones no pueden anclar iconos secundarios conforme a programación sin la aprobación por parte del usuario**. El usuario debe hacer clic explícitamente en un botón "Anclar" dentro de la aplicación, momento en que usas la API para crear un icono secundario y, a continuación, el sistema muestra un cuadro de diálogo que pide al usuario que confirme si desea anclar el icono.
+**Solo los usuarios pueden anclar un icono secundario; las aplicaciones no pueden anclar iconos secundarios mediante programación sin la aprobación del usuario**. El usuario debe hacer clic explícitamente en un botón "anclar" dentro de la aplicación, momento en el que se usa la API para solicitar la creación de un icono secundario y, a continuación, el sistema muestra un cuadro de diálogo que pide al usuario que confirme si desea tener el icono anclado.
 
 ## <a name="quick-links"></a>Vínculos rápidos
 
 | Artículo | Descripción |
 | --- | --- |
-| [Orientación sobre los iconos secundarios](secondary-tiles-guidance.md) | Obtén información sobre cuándo y dónde debes usar los iconos secundarios. |
-| [Iconos secundarios de PIN](secondary-tiles-pinning.md) | Obtén información sobre cómo anclar un icono secundario. |
-| [Anclar desde la aplicación de escritorio](secondary-tiles-desktop-pinning.md) | Las aplicaciones de escritorio de Windows pueden anclar iconos secundarios gracias al Puente de dispositivo de escritorio. |
+| [Guía sobre iconos secundarios](secondary-tiles-guidance.md) | Obtenga información acerca de Cuándo y dónde debe usar iconos secundarios. |
+| [Anclar iconos secundarios](secondary-tiles-pinning.md) | Obtenga información sobre cómo anclar un icono secundario. |
+| [Anclar desde aplicaciones Win32](secondary-tiles-desktop-pinning.md) | Las aplicaciones Win32 pueden anclar iconos secundarios gracias al puente de escritorio. |
 
 
-## <a name="secondary-tiles-in-relation-to-primary-tiles"></a>Iconos secundarios en relación con los iconos principales
+## <a name="secondary-tiles-in-relation-to-primary-tiles"></a>Mosaicos secundarios con respecto a los iconos principales
 
-Los iconos secundarios están asociados a una sola aplicación principal. Están anclados al menú Inicio para ofrecer al usuario una manera coherente y eficaz de iniciar la aplicación directamente en un área de uso frecuente de la aplicación principal. Esta área puede ser una subsección general de la aplicación principal que incluya contenido frecuentemente actualizado o un vínculo profundo a un área específica de la aplicación.
+Los mosaicos secundarios están asociados a una sola aplicación primaria. Están anclados al menú Inicio para proporcionar a un usuario una manera coherente y eficaz de iniciar directamente en un área de uso frecuente de la aplicación primaria. Puede tratarse de una subsección general de la aplicación primaria que contiene contenido actualizado con frecuencia, o bien un vínculo profundo a un área específica de la aplicación.
 
-Entre los ejemplos de escenarios de iconos secundarios se encuentran los siguientes:
+Algunos ejemplos de escenarios de mosaicos secundarios son:
 
-* Actualizaciones del pronóstico del tiempo para una ciudad específica en una aplicación de información meteorológica
-* Un resumen de eventos próximos en una aplicación de calendario
-* Estados y actualizaciones de un contacto importante en una aplicación social
+* Actualizaciones meteorológicas para una ciudad específica en una aplicación meteorológica
+* Un resumen de los próximos eventos en una aplicación de calendario
+* Estado y actualizaciones de un contacto importante en una aplicación social
 * Fuentes específicas en un lector RSS
 * Una lista de reproducción de música
 * Un blog
 
-Cualquier contenido de modificación frecuente que un usuario quiera supervisar es un buen candidato para un icono secundario. Después de anclado el icono secundario, los usuarios pueden recibir actualizaciones de un vistazo a través del icono y usarlo para iniciar directamente en la aplicación principal.
+Cualquier contenido que cambie con frecuencia que un usuario desee supervisar es un buen candidato para un icono secundario. Después de anclar el icono secundario, los usuarios pueden recibir actualizaciones de un vistazo a través del icono y usarlo para iniciar directamente en la aplicación primaria.
 
-Los iconos secundarios son similares a los iconos primarios en muchos aspectos:
+Los mosaicos secundarios son similares a los iconos principales de muchas maneras:
 
 * Usan notificaciones de icono para mostrar contenido enriquecido.
-* Deben incluir un logotipo de 150 x 150 píxeles para el contenido predeterminado del icono.
-* Opcionalmente, pueden incluir los otros tamaños de logotipo para permitir mayores tamaños de icono.
+* Deben incluir un logotipo de 150 x 150 píxeles para el contenido del mosaico predeterminado.
+* Opcionalmente, pueden incluir los otros tamaños de logotipo para habilitar tamaños de mosaico más grandes.
 * Pueden mostrar notificaciones y distintivos.
-* Pueden reordenarse en el menú Inicio.
-* Se eliminan de forma automática al desinstalar la aplicación.
-* Su distintivo y texto de estado detallado de bloqueo se puede mostrar en estado de bloqueo.
+* Se pueden reorganizar en el menú Inicio.
+* Se eliminan automáticamente cuando se desinstala la aplicación.
+* Su distintivo y el texto de estado detallado del bloqueo se pueden mostrar en el bloqueo.
 
-Sin embargo, los iconos secundarios difieren de los iconos principales en algunos aspectos a señalar:
+Sin embargo, los mosaicos secundarios difieren de los iconos principales en algunos aspectos perceptibles:
 
-* Los usuarios pueden eliminar los iconos secundarios en cualquier momento, sin necesidad de eliminar la aplicación principal.
-* Los iconos secundarios se pueden crear en tiempo de ejecución. Los iconos de la aplicación se pueden crear solo durante la instalación.
-* Un control flotante solicita al usuario confirmación antes de agregar un icono secundario.
-* No pueden seleccionarse mediante programación para la pantalla de bloqueo a través de una solicitud al usuario. El usuario debe agregar manualmente el icono secundario a través de la página Personalizar configuración de PC.
+* Los usuarios pueden eliminar sus iconos secundarios en cualquier momento sin eliminar la aplicación primaria.
+* Los mosaicos secundarios se pueden crear en tiempo de ejecución. Los iconos de la aplicación solo se pueden crear durante la instalación.
+* Un control flotante solicita confirmación al usuario antes de agregar un icono secundario.
+* No se pueden seleccionar mediante programación para la pantalla de bloqueo a través de una solicitud al usuario. El usuario debe agregar manualmente el icono secundario a través de la página de personalización en configuración de PC.
 
-Para enviar notificaciones, se proporcionan métodos específicos para los actualizadores de iconos y notificaciones y los canales de notificaciones de inserción que se usan con los iconos secundarios. Las versiones van paralelas a las usadas con los iconos primarios. Por ejemplo, CreateBadgeUpdaterForApplication vs. CreateBadgeUpdaterForSecondaryTile.
-
-
-## <a name="guidance-on-secondary-tiles"></a>Instrucciones sobre los iconos secundarios
-Para obtener información sobre cuándo y dónde debes usar los iconos secundarios y otras instrucciones de uso, consulta [Instrucciones sobre los iconos secundarios](secondary-tiles-guidance.md)
+Para el envío de notificaciones, se proporcionan métodos específicos para los actualizadores de iconos y de notificaciones y los canales de notificaciones de entrega que se usan con iconos secundarios. Estas versiones son paralelas a las que se usan con los iconos principales. Por ejemplo, CreateBadgeUpdaterForApplication frente a CreateBadgeUpdaterForSecondaryTile.
 
 
-## <a name="pinning-secondary-tiles"></a>Anclaje de iconos secundarios
-Para obtener información sobre cómo anclar iconos secundarios, consulta [Anclar iconos secundarios](secondary-tiles-pinning.md).
+## <a name="guidance-on-secondary-tiles"></a>Guía sobre iconos secundarios
+Para obtener información acerca de Cuándo y dónde se deben usar los iconos secundarios y otras instrucciones de uso, consulte la [Guía sobre los iconos secundarios](secondary-tiles-guidance.md) .
 
 
-## <a name="desktop-applications-and-secondary-tiles"></a>Aplicaciones de escritorio e iconos secundarios
-Para obtener información sobre cómo usar los iconos secundarios de la aplicación de escritorio mediante el Puente de dispositivo de escritorio, consulte [Anclar iconos secundarios desde una aplicación de escritorio](secondary-tiles-desktop-pinning.md).
+## <a name="pinning-secondary-tiles"></a>Anclar iconos secundarios
+Para obtener información sobre cómo anclar iconos secundarios, consulte [iconos secundarios de PIN](secondary-tiles-pinning.md).
+
+
+## <a name="win32-applications-and-secondary-tiles"></a>Aplicaciones Win32 y mosaicos secundarios
+Para obtener información sobre cómo usar los iconos secundarios de la aplicación Win32 a través del puente de escritorio, consulte [anclar iconos secundarios de aplicaciones Win32](secondary-tiles-desktop-pinning.md).

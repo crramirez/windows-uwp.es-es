@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dea3eebc253f46f5de888a0a37fea9d3ad1ac3df
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: a49d771b7efdbb7e787db0cbadea45c255a1120e
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860113"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984601"
 ---
 # <a name="badge-notifications-for-windows-apps"></a>Notificaciones de distintivos para aplicaciones de Windows
 
@@ -32,99 +32,29 @@ Las notificaciones aparecen en el icono de barra de tareas de la aplicación y e
 
 ## <a name="numeric-badges"></a>Notificaciones numéricas
 
-<table>
-    <tr>
-        <th>Value</th>
-        <th>Distintivo</th>
-        <th>XML</th>
-    </tr>
-    <tr>
-        <td>Un número de 1 a 99. Un valor de 0 es equivalente al valor de glifo "ninguno" y borrará la notificación.</td>
-        <td><img src="images/badges/badge-numeric.png" alt="A numeric badge less than 100." /></td>
-        <td>`<badge value="1"/>`</td>
-    </tr>
-    <tr>
-        <td>Cualquier número superior a 99.</td>
-        <td><img src="images/badges/badge-numeric-greater.png" alt="A numeric badge greater than 99." /></td></td>
-        <td>`<badge value="100"/>`</td>
-    </tr>    
-</table>
+Value | Distintivo | XML
+--|--|--
+Un número de 1 a 99. Un valor de 0 es equivalente al valor de glifo "ninguno" y borrará la notificación. | <img src="images/badges/badge-numeric.png" alt="A numeric badge less than 100." /> | `<badge value="1"/>`
+Cualquier número superior a 99. | <img src="images/badges/badge-numeric-greater.png" alt="A numeric badge greater than 99." /></td> | `<badge value="100"/>`
 
 ## <a name="glyph-badges"></a>Notificaciones de glifo
 En lugar de un número, una notificación puede mostrar un elemento de un conjunto no extensible de glifos de estado. 
 
-<table>
-<tr>
-    <th>Estado</th>
-    <th>Glifo</th>
-    <th>XML</th>
-</tr>
-<tr>
-    <td>ninguno</td>
-    <td>(No se muestran notificaciones.)</td>
-    <td>`<badge value="none"/>`</td>
-</tr>
-<tr>
-    <td>activity</td>
-    <td><img src="images/badges/badge-activity.png" alt="Screenshot of the activity glyph." /></td>
-    <td>`<badge value="activity"/>`</td>
-</tr>
-<tr>
-    <td>alarma</td>
-    <td><img src="images/badges/badge-alarm.png" alt="Screenshot of the alarm glyph." /></td>
-    <td>`<badge value="alarm"/>`</td>
-</tr>
-<tr>
-    <td>alerta</td>
-    <td><img src="images/badges/badge-alert.png" alt="Screenshot of the alert glyph." /></td>
-    <td>`<badge value="alert"/>`</td>
-</tr>
-<tr>
-    <td>atención</td>
-    <td><img src="images/badges/badge-attention.png" alt="Screenshot of the attention glyph." /></td>
-    <td>`<badge value="attention"/>`</td>
-</tr>
-<tr>
-    <td>disponible</td>
-    <td><img src="images/badges/badge-available.png" alt="Screenshot of the available glyph." /></td>
-    <td>`<badge value="available"/>`</td>
-</tr>
-<tr>
-    <td>ausente</td>
-    <td><img src="images/badges/badge-away.png" alt="Screenshot of the away glyph." /></td>
-    <td>`<badge value="away"/>`</td>
-</tr>
-<tr>
-    <td>ocupado</td>
-    <td><img src="images/badges/badge-busy.png" alt="Screenshot of the busy glyph." /></td>
-    <td>`<badge value="busy"/>`</td>
-</tr>
-<tr>
-    <td>error</td>
-    <td><img src="images/badges/badge-error.png" alt="Screenshot of the error glyph." /></td>
-    <td>`<badge value="error"/>`</td>
-</tr>
-<tr>
-    <td>newMessage</td>
-    <td><img src="images/badges/badge-newMessage.png" alt="Screenshot of the new message glyph." /></td>
-    <td>`<badge value="newMessage"/>`</td>
-</tr>
-<tr>
-    <td>en pausa</td>
-    <td><img src="images/badges/badge-paused.png" alt="Screenshot of the paused glyph." /></td>
-    <td>`<badge value="paused"/>`</td>
-</tr>
-<tr>
-    <td>reproducción</td>
-    <td><img src="images/badges/badge-playing.png" alt="Screenshot of the playing glyph." /></td>
-    <td>`<badge value="playing"/>`</td>
-</tr>
-<tr>
-    <td>no disponible</td>
-    <td><img src="images/badges/badge-unavailable.png" alt="Screenshot of the unavailable glyph" /></td>
-    <td>`<badge value="unavailable"/>`</td>
-</tr>
-</table>
+Estado | Glifo | XML
+--|--|--
+ninguno | (No se muestran notificaciones.) | `<badge value="none"/>`
+activity | <img src="images/badges/badge-activity.png" alt="Glyph" /> | `<badge value="activity"/>`
+alarma | <img src="images/badges/badge-alarm.png" alt="Glyph" /> | `<badge value="alarm"/>`
+alerta | <img src="images/badges/badge-alert.png" alt="Glyph" /> | `<badge value="alert"/>`
+atención | <img src="images/badges/badge-attention.png" alt="Glyph" /> | `<badge value="attention"/>`
+disponible | <img src="images/badges/badge-available.png" alt="Glyph" /> | `<badge value="available"/>`
+ausente | <img src="images/badges/badge-away.png" alt="Glyph" /> | `<badge value="away"/>`
+ocupado | <img src="images/badges/badge-busy.png" alt="Glyph" /> | `<badge value="busy"/>`
+error | <img src="images/badges/badge-error.png" alt="Glyph" /> | `<badge value="error"/>`
+newMessage | <img src="images/badges/badge-newMessage.png" alt="Glyph" /> | `<badge value="newMessage"/>`
+en pausa | <img src="images/badges/badge-paused.png" alt="Glyph" /> | `<badge value="paused"/>`
+reproducción | <img src="images/badges/badge-playing.png" alt="Glyph" /> | `<badge value="playing"/>`
+no disponible | <img src="images/badges/badge-unavailable.png" alt="Glyph" /> | `<badge value="unavailable"/>`</td>
 
 ## <a name="create-a-badge"></a>Crear una notificación
 

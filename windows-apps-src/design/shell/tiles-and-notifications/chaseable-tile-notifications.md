@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, mosaicos de seguimiento, mosaicos dinámicos, notificaciones de icono de seguimiento
 ms.localizationpriority: medium
-ms.openlocfilehash: a10e68f2926761338a95d5d2c649c84468efada8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 770c3f13d701de622c4f6ea8075dfef5f6b1afc8
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173819"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984461"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificaciones de iconos rastreables
 
@@ -27,7 +27,7 @@ Por ejemplo, una aplicación de noticias podría usar esta característica para 
 > **API importantes**: [propiedad LaunchActivatedEventArgs. TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [clase TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 Para habilitar las notificaciones de icono de seguimiento, use la propiedad **arguments** en la carga de notificación de icono, similar a la propiedad Launch en la carga de notificación del sistema, para insertar información sobre el contenido en la notificación de icono.
 
@@ -140,14 +140,14 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ```
 
 
-### <a name="accessing-onlaunched-from-desktop-applications"></a>Acceso a Onlaunched desde aplicaciones de escritorio
+### <a name="accessing-onlaunched-from-win32-applications"></a>Acceder a Onlaunched desde aplicaciones Win32
 
-Las aplicaciones de escritorio (como Win32, WPF, etc.) mediante el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), también pueden usar mosaicos de seguimiento. La única diferencia es el acceso a los argumentos Onlaunched. Tenga en cuenta que primero debe [empaquetar la aplicación con el puente de escritorio](/windows/msix/desktop/source-code-overview).
+Las aplicaciones de Win32 (como WPF, etc.) que usan el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), pueden usar también iconos de seguimiento. La única diferencia es el acceso a los argumentos Onlaunched. Tenga en cuenta que primero debe [empaquetar la aplicación con el puente de escritorio](/windows/msix/desktop/source-code-overview).
 
 > [!IMPORTANT]
 > **Requiere la actualización de octubre de 2018**: para usar la `AppInstance.GetActivatedEventArgs()` API, debe tener como destino el SDK 17763 y ejecutar la compilación 17763 o posterior.
 
-En el caso de las aplicaciones de escritorio, para tener acceso a los argumentos de inicio, haga lo siguiente...
+En el caso de las aplicaciones Win32, para tener acceso a los argumentos de inicio, haga lo siguiente...
 
 ```csharp
 

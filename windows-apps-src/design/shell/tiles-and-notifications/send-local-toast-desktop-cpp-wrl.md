@@ -1,25 +1,25 @@
 ---
 Description: Obtenga información sobre cómo las aplicaciones de la WRL de Win32 C++ pueden enviar notificaciones del sistema local y controlar el usuario al hacer clic en la notificación del sistema.
-title: Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio
-label: Send a local toast notification from desktop C++ WRL apps
+title: Enviar una notificación del sistema local desde las aplicaciones de WRL de Win32 C++
+label: Send a local toast notification from Win32 C++ WRL apps
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificaciones locales, puente de escritorio, msix, paquete disperso, C++, CPP, CPlusPlus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: f90733cb4b549b7b8f088d6ecfa652941b0769b1
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: a227ccbc52aa3c1dd8c0cd9c61cdecf140375fe2
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220148"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984661"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio
+# <a name="send-a-local-toast-notification-from-win32-c-wrl-apps"></a>Enviar una notificación del sistema local desde las aplicaciones de WRL de Win32 C++
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está usando MSIX o un paquete disperso.
+Las aplicaciones de Win32 (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones Win32 debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está usando MSIX o un paquete disperso.
 
 > [!IMPORTANT]
-> Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). En el caso de otros idiomas del escritorio, vea [escritorio C#](send-local-toast-desktop.md).
+> Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). Para otros lenguajes Win32, vea [Win32 C#](send-local-toast-desktop.md).
 
 
 ## <a name="step-1-enable-the-windows-10-sdk"></a>Paso 1: habilitar el SDK de Windows 10
@@ -372,7 +372,7 @@ Si la aplicación no se está ejecutando:
 
 
 ### <a name="foreground-vs-background-activation"></a>Activación en segundo plano y en segundo plano
-En el caso de las aplicaciones de escritorio, la activación en primer plano y en segundo plano se administra de forma idéntica: se llama al activador de COM. Depende del código de la aplicación decidir si mostrar una ventana o simplemente realizar algún trabajo y, a continuación, salir. Por lo tanto, la especificación de un **activationType** de **fondo** en el contenido del sistema no cambia el comportamiento.
+En el caso de las aplicaciones de Win32, la activación en primer plano y en segundo plano se administra de forma idéntica: se llama al activador de COM. Depende del código de la aplicación decidir si mostrar una ventana o simplemente realizar algún trabajo y, a continuación, salir. Por lo tanto, la especificación de un **activationType** de **fondo** en el contenido del sistema no cambia el comportamiento.
 
 
 ## <a name="step-9-remove-and-manage-notifications"></a>Paso 9: eliminación y administración de notificaciones
@@ -444,5 +444,5 @@ Problema **corregido: la aplicación no se centra después de hacer clic**en la 
 ## <a name="resources"></a>Recursos
 
 * [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/desktop-toasts)
-* [Notificaciones del sistema de aplicaciones de escritorio](toast-desktop-apps.md)
+* [Notificaciones del sistema de aplicaciones Win32](toast-desktop-apps.md)
 * [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

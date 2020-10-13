@@ -7,12 +7,12 @@ ms.date: 12/15/2017
 ms.topic: article
 keywords: Windows 10, UWP, notificación del sistema, audio personalizado, notificación, audio, sonido
 ms.localizationpriority: medium
-ms.openlocfilehash: 81bec439f17cadb7db0576dafcf4299f0978b192
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: d2d32b9545cccfb25790d394aec028fd29904ca5
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054465"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984411"
 ---
 # <a name="custom-audio-on-toasts"></a>Audio personalizado en notificaciones del sistema
 
@@ -22,7 +22,7 @@ Las notificaciones del sistema pueden usar el audio personalizado, que permite a
 
 Para crear notificaciones a través de código, se recomienda encarecidamente usar la biblioteca de notificaciones del kit de herramientas de la comunidad de UWP, que proporciona un modelo de objetos para el contenido XML de notificación. Podría construir manualmente el XML de notificación, pero esto es propenso a errores y es confuso. El equipo que posee notificaciones en Microsoft crea y mantiene la biblioteca de notificaciones dentro del kit de herramientas de la comunidad de UWP.
 
-Instale [Microsoft. Toolkit. UWP. notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) desde NuGet (estamos usando la versión 1.0.0 en esta documentación).
+Instale [Microsoft. Toolkit. UWP. notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) desde NuGet.
 
 
 ## <a name="add-namespace-declarations"></a>Incorporación de declaraciones de espacio de nombres
@@ -35,21 +35,6 @@ using Windows.UI.Notifications;
 ```
 
 
-## <a name="construct-the-notification"></a>Construcción de la notificación
-
-El contenido de la notificación del sistema incluye texto e imágenes, así como botones y entradas. Consulte envío de una [notificación del sistema local](send-local-toast.md) para ver un fragmento de código completo.
-
-```csharp
-ToastContent toastContent = new ToastContent()
-{
-    Visual = new ToastVisual()
-    {
-        ... (omitted)
-    }
-};
-```
-
-
 ## <a name="add-the-custom-audio"></a>Adición del audio personalizado
 
 Windows Mobile siempre ha admitido el audio personalizado en las notificaciones del sistema. Sin embargo, Desktop solo agregó compatibilidad con audio personalizado en la versión 1511 (compilación 10586). Si envía una notificación del sistema que contiene audio personalizado a un dispositivo de escritorio antes de la versión 1511, la notificación del sistema será silenciosa. Por lo tanto, para la versión de escritorio anterior a la 1511, no debe incluir el audio personalizado en la notificación del sistema, por lo que la notificación usará al menos el sonido de notificación predeterminado.
@@ -57,7 +42,10 @@ Windows Mobile siempre ha admitido el audio personalizado en las notificaciones 
 **Problema conocido**: Si usa la versión de escritorio 1511, el audio del sistema de notificación personalizado solo funcionará si la aplicación se instala a través de la tienda. Esto significa que no puede probar localmente el audio personalizado en el escritorio antes de enviarlo a la tienda, pero el audio funcionará correctamente una vez que se haya instalado desde la tienda. Este problema se ha corregido en la actualización de aniversario, de modo que el audio personalizado de la aplicación implementada localmente funcione correctamente.
 
 ```csharp
-?
+var contentBuilder = new ToastContentBuilder()
+    .AddText("New message");
+
+    
 bool supportsCustomAudio = true;
  
 // If we're running on Desktop before Version 1511, do NOT include custom audio
@@ -70,11 +58,10 @@ if (AnalyticsInfo.VersionInfo.DeviceFamily.Equals("Windows.Desktop")
  
 if (supportsCustomAudio)
 {
-    toastContent.Audio = new ToastAudio()
-    {
-        Src = new Uri("ms-appx:///Assets/Audio/CustomToastAudio.m4a")
-    };
+    contentBuilder.AddAudio(new Uri("ms-appx:///Assets/Audio/CustomToastAudio.m4a"));
 }
+
+// TODO: Send the toast
 ```
 
 Entre los tipos de archivo de audio admitidos se incluyen...
@@ -89,15 +76,7 @@ Entre los tipos de archivo de audio admitidos se incluyen...
 
 ## <a name="send-the-notification"></a>Enviar la notificación
 
-Ahora que el contenido del sistema está completo, el envío de la notificación es bastante sencillo.
-
-```csharp
-// Create the toast notification from the previous toast content
-ToastNotification notification = new ToastNotification(toastContent.GetXml());
-             
-// And then send the toast
-ToastNotificationManager.CreateToastNotifier().Show(notification);
-```
+Enviar un notificaciones con audio es lo mismo que enviar una notificación normal. Consulte [envío de una notificación del sistema local](send-local-toast.md) para obtener más información.
 
 
 ## <a name="related-topics"></a>Temas relacionados
