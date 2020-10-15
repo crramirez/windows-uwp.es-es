@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 83a6774180e2f2f0a65dc9a71ebfac5c273a4424
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a9230df47c9929ee902fc8e0b93f7de7a5ef70df
+ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168189"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92011365"
 ---
 # <a name="start-coding"></a>Empezar a crear el código
 
@@ -18,7 +18,7 @@ ms.locfileid: "89168189"
 
 ¡Bienvenido a la [plataforma UWP](universal-application-platform-guide.md)! En esta página, le indicaremos la información correcta que necesita para empezar a codificar las aplicaciones de Windows 10 que quiere crear.
 
-Antes de comenzar el desarrollo, debe estar seguro de [estar preparado.](get-set-up.md)
+Antes de comenzar el desarrollo, debe estar seguro de [estar preparado.](/windows/apps/get-started/get-set-up.md)
 
 ## <a name="learning-tracks"></a>Pistas de aprendizaje
 
@@ -57,9 +57,9 @@ Si ya ha explorado nuestras pistas de aprendizaje o si está interesado en algo 
 
 | Área | Descripción |
 | --- | --- |
-| **Novedades** | Cada actualización importante de Windows 10 amplía nuestros documentos con nuevas directrices. Estos documentos proporcionan información acerca de la característica y la guía de desarrolladores que hemos agregado para cada versión, así como las listas de nuevas API: </br>   [Novedades para desarrolladores en la versión más reciente de Windows 10](../whats-new/windows-10-build-19041.md) </br> Sin embargo, no solo actualizamos nuestros documentos cuando aparecen las versiones importantes. Siempre agregamos nueva información para que explore y se mantenga al día sobre las últimas novedades: </br>   [Novedades en la documentación](../whats-new/windows-docs-january-2019.md) |
+| **Novedades** | Cada actualización importante de Windows 10 amplía nuestros documentos con nuevas directrices. Estos documentos proporcionan información acerca de la característica y la guía de desarrolladores que hemos agregado para cada versión, así como las listas de nuevas API: </br>   [Novedades para desarrolladores en la versión más reciente de Windows 10](../whats-new/windows-10-version-latest.md) |
 | **Diseño e interfaz de usuario** | Toda la información en la presentación visual y la interfaz de usuario de la aplicación se encuentra en esta área de los documentos. Si está interesado en los aspectos específicos del lenguaje de marcado XAML o simplemente desea crear una apariencia única para sus documentos, empiece aquí: </br>   [Conceptos básicos de diseño de las aplicaciones para UWP](../design/basics/index.md) |
-| **Desarrollar aplicaciones** | Si quiere obtener información detallada sobre una característica específica de Windows 10 o simplemente tiene interés en ver lo que puede hacer con el desarrollo de UWP, eche un vistazo a esta área de nuestros documentos: </br>   [Características de las aplicación para UWP](../develop/index.md). </br> La referencia de API para aplicaciones de Windows 10 está hospedada en un conjunto de documentos relacionados, que puede encontrar aquí: </br>   [Espacios de nombres de UWP de Windows](/uwp/api/) </br>   [Archivo y esquemas XML](/uwp/schemas/) |
+| **Desarrollo de aplicaciones** | Si quiere obtener información detallada sobre una característica específica de Windows 10 o simplemente tiene interés en ver lo que puede hacer con el desarrollo de UWP, eche un vistazo a esta área de nuestros documentos: </br>   [Características de las aplicación para UWP](../develop/index.md). </br> La referencia de API para aplicaciones de Windows 10 está hospedada en un conjunto de documentos relacionados, que puede encontrar aquí: </br>   [Espacios de nombres de UWP de Windows](/uwp/api/) </br>   [Archivo y esquemas XML](/uwp/schemas/) |
 | **Desarrollar juegos** | Estos documentos contienen información sobre cómo desarrollar juegos en Windows o Xbox. Esto incluye instrucciones de configuración, programas de desarrolladores e instrucciones para programar con características de DirectX o Xbox. </br>   [Introducción al desarrollo de juegos](../gaming/getting-started.md) |
 | **Publicar** | Estos documentos contienen información sobre cómo publicar su aplicación en la Tienda Windows, desde el envío de la aplicación hasta precios, promoción y atracción de clientes: </br>   [Publicar la aplicación en la Tienda Windows](../publish/index.md) |
 

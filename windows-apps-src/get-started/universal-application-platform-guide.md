@@ -7,18 +7,18 @@ ms.topic: article
 ms.custom: contperfq1
 keywords: Windows 10, UWP, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: 416df29fcb6ac007375ff9cf2a8f22d80a12b73e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f435631b575a06daae9cb4d34c5419e93ba8063f
+ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219828"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92011357"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?
 
 UWP es una de las muchas maneras de crear aplicaciones cliente para Windows. Las aplicaciones UWP usan las API de WinRT para proporcionar características de interfaz de usuario avanzadas y asincrónicas eficaces que son ideales para dispositivos conectados a Internet.
 
-Para descargar las herramientas necesarias para comenzar a crear aplicaciones para UWP, consulte [Preparación](get-set-up.md) y, después, [escriba su primera aplicación](your-first-app.md).
+Para descargar las herramientas necesarias para comenzar a crear aplicaciones para UWP, consulte [Preparación](/windows/apps/get-set-up.md) y, después, [escriba su primera aplicación](your-first-app.md).
 
 
 ## <a name="where-does-uwp-fit-in-the-microsoft-development-story"></a>¿Qué papel desempeña UWP en la historia de desarrollo de Microsoft?
@@ -121,7 +121,7 @@ Las aplicaciones para UWP usan Windows Runtime, la API nativa proporcionada por
 
 ### <a name="get-set-up"></a>Prepárate
 
-Consulte [Preparación](get-set-up.md) para descargar las herramientas que necesita a fin de empezar a crear aplicaciones y [escriba su primera aplicación](your-first-app.md).
+Consulte [Preparación](/windows/apps/get-started/get-set-up.md) para descargar las herramientas que necesita a fin de empezar a crear aplicaciones y [escriba su primera aplicación](your-first-app.md).
 
 ### <a name="design-your-app"></a>Diseña tu aplicación
 

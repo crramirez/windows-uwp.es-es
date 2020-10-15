@@ -4,12 +4,12 @@ description: Administra los repositorios a los que accede el Administrador de pa
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d383dfc4e66c75c993210d382b674508ad3cef4
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 08af76389627bb8c21bf7a4ddb856d09119dc917
+ms.sourcegitcommit: 837ef4b2c2375d023ee85204f72a029f9ec8f4ee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334484"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92079280"
 ---
 # <a name="source-command-winget"></a>Comando source (winget)
 
@@ -128,7 +128,7 @@ El subcomando **update**, combinado con la opción **--name**, puede dirigirse y
 
 El subcomando **remove** quita un origen. Este subcomando requiere la opción **--name** y el **argumento de name** para identificar el origen.
 
-Uso: `winget source add [-n, --name] \<name>`
+Uso: `winget source remove [-n, --name] \<name>`
 
 Por ejemplo: `winget source remove --name Contoso`
 
