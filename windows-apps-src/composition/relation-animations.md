@@ -1,16 +1,16 @@
 ---
 title: Animaciones basadas en relaciones
 description: Aprenda a usar ExpressionAnimations para crear animaciones basadas en relaciones cuando el movimiento depende de una propiedad de otro objeto.
-ms.date: 10/10/2017
+ms.date: 10/16/2020
 ms.topic: article
 keywords: Windows 10, UWP, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 57d2f3729430faefc7db31cad6a0ac91ddaa2e02
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 75adcd2f762fd4314d7b852811760d523ef522aa
+ms.sourcegitcommit: fe21402578a1f434769866dd3c78aac63dbea5ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166369"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92152417"
 ---
 # <a name="relation-based-animations"></a>Animaciones basadas en relaciones
 
@@ -52,10 +52,10 @@ Las expresiones también admiten un conjunto de palabras clave: frases especiale
 
 ### <a name="creating-expressions-with-expressionbuilder"></a>Crear expresiones con ExpressionBuilder
 
-Hay dos opciones para compilar expresiones en su aplicación para UWP:
+Hay dos opciones para compilar expresiones en la aplicación para UWP:
 
-1. Compilar la ecuación como una cadena a través de la API pública oficial.
-1. Generar la ecuación en un modelo de objetos con seguridad de tipos mediante la herramienta de código abierto ExpressionBuilder. Vea el [origen y la documentación de github](https://github.com/microsoft/WindowsCompositionSamples/tree/master/ExpressionBuilder).
+1. Cree la ecuación como una cadena a través de la API pública oficial.
+1. Cree la ecuación en un modelo de objetos con seguridad de tipos a través de la herramienta ExpressionBuilder incluida en el kit de herramientas de la [comunidad de Windows](/windows/communitytoolkit/animations/expressions).
 
 En este documento, se definirán las expresiones mediante ExpressionBuilder.
 
@@ -112,7 +112,9 @@ var orbitRotation = EF.Vector3(
 ```
 
 > [!NOTE]
-> `EF` es una notación abreviada de "uso" para definir ExpressionBuilder. ExpressionFunctions.
+> `EF` es una notación abreviada de "uso" para definir ExpressionFunctions.
+>
+> `using EF = Microsoft.Toolkit.Uwp.UI.Animations.Expressions.ExpressionFunctions;`
 
 Por último, combine estos componentes juntos y haga referencia a la posición de la bola roja para definir la relación matemática.
 

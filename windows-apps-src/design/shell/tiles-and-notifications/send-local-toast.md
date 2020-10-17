@@ -1,27 +1,27 @@
 ---
-Description: Obtenga información sobre cómo enviar una notificación del sistema local y controlar el usuario que hace clic en la notificación del sistema.
-title: Enviar una notificación de icono local
+Description: Obtenga información sobre cómo enviar una notificación del sistema local desde aplicaciones de UWP y controlar el usuario que hace clic en la notificación del sistema.
+title: Envío de una notificación del sistema local desde aplicaciones para UWP
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
-label: Send a local toast notification
+label: Send a local toast notification from UWP apps
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, procedimientos, Inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: 566a1093fc576751bdd2428c2349428a5d2ef626
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 7b669ad3c846fec0b60ae01134b80a6d87586c62
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984721"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100293"
 ---
-# <a name="send-a-local-toast-notification"></a>Enviar una notificación de icono local
+# <a name="send-a-local-toast-notification-from-uwp-apps"></a>Envío de una notificación del sistema local desde aplicaciones para UWP
 
 
 Una notificación del sistema es un mensaje que una aplicación puede crear y enviar al usuario mientras no está actualmente dentro de la aplicación. Esta guía de inicio rápido le guiará por los pasos necesarios para crear, enviar y mostrar una notificación del sistema de Windows 10 con las nuevas plantillas adaptables y las acciones interactivas. Estas acciones se muestran a través de una notificación local, que es la notificación más sencilla que se va a implementar.
 
 > [!IMPORTANT]
-> Las aplicaciones Win32 (incluidas las aplicaciones [MSIX](/windows/msix/desktop/source-code-overview) empaquetadas, las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) tienen pasos diferentes para enviar notificaciones y controlar la activación. Consulte la documentación de las [aplicaciones Win32](toast-desktop-apps.md) para obtener información sobre cómo implementar notificaciones del sistema.
+> Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones de escritorio clásicas no empaquetadas) tienen diferentes pasos para enviar notificaciones y controlar la activación. Consulte la documentación de las [aplicaciones de escritorio](toast-desktop-apps.md) para obtener información sobre cómo implementar notificaciones del sistema.
 
 > **API importantes**: [clase ToastNotification](/uwp/api/Windows.UI.Notifications.ToastNotification), [clase ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
@@ -192,7 +192,7 @@ Puede agregar contenido enriquecido a las notificaciones. Agregaremos una imagen
 > Las imágenes se pueden usar desde el paquete de la aplicación, el almacenamiento local de la aplicación o desde la Web. A partir de la actualización de Fall Creators, las imágenes Web pueden tener hasta 3 MB en las conexiones normales y 1 MB en las conexiones de uso medido. En los dispositivos que aún no ejecuten el Fall Creators Update, las imágenes web no deben tener más de 200 KB.
 
 > [!IMPORTANT]
-> Las imágenes http solo se admiten en aplicaciones UWP/MSIX/dispersas que tienen la capacidad de Internet en su manifiesto. Las aplicaciones Win32 que no son MSIX/dispersas no admiten imágenes http; debe descargar la imagen en los datos de la aplicación local y hacer referencia a ella localmente.
+> Las imágenes http solo se admiten en aplicaciones UWP/MSIX/dispersas que tienen la capacidad de Internet en su manifiesto. Las aplicaciones de escritorio no MSIX/Sparse no admiten imágenes http; debe descargar la imagen en los datos de la aplicación local y hacer referencia a ella localmente.
 
 <img alt="Toast with images" src="images/send-toast-02.png" width="364"/>
 

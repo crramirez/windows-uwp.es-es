@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 2 (julio de 2020)
 description: Introducción a WinUI 3, versión preliminar 2.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 11c7ff587c7c237c19ad627587f082be84e68bf8
-ms.sourcegitcommit: 337f31b3fe3ff434dbc2c232fb84c3b22ebd4be8
+ms.openlocfilehash: ec4a112eceef7053244d676b6070784174291ed1
+ms.sourcegitcommit: 8b01b9ab7293dad1259da32d1459fdd454796e12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804579"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92020165"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
 
@@ -99,7 +99,7 @@ Las siguientes plantillas de elementos están disponibles para usarse en un proy
 |----------|----------|-------------|
 | Página en blanco (WinUI) | C# y C++ | Agrega un archivo XAML y un archivo de código que define una nueva página que se deriva de la clase **Microsoft.UI.Xaml.Controls.Page** de la biblioteca de WinUI. |
 | Ventana en blanco (WinUI en Escritorio) | C# y C++ | Agrega un archivo XAML y un archivo de código que define una nueva ventana que se deriva de la clase **Microsoft.UI.Xaml.Window** de la biblioteca de WinUI. |
-| Control personalizado (WinUI) | C# y C++ | Agrega un archivo de código para crear un control con plantilla con un estilo predeterminado. El control con plantilla se deriva de la clase **Microsoft.UI.Xaml.Controls.Control** de la biblioteca de WinUI.<p></p>Para ver un tutorial que muestra cómo usar esta plantilla de elemento, vea [Controles XAML con plantilla para aplicaciones para UWP y WinUI 3 con C++ /WinRT](xaml-templated-controls-cppwinrt-winui3.md). Para más información sobre los controles con plantilla, vea [Controles XAML personalizados](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls). |
+| Control personalizado (WinUI) | C# y C++ | Agrega un archivo de código para crear un control con plantilla con un estilo predeterminado. El control con plantilla se deriva de la clase **Microsoft.UI.Xaml.Controls.Control** de la biblioteca de WinUI.<p></p>Para ver un tutorial que muestra cómo usar esta plantilla de elemento, vea [Controles XAML con plantilla para aplicaciones para UWP y WinUI 3 con C++ /WinRT](xaml-templated-controls-cppwinrt-winui-3.md) y [Controles XAML con plantilla para aplicaciones para UWP y WinUI 3 con C#](xaml-templated-controls-csharp-winui-3.md). Para más información sobre los controles con plantilla, vea [Controles XAML personalizados](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls). |
 | Diccionario de recursos (WinUI) | C# y C++ | Agrega una colección vacía y con clave de recursos XAML. Para más información, consulte [Referencias a ResourceDictionary y a los recursos XAML](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references). |
 | Archivo de recursos (WinUI) | C# y C++ | Agrega un archivo para almacenar los recursos de cadena y condicionales de la aplicación. Puede usar este elemento para ayudar a localizar la aplicación. Para más información, consulte [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación](/windows/uwp/app-resources/localize-strings-ui-manifest). |
 | Control de usuario (WinUI) | C# y C++ | Agrega un archivo XAML y un archivo de código para crear un control de usuario que se deriva de la clase **Microsoft.UI.Xaml.Controls.UserControl** de la biblioteca de WinUI. Normalmente, un control de usuario encapsula controles existentes relacionados y proporciona su propia lógica.<p></p>Para más información sobre los controles de usuario, vea [Controles XAML personalizados](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls). |

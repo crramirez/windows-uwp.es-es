@@ -1,17 +1,17 @@
 ---
-description: El código que se integra con el dispositivo y sus sensores implica la entrada del usuario y la salida de este.
+description: Obtenga información sobre cómo migrar Windows Runtime 8. x a UWP para el modelo de e/s, el dispositivo y la aplicación.
 title: Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b6d319b901791a7c6b4b6b2fd93e8c217a3caef2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fe0d78f40fc7e4ca28e5ef766ff713b3aaf9f189
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167539"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133078"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Migración de Windows Runtime 8.x a UWP para E/S, dispositivo y modelo de aplicaciones
 

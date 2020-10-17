@@ -1,4 +1,4 @@
-- name: Información general
+- name: Introducción
   href: index.md
 - name: Conceptos básicos de diseño
   items:
@@ -140,7 +140,7 @@
               href: controls-and-patterns/nested-ui.md
     - name: Cuadros de diálogo y controles flotantes
       items:
-        - name: Información general
+        - name: Introducción
           href: controls-and-patterns/dialogs-and-flyouts/index.md
         - name: Cuadros de diálogo
           href: controls-and-patterns/dialogs-and-flyouts/dialogs.md
@@ -318,7 +318,7 @@
           items:
             - name: Aplicaciones para UWP
               href: shell/tiles-and-notifications/send-local-toast.md
-            - name: Aplicaciones Win32
+            - name: Aplicaciones de escritorio
               items:
                 - name: Introducción
                   href: shell/tiles-and-notifications/toast-desktop-apps.md
@@ -360,7 +360,7 @@
       href: shell/tiles-and-notifications/badges.md
     - name: Notificaciones de inserción
       items:
-        - name: Información general
+        - name: Introducción
           href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
         - name: Prioridades de WNS
           href: shell/tiles-and-notifications/wns-notification-priorities.md
@@ -538,7 +538,7 @@
       href: devices/designing-for-MR.md
 - name: Facilidad de uso
   items:
-    - name: Información general
+    - name: Introducción
       href: usability/index.md
     - name: Accesibilidad
       href: accessibility/accessibility.md

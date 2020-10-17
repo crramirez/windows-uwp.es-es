@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, iconos secundarios, PIN, anclaje, Inicio rápido, ejemplo de código, ejemplo, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: dc65768eb90ca51a86db51dd0add00d9542df24e
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 2e84885f6c75b37614c054fe1919cf71e09d5d07
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984681"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100353"
 ---
 # <a name="pin-secondary-tiles-to-start"></a>Anclar iconos secundarios a Inicio
 
@@ -110,7 +110,7 @@ Puede mejorar el icono secundario para Windows Mixed Reality agregando recursos 
 Por último, solicite el anclaje del icono. Tenga en cuenta que se debe llamar a este método desde un subproceso de interfaz de usuario. En el escritorio, aparecerá un cuadro de diálogo que le pide al usuario que confirme si desea anclar el icono.
 
 > [!IMPORTANT]
-> Si es una aplicación de Win32 que usa el puente de escritorio, primero debe realizar un paso adicional, como se describe en [PIN from Win32 apps](secondary-tiles-desktop-pinning.md) .
+> Si es una aplicación de escritorio que usa el puente de escritorio, primero debe realizar un paso adicional, como se describe en [anclar desde aplicaciones de escritorio](secondary-tiles-desktop-pinning.md) .
 
 ```csharp
 // Pin the tile

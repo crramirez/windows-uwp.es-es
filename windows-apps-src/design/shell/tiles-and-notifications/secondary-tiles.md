@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, iconos secundarios
 ms.localizationpriority: medium
-ms.openlocfilehash: a4cd65093e9969531c3de683064973aab58b1680
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: ecafd52be36b34c83d9b11757ccd733e796fd727
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984671"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100343"
 ---
 # <a name="secondary-tiles"></a>Iconos secundarios
 
@@ -33,7 +33,7 @@ Al agregar iconos secundarios a la aplicación, ayuda al usuario a volver a inte
 | --- | --- |
 | [Guía sobre iconos secundarios](secondary-tiles-guidance.md) | Obtenga información acerca de Cuándo y dónde debe usar iconos secundarios. |
 | [Anclar iconos secundarios](secondary-tiles-pinning.md) | Obtenga información sobre cómo anclar un icono secundario. |
-| [Anclar desde aplicaciones Win32](secondary-tiles-desktop-pinning.md) | Las aplicaciones Win32 pueden anclar iconos secundarios gracias al puente de escritorio. |
+| [Anclar desde aplicaciones de escritorio](secondary-tiles-desktop-pinning.md) | Las aplicaciones de escritorio pueden anclar iconos secundarios gracias al puente de escritorio. |
 
 
 ## <a name="secondary-tiles-in-relation-to-primary-tiles"></a>Mosaicos secundarios con respecto a los iconos principales
@@ -79,5 +79,5 @@ Para obtener información acerca de Cuándo y dónde se deben usar los iconos se
 Para obtener información sobre cómo anclar iconos secundarios, consulte [iconos secundarios de PIN](secondary-tiles-pinning.md).
 
 
-## <a name="win32-applications-and-secondary-tiles"></a>Aplicaciones Win32 y mosaicos secundarios
-Para obtener información sobre cómo usar los iconos secundarios de la aplicación Win32 a través del puente de escritorio, consulte [anclar iconos secundarios de aplicaciones Win32](secondary-tiles-desktop-pinning.md).
+## <a name="desktop-applications-and-secondary-tiles"></a>Aplicaciones de escritorio y mosaicos secundarios
+Para obtener información sobre cómo usar iconos secundarios desde la aplicación de escritorio a través del puente de escritorio, consulte [anclar iconos secundarios de aplicaciones de escritorio](secondary-tiles-desktop-pinning.md).

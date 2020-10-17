@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, mosaicos de seguimiento, mosaicos dinámicos, notificaciones de icono de seguimiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 770c3f13d701de622c4f6ea8075dfef5f6b1afc8
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 951dc891fb34ae4be7551c08ff47eabc19ae9eb6
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984461"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100283"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificaciones de iconos rastreables
 
@@ -140,14 +140,14 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ```
 
 
-### <a name="accessing-onlaunched-from-win32-applications"></a>Acceder a Onlaunched desde aplicaciones Win32
+### <a name="accessing-onlaunched-from-desktop-applications"></a>Acceso a Onlaunched desde aplicaciones de escritorio
 
-Las aplicaciones de Win32 (como WPF, etc.) que usan el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), pueden usar también iconos de seguimiento. La única diferencia es el acceso a los argumentos Onlaunched. Tenga en cuenta que primero debe [empaquetar la aplicación con el puente de escritorio](/windows/msix/desktop/source-code-overview).
+Las aplicaciones de escritorio (por ejemplo, WPF, etc.) que usan el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), también pueden usar mosaicos de seguimiento. La única diferencia es el acceso a los argumentos Onlaunched. Tenga en cuenta que primero debe [empaquetar la aplicación con el puente de escritorio](/windows/msix/desktop/source-code-overview).
 
 > [!IMPORTANT]
 > **Requiere la actualización de octubre de 2018**: para usar la `AppInstance.GetActivatedEventArgs()` API, debe tener como destino el SDK 17763 y ejecutar la compilación 17763 o posterior.
 
-En el caso de las aplicaciones Win32, para tener acceso a los argumentos de inicio, haga lo siguiente...
+En el caso de las aplicaciones de escritorio, para tener acceso a los argumentos de inicio, haga lo siguiente...
 
 ```csharp
 
