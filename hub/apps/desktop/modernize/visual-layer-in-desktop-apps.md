@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
-ms.openlocfilehash: 33a5f0bc31a8fe1421f7ab0de5f229d2feb77915
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 8fc9b3ea0f085a12be769e9733b3f92b2700dc16
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730137"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91932946"
 ---
 # <a name="using-the-visual-layer-in-desktop-apps"></a>Usar la capa visual en aplicaciones de escritorio
 
@@ -22,7 +22,7 @@ En muchos casos, puedes usar [islas XAML](xaml-islands.md) para agregar controle
 
 La capa visual proporciona una API de modo retenido y alto rendimiento para gráficos, efectos y animaciones. Es la base de la interfaz de usuario de todos los dispositivos Windows 10. Los controles XAML de UWP se basan en la capa visual y habilitan muchos aspectos del [sistema Fluent Design](/windows/uwp/design/fluent-design-system/index), tales como luz, profundidad, movimiento, material y escala.
 
-![Interfaz de usuario creada con la capa visual](images/visual-layer-interop/pull-to-animate.gif)
+![Vídeo corto en el que se muestra la interfaz de usuario creada con la capa visual.](images/visual-layer-interop/pull-to-animate.gif)
 
 > _Interfaz de usuario creada con la capa visual_
 
@@ -54,7 +54,7 @@ Los [efectos de Composition](/windows/uwp/composition/composition-effects) inclu
 
 Las [animaciones de Composition](/windows/uwp/composition/composition-animation) se ejecutan directamente en el proceso del compositor, independientemente del subproceso de la interfaz de usuario. Esto garantiza fluidez y escalado, para que puedas ejecutar un gran número de animaciones explícitas simultáneas. Además de las animaciones KeyFrame conocidas para controlar los cambios de propiedad a lo largo del tiempo, puedes usar expresiones para configurar las relaciones matemáticas entre las distintas propiedades, incluida la entrada del usuario. Las animaciones controladas por la entrada permiten crear una interfaz de usuario que responde de forma dinámica y fluida a la entrada del usuario, lo que mejora la interacción con el usuario.
 
-![Interfaz de usuario creada con la capa visual](images/visual-layer-interop/swipe-scroller.gif)
+![Vídeo corto de otra interfaz de usuario creada con la capa visual.](images/visual-layer-interop/swipe-scroller.gif)
 
 > _Movimiento que se demuestra en la [galería de ejemplos de Windows.UI.Composition](https://github.com/Microsoft/WindowsCompositionSamples/tree/master/SampleGallery)._
 

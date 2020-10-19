@@ -10,16 +10,19 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a35e065a44eb55b84f6b70f5833c8652188a8c9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 867ece1f3517b2b34836dc87ab4e6545ba3d3bbc
+ms.sourcegitcommit: 837ef4b2c2375d023ee85204f72a029f9ec8f4ee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174649"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92079290"
 ---
 # <a name="content-links-in-text-controls"></a>Vínculos de contenido en controles de texto
 
 Los vínculos de contenido proporcionan una forma de insertar datos enriquecidos en los controles de texto, lo que permite al usuario encontrar y usar más información sobre una persona o un lugar sin abandonar el contexto de la aplicación.
+
+> [!IMPORTANT]
+> Las características de Windows que habilitan los vínculos de contenido no están disponibles en las versiones de Windows posteriores a la versión 1903 de Windows 10. Los vínculos de contenido para los controles de texto XAML no funcionarán en las versiones de Windows posteriores a 1903.
 
 Cuando el usuario agrega un prefijo a una entrada con un símbolo de arroba (@) en un RichEditBox, aparece una lista de sugerencias de contactos o lugares que coinciden con la entrada. Después, por ejemplo, cuando el usuario elige un lugar, se inserta un ContentLink para dicho lugar en el texto. Cuando el usuario invoca el vínculo de contenido de RichEditBox, se muestra un control flotante con un mapa y la información adicional sobre el lugar.
 

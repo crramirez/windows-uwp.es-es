@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python en windows, python web con wsl, aplicación web de python con el subsistema de windows para linux, desarrollo web de python en windows, aplicación de flask en windows, aplicación de django en windows, python web, desarrollo web de flask en windows, desarrollo web de django en windows, desarrollo web de windows con python, desarrollo web de python de vs code, extensión remota de wsl, ubuntu, wsl, venv, pip, extensión de python de microsoft, ejecutar python en windows, usar python en windows, compilar con python en windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: fedfb42e4c1604b3570c2b4db21b12926bea3762
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 187195133dd614818d3c68473cc53b71a0b32333
+ms.sourcegitcommit: 27552ed7d3d889f50d8e01776a24b8d486a8d97c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174569"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91958748"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Introducción al uso de Python para el desarrollo web en Windows
 

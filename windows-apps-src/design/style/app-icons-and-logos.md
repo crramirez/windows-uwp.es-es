@@ -1,5 +1,5 @@
 ---
-Description: Cómo crear iconos o logotipos de app que representan la app en el menú Inicio, los iconos de app, la barra de tareas, Microsoft Store y mucho más.
+description: Cómo crear iconos o logotipos de app que representan la app en el menú Inicio, los iconos de app, la barra de tareas, Microsoft Store y mucho más.
 title: Logotipos e iconos de aplicaciones
 template: detail.hbs
 ms.date: 09/24/2020
@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1e313fe0e51ed77d416f782e40aee9dee81796ae
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 4e908cbad1fb0b70fe96af50917e8b895fdda90d
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636655"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860123"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicaciones 
 
@@ -141,7 +141,7 @@ Para iniciar el Diseñador de manifiestos:
             Visual Studio muestra el diseñador de manifiestos.
     :::column-end:::
     :::column:::
-            ![Pestaña Recursos visuales](images/icons/vs-manfiest-designer.png)
+            ![Captura de pantalla del diseñador de manifiestos en la que se muestra la pestaña Aplicación.](images/icons/vs-manfiest-designer.png)
     :::column-end:::
 :::row-end:::    
 :::row:::
@@ -149,7 +149,7 @@ Para iniciar el Diseñador de manifiestos:
         3. Haz clic en la pestaña **Recursos visuales**.
     :::column-end:::
     :::column:::
-        ![Pestaña Recursos visuales](images/icons/vs-manfiest-designer-visual-assets.png)
+        ![Captura de pantalla del diseñador de manifiestos en la que se muestra la pestaña Recursos visuales.](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 

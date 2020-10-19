@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 32054a30e56102b9c0642392d78ac75b78fb99e9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7f0e1d460ca52c659401bbb291deafa5746b7bb6
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158229"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933116"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -73,12 +73,12 @@ Para cargar un certificado para la compilación automatizada:
 1. En Azure Pipelines, expande **Canalizaciones** en el panel de navegación y haz clic en **Biblioteca**.
 2. Haz clic en la pestaña **Archivos seguros** y, a continuación, haz clic en **+ Archivo seguro**.
 
-    ![Cómo cargar un archivo seguro](images/secure-file1.png)
+    ![Captura de pantalla de Azure con la opción Biblioteca resaltada que en la que se muestra la página Archivos seguros.](images/secure-file1.png)
 
 3. Busca el archivo de certificado y haz clic en **Aceptar**.
 4. Después de cargar el certificado, selecciónalo para ver sus propiedades. En **Permisos de canalización**, habilita la opción **Autorizar para su uso en todas las canalizaciones**.
 
-    ![Cómo cargar un archivo seguro](images/secure-file2.png)
+    ![Captura de pantalla de la sección Permisos de canalizaciones con la opción Autorizar para su uso en todas las canalizaciones seleccionada.](images/secure-file2.png)
 
 5. Si la clave privada del certificado tiene una contraseña, se recomienda que almacenes la contraseña en [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates) y, posteriormente, vincules la contraseña a un [grupo de variables](/azure/devops/pipelines/library/variable-groups). Puedes usar las variables para acceder a la contraseña desde la canalización. Ten en cuenta que una contraseña solo se admite para la clave privada; actualmente no se admite el uso de un archivo de certificado protegido por contraseña.
 

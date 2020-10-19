@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bb0a6b48e9a9a01881955ae0ccb65e93b9cf2b6e
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 5f06d5e804d41b1751c72af4d07224fa346323b2
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636545"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860102"
 ---
 # <a name="typography-in-windows-apps"></a>Tipografía en aplicaciones de Windows
 
@@ -23,7 +23,7 @@ Como representación visual del lenguaje, la tarea principal de la tipografía e
 
 Debes usar una fuente en toda la interfaz de usuario de la aplicación y te recomendamos superponerla con la fuente predeterminada para aplicaciones de Windows, **Segoe UI**. Se ha diseñado para mantener la legibilidad óptima en tamaños y densidades de píxeles y ofrece una estética limpia, ligera y abierta que complementa el contenido del sistema.
 
-![Texto de muestra de la fuente Segoe UI](images/type/segoe-sample.svg)
+![Texto de muestra de la fuente Segoe UI.](images/type/segoe-sample.svg)
 
 Con el fin de mostrar idiomas que no son inglés o seleccionar una fuente diferente para tu aplicación, consulta [Idiomas](#languages) y [Fuentes](#fonts) para nuestras fuentes recomendadas para aplicaciones de Windows.
 
@@ -41,7 +41,7 @@ Elija una fuente para la interfaz de usuario.
 
 Los tamaños de fuente en las aplicaciones para UWP se escalan automáticamente en todos los dispositivos. El algoritmo de escalado garantiza que una fuente de 24px en un dispositivo Surface Hub a 3 metros de distancia sea tan legible como una fuente de 24px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 
-![distancias de visualización para diferentes dispositivos](images/type/scaling-chart.svg)
+![Distancias de visualización para diferentes dispositivos](images/type/scaling-chart.svg)
 
 Debido a cómo funciona el sistema de escalado, diseñas en píxeles efectivos, no píxeles físicos reales y no tienes por qué modificar los tamaños de fuente para las resoluciones y los tamaños de pantallas diferentes.
 
@@ -62,7 +62,7 @@ Siga el tamaño de la [rampa de tipos](#type-ramp) de Windows.
 Los usuarios dependen de la jerarquía visual cuando analizan una página: los encabezados resumen contenido y el texto del cuerpo ofrece más detalles. Para crear una jerarquía visual clara en la aplicación, sigue la rampa de tipos de Windows.
     :::column-end:::
     :::column:::
-![estilos de bloque de texto](images/type/type-hierarchy.svg)
+![Captura de pantalla de tres líneas de texto en la que el tamaño de fuente se reduce de una línea a la siguiente.](images/type/type-hierarchy.svg)
     :::column-end:::
 :::row-end:::
 
@@ -70,18 +70,13 @@ Los usuarios dependen de la jerarquía visual cuando analizan una página: los e
 
 La rampa de tipos de Windows establece relaciones cruciales entre los estilos de tipos de una página, lo que ayuda a los usuarios a leer fácilmente el contenido. Todos los tamaños se encuentran en píxeles efectivos y están optimizados para aplicaciones para UWP que se ejecutan en todos los dispositivos.
 
-![Rampa de tipografías](images/type/type-ramp.png)
+![Rampa de tipos de Windows.](images/type/type-ramp.png)
 
 ### <a name="using-the-type-ramp"></a>Uso de la rampa de tipos
 
 :::row:::
     :::column:::
-Puedes acceder a los niveles de la rampa de tipos como [recursos estáticos](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp) XAML. Los estilos siguen la convención de nomenclatura `*TextBlockStyle`.
-    :::column-end:::
-    :::column:::
-![estilos de bloque de texto](images/type/text-block-type-ramp.svg)
-    :::column-end:::
-:::row-end:::
+Puedes acceder a los niveles de la rampa de tipos como [recursos estáticos](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp) XAML. Los estilos siguen la convención de nomenclatura `*TextBlockStyle` que se muestra aquí.
 
 ```XAML
 <TextBlock Text="Header" Style="{StaticResource HeaderTextBlockStyle}"/>
@@ -92,6 +87,13 @@ Puedes acceder a los niveles de la rampa de tipos como [recursos estáticos](../
 <TextBlock Text="Body" Style="{StaticResource BodyTextBlockStyle}"/>
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
+    :::column-end:::
+    :::column:::
+![Captura de pantalla de los estilos de texto de encabezado, subencabezado, título, subtítulo, base, cuerpo y descripción.](images/type/text-block-type-ramp.svg)
+    :::column-end:::
+:::row-end:::
+
+
 
 :::row:::
     :::column:::
@@ -133,7 +135,7 @@ Mantenga de 50 a 60 letras por línea para facilitar la lectura.
 
 Cuando la cantidad de texto se extiende más allá del espacio disponible, se recomienda recortar texto, que es el comportamiento predeterminado de la mayor parte de [controles de texto de UWP](../controls-and-patterns/text-controls.md).
 
-![Muestra el marco de un dispositivo con texto recortado](images/type/clipping.svg)
+![Muestra el marco de un dispositivo con texto recortado.](images/type/clipping.svg)
 
 ```xaml
 <TextBlock TextWrapping="WrapWholeWords" TextTrimming="Clip"/>

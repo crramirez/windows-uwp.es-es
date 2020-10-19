@@ -8,12 +8,12 @@ ms.topic: article
 keywords: ''
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: a1bd1b0f2916ccf44cc79d83f0335f55cf3863e4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bd9b912dfd4b733f57aaacfe6e8f246985e3b4f5
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166629"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933086"
 ---
 # <a name="get-started-using-docker-containers-with-nodejs"></a>Introducción al uso de contenedores de Docker con Node.js
 
@@ -47,7 +47,7 @@ Para instalar y ejecutar Docker Desktop WSL 2 Tech Preview:
 
 2. Abre el instalador de Docker que acabas de descargar. El Asistente para la instalación te preguntará si deseas "usar contenedores Windows en lugar de contenedores Linux"; no actives esta casilla, ya que vamos a usar el subsistema Linux. Docker se instalará en un directorio administrado en la distribución predeterminada de WSL 2 e incluirá el demonio de Docker, la CLI y la CLI de Compose.
 
-    ![Inicio de Docker Desktop](../images/install-docker-1.png)
+    ![Captura de pantalla de la página Configuración del Asistente para la instalación de Docker Desktop en la que se muestra la opción Add shortcut to desktop (Agregar acceso directo al escritorio) seleccionada.](../images/install-docker-1.png)
 
 3. Si aún no tienes un identificador de Docker, tendrás que configurar uno visitando: [https://hub.docker.com/signup](https://hub.docker.com/signup). El identificador debe tener todos los caracteres alfanuméricos en minúsculas.
 
@@ -55,7 +55,7 @@ Para instalar y ejecutar Docker Desktop WSL 2 Tech Preview:
 
 5. Una vez que se abra la ventana de la vista previa técnica, selecciona **Iniciar** para empezar a ejecutar el demonio de Docker (proceso en segundo plano) en WSL 2. Cuando se inicia el demonio de Docker de WSL 2, se crea automáticamente un contexto de la CLI de Docker.
 
-    ![Inicio de Docker Desktop](../images/start-docker.gif)
+    ![Vídeo corto en el que se muestra cómo iniciar la versión preliminar técnica de Docker.](../images/start-docker.gif)
 
 6. Para confirmar que se ha instalado Docker y mostrar el número de versión, abre una línea de comandos (WSL o PowerShell) y escribe: `docker --version`
 

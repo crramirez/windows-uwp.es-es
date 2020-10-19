@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 6cdeee0730a2fe68f671a41ea77b000ab13bc0cb
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: 3f12c3d16cabcbe834ca9bb55a437e3f932bbf78
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671564"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933056"
 ---
 # <a name="host-a-custom-winrt-xaml-control-in-a-c-win32-app"></a>Hospedaje de un control XAML personalizado de WinRT en una aplicación Win32 de C++
 
@@ -377,7 +377,7 @@ A continuación, actualiza el proyecto **MyDesktopWin32App** para definir una ma
 
 5. Haga clic con el botón derecho en el proyecto **MyDesktopWin32App**, seleccione **Propiedades** y expanda **Herramienta Manifiesto** -> **Entrada y salida** en el panel izquierdo. Establece la propiedad **Reconocimiento de ppp** en **Reconocimiento de ppp elevado por monitor**. Si no estableces esta propiedad, es posible que se produzca un error de configuración del manifiesto en ciertos escenarios de PPP elevado.
 
-    ![Configuración del proyecto C/C++](images/xaml-islands/xaml-island-cpp-8.png)
+    ![Captura de pantalla de la configuración del proyecto de C/C++.](images/xaml-islands/xaml-island-cpp-8.png)
 
 6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Páginas de propiedades**.
 

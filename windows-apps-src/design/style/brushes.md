@@ -6,12 +6,12 @@ ms.date: 04/28/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e70c76f3ed659a46dd9834442049849dd3b7761
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1bf42e75ed8bb6d22fe8d4829aa6df32fa130230
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175529"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860050"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>Usar pinceles para pintar fondos, primeros planos y esquemas
 
@@ -106,7 +106,7 @@ En este ejemplo se crea un degradado lineal con cuatro colores y se usa para pin
 
 El color de cada punto entre los delimitadores de degradado se interpola linealmente como una combinación del color especificado por los dos delimitadores de degradado limítrofes. En la imagen siguiente, se resaltan los delimitadores de degradado del ejemplo anterior. Los círculos marcan la posición de los delimitadores de degradado y la línea punteada muestra el eje de degradado.
 
-![Delimitadores de degradado](images/linear-gradients-stops.png)
+![Diagrama que representa los delimitadores de degradado del 1 al 4 a partir de la esquina superior izquierda del diagrama y hacia abajo y hacia la derecha hasta que llega a la esquina inferior derecha del diagrama.](images/linear-gradients-stops.png)
 
 *Combinación de colores especificada por los dos delimitadores de degradado*
 
@@ -160,7 +160,7 @@ En este ejemplo se crea un degradado lineal con cuatro colores y se usa para pin
 
 El color de cada punto entre los delimitadores de degradado se interpola de forma radial como una combinación del color especificado por los dos delimitadores de degradado. En la imagen siguiente, se resaltan los delimitadores de degradado del ejemplo anterior. 
 
-![Delimitadores de degradado](images/radial-gradient.png)
+![Captura de pantalla de un degradado radial.](images/radial-gradient.png)
 
 *Delimitadores de degradado*
 

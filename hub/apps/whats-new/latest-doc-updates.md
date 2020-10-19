@@ -2,16 +2,16 @@
 Description: Descubre las últimas adiciones a los documentos para desarrolladores de Windows.
 title: Actualizaciones más recientes de los documentos para desarrolladores de Windows
 ms.topic: article
-ms.date: 10/6/2020
+ms.date: 10/8/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: e646b8ddc524a9814defbe51e64e0da3bd3eccfc
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 584709fe3b574d29f45da5bdd230862285e36bb6
+ms.sourcegitcommit: b78edb431541b40b86860c0b707449f44feced24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762971"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91870993"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Actualizaciones más recientes de los documentos para desarrolladores de Windows
 
@@ -27,12 +27,46 @@ Este mes hemos traducido otro lote de vínculos absolutos a vínculos relativos 
 
 Los aspectos destacados de este mes incluyen:
 
-* Actualizaciones de la [documentación de Surface Duo](https://docs.microsoft.com/dual-screen/introduction).
+* Documentación actualizada:
 
-* Actualizaciones de la documentación de [Windows Terminal](/windows/terminal/).
+    * Actualizaciones de la [documentación de Surface Duo](https://docs.microsoft.com/dual-screen/introduction)
 
+    * Actualizaciones de documentación de [Windows terminal](/windows/terminal/) , incluida información sobre [Docker](/windows/dev-environment/docker/overview).
 
-A continuación se indican algunos temas en los que se han realizado actualizaciones significativas el último mes.
+    * Se actualizaron los cuatro [tutoriales de las islas XAML](/windows/apps/desktop/modernize/xaml-islands) con los paquetes NuGet más recientes disponibles y versiones diferentes de WinUI.
+
+    * [Llamada a las API de Windows Runtime en aplicaciones de escritorio](/windows/apps/desktop/modernize/desktop-to-uwp-enhance): se agregaron instrucciones sobre el uso de la nueva opción de moniker de la plataforma de destino para .NET 5 y sobre la compatibilidad con varias versiones de .NET y se quitaron instrucciones anteriores sobre cómo hacer referencia a las diversas bibliotecas manualmente.
+
+    * [Botones de radio](/windows/uwp/design/controls-and-patterns/radio-button)
+
+    * [RadioButtons de WinUI](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.radiobuttons?view=winui-2.4)
+
+    * [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar?view=winrt-19041)
+
+    * [Objeto visual de Composition](/windows/uwp/composition/composition-visual-tree)
+
+    * [P+F de DirectML](/windows/win32/direct3d12/gpu-faq)
+
+    * [Programación con los SDK de extensión](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+
+    * [Método IIterator<T>.GetMany(T[])](https://docs.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.getmany?view=winrt-19041)
+
+    * [Estructura D3D12_HEAP_PROPERTIES (d3d12.h)](/windows/win32/api/d3d12/ns-d3d12-d3d12_heap_properties)
+
+* Temas nuevos 
+
+    * [Obtener información de activación de aplicaciones empaquetadas](/windows/apps/desktop/modernize/get-activation-info-for-packaged-apps)
+    * [Interfaz ID3D12Device7 (d3d12.h)](/windows/win32/api/d3d12/nn-d3d12-id3d12device7)
+    * [Interfaz ID3D12Device8 (d3d12.h)](/windows/win32/api/d3d12/nn-d3d12-id3d12device8)
+    
+
+* Nuevos ejemplos
+
+    * C++/WinRT: [introducción a WNS](/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) 
+    * C++/WinRT: [cámaras remotas](/windows/uwp/audio-video-camera/connect-to-remote-cameras) 
+
+Se han realizado actualizaciones importantes en los siguientes temas de referencia de API en el último mes.
+
 
 ## <a name="windows-uwp"></a>Windows UWP
 <ul>

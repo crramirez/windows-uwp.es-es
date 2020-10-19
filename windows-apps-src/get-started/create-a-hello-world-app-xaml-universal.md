@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10;uwp;first app;hello world;primera aplicación;hola mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b39efb7aa90499f6d238306ad079f1969907f46
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dda1c0f9a7b61c13965ff2f71c8100a8e771bd7d
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175259"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860079"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Creación de una aplicación "Hola mundo" (XAML)
 
@@ -61,11 +61,11 @@ Aquí aprenderás a:
 
 5.  Se visualiza el cuadro de diálogo de versión mínima/de destino. La configuración predeterminada es correcta para este tutorial, por lo tanto, seleccione **Aceptar** para crear el proyecto.
 
-    ![La ventana de Explorador de soluciones](images/win10-cs-02.png)
+    ![Captura de pantalla del cuadro de diálogo Nuevo proyecto de Windows universal.](images/win10-cs-02.png)
 
 6.  Cuando se abra el nuevo proyecto, sus archivos se muestran en el panel **Explorador de soluciones** de la derecha. Es posible que debas elegir la pestaña **Explorador de soluciones** en lugar de la pestaña **Propiedades** para ver los archivos.
 
-    ![La ventana de Explorador de soluciones](images/win10-cs-03.png)
+    ![Captura de pantalla del panel Explorador de soluciones con el programa Hola mundo (Windows universal) resaltado.](images/win10-cs-03.png)
 
 Aunque **Aplicación vacía (Universal Window)** es una plantilla mínima, contiene muchos archivos. Estos archivos son esenciales para todas las aplicaciones para UWP que usan C#. Todos los proyectos que crees en Visual Studio contendrán estos archivos.
 
@@ -110,15 +110,15 @@ Vamos a agregar un botón a nuestra página. En este tutorial, trabajas con solo
 
     Verás que hay una vista gráfica en la parte superior de la pantalla y la vista del código XAML debajo. Puedes realizar cambios en cualquiera de los dos, pero por ahora vamos a utilizar la vista gráfica.
 
-    ![La ventana de Explorador de soluciones](images/win10-cs-04.png)
+    ![Captura de pantalla de Visual Studio en la que se muestra la vista Diseño X A M L de la página principal.](images/win10-cs-04.png)
 
 2.  Haz clic en la pestaña vertical **Herramientas** a la izquierda para abrir la lista de controles de interfaz de usuario. (Puedes hacer clic en el icono de anclaje en la barra de título para mantenerlo visible.)
 
-    ![La ventana de Explorador de soluciones](images/win10-cs-05.png)
+    ![Captura de pantalla del panel Cuadro de herramientas con una flecha roja que apunta al icono de anclaje.](images/win10-cs-05.png)
 
 3.  Expande **Controles de XAML comunes**y arrastra el **Botón** hacia el centro del lienzo de diseño.
 
-    ![La ventana de Explorador de soluciones](images/win10-cs-06.png)
+    ![Captura de pantalla del panel Cuadro de herramientas y la vista Diseño X A M L de la página principal en la que se muestra la opción Botón resaltada en el panel Cuadro de herramientas y un botón en la vista Diseño.](images/win10-cs-06.png)
 
     Si buscas en la ventana de código XAML, verás que el botón se ha agregado allí también:
 
@@ -136,7 +136,7 @@ Vamos a agregar un botón a nuestra página. En este tutorial, trabajas con solo
 
 Observa cómo se muestra el botón en las actualizaciones del lienzo de diseño para mostrar el texto nuevo.
 
-![La ventana de Explorador de soluciones](images/win10-cs-07.png)
+![Captura de pantalla del botón Hola mundo con un cuadro rojo alrededor y el código subyacente del botón.](images/win10-cs-07.png)
 
 ## <a name="step-3-start-the-app"></a>Paso 3: Inicio de la aplicación
 
