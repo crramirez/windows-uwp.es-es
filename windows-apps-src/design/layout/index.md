@@ -1,17 +1,17 @@
 ---
-description: Aprende a diseñar y codificar una aplicación de Windows en la que resulte fácil navegar y cuyo aspecto sea perfecto en varios dispositivos y tamaños de pantalla.
+description: Obtenga información sobre cómo le ayudan a crear una interfaz de usuario flexible que quede bien en distintos tamaños de pantalla, tamaños de ventana, resoluciones y orientaciones.
 title: Información general sobre el diseño de aplicaciones de Windows
 keywords: diseño de aplicaciones para UWP, Plataforma universal de Windows, diseño de aplicaciones, interfaz
 ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 680533d1f2907ef724810ca073e1dc56a0b01fb5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 8d5a47e5bf9f644023a0bc65ad4732b71219f28b
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219608"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92132938"
 ---
 # <a name="layout"></a>Diseño
 
