@@ -5,12 +5,12 @@ ms.date: 10/12/2020
 ms.topic: article
 keywords: Windows 10, c#, winrt, cswinrt, proyección
 ms.localizationpriority: medium
-ms.openlocfilehash: bc5c8e39b808fd1a8bc557fd29ba828d33d8dde4
-ms.sourcegitcommit: df4d99f9950655be725afa83f1ee7c3b73dff923
+ms.openlocfilehash: 3116e176c8f156939f075e0a23d1be2352a8ecde
+ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92001390"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92171149"
 ---
 # <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>Tutorial: generación de una proyección de .NET 5 desde un componente/WinRT de C++ y distribución de NuGet
 
@@ -128,7 +128,16 @@ Antes de poder invocar **cswinrt.exe** y generar el ensamblado de proyección, d
     - La `CsWinRTIncludes` propiedad especifica los espacios de nombres que se van a proyectar.
     - La `CsWinRTGeneratedFilesDir` propiedad establece el directorio de salida donde se generan los archivos de la proyección, que se establecen en la sección siguiente sobre la creación fuera del origen.
 
-4. Guarde y cierre el archivo **SimpleMathProjection. csproj** .
+4. La versión más reciente de C#/WinRT en este tutorial puede requerir la especificación de los metadatos de Windows. Esto se corregirá en una versión futura de C#/WinRT. Esto se puede proporcionar con cualquiera de las siguientes opciones:
+
+    - Una referencia de paquete, como a [Microsoft. Windows. SDK. Contracts]( https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts/), o
+    - Un valor explícito establece con la `CsWinRTWindowsMetadata` propiedad:
+
+      ```xml
+      <CsWinRTWindowsMetadata>10.0.19041.0</CsWinRTWindowsMetadata>
+      ```
+
+5. Guarde y cierre el archivo **SimpleMathProjection. csproj** .
 
 ## <a name="build-projects-out-of-source"></a>Compilar proyectos fuera del origen
 
