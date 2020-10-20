@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: e7d008a6956c3acd22dcb99e6bf4e1cda1442545
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 5696d3c5ffb28ee8dc6ebd51e678894ee78ae420
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750171"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192985"
 ---
 # <a name="debug-a-background-task"></a>Depurar una tarea en segundo plano
 
@@ -91,20 +91,20 @@ La activación de la tarea en segundo plano depende de tres cosas:
 
 ## <a name="background-tasks-and-visual-studio-package-deployment"></a>Tareas en segundo plano e implementación del paquete de Visual Studio
 
-Si una aplicación que usa tareas en segundo plano se implementa con Visual Studio y la versión (mayor y/o menor) especificada en el diseñador de manifiestos después se actualiza, al reimplementar posteriormente la aplicación con Visual Studio es posible que las tareas en segundo plano de la aplicación se atasquen. Esto puede remediarse de la siguiente manera:
+Si una aplicación que usa tareas en segundo plano se implementa mediante Visual Studio y la versión (principal o secundaria) especificada en el diseñador de manifiestos se actualiza, la implementación posterior de la aplicación con Visual Studio puede hacer que las tareas en segundo plano de la aplicación se detengan. Esto puede remediarse de la siguiente manera:
 
 -   Usa Windows PowerShell para implementar la aplicación actualizada (en lugar de Visual Studio) mediante la ejecución del script generado junto con el paquete.
--   Si ya implementaste la aplicación con Visual Studio y las tareas en segundo plano de la aplicación ahora están atascadas, reinicia o cierra sesión y vuelve a abrirla para que las tareas en segundo plano vuelvan a funcionar.
+-   Si ya ha implementado la aplicación con Visual Studio y sus tareas en segundo plano ahora están detenidas, reinicie o cierre la sesión y vuelva a iniciarla para que las tareas en segundo plano de la aplicación funcionen de nuevo.
 -   Puedes seleccionar la opción de depuración "Reinstalar siempre mi paquete" para evitar esto en proyectos con C#.
--   Espera hasta que la aplicación está lista para la implementación final para incrementar la versión del paquete (no lo cambies durante la depuración).
+-   Espere hasta que la aplicación esté lista para la implementación final para incrementar la versión del paquete (no la cambie durante la depuración).
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 -   Asegúrate de que tu aplicación compruebe los registros de tareas en segundo plano existentes antes de registrar la tarea nuevamente. Varios registros de la misma tarea pueden causar resultados inesperados al ejecutar la tarea en segundo plano más de una vez cada vez que esta se desencadena.
 -   Si la tarea en segundo plano requiere acceso a la pantalla de bloqueo, asegúrate de poner la aplicación en la pantalla de bloqueo antes de intentar depurar la tarea en segundo plano. Para obtener información acerca de cómo especificar opciones para bloquear aplicaciones compatibles con la pantalla de bloqueo, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
 -   Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
-Para obtener más información sobre el uso de VS para depurar una tarea en segundo plano [, consulte Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones de UWP](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015).
+Para obtener más información sobre el uso de VS para depurar una tarea en segundo plano [, consulte Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones de UWP](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio).
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -113,7 +113,7 @@ Para obtener más información sobre el uso de VS para depurar una tarea en segu
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-* [Desencadenación de eventos de suspensión, reanudación y en segundo plano en aplicaciones para UWP](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
+* [Desencadenación de eventos de suspensión, reanudación y en segundo plano en aplicaciones para UWP](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)
 * [Análisis de la calidad del código de las aplicaciones para UWP con análisis de código de Visual Studio](/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
 
  

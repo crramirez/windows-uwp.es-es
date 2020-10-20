@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2965eb3196f2a19f7d5351ee422013c6c22ba88a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 288795b2dc189dae7b350a30446410b40044d08f
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174309"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192955"
 ---
 # <a name="windows-runtime-components-with-ccx"></a>Componentes de Windows Runtime con C++/CX
 
@@ -24,7 +24,7 @@ Hay varias razones para compilar un componente de Windows Runtime en C++.
 - Para obtener la ventaja de rendimiento de C++ en operaciones complejas o de computación intensivas.
 - Reutilizar el código que ya se ha escrito y probado.
 
-Al compilar una solución que contiene un proyecto de JavaScript o. NET y un proyecto de componente de Windows Runtime, los archivos de proyecto de JavaScript y la DLL compilada se combinan en un paquete que se puede depurar localmente en el simulador o remotamente en un dispositivo amarrado. También puedes distribuir solo el proyecto del componente como un SDK de extensión. Para más información, vea [Crear un Kit de desarrollo de Software](/visualstudio/extensibility/creating-a-software-development-kit?view=vs-2015).
+Al compilar una solución que contiene un proyecto de JavaScript o. NET y un proyecto de componente de Windows Runtime, los archivos de proyecto de JavaScript y la DLL compilada se combinan en un paquete que se puede depurar localmente en el simulador o remotamente en un dispositivo amarrado. También puedes distribuir solo el proyecto del componente como un SDK de extensión. Para más información, vea [Crear un Kit de desarrollo de Software](/visualstudio/extensibility/creating-a-software-development-kit).
 
 En general, al codificar el componente de C++/CX, use la biblioteca normal de C++ y los tipos integrados, excepto en el límite de la interfaz binaria abstracta (ABI) donde se pasan los datos hacia y desde el código en otro paquete. winmd. Allí, use tipos de Windows Runtime y la sintaxis especial que C++/CX admite para crear y manipular esos tipos. Además, en el código de C++/CX, use tipos como Delegate y Event para implementar eventos que se puedan generar desde su componente y que se controlen en JavaScript, Visual Basic, C++ o C#. Para obtener más información sobre la sintaxis de C++/CX, vea [Referencia del lenguaje Visual C++ (C++/CX)](/cpp/cppcx/visual-c-language-reference-c-cx).
 
@@ -185,7 +185,7 @@ public:
 };
 ```
 
-Pero no puede distinguir entre estas:
+Pero no puede indicar la diferencia entre estas:
 
 ```cpp
 int GetNumber(int i);

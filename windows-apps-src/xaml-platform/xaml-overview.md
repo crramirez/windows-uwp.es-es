@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 792712256e36b40cd376f0e378bb110ab33bc0fb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c4e61cb04aaefdc0aeef05ce0c61ca549019791b
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173739"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192965"
 ---
 # <a name="xaml-overview"></a>Introducción a XAML
 
@@ -256,4 +256,4 @@ Cuando la aplicación se ejecuta realmente, si se han pasado por alto errores de
 > [!NOTE]
 > Las aplicaciones que usan C++/CX para código no obtienen el [**XamlParseException**](/dotnet/api/Windows.UI.Xaml.markup.xamlparseexception?view=dotnet-uwp-10.0)específico. pero el mensaje de la excepción aclara que el origen del error está relacionado con el código XAML e incluye información de contexto como los números de línea de un archivo XAML, igual que hace **XamlParseException**.
 
-Para más información sobre cómo depurar una aplicación Windows Runtime, consulte [iniciar una sesión de depuración](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml?view=vs-2015).
+Para obtener más información sobre cómo depurar una aplicación Windows Runtime, consulte [iniciar una sesión de depuración](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml).
