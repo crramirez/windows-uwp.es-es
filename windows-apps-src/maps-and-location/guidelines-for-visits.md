@@ -1,19 +1,22 @@
 ---
-Description: Aprende a usar la eficaz característica Visits Tracking para realizar cómodamente el seguimiento de la ubicación.
+description: Aprende a usar la eficaz característica Visits Tracking para realizar cómodamente el seguimiento de la ubicación.
 title: Directrices para usar Visits tracking
 ms.assetid: 0c101684-48a9-4592-9ed5-6c20f3b830f2
-ms.date: 05/18/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, mapa, ubicación, webVisit, webvisits
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b1766d0f883fa42b005908dcc63102e97ff0d4f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bdca33832b4dfadb52dca45c7a060de4f05c500c
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162519"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297730"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a>Directrices para usar Visits tracking
+
+> [!NOTE]
+> [**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y MAP Services refieren una clave de autenticación de Maps denominada [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). Para obtener más información sobre cómo obtener y establecer una clave de autenticación de Maps, consulte [solicitar una clave de autenticación de Maps](authentication-key.md).
 
 La característica visitas optimiza el proceso de seguimiento de la ubicación para que sea más eficaz para los propósitos prácticos de muchas aplicaciones. Una visita se define como un área geográfica significativa que el usuario entra y sale. Las visitas son similares a las [geovallas](guidelines-for-geofencing.md) , ya que permiten que la aplicación reciba una notificación solo cuando el usuario entra o sale de determinadas áreas de interés, lo que elimina la necesidad de realizar un seguimiento continuo de la ubicación, lo que puede ser un consumo de batería. Sin embargo, a diferencia de las geovallas, las áreas de visita se identifican dinámicamente en el nivel de plataforma y no es necesario definirlas explícitamente en aplicaciones individuales. Además, la selección de las visitas a las que se realizará el seguimiento de una aplicación se controla mediante una configuración de granularidad única, en lugar de suscribirse a lugares individuales.
 

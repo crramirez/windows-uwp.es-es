@@ -2,20 +2,21 @@
 title: Mostrar rutas e indicaciones en un mapa
 description: Obtenga información sobre cómo recuperar rutas y direcciones mediante la clase MapRouteFinder y mostrarlas en un MapControl en una aplicación Plataforma universal de Windows (UWP).
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
-ms.date: 09/20/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, ruta, mapa, ubicación, direcciones
 ms.localizationpriority: medium
-ms.openlocfilehash: b015393d81d736e5886793431966d0d91976e80d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4171598f47d28942adb56860452a8ec49cb5e2c2
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171759"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297598"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Mostrar rutas e indicaciones en un mapa
 
-
+> [!NOTE]
+> [**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y MAP Services refieren una clave de autenticación de Maps denominada [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). Para obtener más información sobre cómo obtener y establecer una clave de autenticación de Maps, consulte [solicitar una clave de autenticación de Maps](authentication-key.md).
 
 Solicita rutas e indicaciones y muéstralas en tu aplicación.
 

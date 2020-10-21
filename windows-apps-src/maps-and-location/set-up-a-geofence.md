@@ -2,21 +2,21 @@
 title: Configurar una geovalla
 description: Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano.
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
-ms.date: 02/08/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, mapa, ubicación, geovallas, notificaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b991930ba37cfaec333146bf7a95b4c9a9c8b98
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ca6dad1a96f37e3a308ad10c84293a8d49fb0329
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171709"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297596"
 ---
 # <a name="set-up-a-geofence"></a>Configurar una geovalla
 
-
-
+> [!NOTE]
+> [**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y MAP Services refieren una clave de autenticación de Maps denominada [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). Para obtener más información sobre cómo obtener y establecer una clave de autenticación de Maps, consulte [solicitar una clave de autenticación de Maps](authentication-key.md).
 
 Configure una [**geovalla**](/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence) en la aplicación y obtenga información sobre cómo controlar las notificaciones en primer plano y en segundo plano.
 
@@ -313,7 +313,7 @@ Para escuchar un evento de geovalla en segundo plano
 
 ### <a name="step-1-register-for-geofence-state-change-events"></a>Paso 1: Registrarse para eventos de cambio de estado de geovalla
 
-En el manifiesto de la aplicación, en la pestaña **Declaraciones**, agrega una declaración para una tarea de ubicación en segundo plano. Para hacerlo:
+En el manifiesto de la aplicación, en la pestaña **Declaraciones**, agrega una declaración para una tarea de ubicación en segundo plano. Para ello, siga estos pasos:
 
 -   Agrega una declaración del tipo **Tareas en segundo plano**.
 -   Establezca un tipo de tarea de propiedad de **Ubicación**.
