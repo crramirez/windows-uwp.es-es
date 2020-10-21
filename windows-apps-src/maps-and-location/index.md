@@ -2,23 +2,22 @@
 title: Introducción a ubicación y mapas
 description: En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
-ms.date: 02/08/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, map, location, map services
 ms.localizationpriority: medium
-ms.openlocfilehash: c67312fe54492e20b6bb9a8b2d1cb07b5fc77c80
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 61b36aa8299d98544c44039abb138f4422e0a164
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171779"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297663"
 ---
 # <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 
-
-
-
 En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, buscar la ubicación y configurar una geovalla en la aplicación. En esta sección también se muestra cómo iniciar la aplicación Mapas de Windows con un mapa, una ruta o un conjunto de indicaciones paso a paso específicos.
+
+[**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y servicios de mapas requieren una clave de autenticación de mapas denominada [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). Para obtener más información sobre cómo obtener y establecer una clave de autenticación de mapas, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
 
 > [!TIP]
 > Para más información sobre el uso de mapas y la ubicación en tu aplicación, descarga los ejemplos siguientes del [repositorio Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples) en GitHub:

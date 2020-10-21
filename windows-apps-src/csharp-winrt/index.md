@@ -5,12 +5,12 @@ ms.date: 05/19/2020
 ms.topic: article
 keywords: windows 10, uwp, standard, c#, winrt, cswinrt, proyección
 ms.localizationpriority: medium
-ms.openlocfilehash: c3cac3049dbd5d22c23716a2da38a41fb6000a71
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 844d8441777e7c95e2b562cf7dff748600a072e9
+ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984501"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92171139"
 ---
 # <a name="cwinrt"></a>C#/WinRT
 
@@ -20,6 +20,8 @@ ms.locfileid: "91984501"
 C#/WinRT es un kit de herramientas con paquetes NuGet que proporciona compatibilidad con la proyección de Windows Runtime (WinRT) para el lenguaje C#. Una *proyección* es una capa de traducción, como un ensamblado de interoperabilidad, que permite programar las API de WinRT de forma natural y familiar para el lenguaje de destino. Por ejemplo, la proyección de C#/WinRT oculta los detalles de la interoperabilidad entre las interfaces de C# y WinRT, y proporciona asignaciones de muchos tipos de WinRT a equivalentes adecuados de .NET, como cadenas, URI, tipos de valores comunes y colecciones genéricas.
 
 Actualmente, C#/WinRT proporciona compatibilidad para consumir tipos de WinRT, y la versión preliminar actual te permite [crear](#create-an-interop-assembly) y [referenciar](#reference-an-interop-assembly) ensamblados de interoperabilidad de WinRT. En futuras versiones de C#/WinRT, agregaremos compatibilidad para la creación de tipos de WinRT en C#.
+
+Para obtener más información sobre C#/WinRT, consulta el [repositorio de C#/WinRT en GitHub](https://aka.ms/cswinrt/repo).
 
 ## <a name="motivation-for-cwinrt"></a>Motivación para C#/WinRT
 
@@ -31,74 +33,37 @@ C#/WinRT también admite WinUI 3.0. Esta versión de WinUI quita del sistema op
 
 Por último, C#/WinRT es un kit de herramientas general y está diseñado para admitir otros escenarios en los que la compatibilidad integrada con WinRT no está disponible en el compilador de C# o el entorno de ejecución de .NET. C#/WinRT admite versiones del entorno de ejecución de .NET compatibles con .NET Standard 2.0, como Mono 5.4.
 
-Para obtener más información sobre C#/WinRT, consulta el [repositorio de C#/WinRT en GitHub](https://aka.ms/cswinrt/repo).
-
 ## <a name="create-an-interop-assembly"></a>Creación de un ensamblado de interoperabilidad
 
 Las API de WinRT se definen en archivos de metadatos de Windows (*.winmd). El paquete NuGet de C#/WinRT ([Microsoft.Windows.CsWinRT](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/)) incluye el compilador de C#/WinRT, **cswinrt**, que puede usar para procesar archivos de metadatos de Windows y generar código de .NET 5.0 en C#. Puedes compilar estos archivos de origen en ensamblados de interoperabilidad, de forma similar a como [C++/WinRT](../cpp-and-winrt-apis/index.md) genera encabezados para la proyección del lenguaje C++. Después, puedes distribuir los ensamblados de interoperabilidad de C#/WinRT a los que las aplicaciones hagan referencia, junto con el ensamblado de en tiempo de ejecución de C#/WinRT.
 
-Para ver un tutorial que muestra cómo crear un ensamblado de interoperabilidad, consulte [Tutorial: Generación de una proyección de .NET 5 desde un componente de C++/WinRT y actualización del NuGet](net-projection-from-cppwinrt-component.md).
+Para ver un tutorial que muestra cómo crear y distribuir un ensamblado de interoperabilidad como un paquete NuGet, consulte [Tutorial: Generación de una proyección de .NET 5 desde un componente de C++/WinRT y actualización del NuGet](net-projection-from-cppwinrt-component.md).
 
 ### <a name="invoke-cswinrtexe"></a>Invocación de cswinrt.exe
 
-Para mostrar las opciones de la línea de comandos, ejecuta `cswinrt -?`. Para invocar cswinrt.exe desde un proyecto, recomendamos usar un archivo Directory.Build.Targets. El siguiente fragmento de proyecto muestra una invocación simple de **cswinrt** para generar orígenes de proyección para los tipos del espacio de nombres Contoso. Estos orígenes se incluyen en la compilación del proyecto.
+Para invocar cswinrt.exe desde un proyecto, instale el [paquete NuGet de C#/WinRT](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/) más reciente. A continuación, puede establecer las propiedades del proyecto específicas de C#/WinRT en un proyecto de **biblioteca de C#** para generar un ensamblado de interoperabilidad. El siguiente fragmento de proyecto muestra una invocación simple de **cswinrt** para generar orígenes de proyección para los tipos del espacio de nombres Contoso. Estos orígenes se incluyen en la compilación del proyecto.
 
 ```xml
-  <Target Name="GenerateProjection" BeforeTargets="Build">
-    <PropertyGroup>
-      <CsWinRTParams>
-# This sample demonstrates using a response file for cswinrt execution.
-# Run "cswinrt -h" to see all command line options.
--verbose
-# Include Windows SDK metadata to satisfy references to 
-# Windows types from project-specific metadata.
--in 10.0.18362.0
-# Don't project referenced Windows types, as these are 
-# provided by the Windows interop assembly.
--exclude Windows 
-# Reference project-specific winmd files, defined elsewhere,
-# such as from a NuGet package.
--in @(ContosoWinMDs->'"%(FullPath)"', ' ')
-# Include project-specific namespaces/types in the projection
--include Contoso 
-# Write projection sources to the "Generated Files" folder,
-# which should be excluded from checkin (e.g., .gitignored).
--out "$(ProjectDir)Generated Files"
-      </CsWinRTParams>
-    </PropertyGroup>
-    <WriteLinesToFile
-        File="$(CsWinRTResponseFile)" Lines="$(CsWinRTParams)"
-        Overwrite="true" WriteOnlyWhenDifferent="true" />
-    <Message Text="$(CsWinRTCommand)" Importance="$(CsWinRTVerbosity)" />
-    <Exec Command="$(CsWinRTCommand)" />
-  </Target>
-
-  <Target Name="IncludeProjection" BeforeTargets="CoreCompile" AfterTargets="GenerateProjection">
-    <ItemGroup>
-      <Compile Include="$(ProjectDir)Generated Files/*.cs" Exclude="@(Compile)" />
-    </ItemGroup>
-  </Target>
+<PropertyGroup>
+  <CsWinRTIncludes>Contoso</CsWinRTIncludes>
+</PropertyGroup>
 ```
+
+En este proyecto también tendría que hacer referencia al paquete NuGet CsWinRT y a los archivos .winmd específicos del proyecto que quiere proyectar, ya sea a través de un paquete NuGet, una referencia de proyecto o una referencia directa. De forma predeterminada, los espacios de nombres de **Windows** y **Microsoft** no se proyectan. Para obtener una lista completa de las propiedades del proyecto CsWinRT, consulte la [documentación de NuGet de CsWinRT](https://github.com/microsoft/CsWinRT/blob/master/nuget/readme.md).
 
 ### <a name="distribute-the-interop-assembly"></a>Distribución del ensamblado de interoperabilidad
 
-Un ensamblado de interoperabilidad normalmente se distribuye como paquete de NuGet, junto con una dependencia en el paquete NuGet de C#/WinRT para el ensamblado de tiempo de ejecución de C#/WinRT necesario, **winrt.runtime.dll**. Hay dos versiones del ensamblado en tiempo de ejecución de C#/WinRT, una que tiene como destino .NET Standard 2.0 y otra que tiene .NET 5.0 como destino. Solo se implementa una de ellas, en función de la plataforma de destino de la aplicación. 
+Un ensamblado de interoperabilidad normalmente se distribuye como paquete de NuGet, junto con una dependencia en el paquete NuGet de C#/WinRT para el ensamblado de tiempo de ejecución de C#/WinRT necesario, **winrt.runtime.dll**.
 
-* El destino para .NET Standard 2.0 es adecuado para las aplicaciones multiplataforma de nivel inferior que buscan proporcionar una funcionalidad ligera en Windows.
-* El destino para .NET 5.0 se recomienda para las aplicaciones modernas de Windows que requieren la correcta recolección de elementos no utilizados entre las referencias de objetos nativos, como las aplicaciones XAML.
-
-Un ensamblado de interoperabilidad puede asegurar que se implemente la versión correcta del tiempo de ejecución de C#/WinRT para una aplicación mediante la inclusión de una condición `targetFramework` en el archivo nuspec.
+Para asegurarse de que la versión correcta del tiempo de ejecución de C#/WinRT está implementado para las aplicaciones de .NET 5.0, incluya una condición `targetFramework` en el archivo .nuspec con una dependencia en el paquete NuGet de C#/WinRT.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <dependencies>
-      <group targetFramework=".NETStandard2.0">
-        <dependency id="Microsoft.Windows.CsWinRT" version="0.1.0" />
-      </group>
-      <group targetFramework=".NET5.0">
-        <dependency id="Microsoft.Windows.CsWinRT" version="0.1.0" />
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.Windows.CsWinRT" version="0.9.0" />
       </group>
     </dependencies>
   </metadata>
@@ -106,7 +71,7 @@ Un ensamblado de interoperabilidad puede asegurar que se implemente la versión 
 ```
 
 > [!NOTE]
-> El moniker de la plataforma de destino para .NET 5.0 se está moviendo de ".NETCoreApp5.0" a ".NET5.0". Las versiones preliminares de C#/WinRT usarán uno u otro.
+> El moniker de la plataforma de destino para .NET 5.0 se está moviendo de ".NETCoreApp5.0" a ".net5.0". 
 
 ## <a name="reference-an-interop-assembly"></a>Referencia a un ensamblado de interoperabilidad
 
@@ -130,7 +95,7 @@ C#/WinRT usa el [orden de búsqueda alternativo LoadLibrary](/windows/win32/dlls
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-Hay algunos problemas de rendimiento conocidos relacionados con la interoperabilidad en la versión preliminar actual de C#/WinRT. Estos se abordarán antes de la versión final a finales del 2020.
+Hay algunos problemas de rendimiento conocidos relacionados con la interoperabilidad en la versión preliminar actual de C#/WinRT. Estos se abordarán antes de la versión final a finales del 2020. Otros problemas conocidos y cambios importantes se anotarán en el [repositorio de GitHub de C#/WinRT](https://aka.ms/cswinrt/repo).
 
 Si tienes algún problema funcional con el paquete NuGet de C#/WinRT, el compilador cswinrt.exe o los orígenes de proyección generados, envíanos los problemas a través de la [página de problemas de C#/WinRT](https://github.com/microsoft/CsWinRT/issues).
 
