@@ -1,22 +1,19 @@
 ---
-Description: En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario.
+description: En este tema se describen las directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario.
 title: Directrices para las aplicaciones con reconocimiento de ubicación
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
-ms.date: 02/08/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, ubicación, mapa, ubicación geográfica
 ms.localizationpriority: medium
-ms.openlocfilehash: 2178a8812a4c900c59c370e52e7e5a5b3e0a9182
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: af9ea1a214bb3cb49dd65a77d1fde30e4bb3a064
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158669"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297745"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Directrices para las aplicaciones con reconocimiento de ubicación
-
-
-
 
 **API importantes**
 
@@ -163,7 +160,7 @@ La ubicación geográfica de un usuario es información de identificación perso
 
 * [Configurar una geovalla](./set-up-a-geofence.md)
 * [Obtener la ubicación actual](./get-location.md)
-* [Mostrar mapas con vistas 2D, 3D y Streetside](./display-maps.md)
+* [Mostrar mapas con vistas 2D, 3D y streetside](./display-maps.md)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
 * [Ejemplo de ubicación de UWP (geolocation)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
  

@@ -2,21 +2,21 @@
 description: Vea instrucciones y procedimientos recomendados para usar geovallas con el fin de proporcionar experiencias contextuales geográficamente en la aplicación.
 title: Directrices para usar geovallas en aplicaciones
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
-ms.date: 02/08/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, mapa, ubicación, geovallado
 ms.localizationpriority: medium
-ms.openlocfilehash: 76cbedaef76ff1403e1d6718c96303da6ad2ee67
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e4d033673acbb4a8b7fd558d9e6c4f8329d79bf5
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162539"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297715"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Directrices para usar geovallas en aplicaciones
 
-
-
+> [!NOTE]
+> [**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y MAP Services refieren una clave de autenticación de Maps denominada [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). Para obtener más información sobre cómo obtener y establecer una clave de autenticación de Maps, consulte [solicitar una clave de autenticación de Maps](authentication-key.md).
 
 **API importantes**
 

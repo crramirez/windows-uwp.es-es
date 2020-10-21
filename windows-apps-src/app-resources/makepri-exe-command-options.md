@@ -1,5 +1,5 @@
 ---
-Description: 'MakePri.exe tiene el conjunto de comandos siguiente: createconfig, dump, new, resourcepack y versioned. En este tema se detalla su uso.'
+Description: MakePri.exe tiene el conjunto de comandos createconfig, dump, New, ResourcePack y versioned. En este tema se detalla su uso.
 title: Opciones de línea de comandos de MakePri.exe
 template: detail.hbs
 ms.date: 04/10/2018
@@ -7,24 +7,24 @@ ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
 ms.openlocfilehash: 638de4d2795b3b248edfdcc35dc72fa21d31fc3b
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209871"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92253787"
 ---
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
-[MakePri.exe](compile-resources-manually-with-makepri.md) tiene el conjunto de comandos `createconfig`, `dump`, `new`, `resourcepack` y `versioned`. En este tema se detallan las opciones de línea de comandos para su uso.
+[MakePri.exe](compile-resources-manually-with-makepri.md) tiene el conjunto de comandos `createconfig` ,,, `dump` `new` `resourcepack` y `versioned` . En este tema se detallan las opciones de línea de comandos para su uso.
 
 > [!NOTE]
-> MakePri. exe se instala cuando se activa la opción **Windows SDK para aplicaciones administradas de UWP** al instalar el kit de desarrollo de software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe se instala al activar la opción **Windows SDK para aplicaciones administradas para UWP** al instalar el kit de desarrollo de software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 ## <a name="getting-help-from-the-command-line"></a>Obtener ayuda de la línea de comandos
 
-Puede ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que puede usar con MakePri. exe. También puede emitir `MakePri.exe <command> /?` para ver detalles sobre un comando y, en raras ocasiones, incluso `MakePri.exe <command> <option>` para ver detalles acerca de una opción.
+Puede ejecutar `MakePri.exe help` o `MakePri.exe /?` para ver los comandos que puede usar con MakePri.exe. También puede emitir `MakePri.exe <command> /?` para ver detalles específicos sobre un comando y, en raras ocasiones, incluso `MakePri.exe <command> <option>` para ver detalles sobre una opción.
 
-## <a name="makepri-commands"></a>Comandos MakePri
+## <a name="makepri-commands"></a>Comandos de MakePri
 
 ```console
 C:\>makepri help
@@ -63,7 +63,7 @@ Help:
 
 ## <a name="createconfig-command"></a>Comando Createconfig
 
-El comando `createconfig` crea un archivo de configuración PRI nuevo e inicializado que define los valores predeterminados de calificador que especifiques. Ejecuta `MakePri.exe createconfig /?` para ver ayuda detallada para este comando.
+El `createconfig` comando crea un nuevo archivo de configuración de PRI inicializado que define los valores predeterminados del calificador que especifique. Ejecute `MakePri.exe createconfig /?` para ver ayuda detallada para este comando.
 
 ```console
 C:\>makepri createconfig /?
@@ -110,12 +110,12 @@ Help:
     /Help(h, ?)       : Display the usage help text
 ```
 
-## <a name="dump-command"></a>Comando Dump (Volcar)
+## <a name="dump-command"></a>Comando dump
 
-El comando `dump` genera un archivo xml volcado que contiene una lista de todos los recursos de un archivo PRI especificado. Ejecuta `MakePri.exe dump /?` para ver ayuda detallada para este comando.
+El `dump` comando genera un archivo XML con volcado que contiene una lista de todos los recursos de un archivo PRI especificado. Ejecute `MakePri.exe dump /?` para ver ayuda detallada para este comando.
 
 > [!NOTE]
-> Un paquete de recursos sin esquemas es el que se creó con el conmutador *omitSchemaFromResourcePacks* del archivo de configuración PRI. Para volcar un paquete de recursos sin esquema, usa el conmutador `/es <main_package_PRI_file>`. Si no especificas el archivo principal, verás el mensaje de error "*The resources.pri in the package was corrupted so encryption failed (error PRI222: 0xdef0000f - Unspecified error occurred)* ".
+> Un paquete de recursos sin esquema es el que se creó con el modificador *omitSchemaFromResourcePacks* en el archivo de configuración de PRI. Para volcar un paquete de recursos sin esquemas, utilice el modificador `/es <main_package_PRI_file>` . Si no especifica el archivo principal, verá el mensaje de error "el archivo*Resources. PRI del paquete está dañado, por lo que se produjo un error de cifrado (error PRI222:0xdef0000f-error no especificado)*".
 
 ```console
 C:\>makepri dump /?
@@ -162,9 +162,9 @@ Help:
     /Help(h, ?)         : Display the usage help text
 ```
 
-## <a name="new-command"></a>Comando New (Nuevo)
+## <a name="new-command"></a>Nuevo comando
 
-El comando `new` crea un nuevo archivo PRI indizando los archivos en el proyecto, según lo indique el archivo de configuración. Ejecuta `MakePri.exe new /?` para ver ayuda detallada para este comando.
+El `new` comando crea un nuevo archivo PRI mediante la indización de los archivos del proyecto según lo indicado por el archivo de configuración. Ejecute `MakePri.exe new /?` para ver ayuda detallada para este comando.
 
 ```console
 C:\>makepri new /?
@@ -234,9 +234,9 @@ Help:
     /Help(h, ?)        : Display the usage help text
 ```
 
-## <a name="resourcepack-command"></a>Comando ResourcePack (Paquete de recursos)
+## <a name="resourcepack-command"></a>Comando ResourcePack
 
-El comando `resourcepack` crea un nuevo archivo PRI indizando los archivos en el proyecto, según lo indique el archivo de configuración. Un archivo PRI de paquete de recursos contiene solo las variantes adicionales de recursos ya especificados en un archivo PRI existente. Ejecuta `MakePri.exe resourcepack /?` para ver ayuda detallada para este comando.
+El `resourcepack` comando crea un nuevo archivo PRI mediante la indización de los archivos del proyecto según lo indicado por el archivo de configuración. Un archivo PRI del paquete de recursos contiene solo variantes adicionales de recursos ya especificadas en un archivo PRI existente. Ejecute `MakePri.exe resourcepack /?` para ver ayuda detallada para este comando.
 
 ```console
 C:\>makepri resourcepack /?
@@ -301,9 +301,9 @@ Help:
     /Help(h, ?)        : Display the usage help text
 ```
 
-## <a name="versioned-command"></a>Comando Versioned (Versionado)
+## <a name="versioned-command"></a>Versión (comando)
 
-El comando `versioned` crea un nuevo archivo PRI versionado indizando los archivos del proyecto, según lo indique el archivo de configuración. Ejecuta `MakePri.exe versioned /?` para ver ayuda detallada para este comando.
+El `versioned` comando crea un archivo PRI con versión indizando los archivos del proyecto según lo indicado por el archivo de configuración. Ejecute `MakePri.exe versioned /?` para ver ayuda detallada para este comando.
 
 ```console
 C:\>makepri versioned /?
@@ -366,13 +366,13 @@ Help:
     /Help(h, ?)        : Display the usage help text
 ```
 
-## <a name="47extensiondllex"></a>&#47;ExtensionDll(ex)
+## <a name="47extensiondllex"></a>&#47;ExtensionDll (ex)
 
-Debes usar la opción de DLL de extensión (/ex) con `createconfig`, `dump`, `new`, `resourcepack`, y `versioned`, para especificar la ubicación de la DLL de extensión de entorno del sistema de administración de recursos.
+Use la opción de dll de extensión (/ex) con `createconfig` , `dump` , `new` , `resourcepack` y `versioned` para especificar la ubicación del archivo dll de extensión de entorno del sistema de administración de recursos.
 
 ## <a name="logging47metadata-file"></a>Registro de&#47;archivo de metadatos
 
-MakePri puede incluir información específica de un paquete de recursos en el archivo de metadatos del indizador. Este es un ejemplo de un archivo de registro para `resources.pri` con archivos PRI de recursos `german.pri` y `highresolution.pri`.
+MakePri puede incluir información específica de un paquete de recursos en el archivo de metadatos del indexador. Este es un ejemplo de un archivo de registro para `resources.pri` con archivos PRI de recursos `german.pri` y `highresolution.pri` .
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -404,11 +404,11 @@ MakePri puede incluir información específica de un paquete de recursos en el a
 </root>
 ```
 
-## <a name="47indexfileif-option"></a>Opción &#47;IndexFile(if)
+## <a name="47indexfileif-option"></a>&#47;IndexFile (IF) (opción)
 
-Debes usar la opción de archivo de índice (/if) con `dump`, `resourcepack` y `versioned` para especificar un archivo PRI de entrada.
+Use la opción de archivo de índice (/IF) con `dump` , `resourcepack` y `versioned` para especificar un archivo PRI de entrada.
 
-Para `resourcepack` y `versioned`, en lugar de proporcionar un archivo PRI como parámetro de entrada de /IndexFile(if), en su lugar, puedes proporcionar un archivo de esquema.
+En `resourcepack` el caso de y `versioned` , en lugar de proporcionar un archivo PRI como parámetro de entrada para/IndexFile (si), puede proporcionar un archivo de esquema en su lugar.
 
 ```console
 /IndexFile(if) <FILEPATH>
@@ -418,7 +418,7 @@ Para `resourcepack` y `versioned`, en lugar de proporcionar un archivo PRI como 
 
 ## <a name="47indexoptionsio-option"></a>&#47;IndexOptions (IO) (opción)
 
-Use la opción de opciones de índice (/IO) con `new`, `resourcepack`y `versioned` para especificar las opciones que proporcionan un control detallado sobre el comportamiento de los indizadores de recursos. Las opciones de índice están deshabilitadas de forma predeterminada.
+Use la opción de opciones de índice (/IO) con `new` , `resourcepack` y `versioned` para especificar las opciones que proporcionan un control detallado sobre el comportamiento de los indizadores de recursos. Las opciones de índice están deshabilitadas de forma predeterminada.
 
 ```console
 /IndexOptions(io) <OPTIONS>
@@ -429,15 +429,15 @@ Use la opción de opciones de índice (/IO) con `new`, `resourcepack`y `versione
 - +/-HiddenFiles (HF). Index (+) o ignore (-) archivos y carpetas ocultos.
 - +/-LinkedFiles (LF). Index (+) u omitir (-) archivos vinculados y carpetas.
 
-## <a name="47mappingfilemf-option"></a>Opción &#47;MappingFile(mf)
+## <a name="47mappingfilemf-option"></a>&#47;MappingFile (MF) (opción)
 
-Debes usar la opción de archivo de asignación (/mf) con `new`, `resourcepack` y `versioned` para generar un archivo de asignación. [MakeAppx.exe](/windows/msix/package/create-app-package-with-makeappx-tool) usa el archivo de asignación para generar paquetes de la aplicación.
+Use la opción de archivo de asignación (/MF) con `new` , `resourcepack` y `versioned` para generar un archivo de asignación. [MakeAppx.exe](/windows/msix/package/create-app-package-with-makeappx-tool) usa el archivo de asignación para generar paquetes de aplicaciones.
 
 ```console
 /MappingFile(mf) <MAPPINGFILETYPE>
 ```
 
-**MAPPINGFILETYPE** es un token que especifica el formato del archivo de asignación. El único formato válido es `appx`.
+**MAPPINGFILETYPE** es un token que especifica el formato del archivo de asignación. El único formato válido admitido es `appx` .
 
 ```console
 /mf appx
@@ -449,7 +449,7 @@ Este es un contenido de ejemplo de un archivo de asignación principal.
 "ResourceDimensions"                   "language-de-de"
 ```
 
-Y este es un contenido de ejemplo de un archivo de asignación de paquete de recursos.
+Y este es un ejemplo de contenido de un archivo de asignación de paquete de recursos.
 
 ```console
 "ResourceId"                           "Resources184.la5decaf08"
@@ -458,7 +458,7 @@ Y este es un contenido de ejemplo de un archivo de asignación de paquete de rec
 
 ## <a name="output-summary"></a>Resumen de salida
 
-Si se crean paquetes de recursos, el resumen de salida de MakePRI.exe tiene una forma más detallada. A continuación te mostramos un ejemplo.
+Si se crean paquetes de recursos, el Resumen de salida de MakePRI.exe tiene un formato más detallado. A continuación se muestra un ejemplo.
 
 ```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack
@@ -483,9 +483,9 @@ Output File(s) at TempTestResults
 Successfully Completed
 ```
 
-## <a name="47overwriteo-option"></a>Opción &#47;Overwrite(o) (Sobrescribir)
+## <a name="47overwriteo-option"></a>&#47;opción overwrite (o)
 
-Si no se proporciona la opción de sobrescribir (/o) y los archivos de salida especificados ya existen, MakePri.exe requiere una confirmación antes de sobrescribir.
+Si no se proporciona la opción de sobrescritura (/o) y los archivos de salida especificados ya existen, MakePri.exe requiere una confirmación antes de sobrescribir.
 
 ```console
 Following file(s) already exist at output location:
@@ -493,31 +493,31 @@ Following file(s) already exist at output location:
 Overwrite these file(s)? [Y]es (any other key to cancel):
 ```
 
-## <a name="47outputfileof-option"></a>Opción &#47;OutputFile(of) (Archivo de salida)
+## <a name="47outputfileof-option"></a>&#47;OutputFile (of) (opción)
 
-Debes usar la opción de archivo de salida (/of) con `dump`, `new`, `resourcepack` y `versioned` para especificar la ubicación de salida y el nombre del archivo PRI a generar. Si MakePri.exe genera más de un archivo PRI de recursos, los coloca en la carpeta principal del archivo de destino. Por ejemplo, si especificas `/of MyParentFolder\TargetFile.pri`, a continuación, MakePri.exe genera `TargetFile.language-en.pri` y `TargetFile.scale-100.pri`, junto con `TargetFile.pri`en `ParentFolder`.
+Use la opción de archivo de salida (/of) con `dump` , `new` , `resourcepack` y `versioned` para especificar la ubicación de salida y el nombre del archivo PRI que se va a generar. Si MakePri.exe genera más de un archivo de recursos PRI, los coloca en la carpeta primaria del archivo de destino. Por ejemplo, si especifica `/of MyParentFolder\TargetFile.pri` MakePri.exe genera `TargetFile.language-en.pri` y junto a `TargetFile.scale-100.pri` `TargetFile.pri` en `ParentFolder` .
 
-Aquí te mostramos una condición de error de ejemplo y el mensaje de error correspondiente.
+Este es un ejemplo de condición de error y el mensaje de error correspondiente.
 
 | Condición de error | Mensaje de error |
 | --------------- | ------------- |
-| El nombre del archivo de salida es igual que el nombre de uno de los paquetes de recursos de la configuración. | Configuración no válida: el nombre del paquete de recursos <resource pack name> no puede ser el mismo que el del archivo de salida <outputfilename.pri>. |
+| El nombre del archivo de salida es el mismo que uno de los nombres de los paquetes de recursos de la configuración. | Configuración no válida: el nombre del paquete de recursos <resource pack name> no puede ser el mismo que el archivo de salida <OutputFileName. pri>. |
 
-## <a name="reversemaprm-option"></a>Opción /ReverseMap(rm) (Invertir asignación)
+## <a name="reversemaprm-option"></a>/ReverseMap (opción de RM)
 
-Debes usar la opción de asignación inversa (/rm) con `new`, `resourcepack` y `versioned` para generar una sección de asignación inversa en el archivo PRI, que se pueden usar para depurar.
+Use la opción de asignación inversa (/RM) con `new` , `resourcepack` y `versioned` para generar una sección de asignación inversa en el archivo PRI, que se puede usar para la depuración.
 
-## <a name="47schemafilesf-option"></a>Opción &#47;SchemaFile(sf) (Archivo de esquema)
+## <a name="47schemafilesf-option"></a>&#47;Archivodeesquema (SF) (opción)
 
-Debes usar la opción de archivo de esquema (/sf) con `new`, `resourcepack` y `versioned` para escribir un archivo de esquema en la ubicación especificada.
+Use la opción de archivo de esquema (/SF) con `new` , `resourcepack` y `versioned` para escribir un archivo de esquema en la ubicación especificada.
 
-Para `resourcepack` y `versioned`, en lugar de proporcionar un archivo PRI como parámetro de entrada de /IndexFile(if), en su lugar, puedes proporcionar un archivo de esquema.
+En `resourcepack` el caso de y `versioned` , en lugar de proporcionar un archivo PRI como parámetro de entrada para/IndexFile (si), puede proporcionar un archivo de esquema en su lugar.
 
 ```console
 /SchemaFile(sf) <FILEPATH>
 ```
 
-**FILEPATH** es un token que especifica dónde escribir el archivo de esquema.
+**FILEPATH** es un token que especifica dónde se debe escribir el archivo de esquema.
 
 Este es un ejemplo de un archivo de esquema.
 
@@ -539,16 +539,16 @@ Este es un ejemplo de un archivo de esquema.
 </PriInfo>
 ```
 
-## <a name="47versionmajorvma-is-deprecated"></a>&#47;VersionMajor(vma) (Versión principal) está en desuso
+## <a name="47versionmajorvma-is-deprecated"></a>&#47;propiedad versionmajor (VMA) está en desuso
 
-La opción de versión principal (/vma) (para el comando `new`) está en desuso y utilizarlo provoca este mensaje de advertencia.
+La opción versión principal (/VMA) (para el `new` comando) está en desuso y, si se usa, se obtiene el mensaje de advertencia.
 
 ```console
 'VersionMajor (vma)' input parameter has been deprecated. Please specify major version in the configuration file using 'majorVersion' attribute on 'resources' node.
 ```
 
-Para proporcionar el número de versión principal usa el atributo [resources@majorVersion](makepri-exe-configuration.md) en el archivo de configuración.
+Para proporcionar el número de versión principal, use el [resources@majorVersion](makepri-exe-configuration.md) atributo en el archivo de configuración.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [MakePri. exe](compile-resources-manually-with-makepri.md)
+* [MakePri.exe](compile-resources-manually-with-makepri.md)

@@ -1,88 +1,88 @@
 ---
-Description: Selecciona el precio base para cambiar para una aplicación y programa el cambio de precio. También puedes personalizar estas opciones para mercados específicos.
+Description: Seleccione el precio base para una aplicación y programe los cambios de precios. También puede personalizar estas opciones para mercados específicos.
 title: Establecer y programar los precios de las aplicaciones
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, precios, precios de las aplicaciones, precio de la aplicación, vender aplicaciones, cambio de precio, precio personalizado, precio, precios, costo, reemplazar el precio base, precio de forma libre, forma libre
+keywords: Windows 10, UWP, precios, precios de la aplicación, precio de la aplicación, aplicaciones de venta, cambio de precio, precio personalizado, precio, precios, costo, invalidar precio base, precio de forma libre, forma libre
 ms.localizationpriority: medium
 ms.openlocfilehash: 451a22ffef2d8062de7bf7d29d921db7197987b5
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210501"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92253809"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Establecer y programar los precios de las aplicaciones
 
-La sección **Precios** de la página [Precios y disponibilidad](set-app-pricing-and-availability.md) te permite seleccionar el precio base para una aplicación. También puedes [programar los cambios de precio](#schedule-price-changes) para indicar la fecha y la hora en las que el precio de la aplicación debería cambiar. Además, tienes la opción de [invalidar el precio base para mercados específicos](#override-base-price-for-specific-markets), ya sea seleccionando una nueva franja de precios o escribiendo un precio de forma libre en la moneda local del mercado.
+La sección de **precios** de la página [precios y disponibilidad](set-app-pricing-and-availability.md) le permite seleccionar el precio base de una aplicación. También puede [programar cambios de precios](#schedule-price-changes) para indicar la fecha y la hora a las que debe cambiar el precio de la aplicación. Además, tiene la opción de [invalidar el precio base para mercados específicos](#override-base-price-for-specific-markets), ya sea seleccionando un nuevo plan de precios o introduciendo un precio de forma libre en la moneda local del mercado.
 
 > [!NOTE]
-> Aunque este tema hace referencia a las aplicaciones, la selección de precios para envíos de complementos utiliza el mismo proceso. Tenga en cuenta que en el caso de los [Complementos de suscripción](../monetize/enable-subscription-add-ons-for-your-app.md), el precio base que seleccione no se puede aumentar nunca (ya sea cambiando el precio base o programando un cambio de precio), aunque puede reducirse.
+> Aunque este tema hace referencia a las aplicaciones, la selección de precios para los envíos de complementos usa el mismo proceso. Tenga en cuenta que en el caso de los [Complementos de suscripción](../monetize/enable-subscription-add-ons-for-your-app.md), el precio base que seleccione no se puede aumentar nunca (ya sea cambiando el precio base o programando un cambio de precio), aunque puede reducirse.
 
 ## <a name="base-price"></a>Precio base
 
-Cuando selecciones el **Precio base** de la aplicación, este se usará en cada mercado en el que se venda la aplicación, a menos que reemplaces el precio base en cualquier mercado.
+Al seleccionar el **precio base**de la aplicación, ese precio se usará en todos los mercados en los que se venda la aplicación, a menos que se invalide el precio base en los mercados.
 
-Puedes establecer el **precio base** en **Gratis** o puedes elegir una franja de precios, que establece el precio en todos los países donde elijas distribuir tu aplicación. Las franjas de precios empiezan a partir de 0,99 USD, con franjas adicionales disponibles en incrementos (1,09 USD, 1,19 USD, etc.). Estos incrementos generalmente aumentan a medida que el precio sube. 
+Puede establecer el **precio base** en **gratis**o puede elegir un plan de tarifa disponible, que establece el precio en todos los países en los que elige distribuir la aplicación. Los niveles de precios comienzan a las 0,99 USD, con niveles adicionales disponibles en incrementos crecientes (1,09 USD, 1,19 USD, etc.). Los incrementos generalmente aumentan a medida que el precio es mayor. 
 
 > [!NOTE]
-> Estas franjas de precios se aplican también a complementos. 
+> Estos niveles de precios también se aplican a los complementos. 
 
-Cada franja de precios tiene un valor correspondiente en cada una de las más de 60 divisas que ofrece la Tienda. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. Puedes seleccionar el precio base en cualquier moneda y utilizaremos automáticamente el valor correspondiente para diferentes mercados. Ten en cuenta que a veces podemos ajustar el valor correspondiente en un determinado mercado para tener en cuenta cambios en las tasas de conversión de divisas.
+Cada plan de tarifa tiene un valor correspondiente en cada una de las más de 60 monedas ofrecidas por el almacén. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. Puede seleccionar el precio base en cualquier divisa y usaremos automáticamente el valor correspondiente para los distintos mercados. Tenga en cuenta que, a veces, se puede ajustar el valor correspondiente en un determinado mercado para tener en cuenta los cambios en las tasas de conversión de moneda.
 
-En la sección **Precios**, haz clic en **view conversion table** para ver los precios correspondientes en todas las monedas. Esto también muestra un número de identificador asociado a cada franja de precios, que necesitarás si usas la [API de envío de la Microsoft Store](../monetize/manage-app-submissions.md#price-tiers) para introducir precios. Puedes hacer clic en **Descargar** para descargar una copia de la tabla de franja de precios como un archivo .csv.
+En la sección **precios** , haga clic en **ver tabla de conversión** para ver los precios correspondientes en todas las monedas. También se muestra un número de identificación asociado a cada nivel de precios, que necesitará si usa la [API de envío de Microsoft Store](../monetize/manage-app-submissions.md#price-tiers) para introducir los precios. Puede hacer clic en **Descargar** para descargar una copia de la tabla de nivel de precios como archivo. csv.
 
-Recuerda que la franja de precios que seleccionaste puede incluir el impuesto sobre el valor añadido o las ventas que tus clientes deben pagar. Para obtener más información sobre las implicaciones fiscales de la aplicación en los mercados seleccionados, consulta los [detalles de impuestos para aplicaciones de pago](tax-details-for-paid-apps.md). También deberías revisar las [consideraciones relativas a los precios para mercados concretos](define-market-selection.md#price-considerations-for-specific-markets).
+Recuerda que la franja de precios que seleccionaste puede incluir el impuesto sobre el valor añadido o las ventas que tus clientes deben pagar. Para obtener más información sobre las implicaciones fiscales de la aplicación en los mercados seleccionados, consulta los [detalles de impuestos para aplicaciones de pago](tax-details-for-paid-apps.md). También debe revisar las [consideraciones de precios para mercados específicos](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!NOTE]
 > Si eliges la opción **detener adquisición** en **hacer que este producto esté disponible pero no se puede detectar en la tienda** de la sección [visibilidad](choose-visibility-options.md#discoverability) ), no podrás establecer los precios para tu envío (ya que nadie podrá adquirir la aplicación a menos que use un código promocional para obtener la aplicación de forma gratuita).
 
-## <a name="schedule-price-changes"></a>Programar cambios de precio
+## <a name="schedule-price-changes"></a>Programar cambios de precios
 
-También puedes programar uno o varios de los cambios de precio si quieres que el precio base de la aplicación cambie en una fecha y hora específica. 
+Opcionalmente, puede programar uno o varios cambios de precios si desea que el precio base de la aplicación cambie en una fecha y hora específicas. 
 
 > [!IMPORTANT]
-> Los cambios en los precios solo se muestran a los clientes de dispositivos Windows 10 (incluida la Xbox). Si la aplicación publicada anteriormente es compatible con versiones anteriores del sistema operativo, los cambios de precio no se aplicarán a los clientes. Para los clientes en Windows 8, la aplicación siempre se ofrecerá a su **precio base** (y no a cualquier precio específico del mercado), incluso si has programado cambios de precio adicionales. En el caso de los clientes de Windows 8.1 y en Windows Phone 8,1 y versiones anteriores, la aplicación siempre se ofrecerá en el primer nivel de precios para el mercado del cliente.
+> Los cambios de precio solo se muestran a los clientes en dispositivos Windows 10 (incluida Xbox). Si la aplicación publicada anteriormente es compatible con versiones anteriores del sistema operativo, los cambios de precio no se aplicarán a los clientes. En el caso de los clientes de Windows 8, la aplicación siempre se ofrecerá a su **precio base** (y no a ningún precio específico del mercado), incluso si programa cambios adicionales en el precio. En el caso de los clientes de Windows 8.1 y en Windows Phone 8,1 y versiones anteriores, la aplicación siempre se ofrecerá en el primer nivel de precios para el mercado del cliente.
 
-Haz clic en **Programar un cambio de precio** para ver las opciones de cambio de precio. Elige la franja de precios que quieres usar (o especifica un precio de forma libre para invalidaciones de precio base de mercado único) y luego selecciona la fecha, la hora y la zona horaria.
+Haga clic en **programar un cambio de precio** para ver las opciones de cambio de precio. Elija el nivel de precios que desea usar (o escriba un precio libre para las invalidaciones de precios de base de un solo mercado) y, a continuación, seleccione la fecha, la hora y la zona horaria.
 
 Puede volver a hacer clic en **programar un cambio de precio** para programar tantos cambios posteriores como desee.
 
 > [!NOTE]
-> Los cambios de precios programados funcionan de una manera diferente al [Precio de oferta](put-apps-and-add-ons-on-sale.md). Cuando una aplicación está en oferta, el precio muestra un tachado en la Store y los clientes podrán comprar la aplicación en el precio de oferta durante el período que hayas seleccionado. Una vez que el periodo de oferta se acabe, ya no se aplicará el precio de venta y la aplicación estará disponible en su precio base (o un precio diferente que hayas especificado para ese mercado, si procede).
+> Los cambios de precio programados funcionan de manera diferente a los [precios de venta](put-apps-and-add-ons-on-sale.md). Al poner una aplicación en venta, el precio se muestra con un tachado en el almacén y los clientes podrán comprar la aplicación con el precio de venta durante el período de tiempo que haya seleccionado. Una vez que el período de venta esté activo, ya no se aplicará el precio de venta y la aplicación estará disponible a su precio base (u otro precio que haya especificado para ese mercado, si procede).
 >
-> Con un cambio de precio programado, puedes ajustar el precio para que sea mayor o menor. El cambio se llevará a cabo en la fecha especifica, pero no se mostrará como una oferta en la Store, o tiene cualquier formato especial aplicado; la aplicación solo tendrá un nuevo precio base. 
+> Con un cambio de precio programado, puede ajustar el precio para que sea mayor o menor. El cambio se realizará en la fecha que especifique, pero no se mostrará como una venta en el almacén ni se aplicará ningún formato especial. la aplicación solo tendrá un nuevo precio. 
 
 
-## <a name="override-base-price-for-specific-markets"></a>Reemplazar el precio base para mercados concretos
+## <a name="override-base-price-for-specific-markets"></a>Invalidar precio base para mercados específicos
 
-De manera predeterminada, las opciones que selecciones anteriormente, se aplicarán a todos los mercados en los que se ofrece la aplicación. Opcionalmente, puedes cambiar el precio de uno o más mercados, elegir una franja de precios diferente o escribir un precio de forma libre en la moneda local del mercado.
+De forma predeterminada, las opciones seleccionadas anteriormente se aplicarán a todos los mercados en los que se ofrece la aplicación. Opcionalmente, puede cambiar el precio de uno o más mercados, eligiendo un plan de tarifa diferente o introduciendo un precio de forma libre en la moneda local del mercado.
 
 > [!IMPORTANT]
 > Si la aplicación publicada previamente es compatible con Windows 8, esos clientes siempre verán la aplicación a su **precio base**, aunque Seleccione un precio diferente para su mercado.
 
-Para cambiar el precio para mercados específicos, haz clic en **Select markets for base price override**. La ventana emergente de **Selección de mercado** aparecerá en la lista de todos los mercados en los que hayas elegido que la aplicación estará disponible. (Si se excluye algún mercado en la sección **Mercados**, esos mercados no estará disponibles.) 
+Para cambiar el precio de mercados específicos, haga clic en **seleccionar mercados para invalidar el precio base**. Aparecerá la ventana emergente de **selección de mercado** , donde se muestran todos los mercados en los que ha elegido hacer que la aplicación esté disponible. (Si ha excluido los mercados de la sección **mercados** , estos mercados no estarán disponibles). 
 
-Puedes invalidar el precio base para un mercado cada vez, o para un grupo de mercados juntos. Una vez que lo hayas hecho, para invalidar el precio base para un mercado adicional (o un grupo de mercado adicional), selecciona **Select markets for base price override** de nuevo y repite el proceso que se describe a continuación. Para quitar el precio de invalidación que ha especificado para un mercado (o grupo de mercado), haz clic en **Quitar**.
+Puede invalidar el precio base de un mercado a la vez o para un grupo de mercados juntos. Una vez hecho esto, puede invalidar el precio base para un mercado adicional (o un grupo de mercado adicional) seleccionando de nuevo los **mercados de la anulación de precio base** y repitiendo el proceso que se describe a continuación. Para quitar los precios de invalidación que ha especificado para un mercado (o un grupo de marketing), haga clic en **quitar**.
 
 
-### <a name="override-the-base-price-for-a-single-market"></a>Invalidar el precio base para un mercado único
+### <a name="override-the-base-price-for-a-single-market"></a>Invalidar el precio base para un solo mercado
 
-Para cambiar el precio para un solo mercado, selecciónalo y haz clic en **Crear**. A continuación, verás las mismas opciones **Precio base** y **Programar un cambio de precio** como se describen anteriormente, pero las selecciones que realices será específicas para ese mercado. Dado que va a reemplazar el precio base para un solo mercado, se mostrarán las franjas de precios en la moneda local de ese mercado. Puede hacer clic en **view conversion table** para ver los precios correspondientes en todas las monedas. 
+Para cambiar el precio de un solo mercado, selecciónelo y haga clic en **crear**. A continuación, verá el mismo **precio base** y **programará** las opciones de cambio de precio como se describió anteriormente, pero las selecciones que realice serán específicas para ese mercado. Dado que solo está invalidando el precio base de un mercado, los planes de tarifa se mostrarán en la moneda local del mercado. Puede hacer clic en **ver tabla de conversión** para ver los precios correspondientes en todas las monedas. 
 
-La invalidación del precio base para un solo mercado también te ofrece la opción de especificar un precio de forma libre de tu elección en la moneda local del mercado. Puedes especificar cualquier precio que quieras (dentro de un intervalo mínimo y máximo), incluso si no se corresponde a una de las franjas de precios estándar. Este precio se usará solo para los clientes de Windows 10 (incluida la Xbox) del mercado seleccionado. 
+La invalidación del precio base de un solo mercado también le ofrece la opción de especificar un precio gratuito de su elección en la moneda local del mercado. Puede especificar el precio que desee (dentro de un intervalo mínimo y máximo), incluso si no se corresponde con uno de los planes de tarifa estándar. Este precio solo se usará para los clientes de Windows 10 (incluido Xbox) en el mercado seleccionado. 
 
 > [!IMPORTANT]
-> Si especifica un precio de forma libre, no se ajustará ese precio (incluso si cambian las tasas de conversión) a menos que envíes una actualización con un precio nuevo. 
+> Si especifica un precio de forma libre, dicho precio no se ajustará (incluso si cambian las tasas de conversión) a menos que envíe una actualización con un nuevo precio. 
 
-### <a name="override-the-base-price-for-a-market-group"></a>Invalidar el precio base para un grupo de mercado
+### <a name="override-the-base-price-for-a-market-group"></a>Invalidar el precio base de un grupo de marketing
 
-Para invalidar el precio base para varios mercados, se creará un *grupo de mercado*. Para ello, selecciona los mercados que quieras incluir y, opcionalmente, escribe un nombre del grupo. (Este nombre solo es para tu propia referencia y no será visible para los clientes). Cuando hayas terminado, haz clic en **Crear**. A continuación, verás las mismas opciones **Precio base** y **Programar un cambio de precio** como se describen anteriormente, pero las selecciones que realices serán específicas para ese grupo de mercado. Ten en cuenta que no se pueden usar precios de forma libre con grupos de mercado; deberás seleccionar una franja de precios.
+Para invalidar el precio base de varios mercados, creará un *grupo de marketing*. Para ello, seleccione los mercados que quiera incluir y, opcionalmente, escriba un nombre para el grupo. (Este nombre es solo para su referencia y no será visible para ningún cliente). Cuando haya terminado, haga clic en **crear**. A continuación, verá el mismo **precio base** y **programará** las opciones de cambio de precio como se describió anteriormente, pero las selecciones que realice serán específicas para ese grupo de mercado. Tenga en cuenta que los precios de forma libre no se pueden usar con grupos de marketing; deberá seleccionar un plan de tarifa disponible.
 
-Para cambiar los mercados que se incluyen en un grupo de mercado, haz clic en el nombre del grupo de mercado y agrega o quita los mercados que quieras; después, haz clic en **Aceptar** para guardar los cambios. 
+Para cambiar los mercados incluidos en un grupo de marketing, haga clic en el nombre del grupo de marketing, agregue o quite los mercados que desee y, a continuación, haga clic en **Aceptar** para guardar los cambios. 
 
 > [!NOTE]
-> Un mercado no puede pertenecer a varios grupos de mercados dentro de la sección **Precios**.
+> Un mercado no puede pertenecer a varios grupos de marketing dentro de la sección de **precios** .
 
 
 

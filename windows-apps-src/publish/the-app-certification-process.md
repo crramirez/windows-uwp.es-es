@@ -7,21 +7,21 @@ ms.topic: article
 keywords: Windows 10, UWP, publicación, preprocesamiento, certificación, versión, pendiente, envío, publicación, estado, tiempo
 ms.localizationpriority: medium
 ms.openlocfilehash: d88d8deeb467f186f120fb8c1e579d5c9222aaf1
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210961"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92253807"
 ---
 # <a name="the-app-certification-process"></a>Proceso de certificación de la aplicación
 
-Cuando termines de crear el envío de la aplicación y hagas clic en **Enviar a Store**, el envío entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Después de que el envío pase la certificación, los clientes pueden tardar hasta 24 horas en ver la lista de la aplicación en busca de un nuevo envío o en un envío actualizado con cambios en los paquetes. Si la actualización solo cambia los detalles de la lista, el proceso de publicación se completará en menos de una hora.  Se le notificará cuando se publique el envío, y el estado de la aplicación en el panel estará **en el almacén**.
+Cuando termine de crear el envío de la aplicación y haga clic en **Enviar a la tienda**, el envío entra en el paso de certificación. Normalmente este proceso se completa en unas horas, aunque en algunos casos puede tardar hasta tres días laborables. Después de que el envío pase la certificación, los clientes pueden tardar hasta 24 horas en ver la lista de la aplicación en busca de un nuevo envío o en un envío actualizado con cambios en los paquetes. Si la actualización solo cambia los detalles de la lista, el proceso de publicación se completará en menos de una hora.  Se le notificará cuando se publique el envío, y el estado de la aplicación en el panel estará **en el almacén**.
 
-## <a name="preprocessing"></a>Preprocesamiento
+## <a name="preprocessing"></a>Preprocessing (Preprocesamiento)
 
 Después de cargar los paquetes de la aplicación correctamente y enviar la aplicación para su certificación, los paquetes se ponen en cola para someterse a pruebas. Se mostrará un mensaje si se detectan los errores durante el preprocesamiento. Para obtener más información sobre posibles errores, consulta [Resolver errores de envío](resolve-submission-errors.md).
 
-## <a name="certification"></a>Certification
+## <a name="certification"></a>Certificación
 
 Durante esta fase, se llevan a cabo varias pruebas:
 
@@ -31,7 +31,7 @@ Durante esta fase, se llevan a cabo varias pruebas:
 
 Una vez completado el proceso de certificación, obtendrás un informe donde se indicará si la aplicación pasó o no la certificación. Si no la pasó, el informe indicará en qué prueba produjo errores o qué [directiva](store-policies.md) no se cumplió. Después de solucionar el problema, puedes crear un nuevo envío de la aplicación para volver a iniciar el proceso de certificación.
 
-## <a name="release"></a>Publicación
+## <a name="release"></a>Release
 
 Cuando la aplicación pasa la certificación, está lista para pasar al proceso de **publicación** .
 
@@ -41,20 +41,20 @@ Cuando la aplicación pasa la certificación, está lista para pasar al proceso 
 - Si ha usado [las opciones de retención de publicación](manage-submission-options.md#publishing-hold-options) para especificar que desea publicar manualmente el envío, no comenzará el proceso de publicación hasta que seleccione **publicar ahora** (o seleccione **cambiar fecha de lanzamiento** y seleccionar una fecha específica).
 
 
-## <a name="publishing"></a>Publishing
+## <a name="publishing"></a>Publicación
 
 Los paquetes de la aplicación se firman digitalmente para protegerlos de alteraciones después de su lanzamiento. Una vez iniciada esta fase, ya no puedes cancelar el envío ni cambiar la fecha de lanzamiento.
 
 En el caso de las nuevas aplicaciones y actualizaciones que incluyen cambios en los paquetes de la aplicación, el proceso de publicación se completará en un plazo de 24 horas. En el caso de las actualizaciones que solo cambian opciones como el almacenamiento de detalles de la lista, pero que no cambian los paquetes de la aplicación, el proceso de publicación tardará menos de una hora.
 
-Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado del envío de la aplicación le permite saber cuándo los nuevos paquetes y los detalles de la lista de tiendas están disponibles para los clientes en cada una de las versiones de SO admitidas. Los pasos que no se hayan completado llevarán la indicación **Pendiente**. La aplicación permanecerá en la fase de publicación hasta que se complete el proceso, lo que significa que los nuevos paquetes y/o los detalles de la lista están disponibles para todos los clientes potenciales de la aplicación.
+Mientras la aplicación se encuentra en la fase de publicación, el vínculo **Mostrar detalles** de la columna Estado del envío de la aplicación le permite saber cuándo los nuevos paquetes y los detalles de la lista de tiendas están disponibles para los clientes en cada una de las versiones de SO admitidas. Los pasos que no se hayan completado se mostrarán como **pendientes**. La aplicación permanecerá en la fase de publicación hasta que se complete el proceso, lo que significa que los nuevos paquetes y/o los detalles de la lista están disponibles para todos los clientes potenciales de la aplicación.
 
 ## <a name="in-the-store"></a>En la Tienda 
 
-Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. Entonces, tu envío estará disponible en Microsoft Store para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Visibilidad](choose-visibility-options.md#discoverability)). 
+Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. El envío estará disponible en el Microsoft Store para que los clientes lo descarguen (a menos que haya elegido otra opción de [detección](choose-visibility-options.md#discoverability) ). 
 
 > [!NOTE]
-> También se realizan comprobaciones puntuales de aplicaciones después de haberse publicado, para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de Microsoft Store](store-policies.md). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
+> También realizamos comprobaciones puntuales de las aplicaciones después de que se hayan publicado para que podamos identificar posibles problemas y asegurarse de que la aplicación cumple con todas las [directivas de Microsoft Store](store-policies.md). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
 
  
 

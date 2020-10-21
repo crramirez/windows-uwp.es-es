@@ -2,21 +2,21 @@
 title: Obtener la ubicación del usuario
 description: Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
-ms.date: 11/28/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, asignación, ubicación y capacidad de ubicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 79c34af48cf1b2d860d2a170fd642ef05945c15d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8a60b5003310fdba046b624e61007761ef5e0f20
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158719"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297764"
 ---
 # <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
-
-
+> [!NOTE]
+> [**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y MAP Services refieren una clave de autenticación de Maps denominada [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). Para obtener más información sobre cómo obtener y establecer una clave de autenticación de Maps, consulte [solicitar una clave de autenticación de Maps](authentication-key.md).
 
 Busca la ubicación del usuario y responde a los cambios de ubicación. La configuración de privacidad de la aplicación Configuración administra el acceso a la ubicación del usuario. En este tema también se muestra cómo comprobar si la aplicación tiene permisos para acceder a la ubicación del usuario.
 
