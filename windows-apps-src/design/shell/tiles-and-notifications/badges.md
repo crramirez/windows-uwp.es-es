@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a49d771b7efdbb7e787db0cbadea45c255a1120e
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 64d5595bcc315b24228401ff23a1a59d29282eae
+ms.sourcegitcommit: cbdfac0e2d8bead6c225e815e7d6dffe1f5ef864
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984601"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344967"
 ---
 # <a name="badge-notifications-for-windows-apps"></a>Notificaciones de distintivos para aplicaciones de Windows
 
@@ -40,21 +40,21 @@ Cualquier número superior a 99. | <img src="images/badges/badge-numeric-greater
 ## <a name="glyph-badges"></a>Notificaciones de glifo
 En lugar de un número, una notificación puede mostrar un elemento de un conjunto no extensible de glifos de estado. 
 
-Estado | Glifo | XML
+Status | Glifo | XML
 --|--|--
 ninguno | (No se muestran notificaciones.) | `<badge value="none"/>`
-activity | <img src="images/badges/badge-activity.png" alt="Glyph" /> | `<badge value="activity"/>`
-alarma | <img src="images/badges/badge-alarm.png" alt="Glyph" /> | `<badge value="alarm"/>`
-alerta | <img src="images/badges/badge-alert.png" alt="Glyph" /> | `<badge value="alert"/>`
-atención | <img src="images/badges/badge-attention.png" alt="Glyph" /> | `<badge value="attention"/>`
-disponible | <img src="images/badges/badge-available.png" alt="Glyph" /> | `<badge value="available"/>`
-ausente | <img src="images/badges/badge-away.png" alt="Glyph" /> | `<badge value="away"/>`
-ocupado | <img src="images/badges/badge-busy.png" alt="Glyph" /> | `<badge value="busy"/>`
-error | <img src="images/badges/badge-error.png" alt="Glyph" /> | `<badge value="error"/>`
-newMessage | <img src="images/badges/badge-newMessage.png" alt="Glyph" /> | `<badge value="newMessage"/>`
-en pausa | <img src="images/badges/badge-paused.png" alt="Glyph" /> | `<badge value="paused"/>`
-reproducción | <img src="images/badges/badge-playing.png" alt="Glyph" /> | `<badge value="playing"/>`
-no disponible | <img src="images/badges/badge-unavailable.png" alt="Glyph" /> | `<badge value="unavailable"/>`</td>
+activity | :::image type="icon" source="images/badges/badge-activity.png"::: | `<badge value="activity"/>`
+alarma | :::image type="icon" source="images/badges/badge-alarm.png"::: | `<badge value="alarm"/>`
+alerta | :::image type="icon" source="images/badges/badge-alert.png"::: | `<badge value="alert"/>`
+atención | :::image type="icon" source="images/badges/badge-attention.png"::: | `<badge value="attention"/>`
+disponible | :::image type="icon" source="images/badges/badge-available.png"::: | `<badge value="available"/>`
+ausente | :::image type="icon" source="images/badges/badge-away.png"::: | `<badge value="away"/>`
+ocupado | :::image type="icon" source="images/badges/badge-busy.png"::: | `<badge value="busy"/>`
+error | :::image type="icon" source="images/badges/badge-error.png"::: | `<badge value="error"/>`
+newMessage | :::image type="icon" source="images/badges/badge-newMessage.png"::: | `<badge value="newMessage"/>`
+en pausa | :::image type="icon" source="images/badges/badge-paused.png"::: | `<badge value="paused"/>`
+reproducción | :::image type="icon" source="images/badges/badge-playing.png"::: | `<badge value="playing"/>`
+no disponible | :::image type="icon" source="images/badges/badge-unavailable.png"::: | `<badge value="unavailable"/>`</td>
 
 ## <a name="create-a-badge"></a>Crear una notificación
 
