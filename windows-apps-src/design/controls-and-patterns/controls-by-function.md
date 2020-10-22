@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3bda79b998038dd26f62eec983384f491793502
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 49a608f46c21cddfbd7fcb5e149c4b316bf9b175
+ms.sourcegitcommit: ce1a7efa01779721b4b618ae5605597152e424cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160773"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92379372"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -719,7 +719,7 @@ Referencia: [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [RichTextB
 
 Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control del bloque de texto](text-block.md), [Guía de control del bloque de texto con formato](rich-text-block.md)
 
-Código de ejemplo: [Muestra de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+Código de ejemplo: [Muestra de texto XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
 
 ### <a name="text-box"></a>Cuadro de texto
 Campo de texto sin formato de una línea o multilínea.
@@ -735,7 +735,7 @@ Referencia: [TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 
 Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control del cuadro de texto](text-box.md) 
 
-Código de ejemplo: [Muestra de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+Código de ejemplo: [Muestra de texto XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
 
 ## <a name="selection-controls"></a>Controles de selección
 

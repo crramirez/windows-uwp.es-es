@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: e516d887f0bfc668551c0a43b135e98765f3300f
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: cdfdf9b7396943e3ee5345249f38a35d48beb128
+ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671544"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92253623"
 ---
 # <a name="host-a-custom-winrt-xaml-control-in-a-wpf-app-using-xaml-islands"></a>Hospedaje de un control XAML personalizado de WinRT en una aplicación de WPF mediante islas XAML
 
@@ -52,13 +52,11 @@ Antes de comenzar, sigue estas instrucciones para crear un proyecto de WPF y con
 
 4. Haz clic con el botón derecho en el proyecto de WPF en el **Explorador de soluciones** y elige **Administrar paquetes NuGet**.
 
-5. En la ventana **Administrador de paquetes NuGet**, asegúrate de seleccionar la opción **Incluir versión preliminar**.
-
-6. Seleccione la pestaña **Examinar**, busque el paquete [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) e instale la versión estable más reciente. Este paquete proporciona todo lo que necesita para usar el control **WindowsXamlHost** para hospedar un control XAML de WinRT, incluidos otros paquetes de NuGet relacionados.
+5. Seleccione la pestaña **Examinar**, busque el paquete [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) e instale la versión estable más reciente. Este paquete proporciona todo lo que necesita para usar el control **WindowsXamlHost** para hospedar un control XAML de WinRT, incluidos otros paquetes de NuGet relacionados.
     > [!NOTE]
     > Las aplicaciones de Windows Forms deben usar el paquete [Microsoft.Toolkit.Forms.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.XamlHost).
 
-7. Configura la solución para que tenga como destino una plataforma específica, como x86 o x64. Los controles XAML personalizados de WinRT no se admiten en los proyectos que tienen como destino **Cualquier CPU**.
+6. Configura la solución para que tenga como destino una plataforma específica, como x86 o x64. Los controles XAML personalizados de WinRT no se admiten en los proyectos que tienen como destino **Cualquier CPU**.
 
     1. En el **Explorador de soluciones**, haz clic con el botón derecho en el nodo de la solución y selecciona **Propiedades** -> **Propiedades de configuración** -> **Administrador de configuración**.
     2. En **Plataforma de soluciones activas**, selecciona **Nueva**. 
