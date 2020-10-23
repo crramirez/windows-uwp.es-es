@@ -1,5 +1,5 @@
 ---
-description: En este tutorial se muestra cómo agregar interfaces de usuario de XAML en UWP, crear paquetes MSIX e incorporar otros componentes actuales en la aplicación de WPF.
+description: En este tutorial se muestra cómo facilitar la elección de la fecha de un informe de gastos en un dispositivo táctil.
 title: Incorporación de un control CalendarView en UWP mediante islas XAML
 ms.topic: article
 ms.date: 06/27/2019
@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: e7e09069e11fc14d0a47086bc2594edc975c11d9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 53a87f5803a6e4707b2dc6b86b32b7db003e59ef
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161459"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133048"
 ---
 # <a name="part-3-add-a-uwp-calendarview-control-using-xaml-islands"></a>3\.ª parte: Incorporación de un control CalendarView en UWP mediante islas XAML
 

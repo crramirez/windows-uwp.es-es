@@ -1,5 +1,5 @@
 ---
-Description: Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible.
+description: Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible.
 title: Iconos
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 66f9d166d0e20f82f495f98b26deceff8e136cc5
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 75de051bd569981d7dca6b33e8e7389c3186a09d
+ms.sourcegitcommit: cbdfac0e2d8bead6c225e815e7d6dffe1f5ef864
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636645"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344986"
 ---
 # <a name="icons-for-windows-apps"></a>Iconos de aplicaciones de Windows
 
@@ -47,13 +47,12 @@ Los iconos pueden ahorrar espacio, pero ¿cuándo deberías usarlos?
 
 :::row:::
     :::column:::
-        ![Captura de pantalla que muestra los iconos Cortar, Copiar, Pegar y Guardar.](images/do.svg)
-        ![imagen de iconos estándar](images/icons/icons-standard.svg)<br>
+        ![Primera imagen de una barra verde con una marca de verificación verde y la palabra Do](images/do.svg) ![Captura de pantalla que muestra los iconos de cortar, copiar, pegar y guardar](images/icons/icons-standard.svg)<br>
 
 Usa un icono para las acciones como cortar, copiar, pegar y guardar o para los elementos de navegación de un menú de navegación.
     :::column-end:::
     :::column:::
-        ![Imagen de concepto de iconos](images/icons/icons-concept.svg) ![inadecuados](images/dont.svg)<br>
+        ![Primera imagen de una barra verde con una X roja y la palabra Don't](images/dont.svg) ![Captura de pantalla que muestra los iconos de educación, táctil y calendario](images/icons/icons-concept.svg)<br>
 
 Usa un icono en caso de que ya exista uno para el concepto que quieres representar. (Para ver si existe un icono, comprueba la lista de iconos Segoe).
     :::column-end:::
@@ -61,14 +60,12 @@ Usa un icono en caso de que ya exista uno para el concepto que quieres represent
 
 :::row:::
     :::column:::
-        ![Captura de pantalla de un icono de carro de la compra sencillo y conocido.](images/do.svg)
-        ![icono de carro de la compra](images/icons/icon-shopping-cart.svg)<br>
+        ![Segunda imagen de una barra verde con una marca de verificación verde y la palabra Do](images/do.svg) ![Captura de pantalla de un sencillo y conocido icono de carro de la compra](images/icons/icon-shopping-cart.svg)<br>
 
 Usa un icono que sea fácil de entender para el usuario y que sea lo suficientemente sencillo para que, en tamaños pequeños, sea claro.
     :::column-end:::
     :::column:::
-        ![Captura de pantalla de un icono de carro de la compra complejo y desconocido.](images/dont.svg)
-        ![imagen de concepto de iconos](images/icons/icon-bad-example.png)<br>
+        ![Segunda imagen de una barra verde con una X roja y la palabra Don't](images/dont.svg) ![Captura de pantalla de un complejo y extraño icono de carro de la compra](images/icons/icon-bad-example.png)<br>
 
 No uses un icono si su significado no está claro, o si requiere una forma compleja para hacerlo claro.
     :::column-end:::

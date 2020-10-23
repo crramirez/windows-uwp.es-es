@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: fefc7f72fb91a61ae924ac082dcac6d3cf9c044b
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 884f61e877b1d7ff9f5c4567dfc329d59610b773
+ms.sourcegitcommit: 14e79119aacc75382de9940fb5abaf7a618ad843
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750131"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92210609"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
@@ -34,7 +34,7 @@ Un ejemplo sencillo es controlar el evento clic de un botón. Es habitual usar e
 
 ```xaml
 // MainPage.xaml
-<Button x:Name="Button" Click="ClickHandler">Click Me</Button>
+<Button x:Name="myButton" Click="ClickHandler">Click Me</Button>
 ```
 
 ```cppwinrt
@@ -48,9 +48,14 @@ void MainPage::ClickHandler(
     IInspectable const& /* sender */,
     RoutedEventArgs const& /* args */)
 {
-    Button().Content(box_value(L"Clicked"));
+    myButton().Content(box_value(L"Clicked"));
 }
 ```
+
+El código anterior se toma del proyecto **Blank App (C++/WinRT)** [Aplicación vacía (C++/WinRT)] en Visual Studio. El código `myButton()` llama a una función de descriptor de acceso generada, que devuelve el **Botón** al que se ha llamado *myButton*. Si cambia `x:Name` de ese elemento de **Botón**, también cambiará el nombre de la función de descriptor de acceso generada.
+
+> [!NOTE]
+> En este caso, el origen del evento (el objeto que provoca el evento) es el **Botón** denominado *myButton*. Y el destinatario del evento (el objeto que controla el evento) es una instancia de **MainPage**. Hay más información más adelante en este tema sobre la administración de la duración de los orígenes de eventos y los destinatarios de eventos.
 
 En lugar de hacerlo mediante declaración en el marcado, puedes registrar de manera imperativa una función miembro para controlar un evento. Es posible que no se muestre de forma evidente en el siguiente ejemplo de código, pero el argumento para la llamada [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) es una instancia del delegado [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler). En este caso, usaremos la sobrecarga de constructor **RoutedEventHandler** que toma un objeto y un puntero a función miembro.
 
@@ -60,7 +65,7 @@ MainPage::MainPage()
 {
     InitializeComponent();
 
-    Button().Click({ this, &MainPage::ClickHandler });
+    myButton().Click({ this, &MainPage::ClickHandler });
 }
 ```
 
@@ -80,7 +85,7 @@ MainPage::MainPage()
 {
     InitializeComponent();
 
-    Button().Click( MainPage::ClickHandler );
+    myButton().Click( MainPage::ClickHandler );
 }
 void MainPage::ClickHandler(
     IInspectable const& /* sender */,
@@ -130,9 +135,9 @@ MainPage::MainPage()
 {
     InitializeComponent();
 
-    Button().Click([this](IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    myButton().Click([this](IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
     {
-        Button().Content(box_value(L"Clicked"));
+        myButton().Content(box_value(L"Clicked"));
     });
 }
 ```
@@ -148,7 +153,7 @@ MainPage::MainPage()
     {
         sender.as<winrt::Windows::UI::Xaml::Controls::Button>().Content(box_value(L"Clicked"));
     };
-    Button().Click(click_handler);
+    myButton().Click(click_handler);
     AnotherButton().Click(click_handler);
 }
 ```

@@ -10,12 +10,12 @@ ms.custom: RS5
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: f7035017b1b1bfe878e4bd390fcefbe2bf3a6be5
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: c2f2053a02f6ddb2f955597f1a25cc58d220e115
+ms.sourcegitcommit: cbdfac0e2d8bead6c225e815e7d6dffe1f5ef864
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636565"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344975"
 ---
 # <a name="color"></a>Color
 
@@ -414,7 +414,7 @@ ColorPaletteResources también permite colocar y definir colores del sistema dir
 
 :::row:::
     :::column:::
-![ilustración de contraste](images/color/illo-contrast.svg)
+![Ilustración de contraste](images/color/illo-contrast.svg)
     :::column-end:::
     :::column span="2":::
 **Contraste**
@@ -427,7 +427,7 @@ Al pensar qué colores usarás en la aplicación, la accesibilidad deberá ser u
 
 :::row:::
     :::column:::
-![ilustración de contraste](images/color/illo-lighting.svg)
+![Ilustración de iluminación](images/color/illo-lighting.svg)
     :::column-end:::
     :::column span="2":::
 **Iluminación**
@@ -438,7 +438,7 @@ Ten en cuenta que la variación de la iluminación ambiente puede afectar a la f
 
 :::row:::
     :::column:::
-![ilustración de contraste](images/color/illo-colorblindness.svg)
+![Ilustración de daltonismo](images/color/illo-colorblindness.svg)
     :::column-end:::
     :::column span="2":::
 **Daltonismo**

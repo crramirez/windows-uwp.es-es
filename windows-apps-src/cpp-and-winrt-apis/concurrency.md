@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, concurrency, async, asynchronous, asynchrony
 ms.localizationpriority: medium
-ms.openlocfilehash: a10962740d3f723a855914595ea02d0688ff9707
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8dc98176e61ea6e03b1d822e05f8e0656a34e4b3
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170379"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297752"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
@@ -158,7 +158,7 @@ int main()
 
 En el ejemplo anterior, **RetrieveBlogFeedAsync** devuelve **IAsyncOperationWithProgress**, que tiene progreso y un valor devuelto. Podemos hacer otro trabajo mientras **RetrieveBlogFeedAsync** está haciendo el suyo y recuperando la fuente. A continuación, llamamos a **get** en este objeto de la operación asincrónica para bloquear, esperamos a que se complete y obtenemos los resultados de la operación.
 
-Si vas a devolver asincrónicamente un tipo de Windows Runtime, debes devolver [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation-1) o [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2). Se cualifica cualquier clase de tiempo de ejecución propia o de terceros o cualquier tipo que se pueda pasar a una función de Windows Runtime o desde ella (por ejemplo, `int` o **winrt::hstring**). El compilador te ayudará con un error "*debe ser de tipo WinRT*" si intentas usar uno de estos tipos de la operación asincrónica con un tipo que no sea de Windows Runtime.
+Si vas a devolver asincrónicamente un tipo de Windows Runtime, debes devolver [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation-1) o [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2). Se cualifica cualquier clase de tiempo de ejecución propia o de terceros o cualquier tipo que se pueda pasar a una función de Windows Runtime o desde ella (por ejemplo, `int` o **winrt::hstring**). El compilador le ayudará con un error "*T debe ser de tipo WinRT*" si intenta usar uno de estos tipos de operación asincrónica con un tipo que no sea de Windows Runtime.
 
 Si una corrutina no tiene al menos una instrucción `co_await`, para que se cualifique como un corrutina, debe tener al menos una instrucción `co_return` o `co_yield`. Habrá casos en los que la corrutina pueda devolver un valor sin introducir ninguna asincronía y, por lo tanto, sin bloquear ni cambiar el contexto. Este ejemplo lo hace (la segunda y subsiguientes veces que se realice la llamada) almacenando en caché un valor.
 

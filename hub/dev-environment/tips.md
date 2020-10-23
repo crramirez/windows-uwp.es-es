@@ -9,16 +9,24 @@ ms.technology: windows-nodejs
 keywords: Microsoft, Windows, Developer, Tips, Performance, WSL
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 1135be4797893a74e398e69fcbc1c43d60e9fdb9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7d02e3b46d6938532bbc7024e8840b976b2715a6
+ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172669"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92171159"
 ---
 # <a name="tips-for-improving-performance-and-development-workflows"></a>Recomendaciones para mejorar el rendimiento y el desarrollo de flujos de trabajo
 
 Hemos recopilado algunas recomendaciones que esperamos que le ayuden para hacer que el flujo de trabajo sea más eficaz y agradable. ¿Tiene otras recomendaciones para compartir? Envíe una solicitud de incorporación de cambios con el botón "Editar" de arriba, o un problema con el botón "Comentarios" que aparece a continuación y podemos agregarlo a la lista.
+
+> [!NOTE]
+> Si tiene problemas de rendimiento relacionados con el desarrollo en Windows 10, por ejemplo:
+> - Herramientas de desarrollo (por ejemplo, compiladores, vinculadores, etc.) que se ejecutan más lentamente en Windows que lo esperado.
+> - Plataformas en tiempo de ejecución (por ejemplo, node, .NET y Python) se ejecutan más lentamente en Windows que en otras plataformas.
+> - Las aplicaciones experimentan problemas de rendimiento relacionados con la creación de procesos, red o E/S de archivo. 
+> 
+> Comuníquenoslo mediante la presentación de un problema en el [repositorio problemas de Windows Developer (WinDev)](https://github.com/microsoft/WinDev).
 
 ## <a name="use-shortcuts-to-open-a-project-in-vs-code-or-windows-file-explorer"></a>Uso de accesos directos para abrir un proyecto en VS Code o en el explorador de archivos de Windows
 

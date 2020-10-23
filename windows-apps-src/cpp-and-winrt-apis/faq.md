@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, frequently, asked, questions, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: d9b402a1f140126314bc10f69880a9f01af2b2a4
-ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
+ms.openlocfilehash: b1a05dbb666b33739a083c517395359a64fee9df
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643807"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297648"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
 Respuestas a preguntas que probablemente tengas acerca de la creación y del consumo de las API de Windows Runtime con [C++/WinRT](./intro-to-using-cpp-with-winrt.md).
@@ -186,7 +186,7 @@ Al final del [ejemplo de código en la vista de navegación](../design/controls-
 
 El archivo de encabezado `winrt/Windows.UI.Xaml.Media.Animation.h` declara un método denominado **GetCurrentTime**, mientras que `windows.h` (mediante `winbase.h`) define una macro denominada **GetCurrentTime**. Cuando los dos entran en conflicto, el compilador de C++ genera el error "*error C4002: demasiados argumentos para la invocación de la macro como función GetCurrentTime*".
 
-De forma similar, `winrt/Windows.Globalization.h` declara un método denominado **TRY**, mientras que `afx.h` define una macro denominada **GetCurrentTime**. Cuando estos entran en conflicto, el compilador de C++ genera el error "*error C2334: tokens inesperados antes de '{'; se omite el cuerpo de función aparente*".
+De forma similar, `winrt/Windows.Globalization.h` declara un método denominado **TRY**, mientras que `afx.h` define una macro denominada **TRY**. Cuando estos entran en conflicto, el compilador de C++ genera el error "*error C2334: tokens inesperados antes de '{'; se omite el cuerpo de función aparente*".
 
 Para solucionar uno o ambos problemas, puedes hacer lo siguiente.
 

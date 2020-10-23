@@ -1,5 +1,5 @@
 ---
-description: En este tutorial se muestra cómo agregar interfaces de usuario de XAML en UWP, crear paquetes MSIX e incorporar otros componentes actuales en la aplicación de WPF.
+description: En este tutorial se muestra cómo agregar compatibilidad con firmas digitales a la aplicación Contoso Expenses.
 title: Incorporación de un control InkCanvas en UWP mediante islas XAML
 ms.topic: article
 ms.date: 01/24/2020
@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 24fb2507dd8f5a83b5581ff08d44210b0f5146c3
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 34a92d9a1bd9101d059e5bd9b3cf18eabc3d619b
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636455"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133038"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>Parte 2: Incorporación de un control InkCanvas en UWP mediante islas XAML
 

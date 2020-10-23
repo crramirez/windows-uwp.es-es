@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c4ab2ac5a611d310abc177126cc92b88f9e3b8e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fb7229d977f2d2f32b251a524e101a8acf2b2524
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165159"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193018"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Compilación de una aplicación compleja de la Plataforma universal de Windows (UWP)
 
@@ -23,7 +23,7 @@ En los equipos de diseño de Microsoft, nuestro proceso para crear aplicaciones 
 
 A la hora de planear tu aplicación para la Plataforma universal de Windows (UWP), no solo debes determinar qué es lo que hará tu aplicación y a quién estará destinada, sino también aquello en lo que tu aplicación va a ser genial. En el corazón de toda buena aplicación reside un concepto sólido que proporciona una base resistente.
 
-Supongamos que deseas crear una aplicación de fotografía. Pensando en los motivos por los que los usuarios trabajan con sus fotografías, las guardan y las comparten, te das cuenta de que quieren revivir recuerdos, conectar con otras personas a través de las fotos y conservar las fotos en un lugar seguro. Por tanto, esas son las cosas que te interesa que sean los puntos fuertes de la aplicación y utilizas esos objetivos de experiencia del usuario para guiarte durante el resto del proceso de diseño.
+Supongamos que deseas crear una aplicación de fotografía. Pensando en los motivos por los que los usuarios trabajan con sus fotografías, las guardan y las comparten, se entiende que quieren revivir recuerdos, conectar con otras personas a través de las fotos y conservar las fotos en un lugar seguro. Por tanto, esas son las cosas que te interesa que sean los puntos fuertes de la aplicación y utilizas esos objetivos de experiencia del usuario para guiarte durante el resto del proceso de diseño.
 
 **¿En qué consiste la aplicación?** Empieza con un concepto amplio y enumera todo lo que quieras que los usuarios puedan hacer con la aplicación.
 
@@ -52,9 +52,9 @@ Este es el enunciado de puntos fuertes de la aplicación y puede orientar muchas
 
 **El embudo de diseño**
 
-Después de tener una buena idea resulta muy tentador pasar a desarrollarla, incluso llevarla a la fase de producción en cierta medida. Pero supongamos que lo haces y que más adelante se te ocurre otra idea interesante. Es natural que tiendas a seguir con la idea a la que ya has dedicado tu tiempo y esfuerzo sin tener en cuenta los méritos relativos de las dos ideas. ¡Si se te hubiese ocurrido esa idea antes! Pues bien, el embudo de diseño es una técnica que ayuda a dar con las mejores ideas lo antes posible.
+Después de tener una buena idea, resulta muy tentador pasar en desarrollarla, incluso llevarla a la fase de producción en cierta medida. Pero supongamos que lo hace y que más adelante se le ocurre otra idea interesante. Es natural que tienda a seguir con la idea a la que ya ha dedicado su tiempo y esfuerzo sin tener en cuenta los méritos relativos de las dos ideas. ¡Si se le hubiese ocurrido esa idea antes! Pues bien, el embudo de diseño es una técnica que ayuda a dar con las mejores ideas lo antes posible.
 
-El término "embudo" se debe a su forma. En la parte ancha del embudo entran muchas ideas y cada una se muestra como un artefacto de diseño de baja fidelidad (como un boceto, quizás, o como un párrafo de texto). A medida que esta recopilación de ideas viaja hacia el extremo estrecho del embudo, el número de ideas se reduce y aumenta, al mismo tiempo, la fidelidad de los artefactos que representan las ideas. Cada artefacto solo debe capturar la información necesaria para comparar una idea con otra o para responder a una pregunta determinada, como "¿es útil o intuitivo?". *No debe emplearse más tiempo ni esfuerzo en cada uno de ellos*. Algunas ideas se quedarán en el camino al probarlas, lo cual te parecerá bien, porque no habrás invertido más de lo absolutamente necesario en juzgar dichas ideas. Las ideas que consigan avanzar a lo largo del embudo se tratarán sucesivamente como ideas de alta fidelidad. Al final tendrás un único artefacto de diseño que representará la idea ganadora. Esta es la idea que ha ganado por méritos propios, no simplemente porque se te ocurrió primero. De este modo, habrás diseñado la mejor aplicación posible.
+El término "embudo" se debe a su forma. En la parte ancha del embudo entran muchas ideas y cada una se muestra como un artefacto de diseño de baja fidelidad (como un boceto, quizás, o como un párrafo de texto). A medida que esta recopilación de ideas viaja hacia el extremo estrecho del embudo, el número de ideas se reduce y aumenta, al mismo tiempo, la fidelidad de los artefactos que representan las ideas. Cada artefacto solo debe capturar la información necesaria para comparar una idea con otra o para responder a una pregunta determinada, como "¿es útil o intuitivo?". *No debe emplearse más tiempo ni esfuerzo en cada uno de ellos*. Algunas ideas se quedarán en el camino al probarlas, lo cual le parecerá bien, porque no habrá invertido más de lo absolutamente necesario en juzgar dichas ideas. Las ideas que consigan avanzar a lo largo del embudo se tratarán sucesivamente como ideas de alta fidelidad. Al final, tendrá un único artefacto de diseño que representará la idea ganadora. Esta es la idea que ha ganado por méritos propios, no simplemente porque se te ocurrió primero. De este modo, habrás diseñado la mejor aplicación posible.
 
 ## <a name="structure"></a>Estructura
 
@@ -238,4 +238,4 @@ Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicie
 
 Antes de ir demasiado lejos con el desarrollo de tu aplicación, debes validar el diseño o crear un prototipo basado en directrices, impresiones del usuario y requisitos, para evitar tener que volver a trabajar en ello más adelante. Cada función cuenta con un conjunto de directrices de experiencia del usuario que le ayudan a pulir la aplicación, así como un conjunto de requisitos de Store que debe cumplir para publicar la aplicación en Microsoft Store. Puedes usar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) para comprobar si tu aplicación cumple técnicamente con los requisitos de la Tienda. También puedes usar las herramientas de rendimiento de Microsoft Visual Studio para asegurarte de ofrecer a los usuarios una gran experiencia en todos los escenarios.
 
-Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://developer.microsoft.com/windows/apps/design) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](/visualstudio/profiling/profiling-tools?view=vs-2015) para analizar el rendimiento de cada uno de los escenarios de la aplicación.
+Usa las [directrices detalladas de la experiencia de usuario para aplicaciones para UWP](https://developer.microsoft.com/windows/apps/design) para mantenerte centrado en las características importantes. Usa las herramientas que encontrarás en [Visual Studio performance tools (Herramientas de rendimiento de Visual Studio)](/visualstudio/profiling/profiling-feature-tour) para analizar el rendimiento de cada uno de los escenarios de la aplicación.
