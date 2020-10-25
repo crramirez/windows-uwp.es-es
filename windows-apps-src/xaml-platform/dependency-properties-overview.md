@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7633ff363a00c90a576ad5799ef0d2b048cd5cdd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 769d786078edd68af2e1e57bdb869e7aa4099405
+ms.sourcegitcommit: 88f3992462c88a0c5c6e85b942705bae5e4a1aac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166859"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499610"
 ---
 # <a name="dependency-properties-overview"></a>Introducción a las propiedades de dependencia
 
@@ -203,11 +203,11 @@ Los aspectos de subprocesos de [**DependencyObject**](/uwp/api/Windows.UI.Xaml.D
 ### <a name="conceptual-material"></a>Material conceptual
 
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
-- [Introducción a las propiedades adjuntas](attached-properties-overview.md)
+- [Información general sobre propiedades adjuntas](attached-properties-overview.md)
 - [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md)
 - [Animaciones con guion gráfico](../design/motion/storyboarded-animations.md)
 - [Crear componentes de Windows Runtime](/previous-versions/windows/apps/hh441572(v=vs.140))
-- [Muestra de controles de usuario y personalizados de XAML](https://code.msdn.microsoft.com/windowsapps/XAML-user-and-custom-a8a9505e)
+- [Muestra de controles de usuario y personalizados de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20user%20and%20custom%20controls%20sample)
 
 ## <a name="apis-related-to-dependency-properties"></a>API relacionadas con propiedades de dependencia
 
