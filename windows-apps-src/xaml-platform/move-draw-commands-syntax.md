@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f73f0aef6cf7a1abec420e48713d3d3776a1867
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a5942dfbcd2f72d456ac352785bce73e75454330
+ms.sourcegitcommit: aa88679989ef3c8b726e1bf5a0ed17c1206a414f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155049"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687785"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Sintaxis de comandos de movimiento y dibujo
 
@@ -33,7 +33,7 @@ Hay dos propiedades en Windows Runtime que pueden usar una cadena que represente
 
 ## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>Usar comandos de movimiento y dibujo y usar la clase **PathGeometry**
 
-Para XAML en Windows Runtime, los comandos de movimiento y dibujo crean una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) que consta de un solo objeto [**PathFigure**](/uwp/api/Windows.UI.Xaml.Media.PathFigure) con un valor de propiedad [**Figures**](/uwp/api/windows.ui.xaml.media.pathgeometry.figures). Cada comando de dibujo crea una clase derivada [**PathSegment**](/uwp/api/Windows.UI.Xaml.Media.PathSegment) en cada colección de [**segmentos**](/uwp/api/windows.ui.xaml.media.pathfigure.segments) del objeto **PathFigure**, el comando de movimiento cambia la propiedad [**StartPoint**](/uwp/api/windows.ui.xaml.media.pathfigure.startpoint) y la existencia de un comando próximo establece [**IsClosed**](/uwp/api/windows.ui.xaml.media.pathfigure.isclosed) en **true**. Puedes examinar esta estructura como si fuera un modelo de objetos si examinas los valores de **Data** en tiempo de ejecución.
+Para XAML en Windows Runtime, los comandos de movimiento y dibujo crean una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) que consta de un solo objeto [**PathFigure**](/uwp/api/Windows.UI.Xaml.Media.PathFigure) con un valor de propiedad [**Figures**](/uwp/api/windows.ui.xaml.media.pathgeometry.figures). Cada comando de dibujo crea una clase derivada [**PathSegment**](/uwp/api/Windows.UI.Xaml.Media.PathSegment) en cada colección de [**segmentos**](/uwp/api/windows.ui.xaml.media.pathfigure.segments) del objeto **PathFigure** , el comando de movimiento cambia la propiedad [**StartPoint**](/uwp/api/windows.ui.xaml.media.pathfigure.startpoint) y la existencia de un comando próximo establece [**IsClosed**](/uwp/api/windows.ui.xaml.media.pathfigure.isclosed) en **true** . Puedes examinar esta estructura como si fuera un modelo de objetos si examinas los valores de **Data** en tiempo de ejecución.
 
 ## <a name="the-basic-syntax"></a>Sintaxis básica
 
@@ -53,23 +53,23 @@ Estas son las reglas generales de esta sintaxis:
 
 **\[**_fillRule_ **\]** _moveCommand_ _drawCommand_ **\[** _drawCommand_ **\*\]** **\[** _closeCommand_**\]**
 
-Muchos de los comandos de dibujo usan puntos en los que puedes proporcionar un valor _x,y_. Siempre que vea un \* marcador de posición de _puntos_ , puede suponer que está ofreciendo dos valores decimales para el valor _x, y_ de un punto.
+Muchos de los comandos de dibujo usan puntos en los que puedes proporcionar un valor _x,y_ . Siempre que vea un \* marcador de posición de _puntos_ , puede suponer que está ofreciendo dos valores decimales para el valor _x, y_ de un punto.
 
 Con frecuencia se pueden omitir los espacios en blanco, siempre que el resultado no sea ambiguo. De hecho, puedes omitir todos los espacios en blanco si usas comas como separador para todos los conjuntos de números (puntos y tamaño). Por ejemplo, este uso es aceptable: `F1M0,58L2,56L6,60L13,51L15,53L6,64z`. Pero es más habitual incluir espacios en blanco entre los comandos por motivos de claridad.
 
-No uses la coma como separador decimal. Recuerda que la cadena de comandos se interpreta en lenguaje XAML y que no se tienen en cuenta las convenciones de formato numérico específicas de otras culturas que puedan ser distintas de las usadas en la configuración regional **en-us**.
+No uses la coma como separador decimal. Recuerda que la cadena de comandos se interpreta en lenguaje XAML y que no se tienen en cuenta las convenciones de formato numérico específicas de otras culturas que puedan ser distintas de las usadas en la configuración regional **en-us** .
 
 ## <a name="syntax-specifics"></a>Peculiaridades de la sintaxis
 
 **Regla de relleno**
 
-Existen dos posibles valores para la regla de relleno opcional: **F0** o **F1**. (El valor **F** siempre aparece en mayúsculas). **F0** es el valor predeterminado y crea el comportamiento de relleno **EvenOdd** fill behavior, así que normalmente no se especifica. Usa **F1** para obtener el comportamiento de relleno **Nonzero**. Estos valores de relleno se alinean con los valores de la enumeración [**FillRule**](/uwp/api/Windows.UI.Xaml.Media.FillRule).
+Existen dos posibles valores para la regla de relleno opcional: **F0** o **F1** . (El valor **F** siempre aparece en mayúsculas). **F0** es el valor predeterminado y crea el comportamiento de relleno **EvenOdd** fill behavior, así que normalmente no se especifica. Usa **F1** para obtener el comportamiento de relleno **Nonzero** . Estos valores de relleno se alinean con los valores de la enumeración [**FillRule**](/uwp/api/Windows.UI.Xaml.Media.FillRule).
 
 **Comando de movimiento**
 
 Especificar el punto inicial de una figura nueva.
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `M `_startPoint_ <br/>O bien<br/>`m`_startPoint_|
 
@@ -79,7 +79,7 @@ Especificar el punto inicial de una figura nueva.
 
 Una **M** mayúscula indica que *startPoint* es una coordenada absoluta; en cambio, una **m** minúscula indica que *startPoint* es el desplazamiento de un punto anterior o (0,0) si no había punto anterior.
 
-**Nota:**    Es legal especificar varios puntos después del comando move. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
+**Nota**  Se pueden especificar varios puntos después del comando de movimiento. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
 
 **Dibujar comandos**
 
@@ -93,7 +93,7 @@ Los puntos de control para un segmento son relativos al extremo del segmento ant
 
 Crea una línea recta entre el punto actual y el punto final especificado. `l 20 30` y `L 20,30` son ejemplos de comandos de línea válidos. Define el equivalente de un objeto [**LineGeometry**](/uwp/api/Windows.UI.Xaml.Media.LineGeometry).
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `L`_punto de conexión_ <br/>O bien<br/>`l`_punto de conexión_ |
 
@@ -105,31 +105,31 @@ Crea una línea recta entre el punto actual y el punto final especificado. `l 20
 
 Crea una línea horizontal entre el punto actual y la coordenada x especificada. `H 90` es un ejemplo de un comando de línea horizontal válido.
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `H ` _x_ <br/> O bien <br/>`h ` _x_ |
 
 | Término | Descripción |
 |------|-------------|
-| x | [**Hace**](/dotnet/api/system.double) <br/> Coordenada x del punto final de la línea. |
+| x | [**Double**](/dotnet/api/system.double) <br/> Coordenada x del punto final de la línea. |
 
 **Comando de línea vertical**
 
 Crea una línea vertical entre el punto actual y la coordenada y especificada. `v 90` es un ejemplo de comando de línea vertical válido.
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `V `_y_ <br/> O bien <br/> `v `_y_ |
 
 | Término | Descripción |
 |------|-------------|
-| *y* | [**Hace**](/dotnet/api/system.double) <br/> Coordenada y del punto final de la línea. |
+| *y* | [**Double**](/dotnet/api/system.double) <br/> Coordenada y del punto final de la línea. |
 
 **Comando de curva Bézier cúbica**
 
-Crea una curva Bézier cúbica entre el punto actual y el extremo especificado, mediante los dos puntos de control especificados (*controlPoint1* y *controlPoint2*). `C 100,200 200,400 300,200` es un ejemplo de un comando de curva válido. Define el equivalente de un objeto [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con un objeto [**BezierSegment**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment).
+Crea una curva Bézier cúbica entre el punto actual y el extremo especificado, mediante los dos puntos de control especificados ( *controlPoint1* y *controlPoint2* ). `C 100,200 200,400 300,200` es un ejemplo de un comando de curva válido. Define el equivalente de un objeto [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con un objeto [**BezierSegment**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment).
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `C ` *controlPoint1* *controlPoint2* *endPoint* <br/> O bien <br/> `c ` *controlPoint1* *controlPoint2* *endPoint* |
 
@@ -137,13 +137,13 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado, 
 |------|-------------|
 | *controlPoint1* | [**Punto**](/uwp/api/Windows.Foundation.Point) <br/> El primer punto de control de la curva, que determina la tangente de inicio de la misma. |
 | *controlPoint2* | [**Punto**](/uwp/api/Windows.Foundation.Point) <br/> El segundo punto de control de la curva, que determina la tangente final de la misma. |
-| *Finales* | [**Punto**](/uwp/api/Windows.Foundation.Point) <br/> Punto en el que se dibuja la curva. | 
+| *Finales* | [**Punto**](/uwp/api/Windows.Foundation.Point) <br/> Punto en el que se dibuja la curva. | 
 
 **Comando de curva Bézier cuadrática**
 
-Crea una curva Bézier cuadrática entre el punto actual y el extremo especificado, mediante el punto de control especificado (*controlPoint*). `q 100,200 300,200` es un ejemplo de un comando válido de curva Bézier cuadrática. Define el equivalente de una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con una clase [**QuadraticBezierSegment**](/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment).
+Crea una curva Bézier cuadrática entre el punto actual y el extremo especificado, mediante el punto de control especificado ( *controlPoint* ). `q 100,200 300,200` es un ejemplo de un comando válido de curva Bézier cuadrática. Define el equivalente de una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con una clase [**QuadraticBezierSegment**](/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment).
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `Q ` *controlPoint endPoint* <br/> O bien <br/> `q ` *controlPoint endPoint* |
 
@@ -154,9 +154,9 @@ Crea una curva Bézier cuadrática entre el punto actual y el extremo especifica
 
 **Comando de curva Bézier cúbica suave**
 
-Crea una curva Bézier cúbica entre el punto actual y el extremo especificado. El primer punto de control se supone que es el reflejo del segundo punto de control del comando anterior en relación al punto actual. Si no hay ningún comando anterior o si el comando anterior no era un comando de curva Bézier cúbica o un comando de curva Bézier cúbica suave, se supone que el primer punto de control coincide con el punto actual. El segundo punto de control (el punto de control del extremo de la curva) viene especificado por *controlPoint2*. Por ejemplo, `S 100,200 200,300` es un comando válido de curva Bézier cúbica suave. Este comando define el equivalente de una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con una clase [**BezierSegment**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment), en la cual había un segmento de curva anterior.
+Crea una curva Bézier cúbica entre el punto actual y el extremo especificado. El primer punto de control se supone que es el reflejo del segundo punto de control del comando anterior en relación al punto actual. Si no hay ningún comando anterior o si el comando anterior no era un comando de curva Bézier cúbica o un comando de curva Bézier cúbica suave, se supone que el primer punto de control coincide con el punto actual. El segundo punto de control (el punto de control del extremo de la curva) viene especificado por *controlPoint2* . Por ejemplo, `S 100,200 200,300` es un comando válido de curva Bézier cúbica suave. Este comando define el equivalente de una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con una clase [**BezierSegment**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment), en la cual había un segmento de curva anterior.
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `S` *controlPoint2* *endPoint* <br/> O bien <br/>`s` *controlPoint2 endPoint* |
 
@@ -169,7 +169,7 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado. 
 
 Crea una curva Bézier cuadrática entre el punto actual y el extremo especificado. El punto de control se supone que es el reflejo del punto de control del comando anterior en relación al punto actual. Si no hay ningún comando anterior o si el comando anterior no era un comando de curva Bézier cuadrática o un comando de curva Bézier cuadrática suave, entonces el punto de control coincide con el punto actual. Este comando define el equivalente de una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con una clase [**QuadraticBezierSegment**](/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment), donde había un segmento de curva anterior.
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `T` *controlPoint* *endPoint* <br/> O bien <br/> `t` *controlPoint* *endPoint* |
 
@@ -182,23 +182,23 @@ Crea una curva Bézier cuadrática entre el punto actual y el extremo especifica
 
 Crea un arco elíptico entre el punto actual y el punto final especificado. Define el equivalente de una clase [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) con una clase [**ArcSegment**](/uwp/api/Windows.UI.Xaml.Media.ArcSegment).
 
-| Sintaxis |
+| Syntax |
 |--------|
-| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> O bien <br/>`a `*sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> O bien <br/>`a ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* |
 
 | Término | Descripción |
 |------|-------------|
 | *size* | [**Size**](/uwp/api/Windows.Foundation.Size)<br/>Es el radio x y el radio y del arco. |
-| *rotationAngle* | [**Hace**](/dotnet/api/system.double) <br/> La rotación de la elipse, en grados. |
+| *rotationAngle* | [**Double**](/dotnet/api/system.double) <br/> La rotación de la elipse, en grados. |
 | *isLargeArcFlag* | Establezca el valor en 1 si el ángulo del arco debe ser de 180 grados o más; de lo contrario, establézcalo en 0. |
 | *sweepDirectionFlag* | Establezca el valor en 1 si se dibuja en una dirección con ángulo positivo; de lo contrario, establézcalo en 0. |
-| *Finales* | [**Punto**](/uwp/api/Windows.Foundation.Point) <br/> Punto en el que está dibujado el arco.|
- 
+| *Finales* | [**Punto**](/uwp/api/Windows.Foundation.Point) <br/> Punto en el que está dibujado el arco. |
+
 **Close (comando)**
 
 Finaliza la figura actual y crea una línea que conecta el punto actual con el punto inicial de la figura. Este comando crea una unión de líneas (esquina) entre el último y el primer segmento de la figura.
 
-| Sintaxis |
+| Syntax |
 |--------|
 | `Z` <br/> O bien <br/> `z ` |
 
@@ -206,22 +206,22 @@ Finaliza la figura actual y crea una línea que conecta el punto actual con el p
 
 Describe las coordenadas x e y de un punto. Consulta también [**Point**](/uwp/api/Windows.Foundation.Point).
 
-| Sintaxis |
+| Syntax |
 |--------|
-| *x*,*y*<br/> O bien <br/>*x* *y* |
+| *x* , *y*<br/> O bien <br/>*x* *y* |
 
 | Término | Descripción |
 |------|-------------|
-| *x* | [**Hace**](/dotnet/api/system.double) <br/> La coordenada x del punto. |
-| *y* | [**Hace**](/dotnet/api/system.double) <br/> La coordenada y del punto. |
+| *x* | [**Double**](/dotnet/api/system.double) <br/> La coordenada x del punto. |
+| *y* | [**Double**](/dotnet/api/system.double) <br/> La coordenada y del punto. |
 
 **Notas adicionales**
 
 En lugar de un valor numérico estándar, también puede usar los valores especiales siguientes. Estos valores distinguen entre mayúsculas y minúsculas.
 
--   **Infinity**: representa **PositiveInfinity**.
--   ** \- Infinity**: representa **NegativeInfinity**.
--   **NaN**: representa **NaN**.
+-   **Infinity** : representa **PositiveInfinity** .
+-   **\- Infinity** : representa **NegativeInfinity** .
+-   **NaN** : representa **NaN** .
 
 En lugar de usar valores decimales o enteros, puedes usar la notación científica. Por ejemplo, `+1.e17` es un valor válido.
 
