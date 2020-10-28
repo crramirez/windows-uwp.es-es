@@ -6,18 +6,18 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ab8d696ddb1a4ef9e3dc3549754cbf51fc91374
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 9a0005ecf7d51cc6b08bc5cc61350489839d568f
+ms.sourcegitcommit: 047004e2bf100e319d134c18518062bf7f3efb5d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220548"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92763109"
 ---
 # <a name="drag-and-drop"></a>Arrastrar y colocar
 
 Arrastrar y colocar es una manera intuitiva de transferir datos dentro de una aplicación o entre aplicaciones en el escritorio de Windows. Arrastrar y colocar permite que el usuario transfiera datos entre aplicaciones o dentro de una aplicación mediante un gesto estándar (mantenga presionado el dedo con el dedo o pulse y haga clic con un mouse o un lápiz).
 
-> **API importantes**: [propiedad CanDrag](/uwp/api/windows.ui.xaml.uielement.candrag), [propiedad AllowDrop](/uwp/api/windows.ui.xaml.uielement.allowdrop) 
+> **API importantes** : [propiedad CanDrag](/uwp/api/windows.ui.xaml.uielement.candrag), [propiedad AllowDrop](/uwp/api/windows.ui.xaml.uielement.allowdrop) 
 
 El origen de arrastre, que es la aplicación o el área donde se desencadena el movimiento de arrastre, proporciona los datos que se van a transferir rellenando un objeto de paquete de datos que puede contener formatos de datos estándar, incluidos texto, RTF, HTML, mapas de bits, elementos de almacenamiento o formatos de datos personalizados. El origen también indica el tipo de operaciones que admite: copiar, desplace o link. Cuando se libera el puntero, se produce la eliminación. El destino de colocación, que es la aplicación o área situada debajo del puntero, procesa el paquete de datos y devuelve el tipo de operación que realiza.
 
@@ -37,7 +37,7 @@ Aquí se muestra información general sobre lo que debe hacer para habilitar la 
 
 ## <a name="enable-dragging"></a>Habilitar arrastre
 
-Para habilitar el arrastre en un elemento, establezca la propiedad [**CanDrag**](/uwp/api/windows.ui.xaml.uielement.candrag) en **true**. Esto hace que el elemento, y los elementos que contiene, en el caso de colecciones como ListView--arrastrable.
+Para habilitar el arrastre en un elemento, establezca la propiedad [**CanDrag**](/uwp/api/windows.ui.xaml.uielement.candrag) en **true** . Esto hace que el elemento (y los elementos que contiene), en el caso de colecciones como ListView, arrastrable.
 
 Sea específico de lo que se puede arrastrar. Los usuarios no querrán arrastrar todo en la aplicación, solo algunos elementos, como imágenes o texto. 
 
@@ -95,6 +95,12 @@ Cuando se usa la función táctil, las acciones de arrastrar una clase [**UIElem
 Puedes especificar una clase [**ListViewItem**](/uwp/api/Windows.UI.Xaml.Controls.ListViewItem) o [**GridViewItem**](/uwp/api/Windows.UI.Xaml.Controls.GridViewItem) como una carpeta. Esto es especialmente útil para escenarios de TreeView y Explorador de archivos. Para ello, establece explícitamente la propiedad [**AllowDrop**](/uwp/api/windows.ui.xaml.uielement.allowdrop) en **True** en ese elemento. 
 
 El sistema mostrará automáticamente las animaciones adecuadas para colocar en una carpeta en vez de un elemento sin carpeta. El código de tu aplicación debe seguir controlando el evento [**Drop**](/uwp/api/windows.ui.xaml.uielement.drop) en el elemento de la carpeta (así como en el elemento sin carpeta) para actualizar el origen de datos y agregar el elemento a la carpeta de destino.
+
+## <a name="enable-drag-and-drop-reordering-within-listviews"></a>Habilitar la reordenación de arrastrar y colocar en ListView
+
+[**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView)s admite el reordenamiento basado en arrastre de forma integrada, mediante una API muy similar a la API **CanDrop** que se describe en este artículo. Como mínimo, se agregan las propiedades **AllowDrop** y **CanReorderItems** .
+
+Consulte [**ListViewBase. CanReorderItems**](/uwp/api/windows.ui.xaml.controls.listviewbase.canreorderitems) para obtener más información.
 
 ## <a name="implementing-custom-drag-and-drop"></a>Implementar la función de arrastrar y colocar personalizada
 
