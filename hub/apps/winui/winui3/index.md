@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 2 (julio de 2020)
 description: Introducción a WinUI 3, versión preliminar 2.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: ec4a112eceef7053244d676b6070784174291ed1
-ms.sourcegitcommit: 8b01b9ab7293dad1259da32d1459fdd454796e12
+ms.openlocfilehash: b7336aa054bac4c59cd535951cc3fc92d4a3486a
+ms.sourcegitcommit: aa88679989ef3c8b726e1bf5a0ed17c1206a414f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92020165"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687778"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
 
@@ -44,22 +44,24 @@ WinUI 3 versión, preliminar 2 incluye plantillas de proyecto de Visual Studio p
     - Desarrollo de escritorio con C++
     - El componente opcional *Herramientas de la Plataforma universal de Windows para C++ (v142)* para la carga de trabajo de la Plataforma universal de Windows (vea "Detalles de la instalación" en la sección "Desarrollo con la Plataforma universal de Windows", en el panel derecho).
 
-    Después de descargar Visual Studio, asegúrese de habilitar las versiones preliminares de .NET en el programa: 
+    Después de instalar Visual Studio, asegúrese de habilitar las versiones preliminares de .NET en el programa: 
     - Vaya a Herramientas > Opciones > Características de vista previa > seleccione "Usar versiones preliminares del SDK de .NET Core (requiere reinicio)". 
+    
+3. Asegúrese de que el sistema tiene un origen de paquete NuGet habilitado para **nuget.org** . Para obtener más información, consulte las [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior).
 
-3. Si desea crear proyectos de escritorio de WinUI para aplicaciones de C#/.NET 5 y C++/Win32, también debe instalar las versiones x64 y x86 de .NET 5, versión preliminar 5. **Tenga en cuenta que .NET 5, versión preliminar 5, es actualmente la única versión preliminar de .NET 5 compatible con WinUI 3**:
+4. Si quiere crear proyectos de escritorio de WinUI para aplicaciones de C#/.NET 5 y C++/Win32, debe instalar las versiones x64 y x86 de .NET 5 (versión preliminar 5). **Tenga en cuenta que .NET 5, versión preliminar 5, es actualmente la única versión preliminar de .NET 5 compatible con WinUI 3** :
 
     - [Instalador x64 para .NET 5, versión preliminar 5](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.5-windows-x64-installer)
     - [Instalador x86 para .NET 5, versión preliminar 5](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.5-windows-x86-installer)
 
-4. Descargue e instale el [paquete VSIX de WinUI 3, versión preliminar 2](https://aka.ms/winui3/previewdownload). Este paquete VSIX agrega las plantillas de proyecto WinUI 3 y el paquete NuGet que contiene las bibliotecas de WinUI 3 a Visual Studio 2019.
+5. Descargue e instale el [paquete VSIX de WinUI 3, versión preliminar 2](https://aka.ms/winui3/previewdownload). Este paquete VSIX agrega las plantillas de proyecto WinUI 3 y el paquete NuGet que contiene las bibliotecas de WinUI 3 a Visual Studio 2019.
 
     Para obtener instrucciones sobre cómo agregar el paquete VSIX a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](/visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box).
 
 
 ## <a name="create-winui-projects"></a>Creación de proyectos WinUI
 
-Después de instalar el paquete VSIX de WinUI 3, versión preliminar 2, está listo para crear un nuevo proyecto mediante una de las plantillas de proyecto WinUI en Visual Studio. Para tener acceso a las plantillas de proyecto WinUI, en el cuadro de diálogo **Crear un proyecto nuevo**, filtre el lenguaje en **C++** o **C#** , la plataforma en **Windows** y el tipo de proyecto en **WinUI**. Como alternativa, puede buscar *WinUI* y seleccionar una de las plantillas en C# o C++ disponibles.
+Después de instalar el paquete VSIX de WinUI 3, versión preliminar 2, está listo para crear un nuevo proyecto mediante una de las plantillas de proyecto WinUI en Visual Studio. Para tener acceso a las plantillas de proyecto WinUI, en el cuadro de diálogo **Crear un proyecto nuevo** , filtre el lenguaje en **C++** o **C#** , la plataforma en **Windows** y el tipo de proyecto en **WinUI** . Como alternativa, puede buscar *WinUI* y seleccionar una de las plantillas en C# o C++ disponibles.
 
 ![Plantillas de proyecto WinUI](images/winui-projects-csharp.png)
 
@@ -91,7 +93,7 @@ Puede usar estas plantillas de proyecto WinUI para compilar componentes que una 
 
 ### <a name="item-templates-for-winui-3"></a>Plantillas de elementos para WinUI 3
 
-Las siguientes plantillas de elementos están disponibles para usarse en un proyecto WinUI. Para acceder a estas plantillas de proyecto WinUI, haga clic con el botón secundario en el nodo del proyecto en **Explorador de soluciones**, seleccione **Agregar** -> **Nuevo elemento** y haga clic en **WinUI** en el cuadro de diálogo **Agregar nuevo elemento**.
+Las siguientes plantillas de elementos están disponibles para usarse en un proyecto WinUI. Para acceder a estas plantillas de proyecto WinUI, haga clic con el botón secundario en el nodo del proyecto en **Explorador de soluciones** , seleccione **Agregar** -> **Nuevo elemento** y haga clic en **WinUI** en el cuadro de diálogo **Agregar nuevo elemento** .
 
 ![Plantillas de elementos de WinUI](images/winui-items-csharp.png)
 
@@ -220,7 +222,7 @@ La versión preliminar 2 de WinUI 3 es compatible con equipos en los que se ej
 
   El marco WinUI 3 es un conjunto de componentes de WinRT y, aunque que WinRT tiene tipos y objetos similares a los que se encuentran en .NET, estos no son compatibles de forma inherente.  Las proyecciones de C#/WinRT controlan la interoperabilidad entre .NET y WinRT en .NET 5, lo que hoy le permite usar libremente las interfaces de .NET en su aplicación de .NET 5. 
   
-  Sin embargo, C#/WinRT no puede controlar la interoperabilidad en las aplicaciones de .NET Native, por lo que las API de WinUI 3 se proyectan directamente en las aplicaciones para UWP. Por lo tanto, ya no puede usar esas mismas interfaces de .NET. **Una vez que las aplicaciones para UWP dejen de usar .NET Native, esta limitación ya no existirá**.
+  Sin embargo, C#/WinRT no puede controlar la interoperabilidad en las aplicaciones de .NET Native, por lo que las API de WinUI 3 se proyectan directamente en las aplicaciones para UWP. Por lo tanto, ya no puede usar esas mismas interfaces de .NET. **Una vez que las aplicaciones para UWP dejen de usar .NET Native, esta limitación ya no existirá** .
 
   Por ejemplo, la API de `INotifyPropertyChanged` se proyecta en el espacio de nombres `System.ComponentModel` para WinUI3 en las aplicaciones de escritorio, pero aparece en el espacio de nombres `Microsoft.UI.Xaml.Data` para WinUI3 en las aplicaciones para UWP (y todas las aplicaciones de C++). 
   
