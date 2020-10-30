@@ -1,5 +1,5 @@
 ---
-Description: Una aplicación localizada es aquella que se puede localizar en otros mercados, idiomas o regiones sin que se detecten defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables.
+description: Una aplicación localizada es aquella que se puede localizar en otros mercados, idiomas o regiones sin que se detecten defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables.
 title: Hacer que la aplicación sea localizable
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b914c0a2bcfae630b8b491ed702b237ce0eaaee
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8dfae2f80706edcc4462960e396f228c2829600b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172539"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034368"
 ---
 # <a name="make-your-app-localizable"></a>Hacer que la aplicación sea localizable
 
@@ -72,7 +72,7 @@ Para resolver este problema, localiza toda la oración en lugar de una única pa
 
 Evite colloquialisms y metáforas en las cadenas que cree en el idioma predeterminado. El idioma específico de un grupo demográfico, como la referencia cultural y la edad, puede ser difícil de entender o traducir porque solo los usuarios de ese grupo demográfico usan ese idioma. Del mismo modo, las metáforas pueden tener sentido para una persona, pero no significar nada para otra. Por ejemplo &quot;rizo&quot; significa algo para quienes pertenecen al ámbito de la aviación, pero aquellos que no pertenecen a este ámbito no comprenden la referencia.
 
-No uses una jerga técnica, abreviaturas ni acrónimos. Es muy poco probable que aquellas personas que no pertenecen al ámbito técnico o que provienen de otras culturas o regiones comprendan el lenguaje técnico, como también es difícil que puedan traducirlo. En las conversaciones de la vida diaria no se usan este tipo de palabras. El idioma técnico suele aparecer en los mensajes de error para identificar los problemas de hardware y software, pero debe ser necesario que las cadenas sean técnicas *solo si el usuario necesita ese nivel de información y puede realizar alguna acción o buscar a alguien que pueda*.
+No uses una jerga técnica, abreviaturas ni acrónimos. Es muy poco probable que aquellas personas que no pertenecen al ámbito técnico o que provienen de otras culturas o regiones comprendan el lenguaje técnico, como también es difícil que puedan traducirlo. En las conversaciones de la vida diaria no se usan este tipo de palabras. El idioma técnico suele aparecer en los mensajes de error para identificar los problemas de hardware y software, pero debe ser necesario que las cadenas sean técnicas *solo si el usuario necesita ese nivel de información y puede realizar alguna acción o buscar a alguien que pueda* .
 
 El uso de una voz informal o de un tono en las cadenas es una opción válida. Puede usar comentarios en el archivo de recursos predeterminado (. resw) para indicar ese propósito.
 
@@ -95,9 +95,9 @@ Deshabilite la generación automática del. appxbundle estableciendo el atributo
 
 1. En Visual Studio, haga clic con el botón derecho en el nombre del proyecto.
 2. Seleccione **tienda**  ->  **crear paquetes de aplicaciones...**
-3. En el cuadro de diálogo **crear paquetes** , seleccione **deseo crear paquetes para cargarlos en el Microsoft Store con un nuevo nombre de aplicación** y, a continuación, haga clic en **siguiente**.
+3. En el cuadro de diálogo **crear paquetes** , seleccione **deseo crear paquetes para cargarlos en el Microsoft Store con un nuevo nombre de aplicación** y, a continuación, haga clic en **siguiente** .
 4. En el cuadro de diálogo **seleccionar un nombre de aplicación** , seleccione o cree un nombre de aplicación para el paquete.
-5. En el cuadro de diálogo **seleccionar y configurar paquetes** , establezca **generar agrupación de aplicaciones** en **nunca**.
+5. En el cuadro de diálogo **seleccionar y configurar paquetes** , establezca **generar agrupación de aplicaciones** en **nunca** .
 
 ## <a name="geopolitical-awareness"></a>Reconocimiento geopolítico
 
@@ -171,7 +171,7 @@ Los caracteres Kanji japoneses tienen la propiedad de tener más de una lectura 
 
 El usuario puede buscar el nombre de la aplicación "希蒼" con el valor furigana "のあ" (NOA) y el valor fonético (mediante la función **GetPhonetic** desde el editor de métodos de entrada (IME)) "まれあお" (Mare-AO).
 
-El método de ordenación sigue el formato del **panel de control regional**:
+El método de ordenación sigue el formato del **panel de control regional** :
 
 - En una configuración regional de usuario japonés,
   - Si se habilita furigana, "希蒼" se ordena bajo "の".

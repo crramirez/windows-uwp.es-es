@@ -1,5 +1,5 @@
 ---
-Description: Usa animaciones de atenuación para hacer aparecer o desaparecer elementos en la vista. Las dos animaciones de atenuación comunes son el fundido de entrada y de salida.
+description: Usa animaciones de atenuación para hacer aparecer o desaparecer elementos en la vista. Las dos animaciones de atenuación comunes son el fundido de entrada y de salida.
 title: Animaciones de atenuación
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ae8afb291a2ba6012c55c2f22290f51b7eb76f0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 81e632a25398003daa1e73d82c23343f57fd3cd0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220158"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034228"
 ---
 # <a name="fade-animations"></a>Animaciones de atenuación
 
@@ -21,7 +21,7 @@ ms.locfileid: "91220158"
 
 Usa animaciones de atenuación para hacer aparecer o desaparecer elementos en la vista. Las dos animaciones de atenuación comunes son el fundido de entrada y de salida.
 
-> **API importantes**: [**clase FadeInThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation), [**clase FadeOutThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
+> **API importantes** : [**clase FadeInThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation), [**clase FadeOutThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -34,12 +34,12 @@ Usa animaciones de atenuación para hacer aparecer o desaparecer elementos en la
 -   El fundido de salida es una forma sutil para quitar un elemento.
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Introducción a las animaciones](./xaml-animation.md)
+* [Información general sobre animaciones](./xaml-animation.md)
 * [Animación de atenuación](/previous-versions/windows/apps/jj649429(v=win.10))
 * [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](/previous-versions/windows/apps/hh452703(v=win.10))
 * [**Clase FadeInThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation)
 * [**Clase FadeOutThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 
- 
+ 
 
- 
+ 

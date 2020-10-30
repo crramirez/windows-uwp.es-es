@@ -1,17 +1,17 @@
 ---
-Description: En este tema se enumeran las fuentes disponibles para aplicaciones de Windows que están localizadas en idiomas distintos del Inglés de EE. UU.
+description: En este tema se enumeran las fuentes disponibles para aplicaciones de Windows que están localizadas en idiomas distintos del Inglés de EE. UU.
 title: Fuentes internacionales
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 1200b80347a67bb1c9a6414a18697ca9d30bc29f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 4af2cb68f92f21750bafa8a86e5dd036d5247c4b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220608"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034358"
 ---
 # <a name="international-fonts"></a>Fuentes internacionales
 
@@ -19,7 +19,7 @@ En este tema se enumeran las fuentes disponibles para aplicaciones de Windows qu
 
 En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47) del idioma. Para ver una lista de las etiquetas de idioma admitidas específicamente por el Microsoft Store, consulte [idiomas admitidos](../../publish/supported-languages.md).
 
-| Idioma | Etiqueta de idioma | Fuente usada en Windows |
+| Lenguaje | Etiqueta de idioma | Fuente usada en Windows |
 | --------- | ----------- | -------------------- |
 | Afrikáans | af-ZA | Segoe UI |
 | Albanés | sq-AL | Segoe UI |
@@ -112,7 +112,7 @@ En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de i
 | Español | es-ES | Segoe UI |
 | Sueco | sv-SE | Segoe UI |
 | Tayiko (cirílico) | tg-Cyrl-TJ | Segoe UI |
-| Tamul | ta-IN | Nirmala UI |
+| Tamil | ta-IN | Nirmala UI |
 | Tatar | tt-RU | Segoe UI |
 | Telugu | te-IN | Nirmala UI |
 | Tailandés | th-TH | Leelawadee UI |
@@ -120,7 +120,7 @@ En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de i
 | Turco | tr-TR | Segoe UI |
 | Turcomano | tk-TM | Segoe UI |
 | Ucraniano | uk-UA | Segoe UI |
-| Urdú | ur-PK | Segoe UI |
+| Urdu | ur-PK | Segoe UI |
 | Uigur | ug-CN | Segoe UI |
 | Uzbeko (latino) | uz-Latn-UZ | Segoe UI |
 | Valenciano | ca-ES-valencia | Segoe UI |

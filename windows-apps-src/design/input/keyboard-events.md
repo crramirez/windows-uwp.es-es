@@ -1,5 +1,5 @@
 ---
-Description: Responde a las acciones de pulsación de tecla desde teclados de hardware o de software en tus aplicaciones, usando para ello controladores de eventos tanto de clase como de teclado.
+description: Responde a las acciones de pulsación de tecla desde teclados de hardware o de software en tus aplicaciones, usando para ello controladores de eventos tanto de clase como de teclado.
 title: Eventos de teclado
 ms.assetid: ac500772-d6ed-4a3a-825b-210a9c3c8f59
 label: Keyboard events
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 151abd02b34263cdd92b917127f306c25ebc5e0d
-ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
+ms.openlocfilehash: efd8a2bb205974efdcf13d614cb6fa7848f96dc7
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89187842"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033698"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -39,7 +39,7 @@ Los controles de la interfaz de usuario generan eventos de teclado solo cuando t
 
 También puedes llamar al método [**Focus**](/uwp/api/windows.ui.xaml.controls.control.focus) de un control para forzar el foco. Esto solo es necesario si implementas teclas de método abreviado, porque el foco del teclado no se establece de manera predeterminada cuando se carga la interfaz de usuario. Si deseas obtener más información, consulta el **ejemplo de teclas de método abreviado** más adelante en este tema.
 
-Para que un control reciba el foco de entrada, debe estar habilitado y sus propiedades [**IsTabStop**](/uwp/api/windows.ui.xaml.controls.control.istabstop) y [**HitTestVisible**](/uwp/api/windows.ui.xaml.uielement.ishittestvisible) deben tener un valor **true**. Este es el estado predeterminado para la mayoría de los controles. Cuando un control tiene el foco de entrada, puede generar eventos de entrada del teclado y responder a ellos, tal y como se describe más adelante en este capítulo. También puedes responder a un control que recibe o pierde el enfoque al controlar los eventos [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) y [**LostFocus**](/uwp/api/windows.ui.xaml.uielement.lostfocus).
+Para que un control reciba el foco de entrada, debe estar habilitado y sus propiedades [**IsTabStop**](/uwp/api/windows.ui.xaml.controls.control.istabstop) y [**HitTestVisible**](/uwp/api/windows.ui.xaml.uielement.ishittestvisible) deben tener un valor **true** . Este es el estado predeterminado para la mayoría de los controles. Cuando un control tiene el foco de entrada, puede generar eventos de entrada del teclado y responder a ellos, tal y como se describe más adelante en este capítulo. También puedes responder a un control que recibe o pierde el enfoque al controlar los eventos [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) y [**LostFocus**](/uwp/api/windows.ui.xaml.uielement.lostfocus).
 
 De manera predeterminada, la secuencia de tabulación de los controles es el orden con que aparecen en el lenguaje XAML. Sin embargo, puedes modificar este orden mediante la propiedad [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex). Para obtener más información, consulte [implementar la accesibilidad del teclado](/previous-versions/windows/apps/hh868161(v=win.10)).
 
@@ -50,7 +50,7 @@ Un controlador de eventos de entrada implementa un delegado que proporciona la s
 
 -   Remitente del evento. El remitente notifica el objeto al que se adjunta el controlador de eventos.
 -   Datos de evento Para los eventos de teclado, esos datos serán una instancia de [**KeyRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs). El delegado de los controladores es [**KeyEventHandler**](/uwp/api/windows.ui.xaml.input.keyeventhandler). Las propiedades más importantes de **KeyRoutedEventArgs** para la mayoría de los escenarios de controladores son [**Key**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key) y posiblemente [**KeyStatus**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus).
--   [**OriginalSource**](/uwp/api/windows.ui.xaml.routedeventargs.originalsource). Dado que los eventos de teclado están enrutados, los datos del evento proporcionan el objeto **OriginalSource**. Si estás permitiendo deliberadamente que los eventos se propaguen por un árbol de objetos, a veces **OriginalSource** es el objeto de interés en lugar del remitente. Sin embargo, eso depende de tu diseño. Si deseas obtener más información sobre cómo podrías usar **OriginalSource** en lugar del remitente, consulta la sección "Eventos de teclado enrutados" de este tema o bien el tema [Introducción a eventos y eventos enrutados](../../xaml-platform/events-and-routed-events-overview.md).
+-   [**OriginalSource**](/uwp/api/windows.ui.xaml.routedeventargs.originalsource). Dado que los eventos de teclado están enrutados, los datos del evento proporcionan el objeto **OriginalSource** . Si estás permitiendo deliberadamente que los eventos se propaguen por un árbol de objetos, a veces **OriginalSource** es el objeto de interés en lugar del remitente. Sin embargo, eso depende de tu diseño. Si deseas obtener más información sobre cómo podrías usar **OriginalSource** en lugar del remitente, consulta la sección "Eventos de teclado enrutados" de este tema o bien el tema [Introducción a eventos y eventos enrutados](../../xaml-platform/events-and-routed-events-overview.md).
 
 ### <a name="attaching-a-keyboard-event-handler"></a>Adjuntar un controlador de eventos de teclado
 
@@ -114,7 +114,7 @@ Como alternativa, la función [**GetKeyState ()**](/uwp/api/windows.ui.core.core
 En los siguientes ejemplos se implementa este segundo método, mientras que también se incluye código auxiliar para la primera implementación.
 
 > [!NOTE]
-> La tecla Alt está representada por el valor **VirtualKey.Menu**.
+> La tecla Alt está representada por el valor **VirtualKey.Menu** .
 
 ### <a name="shortcut-keys-example"></a>Ejemplo de teclas de método abreviado
 
@@ -282,14 +282,14 @@ End Sub
 >
 > Establecer **AutomationProperties.AcceleratorKey** o **AutomationProperties.AccessKey** no genera ninguna acción. Deberás adjuntar controladores para los eventos [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) o [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) para implementar el comportamiento de método abreviado de teclado en tu aplicación. Además, el detalle de texto subrayado en una tecla de acceso no se proporciona de manera automática. Si quieres mostrar texto subrayado en la interfaz de usuario, debes subrayar explícitamente el texto de la tecla de acceso específica como formato [**Underline**](/uwp/api/Windows.UI.Xaml.Documents.Underline) en línea.
 
- 
+ 
 
 ## <a name="keyboard-routed-events"></a>Eventos de teclado enrutados
 
 
 Ciertos eventos son eventos enrutados, entre ellos [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) y [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup). Los eventos enrutados usan la estrategia de enrutamiento por propagación. La estrategia de enrutamiento por propagación significa que un evento se origina en un objeto secundario y después se enruta hacia los objetos primarios sucesivos del árbol de objetos. Esto da otra oportunidad para controlar el mismo evento e interactuar con los mismos datos de evento.
 
-Observa el siguiente ejemplo de XAML, que controla eventos [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) para una clase [**Canvas**](/uwp/api/Windows.UI.Xaml.Controls.Canvas) y dos objetos [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button). En este caso, si liberas una tecla mientras el foco está en cualquiera de los objetos **Button**, se genera el evento **KeyUp**. Después, el evento se propaga hasta el **lienzo**primario.
+Observa el siguiente ejemplo de XAML, que controla eventos [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) para una clase [**Canvas**](/uwp/api/Windows.UI.Xaml.Controls.Canvas) y dos objetos [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button). En este caso, si liberas una tecla mientras el foco está en cualquiera de los objetos **Button** , se genera el evento **KeyUp** . Después, el evento se propaga hasta el **lienzo** primario.
 
 ```xaml
 <StackPanel KeyUp="StackPanel_KeyUp">
@@ -322,7 +322,7 @@ El propósito de la propiedad [**Handled**](/uwp/api/windows.ui.xaml.input.keyro
 
 Puedes usar una técnica especial para adjuntar controladores que pueden actuar sobre eventos que ya están marcados como controlados. Esta técnica usa el método [**AddHandler**](/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar un controlador, en lugar de usar atributos XAML o la sintaxis específica del lenguaje para agregar controladores, como + = en C \# .
 
-Una limitación general de esta técnica es que la API **AddHandler** toma un parámetro de tipo [**RoutedEvent**](/uwp/api/Windows.UI.Xaml.RoutedEvent) que identifica el evento enrutado en cuestión. No todos los eventos enrutados proporcionan un identificador **RoutedEvent**. Por lo tanto, esta consideración, influye en qué eventos enrutados es posible controlar en el caso [**Handled**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled). Los eventos [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) y [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) tienen identificadores de evento enrutado ([**KeyDownEvent**](/uwp/api/windows.ui.xaml.uielement.keydownevent) y [**KeyUpEvent**](/uwp/api/windows.ui.xaml.uielement.keyupevent)) en [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement). Sin embargo, otros eventos como [**TextBox.TextChanged**](/uwp/api/windows.ui.xaml.controls.textbox.textchanged) no tienen identificadores de evento enrutado y, por lo tanto, no pueden usarse con la técnica **AddHandler**.
+Una limitación general de esta técnica es que la API **AddHandler** toma un parámetro de tipo [**RoutedEvent**](/uwp/api/Windows.UI.Xaml.RoutedEvent) que identifica el evento enrutado en cuestión. No todos los eventos enrutados proporcionan un identificador **RoutedEvent** . Por lo tanto, esta consideración, influye en qué eventos enrutados es posible controlar en el caso [**Handled**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled). Los eventos [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) y [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) tienen identificadores de evento enrutado ( [**KeyDownEvent**](/uwp/api/windows.ui.xaml.uielement.keydownevent) y [**KeyUpEvent**](/uwp/api/windows.ui.xaml.uielement.keyupevent)) en [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement). Sin embargo, otros eventos como [**TextBox.TextChanged**](/uwp/api/windows.ui.xaml.controls.textbox.textchanged) no tienen identificadores de evento enrutado y, por lo tanto, no pueden usarse con la técnica **AddHandler** .
 
 ### <a name="overriding-keyboard-events-and-behavior"></a>Invalidar comportamientos y eventos de teclado
 
@@ -364,11 +364,11 @@ Ciertos controles reaccionan ante los eventos de teclado con su propio control. 
 
 Por lo general, puedes agregar controladores para [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) y [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) a una clase [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) o cualquier control relacionado que tenga por finalidad procesar entrada de texto. Sin embargo, puede ocurrir que, como parte de su diseño intencional, un control no responda a todos los valores de teclas que se dirijan a él a través de eventos de tecla. El comportamiento es específico de cada control.
 
-A modo de ejemplo, [**ButtonBase**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase) (la clase base para [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button)) procesa [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) para poder buscar la barra espaciadora o la tecla ENTRAR. La clase **ButtonBase** considera que el evento **KeyUp** equivale al botón primario del mouse presionado con el propósito de generar un evento [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Este procesamiento del evento se logra cuando **ButtonBase** invalida el método virtual [**OnKeyUp**](/uwp/api/windows.ui.xaml.controls.control.onkeyup). En su implementación, establece [**Handled**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) en **true**. El resultado es que cualquier elemento primario de un botón que escucha un evento de tecla, en el caso de una barra espaciadora, no recibiría el evento ya controlado para sus propios controladores.
+A modo de ejemplo, [**ButtonBase**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase) (la clase base para [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button)) procesa [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) para poder buscar la barra espaciadora o la tecla ENTRAR. La clase **ButtonBase** considera que el evento **KeyUp** equivale al botón primario del mouse presionado con el propósito de generar un evento [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Este procesamiento del evento se logra cuando **ButtonBase** invalida el método virtual [**OnKeyUp**](/uwp/api/windows.ui.xaml.controls.control.onkeyup). En su implementación, establece [**Handled**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) en **true** . El resultado es que cualquier elemento primario de un botón que escucha un evento de tecla, en el caso de una barra espaciadora, no recibiría el evento ya controlado para sus propios controladores.
 
 Otro ejemplo es [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox). Algunas claves, como las teclas de dirección, no se consideran texto por **cuadro** de texto y se consideran específicas del comportamiento de la interfaz de usuario del control. **TextBox** marca estos casos de eventos como controlados.
 
-Los controles personalizados pueden implementar su propio comportamiento de invalidación similar para eventos clave mediante la invalidación de [**onkeydown**](/uwp/api/windows.ui.xaml.controls.control.onkeydown)  /  [**onkeyup**](/uwp/api/windows.ui.xaml.controls.control.onkeyup). Si tu control personalizado procesa teclas aceleradoras específicas o tiene un comportamiento de control o foco similar al escenario que describimos en el caso de la clase [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox), puedes incluir esta lógica en tus propias invalidaciones de **OnKeyDown** / **OnKeyUp**.
+Los controles personalizados pueden implementar su propio comportamiento de invalidación similar para eventos clave mediante la invalidación de [**onkeydown**](/uwp/api/windows.ui.xaml.controls.control.onkeydown)  /  [**onkeyup**](/uwp/api/windows.ui.xaml.controls.control.onkeyup). Si tu control personalizado procesa teclas aceleradoras específicas o tiene un comportamiento de control o foco similar al escenario que describimos en el caso de la clase [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox), puedes incluir esta lógica en tus propias invalidaciones de **OnKeyDown** / **OnKeyUp** .
 
 ## <a name="the-touch-keyboard"></a>Teclado táctil
 

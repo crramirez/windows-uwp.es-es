@@ -1,17 +1,17 @@
 ---
-Description: En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz IBasicAudioEffect para permitir la creación de efectos personalizados para las secuencias de audio.
+description: En este artículo se describe cómo crear un componente de Windows Runtime que implemente la interfaz IBasicAudioEffect para permitir la creación de efectos personalizados para las secuencias de audio.
 title: Efectos de audio personalizados
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: e52aa4ebde6f988daad9c1712845e07ee553d7a2
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: b5b9613dc9d480a4193dbff0dbb236929d9ed54a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363968"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033178"
 ---
 # <a name="custom-audio-effects"></a>Efectos de audio personalizados
 
@@ -24,12 +24,12 @@ Un efecto de audio personalizado se define en una clase que implementa la interf
 
 **Agregar un componente de Windows Runtime para el efecto de audio**
 
-1.  En Microsoft Visual Studio, una vez abierta la solución, vaya al menú **archivo** y seleccione **agregar &gt; nuevo proyecto**.
-2.  Selecciona el tipo de proyecto **Componente de Windows Runtime (Windows Universal)**.
-3.  Para este ejemplo, asigna al proyecto el nombre *AudioEffectComponent*. Se hará referencia a este nombre en el código más adelante.
-4.  Haga clic en **OK**.
-5.  La plantilla de proyecto crea una clase denominada Class1.cs. En el **Explorador de soluciones**, haz clic con el botón derecho en el icono de Class1.cs y selecciona **Cambiar nombre**.
-6.  Cambia el nombre del archivo a *ExampleAudioEffect.cs*. Visual Studio mostrará un mensaje que pregunta si quieres actualizar todas las referencias con el nuevo nombre. Haga clic en **Sí**.
+1.  En Microsoft Visual Studio, una vez abierta la solución, vaya al menú **archivo** y seleccione **agregar &gt; nuevo proyecto** .
+2.  Selecciona el tipo de proyecto **Componente de Windows Runtime (Windows Universal)** .
+3.  Para este ejemplo, asigna al proyecto el nombre *AudioEffectComponent* . Se hará referencia a este nombre en el código más adelante.
+4.  Haga clic en **Aceptar** .
+5.  La plantilla de proyecto crea una clase denominada Class1.cs. En el **Explorador de soluciones** , haz clic con el botón derecho en el icono de Class1.cs y selecciona **Cambiar nombre** .
+6.  Cambia el nombre del archivo a *ExampleAudioEffect.cs* . Visual Studio mostrará un mensaje que pregunta si quieres actualizar todas las referencias con el nuevo nombre. Haga clic en **Sí** .
 7.  Abre **ExampleAudioEffect.cs** y actualiza la definición de clase para implementar la interfaz [**IBasicAudioEffect**](/uwp/api/Windows.Media.Effects.IBasicAudioEffect).
 
 
@@ -63,7 +63,7 @@ El método [**SetProperties**](/uwp/api/windows.media.imediaextension.setpropert
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/AudioEffectComponent/ExampleAudioEffect.cs" id="SnippetSetProperties":::
 
-En este ejemplo sencillo se mezcla la muestra de audio actual con un valor del búfer de retraso según el valor de la propiedad **Mix**. Se declara una propiedad y TryGetValue se usa para obtener el valor establecido por la aplicación que llama. Si no se ha establecido ningún valor, se usa un valor predeterminado de 0,5. Ten en cuenta que esta propiedad es de solo lectura. El valor de propiedad debe establecerse mediante **SetProperties**.
+En este ejemplo sencillo se mezcla la muestra de audio actual con un valor del búfer de retraso según el valor de la propiedad **Mix** . Se declara una propiedad y TryGetValue se usa para obtener el valor establecido por la aplicación que llama. Si no se ha establecido ningún valor, se usa un valor predeterminado de 0,5. Ten en cuenta que esta propiedad es de solo lectura. El valor de propiedad debe establecerse mediante **SetProperties** .
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/AudioEffectComponent/ExampleAudioEffect.cs" id="SnippetMixProperty":::
 
@@ -77,13 +77,13 @@ Para obtener acceso al búfer de datos de un **AudioFrame** se requiere interope
 
 > [!NOTE]
 > Dado que esta técnica obtiene acceso a un búfer de imagen nativo sin administrar, tendrás que configurar el proyecto para permitir un código no seguro.
-> 1.  En el Explorador de soluciones, haz clic con el botón secundario en el proyecto AudioEffectComponent y selecciona **Propiedades**.
+> 1.  En el Explorador de soluciones, haz clic con el botón secundario en el proyecto AudioEffectComponent y selecciona **Propiedades** .
 > 2.  Seleccione la pestaña **Compilar** .
 > 3.  Active la casilla **permitir código no seguro** .
 
- 
+ 
 
-Ahora puedes agregar la implementación del método **ProcessFrame** a tu efecto. Primero, este método obtiene un objeto [**AudioBuffer**](/uwp/api/Windows.Media.AudioBuffer) de las tramas de audio de entrada y salida. Ten en cuenta que la trama de salida se abre para la escritura y, el de entrada, para la lectura. Luego, se obtiene un valor de [**IMemoryBufferReference**](/uwp/api/Windows.Foundation.IMemoryBufferReference) para cada búfer llamando a [**CreateReference**](/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference). A continuación, se obtiene el búfer de datos reales convirtiendo los objetos **IMemoryBufferReference** como la interfaz de interoperabilidad definida anteriormente, **IMemoryByteAccess** y, a continuación, se llama a **GetBuffer**.
+Ahora puedes agregar la implementación del método **ProcessFrame** a tu efecto. Primero, este método obtiene un objeto [**AudioBuffer**](/uwp/api/Windows.Media.AudioBuffer) de las tramas de audio de entrada y salida. Ten en cuenta que la trama de salida se abre para la escritura y, el de entrada, para la lectura. Luego, se obtiene un valor de [**IMemoryBufferReference**](/uwp/api/Windows.Foundation.IMemoryBufferReference) para cada búfer llamando a [**CreateReference**](/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference). A continuación, se obtiene el búfer de datos reales convirtiendo los objetos **IMemoryBufferReference** como la interfaz de interoperabilidad definida anteriormente, **IMemoryByteAccess** y, a continuación, se llama a **GetBuffer** .
 
 Ahora que ha se han obtenido los búferes de datos, puedes leer del búfer de entrada y escribir en el búfer de salida. Se obtiene el valor para cada muestra del búfer de entrada, y se multiplica por 1 - **Mix** para establecer el valor de señal seco del efecto. A continuación, se recupera una muestra desde la posición actual del búfer de eco y se multiplica por **Mix** para establecer el valor húmedo del efecto. La muestra de salida se establece en la suma de los valores húmedos y secos. Por último, cada muestra de entrada se almacena en el búfer de eco y se incrementa el índice de la muestra actual.
 
@@ -121,8 +121,8 @@ Establece la propiedad [**UseInputFrameForOutput**](/uwp/api/windows.media.effec
 
 Para usar el efecto de audio desde la aplicación, debes agregar una referencia al proyecto de efecto a la aplicación.
 
-1.  En el Explorador de soluciones, en el proyecto de la aplicación, haz clic con el botón derecho en **Referencias** y selecciona **Agregar referencia**.
-2.  Expande la pestaña **Proyectos**, selecciona **Solución** y activa la casilla para el nombre del proyecto de efecto. Para este ejemplo, el nombre es *AudioEffectComponent*.
+1.  En el Explorador de soluciones, en el proyecto de la aplicación, haz clic con el botón derecho en **Referencias** y selecciona **Agregar referencia** .
+2.  Expande la pestaña **Proyectos** , selecciona **Solución** y activa la casilla para el nombre del proyecto de efecto. Para este ejemplo, el nombre es *AudioEffectComponent* .
 3.  Haga clic en **Aceptar**
 
 Si se declara que la clase de efecto de audio es un espacio de nombres diferentes, recuerda incluir ese espacio de nombres en el archivo de código.
@@ -134,7 +134,7 @@ Para obtener información general sobre el uso de gráficos de audio, consulta [
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/MainPage.xaml.cs" id="SnippetAddCustomEffect":::
 
-Después de agregar el efecto personalizado a un nodo, se puede deshabilitar llamando a [**DisableEffectsByDefinition**](/uwp/api/windows.media.audio.audiofileinputnode.disableeffectsbydefinition) y pasando el objeto **AudioEffectDefinition**. Para obtener más información sobre el uso de gráficos de audio en tu aplicación, consulta [AudioGraph](audio-graphs.md).
+Después de agregar el efecto personalizado a un nodo, se puede deshabilitar llamando a [**DisableEffectsByDefinition**](/uwp/api/windows.media.audio.audiofileinputnode.disableeffectsbydefinition) y pasando el objeto **AudioEffectDefinition** . Para obtener más información sobre el uso de gráficos de audio en tu aplicación, consulta [AudioGraph](audio-graphs.md).
 
 ### <a name="add-your-custom-effect-to-a-clip-in-a-mediacomposition"></a>Agregar el efecto personalizado a un clip en MediaComposition
 
@@ -150,4 +150,4 @@ El siguiente fragmento de código muestra cómo agregar el efecto de audio perso
 * [Documentación de Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [Reproducción de multimedia](media-playback.md)
 
- 
+ 

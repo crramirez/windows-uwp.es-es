@@ -1,31 +1,31 @@
 ---
-Description: Para realizar un experimento en tu aplicación de la Plataforma universal de Windows (UWP) con pruebas A/B, debes escribir el código del experimento en tu aplicación.
+description: Para realizar un experimento en tu aplicación de la Plataforma universal de Windows (UWP) con pruebas A/B, debes escribir el código del experimento en tu aplicación.
 title: Programar tu aplicación para los experimentos.
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
 ms.date: 02/08/2017
 ms.topic: article
 keywords: SDK de Windows 10, UWP, Microsoft Store Services, pruebas A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: dbdd95ab0d4ecde5fbe5cfb8d84d2d328b4c5a24
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: a5229be4d0ea2ce98ec10530458fe29af10fa7f0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363668"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033608"
 ---
 # <a name="code-your-app-for-experimentation"></a>Programar tu aplicación para los experimentos.
 
 Después [de crear un proyecto y definir las variables remotas en el centro de Partners](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md), está listo para actualizar el código en la aplicación plataforma universal de Windows (UWP) para:
 * Recibir valores de variables remotas del centro de Partners.
 * Usar variables remotas para configurar las experiencias de aplicación para tus usuarios.
-* Registre eventos en el centro de partners que indiquen Cuándo los usuarios han visto el experimento y han realizado una acción deseada (también denominada *conversión*).
+* Registre eventos en el centro de partners que indiquen Cuándo los usuarios han visto el experimento y han realizado una acción deseada (también denominada *conversión* ).
 
 Para agregar este comportamiento a tu aplicación, tendrás que usar las API proporcionadas por Microsoft Store Services SDK.
 
 En las secciones siguientes se describe el proceso general de obtención de las variaciones del experimento y registro de eventos en el centro de Partners. Después de codificar la aplicación para la experimentación, puede [definir un experimento en el centro de Partners](define-your-experiment-in-the-dev-center-dashboard.md). Para ver un tutorial que muestre de principio a fin el proceso de crear y ejecutar un experimento, consulta [Crear y ejecutar el primer experimento con pruebas A/B](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 > [!NOTE]
-> Algunas de las API de experimentación del SDK de Microsoft Store Services usan el [patrón asincrónico](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar datos del centro de Partners. Esto significa que parte de la ejecución de estos métodos puede tener lugar después de la invocación de los métodos, por lo que la interfaz de usuario de la aplicación puede seguir respondiendo mientras se completan las operaciones. El patrón asincrónico requiere que tu aplicación use la palabra clave **async** y el operador **await** al llamar a las API, tal como se muestra en los ejemplos de código de este artículo. Por convención, los métodos asincrónicos terminan con **Async**.
+> Algunas de las API de experimentación del SDK de Microsoft Store Services usan el [patrón asincrónico](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) para recuperar datos del centro de Partners. Esto significa que parte de la ejecución de estos métodos puede tener lugar después de la invocación de los métodos, por lo que la interfaz de usuario de la aplicación puede seguir respondiendo mientras se completan las operaciones. El patrón asincrónico requiere que tu aplicación use la palabra clave **async** y el operador **await** al llamar a las API, tal como se muestra en los ejemplos de código de este artículo. Por convención, los métodos asincrónicos terminan con **Async** .
 
 ## <a name="configure-your-project"></a>Configurar el proyecto
 
@@ -33,9 +33,9 @@ Para empezar, instala Microsoft Store Services SDK en tu equipo de desarrollo y 
 
 1. [Instale el SDK de Microsoft Store Services](microsoft-store-services-sdk.md#install-the-sdk).
 2. Abra el proyecto en Visual Studio.
-3. En el Explorador de soluciones, expande el nodo del proyecto, haz clic con el botón derecho en **Referencias** y en **Agregar referencia**.
-3. En el cuadro de diálogo **Administrador de referencias**, expande **Windows Universal** y haz clic en **Extensiones**.
-4. En la lista de los SDK, selecciona la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
+3. En el Explorador de soluciones, expande el nodo del proyecto, haz clic con el botón derecho en **Referencias** y en **Agregar referencia** .
+3. En el cuadro de diálogo **Administrador de referencias** , expande **Windows Universal** y haz clic en **Extensiones** .
+4. En la lista de los SDK, selecciona la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar** .
 
 > [!NOTE]
 > En los ejemplos de código de este artículo se supone que el archivo de código tiene instrucciones **using** para los espacios de nombres **System. Threading. Tasks** y **Microsoft. Services. Store. Engagement** .
@@ -70,7 +70,7 @@ Los siguientes pasos describen las partes importantes de este proceso de forma d
 
 5. Utiliza los métodos [GetBoolean](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean), [GetDouble](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble), [GetInt32](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32), o [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) del objeto [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) para obtener los valores para la asignación de variación. En cada método, el primer parámetro es el nombre de la variación que desea recuperar (es el mismo nombre de una variación que se especifica en el centro de Partners). El segundo parámetro es el valor predeterminado que el método debe devolver si no es capaz de recuperar el valor especificado del centro de Partners (por ejemplo, si no hay conectividad de red) y no hay disponible una versión en caché de la variación.
 
-    El siguiente ejemplo usa el método [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) para obtener una variable llamada *buttonText* y especifica un valor variable predeterminado de **Botón gris**.
+    El siguiente ejemplo usa el método [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) para obtener una variable llamada *buttonText* y especifica un valor variable predeterminado de **Botón gris** .
 
     :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet5":::
 
@@ -80,7 +80,7 @@ Los siguientes pasos describen las partes importantes de este proceso de forma d
 
 7. Por último, registre el [evento de vista](run-app-experiments-with-a-b-testing.md#terms) del experimento en el servicio de prueba a/B del centro de Partners. Inicializa el campo ```logger``` en un objeto [StoreServicesCustomEventLogger](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger) y llama al método [LogForVariation](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation). Pase el objeto [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) que representa la asignación de variación actual (este objeto proporciona contexto sobre el evento al centro de Partners) y el nombre del evento de vista para el experimento. Debe coincidir con el nombre del evento de vista que especifique para el experimento en el centro de Partners. Tu código debe registrar el evento de visualización que indica cuándo el usuario empieza a ver una variación que forma parte del experimento.
 
-    El siguiente ejemplo muestra cómo registrar un evento de vista denominado **userViewedButton**. En este ejemplo, el objetivo del experimento es hacer que el usuario haga clic en un botón en la aplicación, por lo que el evento de vista se registra después de que la aplicación haya recuperado los datos de variación (en este caso, el texto del botón) y los haya asignado al contenido del botón.
+    El siguiente ejemplo muestra cómo registrar un evento de vista denominado **userViewedButton** . En este ejemplo, el objetivo del experimento es hacer que el usuario haga clic en un botón en la aplicación, por lo que el evento de vista se registra después de que la aplicación haya recuperado los datos de variación (en este caso, el texto del botón) y los haya asignado al contenido del botón.
 
     :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet7":::
 

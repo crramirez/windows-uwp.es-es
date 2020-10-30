@@ -1,5 +1,5 @@
 ---
-Description: Responde a las entradas de mouse de tus aplicaciones controlando los mismos eventos de puntero básicos que usas para las entradas táctiles y de pluma.
+description: Responde a las entradas de mouse de tus aplicaciones controlando los mismos eventos de puntero básicos que usas para las entradas táctiles y de pluma.
 title: Interacciones de mouse
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
@@ -8,16 +8,16 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 84390e7b929412e4058c1a7e6507ff171344bd53
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: dfefda0e09159c398334ae77bc29dcd8fc3f628a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218938"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034728"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 
-Optimizar el diseño de la aplicación Windows para la entrada táctil y obtener compatibilidad básica con el mouse de forma predeterminada. 
+Optimizar el diseño de la aplicación Windows para la entrada táctil y obtener compatibilidad básica con el mouse de forma predeterminada. 
 
 ![mouse](images/input-patterns/input-mouse.jpg)
 
@@ -59,10 +59,10 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong>Nota:</strong>    Haga clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos adecuados de la interfaz de usuario. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong>Nota:</strong>  Haga clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos adecuados de la interfaz de usuario. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -86,7 +86,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 
 ## <a name="mouse-input-events"></a>Eventos de entrada del mouse
 
-La mayoría de la entrada del mouse se puede controlar a través de los eventos de entrada enrutados comunes admitidos por todos los objetos [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) . Entre ellas se incluyen las siguientes:
+La mayoría de la entrada del mouse se puede controlar a través de los eventos de entrada enrutados comunes admitidos por todos los objetos [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) . Se incluyen los siguientes:
 
 - [**BringIntoViewRequested**](/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](/uwp/api/windows.ui.xaml.uielement.characterreceived)

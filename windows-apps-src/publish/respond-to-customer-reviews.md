@@ -1,17 +1,17 @@
 ---
-Description: Puedes responder directamente a las críticas sobre la aplicación para que los clientes sepan que lees sus comentarios.
+description: Puedes responder directamente a las críticas sobre la aplicación para que los clientes sepan que lees sus comentarios.
 title: Responder a las opiniones de los clientes
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, respuesta, respuestas, revisar
 ms.localizationpriority: medium
-ms.openlocfilehash: 792d78b93a66b9dd7da2b2c69480bfbd324dd045
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c47e7771f6a76cde451c88ab8e2d9ed26e003f9c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161879"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034608"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
@@ -32,7 +32,7 @@ Si no desea que la respuesta aparezca en el almacén y, en su lugar, desea respo
 Al responder a la crítica de un cliente, debes seguir estas instrucciones. Se aplican a todas las respuestas, tanto si son públicas como si no.
 
 > [!IMPORTANT]
-> No podrá cambiar las respuestas que publique en la tienda (a menos que el cliente revise su revisión original), así que revise atentamente la respuesta. Si un cliente revisa la revisión original, la respuesta se quitará de la página de descripción de la tienda de la aplicación. A continuación, tiene la opción de enviar una nueva respuesta a la revisión revisada; para ello, seleccione **actualizar la respuesta**.
+> No podrá cambiar las respuestas que publique en la tienda (a menos que el cliente revise su revisión original), así que revise atentamente la respuesta. Si un cliente revisa la revisión original, la respuesta se quitará de la página de descripción de la tienda de la aplicación. A continuación, tiene la opción de enviar una nueva respuesta a la revisión revisada; para ello, seleccione **actualizar la respuesta** .
 
 -   Las respuestas no pueden tener más de 1000 caracteres.
 -   No puedes ofrecer a los usuarios ningún tipo de compensación, incluidos productos de aplicaciones digitales, por cambiar la clasificación de la aplicación. Recuerda que no se permiten los intentos de manipular las clasificaciones en virtud del [Acuerdo de desarrollador de aplicaciones](/legal/windows/agreements/app-developer-agreement).

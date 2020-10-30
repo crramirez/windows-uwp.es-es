@@ -1,5 +1,5 @@
 ---
-Description: La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia.
+description: La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia.
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: Exponer información básica de accesibilidad
 label: Expose basic accessibility information
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: da0ad6c0121f81a4854728f4441e0407a6302f54
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 09dfb92f53105d7c8718ff12f1a0d5634ba6a75d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217468"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032568"
 ---
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
@@ -29,7 +29,7 @@ Un nombre accesible es una cadena de texto descriptiva y corta que un lector de 
 
 En esta tabla, se describe cómo definir un nombre accesible para varios tipos de elementos en una interfaz de usuario XAML.
 
-| Tipo de elemento | Descripción |
+| Tipo de elemento | Description |
 |--------------|-------------|
 | Texto estático | En los elementos [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) y [**RichTextBlock**](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), se determina automáticamente un nombre accesible del texto visible (interno). Todo el texto incluido en ese elemento se usa como nombre. Vea [nombre del texto interno](#name_from_inner_text). |
 | Imágenes | El elemento XAML [**Image**](/uwp/api/Windows.UI.Xaml.Controls.Image) no tiene un equivalente directo con el atributo **alt** de HTML de **img** y elementos similares. Usa [**AutomationProperties.Name**](/dotnet/api/system.windows.automation.automationproperties.name) para proporcionar un nombre o usa la técnica de subtítulos. Consulta [Nombres accesibles para imágenes](#images). |
@@ -47,7 +47,7 @@ Los controles y otros elementos de la interfaz de usuario que forman parte del v
 No todos los controles tienen un valor. Los controles que tienen un valor proporcionan esta información a la automatización de la interfaz de usuario mediante los modelos y sistemas del mismo nivel admitidos por ese control. Por ejemplo, un elemento de formulario [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) tiene un valor. Una tecnología de asistencia puede ser un cliente de automatización de la interfaz de usuario y puede descubrir que un valor existe y cuál es su valor. En este caso concreto, **TextBox** es compatible con el patrón [**IValueProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IValueProvider) mediante las definiciones [**TextBoxAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer).
 
 > [!NOTE]
-> En los casos en los que usas [**AutomationProperties.Name**](/dotnet/api/system.windows.automation.automationproperties.name) u otras técnicas para proporcionar el nombre accesible de forma explícita, no incluyas el mismo texto que usa el rol de control ni escribas información en el nombre accesible. Por ejemplo, no incluyas cadenas como "botón" o "lista" en el nombre. La información sobre el rol y el tipo proviene de otra propiedad de automatización de la interfaz de usuario (**LocalizedControlType**) que es proporcionada por la compatibilidad predeterminada del control para la automatización de la interfaz de usuario. Muchas tecnologías de asistencia anexan **LocalizedControlType** al nombre accesible, por lo que duplican el rol en el nombre accesible que puede provocar la repetición innecesaria de palabras. Por ejemplo, si asignas a un control [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button) un nombre accesible de "botón" o incluyes "botón" como la parte final del nombre, los lectores de pantalla podrían leer esto como "botón botón". Debes probar este aspecto de tu información de accesibilidad usando el Narrador.
+> En los casos en los que usas [**AutomationProperties.Name**](/dotnet/api/system.windows.automation.automationproperties.name) u otras técnicas para proporcionar el nombre accesible de forma explícita, no incluyas el mismo texto que usa el rol de control ni escribas información en el nombre accesible. Por ejemplo, no incluyas cadenas como "botón" o "lista" en el nombre. La información sobre el rol y el tipo proviene de otra propiedad de automatización de la interfaz de usuario ( **LocalizedControlType** ) que es proporcionada por la compatibilidad predeterminada del control para la automatización de la interfaz de usuario. Muchas tecnologías de asistencia anexan **LocalizedControlType** al nombre accesible, por lo que duplican el rol en el nombre accesible que puede provocar la repetición innecesaria de palabras. Por ejemplo, si asignas a un control [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button) un nombre accesible de "botón" o incluyes "botón" como la parte final del nombre, los lectores de pantalla podrían leer esto como "botón botón". Debes probar este aspecto de tu información de accesibilidad usando el Narrador.
 
 <span id="Influencing_the_UI_Automation_tree_views"/>
 <span id="influencing_the_ui_automation_tree_views"/>
@@ -56,7 +56,7 @@ No todos los controles tienen un valor. Los controles que tienen un valor propor
 ## <a name="influencing-the-ui-automation-tree-views"></a>Influencia en las vistas de árbol de automatización de la interfaz de usuario  
 El marco de trabajo de automatización de la interfaz de usuario tiene un concepto de vistas de árbol, en el que los clientes de automatización de la interfaz de usuario pueden recuperar las relaciones entre los elementos en una interfaz de usuario usando tres posibles vistas: raw, control y content. La vista control es la que suelen usar los clientes de automatización de la interfaz de usuario porque proporciona una buena representación y organización de los elementos en una interfaz de usuario que es interactiva. Las herramientas de pruebas normalmente permiten elegir qué vista de árbol se usará cuando la herramienta presente la organización de los elementos.
 
-De forma predeterminada, cualquier clase derivada de [**control**](/uwp/api/Windows.UI.Xaml.Controls.Control) y algunos otros elementos aparecerán en la vista de control cuando el marco de automatización de la interfaz de usuario represente la interfaz de usuario de una aplicación de Windows. Pero a veces no quieres que un elemento aparezca en la vista control debido a la composición de la interfaz de usuario, en la que el elemento duplica información o presenta información que no es importante para los escenarios de accesibilidad. Usa la propiedad adjunta [**AutomationProperties.AccessibilityView**](/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para cambiar la manera en que los elementos se exponen en las vistas de árbol. Si colocas un elemento en el árbol **Raw**, la mayoría de las tecnologías de asistencia no notificarán ese elemento como parte de sus vistas. Para ver algunos ejemplos de cómo funciona esto en los controles existentes, abre el archivo XAML de referencia de diseño generic.xaml en un editor de texto y busca **AutomationProperties.AccessibilityView** en las plantillas.
+De forma predeterminada, cualquier clase derivada de [**control**](/uwp/api/Windows.UI.Xaml.Controls.Control) y algunos otros elementos aparecerán en la vista de control cuando el marco de automatización de la interfaz de usuario represente la interfaz de usuario de una aplicación de Windows. Pero a veces no quieres que un elemento aparezca en la vista control debido a la composición de la interfaz de usuario, en la que el elemento duplica información o presenta información que no es importante para los escenarios de accesibilidad. Usa la propiedad adjunta [**AutomationProperties.AccessibilityView**](/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para cambiar la manera en que los elementos se exponen en las vistas de árbol. Si colocas un elemento en el árbol **Raw** , la mayoría de las tecnologías de asistencia no notificarán ese elemento como parte de sus vistas. Para ver algunos ejemplos de cómo funciona esto en los controles existentes, abre el archivo XAML de referencia de diseño generic.xaml en un editor de texto y busca **AutomationProperties.AccessibilityView** en las plantillas.
 
 <span id="name_from_inner_text"/>
 <span id="NAME_FROM_INNER_TEXT"/>
@@ -134,14 +134,14 @@ El nombre accesible está destinado a identificar el control, en lugar de docume
 ## <a name="testing-accessibility-early-and-often"></a>Probar la accesibilidad desde el principio y con frecuencia  
 En última instancia, el mejor enfoque para admitir lectores de pantalla es probar tu aplicación usando uno tú mismo. Eso mostrará cómo se comporta el lector de pantalla y qué información de accesibilidad básica puede faltar en la aplicación. Después, puedes ajustar los valores de la interfaz de usuario o propiedad de automatización de la interfaz de usuario en consecuencia. Para obtener más información, vea [pruebas de accesibilidad](accessibility-testing.md).
 
-Una de las herramientas que puedes usar para probar la accesibilidad se llama **AccScope**. La herramienta **AccScope** es especialmente útil porque puedes ver representaciones visuales de la interfaz de usuario que muestran cómo verían tu aplicación las tecnologías de asistencia como un árbol de automatización. En particular, hay un modo de Narrador que muestra cómo el Narrador obtiene el texto de la aplicación y cómo organiza los elementos de la interfaz de usuario. AccScope está diseñado para que pueda usarse y resulte útil durante todo el ciclo de desarrollo de una aplicación, incluso en la fase de diseño preliminar. Para más información, consulta el tema sobre [AccScope](/windows/desktop/WinAuto/accscope).
+Una de las herramientas que puedes usar para probar la accesibilidad se llama **AccScope** . La herramienta **AccScope** es especialmente útil porque puedes ver representaciones visuales de la interfaz de usuario que muestran cómo verían tu aplicación las tecnologías de asistencia como un árbol de automatización. En particular, hay un modo de Narrador que muestra cómo el Narrador obtiene el texto de la aplicación y cómo organiza los elementos de la interfaz de usuario. AccScope está diseñado para que pueda usarse y resulte útil durante todo el ciclo de desarrollo de una aplicación, incluso en la fase de diseño preliminar. Para más información, consulta el tema sobre [AccScope](/windows/desktop/WinAuto/accscope).
 
 <span id="Accessible_names_from_dynamic_data"/>
 <span id="accessible_names_from_dynamic_data"/>
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>Nombres accesibles de datos dinámicos  
-Windows admite muchos controles que se pueden usar para mostrar valores que provienen de un origen de datos asociado, a través de una función conocida como *enlace de datos*. Cuando rellenas listas con elementos de datos, puedes tener que usar una técnica que establezca nombres accesibles para elementos de lista enlazados a datos después de que se haya rellenado la lista inicial. Para obtener más información, vea el tema sobre el escenario 4 en el [ejemplo de accesibilidad de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample).
+Windows admite muchos controles que se pueden usar para mostrar valores que provienen de un origen de datos asociado, a través de una función conocida como *enlace de datos* . Cuando rellenas listas con elementos de datos, puedes tener que usar una técnica que establezca nombres accesibles para elementos de lista enlazados a datos después de que se haya rellenado la lista inicial. Para obtener más información, vea el tema sobre el escenario 4 en el [ejemplo de accesibilidad de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample).
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>

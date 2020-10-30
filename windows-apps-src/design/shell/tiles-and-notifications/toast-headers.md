@@ -1,5 +1,5 @@
 ---
-Description: Aprenda a usar encabezados para agrupar visualmente las notificaciones del sistema en el centro de actividades.
+description: Aprenda a usar encabezados para agrupar visualmente las notificaciones del sistema en el centro de actividades.
 title: Encabezados del sistema
 label: Toast headers
 template: detail.hbs
@@ -7,19 +7,19 @@ ms.date: 12/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, notificación del sistema, encabezado, encabezados del sistema, notificación, notificaciones de grupo, centro de actividades
 ms.localizationpriority: medium
-ms.openlocfilehash: 95cd6083cf4430f25b1514a7e163d04892097903
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 1afc354b15b7c916426ca3c0a7130b777c21e0cf
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984481"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033078"
 ---
 # <a name="toast-headers"></a>Encabezados del sistema
 
 Puede agrupar visualmente un conjunto de notificaciones relacionadas en el centro de actividades mediante el uso de un encabezado del sistema en las notificaciones.
 
 > [!IMPORTANT]
-> **Requiere Desktop Creators Update y 1.4.0 de la biblioteca de notificaciones**: debe estar ejecutando desktop Build 15063 o superior para ver los encabezados del sistema. Debe usar la versión 1.4.0 o posterior de la [biblioteca de NuGet de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) de la comunidad de UWP para construir el encabezado en el contenido de la notificación del sistema. Los encabezados solo se admiten en el escritorio.
+> **Requiere Desktop Creators Update y 1.4.0 de la biblioteca de notificaciones** : debe estar ejecutando desktop Build 15063 o superior para ver los encabezados del sistema. Debe usar la versión 1.4.0 o posterior de la [biblioteca de NuGet de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) de la comunidad de UWP para construir el encabezado en el contenido de la notificación del sistema. Los encabezados solo se admiten en el escritorio.
 
 Como se muestra a continuación, esta conversación de grupo está unificada en un único encabezado, "acampada!". Cada mensaje individual de la conversación es una notificación del sistema independiente que comparte el mismo encabezado del sistema.
 
@@ -64,7 +64,7 @@ new ToastContentBuilder()
 En resumen...
 
 1. Agregue el **encabezado** a su **ToastContent**
-2. Asignar las propiedades de **identificador**, **título**y **argumentos** necesarios
+2. Asignar las propiedades de **identificador** , **título** y **argumentos** necesarios
 3. Enviar la notificación ([más información](send-local-toast.md))
 4. En otra notificación, utilice el mismo **identificador** de encabezado para unificarlos en el encabezado. El **identificador** es la única propiedad que se usa para determinar si se deben agrupar las notificaciones, lo que significa que el **título** y los **argumentos** pueden ser diferentes. Se usan el **título** y los **argumentos** de la notificación más reciente dentro de un grupo. Si se quita esa notificación, el **título** y los **argumentos** recurren a la siguiente notificación más reciente.
 
@@ -80,11 +80,11 @@ La activación se controla de manera idéntica a la [activación normal del sist
 ```csharp
 protected override void OnActivated(IActivatedEventArgs e)
 {
-    // Handle toast activation
-    if (e is ToastNotificationActivatedEventArgs)
-    {
+    // Handle toast activation
+    if (e is ToastNotificationActivatedEventArgs)
+    {
         // Arguments specified from the header
-        string arguments = (e as ToastNotificationActivatedEventArgs).Argument;
+        string arguments = (e as ToastNotificationActivatedEventArgs).Argument;
     }
 }
 ```
@@ -96,7 +96,7 @@ El encabezado separa visualmente y agrupa las notificaciones. No cambia ningún 
 
 El orden de las notificaciones dentro de los encabezados es el siguiente... En el caso de una aplicación determinada, la notificación más reciente de la aplicación (y el grupo de encabezado completo si es parte de un encabezado) aparecerá en primer lugar.
 
-El **identificador** puede ser cualquier cadena que elija. No hay restricciones de longitud o de caracteres en ninguna de las propiedades de **ToastHeader**. La única restricción es que todo el contenido del sistema XML no puede ser superior a 5 KB.
+El **identificador** puede ser cualquier cadena que elija. No hay restricciones de longitud o de caracteres en ninguna de las propiedades de **ToastHeader** . La única restricción es que todo el contenido del sistema XML no puede ser superior a 5 KB.
 
 La creación de encabezados no cambia el número de notificaciones que se muestran dentro del centro de actividades antes de que aparezca el botón "ver más" (este número es 3 de forma predeterminada y puede ser configurado por el usuario para cada aplicación en la configuración del sistema para las notificaciones).
 

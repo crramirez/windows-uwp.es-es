@@ -1,17 +1,17 @@
 ---
-Description: Las declaraciones de producto ayudan a asegurarse de que la aplicación se muestra correctamente en el Microsoft Store y que se ofrece al conjunto correcto de clientes.
+description: Las declaraciones de producto ayudan a asegurarse de que la aplicación se muestra correctamente en el Microsoft Store y que se ofrece al conjunto correcto de clientes.
 title: Declaraciones de producto
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c4e8677a27128e6a33a844f5a887e921ca9ced3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3469992a73a4e90e25ce34883319343ad6986d75
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167369"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034618"
 ---
 # <a name="product-declarations"></a>Declaraciones de producto
 
@@ -40,7 +40,7 @@ Cuando declaras que tu aplicación es accesible, aceptas que será accesible par
 Para obtener más información, vea [accesibilidad](../design/accessibility/accessibility.md), [pruebas de accesibilidad](../design/accessibility/accessibility-testing.md)y [accesibilidad en la tienda](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> No enumere la aplicación como accesible a menos que la haya diseñado y probado específicamente para ello. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
+> No enumere la aplicación como accesible a menos que la haya diseñado y probado específicamente para ello. Si la aplicación se declara como accesible, pero en realidad no admite la accesibilidad, probablemente recibas comentarios negativos de la comunidad.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble.
 
@@ -62,8 +62,8 @@ Si la aplicación usa datos de Kinect y lo envía a cualquier servicio externo, 
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

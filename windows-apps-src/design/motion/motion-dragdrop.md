@@ -1,5 +1,5 @@
 ---
-Description: Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por ejemplo, cuando muevan un elemento dentro de una lista o coloquen un elemento encima de otro.
+description: Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por ejemplo, cuando muevan un elemento dentro de una lista o coloquen un elemento encima de otro.
 title: Animaciones de arrastre
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a51f60fdbc8d616bd4db360190c8e329e10709e8
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: acc193f0851e2f04113e33aa470e9aa784337921
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220168"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034288"
 ---
 # <a name="drag-animations"></a>Animaciones de arrastre
 
@@ -22,7 +22,7 @@ ms.locfileid: "91220168"
 
 Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por ejemplo, cuando muevan un elemento dentro de una lista o coloquen un elemento encima de otro.
 
-> **API importantes**: [ **clase DragItemThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
+> **API importantes** : [ **clase DragItemThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -57,7 +57,7 @@ Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por e
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Para desarrolladores**
-* [Introducción a las animaciones](./xaml-animation.md)
+* [Información general sobre animaciones](./xaml-animation.md)
 * [Animación de secuencias de arrastrar y colocar](/previous-versions/windows/apps/jj649427(v=win.10))
 * [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](/previous-versions/windows/apps/hh452703(v=win.10))
 * [**Clase DragItemThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
@@ -65,4 +65,4 @@ Usa animaciones de arrastrar y colocar cuando los usuarios muevan objetos, por e
 * [**Clase DragOverThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.dragoverthemeanimation)
 
 
- 
+ 

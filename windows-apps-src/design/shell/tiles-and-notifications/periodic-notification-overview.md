@@ -1,5 +1,5 @@
 ---
-Description: Las notificaciones periódicas, también denominadas notificaciones de sondeo, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido directamente desde un servicio de nube.
+description: Las notificaciones periódicas, también denominadas notificaciones de sondeo, actualizan los iconos y los distintivos a intervalos fijos mediante la descarga de contenido directamente desde un servicio de nube.
 title: Introducción a las notificaciones periódicas
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9936fd6b7210298bdce042b7848a75be8e044040
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5860c4e45a25b0d141e1b2c57421dd2640d5fbb4
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175509"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033788"
 ---
 # <a name="periodic-notification-overview"></a>Introducción a las notificaciones periódicas
  
@@ -25,11 +25,11 @@ Las notificaciones periódicas, también denominadas notificaciones de sondeo, a
 
 Las notificaciones periódicas permiten a la aplicación obtener actualizaciones activas de icono con niveles mínimos de inversión de clientes y servicio de nube. También son un excelente método para distribuir el mismo contenido a una audiencia amplia.
 
-**Nota:**    Puede obtener más información si descarga el [ejemplo de notificaciones de extracción y periódicas](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Push%20and%20periodic%20notifications%20client-side%20sample%20(Windows%208)) para Windows 8.1 y vuelve a usar su código fuente en su aplicación de Windows 10.
+**Nota** Para obtener más información, descarga [Push and periodic notifications sample (Muestra de notificaciones de inserción y periódicas)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Push%20and%20periodic%20notifications%20client-side%20sample%20(Windows%208)) para Windows 8.1 y vuelve a usar su código fuente en la aplicación de Windows 10.
 
- 
+ 
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 
 Las notificaciones periódicas requieren que la aplicación hospede un servicio de nube. Todos los usuarios que tienen la aplicación instalada sondean el servicio de forma periódica. En cada intervalo de sondeo, por ejemplo, una vez cada hora, Windows envía una solicitud HTTP GET al URI, descarga el contenido del icono o distintivo solicitado (como XML) que se suministra en la respuesta a la solicitud, y muestra el contenido en el icono de la aplicación.
@@ -106,4 +106,4 @@ Debes proporcionar un URI único para cada notificación que quieras que Windows
 * [Directrices sobre notificaciones periódicas]()
 * [Cómo configurar notificaciones periódicas para distintivos](/previous-versions/windows/apps/hh761476(v=win.10))
 * [Cómo configurar notificaciones periódicas para iconos](/previous-versions/windows/apps/hh761476(v=win.10))
- 
+ 

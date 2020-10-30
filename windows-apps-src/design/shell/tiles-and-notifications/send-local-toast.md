@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo enviar una notificación del sistema local desde aplicaciones de UWP y controlar el usuario que hace clic en la notificación del sistema.
+description: Obtenga información sobre cómo enviar una notificación del sistema local desde aplicaciones de UWP y controlar el usuario que hace clic en la notificación del sistema.
 title: Envío de una notificación del sistema local desde aplicaciones para UWP
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Send a local toast notification from UWP apps
@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, procedimientos, Inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b669ad3c846fec0b60ae01134b80a6d87586c62
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: b532e041ffbbcf4a2ecac0e3386430b65d833f2d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100293"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034488"
 ---
 # <a name="send-a-local-toast-notification-from-uwp-apps"></a>Envío de una notificación del sistema local desde aplicaciones para UWP
 
@@ -23,7 +23,7 @@ Una notificación del sistema es un mensaje que una aplicación puede crear y en
 > [!IMPORTANT]
 > Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones de escritorio clásicas no empaquetadas) tienen diferentes pasos para enviar notificaciones y controlar la activación. Consulte la documentación de las [aplicaciones de escritorio](toast-desktop-apps.md) para obtener información sobre cómo implementar notificaciones del sistema.
 
-> **API importantes**: [clase ToastNotification](/uwp/api/Windows.UI.Notifications.ToastNotification), [clase ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
+> **API importantes** : [clase ToastNotification](/uwp/api/Windows.UI.Notifications.ToastNotification), [clase ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
 
 
@@ -74,22 +74,22 @@ Cuando el usuario haga clic en la notificación (o en un botón de la notificaci
 ```csharp
 protected override void OnActivated(IActivatedEventArgs e)
 {
-    // Handle notification activation
-    if (e is ToastNotificationActivatedEventArgs toastActivationArgs)
-    {
+    // Handle notification activation
+    if (e is ToastNotificationActivatedEventArgs toastActivationArgs)
+    {
         // Obtain the arguments from the notification
-        string args = toastActivationArgs.Argument;
+        string args = toastActivationArgs.Argument;
 
         // Obtain any user input (text boxes, menu selections) from the notification
         ValueSet userInput = toastActivationArgs.UserInput;
- 
-        // TODO: Show the corresponding content
-    }
+ 
+        // TODO: Show the corresponding content
+    }
 }
 ```
 
 > [!IMPORTANT]
-> Debe inicializar el marco y activar la ventana del mismo modo que el código **onlaunched** . **No se llama a onlaunched si el usuario hace clic en la notificación del sistema**, incluso si la aplicación se cerró y se inicia por primera vez. A menudo se recomienda combinar **onlaunched** y **onactivated** en su propio `OnLaunchedOrActivated` método, ya que la misma inicialización debe realizarse en ambos.
+> Debe inicializar el marco y activar la ventana del mismo modo que el código **onlaunched** . **No se llama a onlaunched si el usuario hace clic en la notificación del sistema** , incluso si la aplicación se cerró y se inicia por primera vez. A menudo se recomienda combinar **onlaunched** y **onactivated** en su propio `OnLaunchedOrActivated` método, ya que la misma inicialización debe realizarse en ambos.
 
 
 ## <a name="activation-in-depth"></a>Activación en profundidad
@@ -125,61 +125,61 @@ Este es un ejemplo más complejo de control de la activación...
 ```csharp
 protected override void OnActivated(IActivatedEventArgs e)
 {
-    // Get the root frame
-    Frame rootFrame = Window.Current.Content as Frame;
- 
-    // TODO: Initialize root frame just like in OnLaunched
- 
-    // Handle toast activation
-    if (e is ToastNotificationActivatedEventArgs toastActivationArgs)
-    {            
-        // Parse the query string (using QueryString.NET)
-        QueryString args = QueryString.Parse(toastActivationArgs.Argument);
- 
-        // See what action is being requested 
-        switch (args["action"])
-        {
-            // Open the image
-            case "viewImage":
- 
-                // The URL retrieved from the toast args
-                string imageUrl = args["imageUrl"];
- 
-                // If we're already viewing that image, do nothing
-                if (rootFrame.Content is ImagePage && (rootFrame.Content as ImagePage).ImageUrl.Equals(imageUrl))
-                    break;
- 
-                // Otherwise navigate to view it
-                rootFrame.Navigate(typeof(ImagePage), imageUrl);
-                break;
-                             
- 
-            // Open the conversation
-            case "viewConversation":
- 
-                // The conversation ID retrieved from the toast args
-                int conversationId = int.Parse(args["conversationId"]);
- 
-                // If we're already viewing that conversation, do nothing
-                if (rootFrame.Content is ConversationPage && (rootFrame.Content as ConversationPage).ConversationId == conversationId)
-                    break;
- 
-                // Otherwise navigate to view it
-                rootFrame.Navigate(typeof(ConversationPage), conversationId);
-                break;
-        }
- 
-        // If we're loading the app for the first time, place the main page on
-        // the back stack so that user can go back after they've been
-        // navigated to the specific page
-        if (rootFrame.BackStack.Count == 0)
-            rootFrame.BackStack.Add(new PageStackEntry(typeof(MainPage), null, null));
-    }
- 
-    // TODO: Handle other types of activation
- 
-    // Ensure the current window is active
-    Window.Current.Activate();
+    // Get the root frame
+    Frame rootFrame = Window.Current.Content as Frame;
+ 
+    // TODO: Initialize root frame just like in OnLaunched
+ 
+    // Handle toast activation
+    if (e is ToastNotificationActivatedEventArgs toastActivationArgs)
+    {            
+        // Parse the query string (using QueryString.NET)
+        QueryString args = QueryString.Parse(toastActivationArgs.Argument);
+ 
+        // See what action is being requested 
+        switch (args["action"])
+        {
+            // Open the image
+            case "viewImage":
+ 
+                // The URL retrieved from the toast args
+                string imageUrl = args["imageUrl"];
+ 
+                // If we're already viewing that image, do nothing
+                if (rootFrame.Content is ImagePage && (rootFrame.Content as ImagePage).ImageUrl.Equals(imageUrl))
+                    break;
+ 
+                // Otherwise navigate to view it
+                rootFrame.Navigate(typeof(ImagePage), imageUrl);
+                break;
+                             
+ 
+            // Open the conversation
+            case "viewConversation":
+ 
+                // The conversation ID retrieved from the toast args
+                int conversationId = int.Parse(args["conversationId"]);
+ 
+                // If we're already viewing that conversation, do nothing
+                if (rootFrame.Content is ConversationPage && (rootFrame.Content as ConversationPage).ConversationId == conversationId)
+                    break;
+ 
+                // Otherwise navigate to view it
+                rootFrame.Navigate(typeof(ConversationPage), conversationId);
+                break;
+        }
+ 
+        // If we're loading the app for the first time, place the main page on
+        // the back stack so that user can go back after they've been
+        // navigated to the specific page
+        if (rootFrame.BackStack.Count == 0)
+            rootFrame.BackStack.Add(new PageStackEntry(typeof(MainPage), null, null));
+    }
+ 
+    // TODO: Handle other types of activation
+ 
+    // Ensure the current window is active
+    Window.Current.Activate();
 }
 ```
 
@@ -279,7 +279,7 @@ BackgroundAccessStatus status = await BackgroundExecutionManager.RequestAccessAs
 // Create the background task
 BackgroundTaskBuilder builder = new BackgroundTaskBuilder()
 {
-    Name = taskName
+    Name = taskName
 };
 
 // Assign the toast action trigger
@@ -297,23 +297,23 @@ A continuación, en el App.xaml.cs, invalide el método OnBackgroundActivated. A
 ```csharp
 protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 {
-    var deferral = args.TaskInstance.GetDeferral();
- 
-    switch (args.TaskInstance.Task.Name)
-    {
-        case "ToastBackgroundTask":
-            var details = args.TaskInstance.TriggerDetails as ToastNotificationActionTriggerDetail;
-            if (details != null)
-            {
-                string arguments = details.Argument;
-                var userInput = details.UserInput;
+    var deferral = args.TaskInstance.GetDeferral();
+ 
+    switch (args.TaskInstance.Task.Name)
+    {
+        case "ToastBackgroundTask":
+            var details = args.TaskInstance.TriggerDetails as ToastNotificationActionTriggerDetail;
+            if (details != null)
+            {
+                string arguments = details.Argument;
+                var userInput = details.UserInput;
 
-                // Perform tasks
-            }
-            break;
-    }
- 
-    deferral.Complete();
+                // Perform tasks
+            }
+            break;
+    }
+ 
+    deferral.Complete();
 }
 ```
 
@@ -404,71 +404,71 @@ string title = "Andrew sent you a picture";
 string content = "Check this out, Happy Canyon in Utah!";
 string image = "http://blogs.msdn.com/cfs-filesystemfile.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-01-71-81-permanent/2727.happycanyon1_5B00_1_5D00_.jpg";
 string logo = "ms-appdata:///local/Andrew.jpg";
- 
+ 
 // TODO: all values need to be XML escaped
- 
+ 
 // Construct the visuals of the toast
 string toastVisual =
 $@"<visual>
-  <binding template='ToastGeneric'>
-    <text>{title}</text>
-    <text>{content}</text>
-    <image src='{image}'/>
-    <image src='{logo}' placement='appLogoOverride' hint-crop='circle'/>
-  </binding>
+  <binding template='ToastGeneric'>
+    <text>{title}</text>
+    <text>{content}</text>
+    <image src='{image}'/>
+    <image src='{logo}' placement='appLogoOverride' hint-crop='circle'/>
+  </binding>
 </visual>";
 
 // In a real app, these would be initialized with actual data
 int conversationId = 384928;
- 
+ 
 // Generate the arguments we'll be passing in the toast
 string argsReply = $"action=reply&conversationId={conversationId}";
 string argsLike = $"action=like&conversationId={conversationId}";
 string argsView = $"action=viewImage&imageUrl={Uri.EscapeDataString(image)}";
- 
+ 
 // TODO: all args need to be XML escaped
- 
+ 
 string toastActions =
 $@"<actions>
- 
-  <input
-      type='text'
-      id='tbReply'
-      placeHolderContent='Type a response'/>
- 
-  <action
-      content='Reply'
-      arguments='{argsReply}'
-      activationType='background'
-      imageUri='Assets/Reply.png'
-      hint-inputId='tbReply'/>
- 
-  <action
-      content='Like'
-      arguments='{argsLike}'
-      activationType='background'/>
- 
-  <action
-      content='View'
-      arguments='{argsView}'/>
- 
+ 
+  <input
+      type='text'
+      id='tbReply'
+      placeHolderContent='Type a response'/>
+ 
+  <action
+      content='Reply'
+      arguments='{argsReply}'
+      activationType='background'
+      imageUri='Assets/Reply.png'
+      hint-inputId='tbReply'/>
+ 
+  <action
+      content='Like'
+      arguments='{argsLike}'
+      activationType='background'/>
+ 
+  <action
+      content='View'
+      arguments='{argsView}'/>
+ 
 </actions>";
 
 // Now we can construct the final toast content
 string argsLaunch = $"action=viewConversation&conversationId={conversationId}";
- 
+ 
 // TODO: all args need to be XML escaped
- 
+ 
 string toastXmlString =
 $@"<toast launch='{argsLaunch}'>
-    {toastVisual}
-    {toastActions}
+    {toastVisual}
+    {toastActions}
 </toast>";
- 
+ 
 // Parse to XML
 XmlDocument toastXml = new XmlDocument();
 toastXml.LoadXml(toastXmlString);
- 
+ 
 // Generate toast
 var toast = new ToastNotification(toastXml);
 ```

@@ -1,5 +1,5 @@
 ---
-Description: En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables.
+description: En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables.
 title: Enviar una notificación de icono local
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a8e3bee4a32c4a66ece5f486386340e9f9122f87
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6b93f9731fb9bf843ce9bb03bd8c6526546c4249
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156809"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034468"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar una notificación de icono local
  
@@ -24,7 +24,7 @@ Los iconos de la aplicación principal de Windows 10 se definen en el manifiesto
 > [!NOTE] 
 >Obtenga información sobre cómo [crear iconos adaptables](create-adaptive-tiles.md) y [esquemas de contenido de mosaicos](../tiles-and-notifications/tile-schema.md).
 
- 
+ 
 
 ## <a name="install-the-nuget-package"></a>Instalación del paquete NuGet.
 
@@ -293,6 +293,6 @@ var notification = new TileNotification(doc);
 * [**Espacio de nombres Windows.UI.Notifications**](/uwp/api/Windows.UI.Notifications)
 * [Cómo usar la cola de notificaciones (XAML)](/previous-versions/windows/apps/hh868234(v=win.10))
 * [Entrega de notificaciones](choosing-a-notification-delivery-method.md)
- 
+ 
 
- 
+ 

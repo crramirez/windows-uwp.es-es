@@ -1,17 +1,17 @@
 ---
-Description: Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
+description: Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.
 title: Habilitar compras de productos desde la aplicación
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: UWP, complementos, compras desde la aplicación, IAPs, Windows. ApplicationModel. Store
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ac6fc8a6ac39c106e3d5d593a36595097c4bde45
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: b24a48034585411af5edfb0950fc4f96b189519f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89364118"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033478"
 ---
 # <a name="enable-in-app-product-purchases"></a>Habilitar compras de productos desde la aplicación
 
@@ -58,7 +58,7 @@ Para cada función que quieras tener disponible a través de un producto desde l
 
     Debes situar el código de cada función asociada con un producto desde la aplicación en un bloque condicional que compruebe si el cliente tiene licencia para usar esa función.
 
-    En este ejemplo se muestra cómo puedes codificar una función de producto llamada **featureName** en un bloqueo condicional específico de una licencia. La cadena, **featureName**, es el token que identifica de forma única este producto dentro de la aplicación y también se utiliza para identificarlo en el almacén.
+    En este ejemplo se muestra cómo puedes codificar una función de producto llamada **featureName** en un bloqueo condicional específico de una licencia. La cadena, **featureName** , es el token que identifica de forma única este producto dentro de la aplicación y también se utiliza para identificarlo en el almacén.
 
     > [!div class="tabbedCodeSnippets"]
     :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs" id="CodeFeature":::
@@ -83,7 +83,7 @@ En el centro de Partners, vaya a la aplicación y [cree un complemento](../publi
   > [!NOTE]
   > El token de la oferta de la aplicación que use en el código debe coincidir con el valor de ID. de [producto](../publish/set-your-add-on-product-id.md#product-id) que especifique para el complemento correspondiente en el centro de Partners.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Si te interesa que los clientes cuenten con varios productos consumibles desde la aplicación (elementos que se puedan comprar, usar y después volver a comprar si se desea), consulta el tema [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md).
 
@@ -92,7 +92,7 @@ Si necesitas usar recibos para comprobar que el usuario ha realizado una compra 
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Habilitar compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)
+* [Habilitar compras consumibles de productos en la aplicación](enable-consumable-in-app-product-purchases.md)
 * [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md)
 * [Usar recibos para comprobar la compra de productos](use-receipts-to-verify-product-purchases.md)
 * [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)

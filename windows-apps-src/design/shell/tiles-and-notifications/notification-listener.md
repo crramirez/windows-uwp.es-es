@@ -1,6 +1,6 @@
 ---
-Description: Aprenda a usar el agente de escucha de notificaciones para tener acceso a todas las notificaciones del usuario.
-title: Agente de escucha de notificaciones
+description: Aprenda a usar el agente de escucha de notificaciones para tener acceso a todas las notificaciones del usuario.
+title: 'Agente de escucha de notificación '
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tiles
 template: detail.hbs
@@ -8,22 +8,22 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, agente de escucha de notificaciones, usernotificationlistener, documentación, notificaciones de acceso
 ms.localizationpriority: medium
-ms.openlocfilehash: dc2afb36337439cd115273cd9df8ee1cb2eb3741
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 90d1d0757bad5a62a987144e6a81d0a6550db384
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169189"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033668"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Agente de escucha de notificaciones: acceso a todas las notificaciones
 
 El agente de escucha de notificaciones proporciona acceso a las notificaciones de un usuario. Smartwatches y otros ponibles pueden usar el agente de escucha de notificaciones para enviar las notificaciones del teléfono al dispositivo portátil. Las aplicaciones de automatización de inicio pueden usar el agente de escucha de notificaciones para realizar acciones específicas cuando se reciben notificaciones, como hacer parpadear las luces cuando se recibe una llamada. 
 
 > [!IMPORTANT]
-> **Requiere actualización de aniversario**: debe tener como destino el SDK 14393 y ejecutar la compilación 14393 o superior para usar el agente de escucha de notificaciones.
+> **Requiere actualización de aniversario** : debe tener como destino el SDK 14393 y ejecutar la compilación 14393 o superior para usar el agente de escucha de notificaciones.
 
 
-> **API importantes**: [clase UserNotificationListener](/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [clase UserNotificationChangedTrigger](/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
+> **API importantes** : [clase UserNotificationListener](/uwp/api/Windows.UI.Notifications.Management.UserNotificationListener), [clase UserNotificationChangedTrigger](/uwp/api/Windows.ApplicationModel.Background.UserNotificationChangedTrigger)
 
 
 ## <a name="enable-the-listener-by-adding-the-user-notification-capability"></a>Habilitación del agente de escucha mediante la adición de la funcionalidad de notificación de usuario 
@@ -42,12 +42,12 @@ Si la aplicación admite versiones anteriores de Windows 10, debe usar la [clase
 ```csharp
 if (ApiInformation.IsTypePresent("Windows.UI.Notifications.Management.UserNotificationListener"))
 {
-    // Listener supported!
+    // Listener supported!
 }
- 
+ 
 else
 {
-    // Older version of Windows, no Listener
+    // Older version of Windows, no Listener
 }
 ```
 
@@ -59,35 +59,35 @@ Dado que el agente de escucha permite el acceso a las notificaciones del usuario
 ```csharp
 // Get the listener
 UserNotificationListener listener = UserNotificationListener.Current;
- 
+ 
 // And request access to the user's notifications (must be called from UI thread)
 UserNotificationListenerAccessStatus accessStatus = await listener.RequestAccessAsync();
- 
+ 
 switch (accessStatus)
 {
-    // This means the user has granted access.
-    case UserNotificationListenerAccessStatus.Allowed:
- 
-        // Yay! Proceed as normal
-        break;
- 
-    // This means the user has denied access.
-    // Any further calls to RequestAccessAsync will instantly
-    // return Denied. The user must go to the Windows settings
-    // and manually allow access.
-    case UserNotificationListenerAccessStatus.Denied:
- 
-        // Show UI explaining that listener features will not
-        // work until user allows access.
-        break;
- 
-    // This means the user closed the prompt without
-    // selecting either allow or deny. Further calls to
-    // RequestAccessAsync will show the dialog again.
-    case UserNotificationListenerAccessStatus.Unspecified:
- 
-        // Show UI that allows the user to bring up the prompt again
-        break;
+    // This means the user has granted access.
+    case UserNotificationListenerAccessStatus.Allowed:
+ 
+        // Yay! Proceed as normal
+        break;
+ 
+    // This means the user has denied access.
+    // Any further calls to RequestAccessAsync will instantly
+    // return Denied. The user must go to the Windows settings
+    // and manually allow access.
+    case UserNotificationListenerAccessStatus.Denied:
+ 
+        // Show UI explaining that listener features will not
+        // work until user allows access.
+        break;
+ 
+    // This means the user closed the prompt without
+    // selecting either allow or deny. Further calls to
+    // RequestAccessAsync will show the dialog again.
+    case UserNotificationListenerAccessStatus.Unspecified:
+ 
+        // Show UI that allows the user to bring up the prompt again
+        break;
 }
 ```
 
@@ -111,10 +111,10 @@ Cada notificación se representa como una [UserNotification](/uwp/api/windows.ui
 ```csharp
 public sealed class UserNotification
 {
-    public AppInfo AppInfo { get; }
-    public DateTimeOffset CreationTime { get; }
-    public uint Id { get; }
-    public Notification Notification { get; }
+    public AppInfo AppInfo { get; }
+    public DateTimeOffset CreationTime { get; }
+    public uint Id { get; }
+    public Notification Notification { get; }
 }
 ```
 
@@ -126,10 +126,10 @@ La propiedad [Appinfo](/uwp/api/windows.ui.notifications.usernotification.AppInf
 ```csharp
 // Select the first notification
 UserNotification notif = notifs[0];
- 
+ 
 // Get the app's display name
 string appDisplayName = notif.AppInfo.DisplayInfo.DisplayName;
- 
+ 
 // Get the app's logo
 BitmapImage appLogo = new BitmapImage();
 RandomAccessStreamReference appLogoStream = notif.AppInfo.DisplayInfo.GetLogo(new Size(16, 16));
@@ -143,18 +143,18 @@ Queremos buscar el enlace del sistema (para el código de prueba de errores, deb
 ```csharp
 // Get the toast binding, if present
 NotificationBinding toastBinding = notif.Notification.Visual.GetBinding(KnownNotificationBindings.ToastGeneric);
- 
+ 
 if (toastBinding != null)
 {
-    // And then get the text elements from the toast binding
-    IReadOnlyList<AdaptiveNotificationText> textElements = toastBinding.GetTextElements();
- 
-    // Treat the first text element as the title text
-    string titleText = textElements.FirstOrDefault()?.Text;
- 
-    // We'll treat all subsequent text elements as body text,
-    // joining them together via newlines.
-    string bodyText = string.Join("\n", textElements.Skip(1).Select(t => t.Text));
+    // And then get the text elements from the toast binding
+    IReadOnlyList<AdaptiveNotificationText> textElements = toastBinding.GetTextElements();
+ 
+    // Treat the first text element as the title text
+    string titleText = textElements.FirstOrDefault()?.Text;
+ 
+    // We'll treat all subsequent text elements as body text,
+    // joining them together via newlines.
+    string bodyText = string.Join("\n", textElements.Skip(1).Select(t => t.Text));
 }
 ```
 
@@ -187,23 +187,23 @@ Gracias al [modelo de proceso único](../../../launch-resume/create-and-register
 
 ```csharp
 // TODO: Request/check Listener access via UserNotificationListener.Current.RequestAccessAsync
- 
+ 
 // TODO: Request/check background task access via BackgroundExecutionManager.RequestAccessAsync
- 
+ 
 // If background task isn't registered yet
 if (!BackgroundTaskRegistration.AllTasks.Any(i => i.Value.Name.Equals("UserNotificationChanged")))
 {
-    // Specify the background task
-    var builder = new BackgroundTaskBuilder()
-    {
-        Name = "UserNotificationChanged"
-    };
- 
-    // Set the trigger for Listener, listening to Toast Notifications
-    builder.SetTrigger(new UserNotificationChangedTrigger(NotificationKinds.Toast));
- 
-    // Register the task
-    builder.Register();
+    // Specify the background task
+    var builder = new BackgroundTaskBuilder()
+    {
+        Name = "UserNotificationChanged"
+    };
+ 
+    // Set the trigger for Listener, listening to Toast Notifications
+    builder.SetTrigger(new UserNotificationChangedTrigger(NotificationKinds.Toast));
+ 
+    // Register the task
+    builder.Register();
 }
 ```
 
@@ -212,18 +212,18 @@ Después, en el App.xaml.cs, invalide el método [OnBackgroundActivated](/uwp/ap
 ```csharp
 protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 {
-    var deferral = args.TaskInstance.GetDeferral();
- 
-    switch (args.TaskInstance.Task.Name)
-    {
-        case "UserNotificationChanged":
-            // Call your own method to process the new/removed notifications
-            // The next section of documentation discusses this code
-            await MyWearableHelpers.SyncNotifications();
-            break;
-    }
- 
-    deferral.Complete();
+    var deferral = args.TaskInstance.GetDeferral();
+ 
+    switch (args.TaskInstance.Task.Name)
+    {
+        case "UserNotificationChanged":
+            // Call your own method to process the new/removed notifications
+            // The next section of documentation discusses this code
+            await MyWearableHelpers.SyncNotifications();
+            break;
+    }
+ 
+    deferral.Complete();
 }
 ```
 
@@ -239,37 +239,37 @@ En el `SyncNotifications` método, para determinar qué notificaciones se han ag
 ```csharp
 // Get all the current notifications from the platform
 IReadOnlyList<UserNotification> userNotifications = await listener.GetNotificationsAsync(NotificationKinds.Toast);
- 
+ 
 // Obtain the notifications that our wearable currently has displayed
 IList<uint> wearableNotificationIds = GetNotificationsOnWearable();
- 
+ 
 // Copy the currently displayed into a list of notification ID's to be removed
 var toBeRemoved = new List<uint>(wearableNotificationIds);
- 
+ 
 // For each notification in the platform
 foreach (UserNotification userNotification in userNotifications)
 {
-    // If we've already displayed this notification
-    if (wearableNotificationIds.Contains(userNotification.Id))
-    {
-        // We want to KEEP it displayed, so take it out of the list
-        // of notifications to remove.
-        toBeRemoved.Remove(userNotification.Id);
-    }
- 
-    // Otherwise it's a new notification
-    else
-    {
-        // Display it on the Wearable
-        SendNotificationToWearable(userNotification);
-    }
+    // If we've already displayed this notification
+    if (wearableNotificationIds.Contains(userNotification.Id))
+    {
+        // We want to KEEP it displayed, so take it out of the list
+        // of notifications to remove.
+        toBeRemoved.Remove(userNotification.Id);
+    }
+ 
+    // Otherwise it's a new notification
+    else
+    {
+        // Display it on the Wearable
+        SendNotificationToWearable(userNotification);
+    }
 }
- 
+ 
 // Now our toBeRemoved list only contains notification ID's that no longer exist in the platform.
 // So we will remove all those notifications from the wearable.
 foreach (uint id in toBeRemoved)
 {
-    RemoveNotificationFromWearable(id);
+    RemoveNotificationFromWearable(id);
 }
 ```
 
@@ -284,14 +284,14 @@ También puede escuchar notificaciones de un controlador de eventos en memoria..
 ```csharp
 // Subscribe to foreground event
 listener.NotificationChanged += Listener_NotificationChanged;
- 
+ 
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // Your code for handling the notification
+    // Your code for handling the notification
 }
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>Cómo corregir retrasos en la tarea en segundo plano
+## <a name="how-to-fix-delays-in-the-background-task"></a>Cómo corregir retrasos en la tarea en segundo plano
 
-Al probar la aplicación, es posible que observe que la tarea en segundo plano se retrasa en ocasiones y no se desencadena durante varios minutos. Para corregir el retraso, pida al usuario que vaya a la configuración del sistema: > batería del > del sistema > uso de la batería por la aplicación, busque la aplicación en la lista, selecciónela y establézcala en "siempre permitido en segundo plano".Después, la tarea en segundo plano debe desencadenarse siempre en torno a un segundo de la notificación recibida.
+Al probar la aplicación, es posible que observe que la tarea en segundo plano se retrasa en ocasiones y no se desencadena durante varios minutos. Para corregir el retraso, pida al usuario que vaya a la configuración del sistema: > batería del > del sistema > uso de la batería por la aplicación, busque la aplicación en la lista, selecciónela y establézcala en "siempre permitido en segundo plano". Después, la tarea en segundo plano debe desencadenarse siempre en torno a un segundo de la notificación recibida.

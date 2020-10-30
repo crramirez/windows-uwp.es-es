@@ -1,17 +1,17 @@
 ---
-Description: Obtenga información sobre cómo registrar la aplicación para UWP para recibir notificaciones de envío enviadas desde el centro de Partners.
+description: Obtenga información sobre cómo registrar la aplicación para UWP para recibir notificaciones de envío enviadas desde el centro de Partners.
 title: Configurar la aplicación para notificaciones de inserción dirigidas
 ms.date: 02/08/2017
 ms.topic: article
 keywords: SDK de Windows 10, UWP, Microsoft Store Services, notificaciones de envío de destino, centro de Partners
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
-ms.openlocfilehash: abb901c1b067dcf3609cbfb5c4cf3f81c9dc465c
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 2296ae29ddcfd868e31c294f8859d4f4b925fca8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89364138"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033543"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar la aplicación para notificaciones de inserción dirigidas
 
@@ -25,9 +25,9 @@ Antes de escribir código, sigue estos pasos para agregar una referencia al Micr
 
 1. Si aún no lo has hecho, [instala el Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) en el equipo de desarrollo. 
 2. Abra el proyecto en Visual Studio.
-3. En el Explorador de soluciones, haz clic con el botón secundario en el nodo **Referencias** del proyecto y haz clic en **Agregar referencia**.
-4. En el cuadro de diálogo **Administrador de referencias**, expande **Windows Universal** y haz clic en **Extensiones**.
-5. En la lista de los SDK, haz clic en la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
+3. En el Explorador de soluciones, haz clic con el botón secundario en el nodo **Referencias** del proyecto y haz clic en **Agregar referencia** .
+4. En el cuadro de diálogo **Administrador de referencias** , expande **Windows Universal** y haz clic en **Extensiones** .
+5. En la lista de los SDK, haz clic en la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar** .
 
 ## <a name="register-for-push-notifications"></a>Registro de notificaciones push
 
@@ -57,7 +57,7 @@ Para registrar la aplicación para recibir notificaciones de envío de destino d
 
 ### <a name="how-targeted-push-notifications-are-routed-to-customers"></a>Cómo se enrutan las notificaciones de envío de destino a los clientes
 
-Cuando la aplicación llama a **RegisterNotificationChannelAsync**, este método recopila el cuenta de Microsoft del cliente que ha iniciado sesión actualmente en el dispositivo. Más adelante, cuando se envía una notificación de envío de destino a un segmento que incluye a este cliente, el centro de Partners envía la notificación a los dispositivos asociados al cuenta de Microsoft de este cliente.
+Cuando la aplicación llama a **RegisterNotificationChannelAsync** , este método recopila el cuenta de Microsoft del cliente que ha iniciado sesión actualmente en el dispositivo. Más adelante, cuando se envía una notificación de envío de destino a un segmento que incluye a este cliente, el centro de Partners envía la notificación a los dispositivos asociados al cuenta de Microsoft de este cliente.
 
 Si el cliente que inició la aplicación proporciona su dispositivo a otra persona para usar mientras todavía está conectado al dispositivo con sus cuenta de Microsoft, tenga en cuenta que la otra persona puede ver la notificación dirigida al cliente original. Esto puede tener consecuencias no deseadas, especialmente en el caso de las aplicaciones que ofrecen servicios que los clientes pueden iniciar sesión para usar. Para evitar que otros usuarios vean las notificaciones de destino en este escenario, llame al método [UnregisterNotificationChannelAsync](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) cuando los clientes cierren sesión en la aplicación. Para obtener más información, consulte [anulación del registro para las notificaciones de envío](#unregister) más adelante en este artículo.
 
@@ -79,11 +79,11 @@ Este método devuelve también los argumentos de inicio originales de la aplicac
 
 La forma en que se llama a este método depende del tipo de activación de la notificación de extracción:
 
-* Si la notificación de inserción tiene un tipo de activación en primer plano, llama a este método desde la invalidación del método [OnActivated](/uwp/api/windows.ui.xaml.application.onactivated) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement** y **Windows.ApplicationModel.Activation**.
+* Si la notificación de inserción tiene un tipo de activación en primer plano, llama a este método desde la invalidación del método [OnActivated](/uwp/api/windows.ui.xaml.application.onactivated) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement** y **Windows.ApplicationModel.Activation** .
 
   :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/App.xaml.cs" id="OnActivated":::
 
-* Si la notificación de inserción tiene un tipo de activación en segundo plano, llama a este método desde el método [Run](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) para tu [tarea en segundo plano](../launch-resume/support-your-app-with-background-tasks.md) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActionTriggerDetail](/uwp/api/Windows.UI.Notifications.ToastNotificationActionTriggerDetail) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement**, **Windows.ApplicationModel.Background** y **Windows.UI.Notifications**.
+* Si la notificación de inserción tiene un tipo de activación en segundo plano, llama a este método desde el método [Run](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) para tu [tarea en segundo plano](../launch-resume/support-your-app-with-background-tasks.md) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActionTriggerDetail](/uwp/api/Windows.UI.Notifications.ToastNotificationActionTriggerDetail) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement** , **Windows.ApplicationModel.Background** y **Windows.UI.Notifications** .
 
   :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/DevCenterNotifications.cs" id="Run":::
 

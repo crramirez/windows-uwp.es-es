@@ -1,16 +1,16 @@
 ---
-Description: Obtenga información sobre las distintas formas en las que puede permitir que los clientes evalúen y revisen su aplicación mediante programación.
+description: Obtenga información sobre las distintas formas en las que puede permitir que los clientes evalúen y revisen su aplicación mediante programación.
 title: Solicitar calificaciones y revisiones para la aplicación
 ms.date: 01/22/2019
 ms.topic: article
 keywords: Windows 10, UWP, clasificaciones y revisiones
 ms.localizationpriority: medium
-ms.openlocfilehash: c0a668ac66f48e386a6299a64e5bcc18cec4fccc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9dbc33eaaf3adcb05a6ad37e2f54ceec4769f530
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158379"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034408"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y revisiones para la aplicación
 
@@ -110,8 +110,8 @@ Después de enviar la solicitud para mostrar el cuadro de diálogo clasificació
 En el ejemplo siguiente se muestra el valor devuelto para esta solicitud después de que el cliente envíe correctamente una clasificación o una revisión.
 
 ```json
-{ 
-  "status": "success", 
+{ 
+  "status": "success", 
   "data": {
     "updated": false
   },
@@ -122,8 +122,8 @@ En el ejemplo siguiente se muestra el valor devuelto para esta solicitud despué
 En el ejemplo siguiente se muestra el valor devuelto para esta solicitud después de que el cliente decida no enviar una clasificación o una revisión.
 
 ```json
-{ 
-  "status": "aborted", 
+{ 
+  "status": "aborted", 
   "errorDetails": "Navigation was unsuccessful"
 }
 ```
@@ -132,8 +132,8 @@ En la tabla siguiente se describen los campos de la cadena de datos con formato 
 
 | Campo          | Descripción                                                                                                                                   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| *status*       | Cadena que indica si el cliente envió correctamente una clasificación o una revisión. Los valores admitidos son **correcto** y **anulado**. |
-| *data*         | Objeto que contiene un valor booleano único denominado *actualizado*. Este valor indica si el cliente actualizó una clasificación o revisión existente. El objeto de *datos* solo se incluye en las respuestas Success. |
+| *status*       | Cadena que indica si el cliente envió correctamente una clasificación o una revisión. Los valores admitidos son **correcto** y **anulado** . |
+| *data*         | Objeto que contiene un valor booleano único denominado *actualizado* . Este valor indica si el cliente actualizó una clasificación o revisión existente. El objeto de *datos* solo se incluye en las respuestas Success. |
 | *errorDetails* | Cadena que contiene los detalles del error de la solicitud.                                                                                     |
 
 ## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>Inicio de la página clasificación y revisión de la aplicación en la tienda

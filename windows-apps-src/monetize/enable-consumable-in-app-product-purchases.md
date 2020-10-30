@@ -1,17 +1,17 @@
 ---
-Description: Ofrezca productos en aplicación consumibles&\# 8212; elementos que se pueden adquirir, usar y volver a comprar&\# 8212; a través de la plataforma de comercio de la tienda para proporcionar a los clientes una experiencia de compra sólida y confiable.
+description: Ofrezca productos en aplicación consumibles&\# 8212; elementos que se pueden adquirir, usar y volver a comprar&\# 8212; a través de la plataforma de comercio de la tienda para proporcionar a los clientes una experiencia de compra sólida y confiable.
 title: Habilitar compras de productos consumibles desde la aplicación
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
 keywords: UWP, consumible, complementos, compras desde la aplicación, IAPs, Windows. ApplicationModel. Store
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fb4119296b11e805fa72ff027383d13e6fb43818
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: fdd09fdb0d80f7811014dc910772175e152505d0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363698"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033548"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Habilitar compras de productos consumibles desde la aplicación
 
@@ -37,7 +37,7 @@ En el siguiente ejemplo se muestra una solicitud de compra de un producto consum
 
 ## <a name="step-2-tracking-local-fulfillment-of-the-consumable"></a>Paso 2: Seguimiento del suministro local del consumible
 
-Cuando se concede al cliente acceso al producto consumible desde la aplicación, es importante realizar un seguimiento del producto suministrado (*productId*) y de la transacción asociada al mismo (*transactionId*).
+Cuando se concede al cliente acceso al producto consumible desde la aplicación, es importante realizar un seguimiento del producto suministrado ( *productId* ) y de la transacción asociada al mismo ( *transactionId* ).
 
 > [!IMPORTANT]
 > La aplicación es responsable de notificar con exactitud el cumplimiento de la tienda. Este paso es esencial para mantener una experiencia de compra justa y de confianza para tus clientes.
@@ -79,6 +79,6 @@ En el siguiente ejemplo, se demuestra cómo se puede usar [GetUnfulfilledConsuma
 * [Habilitar compras de productos desde la aplicación](enable-in-app-product-purchases.md)
 * [Muestra de la Tienda (muestra pruebas y compras desde la aplicación)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Windows.ApplicationModel.Store](/uwp/api/Windows.ApplicationModel.Store)
- 
+ 
 
- 
+ 

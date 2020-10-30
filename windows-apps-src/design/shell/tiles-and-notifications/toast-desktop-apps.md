@@ -1,5 +1,5 @@
 ---
-Description: Descubra las diferentes opciones que tienen las aplicaciones de escritorio para enviar notificaciones del sistema
+description: Descubra las diferentes opciones que tienen las aplicaciones de escritorio para enviar notificaciones del sistema
 title: Notificaciones del sistema de aplicaciones de escritorio
 label: Toast notifications from desktop apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, puente de escritorio, msix, paquete disperso, opciones para enviar notificaciones del sistema, servidor com, activador com, com, com falsificado, sin com, sin com, enviar notificaciones de envío
 ms.localizationpriority: medium
-ms.openlocfilehash: 139ab767e0cc5eb11d0116563e8e1b7e00ae5dc2
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 9cdd8e57311400c8603f4eb99e9bfd1a2230f2ce
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100333"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033098"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema de aplicaciones de escritorio
 

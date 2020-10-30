@@ -1,5 +1,5 @@
 ---
-Description: Procedimientos de prueba que deben seguirse para asegurarse de que la aplicación de Windows está accesible.
+description: Procedimientos de prueba que deben seguirse para asegurarse de que la aplicación de Windows está accesible.
 ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: Pruebas de accesibilidad
 label: Accessibility testing
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1da900732257babc0d53453fa4b9b2c9196e7e6d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 1cb4807f551f79d488cc56d71513745d22c43d27
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216418"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032678"
 ---
 # <a name="accessibility-testing"></a>Pruebas de accesibilidad  
 
@@ -41,11 +41,11 @@ En la siguiente imagen se muestra la herramienta [**Inspect**](/windows/desktop/
 
 ### <a name="ui-accessibility-checker"></a>UI Accessibility Checker
 
-**UI Accessibility Checker (AccChecker)** te ayuda a detectar problemas de accesibilidad en tiempo de ejecución. Cuando la interfaz de usuario esté completa y en funcionamiento, usa **AccChecker** para probar diferentes escenarios, comprobar si la información de accesibilidad en tiempo de ejecución es correcta y detectar problemas en tiempo de ejecución. Puedes ejecutar **AccChecker** en el modo de línea de comandos o de interfaz de usuario. Para ejecutar la herramienta en modo de interfaz de usuario, abre el directorio de **AccChecker** en el directorio "bin" de Windows SDK, ejecuta acccheckui.exe y haz clic en el menú **Ayuda**.
+**UI Accessibility Checker (AccChecker)** te ayuda a detectar problemas de accesibilidad en tiempo de ejecución. Cuando la interfaz de usuario esté completa y en funcionamiento, usa **AccChecker** para probar diferentes escenarios, comprobar si la información de accesibilidad en tiempo de ejecución es correcta y detectar problemas en tiempo de ejecución. Puedes ejecutar **AccChecker** en el modo de línea de comandos o de interfaz de usuario. Para ejecutar la herramienta en modo de interfaz de usuario, abre el directorio de **AccChecker** en el directorio "bin" de Windows SDK, ejecuta acccheckui.exe y haz clic en el menú **Ayuda** .
 
 ### <a name="ui-automation-verify"></a>UI Automation Verify
 
-**UI Automation Verify (UIA Verify)** es un marco automatizado de pruebas y verificación para las implementaciones de la Automatización de la interfaz de usuario. **UIA Verify** puede integrarse en el código de prueba y realizar pruebas automatizadas periódicas o comprobaciones puntuales de los escenarios de Automatización de la interfaz de usuario. Para ejecutar **UIA Verify**, ejecuta VisualUIAVerifyNative.exe desde el subdirectorio UIAVerify.
+**UI Automation Verify (UIA Verify)** es un marco automatizado de pruebas y verificación para las implementaciones de la Automatización de la interfaz de usuario. **UIA Verify** puede integrarse en el código de prueba y realizar pruebas automatizadas periódicas o comprobaciones puntuales de los escenarios de Automatización de la interfaz de usuario. Para ejecutar **UIA Verify** , ejecuta VisualUIAVerifyNative.exe desde el subdirectorio UIAVerify.
 
 ### <a name="accessible-event-watcher"></a>Accessible Event Watcher
 
@@ -56,7 +56,7 @@ En la siguiente imagen se muestra la herramienta [**Inspect**](/windows/desktop/
 
 ## <a name="test-keyboard-accessibility"></a>Probar la accesibilidad de teclado
 
-La mejor manera de probar tu accesibilidad de teclado es desconectar el mouse o usar el teclado en pantalla si estás usando un dispositivo de tableta. Prueba la navegación de accesibilidad de teclado usando la tecla de _tabulador_. Deberías poder recorrer todos los elementos interactivos de la interfaz de usuario usando la tecla de _tabulador_. Para los elementos compuestos de la interfaz de usuario, comprueba si puedes navegar por las diferentes partes de los elementos usando las teclas de dirección. Por ejemplo, deberías poder navegar por listas de elementos con las teclas de dirección. Finalmente, asegúrate de que puedas invocar a todos los elementos interactivos de la interfaz de usuario con el teclado una vez que esos elementos tengan el foco, normalmente usando la tecla Entrar o Barra espaciadora.
+La mejor manera de probar tu accesibilidad de teclado es desconectar el mouse o usar el teclado en pantalla si estás usando un dispositivo de tableta. Prueba la navegación de accesibilidad de teclado usando la tecla de _tabulador_ . Deberías poder recorrer todos los elementos interactivos de la interfaz de usuario usando la tecla de _tabulador_ . Para los elementos compuestos de la interfaz de usuario, comprueba si puedes navegar por las diferentes partes de los elementos usando las teclas de dirección. Por ejemplo, deberías poder navegar por listas de elementos con las teclas de dirección. Finalmente, asegúrate de que puedas invocar a todos los elementos interactivos de la interfaz de usuario con el teclado una vez que esos elementos tengan el foco, normalmente usando la tecla Entrar o Barra espaciadora.
 
 ## <a name="verify-the-contrast-ratio-of-visible-text"></a>Comprobar la relación de contraste del texto visible
 
@@ -81,16 +81,16 @@ Use el narrador para probar la experiencia de lectura de pantalla de la aplicaci
 
 **Utiliza estos pasos para probar cómo funciona la aplicación utilizando el Narrador con un mouse y un teclado:**
 
-1. Para iniciar el narrador, presione la _tecla del logotipo de Windows + Ctrl + entrar_. En las versiones anteriores a la versión 1607 de Windows 10, use la _tecla del logotipo de Windows + entrar_ para iniciar el narrador.
-2. Navegue por la aplicación con el teclado mediante la tecla _Tab_ , las teclas de dirección y _Bloq Mayús + teclas de dirección_.
+1. Para iniciar el narrador, presione la _tecla del logotipo de Windows + Ctrl + entrar_ . En las versiones anteriores a la versión 1607 de Windows 10, use la _tecla del logotipo de Windows + entrar_ para iniciar el narrador.
+2. Navegue por la aplicación con el teclado mediante la tecla _Tab_ , las teclas de dirección y _Bloq Mayús + teclas de dirección_ .
 3. Conforme estás navegando por la aplicación, escucha cómo lee Narrador los elementos de la interfaz de usuario y comprueba lo siguiente:
     - En cada control, asegúrate de que el Narrador lee todo el contenido visible. Comprueba también que el Narrador lee el nombre de cada control, los estados aplicables (comprobado, seleccionado, etc.) y los tipos de control (botón, casilla, elemento de lista, etc.).
-    - Si el elemento es interactivo, comprueba que puedes usar el Narrador para invocar su acción presionando las teclas _Bloq Mayús + Entrar_.
+    - Si el elemento es interactivo, comprueba que puedes usar el Narrador para invocar su acción presionando las teclas _Bloq Mayús + Entrar_ .
     - En cada tabla, asegúrate de que Narrador lea correctamente el nombre de la tabla, su descripción (si está disponible) y los encabezados de fila y columna.
 4. Presiona _Bloq Mayús + Mayús+ Entrar_ para buscar la aplicación y comprobar que todos los controles aparecen en la lista de búsqueda y que los nombres de los controles están localizados y se pueden leer.
-5. Apaga el monitor e intenta lograr los escenarios utilizando solamente el teclado y el Narrador. Para obtener la lista completa de los comandos y accesos directos del Narrador, presiona _Bloq Mayús + F1_.
+5. Apaga el monitor e intenta lograr los escenarios utilizando solamente el teclado y el Narrador. Para obtener la lista completa de los comandos y accesos directos del Narrador, presiona _Bloq Mayús + F1_ .
 
-A partir de Windows 10, versión 1607, presentamos un nuevo modo de desarrollador en Narrador. Active el modo de desarrollador cuando narrador ya se esté ejecutando; para ello, presione _control + Bloq Mayús + F12_. Cuando el modo de desarrollador esté habilitado, la pantalla estará enmascarada y destacará solamente los objetos accesibles y el texto asociado que se expone mediante programación a Narrador. Esto te ofrece un una buena representación visual de la información que se expone a Narrador.
+A partir de Windows 10, versión 1607, presentamos un nuevo modo de desarrollador en Narrador. Active el modo de desarrollador cuando narrador ya se esté ejecutando; para ello, presione _control + Bloq Mayús + F12_ . Cuando el modo de desarrollador esté habilitado, la pantalla estará enmascarada y destacará solamente los objetos accesibles y el texto asociado que se expone mediante programación a Narrador. Esto te ofrece un una buena representación visual de la información que se expone a Narrador.
 
 **Utiliza estos pasos para probar la aplicación utilizando el modo táctil de Narrador:**
 
@@ -98,10 +98,10 @@ A partir de Windows 10, versión 1607, presentamos un nuevo modo de desarrollado
 > El Narrador introduce automáticamente el modo táctil en los dispositivos que admiten contactos 4+. Narrador no admite escenarios de varios monitores o digitalizadores multitáctiles en la pantalla principal.
 
 1. Familiarízate con la interfaz de usuario y analiza el diseño.
-    - **Navega por la interfaz de usuario mediante gestos de deslizar rápidamente con un solo dedo.** Usa los deslizamientos rápidos hacia la derecha o hacia la izquierda para moverte entre los elementos y hacia arriba o hacia abajo para cambiar la categoría de los elementos por los que navegas. Las categorías incluyen todos los elementos, los vínculos, las tablas, los encabezados, etc. Desplazarse por los gestos de deslizamiento con un solo dedo es similar a navegar con _Bloq Mayús + Flecha_.
+    - **Navega por la interfaz de usuario mediante gestos de deslizar rápidamente con un solo dedo.** Usa los deslizamientos rápidos hacia la derecha o hacia la izquierda para moverte entre los elementos y hacia arriba o hacia abajo para cambiar la categoría de los elementos por los que navegas. Las categorías incluyen todos los elementos, los vínculos, las tablas, los encabezados, etc. Desplazarse por los gestos de deslizamiento con un solo dedo es similar a navegar con _Bloq Mayús + Flecha_ .
     - **Usa gestos de tabulación para desplazarte por los elementos activables.** Un dedo de tres dedos hacia la derecha o la izquierda es el mismo que si se navega por _Tab_ y _MAYÚS + TAB_ en un teclado.
     - **Investiga espacialmente la interfaz de usuario con un solo dedo.** Arrastra un dedo hacia arriba y abajo o hacia la derecha y la izquierda, para que Narrador lea los elementos bajo el dedo. Puedes usar el mouse como alternativa puesto que usa la misma lógica de posicionamiento que se utiliza al arrastrar un dedo.
-    - **Lee toda la ventana y todo su contenido deslizando tres dedos hacia arriba**. Esto equivale a usar _Bloq Mayús + W_.
+    - **Lee toda la ventana y todo su contenido deslizando tres dedos hacia arriba** . Esto equivale a usar _Bloq Mayús + W_ .
 
     Si hay partes importantes de la interfaz de usuario a las que no puedes acceder, es posible que tengas un problema de accesibilidad.
 

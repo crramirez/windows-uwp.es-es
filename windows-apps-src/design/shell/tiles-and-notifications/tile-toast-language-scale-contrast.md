@@ -1,17 +1,17 @@
 ---
-Description: Los iconos y las notificaciones del sistema pueden cargar cadenas e imágenes personalizadas para el idioma de visualización, mostrar el factor de escala, el contraste alto y otros contextos en tiempo de ejecución.
+description: Los iconos y las notificaciones del sistema pueden cargar cadenas e imágenes personalizadas para el idioma de visualización, mostrar el factor de escala, el contraste alto y otros contextos en tiempo de ejecución.
 title: Compatibilidad con las notificaciones de icono y del sistema para el idioma, la escala y el contraste alto
 template: detail.hbs
 ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 88bcd5d6ce59d0561e76f46f6291f58ad03ddf3c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0048da25cd1e775391c2523e37cb936243b7308c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156739"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033118"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Compatibilidad con las notificaciones de icono y del sistema para el idioma, la escala y el contraste alto
 
@@ -73,7 +73,7 @@ Estas son las cadenas de consulta que puede usar.
 | Calificador: | Cadena de consulta | Ejemplo |
 | --------- | ------------ | ------- |
 | Escala | a escala de MS | ? MS-Scale = 400 |
-| Idioma | MS-lang | ? MS-lang = en-US |
+| Lenguaje | MS-lang | ? MS-lang = en-US |
 | Compare | MS-Contrast | ? MS-Contrast = alto |
 
 Para obtener una tabla de referencia de todos los posibles valores de calificador que puede usar en las cadenas de consulta, vea [ResourceContext. QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).

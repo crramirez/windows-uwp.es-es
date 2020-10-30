@@ -1,5 +1,5 @@
 ---
-Description: Este artículo es una introducción a los conceptos y tecnologías relacionados con escenarios de accesibilidad para aplicaciones de Windows.
+description: Este artículo es una introducción a los conceptos y tecnologías relacionados con escenarios de accesibilidad para aplicaciones de Windows.
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: Información general sobre accesibilidad
 label: Accessibility overview
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 525f8d3170d94b035648841edca5f903450bf871
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e772cfb6df47cebe9f1b0229f54ea40a2a1da28d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216488"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032688"
 ---
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad
 
@@ -33,7 +33,7 @@ Existe una gran variedad de discapacidades, entre ellas, limitaciones en la movi
 * Soporte para la personalización de usuario, como configuraciones de fuente, configuración de zoom (ampliación), color y contraste alto.
 * Alternativas o complementos para partes de la interfaz de usuario.
 
-Los controles para XAML proporcionan compatibilidad de teclado integrada y compatibilidad de tecnologías de asistencia, como lectores de pantalla, que sacan provecho de los marcos de accesibilidad que ya admiten aplicaciones para UWP, HTML y otras tecnologías de interfaz de usuario. Esta compatibilidad integrada permite un nivel básico de accesibilidad que puedes personalizar con muy poco esfuerzo mediante la configuración de unas pocas propiedades. Si estás creando tus propios componentes y controles de XAML personalizados, también puedes agregar una compatibilidad similar usando el concepto de *sistemas de automatización del mismo nivel*.
+Los controles para XAML proporcionan compatibilidad de teclado integrada y compatibilidad de tecnologías de asistencia, como lectores de pantalla, que sacan provecho de los marcos de accesibilidad que ya admiten aplicaciones para UWP, HTML y otras tecnologías de interfaz de usuario. Esta compatibilidad integrada permite un nivel básico de accesibilidad que puedes personalizar con muy poco esfuerzo mediante la configuración de unas pocas propiedades. Si estás creando tus propios componentes y controles de XAML personalizados, también puedes agregar una compatibilidad similar usando el concepto de *sistemas de automatización del mismo nivel* .
 
 Además, las funciones de plantilla, estilo y enlace de datos simplifican la implementación de la compatibilidad de cambios dinámicos para mostrar la configuración y el texto para interfaces de usuario alternativas.
 
@@ -107,7 +107,7 @@ Tres aspectos del texto son pertinentes para la accesibilidad:
 
 * Las herramientas deben determinar si se debe leer el texto como parte de un recorrido de secuencia de tabulación o solo como una representación general del documento. Para ayudar a determinar este aspecto, puedes elegir el elemento adecuado para mostrar el texto o ajustar las propiedades de esos elementos de texto. Cada elemento de texto disponible tiene un propósito específico que, a su vez, suele tener un rol de automatización de la interfaz de usuario correspondiente. Si se usa el elemento incorrecto, es posible que se notifique el rol incorrecto a la automatización de la interfaz de usuario y que se genere confusión en la experiencia de un usuario de tecnología de asistencia.
 * Muchos usuarios tienen problemas de vista que les dificulta la lectura de texto, a menos de que tenga el contraste adecuado con respecto al color de fondo. La manera en que esto afecta al usuario no es algo que los diseñadores de aplicaciones que no padecen esos problemas de vista puedan reconocer de manera intuitiva. Por ejemplo, una mala elección del color en el diseño puede generar que algunos usuarios daltónicos no puedan leer el texto. Las recomendaciones de accesibilidad que se realizaron originalmente para contenido web definen las normas sobre contraste que permiten evitar estos problemas también en las aplicaciones. Para más información, consulta [Requisitos para texto accesible](accessible-text-requirements.md).
-* Muchos usuarios tienen dificultades en leer texto que es demasiado pequeño. En primer lugar, puedes evitar este problema si creas un tamaño de texto lo suficientemente grande para la interfaz de usuario de la aplicación. Pero eso resulta complicado en las aplicaciones que muestran grandes cantidades de texto o texto intercalado con otros elementos visuales. En estos casos, asegúrate de que la aplicación interactúe correctamente con las funciones del sistema que pueden aumentar el tamaño de la pantalla para que el texto de las aplicaciones aumente de tamaño con estas. (Algunos usuarios cambian los valores de ppp como opción de accesibilidad. Esta opción está disponible desde **Aumentar el tamaño de los objetos en pantalla**, en la sección **Accesibilidad**, que redirige a la interfaz de usuario del **Panel de control**, que incluye **Apariencia y personalización** / **Pantalla**).
+* Muchos usuarios tienen dificultades en leer texto que es demasiado pequeño. En primer lugar, puedes evitar este problema si creas un tamaño de texto lo suficientemente grande para la interfaz de usuario de la aplicación. Pero eso resulta complicado en las aplicaciones que muestran grandes cantidades de texto o texto intercalado con otros elementos visuales. En estos casos, asegúrate de que la aplicación interactúe correctamente con las funciones del sistema que pueden aumentar el tamaño de la pantalla para que el texto de las aplicaciones aumente de tamaño con estas. (Algunos usuarios cambian los valores de ppp como opción de accesibilidad. Esta opción está disponible desde **Aumentar el tamaño de los objetos en pantalla** , en la sección **Accesibilidad** , que redirige a la interfaz de usuario del **Panel de control** , que incluye **Apariencia y personalización** / **Pantalla** ).
 
 <span id="Supporting_high-contrast_themes"/>
 <span id="supporting_high-contrast_themes"/>

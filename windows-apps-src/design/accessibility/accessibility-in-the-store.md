@@ -1,5 +1,5 @@
 ---
-Description: Describe los requisitos para declarar la aplicación de Windows como accesible en el Microsoft Store.
+description: Describe los requisitos para declarar la aplicación de Windows como accesible en el Microsoft Store.
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
 title: Accesibilidad en la Tienda
 label: Accessibility in the Store
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b554adbcc074112604b8713409ee4d05e21dcc0f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 4a46f757629489250ed417a9a67488cba7ec7240
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216458"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032708"
 ---
 # <a name="accessibility-in-the-store"></a>Accesibilidad en la Tienda  
 

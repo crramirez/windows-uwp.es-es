@@ -1,17 +1,17 @@
 ---
-Description: Aprenda a promocionar sus aplicaciones y contenido en el Microsoft Store. En estas directrices se describe cómo usar los recursos que tienes a tu disposición y se incluyen recomendaciones para promocionar tus aplicaciones en publicidad impresa, digital, en televisión y en las redes sociales.
+description: Aprenda a promocionar sus aplicaciones y contenido en el Microsoft Store. En estas directrices se describe cómo usar los recursos que tienes a tu disposición y se incluyen recomendaciones para promocionar tus aplicaciones en publicidad impresa, digital, en televisión y en las redes sociales.
 title: Directrices de marketing de Microsoft Store para aplicaciones
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 64da05c3c3caed204e33890e88222e9a75be3ae0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 753b60cf3da6400d3df695c2f390c0b47c7a9e68
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162059"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033968"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Directrices de marketing de Microsoft Store para aplicaciones
 
@@ -37,7 +37,7 @@ También puedes descargar el conjunto completo de imágenes de distintivos (en f
 
 Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se ejecuta en un dispositivo Windows. Tenemos una variedad de imágenes de chasis de dispositivo entre las que puede elegir, como teléfonos, tabletas, equipos portátiles y PC. Los procedimientos recomendados y las especificaciones técnicas para usar estas imágenes se pueden encontrar en el [Microsoft Store directrices de marketing](https://download.microsoft.com/download/0/7/D/07DF43D4-B1A8-4D38-BC02-4903BB36CEE8/Microsoft_Store_Badge_Guidelines.pdf).
 
-[ ![ Botón Descargar](images/downloadbutton.png)](https://download.microsoft.com/download/1/A/5/1A58A23A-1388-4097-B441-A3E8DBC14849/Windows_Store_Device_Art.zip) **Windows Device Art**
+[ ![ Botón Descargar](images/downloadbutton.png)](https://download.microsoft.com/download/1/A/5/1A58A23A-1388-4097-B441-A3E8DBC14849/Windows_Store_Device_Art.zip) **Windows Device Art**
 
 ## <a name="license-to-microsoft-marks"></a>Licencia para las marcas Microsoft
 
@@ -53,6 +53,6 @@ Puede que, para promocionar tu aplicación, quieras mostrar su aspecto cuando se
 
 Microsoft es el único propietario de las Marcas de Microsoft y del fondo de comercio asociado, y el único beneficiario del fondo de comercio asociado con el uso que usted hace de las Marcas de Microsoft. Microsoft puede revocar esta licencia en cualquier momento y a su entera discreción.
 
- 
+ 
 
- 
+ 

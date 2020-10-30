@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo crear notificaciones eficaces y centradas en el usuario que hacen que los usuarios sean productivos y satisfechos.
+description: Obtenga información sobre cómo crear notificaciones eficaces y centradas en el usuario que hacen que los usuarios sean productivos y satisfechos.
 title: Instrucciones para la experiencia del usuario
 label: Toast UX Guidance
 template: detail.hbs
@@ -7,17 +7,17 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, UWP, notificación, colección, grupo, experiencia de usuario, guía de la experiencia del usuario, guía, acción, notificación del sistema, centro de actividades, notificaciones de no interrupción y efectivas, notificaciones no intrusivas, accionables, administrar, organizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9879d052882532e4d47c27c0b636f728293311cf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d6ad253ccfa744864caa8d0229d09ba40d066771
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169179"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033048"
 ---
 # <a name="toast-notification-ux-guidance"></a>Guía de experiencia del usuario de notificación del sistema
 Las notificaciones son una parte necesaria de la vida moderna; ayudan a los usuarios a ser más productivos y a trabajar con aplicaciones y sitios web, así como mantenerse al día con las actualizaciones. Sin embargo, las notificaciones pueden pasar rápidamente de ser útiles a la sobreutilización e intrusivo si no están diseñadas de forma centrada en el usuario. Las notificaciones son un clic con el botón derecho fuera de la desactivación y es improbable que una vez desactivadas, se vuelvan a activar.  Por lo tanto, asegúrese de que las notificaciones son respetuosas con el espacio de pantalla y el tiempo del usuario, de modo que pueda mantener este canal de Engagement abierto.
 
-> **API importantes**: [paquete Nuget de notificaciones de Windows Community Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **API importantes** : [paquete Nuget de notificaciones de Windows Community Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 Hemos analizado la telemetría de Windows, así como otros casos prácticos de terceros y de terceros, para presentar cuatro reglas sobre lo que crea una excelente historia de notificaciones.  Estamos seguros de que estas reglas se aplican universalmente, independientemente de la plataforma, y ayudarán a las notificaciones a tener un impacto positivo en los usuarios.
 

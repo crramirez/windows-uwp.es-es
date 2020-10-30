@@ -1,17 +1,17 @@
 ---
-Description: La sección de listas de tiendas del proceso de envío de aplicaciones es donde se proporcionan el texto y las imágenes que verán los clientes al ver la lista de la aplicación en el Microsoft Store.
+description: La sección de listas de tiendas del proceso de envío de aplicaciones es donde se proporcionan el texto y las imágenes que verán los clientes al ver la lista de la aplicación en el Microsoft Store.
 title: Creación de descripciones de la Tienda de aplicaciones
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.date: 03/13/2019
 ms.topic: article
 keywords: Windows 10, UWP, lista, descripción, página de la tienda, notas de la versión, título
 ms.localizationpriority: medium
-ms.openlocfilehash: 6124ea17d8c1c348e9093882df901c829f2cd90e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: cb895dcabcc72361575f2d160b10fade03905d9a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164199"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033298"
 ---
 # <a name="create-app-store-listings"></a>Creación de descripciones de la Tienda de aplicaciones
 
@@ -31,9 +31,9 @@ Debes completar la página **Descripción de la Tienda** para al menos un idioma
 > [!NOTE]
 > Si el envío incluye paquetes ya, se mostrarán los [idiomas](supported-languages.md) admitidos en los paquetes en la página de información general del envío (a menos que quite cualquiera de ellos).
 
-Para agregar o quitar idiomas de las listas de tiendas, haga clic en **Agregar o quitar idiomas** en la página de información general del envío. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes**. Para quitar uno o más de estos idiomas, haz clic en **Quitar**. Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar**.
+Para agregar o quitar idiomas de las listas de tiendas, haga clic en **Agregar o quitar idiomas** en la página de información general del envío. Si ya has cargado paquetes, verás los idiomas enumerados en la sección **Idiomas admitidos por los paquetes** . Para quitar uno o más de estos idiomas, haz clic en **Quitar** . Si más adelante decides incluir un idioma que anteriormente eliminaste de esta sección, puedes hacer clic en **Agregar** .
 
-En la sección **Idiomas de descripción de la Tienda adicionales**, puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Tienda**. Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
+En la sección **Idiomas de descripción de la Tienda adicionales** , puedes hacer clic en **Administrar idiomas adicionales** para agregar o quitar idiomas que *no* están incluidos en los paquetes. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar** . Los idiomas que has seleccionado se mostrarán en la sección **Idiomas adicionales de descripción de la Tienda** . Para quitar uno o más de estos idiomas, haz clic en **Quitar** (o haz clic en **Administrar idiomas adicionales** y desactiva la casilla para los idiomas que quieres quitar).
 
 Cuando hayas terminado de realizar las selecciones, haz clic en **Guardar** para volver a la página de información general del envío.
 
@@ -54,7 +54,7 @@ Si no ha cargado los paquetes para el idioma en el que está trabajando y ha res
 > [!NOTE]
 > El **nombre de producto** que seleccione solo se aplicará a la lista de tiendas en el idioma en el que esté trabajando. No afecta al nombre mostrado cuando un cliente instala la aplicación; ese nombre procede del manifiesto del paquete que se instala. Para evitar confusiones, se recomienda que los paquetes y la lista de almacenes de cada idioma usen el mismo nombre.
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>Description
 
 El campo de descripción es donde puedes indicar a los clientes qué hace la aplicación. Este campo es necesario y acepta hasta 10 000 caracteres de texto sin formato.
 
@@ -64,11 +64,11 @@ Para obtener consejos para que la descripción destaque, consulta [Escribir una 
 
 ## <a name="whats-new-in-this-version"></a>Novedades de esta versión
 
-Si es la primera vez que envía la aplicación, deje este campo en blanco. Para una actualización de una aplicación existente, aquí es donde puede permitir que los clientes sepan qué ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres. (Anteriormente, este campo se llamaba **notas**de la versión).
+Si es la primera vez que envía la aplicación, deje este campo en blanco. Para una actualización de una aplicación existente, aquí es donde puede permitir que los clientes sepan qué ha cambiado en la versión más reciente. Este campo tiene un límite de 1500 caracteres. (Anteriormente, este campo se llamaba **notas** de la versión).
 
 ## <a name="product-features"></a>Características del producto
 
-Se trata de resúmenes de las funciones clave de la aplicación. Se muestran al cliente como una lista con viñetas en la sección **características** de la lista de la tienda de la aplicación, además de la **Descripción**. Hazlas breves, con unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
+Se trata de resúmenes de las funciones clave de la aplicación. Se muestran al cliente como una lista con viñetas en la sección **características** de la lista de la tienda de la aplicación, además de la **Descripción** . Hazlas breves, con unas cuantas palabras por función (y no más de 200 caracteres). Puedes incluir hasta 20 funciones.
 
 > [!NOTE]
 > Estas características aparecerán con viñetas en la lista de la tienda, por lo que no agregue sus propias viñetas.
@@ -130,7 +130,7 @@ Para obtener los mejores resultados, mantenga su breve descripción en 270 carac
 
 Si es necesario, puedes describir las configuraciones de hardware que requiere tu aplicación para funcionar correctamente (más allá de la información que proporcionaste en la sección **Requisitos del sistema** en las [Propiedades de la aplicación](enter-app-properties.md#system-requirements). Esto es especialmente importante, si la aplicación requiere hardware que quizás no esté disponible en todos los equipos. Por ejemplo, si la aplicación solo funcionará correctamente con hardware USB externo, como una impresora 3D o un microcontrolador, se recomienda escribirlos aquí. La información que escriba se mostrará a los clientes que vean la lista de tiendas de la aplicación en Windows 10, versión 1607 o posterior (incluida Xbox), junto con los requisitos indicados en la página de propiedades del producto.
 
-Puedes escribir hasta 11 elementos para **Hardware mínimo** y **Hardware recomendado**. Estos se muestran al cliente como una lista con viñetas en la lista de la tienda. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres).
+Puedes escribir hasta 11 elementos para **Hardware mínimo** y **Hardware recomendado** . Estos se muestran al cliente como una lista con viñetas en la lista de la tienda. Hazlas breves, con unas cuantas palabras por elemento (y no más de 200 caracteres).
 
 > [!NOTE]
 > Los requisitos del sistema adicionales aparecerán con viñetas en la lista de la tienda, por lo que no agregue sus propias viñetas.
@@ -139,7 +139,7 @@ Puedes escribir hasta 11 elementos para **Hardware mínimo** y **Hardware recome
 
 ## <a name="additional-information"></a>Información adicional
 
-Los elementos que se describen a continuación ayudan a los clientes a detectar y comprender el producto. (Esta sección se llamaba anteriormente **campos compartidos**).
+Los elementos que se describen a continuación ayudan a los clientes a detectar y comprender el producto. (Esta sección se llamaba anteriormente **campos compartidos** ).
 
 ### <a name="search-terms"></a>Términos de búsqueda
 
@@ -155,7 +155,7 @@ Si quieres proporcionar información adicional de copyright o marcas comerciales
 
 Deja este campo en blanco si quieres que la aplicación se licencie a los clientes en virtud de los términos establecidos en los **Términos de licencia de aplicaciones estándar** (a los que se vincula desde el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement)).
 
-Si los términos de licencia son diferentes a los **Términos de licencia de aplicaciones estándar**, escríbelos aquí.
+Si los términos de licencia son diferentes a los **Términos de licencia de aplicaciones estándar** , escríbelos aquí.
 
 Si escribes una sola dirección URL en este campo, se mostrará a los clientes como un vínculo en el que pueden hacer clic para leer los términos de licencia adicionales. Esto es útil si los términos de licencia adicionales son muy largos, o si quieres incluir vínculos en los que se puede hacer clic o dar formato a los términos de licencia adicionales.
 
@@ -170,4 +170,4 @@ Este campo tiene un límite de 255 caracteres.
 <a name="privacy-policy"></a>
 
 > [!NOTE]
-> Los **campos Directiva de privacidad**, **sitio web**y **información de contacto de soporte técnico** se encuentran ahora en la página de [propiedades](enter-app-properties.md) .
+> Los **campos Directiva de privacidad** , **sitio web** y **información de contacto de soporte técnico** se encuentran ahora en la página de [propiedades](enter-app-properties.md) .

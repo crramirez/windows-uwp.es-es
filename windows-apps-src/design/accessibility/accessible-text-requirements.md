@@ -1,5 +1,5 @@
 ---
-Description: En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria.
+description: En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria.
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
 title: Requisitos de texto accesible
 label: Accessible text requirements
@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3294daa57cc7d1eb585e41910f72f574d9ffb600
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: aefc53f6d28d2c30566680ac985a4712040ea8e0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163389"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032618"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto accesible  
 
@@ -28,7 +28,7 @@ En este tema se describen los procedimientos recomendados sobre accesibilidad de
 ## <a name="contrast-ratios"></a>Relaciones de contraste  
 Aunque los usuarios siempre tienen la opción de cambiar a un modo de contraste alto, el diseño de la aplicación para el texto debe considerar esa opción como último recurso. Un procedimiento mucho más recomendable es asegurarse de que el texto de la aplicación cumpla con ciertos criterios establecidos para el nivel de contraste entre el texto y su fondo. La evaluación del nivel de contraste se basa en técnicas deterministas que no tienen en cuenta el matiz del color. Por ejemplo, si hay texto rojo sobre un fondo verde, es posible que un usuario daltónico no pueda leer el texto. Si se comprueba y corrige la relación de contraste, se puede evitar este tipo de problemas de accesibilidad.
 
-Las recomendaciones de contraste de texto aquí documentadas se basan en un estándar de accesibilidad web, [G18: asegurarse de que exista una relación de contraste de al menos 4.5:1 entre el texto (e imágenes de texto) y el fondo que se encuentra detrás de él](https://www.w3.org/TR/WCAG20-TECHS/G18.html). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
+Las recomendaciones de contraste de texto aquí documentadas se basan en un estándar de accesibilidad web, [G18: asegurarse de que exista una relación de contraste de al menos 4.5:1 entre el texto (e imágenes de texto) y el fondo que se encuentra detrás de él](https://www.w3.org/TR/WCAG20-TECHS/G18.html). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0* .
 
 Para considerarse accesible, el texto visible debe tener una relación de contraste de luminosidad mínima de 4.5:1 si se lo compara con el fondo. Algunas excepciones son los logotipos y el texto ocasional, como el texto que forma parte de un componente inactivo de la interfaz de usuario.
 
@@ -44,7 +44,7 @@ Usa herramientas de contraste de color para comprobar que la relación de contra
 <span id="TEXT_ELEMENT_ROLES"/>
 
 ## <a name="text-element-roles"></a>Roles de elementos de texto  
-Una aplicación para UWP puede usar estos elementos predeterminados (comúnmente denominados *elementos de texto* o *controles de textedit*):
+Una aplicación para UWP puede usar estos elementos predeterminados (comúnmente denominados *elementos de texto* o *controles de textedit* ):
 
 * [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock): El rol es [**Text**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType).
 * [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox): El rol es [**Edit**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType).
@@ -83,7 +83,7 @@ Para que esta experiencia sea accesible, el campo de entrada y la lista deben as
 En un nivel alto, existen 2 tipos de experiencias de sugerencias automáticas.
 
 **Selección predeterminada**  
-Si se realiza una selección predeterminada en la lista, Narrador busca un evento [**UIA_SelectionItem_ElementSelectedEventId**](/windows/desktop/WinAuto/uiauto-event-ids) en una aplicación de escritorio o que se genere el evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) en una aplicación para UWP. Cada vez que cambia la selección, cuando el usuario escribe otra letra y las sugerencias se actualizan o cuando un usuario navega por la lista, debería activarse el evento **ElementSelected**.
+Si se realiza una selección predeterminada en la lista, Narrador busca un evento [**UIA_SelectionItem_ElementSelectedEventId**](/windows/desktop/WinAuto/uiauto-event-ids) en una aplicación de escritorio o que se genere el evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) en una aplicación para UWP. Cada vez que cambia la selección, cuando el usuario escribe otra letra y las sugerencias se actualizan o cuando un usuario navega por la lista, debería activarse el evento **ElementSelected** .
 
 ![Lista con una selección predeterminada](images/autosuggest-default-selection.png)<br/>
 _Ejemplo en el que existe una selección predeterminada_
@@ -95,7 +95,7 @@ Si no hay ninguna selección predeterminada, como en el cuadro de ubicación de 
 _Ejemplo en el que no existe ninguna selección predeterminada_
 
 ### <a name="xaml-implementation"></a>Implementación de XAML  
-Si se utiliza la clase XAML [**AutosuggestBox**](/uwp/api/windows.ui.xaml.controls.autosuggestbox) predeterminada, todo está ya enlazado de forma automática. Si vas a crear tu propia experiencia de sugerencias automáticas con una clase [**TextBox**](/uwp/api/windows.ui.xaml.controls.textbox) y una lista, tendrás que establecer la lista como [**AutomationProperties.ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) en la clase **TextBox**. Debes activar el evento **AutomationPropertyChanged** para la propiedad [**ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) cada vez que agregues o quites esta propiedad y también activar tus propios eventos [**SelectionItemPatternOnElementSelected**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) o [**LayoutInvalidated**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) según el tipo de escenario, algo que se explica anteriormente en este mismo artículo.
+Si se utiliza la clase XAML [**AutosuggestBox**](/uwp/api/windows.ui.xaml.controls.autosuggestbox) predeterminada, todo está ya enlazado de forma automática. Si vas a crear tu propia experiencia de sugerencias automáticas con una clase [**TextBox**](/uwp/api/windows.ui.xaml.controls.textbox) y una lista, tendrás que establecer la lista como [**AutomationProperties.ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) en la clase **TextBox** . Debes activar el evento **AutomationPropertyChanged** para la propiedad [**ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) cada vez que agregues o quites esta propiedad y también activar tus propios eventos [**SelectionItemPatternOnElementSelected**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) o [**LayoutInvalidated**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) según el tipo de escenario, algo que se explica anteriormente en este mismo artículo.
 
 ### <a name="html-implementation"></a>Implementación de HTML  
 Si usas los controles intrínsecos de HTML, la implementación de UIA ya se habrá asignado automáticamente. A continuación hay un ejemplo de una implementación que ya está enlazada automáticamente:
@@ -126,19 +126,19 @@ Siempre que sea posible, evita incluir texto en un gráfico. Por ejemplo, las te
 
 Los usuarios pueden tener dificultades para leer texto en una aplicación cuando los usos de las fuentes son simplemente demasiado pequeños, por lo que debe asegurarse de que todo el texto de la aplicación tenga un tamaño razonable en primer lugar.
 
-Una vez que haya hecho lo obvio, Windows incluye varias herramientas de accesibilidad y configuraciones en las que los usuarios pueden aprovechar las ventajas y adaptarse a sus propias necesidades y preferencias para leer texto. Entre ellas se incluyen las siguientes:
+Una vez que haya hecho lo obvio, Windows incluye varias herramientas de accesibilidad y configuraciones en las que los usuarios pueden aprovechar las ventajas y adaptarse a sus propias necesidades y preferencias para leer texto. Se incluyen los siguientes:
 
 * La herramienta ampliador, que amplía un área seleccionada de la interfaz de usuario. Debe asegurarse de que el diseño de texto de la aplicación no dificulta el uso de la lupa para la lectura.
-* Configuración de escala y resolución global en **configuración->>de pantalla->de la escala y el diseño**. Exactamente las opciones de ajuste de tamaño disponibles pueden variar, ya que depende de las capacidades del dispositivo de pantalla.
-* Configuración de tamaño de texto en **Configuración: >la facilidad de acceso >pantalla**. Ajuste la configuración de **hacer que el texto sea más grande** para especificar solo el tamaño del texto en los controles auxiliares en todas las aplicaciones y pantallas (todos los controles de texto de UWP admiten la experiencia de escalado de texto sin ninguna personalización o plantilla). 
+* Configuración de escala y resolución global en **configuración->>de pantalla->de la escala y el diseño** . Exactamente las opciones de ajuste de tamaño disponibles pueden variar, ya que depende de las capacidades del dispositivo de pantalla.
+* Configuración de tamaño de texto en **Configuración: >la facilidad de acceso >pantalla** . Ajuste la configuración de **hacer que el texto sea más grande** para especificar solo el tamaño del texto en los controles auxiliares en todas las aplicaciones y pantallas (todos los controles de texto de UWP admiten la experiencia de escalado de texto sin ninguna personalización o plantilla). 
 > [!NOTE]
 > La configuración **hacer todo es mayor permite que** un usuario especifique su tamaño preferido para el texto y las aplicaciones en general solo en su pantalla principal.
 
-Varios controles y elementos de texto tienen una propiedad [**IsTextScaleFactorEnabled**](/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Esta propiedad tiene el valor **true** de forma predeterminada. Si **es true**, se puede escalar el tamaño del texto en ese elemento. El ajuste de escala afecta al texto que tiene una pequeña **FontSize** en un grado mayor que el texto que tiene una gran **FontSize**. Puede deshabilitar el cambio de tamaño automático Si establece la propiedad **IsTextScaleFactorEnabled** de un elemento en **false**. 
+Varios controles y elementos de texto tienen una propiedad [**IsTextScaleFactorEnabled**](/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled). Esta propiedad tiene el valor **true** de forma predeterminada. Si **es true** , se puede escalar el tamaño del texto en ese elemento. El ajuste de escala afecta al texto que tiene una pequeña **FontSize** en un grado mayor que el texto que tiene una gran **FontSize** . Puede deshabilitar el cambio de tamaño automático Si establece la propiedad **IsTextScaleFactorEnabled** de un elemento en **false** . 
 
 Vea [escalado de texto](../input/text-scaling.md) para obtener más detalles.
 
-Agregue el marcado siguiente a una aplicación y ejecútelo. Ajuste la configuración de **tamaño de texto** y vea lo que sucede con cada **TextBlock**.
+Agregue el marcado siguiente a una aplicación y ejecútelo. Ajuste la configuración de **tamaño de texto** y vea lo que sucede con cada **TextBlock** .
 
 XAML
 ```xml
@@ -171,7 +171,7 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 
 El valor de **TextScaleFactor** es un valor Double en el intervalo de \[ 1 a 2,25 \] . El texto más pequeño se aumenta según esta cantidad. El valor se podría usar para, por ejemplo, escalar elementos gráficos para que vayan a tono con el texto. Recuerda, de todas formas, que no todo el texto escala mediante el mismo factor. En términos generales, el texto más grande es el que menos se ve afectado por el ajuste de escala.
 
-Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:  
+Estos tipos tienen una propiedad **IsTextScaleFactorEnabled** :  
 * [**ContentPresenter**](/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter)
 * [**Control**](/uwp/api/Windows.UI.Xaml.Controls.Control) y clases derivadas
 * [**FontIcon**](/uwp/api/Windows.UI.Xaml.Controls.FontIcon)

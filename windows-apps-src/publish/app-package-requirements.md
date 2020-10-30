@@ -1,17 +1,17 @@
 ---
-Description: Siga estas instrucciones para preparar los paquetes de la aplicación para su envío a la Microsoft Store.
+description: Siga estas instrucciones para preparar los paquetes de la aplicación para su envío a la Microsoft Store.
 title: Requisitos del paquete de la aplicación
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, requisitos de paquete, paquetes, formato de paquete, versión admitida, enviar
 ms.localizationpriority: medium
-ms.openlocfilehash: 848adbab20765a65ef4673219c55dfbf076e47e0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 464714388f9e998bace3af45c580f2a4a7638b27
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219778"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034398"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -26,7 +26,7 @@ Asegúrate de [probar tu aplicación con el Kit para la certificación de aplica
 Si usas Microsoft Visual Studio como entorno de desarrollo, ya cuentas con herramientas integradas que te ayudarán a crear un paquete de la aplicación de manera rápida y sencilla. Para más información, consulta [Empaquetado de aplicaciones](../packaging/index.md).
 
 > [!NOTE]
-> Asegúrese de que todos los nombres de archivo usan ANSI. 
+> Asegúrese de que todos los nombres de archivo usan ANSI. 
 
 Cuando crees el paquete en Visual Studio, asegúrate de iniciar sesión con la misma cuenta asociada con tu cuenta de desarrollador. Algunas partes del manifiesto del paquete tienen detalles específicos relacionados con tu cuenta. Esta información se detecta y se agrega automáticamente. Sin la información adicional agregada al manifiesto, pueden producirse errores de carga de paquetes. 
 
@@ -40,7 +40,7 @@ No es necesario que los paquetes de la aplicación estén firmados con un certif
 En el caso de las aplicaciones UWP, Visual Studio puede generar un lote de aplicaciones (. msixbundle o. appxbundle) para reducir el tamaño de la aplicación que descargan los usuarios. Esto puede ser útil si definiste recursos específicos por idioma, una variedad de recursos de escala de imagen o recursos que se apliquen a versiones específicas de Microsoft DirectX.
 
 > [!NOTE]
-> Un grupo de aplicaciones puede contener los paquetes para todas las arquitecturas.
+> Un grupo de aplicaciones puede contener los paquetes para todas las arquitecturas.
 
 Con un lote de la aplicación, un usuario solo descargará los archivos relevantes, en vez de todos los recursos posibles. Para obtener más información sobre los grupos de aplicaciones, consulte [empaquetar aplicaciones](../packaging/index.md) y [empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps).
 
@@ -54,13 +54,13 @@ Asegúrate de revisar la documentación del [manifiesto del paquete de la aplica
 El manifiesto debe incluir información específica sobre tu cuenta y tu aplicación. Puedes encontrar esta información en [Ver detalles de identidad de la aplicación](view-app-identity-details.md) en la sección **Administración de aplicaciones** de la página de introducción a la aplicación en el panel.
 
 > [!NOTE]
-> Los valores del manifiesto distinguen mayúsculas de minúsculas. También deben coincidir los espacios y otras puntuaciones. Escribe los valores cuidadosamente y revísalos para asegurarte de que son correctos.
+> Los valores del manifiesto distinguen mayúsculas de minúsculas. También deben coincidir los espacios y otras puntuaciones. Escribe los valores cuidadosamente y revísalos para asegurarte de que son correctos.
 
 
 Los paquetes de aplicaciones (. msixbundle o. appxbundle) usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de aplicaciones. Tenga en cuenta que en un. msixbundle o. appxbundle, el manifiesto de cada paquete incluido debe utilizar los mismos elementos y atributos, excepto el atributo **processorArchitecture** del elemento [Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
-> Asegúrese de ejecutar el [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar los paquetes. Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.
+> Asegúrese de ejecutar el [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar los paquetes. Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.
 
 
 ## <a name="package-format-requirements"></a>Requisitos de formato del paquete
@@ -88,6 +88,6 @@ Las versiones admitidas actualmente son de:
 
 StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su finalidad es habilitar características, como la declaración de la aplicación como Microsoft Store aplicación de dispositivo o la declaración de requisitos que un paquete depende de que se aplique a un dispositivo, que el manifiesto del paquete no cubre. Si se usa, StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
- 
+ 
 
- 
+ 

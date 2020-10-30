@@ -1,16 +1,16 @@
 ---
-Description: Windows Inserte Notification Services (WNS) permite a los desarrolladores de terceros enviar notificaciones del sistema, iconos, distintivos y sin formato desde su propio servicio en la nube. Hay muchas maneras de enviar las notificaciones en función de las necesidades de la aplicación.
+description: Windows Inserte Notification Services (WNS) permite a los desarrolladores de terceros enviar notificaciones del sistema, iconos, distintivos y sin formato desde su propio servicio en la nube. Hay muchas maneras de enviar las notificaciones en función de las necesidades de la aplicación.
 title: Elegir el tipo adecuado de canal de notificación de inserción
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 326012a38f2d4a8cd7d5c406c160db5168c9877d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 31cf9246276920638db113f27d83ab9969cdecc6
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219228"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034088"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Elegir el tipo adecuado de canal de notificación de inserción
 
@@ -121,12 +121,12 @@ A continuación se muestra una comparación rápida entre los distintos tipos de
 
 <tr class="odd">
 <td align="left">Principal</td>
-<td align="left">Sí</td>
+<td align="left">Yes</td>
 <td align="left">Sí: solo icono principal</td>
-<td align="left">Sí</td>
+<td align="left">Yes</td>
 <td align="left">OAuth</td>
 <td align="left">API DE REST DE WNS</td>
-<td align="left">Sí</td>
+<td align="left">Yes</td>
 <td align="left">Una por aplicación</td>
 <td align="left">En tránsito</td>
 </tr>
@@ -137,7 +137,7 @@ A continuación se muestra una comparación rápida entre los distintos tipos de
 <td align="left">No</td>
 <td align="left">OAuth</td>
 <td align="left">API DE REST DE WNS</td>
-<td align="left">Sí</td>
+<td align="left">Yes</td>
 <td align="left">Uno por icono secundario</td>
 <td align="left">En tránsito</td>
 </tr>

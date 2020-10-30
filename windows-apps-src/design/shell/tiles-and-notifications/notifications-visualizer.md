@@ -1,5 +1,5 @@
 ---
-Description: Notifications Visualizer es una nueva aplicación de Windows que se puede encontrar en Store y que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
+description: Notifications Visualizer es una nueva aplicación de Windows que se puede encontrar en Store y que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables para Windows 10.
 title: Visualizador de notificaciones
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b50dc41a52d478afc9ed2fc9cf94d94dedb18ef4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 55ab7e22dc011555a8d98fd863b7dd9ff67de5fa
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219928"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033678"
 ---
 # <a name="notifications-visualizer"></a>Visualizador de notificaciones
 
@@ -22,7 +22,7 @@ ms.locfileid: "91219928"
 El visualizador de notificaciones es una nueva aplicación de Windows del [almacén](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) que ayuda a los desarrolladores a diseñar iconos dinámicos adaptables y notificaciones del sistema interactivas para Windows 10.
 
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 El visualizador de notificaciones proporciona vistas previas visuales instantáneas de la notificación del icono y del sistema a medida que edita la carga XML, de forma similar a la vista de diseño o editor XAML de Visual Studio. La aplicación también comprueba los errores, lo que garantiza que se crea una carga válida de la notificación del sistema o del icono.
 
@@ -30,13 +30,13 @@ Esta captura de pantalla de la aplicación muestra la carga de XML y cómo apare
 
 ![captura de pantalla del editor de la aplicación Notifications Visualizer con código e iconos](images/notif-visualizer-001.png)
 
- 
+ 
 
 Con el visualizador de notificaciones, puede crear y probar cargas adaptables de iconos y notificaciones del sistema sin tener que editar e implementar su propia aplicación. Una vez que haya creado una carga con los resultados visuales ideales, puede integrarlo en la aplicación. Consulte [envío de una notificación de icono local](sending-a-local-tile-notification.md) y [envío de un sistema local](send-local-toast.md) para obtener más información.
 
-**Nota:**    La simulación del visualizador de notificaciones del menú Inicio de Windows y las notificaciones del sistema no siempre es totalmente precisa y no admite algunas propiedades avanzadas de carga útil. Cuando tenga el icono o la notificación del sistema que quiera, pruébelo anclando el icono o sacando la notificación del sistema para comprobar que aparece según lo previsto.
+**Nota:**   La simulación del visualizador de notificaciones del menú Inicio de Windows y las notificaciones del sistema no siempre es totalmente precisa y no admite algunas propiedades avanzadas de carga útil. Cuando tenga el icono o la notificación del sistema que quiera, pruébelo anclando el icono o sacando la notificación del sistema para comprobar que aparece según lo previsto.
 
- 
+ 
 
 ## <a name="features"></a>Características
 
@@ -50,7 +50,7 @@ Esta captura de pantalla de la aplicación muestra el editor de iconos:
 
 ![captura de pantalla del editor de Notifications Visualizer con iconos](images/notif-visualizer-004.png)
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -1,27 +1,27 @@
 ---
-Description: En el siguiente artículo se describen todas las propiedades y elementos dentro del contenido de la ventana.
+description: En el siguiente artículo se describen todas las propiedades y los elementos del contenido del mosaico.
 title: Esquema de contenido de icono
 ms.assetid: 7CBC3BD5-D9C3-4781-8BD0-1F28039E1FA8
 label: Tile content schema
 template: detail.hbs
 ms.date: 07/28/2017
 ms.topic: article
-keywords: windows 10, uwp, ventana, notificación de ventana, contenido de ventana, esquema, carga de ventana
+keywords: Windows 10, UWP, icono, notificación de icono, contenido de mosaico, esquema, carga de iconos
 ms.localizationpriority: medium
-ms.openlocfilehash: eaf4583be8fdc5f0a70dddb7261b9b2d6d6afc09
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 4d1953e6d745a41c3bdd85d5f4dd3c6c9df8b900
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684197"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034418"
 ---
 # <a name="tile-content-schema"></a>Esquema de contenido de icono
 
  
 
-En el siguiente artículo se describen todas las propiedades y elementos dentro del contenido de la ventana.
+A continuación se describen todas las propiedades y los elementos del contenido del mosaico.
 
-Si prefieres utilizar XML sin formato en lugar de la [Biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), consulta [el esquema XML](../tiles-and-notifications/adaptive-tiles-schema.md).
+Si prefiere usar XML sin formato en lugar de la [biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), consulte [el esquema XML](../tiles-and-notifications/adaptive-tiles-schema.md).
 
 [TileContent](#tilecontent)
 * [TileVisual](#tilevisual)
@@ -34,49 +34,49 @@ Si prefieres utilizar XML sin formato en lugar de la [Biblioteca Notificaciones]
 
 
 ## <a name="tilecontent"></a>TileContent
-TileContent es el objeto de nivel superior que describe el contenido de una ventana, incluidos los elementos visuales.
+TileContent es el objeto de nivel superior que describe el contenido de una notificación de icono, incluidos los objetos visuales.
 
-| Propiedad | Escribe | Necesario | Descripción |
+| Propiedad | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **Visual** | [ToastVisual](#tilevisual) | true | Describe la parte visual de la notificación de la ventana. |
+| **Visual** | [ToastVisual](#tilevisual) | true | Describe la parte visual de la notificación de icono. |
 
 
 ## <a name="tilevisual"></a>TileVisual
-La parte visual de las ventanas contiene las especificaciones visuales para todos los tamaños de la ventana así como otras propiedades visuales.
+La parte visual de los mosaicos contiene las especificaciones visuales para todos los tamaños de mosaico y más propiedades relacionadas con visual.
 
-| Propiedad | Escribe | Necesario | Descripción |
+| Propiedad | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **TileSmall** | [TileBinding](#tilebinding) | falso | Proporciona un pequeño enlace opcional para especificar contenido del tamaño pequeño de la ventana. |
-| **TileMedium** | [TileBinding](#tilebinding) | falso | Proporciona un enlace opcional mediano para especificar contenido del tamaño mediano de la ventana. |
-| **TileWide** | [TileBinding](#tilebinding) | falso | Proporciona un enlace ancho opcional para especificar contenido del tamaño ancho de la ventana. |
-| **TileLarge** | [TileBinding](#tilebinding) | falso | Proporciona un enlace grande opcional para especificar contenido del tamaño grande de la ventana. |
-| **Personalización de marca** | TileBranding | falso | La forma en la que debe usarse la ventana para mostrar la marca de la aplicación. De manera predeterminada, hereda la personalización de marca de la ventana predeterminada. |
-| **DisplayName** | cadena | falso | Una cadena opcional para invalidar el nombre para mostrar de la ventana cuando se muestre esta notificación. |
-| **Argumentos** | cadena | falso | Novedad en la actualización de aniversario: datos definidos por la aplicación que se devuelven a tu aplicación a través de la propiedad TileActivatedInfo en LaunchActivatedEventArgs cuando el usuario inicia tu aplicación desde el Icono dinámico. Esto te permite saber las notificaciones de ventana que el usuario vio cuando pulsó tu Icono dinámico. En los dispositivos sin la actualización de aniversario, simplemente se omitirá. |
-| **LockDetailedStatus1** | cadena | falso | Si se especifica, también debes proporcionar un enlace de TileWide. Se trata de la primera línea de texto que se mostrará en la pantalla de bloqueo, si el usuario ha seleccionado tu ventana como la aplicación de estado detallada. |
-| **LockDetailedStatus2** | cadena | falso | Si se especifica, también debes proporcionar un enlace de TileWide. Se trata de la segunda línea de texto que se mostrará en la pantalla de bloqueo, si el usuario ha seleccionado tu ventana como la aplicación de estado detallada. |
-| **LockDetailedStatus3** | cadena | falso | Si se especifica, también debes proporcionar un enlace de TileWide. Se trata de la tercera línea de texto que se mostrará en la pantalla de bloqueo, si el usuario ha seleccionado tu ventana como la aplicación de estado detallada. |
-| **BaseUri** | Uri | falso | URL base predeterminada que se combina con direcciones URL relativas en atributos de origen de imagen. |
-| **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
-| **Idioma**| cadena | falso | La configuración regional de destino de la carga visual al usar recursos localizados, especificados como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Esta configuración regional se reemplaza por cualquier configuración regional especificada en el enlace o texto. Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
+| **TileSmall** | [TileBinding](#tilebinding) | false | Proporcione un enlace pequeño opcional para especificar el contenido del tamaño de mosaico pequeño. |
+| **TileMedium** | [TileBinding](#tilebinding) | false | Proporcione un enlace medio opcional para especificar el contenido del tamaño de mosaico medio. |
+| **TileWide** | [TileBinding](#tilebinding) | false | Proporcione un enlace ancho opcional para especificar el contenido del tamaño de mosaico ancho. |
+| **TileLarge** | [TileBinding](#tilebinding) | false | Proporcione un enlace grande opcional para especificar el contenido del tamaño de mosaico grande. |
+| **Personalización de marca** | TileBranding | false | El formulario que el icono debe usar para mostrar la marca de la aplicación. De forma predeterminada, hereda la personalización de marca del mosaico predeterminado. |
+| **DisplayName** | string | false | Una cadena opcional para invalidar el nombre para mostrar del mosaico mientras se muestra esta notificación. |
+| **Argumentos** | string | false | Novedades de la actualización de aniversario: datos definidos por la aplicación que se devuelven a la aplicación a través de la propiedad TileActivatedInfo en LaunchActivatedEventArgs cuando el usuario inicia la aplicación desde el icono dinámico. Esto le permite saber qué notificaciones de icono vio su usuario al puntear en el icono dinámico. En los dispositivos sin la actualización de aniversario, esto simplemente se omitirá. |
+| **LockDetailedStatus1** | string | false | Si especifica esto, también debe proporcionar un enlace TileWide. Esta es la primera línea de texto que se mostrará en la pantalla de bloqueo si el usuario ha seleccionado el icono como su aplicación de estado detallada. |
+| **LockDetailedStatus2** | string | false | Si especifica esto, también debe proporcionar un enlace TileWide. Esta es la segunda línea de texto que se mostrará en la pantalla de bloqueo si el usuario ha seleccionado el icono como su aplicación de estado detallada. |
+| **LockDetailedStatus3** | string | false | Si especifica esto, también debe proporcionar un enlace TileWide. Esta es la tercera línea de texto que se mostrará en la pantalla de bloqueo si el usuario ha seleccionado el icono como su aplicación de estado detallada. |
+| **BaseUri** | Identificador URI | false | Una dirección URL base predeterminada que se combina con las direcciones URL relativas de los atributos de origen de la imagen. |
+| **AddImageQuery** | booleano? | false | Establézcalo en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Utilice este atributo si el servidor hospeda imágenes y puede controlar las cadenas de consulta, ya sea mediante la recuperación de una variante de imagen basada en las cadenas de consulta o mediante la omisión de la cadena de consulta y la devolución de la imagen como se especifica sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png? MS-Scale = 100&MS-Contrast = Standard&MS-lang = en-US" |
+| **Lenguaje**| string | false | La configuración regional de destino de la carga visual cuando se usan recursos localizados, especificada como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Cualquier configuración regional especificada en el enlace o texto invalida esta configuración regional. Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
 
 
 ## <a name="tilebinding"></a>TileBinding
-El objeto de enlace contiene el contenido visual de un tamaño específico de ventana.
+El objeto de enlace contiene el contenido visual para un tamaño de mosaico específico.
 
-| Propiedad | Escribe | Necesario | Descripción |
+| Propiedad | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **Contenido** | [ITileBindingContent](#itilebindingcontent) | falso | El contenido visual para mostrar en la ventana. Uno de [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#tilebindingcontenticonic), [TileBindingContentContact](#tilebindingcontentcontact), [TileBindingContentPeople](#tilebindingcontentpeople), o [TileBindingContentPhotos](#tilebindingcontentphotos). |
-| **Personalización de marca** | TileBranding | falso | La forma en la que debe usarse la ventana para mostrar la marca de la aplicación. De manera predeterminada, hereda la personalización de marca de la ventana predeterminada. |
-| **DisplayName** | cadena | falso | Una cadena opcional para invalidar el nombre para mostrar de la ventana para este tamaño. |
-| **Argumentos** | cadena | falso | Novedad en la actualización de aniversario: datos definidos por la aplicación que se devuelven a tu aplicación a través de la propiedad TileActivatedInfo en LaunchActivatedEventArgs cuando el usuario inicia tu aplicación desde el Icono dinámico. Esto te permite saber las notificaciones de ventana que el usuario vio cuando pulsó tu Icono dinámico. En los dispositivos sin la actualización de aniversario, simplemente se omitirá. |
-| **BaseUri** | Uri | falso | URL base predeterminada que se combina con direcciones URL relativas en atributos de origen de imagen. |
-| **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
-| **Idioma**| cadena | falso | La configuración regional de destino de la carga visual al usar recursos localizados, especificados como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Esta configuración regional se reemplaza por cualquier configuración regional especificada en el enlace o texto. Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
+| **Contenido** | [ITileBindingContent](#itilebindingcontent) | false | Contenido visual que se va a mostrar en el mosaico. Uno de [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#tilebindingcontenticonic), [TileBindingContentContact](#tilebindingcontentcontact), [TileBindingContentPeople](#tilebindingcontentpeople)o [TileBindingContentPhotos](#tilebindingcontentphotos). |
+| **Personalización de marca** | TileBranding | false | El formulario que el icono debe usar para mostrar la marca de la aplicación. De forma predeterminada, hereda la personalización de marca del mosaico predeterminado. |
+| **DisplayName** | string | false | Una cadena opcional para reemplazar el nombre para mostrar del mosaico para este tamaño de mosaico. |
+| **Argumentos** | string | false | Novedades de la actualización de aniversario: datos definidos por la aplicación que se devuelven a la aplicación a través de la propiedad TileActivatedInfo en LaunchActivatedEventArgs cuando el usuario inicia la aplicación desde el icono dinámico. Esto le permite saber qué notificaciones de icono vio su usuario al puntear en el icono dinámico. En los dispositivos sin la actualización de aniversario, esto simplemente se omitirá. |
+| **BaseUri** | Identificador URI | false | Una dirección URL base predeterminada que se combina con las direcciones URL relativas de los atributos de origen de la imagen. |
+| **AddImageQuery** | booleano? | false | Establézcalo en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación del sistema. Utilice este atributo si el servidor hospeda imágenes y puede controlar las cadenas de consulta, ya sea mediante la recuperación de una variante de imagen basada en las cadenas de consulta o mediante la omisión de la cadena de consulta y la devolución de la imagen como se especifica sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png? MS-Scale = 100&MS-Contrast = Standard&MS-lang = en-US" |
+| **Lenguaje**| string | false | La configuración regional de destino de la carga visual cuando se usan recursos localizados, especificada como etiquetas de idioma BCP-47 como "en-US" o "fr-FR". Cualquier configuración regional especificada en el enlace o texto invalida esta configuración regional. Si no se proporciona, se usará la configuración regional del sistema en su lugar. |
 
 
 ## <a name="itilebindingcontent"></a>ITileBindingContent
-La interfaz de marcador para contenido de enlace de la ventana. Estos le permiten elegir dónde quieres especificar los elementos visuales del icono: adaptable, o en una de las plantillas especiales.
+Interfaz de marcador para el contenido de enlace de mosaicos. Estos permiten elegir lo que desea especificar como elementos visuales de icono en adaptable o una de las plantillas especiales.
 
 | Implementaciones |
 | --- |
@@ -88,78 +88,78 @@ La interfaz de marcador para contenido de enlace de la ventana. Estos le permite
 
 
 ## <a name="tilebindingcontentadaptive"></a>TileBindingContentAdaptive
-Compatible con todos los tamaños. Esta es la manera recomendada de especificar el contenido de la ventana. Las plantillas de iconos adaptables es una novedad en Windows 10 y te permite crear una gran variedad de iconos personalizados mediante el diseño adaptable.
+Se admite en todos los tamaños. Esta es la manera recomendada de especificar el contenido del icono. Plantillas de iconos adaptables nuevas en Windows 10, y puede crear una amplia variedad de mosaicos personalizados a través de Adaptive.
 
-| Propiedad | Escribe | Necesario | Descripción |
+| Propiedad | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **Children** | IList<ITileBindingContentAdaptiveChild> | falso | Elementos visuales alineados. Los objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage), y [AdaptiveGroup](#adaptivegroup) pueden agregarse. Los elementos secundarios se muestran en una forma vertical de StackPanel. |
-| **BackgroundImage** | [TileBackgroundImage](#tilebackgroundimage) | falso | Una imagen de fondo opcional que obtiene muestra detrás del contenido de la ventana, sin bordes. |
-| **PeekImage** | [TilePeekImage](#tilepeekimage) | falso | Una animación de imagen que aparezca desde la parte superior de la ventana. |
-| **TextStacking** | [TileTextStacking](#tiletextstacking) | falso | Controla el apilamiento de texto (alineación vertical) del contenido de los elementos secundarios como un todo. |
+| **Children** | IList<ITileBindingContentAdaptiveChild> | false | Elementos visuales insertados. Se pueden agregar objetos [AdaptiveText](#adaptivetext), [AdaptiveImage](#adaptiveimage)y [AdaptiveGroup](#adaptivegroup) . Los elementos secundarios se muestran en un estilo vertical de StackPanel. |
+| **BackgroundImage** | [TileBackgroundImage](#tilebackgroundimage) | false | Una imagen de fondo opcional que se muestra detrás de todo el contenido del icono, sangrado completo. |
+| **PeekImage** | [TilePeekImage](#tilepeekimage) | false | Una imagen de lectura opcional que anima desde la parte superior del icono. |
+| **TextStacking** | [TileTextStacking](#tiletextstacking) | false | Controla la pila de texto (alineación vertical) del contenido secundario en conjunto. |
 
 
 ## <a name="adaptivetext"></a>AdaptiveText
 Elemento de texto adaptable.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Texto** | cadena | falso | El texto que se va a mostrar. |
-| **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | falso | El estilo controla el tamaño, el espesor y la opacidad de la fuente del texto. |
-| **HintWrap** | bool? | falso | Establece esto en true para habilitar el ajuste de texto. El valor predeterminado es "false". |
-| **HintMaxLines** | int? | falso | El número máximo de líneas que se permite que mostrar al elemento de texto. |
-| **HintMinLines** | int? | falso | El número mínimo de líneas que debe mostrar el elemento de texto. |
-| **HintAlign** | [AdaptiveTextAlign](#adaptivetextalign) | falso | Alineación horizontal del texto. |
-| **Idioma** | cadena | falso | La configuración regional de destino de la carga XML, especificada como una etiqueta de idioma BCP-47, como "en-US" o "fr-FR". La configuración regional especificada aquí reemplaza cualquier otra configuración regional especificada, como las de enlace o visual. Si este valor es una cadena literal, el valor predeterminado de este atributo es el idioma de la interfaz de usuario del usuario. Si este valor es una referencia de cadena, el valor predeterminado de este atributo será la configuración regional elegida por Windows Runtime en tiempo de ejecución en la resolución de la cadena. |
+| **Texto** | string | false | Texto que se va a mostrar. |
+| **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | false | El estilo controla el tamaño de fuente, el peso y la opacidad del texto. |
+| **HintWrap** | booleano? | false | Establézcalo en true para habilitar el ajuste de texto. El valor predeterminado es false. |
+| **HintMaxLines** | int? | false | Número máximo de líneas que el elemento de texto puede mostrar. |
+| **HintMinLines** | int? | false | Número mínimo de líneas que debe mostrar el elemento de texto. |
+| **HintAlign** | [AdaptiveTextAlign](#adaptivetextalign) | false | Alineación horizontal del texto. |
+| **Lenguaje** | string | false | La configuración regional de destino de la carga XML, especificada como una etiqueta de idioma BCP-47 como "en-US" o "fr-FR". La configuración regional especificada aquí invalida cualquier otra configuración regional especificada, como la del enlace o el visual. Si este valor es una cadena literal, este atributo tiene como valor predeterminado el idioma de la interfaz de usuario del usuario. Si este valor es una referencia de cadena, este atributo tiene como valor predeterminado la configuración regional elegida por Windows Runtime en la resolución de la cadena. |
 
 
 ### <a name="adaptivetextstyle"></a>AdaptiveTextStyle
-El estilo de texto controla el tamaño, el espesor y la opacidad de la fuente. La opacidad sutil es 60 % opaco.
+Estilo de texto controla el tamaño de fuente, el peso y la opacidad. La opacidad sutil es 60% opaca.
 
 | Valor | Significado |
 |---|---|
-| **Valor predeterminado** | Valor predeterminado. El estilo viene determinado por el representador. |
-| **Título** | De menor tamaño que el tamaño de la fuente del párrafo. |
-| **CaptionSubtle** | Igual que Caption pero con opacidad sutil. |
-| **Body** | Tamaño de fuente del párrafo. |
-| **BodySubtle** | Igual que Body pero con opacidad sutil. |
-| **Básica** | Tamaño de fuente de párrafo, espesor de negrita. Básicamente, la versión negrita de Body. |
-| **BaseSubtle** | Igual que Base pero con opacidad sutil. |
-| **Básicas** | Tamaño de fuente H4 |
-| **SubtitleSubtle** | Igual que Subtitle pero con opacidad sutil. |
-| **Título** | Tamaño de fuente H3 |
-| **TitleSubtle** | Igual que Title pero con opacidad sutil. |
-| **TitleNumeral** | Igual que Title pero con el espaciado superior o inferior quitado. |
-| **Subencabezado** | Tamaño de fuente H2 |
-| **SubheaderSubtle** | Igual que Subheader pero con opacidad sutil. |
-| **SubheaderNumeral** | Igual que Subheader pero con el espaciado superior o inferior quitado. |
-| **Header** | Tamaño de fuente H1 |
-| **HeaderSubtle** | Igual que Header pero con opacidad sutil. |
-| **HeaderNumeral** | Igual que Header pero con el espaciado superior o inferior quitado. |
+| **Valor predeterminado** | Valor predeterminado. El representador determina el estilo. |
+| **Caption** | Menor que el tamaño de fuente del párrafo. |
+| **CaptionSubtle** | Igual que la leyenda, pero con una ligera opacidad. |
+| **Cuerpo** | Tamaño de fuente del párrafo. |
+| **BodySubtle** | Igual que el cuerpo, pero con una ligera opacidad. |
+| **Básica** | Tamaño de fuente del párrafo, grosor de negrita. Esencialmente, la versión en negrita del cuerpo. |
+| **BaseSubtle** | Igual que la base, pero con una opacidad sutil. |
+| **Subtítulo** | Tamaño de fuente de H4. |
+| **SubtitleSubtle** | Igual que el subtítulo, pero con una opacidad sutil. |
+| **Título** | Tamaño de fuente H3. |
+| **TitleSubtle** | Igual que el título, pero con una ligera opacidad. |
+| **TitleNumeral** | Igual que el título, pero con el relleno superior/inferior quitado. |
+| **Subencabezado** | Tamaño de fuente H2. |
+| **SubheaderSubtle** | Igual que el subencabezado, pero con una ligera opacidad. |
+| **SubheaderNumeral** | Igual que el subencabezado, pero se ha quitado el relleno superior/inferior. |
+| **Encabezado** | Tamaño de fuente H1. |
+| **HeaderSubtle** | Igual que el encabezado, pero con una ligera opacidad. |
+| **HeaderNumeral** | Igual que el encabezado, pero se ha quitado el relleno superior/inferior. |
 
 
 ### <a name="adaptivetextalign"></a>AdaptiveTextAlign
-Controla la alineación horizontal del texto.
+Controla los enlineamientos horizontales del texto.
 
 | Valor | Significado |
 |---|---|
-| **Valor predeterminado** | Valor predeterminado. La alineación la determina automáticamente el representador. |
-| **Auto** | Alineación determinada por el idioma y la referencia cultural actuales. |
-| **Izquierda** | Alinea horizontalmente el texto a la izquierda. |
-| **Centro** | Alinea el texto horizontalmente en el centro. |
-| **Right** | Alinea el texto horizontalmente a la derecha. |
+| **Valor predeterminado** | Valor predeterminado. El representador determina automáticamente la alineación. |
+| **Automático** | Alineación determinada por el idioma y la referencia cultural actuales. |
+| **Left** | Alinear horizontalmente el texto a la izquierda. |
+| **Centro** | Alinear horizontalmente el texto en el centro. |
+| **Right** | Alinear horizontalmente el texto a la derecha. |
 
 
 ## <a name="adaptiveimage"></a>AdaptiveImage
-Imagen alineada.
+Una imagen alineada.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Origen** | cadena | true | La dirección URL de la imagen. Se admiten ms-appx, ms-appdata y http. A partir de la actualización de Fall Creators Update, las imágenes web pueden tener un tamaño de hasta 3 MB, en conexiones normales y de 1 MB en conexiones de uso medido. En dispositivos que no ejecutan aún la actualización de Fall Creators Update, el tamaño de las imágenes web no debe ser superior a los 200 KB. |
-| **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | falso | Controla el recorte deseado de la imagen. |
-| **HintRemoveMargin** | bool? | falso | De manera predeterminada, las imágenes dentro de grupos o subgrupos tienen un margen de 8 píxeles alrededor de ellas. Puedes quitar este margen estableciendo esta propiedad en true. |
-| **HintAlign** | [AdaptiveImageAlign](#adaptiveimagealign) | falso | Alineación horizontal de la imagen. |
-| **AlternateText** | cadena | falso | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
-| **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de la ventana. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
+| **Origen** | string | true | Dirección URL de la imagen. se admiten MS-appx, MS-AppData y http. A partir de la actualización de Fall Creators, las imágenes Web pueden tener hasta 3 MB en las conexiones normales y 1 MB en las conexiones de uso medido. En los dispositivos que aún no ejecuten el Fall Creators Update, las imágenes web no deben tener más de 200 KB. |
+| **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | false | Controle el recorte deseado de la imagen. |
+| **HintRemoveMargin** | booleano? | false | De forma predeterminada, las imágenes dentro de grupos o subgrupos tienen un margen 8px alrededor de ellas. Puede quitar este margen estableciendo esta propiedad en true. |
+| **HintAlign** | [AdaptiveImageAlign](#adaptiveimagealign) | false | Alineación horizontal de la imagen. |
+| **AlternateText** | string | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
+| **AddImageQuery** | booleano? | false | Establézcalo en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de icono. Utilice este atributo si el servidor hospeda imágenes y puede controlar las cadenas de consulta, ya sea mediante la recuperación de una variante de imagen basada en las cadenas de consulta o mediante la omisión de la cadena de consulta y la devolución de la imagen como se especifica sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png? MS-Scale = 100&MS-Contrast = Standard&MS-lang = en-US" |
 
 
 ### <a name="adaptiveimagecrop"></a>AdaptiveImageCrop
@@ -168,42 +168,42 @@ Especifica el recorte deseado de la imagen.
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. Comportamiento de recorte determinado por el representador. |
-| **Ninguno** | No se recorta la imagen. |
-| **Círculo** | Se recorta la imagen a una forma de círculo. |
+| **None** | La imagen no se recorta. |
+| **Circle** | La imagen se recorta a una forma circular. |
 
 
 ### <a name="adaptiveimagealign"></a>AdaptiveImageAlign
-Especifica la alineación horizontal para una imagen.
+Especifica la alineación horizontal de una imagen.
 
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. Comportamiento de alineación determinado por el representador. |
-| **Adapta** | La imagen se amplía para rellenar el ancho disponible (y potencialmente también el alto disponible, en función de donde se coloque la imagen). |
-| **Izquierda** | Alinea la imagen a la izquierda y la muestra en su resolución nativa. |
-| **Centro** | Alinea la imagen en el centro de forma horizontal y la muestra en su resolución nativa. |
-| **Right** | Alinea la imagen a la derecha y la muestra en su resolución nativa. |
+| **Stretch** | La imagen se ajusta para rellenar el ancho disponible (y posiblemente también el alto disponible, en función de dónde se coloque la imagen). |
+| **Left** | Alinee la imagen a la izquierda y muestre la imagen en su resolución nativa. |
+| **Centro** | Alinee la imagen en el centro horizontalmente, displayign en su resolución nativa. |
+| **Right** | Alinee la imagen a la derecha y muestre la imagen en su resolución nativa. |
 
 
 ## <a name="adaptivegroup"></a>AdaptiveGroup
-Los grupos identifican semánticamente que el contenido del grupo debe mostrarse entero o no mostrarse si no cabe. Los grupos también permiten la creación de varias columnas.
+Los grupos identifican semánticamente que el contenido del grupo se debe mostrar como un todo, o no se muestra si no cabe. Los grupos también permiten crear varias columnas.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Children** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | falso | Los subgrupos se muestran como columnas verticales. Debes usar subgrupos para proporcionar cualquier contenido dentro de un AdaptiveGroup. |
+| **Children** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | Los subgrupos se muestran como columnas verticales. Debe usar subgrupos para proporcionar contenido dentro de un AdaptiveGroup. |
 
 
 ## <a name="adaptivesubgroup"></a>AdaptiveSubgroup
 Los subgrupos son columnas verticales que pueden contener texto e imágenes.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | falso | [AdaptiveText](#adaptivetext) y [AdaptiveImage](#adaptiveimage) son elementos secundarios válidos de subgrupos. |
-| **HintWeight** | int? | falso | Controla el ancho de esta columna de subgrupo especificando el grosor, en relación con los demás subgrupos. |
-| **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | falso | Controla la alineación vertical del contenido de este subgrupo. |
+| **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) y [AdaptiveImage](#adaptiveimage) son elementos secundarios válidos de subgrupos. |
+| **HintWeight** | int? | false | Controle el ancho de esta columna de subgrupo especificando el peso con respecto a los demás subgrupos. |
+| **HintTextStacking** | [AdaptiveSubgroupTextStacking](#adaptivesubgrouptextstacking) | false | Controlar la alineación vertical del contenido de este subgrupo. |
 
 
 ### <a name="iadaptivesubgroupchild"></a>IAdaptiveSubgroupChild
-Interfaz de marcador para elementos secundarios de subgrupo.
+Interfaz de marcador para secundarios de subgrupo.
 
 | Implementaciones |
 | --- |
@@ -217,21 +217,21 @@ TextStacking especifica la alineación vertical del contenido.
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. El representador selecciona automáticamente la alineación vertical predeterminada. |
-| **Superior** | Alineación vertical a la parte superior. |
-| **Centro** | Alineación vertical al centro. |
-| **Inferior** | Alineación vertical a la parte inferior. |
+| **Top** (Principales) | Alineación vertical en la parte superior. |
+| **Centro** | Alineación vertical con el centro. |
+| **Bottom** | Alineación vertical en la parte inferior. |
 
 
 ## <a name="tilebackgroundimage"></a>TileBackgroundImage
-Una imagen de fondo que se muestra sin bordes en la ventana.
+Una imagen de fondo que se muestra con sangrado completo en el icono.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Origen** | cadena | true | La dirección URL de la imagen. Se admiten ms-appx, ms-appdata y http. Las imágenes HTTP deben tener un tamaño de 200 KB o inferior. |
-| **HintOverlay** | int? | falso | Una superposición negra en una imagen de fondo. Este valor controla la opacidad de la superposición negra, el cero 0 no supone superposición alguna y 100 es completamente negro. El valor predeterminado es 20. |
-| **HintCrop** | [TileBackgroundImageCrop](#tilebackgroundimagecrop) | falso | Novedad en 1511: Especifica cómo quieres que se recorte la imagen. En versiones anteriores a 1511, este función no existe y se mostrará la imagen de fondo sin ningún recorte. |
-| **AlternateText** | cadena | falso | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
-| **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de la ventana. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
+| **Origen** | string | true | Dirección URL de la imagen. se admiten MS-appx, MS-AppData y http (s). Las imágenes http deben tener un tamaño de 200 KB o menos. |
+| **HintOverlay** | int? | false | Una superposición de color negro en la imagen de fondo. Este valor controla la opacidad de la superposición de color negro, donde 0 no es ninguna superposición y 100 es completamente negro. El valor predeterminado es 20. |
+| **HintCrop** | [TileBackgroundImageCrop](#tilebackgroundimagecrop) | false | Novedad en 1511: especifique cómo desea recortar la imagen. En las versiones anteriores a 1511, se omitirá y la imagen de fondo se mostrará sin recorte. |
+| **AlternateText** | string | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
+| **AddImageQuery** | booleano? | false | Establézcalo en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de icono. Utilice este atributo si el servidor hospeda imágenes y puede controlar las cadenas de consulta, ya sea mediante la recuperación de una variante de imagen basada en las cadenas de consulta o mediante la omisión de la cadena de consulta y la devolución de la imagen como se especifica sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png? MS-Scale = 100&MS-Contrast = Standard&MS-lang = en-US" |
 
 
 ### <a name="tilebackgroundimagecrop"></a>TileBackgroundImageCrop
@@ -240,30 +240,30 @@ Controla el recorte de la imagen de fondo.
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | El recorte usa el comportamiento predeterminado del representador. |
-| **Ninguno** | No se recorta la imagen, se muestra cuadrada. |
-| **Círculo** | Se recorta la imagen en un círculo. |
+| **None** | La imagen no se recorta, se muestra un cuadrado. |
+| **Circle** | La imagen se recorta a un círculo. |
 
 
 ## <a name="tilepeekimage"></a>TilePeekImage
-Una animación de imagen que aparece desde la parte superior de la ventana.
+Imagen de inspección que anima desde la parte superior del icono.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Origen** | cadena | true | La dirección URL de la imagen. Se admiten ms-appx, ms-appdata y http. Las imágenes HTTP deben tener un tamaño de 200 KB o inferior. |
-| **HintOverlay** | int? | falso | Novedad en 1511: una superposición negra en la imagen que aparece. Este valor controla la opacidad de la superposición negra, el cero 0 no supone superposición alguna y 100 es completamente negro. El valor predeterminado es 20. En versiones anteriores, se omitirá este valor y se mostrará la imagen que aparece con superposición de 0. |
-| **HintCrop** | [TilePeekImageCrop](#tilepeekimagecrop) | falso | Novedad en 1511: Especifica cómo quieres que se recorte la imagen. En versiones anteriores a 1511, este función no existe y se mostrará la imagen que aparece sin ningún recorte. |
-| **AlternateText** | cadena | falso | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
-| **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de la ventana. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
+| **Origen** | string | true | Dirección URL de la imagen. se admiten MS-appx, MS-AppData y http (s). Las imágenes http deben tener un tamaño de 200 KB o menos. |
+| **HintOverlay** | int? | false | Novedad en 1511: superposición de color negro en la imagen de inspección. Este valor controla la opacidad de la superposición de color negro, donde 0 no es ninguna superposición y 100 es completamente negro. El valor predeterminado es 20. En versiones anteriores, este valor se omitirá y la imagen PEEK se mostrará con una superposición 0. |
+| **HintCrop** | [TilePeekImageCrop](#tilepeekimagecrop) | false | Novedad en 1511: especifique cómo desea recortar la imagen. En las versiones anteriores a 1511, se omitirá y se mostrará la imagen de PEEK sin recortes. |
+| **AlternateText** | string | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
+| **AddImageQuery** | booleano? | false | Establézcalo en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de icono. Utilice este atributo si el servidor hospeda imágenes y puede controlar las cadenas de consulta, ya sea mediante la recuperación de una variante de imagen basada en las cadenas de consulta o mediante la omisión de la cadena de consulta y la devolución de la imagen como se especifica sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png? MS-Scale = 100&MS-Contrast = Standard&MS-lang = en-US" |
 
 
 ### <a name="tilepeekimagecrop"></a>TilePeekImageCrop
-Controla el recorte de la imagen que aparece.
+Controla el recorte de la imagen de inspección.
 
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | El recorte usa el comportamiento predeterminado del representador. |
-| **Ninguno** | No se recorta la imagen, se muestra cuadrada. |
-| **Círculo** | Se recorta la imagen en un círculo. |
+| **None** | La imagen no se recorta, se muestra un cuadrado. |
+| **Circle** | La imagen se recorta a un círculo. |
 
 
 ### <a name="tiletextstacking"></a>TileTextStacking
@@ -272,64 +272,64 @@ El apilamiento de texto especifica la alineación vertical del contenido.
 | Valor | Significado |
 |---|---|
 | **Valor predeterminado** | Valor predeterminado. El representador selecciona automáticamente la alineación vertical predeterminada. |
-| **Superior** | Alineación vertical a la parte superior. |
-| **Centro** | Alineación vertical al centro. |
-| **Inferior** | Alineación vertical a la parte inferior. |
+| **Top** (Principales) | Alineación vertical en la parte superior. |
+| **Centro** | Alineación vertical con el centro. |
+| **Bottom** | Alineación vertical en la parte inferior. |
 
 
 ## <a name="tilebindingcontenticonic"></a>TileBindingContentIconic
-Compatible con el tamaño pequeño y mediano. Permite que una plantilla de ventana icónica, en la que se puede mostrar una insignia y un icono uno juntos, con el estilo clásico de Windows Phone. El número situado junto al icono se logra a través de una notificación de insignia independiente.
+Se admite en pequeñas y medianas. Habilita una plantilla de mosaico de iconos, donde puede tener un icono y una presentación de distintivos junto a los demás en el icono, en verdadero estilo de Windows Phone clásico. El número que aparece junto al icono se consigue mediante una notificación de notificación independiente.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Iconos** | [TileBasicImage](#tilebasicimage) | true | Para ser compatibles con ventanas pequeñas y medianas en versión de escritorio y móvil, propociona una imagen de relación de aspecto cuadrada con una resolución de 200 x 200 como mínimo, con formato PNG, transparente y de color blanco. Para obtener más información, consulta [Plantillas de ventanas especiales](../tiles-and-notifications/special-tile-templates-catalog.md). |
+| **Icono** | [TileBasicImage](#tilebasicimage) | true | Como mínimo, para admitir iconos de escritorio y móviles, pequeños y medianos, proporcione una imagen de relación de aspecto cuadrada con una resolución de 200 x 200, formato PNG, con transparencia y sin color que no sea blanco. Para obtener más información, consulte: [plantillas de iconos especiales](../tiles-and-notifications/special-tile-templates-catalog.md). |
 
 
 ## <a name="tilebindingcontentcontact"></a>TileBindingContentContact
-Solo para móviles. Compatible con el tamaño pequeño, mediano y ancho.
+Solo para dispositivos móviles. Se admite en pequeñas, medianas y anchas.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Image** | [TileBasicImage](#tilebasicimage) | true | Imagen para mostrar. |
-| **Texto** | [TileBasicText](#tilebasictext) | falso | Una línea de texto que se muestra. No se muestra en la ventana pequeña. |
+| **Imagen** | [TileBasicImage](#tilebasicimage) | true | Imagen que se va a mostrar. |
+| **Texto** | [TileBasicText](#tilebasictext) | false | Línea de texto que se muestra. No se muestra en el icono pequeño. |
 
 
 ## <a name="tilebindingcontentpeople"></a>TileBindingContentPeople
-Nuevo en 1511: compatible con tamaño mediano, ancho y grande (escritorio y móvil). Anteriormente, solo era para móvil y solo para tamaños mediano y ancho.
+Novedad en 1511: se admite en el nivel medio, ancho y grande (escritorio y móvil). Anteriormente, esto era solo móvil y solo es mediano y ancho.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Imágenes** | IList<[TileBasicImage](#tilebasicimage)> | true | Imágenes que se presentarán como círculos. |
+| **Imágenes** | IList<[TileBasicImage](#tilebasicimage)> | true | Imágenes que se retirarán como círculos. |
 
 
 ## <a name="tilebindingcontentphotos"></a>TileBindingContentPhotos
-Anima a través de una presentación de fotos. Compatible con todos los tamaños.
+Anima a través de una presentación de fotos. Se admite en todos los tamaños.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Imágenes** | IList<[TileBasicImage](#tilebasicimage)> | true | Pueden proporcionarse hasta 12 imágenes (la versión móvil solo mostrará hasta 9), que se usarán para la presentación. Agregar más de 12 se considerará una excepción. |
+| **Imágenes** | IList<[TileBasicImage](#tilebasicimage)> | true | Se pueden proporcionar hasta 12 imágenes (Mobile solo mostrará hasta 9), que se usarán para la presentación. Al agregar más de 12 se producirá una excepción. |
 
 
 ### <a name="tilebasicimage"></a>TileBasicImage
-Una imagen que se usa en diferentes plantillas especiales.
+Imagen utilizada en varias plantillas especiales.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Origen** | cadena | true | La dirección URL de la imagen. Se admiten ms-appx, ms-appdata y http. Las imágenes HTTP deben tener un tamaño de 200 KB o inferior. |
-| **AlternateText** | cadena | falso | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
-| **AddImageQuery** | bool? | falso | Establece el valor en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de la ventana. Usa este atributo si el servidor aloja imágenes y puede controlar cadenas de consulta, ya sea recuperando una variante de imagen en función de las cadenas de consulta u omitiendo la cadena de consulta y devolviendo la imagen como se especificó sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us". |
+| **Origen** | string | true | Dirección URL de la imagen. se admiten MS-appx, MS-AppData y http (s). Las imágenes http deben tener un tamaño de 200 KB o menos. |
+| **AlternateText** | string | false | Texto alternativo que describe la imagen, que se usa para fines de accesibilidad. |
+| **AddImageQuery** | booleano? | false | Establézcalo en "true" para permitir que Windows anexe una cadena de consulta a la dirección URL de la imagen proporcionada en la notificación de icono. Utilice este atributo si el servidor hospeda imágenes y puede controlar las cadenas de consulta, ya sea mediante la recuperación de una variante de imagen basada en las cadenas de consulta o mediante la omisión de la cadena de consulta y la devolución de la imagen como se especifica sin la cadena de consulta. Esta cadena de consulta especifica la escala, la configuración de contraste y el idioma; por ejemplo, un valor de "www.website.com/images/hello.png" proporcionado en la notificación se convierte en "www.website.com/images/hello.png? MS-Scale = 100&MS-Contrast = Standard&MS-lang = en-US" |
 
 
 ### <a name="tilebasictext"></a>TileBasicText
-Un elemento básico de texto que se usa en diferentes plantillas especiales.
+Elemento de texto básico que se usa en varias plantillas especiales.
 
-| Propiedad | Escribe | Necesario |Descripción |
+| Propiedad | Tipo | Requerido |Descripción |
 |---|---|---|---|
-| **Texto** | cadena | falso | El texto que se va a mostrar. |
-| **Idioma** | cadena | falso | La configuración regional de destino de la carga XML, especificada como una etiqueta de idioma BCP-47, como "en-US" o "fr-FR". La configuración regional especificada aquí reemplaza cualquier otra configuración regional especificada, como las de enlace o visual. Si este valor es una cadena literal, el valor predeterminado de este atributo es el idioma de la interfaz de usuario del usuario. Si este valor es una referencia de cadena, el valor predeterminado de este atributo será la configuración regional elegida por Windows Runtime en tiempo de ejecución en la resolución de la cadena. |
+| **Texto** | string | false | Texto que se va a mostrar. |
+| **Lenguaje** | string | false | La configuración regional de destino de la carga XML, especificada como una etiqueta de idioma BCP-47 como "en-US" o "fr-FR". La configuración regional especificada aquí invalida cualquier otra configuración regional especificada, como la del enlace o el visual. Si este valor es una cadena literal, este atributo tiene como valor predeterminado el idioma de la interfaz de usuario del usuario. Si este valor es una referencia de cadena, este atributo tiene como valor predeterminado la configuración regional elegida por Windows Runtime en la resolución de la cadena. |
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Inicio rápido: enviar una notificación de icono local](../tiles-and-notifications/sending-a-local-tile-notification.md)
+* [Inicio rápido: Enviar una notificación de icono local](../tiles-and-notifications/sending-a-local-tile-notification.md)
 * [Biblioteca de notificaciones en GitHub](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/dev/Notifications)

@@ -1,5 +1,5 @@
 ---
-Description: Use la API Windows. Globalization. DateTimeFormatting con patrones y plantillas personalizadas para mostrar fechas y horas exactamente en el formato que desee.
+description: Use la API Windows. Globalization. DateTimeFormatting con patrones y plantillas personalizadas para mostrar fechas y horas exactamente en el formato que desee.
 title: Usar patrones para dar formato a fechas y horas
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: da4d9b2c7380a085efdcb234ad210eafca40b1c3
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: dbabbcaccd88b187a03c83909bcb38d5f64b30bb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493610"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034318"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Usar plantillas y patrones para dar formato a fechas y horas
 
@@ -25,7 +25,7 @@ La clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatti
 
 Pero si desea tener aún más control sobre el orden y el formato de los componentes del objeto [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) que desea mostrar, puede pasar un modelo de formato al argumento *formatTemplate* del constructor. Un modelo de formato usa una sintaxis especial, que permite obtener componentes individuales de un objeto **DateTime** &mdash; solo el nombre del mes, o simplemente el valor del año, por ejemplo &mdash; para mostrarlos en el formato personalizado que elija. Además, el patrón se puede localizar para adaptarse a otros idiomas y regiones.
 
-**Nota:**    Esta es solo una introducción a los patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
+**Nota:**  Esta es solo una introducción a los patrones de formato. Para ver un análisis completo de los patrones y plantillas de formato, consulta la sección Comentarios de la documentación de la clase [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live).
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>La diferencia entre las plantillas de formato y los patrones de formato
 
@@ -113,7 +113,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString`es un identificador de recursos que hace referencia a un recurso traducible en un archivo de recursos (. resw). Para un idioma predeterminado de inglés (Estados Unidos), se establecerá en un valor de " {0} | {1} " junto con un comentario que indica que " {0} " es la fecha y " {1} " es la hora. De este modo, los traductores pueden ajustar los elementos de formato según sea necesario. Por ejemplo, pueden cambiar el orden de los elementos si parece más natural en algún idioma o región que preceda a la fecha. O pueden reemplazar "|" con algún otro carácter separador.
+`CustomDateTimeFormatString` es un identificador de recursos que hace referencia a un recurso traducible en un archivo de recursos (. resw). Para un idioma predeterminado de inglés (Estados Unidos), se establecerá en un valor de " {0} | {1} " junto con un comentario que indica que " {0} " es la fecha y " {1} " es la hora. De este modo, los traductores pueden ajustar los elementos de formato según sea necesario. Por ejemplo, pueden cambiar el orden de los elementos si parece más natural en algún idioma o región que preceda a la fecha. O pueden reemplazar "|" con algún otro carácter separador.
 
 Otra manera de implementar este ejemplo consiste en consultar los modelos de formato de los dos formateadores, concatenarlos y, a continuación, construir un tercer formateador a partir del patrón de formato resultante.
 

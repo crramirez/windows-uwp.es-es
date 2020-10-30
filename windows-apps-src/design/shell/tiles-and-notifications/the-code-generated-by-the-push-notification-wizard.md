@@ -1,5 +1,5 @@
 ---
-Description: Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure.
+description: Usar un asistente en Visual Studio te permite generar notificaciones de inserción desde un servicio móvil creado con los Servicios móviles de Azure.
 title: Código generado por el Asistente para notificaciones de inserción
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc6c52859b74d7cd40dd39c0ae588ad690c0138b
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f9af0301dcf8944127ab814155466335940642f0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220118"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034448"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
  
@@ -29,7 +29,7 @@ El Asistente para notificaciones de inserción modifica tu proyecto de estos mod
 -   Crea una tabla del canal en el servidor de bases de datos para el servicio móvil. La tabla contiene información necesaria para enviar notificaciones de inserción a instancias de la aplicación.
 -   Crea scripts para cuatro funciones: eliminar, insertar, leer y actualizar.
 -   Crea un script con una API personalizada, notifyallusers.js, que envía una notificación de inserción a todos los clientes.
--   Agrega una declaración a tu archivo App.xaml.cs, App.xaml.vb o App.xaml.cpp, o agrega una declaración a un nuevo archivo, service.js, para proyectos JavaScript. La declaración declara un objeto MobileServiceClient que contiene la información necesaria para conectarse al servicio móvil. Puedes acceder a este objeto MobileServiceClient, denominado *MyServiceName*Client, desde cualquier página de la aplicación mediante el nombre App.*MyServiceName*Client.
+-   Agrega una declaración a tu archivo App.xaml.cs, App.xaml.vb o App.xaml.cpp, o agrega una declaración a un nuevo archivo, service.js, para proyectos JavaScript. La declaración declara un objeto MobileServiceClient que contiene la información necesaria para conectarse al servicio móvil. Puedes acceder a este objeto MobileServiceClient, denominado *MyServiceName* Client, desde cualquier página de la aplicación mediante el nombre App. *MyServiceName* Client.
 
 El archivo services.js contiene el siguiente código:
 
@@ -207,9 +207,9 @@ function sendNotifications(request) {
 
 La función sendNotifications envía una sola notificación en forma de notificación del sistema. También puedes usar otros tipos de notificaciones de inserción.
 
-**Sugerencia**    Para obtener información sobre cómo obtener ayuda mientras se editan scripts, vea [Habilitar IntelliSense para JavaScript del lado servidor](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx).
+**Sugerencia** Para obtener información sobre cómo obtener ayuda durante la edición de scripts, consulta el tema [Enabling IntelliSense for server-side JavaScript (Habilitar IntelliSense para JavaScript del lado servidor)](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx).
 
- 
+ 
 
 ## <a name="push-notification-types"></a>Tipos de notificaciones de inserción
 
@@ -233,9 +233,9 @@ Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) direc
 
 También puedes enviar notificaciones de inserción si ejecutas una tarea programada en tu servicio móvil. Consulta [Programación de trabajos periódicos en Servicios móviles](/azure/).
 
-**ADVERTENCIA**    de Una vez que haya ejecutado el Asistente para notificaciones de envío una vez, no ejecute el Asistente una segunda vez para agregar el código de registro de otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, puede lograr esto moviendo el código generado por el asistente en el registro \* de extracción. (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento onlaunched, pero las características específicas de esto dependerán de la arquitectura de la aplicación.
+**Advertencia**  Cuando ya has ejecutado el Asistente para notificaciones de inserción una vez, no vuelvas a ejecutarlo de nuevo para agregar el código de registro para otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, puede lograr esto moviendo el código generado por el asistente en el registro \* de extracción. (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync** ) fuera del evento onlaunched, pero las características específicas de esto dependerán de la arquitectura de la aplicación.
 
- 
+ 
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -245,6 +245,6 @@ También puedes enviar notificaciones de inserción si ejecutas una tarea progra
 * [Conexión con los Servicios móviles de Microsoft Azure (JavaScript)](/previous-versions/windows/apps/dn263160(v=win.10))
 * [Conexión con los Servicios móviles de Microsoft Azure (C#/C++/VB)](/previous-versions/windows/apps/dn263175(v=win.10))
 * [Inicio rápido: agregar notificaciones de inserción para un servicio móvil (JavaScript)](/previous-versions/windows/apps/dn263163(v=win.10))
- 
+ 
 
- 
+ 

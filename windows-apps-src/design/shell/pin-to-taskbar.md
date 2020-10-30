@@ -1,17 +1,17 @@
 ---
-Description: Puede anclar la aplicación mediante programación a la barra de tareas, BND puede comprobar si está anclada actualmente.
+description: Puede anclar la aplicación mediante programación a la barra de tareas, BND puede comprobar si está anclada actualmente.
 title: Anclar la aplicación a la barra de tareas
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, barra de tareas, administrador de la barra de tareas, anclar a la barra de tareas, icono principal
 ms.localizationpriority: medium
-ms.openlocfilehash: e43dd7084c042b7480aa98c638f1fc5d216e64c7
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: fa33725447da80b5c3295455f12a3851228a2756
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636635"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034168"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>Anclar la aplicación a la barra de tareas
 
@@ -20,9 +20,9 @@ Puede anclar su propia aplicación mediante programación a la barra de tareas, 
 ![Captura de pantalla de una barra de tareas de Windows 10 que muestra la aplicación anclada allí.](images/taskbar/taskbar.png)
 
 > [!IMPORTANT]
-> **Requiere Fall Creators Update**: debe tener como destino el SDK 16299 y ejecutar la compilación 16299 o superior para usar las API de la barra de tareas.
+> **Requiere Fall Creators Update** : debe tener como destino el SDK 16299 y ejecutar la compilación 16299 o superior para usar las API de la barra de tareas.
 
-> **API importantes**: [clase TaskbarManager](/uwp/api/windows.ui.shell.taskbarmanager) 
+> **API importantes** : [clase TaskbarManager](/uwp/api/windows.ui.shell.taskbarmanager) 
 
 
 ## <a name="when-should-you-ask-the-user-to-pin-your-app-to-the-taskbar"></a>¿Cuándo se debe pedir al usuario que ancle la aplicación a la barra de tareas? 

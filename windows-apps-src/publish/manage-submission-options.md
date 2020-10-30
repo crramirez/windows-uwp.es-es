@@ -1,16 +1,16 @@
 ---
-Description: Administre las opciones de envío, como las opciones de retención de la publicación, las notas para la certificación y mucho más.
+description: Administre las opciones de envío, como las opciones de retención de la publicación, las notas para la certificación y mucho más.
 title: Administrar las opciones de envío
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, retención de publicación, fecha de publicación, envío de envío para publicar, aprobación de funcionalidad restringida
 ms.localizationpriority: medium
-ms.openlocfilehash: c2548ddd35fc50f62727d986d2d934d2346eb7b5
-ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
+ms.openlocfilehash: 0044ac362cb67d356707c7eaaf12a10c5a31ed1b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92253797"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034748"
 ---
 # <a name="manage-submission-options"></a>Administrar las opciones de envío
 
@@ -26,12 +26,12 @@ De forma predeterminada, publicaremos el envío en cuanto pase la certificación
 
 **Publique este envío tan pronto como pase la certificación (o por las fechas seleccionadas en la sección programación)** es la selección predeterminada y significa que el envío comenzará el proceso de publicación en cuanto pase la certificación, a menos que haya configurado fechas en la sección [programación](configure-precise-release-scheduling.md) de la página **precios y disponibilidad** .   
 
-Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de suspensión de publicación** establecida en esta opción. Si desea especificar determinadas fechas para que se publique el envío, use **publicar este envío en cuanto pase la certificación (o por las fechas seleccionadas en la sección programación)**. Si deja esta sección establecida en la opción predeterminada, no se publicará el envío anterior a la fecha o las fechas que estableció en la sección **programación** . Las fechas seleccionadas en la sección **programación** se usarán para determinar el momento en que el producto pasa a estar disponible para los clientes de la tienda.
+Para la mayoría de los envíos, se recomienda dejar la sección **Opciones de suspensión de publicación** establecida en esta opción. Si desea especificar determinadas fechas para que se publique el envío, use **publicar este envío en cuanto pase la certificación (o por las fechas seleccionadas en la sección programación)** . Si deja esta sección establecida en la opción predeterminada, no se publicará el envío anterior a la fecha o las fechas que estableció en la sección **programación** . Las fechas seleccionadas en la sección **programación** se usarán para determinar el momento en que el producto pasa a estar disponible para los clientes de la tienda.
 
 
 ### <a name="publish-your-submission-manually"></a>Publicar el envío manualmente
 
-Si aún no desea establecer una fecha de lanzamiento y prefiere que el envío permanezca sin publicar hasta que decida iniciar el proceso de publicación de forma manual, puede elegir **no publicar este envío hasta que seleccione publicar ahora**. La elección de esta opción significa que el envío no se publicará hasta que indique que debe ser. Después de que el envío pase la certificación, puede publicarlo seleccionando **publicar ahora** en la página estado de certificación o seleccionando una fecha específica de la misma manera que se describe a continuación.
+Si aún no desea establecer una fecha de lanzamiento y prefiere que el envío permanezca sin publicar hasta que decida iniciar el proceso de publicación de forma manual, puede elegir **no publicar este envío hasta que seleccione publicar ahora** . La elección de esta opción significa que el envío no se publicará hasta que indique que debe ser. Después de que el envío pase la certificación, puede publicarlo seleccionando **publicar ahora** en la página estado de certificación o seleccionando una fecha específica de la misma manera que se describe a continuación.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Empezar a publicar el envío en una fecha determinada

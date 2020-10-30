@@ -1,5 +1,5 @@
 ---
-Description: En este artículo se tratan las cuatro opciones de notificación&\# 8212; local, programada, periódica y de extracción&\# 8212; que proporcionan actualizaciones de iconos y notificaciones del sistema.
+description: En este artículo se tratan las cuatro opciones de notificación&\# 8212; local, programada, periódica y de extracción&\# 8212; que proporcionan actualizaciones de iconos y notificaciones del sistema.
 title: Elegir un método de entrega de notificaciones
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a7a929cb88e20cc47562ab4920fd0fc94304fae2
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f85918eb0c8f936cc5be393217cd47d66a8b7ff5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219158"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034008"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Elegir un método de entrega de notificaciones
 
@@ -79,7 +79,7 @@ Esta tabla resume los tipos de entrega de notificaciones.
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">Inserción</td>
+<td align="left">Insertar</td>
 <td align="left">Icono, distintivo, notificación del sistema, sin procesar</td>
 <td align="left">Las notificaciones se envían desde un servidor de nube aunque la aplicación no se esté ejecutando.</td>
 <td align="left"><ul>
@@ -92,7 +92,7 @@ Esta tabla resume los tipos de entrega de notificaciones.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="local-notifications"></a>Notificaciones locales
 
@@ -151,7 +151,7 @@ Las notificaciones de inserción necesitan un servicio de nube que administre ca
 
 De forma predeterminada, las notificaciones de inserción caducan tres días después de que se reciban en el dispositivo. Si es necesario, puedes invalidar este valor predeterminado con una fecha de caducidad explícita (las notificaciones del sistema tienen un máximo de tres días).
 
-Para más información, consulte:
+Para obtener más información, consulte:
 
 -   [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 -   [Directrices para notificaciones de inserción](./windows-push-notification-services--wns--overview.md)
@@ -168,6 +168,6 @@ Para más información, consulte:
 * [Introducción a las notificaciones periódicas](periodic-notification-overview.md)
 * [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Ejemplos de código de notificaciones de aplicaciones de Windows en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
- 
+ 
 
- 
+ 

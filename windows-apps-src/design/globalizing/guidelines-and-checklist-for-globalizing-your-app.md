@@ -1,5 +1,5 @@
 ---
-Description: Diseñe y desarrolle su aplicación de forma que funcione correctamente en sistemas con distintas configuraciones de idioma y referencia cultural.
+description: Diseñe y desarrolle su aplicación de forma que funcione correctamente en sistemas con distintas configuraciones de idioma y referencia cultural.
 Search.Refinement.TopicID: 180
 title: Directrices sobre globalización
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
@@ -8,18 +8,18 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: d71cf2289654860b47aef18c117ac9d6d36fab0a
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: f97408596750c2f9a8d2ad61ad2754627e23426f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493250"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033718"
 ---
 # <a name="guidelines-for-globalization"></a>Directrices sobre globalización
 
 Diseñe y desarrolle su aplicación de forma que funcione correctamente en sistemas con distintas configuraciones de idioma y referencia cultural. Usar las API de [**globalización**](/uwp/api/Windows.Globalization?branch=live) para dar formato a los datos; y evite las suposiciones en el código sobre el idioma, la región, la clasificación de caracteres, el sistema de escritura, el formato de fecha y hora, los números, las monedas, las ponderaciones y las reglas de ordenación.
 
-| Recomendación | Descripción |
+| Recomendación | Description |
 | ------------- | ----------- |
 | Tenga en cuenta la referencia cultural al manipular y comparar cadenas. | Por ejemplo, no cambie las mayúsculas y minúsculas de las cadenas antes de compararlas. Vea [recomendaciones para el uso de cadenas](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage). |
 | Al realizar la intercalación (ordenación) de cadenas y otros datos, no suponga que siempre se realiza alfabéticamente. | En el caso de los idiomas que no usan el alfabeto latino, la intercalación se basa en factores como la pronunciación o el número de trazos del lápiz. Incluso los lenguajes que usan el alfabeto latino no siempre utilizan la ordenación alfabética. Por ejemplo, en algunas culturas, una libreta de teléfonos probablemente no se ordene alfabéticamente. Windows puede controlar la ordenación, pero si crea su propio algoritmo de ordenación, asegúrese de tener en cuenta los métodos de ordenación usados en los mercados de destino. |
@@ -35,7 +35,7 @@ Diseñe y desarrolle su aplicación de forma que funcione correctamente en siste
 | Muestra el texto y las fuentes de forma correcta. | La dirección del texto, el tamaño de fuente y la fuente ideales varían de un mercado a otro. Para obtener más información, consulte [**ajustar el diseño y las fuentes, y compatibilidad con**](adjust-layout-and-fonts--and-support-rtl.md) las fuentes RTL y [internacional](loc-international-fonts.md). |
 
 ## <a name="important-apis"></a>API importantes
- 
+ 
 * [Globalización](/uwp/api/Windows.Globalization?branch=live)
 * [GeographicRegion.CurrenciesInUse](/uwp/api/windows.globalization.geographicregion.CurrenciesInUse)
 * [Language. CurrentInputMethodLanguageTag](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag)

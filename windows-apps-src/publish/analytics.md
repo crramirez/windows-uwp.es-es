@@ -1,17 +1,17 @@
 ---
-Description: Obtenga análisis detallados para las aplicaciones de Windows, en el centro de Partners o a través de otros métodos.
+description: Obtenga análisis detallados para las aplicaciones de Windows, en el centro de Partners o a través de otros métodos.
 title: Analizar el rendimiento de las aplicaciones
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, Analytics, informes, panel, aplicaciones, datos, métricas
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b14ee776b31e21fbb8a0ee1d66b933648549b69
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 08ee9c5ddf729ac7a9026c36bc9fbddad0af5dc5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162089"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032988"
 ---
 # <a name="analyze-app-performance"></a>Analizar el rendimiento de las aplicaciones
 
@@ -21,7 +21,7 @@ Puede ver los informes analíticos directamente en el centro de Partners o [desc
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>Visualización del análisis de claves para todas las aplicaciones
 
-Para ver el análisis de claves de las aplicaciones más descargadas, expanda **analizar** y seleccione **información general**. De forma predeterminada, la página de información general muestra información sobre las cinco aplicaciones que tienen la mayoría de las adquisiciones de duración. Para elegir las distintas aplicaciones publicadas que se van a mostrar, seleccione **filtros**.
+Para ver el análisis de claves de las aplicaciones más descargadas, expanda **analizar** y seleccione **información general** . De forma predeterminada, la página de información general muestra información sobre las cinco aplicaciones que tienen la mayoría de las adquisiciones de duración. Para elegir las distintas aplicaciones publicadas que se van a mostrar, seleccione **filtros** .
 
 ## <a name="view-individual-reports-for-each-app"></a>Visualización de informes individuales para cada aplicación
 

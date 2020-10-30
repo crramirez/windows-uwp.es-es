@@ -1,5 +1,5 @@
 ---
-Description: Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos.
+description: Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos.
 ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Interfaces y patrones de control
 label: Control patterns and interfaces
@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: adbe1556f48e2f9b362faa303be52586714c73d5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 92f2337848f3689aa8f2f6f73dd92dbbe1313257
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157029"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032538"
 ---
 # <a name="control-patterns-and-interfaces"></a>Interfaces y patrones de control  
 
@@ -27,7 +27,7 @@ Para más información acerca de cómo implementar sistemas de automatización d
 
 Al implementar un patrón de control, debes consultar también la documentación del proveedor de automatización de la interfaz de usuario que explica algunas de las expectativas que los clientes tendrán de un patrón de control, independientemente de qué marco de trabajo de interfaz de usuario se use para implementarlo. Alguna de la información incluida en la documentación del proveedor de automatización de la interfaz de usuario influirá en cómo implementes tus sistemas del mismo nivel y admitas correctamente ese patrón. Consulta el tema sobre cómo [Implementar patrones de control de automatización de la interfaz de usuario](/windows/desktop/WinAuto/uiauto-implementinguiautocontrolpatterns) y visita la página que documenta el patrón que quieres implementar.
 
-| Patrón de control | Interfaz de proveedor de clase | Descripción |
+| Patrón de control | Interfaz de proveedor de clase | Description |
 |-----------------|--------------------------|-------------|
 | **Anotación** | [**IAnnotationProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IAnnotationProvider) | Se usa para exponer las propiedades de una anotación en un documento. |
 | **Acoplar** | [**IDockProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IDockProvider) | Se utiliza con los controles que se pueden acoplar en un contenedor de acoplamiento. Por ejemplo, las barras de herramientas o las paletas de herramientas. |
@@ -36,7 +36,7 @@ Al implementar un patrón de control, debes consultar también la documentación
 | **ExpandCollapse** | [**IExpandCollapseProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider) | Se usa para admitir controles que se expanden visualmente para mostrar más contenido y se reducen para ocultar el contenido. |
 | **Grid** | [**IGridProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IGridProvider) | Se utiliza con los controles que admiten la funcionalidad de cuadrícula, como el ajuste de tamaño y el movimiento a una celda concreta. Ten en cuenta que la cuadrícula en sí no implementa este patrón, porque proporciona diseño pero no es un control |
 | **GridItem** | [**IGridItemProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IGridItemProvider) | Se utiliza con los controles que tienen celdas dentro de cuadrículas. |
-| **Invocar** | [**IInvokeProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IInvokeProvider) | Se utiliza con los controles que se pueden invocar, como un  [**botón**](/uwp/api/Windows.UI.Xaml.Controls.Button). |
+| **Vocó** | [**IInvokeProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IInvokeProvider) | Se utiliza con los controles que se pueden invocar, como un  [**botón**](/uwp/api/Windows.UI.Xaml.Controls.Button). |
 | **ItemContainer** | [**IItemContainerProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IItemContainerProvider) | Permite que las aplicaciones encuentren un elemento en un contenedor, como una lista virtualizada. |
 | **MultipleView** | [**IMultipleViewProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IMultipleViewProvider) | Se utiliza con los controles que pueden cambiar entre varias representaciones del mismo conjunto de información, datos o elementos secundarios. |
 | **ObjectModel** | [**IObjectModelProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IObjectModelProvider) | Se usa para exponer un puntero al modelo de objetos subyacente de un documento. |
@@ -49,10 +49,10 @@ Al implementar un patrón de control, debes consultar también la documentación
 | **SpreadsheetItem** | [**ISpreadsheetItemProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider) | Se usa para exponer las propiedades de una celda de una hoja de cálculo u otro documento basado en cuadrícula. |
 | **Estilos** | [**IStylesProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IStylesProvider) | Se usa para describir un elemento de interfaz de usuario que tiene un estilo, color de relleno, patrón de relleno o forma específicos. |
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ISynchronizedInputProvider) | Permite a las aplicaciones cliente de automatización de la interfaz de usuario dirigir la entrada de mouse o teclado a un elemento específico de la interfaz de usuario. |
-| **Table** | [**ITableProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ITableProvider) | Se utiliza con los controles que tienen una cuadrícula e información de encabezado. Por ejemplo, un control de calendario tabular. |
+| **Tabla** | [**ITableProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ITableProvider) | Se utiliza con los controles que tienen una cuadrícula e información de encabezado. Por ejemplo, un control de calendario tabular. |
 | **TableItem** | [**ITableItemProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ITableItemProvider) | Se utiliza con los elementos de una tabla. |
 | **Texto** | [**ITextProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ITextProvider) | Se utiliza con los controles de edición y documentos que exponen información textual. Consulta también [**ITextRangeProvider**](/uwp/api/windows.ui.xaml.automation.provider.itextrangeprovider) y [**ITextProvider2**](/uwp/api/windows.ui.xaml.automation.provider.itextprovider2). |
-| **TextChild** | [**ITextChildProvider**](/uwp/api/windows.ui.xaml.automation.provider.itextchildprovider) | Se usa para acceder al antecesor más próximo de un elemento que admite el patrón de control **Text**. |
+| **TextChild** | [**ITextChildProvider**](/uwp/api/windows.ui.xaml.automation.provider.itextchildprovider) | Se usa para acceder al antecesor más próximo de un elemento que admite el patrón de control **Text** . |
 | **TextEdit** | No hay ninguna clase administrada disponible | Proporciona acceso a un control que modifica texto, por ejemplo, un control que realiza autocorrección o habilita la composición de entrada mediante un editor de métodos de entrada (IME). |
 | **TextRange** | [**ITextRangeProvider**](/uwp/api/windows.ui.xaml.automation.provider.itextrangeprovider) | Proporciona acceso a un intervalo de texto continuo en un contenedor de texto que implementa [**ITextProvider**](/uwp/api/windows.ui.xaml.automation.provider.itextprovider). Consulta también [**ITextRangeProvider2**](/uwp/api/windows.ui.xaml.automation.provider.itextrangeprovider2). |
 | **Alternancia** | [**IToggleProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IToggleProvider) | Se utiliza con los controles donde se puede alternar el estado. Por ejemplo, elementos de menú y [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) que pueden comprobarse. |
@@ -65,7 +65,7 @@ Al implementar un patrón de control, debes consultar también la documentación
 > No encontrarás necesariamente implementaciones de todos estos patrones en los controles XAML existentes. Algunos de los patrones tienen interfaces únicamente para admitir la paridad con la definición de patrones del marco de trabajo de automatización de la interfaz de usuario y para admitir los escenarios de sistemas de automatización del mismo nivel que requerirán una implementación personalizada para admitir dicho patrón.
 
 > [!NOTE]
-> Las aplicaciones de la Tienda de Windows Phone no admiten todos los patrones de control de Automatización de la interfaz de usuario que figuran en la lista. **Annotation**, **Dock**, **Drag**, **DropTarget**, **ObjectModel** son algunos de los patrones no admitidos.
+> Las aplicaciones de la Tienda de Windows Phone no admiten todos los patrones de control de Automatización de la interfaz de usuario que figuran en la lista. **Annotation** , **Dock** , **Drag** , **DropTarget** , **ObjectModel** son algunos de los patrones no admitidos.
 
 <span id="related_topics"/>
 

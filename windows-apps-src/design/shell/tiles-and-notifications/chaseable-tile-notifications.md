@@ -1,5 +1,5 @@
 ---
-Description: Use las notificaciones de icono de seguimiento para averiguar lo que la aplicación muestra en su icono dinámico cuando el usuario hace clic en ella.
+description: Use las notificaciones de icono de seguimiento para averiguar lo que la aplicación muestra en su icono dinámico cuando el usuario hace clic en ella.
 title: Notificaciones de iconos rastreables
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tile notifications
@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, mosaicos de seguimiento, mosaicos dinámicos, notificaciones de icono de seguimiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 951dc891fb34ae4be7551c08ff47eabc19ae9eb6
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 636b0214ced9b63c7bd435ab551059faca7e810c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100283"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034028"
 ---
 # <a name="chaseable-tile-notifications"></a>Notificaciones de iconos rastreables
 
@@ -21,10 +21,10 @@ Las notificaciones de icono de seguimiento le permiten determinar qué notificac
 Por ejemplo, una aplicación de noticias podría usar esta característica para determinar en qué noticia se mostraba el icono dinámico cuando el usuario lo inició; podría asegurarse de que la historia se muestre de forma destacada para que el usuario pueda encontrarla. 
 
 > [!IMPORTANT]
-> **Requiere actualización de aniversario**: para usar notificaciones de icono de seguimiento con aplicaciones de UWP basadas en C#, C++ o VB, debe tener como destino el SDK 14393 y ejecutar la compilación 14393 o posterior. En el caso de las aplicaciones para UWP basadas en JavaScript, debe tener como destino el SDK 17134 y ejecutar la compilación 17134 o posterior. 
+> **Requiere actualización de aniversario** : para usar notificaciones de icono de seguimiento con aplicaciones de UWP basadas en C#, C++ o VB, debe tener como destino el SDK 14393 y ejecutar la compilación 14393 o posterior. En el caso de las aplicaciones para UWP basadas en JavaScript, debe tener como destino el SDK 17134 y ejecutar la compilación 17134 o posterior. 
 
 
-> **API importantes**: [propiedad LaunchActivatedEventArgs. TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [clase TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+> **API importantes** : [propiedad LaunchActivatedEventArgs. TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [clase TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 
 ## <a name="how-it-works"></a>Cómo funciona
@@ -40,7 +40,7 @@ Las notificaciones de icono de seguimiento se suelen usar cuando se usa la cola 
 
 ## <a name="what-to-do-with-a-chaseable-tile-notifications"></a>Qué hacer con las notificaciones de un icono de seguimiento
 
-Lo más importante que hay que tener en cuenta es que en la mayoría de los escenarios **no debe navegar directamente a la notificación específica** que estaba en el icono cuando el usuario hizo clic en él. El icono dinámico se usa como punto de entrada para la aplicación. Puede haber dos escenarios en los que un usuario haga clic en el icono dinámico: (1) deseaba iniciar la aplicación normalmente, o (2) quería ver más información sobre una notificación específica que estaba en el icono dinámico. Dado que no hay ninguna manera de que el usuario indique explícitamente qué comportamiento quieren, la experiencia ideal es **iniciar la aplicación normalmente, asegurándose de que la notificación que vio el usuario es fácilmente reconocible**.
+Lo más importante que hay que tener en cuenta es que en la mayoría de los escenarios **no debe navegar directamente a la notificación específica** que estaba en el icono cuando el usuario hizo clic en él. El icono dinámico se usa como punto de entrada para la aplicación. Puede haber dos escenarios en los que un usuario haga clic en el icono dinámico: (1) deseaba iniciar la aplicación normalmente, o (2) quería ver más información sobre una notificación específica que estaba en el icono dinámico. Dado que no hay ninguna manera de que el usuario indique explícitamente qué comportamiento quieren, la experiencia ideal es **iniciar la aplicación normalmente, asegurándose de que la notificación que vio el usuario es fácilmente reconocible** .
 
 Por ejemplo, al hacer clic en el icono dinámico de la aplicación MSN News se inicia la aplicación normalmente: se muestra la Página principal o el artículo que el usuario ha leído anteriormente. Sin embargo, en la Página principal, la aplicación garantiza que la historia del icono dinámico sea fácilmente reconocible. De este modo, se admiten ambos escenarios: el escenario en el que solo quiere iniciar o reanudar la aplicación y el escenario en el que desea ver la historia específica.
 
@@ -49,7 +49,7 @@ Por ejemplo, al hacer clic en el icono dinámico de la aplicación MSN News se i
 
 En una carga de notificación, la propiedad arguments permite que la aplicación proporcione datos que puede usar para identificar posteriormente la notificación. Por ejemplo, los argumentos podrían incluir el identificador del caso, de modo que cuando se inicie, pueda recuperar y mostrar el caso. La propiedad acepta una cadena, que se puede serializar como se desea (cadena de consulta, JSON, etc.), pero normalmente se recomienda el formato de cadena de consulta, ya que es ligero y codifica XML de manera excelente.
 
-La propiedad se puede establecer en los elementos **TileVisual** y **TileBinding** , y se pondrá en cascada. Si desea los mismos argumentos en cada tamaño de mosaico, simplemente establezca los argumentos en el **TileVisual**. Si necesita argumentos específicos para tamaños de icono específicos, puede establecer los argumentos en elementos **TileBinding** individuales.
+La propiedad se puede establecer en los elementos **TileVisual** y **TileBinding** , y se pondrá en cascada. Si desea los mismos argumentos en cada tamaño de mosaico, simplemente establezca los argumentos en el **TileVisual** . Si necesita argumentos específicos para tamaños de icono específicos, puede establecer los argumentos en elementos **TileBinding** individuales.
 
 En este ejemplo se crea una carga de notificación que usa la propiedad arguments para que la notificación se pueda identificar más adelante. 
 
@@ -57,48 +57,48 @@ En este ejemplo se crea una carga de notificación que usa la propiedad argument
 // Uses the following NuGet packages
 // - Microsoft.Toolkit.Uwp.Notifications
 // - QueryString.NET
- 
+ 
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        // These arguments cascade down to Medium and Wide
-        Arguments = new QueryString()
-        {
-            { "action", "storyClicked" },
-            { "story", "201c9b1" }
-        }.ToString(),
- 
- 
-        // Medium tile
-        TileMedium = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                // Omitted
-            }
-        },
- 
- 
-        // Wide tile is same as Medium
-        TileWide = new TileBinding() { /* Omitted */ },
- 
- 
-        // Large tile is an aggregate of multiple stories
-        // and therefore needs different arguments
-        TileLarge = new TileBinding()
-        {
-            Arguments = new QueryString()
-            {
-                { "action", "storiesClicked" },
-                { "story", "43f939ag" },
-                { "story", "201c9b1" },
-                { "story", "d9481ca" }
-            }.ToString(),
- 
-            Content = new TileBindingContentAdaptive() { /* Omitted */ }
-        }
-    }
+    Visual = new TileVisual()
+    {
+        // These arguments cascade down to Medium and Wide
+        Arguments = new QueryString()
+        {
+            { "action", "storyClicked" },
+            { "story", "201c9b1" }
+        }.ToString(),
+ 
+ 
+        // Medium tile
+        TileMedium = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                // Omitted
+            }
+        },
+ 
+ 
+        // Wide tile is same as Medium
+        TileWide = new TileBinding() { /* Omitted */ },
+ 
+ 
+        // Large tile is an aggregate of multiple stories
+        // and therefore needs different arguments
+        TileLarge = new TileBinding()
+        {
+            Arguments = new QueryString()
+            {
+                { "action", "storiesClicked" },
+                { "story", "43f939ag" },
+                { "story", "201c9b1" },
+                { "story", "d9481ca" }
+            }.ToString(),
+ 
+            Content = new TileBindingContentAdaptive() { /* Omitted */ }
+        }
+    }
 };
 ```
 
@@ -116,26 +116,26 @@ Cada ShownTileNotification tiene una propiedad arguments. La propiedad arguments
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)
 {
-    // If the API is present (doesn't exist on 10240 and 10586)
-    if (ApiInformation.IsPropertyPresent(typeof(LaunchActivatedEventArgs).FullName, nameof(LaunchActivatedEventArgs.TileActivatedInfo)))
-    {
-        // If clicked on from tile
-        if (args.TileActivatedInfo != null)
-        {
-            // If tile notification(s) were present
-            if (args.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
-            {
-                // Get arguments from the notifications that were recently displayed
-                string[] allArgs = args.TileActivatedInfo.RecentlyShownNotifications
-                .Select(i => i.Arguments)
-                .ToArray();
- 
-                // TODO: Highlight each story in the app
-            }
-        }
-    }
- 
-    // TODO: Initialize app
+    // If the API is present (doesn't exist on 10240 and 10586)
+    if (ApiInformation.IsPropertyPresent(typeof(LaunchActivatedEventArgs).FullName, nameof(LaunchActivatedEventArgs.TileActivatedInfo)))
+    {
+        // If clicked on from tile
+        if (args.TileActivatedInfo != null)
+        {
+            // If tile notification(s) were present
+            if (args.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
+            {
+                // Get arguments from the notifications that were recently displayed
+                string[] allArgs = args.TileActivatedInfo.RecentlyShownNotifications
+                .Select(i => i.Arguments)
+                .ToArray();
+ 
+                // TODO: Highlight each story in the app
+            }
+        }
+    }
+ 
+    // TODO: Initialize app
 }
 ```
 
@@ -145,7 +145,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 Las aplicaciones de escritorio (por ejemplo, WPF, etc.) que usan el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), también pueden usar mosaicos de seguimiento. La única diferencia es el acceso a los argumentos Onlaunched. Tenga en cuenta que primero debe [empaquetar la aplicación con el puente de escritorio](/windows/msix/desktop/source-code-overview).
 
 > [!IMPORTANT]
-> **Requiere la actualización de octubre de 2018**: para usar la `AppInstance.GetActivatedEventArgs()` API, debe tener como destino el SDK 17763 y ejecutar la compilación 17763 o posterior.
+> **Requiere la actualización de octubre de 2018** : para usar la `AppInstance.GetActivatedEventArgs()` API, debe tener como destino el SDK 17763 y ejecutar la compilación 17763 o posterior.
 
 En el caso de las aplicaciones de escritorio, para tener acceso a los argumentos de inicio, haga lo siguiente...
 
@@ -165,19 +165,19 @@ static void Main()
             var launchArgs = args as LaunchActivatedEventArgs;
 
             // If clicked on from tile
-            if (launchArgs.TileActivatedInfo != null)
-            {
-                // If tile notification(s) were present
-                if (launchArgs.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
-                {
-                    // Get arguments from the notifications that were recently displayed
-                    string[] allTileArgs = launchArgs.TileActivatedInfo.RecentlyShownNotifications
-                    .Select(i => i.Arguments)
-                    .ToArray();
-     
-                    // TODO: Highlight each story in the app
-                }
-            }
+            if (launchArgs.TileActivatedInfo != null)
+            {
+                // If tile notification(s) were present
+                if (launchArgs.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
+                {
+                    // Get arguments from the notifications that were recently displayed
+                    string[] allTileArgs = launchArgs.TileActivatedInfo.RecentlyShownNotifications
+                    .Select(i => i.Arguments)
+                    .ToArray();
+     
+                    // TODO: Highlight each story in the app
+                }
+            }
     
             break;
 ```
@@ -189,31 +189,31 @@ Si utiliza XML sin formato en lugar de la biblioteca de notificaciones, este es 
 
 ```xml
 <tile>
-  <visual arguments="action=storyClicked&amp;story=201c9b1">
- 
-    <binding template="TileMedium">
-       
-      <text>Kitten learns how to drive a car...</text>
-      ... (omitted)
-     
-    </binding>
- 
-    <binding template="TileWide">
-      ... (same as Medium)
-    </binding>
-     
-    <!--Large tile is an aggregate of multiple stories-->
-    <binding
-      template="TileLarge"
-      arguments="action=storiesClicked&amp;story=43f939ag&amp;story=201c9b1&amp;story=d9481ca">
-   
-      <text>Can your dog understand what you're saying?</text>
-      ... (another story)
-      ... (one more story)
-   
-    </binding>
- 
-  </visual>
+  <visual arguments="action=storyClicked&amp;story=201c9b1">
+ 
+    <binding template="TileMedium">
+       
+      <text>Kitten learns how to drive a car...</text>
+      ... (omitted)
+     
+    </binding>
+ 
+    <binding template="TileWide">
+      ... (same as Medium)
+    </binding>
+     
+    <!--Large tile is an aggregate of multiple stories-->
+    <binding
+      template="TileLarge"
+      arguments="action=storiesClicked&amp;story=43f939ag&amp;story=201c9b1&amp;story=d9481ca">
+   
+      <text>Can your dog understand what you're saying?</text>
+      ... (another story)
+      ... (one more story)
+   
+    </binding>
+ 
+  </visual>
 </tile>
 ```
 

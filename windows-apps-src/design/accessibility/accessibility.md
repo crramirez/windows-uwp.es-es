@@ -1,5 +1,5 @@
 ---
-Description: Presenta los conceptos de accesibilidad relacionados con las aplicaciones de Windows.
+description: Presenta los conceptos de accesibilidad relacionados con las aplicaciones de Windows.
 ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: Accesibilidad
 label: Accessibility
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 67f98db338d201dd4ef80c7b5f265aba3f6fbfd4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f49c784dcd6ed8872753bf4aedd9e79718ccfd99
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216378"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032617"
 ---
 # <a name="accessibility"></a>Accesibilidad  
 
@@ -37,7 +37,7 @@ La accesibilidad es acerca de la creación de experiencias que hacen que la apli
 | [Requisitos de texto accesible](accessible-text-requirements.md) | En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria. En este tema también se describen los roles de automatización de la interfaz de usuario de Microsoft que pueden tener los elementos de texto en una aplicación de Windows y los procedimientos recomendados para el texto de los gráficos. |
 | [Procedimientos de accesibilidad que deben evitarse](practices-to-avoid.md) | Enumera las prácticas que se deben evitar si desea crear una aplicación de Windows accesible. |
 | [Automatización del mismo nivel personalizada](custom-automation-peers.md) | Describe el concepto de automatización del mismo nivel para la Automatización de la interfaz de usuario y cómo puedes proporcionar compatibilidad de automatización para tu propia clase de interfaz de usuario personalizada. |
-| [Interfaces y patrones de control](control-patterns-and-interfaces.md) | Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos. |
+| [Patrones e interfaces de control](control-patterns-and-interfaces.md) | Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos. |
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [**Windows. UI. Xaml. Automation**](/uwp/api/Windows.UI.Xaml.Automation) 

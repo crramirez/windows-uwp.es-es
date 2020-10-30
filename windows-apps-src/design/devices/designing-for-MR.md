@@ -1,6 +1,6 @@
 ---
-Description: Diseñe la aplicación para que tenga un aspecto correcto y funcione bien en realidad mixta.
-title: Diseño para la realidad mixta
+description: Diseñe la aplicación para que tenga un aspecto correcto y funcione bien en realidad mixta.
+title: 'Diseño para realidad mixta '
 ms.assetid: ''
 label: Designing for Mixed Reality
 template: detail.hbs
@@ -13,18 +13,18 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: c0b1ae069959e74239234ae5c9ba409fe7a65f23
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 225b91b20f35c974fca865cc4e94a96efceda84d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165979"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034378"
 ---
-# <a name="designing-for-mixed-reality"></a>Diseño para la realidad mixta
+# <a name="designing-for-mixed-reality"></a>Diseño para realidad mixta 
 
 Diseña tu aplicación para que tenga un buen aspecto en realidad mixta y aprovecha los nuevos métodos de entrada.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 La [realidad mixta](https://developer.microsoft.com/windows/mixed-reality/mixed_reality) es el resultado de mezclar el mundo físico con el mundo digital. El espectro de experiencias de realidad mixta incluye en un dispositivo extremo, como HoloLens (un dispositivo que combina contenido generado por el equipo con el mundo real) y, en el otro, una vista totalmente envolvente de la realidad virtual (como se ve con un casco de la realidad mixta de Windows). Vea [tipos de aplicaciones de realidad mixta](https://developer.microsoft.com/windows/mixed-reality/types_of_mixed_reality_apps) para ver ejemplos de cómo variarán las experiencias.
 
@@ -40,7 +40,7 @@ Una aplicación envolvente usa toda la presentación visible para el usuario y l
 
 Si va a crear aplicaciones envolventes, visite el [centro de desarrollo de la realidad mixta de Windows](https://developer.microsoft.com/mixed-reality) para obtener más información.
 
-Una aplicación 2D se ejecuta como una ventana plana tradicional dentro de la vista del usuario. En HoloLens, es decir, una vista anclada a la pared o un punto en el espacio de los usuarios en la sala de reuniones o la oficina del mundo real. En un casco de realidad mixta de Windows, la aplicación está anclada a una pared en la [Página principal de realidad mixta](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home) (a veces denominada *casa del acantilado*).
+Una aplicación 2D se ejecuta como una ventana plana tradicional dentro de la vista del usuario. En HoloLens, es decir, una vista anclada a la pared o un punto en el espacio de los usuarios en la sala de reuniones o la oficina del mundo real. En un casco de realidad mixta de Windows, la aplicación está anclada a una pared en la [Página principal de realidad mixta](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home) (a veces denominada *casa del acantilado* ).
 
 ![Varias aplicaciones que se ejecutan en realidad mixta](images/MR-multiple.png)
 
@@ -113,9 +113,9 @@ Al crear una aplicación para UWP que se usará potencialmente en una plataforma
 
 ![El texto que se muestra en las aplicaciones de realidad mixta debe ser grande.](images/MR-text.png)
 
-* [Su mirada es el mouse](https://developer.microsoft.com/windows/mixed-reality/gaze_targeting). Cuando el usuario mira algo, actúa como un evento **Touch Hover** , por lo que simplemente examinar un objeto puede desencadenar una interacción emergente involuntaria u otra interacción no deseada. Es posible que necesite detectar si la aplicación se está ejecutando actualmente en la realidad mixta y cambiar este comportamiento. Vea **compatibilidad con tiempo de ejecución**, a continuación. 
+* [Su mirada es el mouse](https://developer.microsoft.com/windows/mixed-reality/gaze_targeting). Cuando el usuario mira algo, actúa como un evento **Touch Hover** , por lo que simplemente examinar un objeto puede desencadenar una interacción emergente involuntaria u otra interacción no deseada. Es posible que necesite detectar si la aplicación se está ejecutando actualmente en la realidad mixta y cambiar este comportamiento. Vea **compatibilidad con tiempo de ejecución** , a continuación. 
 
-* Cuando un usuario mira algo o apunta con un controlador de movimiento, se producirá un evento de **desplazamiento táctil** . Se compone de un **PointerPoint** donde **PointerType** es **Touch**, pero **IsInContact** es **false**. Cuando se produce alguna forma de confirmación (por ejemplo, se presiona un botón A un botón, se presiona un dispositivo de clic, se presiona un desencadenador de control de movimiento o se "selecciona" la cabeza de reconocimiento de voz), se produce una **pulsación táctil** , con el **PointerPoint** que tiene **IsInContact** de ser **true**. Consulte [interacciones táctiles](../input/touch-interactions.md) para obtener más información sobre estos eventos de entrada.
+* Cuando un usuario mira algo o apunta con un controlador de movimiento, se producirá un evento de **desplazamiento táctil** . Se compone de un **PointerPoint** donde **PointerType** es **Touch** , pero **IsInContact** es **false** . Cuando se produce alguna forma de confirmación (por ejemplo, se presiona un botón A un botón, se presiona un dispositivo de clic, se presiona un desencadenador de control de movimiento o se "selecciona" la cabeza de reconocimiento de voz), se produce una **pulsación táctil** , con el **PointerPoint** que tiene **IsInContact** de ser **true** . Consulte [interacciones táctiles](../input/touch-interactions.md) para obtener más información sobre estos eventos de entrada.
 
 * Recuerde que la mirada no es tan precisa como el puntero del mouse. Los botones o los destinos del mouse más pequeños pueden causar frustración a los usuarios, por lo que cambiar el tamaño de los controles en consecuencia. Si están diseñados para tocar, funcionarán en una realidad mixta, pero puede que decida ampliar algunos botones en tiempo de ejecución. Consulte [actualización de la aplicación universal existente para Hololens](https://developer.microsoft.com/windows/mixed-reality/updating_your_existing_universal_app_for_hololens).
 

@@ -1,5 +1,5 @@
 ---
-Description: Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
+description: Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
 title: Interacciones de Surface Dial
 label: Surface Dial interactions
 template: detail.hbs
@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: fd21ca0a27979a5febbc5a3a76a02a1beb2138fd
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 641ea8a7c17e87086fe2d441b67c16e41fcaf6eb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763015"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033468"
 ---
 # <a name="surface-dial-interactions"></a>Interacciones de Surface Dial
 
 ![Imagen de Surface Dial con Surface Studio](images/windows-wheel/dial-pen-studio-600px.png)  
 *Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116)).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Los dispositivos de rueda de Windows, como el marcado de Surface, son una nueva categoría de dispositivo de entrada que habilita un host de experiencias de interacción de usuarios atractivas y únicas para aplicaciones Windows y Windows. 
 
@@ -40,9 +40,9 @@ Los dispositivos de rueda de Windows, como el marcado de Surface, son una nueva 
    :::column-end:::
 :::row-end:::
 
-Con un factor de forma que se basa en una acción (o gesto) de *giro*, Surface Dial se ha diseñado como un dispositivo de entrada secundario multimodal que complementa la entrada de un dispositivo principal. En la mayoría de los casos, el dispositivo se manipula con la mano no dominante del usuario mientras realiza una tarea con la mano dominante (por ejemplo, una entrada manuscrita con un lápiz). No está diseñado como una entrada de puntero de precisión (por ejemplo, entrada táctil, lápiz o mouse). 
+Con un factor de forma que se basa en una acción (o gesto) de *giro* , Surface Dial se ha diseñado como un dispositivo de entrada secundario multimodal que complementa la entrada de un dispositivo principal. En la mayoría de los casos, el dispositivo se manipula con la mano no dominante del usuario mientras realiza una tarea con la mano dominante (por ejemplo, una entrada manuscrita con un lápiz). No está diseñado como una entrada de puntero de precisión (por ejemplo, entrada táctil, lápiz o mouse). 
 
-Surface Dial también admite una acción de *pulsar y sostener* y una acción de *hacer clic*. Pulsar y sostener tiene una única función: mostrar un menú de comandos. Si el menú está activo, este procesa la entrada de girar y hacer clic. De lo contrario, la entrada se pasa a la aplicación para su procesamiento. 
+Surface Dial también admite una acción de *pulsar y sostener* y una acción de *hacer clic* . Pulsar y sostener tiene una única función: mostrar un menú de comandos. Si el menú está activo, este procesa la entrada de girar y hacer clic. De lo contrario, la entrada se pasa a la aplicación para su procesamiento. 
 
 **Al igual que con todos los dispositivos de entrada de Windows, puedes personalizar y adaptar la experiencia de interacción de Surface Dial para que se ajuste a la funcionalidad de tus aplicaciones.**
 
@@ -74,7 +74,7 @@ Esta colección de herramientas integradas se adapta al contexto actual del sist
 - Una herramienta de brillo del sistema cuando el usuario está en el escritorio de Windows
 - Una herramienta de pista anterior/siguiente cuando se están reproduciendo elementos multimedia
 
-Además de esta compatibilidad de plataforma general, Surface Dial también está estrechamente integrado con los controles de plataforma de Windows Ink ([**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) e [**InkToolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)).
+Además de esta compatibilidad de plataforma general, Surface Dial también está estrechamente integrado con los controles de plataforma de Windows Ink ( [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) e [**InkToolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)).
 
 ![Surface Dial con Lápiz para Surface](images/windows-wheel/dial-and-pen-400px.png)  
 *Surface Dial con Lápiz para Surface*
@@ -94,7 +94,7 @@ Cuando se abre el menú Surface Dial en una aplicación de entrada manuscrita qu
 
 ## <a name="user-customization"></a>Personalización del usuario
 
-Los usuarios pueden personalizar algunos aspectos de su experiencia con el Dial a través de la página **Configuración de Windows -> Dispositivos -> Rueda**, incluidas las herramientas predeterminadas, la vibración (o comentarios hápticos) y la mano de escribir (o dominante). 
+Los usuarios pueden personalizar algunos aspectos de su experiencia con el Dial a través de la página **Configuración de Windows -> Dispositivos -> Rueda** , incluidas las herramientas predeterminadas, la vibración (o comentarios hápticos) y la mano de escribir (o dominante). 
 
 Cuando quieras personalizar la experiencia del usuario de Surface Dial, siempre debes asegurarte de que una determinada función o comportamiento está disponible y habilitado por el usuario.
 
@@ -212,7 +212,7 @@ En este ejemplo, agregamos una herramienta personalizada básica que pasa los da
 
    Después, anexamos ese elemento a la colección de elementos de menú.
 
-   Declaramos los controladores de eventos de entrada ([**ButtonClicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) y [**RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged)) para el objeto [**RadialController**](/uwp/api/Windows.UI.Input.RadialController).
+   Declaramos los controladores de eventos de entrada ( [**ButtonClicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) y [**RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged)) para el objeto [**RadialController**](/uwp/api/Windows.UI.Input.RadialController).
 
    Por último, definimos los controladores de eventos.
 
@@ -328,7 +328,7 @@ Surface Dial está diseñado principalmente para admitir la rotación para las i
 El dispositivo se puede girar hacia la derecha y hacia la izquierda, y también puedes proporcionar comentarios hápticos para indicar distancias discretas.
 
 > [!NOTE]
-> El usuario puede deshabilitar los comentarios hápticos en la página **Configuración de Windows -> Dispositivos -> Rueda**.
+> El usuario puede deshabilitar los comentarios hápticos en la página **Configuración de Windows -> Dispositivos -> Rueda** .
 
 #### <a name="ux-guidance-for-custom-interactions"></a>Guía de experiencia del usuario para interacciones personalizadas
 
@@ -338,7 +338,7 @@ Los comentarios hápticos coinciden con la sensibilidad rotacional de la herrami
 
 **La mano dominante no debería afectar a las interacciones basadas en la rotación**
 
-Surface Dial no puede detectar qué mano se está usando, pero el usuario puede establecer la escritura manuscrita (o la mano dominante) en **Configuración de Windows -> Dispositivo -> Lápiz y Windows Ink**.
+Surface Dial no puede detectar qué mano se está usando, pero el usuario puede establecer la escritura manuscrita (o la mano dominante) en **Configuración de Windows -> Dispositivo -> Lápiz y Windows Ink** .
 
 **La configuración regional se debería tener en cuenta para todas las interacciones de rotación**
 
@@ -350,7 +350,7 @@ Las herramientas y comandos integrados en el menú del Dial siguen estas directr
    :::column:::
       Left
 
-      Subir
+      Arriba
 
       Fuera 
    :::column-end:::
@@ -369,12 +369,12 @@ Las herramientas y comandos integrados en el menú del Dial siguen estas directr
 | Dirección conceptual | Asignación a Surface Dial | Rotación en sentido del reloj | Rotación en sentido contrario a las agujas del reloj |
 | --- | --- | --- | --- |
 | Horizontal | Asignación de izquierda y derecha basada en la parte superior de Surface Dial | Right | Left |
-| Vertical | Asignación de arriba y abajo basada en el lado izquierdo de Surface Dial | Bajar | Subir |
+| Vertical | Asignación de arriba y abajo basada en el lado izquierdo de Surface Dial | Bajar | Arriba |
 | Eje z | Acercar (o más cerca) asignado a arriba/derecha<br/>Alejar (o más lejos) asignado a abajo/izquierda | En | Fuera |
 
 #### <a name="developer-guidance"></a>Instrucciones para desarrolladores
 
-A medida que el usuario gira el dispositivo, se desencadenan los eventos de [**RadialController.RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged) en función de una variación diferencial ([**RadialControllerRotationChangedEventArgs.RotationDeltaInDegrees**](/uwp/api/windows.ui.input.radialcontrollerrotationchangedeventargs.rotationdeltaindegrees)) con respecto a la dirección de giro. La sensibilidad (o resolución) de los datos se puede establecer con la propiedad [**RadialController.RotationResolutionInDegrees**](/uwp/api/windows.ui.input.radialcontroller.rotationresolutionindegrees).
+A medida que el usuario gira el dispositivo, se desencadenan los eventos de [**RadialController.RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged) en función de una variación diferencial ( [**RadialControllerRotationChangedEventArgs.RotationDeltaInDegrees**](/uwp/api/windows.ui.input.radialcontrollerrotationchangedeventargs.rotationdeltaindegrees)) con respecto a la dirección de giro. La sensibilidad (o resolución) de los datos se puede establecer con la propiedad [**RadialController.RotationResolutionInDegrees**](/uwp/api/windows.ui.input.radialcontroller.rotationresolutionindegrees).
 
 > [!NOTE]
 > De manera predeterminada, un evento de entrada rotacional se entrega a un objeto [**RadialController**](/uwp/api/Windows.UI.Input.RadialController) solo cuando el dispositivo se gira un mínimo de 10 grados. Cada evento de entrada hace que el dispositivo vibre.
@@ -458,7 +458,7 @@ El dispositivo (y el cuerpo del usuario) pueden tapar partes críticas de la int
 
 Además de la oclusión de hardware, la mano o el brazo de un usuario pueden ocultar parte de la pantalla al usar el dispositivo.
 
-El área que queda oculta depende de la mano que se esté usando con el dispositivo. Como el dispositivo está diseñado para usarse principalmente con la mano no dominante, se debe ajustar la interfaz de usuario relacionada con Surface Dial a la mano opuesta a la especificada por el usuario (opción **Configuración de Windows > Dispositivo > Lápiz y Windows Ink > Elige la mano con la que escribes**).
+El área que queda oculta depende de la mano que se esté usando con el dispositivo. Como el dispositivo está diseñado para usarse principalmente con la mano no dominante, se debe ajustar la interfaz de usuario relacionada con Surface Dial a la mano opuesta a la especificada por el usuario (opción **Configuración de Windows > Dispositivo > Lápiz y Windows Ink > Elige la mano con la que escribes** ).
 
 **Las interacciones deben responder a la posición de Surface Dial en lugar de al movimiento**
 
@@ -470,11 +470,11 @@ Configurar la herramienta activa en base al contexto de la interfaz de usuario, 
 
 #### <a name="developer-guidance"></a>Instrucciones para desarrolladores
 
-Cuando Surface Dial se coloca en la superficie digitalizadora de Studio Surface, se desencadena un evento [**RadialController.ScreenContactStarted**](/uwp/api/windows.ui.input.radialcontroller.screencontactstarted) y se proporciona la información de contacto ([**RadialControllerScreenContactStartedEventArgs.Contact**](/uwp/api/windows.ui.input.radialcontrollerscreencontactstartedeventargs.contact)) a la aplicación.
+Cuando Surface Dial se coloca en la superficie digitalizadora de Studio Surface, se desencadena un evento [**RadialController.ScreenContactStarted**](/uwp/api/windows.ui.input.radialcontroller.screencontactstarted) y se proporciona la información de contacto ( [**RadialControllerScreenContactStartedEventArgs.Contact**](/uwp/api/windows.ui.input.radialcontrollerscreencontactstartedeventargs.contact)) a la aplicación.
 
-Del mismo modo, si se hace clic en Surface Dial cuando está en contacto con la superficie del digitalizador de Studio Surface, un [**RadialController.ButtonClicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) se desencadena el evento y la información de contacto ([**RadialControllerButtonClickedEventArgs.Contact**](/uwp/api/windows.ui.input.radialcontrollerbuttonclickedeventargs.contact)) se proporciona a la aplicación. 
+Del mismo modo, si se hace clic en Surface Dial cuando está en contacto con la superficie del digitalizador de Studio Surface, un [**RadialController.ButtonClicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) se desencadena el evento y la información de contacto ( [**RadialControllerButtonClickedEventArgs.Contact**](/uwp/api/windows.ui.input.radialcontrollerbuttonclickedeventargs.contact)) se proporciona a la aplicación. 
 
-La información de contacto ([**RadialControllerScreenContact**](/uwp/api/Windows.UI.Input.RadialControllerScreenContact)) incluye las coordenadas X/Y del centro de Surface Dial en el espacio de coordenadas de la aplicación ([**RadialControllerScreenContact.Position**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.position)), así como el rectángulo delimitador ([**RadialControllerScreenContact.Bounds**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.bounds)) en píxeles independientes del dispositivo (DIP). Esta información es muy útil para proporcionar contexto a la herramienta activa y proporcionar al usuario comentarios visuales relacionados con el dispositivo.
+La información de contacto ( [**RadialControllerScreenContact**](/uwp/api/Windows.UI.Input.RadialControllerScreenContact)) incluye las coordenadas X/Y del centro de Surface Dial en el espacio de coordenadas de la aplicación ( [**RadialControllerScreenContact.Position**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.position)), así como el rectángulo delimitador ( [**RadialControllerScreenContact.Bounds**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.bounds)) en píxeles independientes del dispositivo (DIP). Esta información es muy útil para proporcionar contexto a la herramienta activa y proporcionar al usuario comentarios visuales relacionados con el dispositivo.
 
 En el siguiente ejemplo, hemos creado una aplicación básica con cuatro secciones diferentes, cada una de ellas incluye un control deslizante y un botón de alternancia. A continuación, usamos la posición en pantalla de Surface Dial para dictar qué conjunto de controles deslizantes y botones de alternancia está controlado por Surface Dial.
 

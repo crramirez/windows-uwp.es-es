@@ -1,5 +1,5 @@
 ---
-Description: Proporciona una lista de comprobación para ayudarle a asegurarse de que la aplicación de Windows esté accesible.
+description: Proporciona una lista de comprobación para ayudarle a asegurarse de que la aplicación de Windows esté accesible.
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
 title: Lista de comprobación de accesibilidad
 label: Accessibility checklist
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6b9340f55064ff89c0b047cbb6d7407574da3d6
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: fd16c93b3914987741a486e4f40d4b60e0b274ee
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216398"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032718"
 ---
 # <a name="accessibility-checklist"></a>Lista de comprobación de accesibilidad
 
@@ -41,10 +41,10 @@ Aquí proporcionamos una lista de comprobación que te ayudará a garantizar que
 
 3. Asegurarse de que el texto es de tamaño legible
 
-    * Windows incluye varias herramientas de accesibilidad y configuraciones en las que los usuarios pueden aprovechar las ventajas y adaptarse a sus propias necesidades y preferencias para leer texto. Entre ellas se incluyen las siguientes:
+    * Windows incluye varias herramientas de accesibilidad y configuraciones en las que los usuarios pueden aprovechar las ventajas y adaptarse a sus propias necesidades y preferencias para leer texto. Se incluyen los siguientes:
         * La herramienta ampliador, que amplía un área seleccionada de la interfaz de usuario. Debe asegurarse de que el diseño de texto de la aplicación no dificulta el uso de la lupa para la lectura.
-        * Configuración de escala y resolución global en **configuración->>de pantalla->de la escala y el diseño**. Exactamente las opciones de ajuste de tamaño disponibles pueden variar, ya que depende de las capacidades del dispositivo de pantalla.
-        * Configuración de tamaño de texto en **Configuración: >la facilidad de acceso >pantalla**. Ajuste la configuración de **hacer que el texto sea más grande** para especificar solo el tamaño del texto en los controles auxiliares en todas las aplicaciones y pantallas (todos los controles de texto de UWP admiten la experiencia de escalado de texto sin ninguna personalización o plantilla).
+        * Configuración de escala y resolución global en **configuración->>de pantalla->de la escala y el diseño** . Exactamente las opciones de ajuste de tamaño disponibles pueden variar, ya que depende de las capacidades del dispositivo de pantalla.
+        * Configuración de tamaño de texto en **Configuración: >la facilidad de acceso >pantalla** . Ajuste la configuración de **hacer que el texto sea más grande** para especificar solo el tamaño del texto en los controles auxiliares en todas las aplicaciones y pantallas (todos los controles de texto de UWP admiten la experiencia de escalado de texto sin ninguna personalización o plantilla).
         > [!NOTE]
         > La configuración **hacer todo es mayor permite que** un usuario especifique su tamaño preferido para el texto y las aplicaciones en general solo en su pantalla principal.
 

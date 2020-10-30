@@ -1,5 +1,5 @@
 ---
-Description: Diseñe la aplicación para que esté preparada para el uso global mediante el formato adecuado de fechas, horas, números, números de teléfono y monedas. Después podrá adaptar su aplicación para obtener más referencias culturales, regiones y idiomas en el mercado mundial.
+description: Diseñe la aplicación para que esté preparada para el uso global mediante el formato adecuado de fechas, horas, números, números de teléfono y monedas. Después podrá adaptar su aplicación para obtener más referencias culturales, regiones y idiomas en el mercado mundial.
 title: Globalizar los formatos de fecha, hora y número
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 798199269a4fd02eebef7dcd46cd5781ba561250
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 8c3bacbfbbe944cddfe014fcd34038ca9a56c36e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493430"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034348"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a>Globalizar los formatos de fecha, hora y número
 
@@ -24,7 +24,7 @@ Al crear la aplicación, si cree una idea más amplia que un único idioma y una
 
 Las distintas regiones y referencias culturales usan diferentes formatos de fecha y hora. Incluyen convenciones para el orden del día y el mes de la fecha, para la separación de horas y minutos en el tiempo, e incluso para qué puntuación se usa como separador. Además, las fechas se pueden mostrar en varios formatos largos ("miércoles, 28 de marzo de 2012") o formatos cortos ("3/28/12"), que varían en las referencias culturales. Y, por supuesto, los nombres y las abreviaturas de los días de la semana y los meses del año difieren entre los idiomas.
 
-Puede obtener una vista previa de los formatos usados para los distintos idiomas. Vaya a **configuración**  >  **hora &**  >  **región de idioma & idioma**y haga clic en **fecha adicional, hora, & configuración regional**  >  **cambiar los formatos de fecha, hora o número**. En la pestaña **formatos** , seleccione un idioma en la lista desplegable **formato** y obtenga una vista previa de los formatos en **ejemplos**.
+Puede obtener una vista previa de los formatos usados para los distintos idiomas. Vaya a **configuración**  >  **hora &**  >  **región de idioma & idioma** y haga clic en **fecha adicional, hora, & configuración regional**  >  **cambiar los formatos de fecha, hora o número** . En la pestaña **formatos** , seleccione un idioma en la lista desplegable **formato** y obtenga una vista previa de los formatos en **ejemplos** .
 
 En este tema se usan los términos "lista de lenguaje de Perfil de usuario", "lista de idiomas del manifiesto de la aplicación" y "lista de idiomas del tiempo de ejecución de la aplicación". Para obtener información detallada sobre exactamente lo que significan esos términos y cómo obtener acceso a sus valores, consulte comprender los lenguajes de [Perfil de usuario y los lenguajes de manifiesto de aplicación](manage-language-and-region.md).
 
@@ -52,7 +52,7 @@ Si necesita mostrar fechas u horas usted mismo, puede usar la clase [**DateTimeF
 Puede probar el código anterior en su propio equipo, como este.
 
 - Asegúrese de que tiene archivos de recursos en el proyecto calificados para "en-US" y "de-DE" (consulte [adaptar los recursos para el idioma, la escala, el contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)).
-- Cambie la lista de idiomas de Perfil de usuario en **configuración**  >  **hora & región de idioma**  >  **&**  >  **idiomas**. Agregue el alemán (Alemania), conviértalo en el valor predeterminado y vuelva a ejecutar el código.
+- Cambie la lista de idiomas de Perfil de usuario en **configuración**  >  **hora & región de idioma**  >  **&**  >  **idiomas** . Agregue el alemán (Alemania), conviértalo en el valor predeterminado y vuelva a ejecutar el código.
 
 ## <a name="format-dates-and-times-for-the-user-profile-language-list"></a>Dar formato a las fechas y horas para la lista de idiomas del perfil de usuario
 
@@ -104,7 +104,7 @@ En este ejemplo se muestra cómo mostrar monedas tanto por Perfil de usuario com
                     "Formatted Euro (fr-FR defaults): " + currencyValueEuroFR;
 ```
 
-Para probar el código anterior en su propio equipo, cambie el país o región en **configuración**  >  **hora & región de idioma**  >  **&**  >  **país o región**de idioma. Elija un país o región (quizás Islandia) y vuelva a ejecutar el código.
+Para probar el código anterior en su propio equipo, cambie el país o región en **configuración**  >  **hora & región de idioma**  >  **&**  >  **país o región** de idioma. Elija un país o región (quizás Islandia) y vuelva a ejecutar el código.
 
 ## <a name="use-a-culturally-appropriate-calendar"></a>Usa un calendario apropiado culturalmente
 
@@ -151,7 +151,7 @@ En el ejemplo siguiente se muestra cómo usar **PhoneNumberFormatter** para dar 
     }
 ```    
 
-Para probar el código anterior en su propio equipo, cambie el país o región en **configuración**  >  **hora & región de idioma**  >  **&**  >  **país o región**de idioma. Elija un país o región (quizás Nueva Zelanda para confirmar que los formatos coinciden) y vuelva a ejecutar el código. En el caso de los datos de prueba, puede realizar una búsqueda web para el número de teléfono de una empresa en Nueva Zelanda.
+Para probar el código anterior en su propio equipo, cambie el país o región en **configuración**  >  **hora & región de idioma**  >  **&**  >  **país o región** de idioma. Elija un país o región (quizás Nueva Zelanda para confirmar que los formatos coinciden) y vuelva a ejecutar el código. En el caso de los datos de prueba, puede realizar una búsqueda web para el número de teléfono de una empresa en Nueva Zelanda.
 
 ## <a name="the-users-language-and-cultural-preferences"></a>El idioma y las preferencias culturales del usuario
 
@@ -161,13 +161,13 @@ En el caso de los escenarios en los que desea proporcionar una funcionalidad dif
 
 * [DateTimeFormatter](/uwp/api/windows.globalization.datetimeformatting?branch=live)
 * [NumberFormatting](/uwp/api/windows.globalization.numberformatting?branch=live)
-* [Natural](/uwp/api/windows.globalization.calendar?branch=live)
+* [Calendario](/uwp/api/windows.globalization.calendar?branch=live)
 * [PhoneNumberFormatting](/uwp/api/windows.globalization.phonenumberformatting?branch=live)
 * [GlobalizationPreferences](/uwp/api/windows.system.userprofile.globalizationpreferences?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [calendario, controles de fecha y hora](../controls-and-patterns/date-and-time.md)
+* [Calendario, controles de fecha y hora](../controls-and-patterns/date-and-time.md)
 * [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](manage-language-and-region.md)
 * [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
 

@@ -1,5 +1,5 @@
 ---
-Description: En este tema se describe la nueva interfaz de usuario de Windows para seleccionar y manipular texto, imágenes y controles, y se proporcionan instrucciones para la experiencia del usuario que deben tenerse en cuenta al usar estos nuevos mecanismos de selección y manipulación en la aplicación de Windows.
+description: En este tema se describe la nueva interfaz de usuario de Windows para seleccionar y manipular texto, imágenes y controles, y se proporcionan instrucciones para la experiencia del usuario que deben tenerse en cuenta al usar estos nuevos mecanismos de selección y manipulación en la aplicación de Windows.
 title: Seleccionar texto e imágenes
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
@@ -8,19 +8,19 @@ keywords: teclado,texto,entrada,interacciones del usuario
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 179eeffd014cb614fb5314826068d9690fc29807
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 0b7954ec21b2282700352b94e7a84bf6914d7f9c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216978"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032858"
 ---
 # <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
 
 
 En este artículo se describen la selección y la manipulación de texto, imágenes y controles, y se ofrecen directrices sobre la experiencia del usuario que debes tener en cuenta al usar estos mecanismos en las aplicaciones.
 
-> **API importantes**: [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input), [**Windows. UI. Input**](/uwp/api/Windows.UI.Input)
+> **API importantes** : [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input), [**Windows. UI. Input**](/uwp/api/Windows.UI.Input)
  
 
 
@@ -78,9 +78,9 @@ En las imágenes siguientes se muestra cómo invocar el menú contextual pulsand
 
 ![pulsa (o pulsa y sostén) dentro de la selección o en una barra de redimensionamiento para invocar el menú contextual.](images/textselection-show-context.png)
 
-**Nota:**    Estas interacciones varían en cierto modo en el caso de una palabra mal escrita. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
+**Nota** Estas interacciones presentan cierta variación en el caso de una palabra con errores ortográficos. Si pulsas una palabra marcada por tener errores ortográficos, la palabra se resalta y se invoca el menú contextual con la ortografía sugerida.
 
- 
+ 
 
 **Contenido no modificable**
 

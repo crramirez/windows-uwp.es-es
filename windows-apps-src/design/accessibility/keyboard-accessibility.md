@@ -1,5 +1,5 @@
 ---
-Description: Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla.
+description: Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla.
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Accesibilidad de teclado
 label: Keyboard accessibility
@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c6fc039ad29fc7c29e609788983274c5342951c2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 79dd977cda50d8573cfeab2628ab6227cc9309c0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174009"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032508"
 ---
 # <a name="keyboard-accessibility"></a>Accesibilidad de teclado  
 
@@ -52,14 +52,14 @@ XAML
 </Grid>
 ```
 
-Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop **](/uwp/api/windows.ui.xaml.controls.control.istabstop)**false**.
+Es posible que quieras excluir un control del orden de tabulación. Por lo general, esto se logra convirtiendo el control a no interactivo, por ejemplo, configurando la propiedad [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) en **false** Un control deshabilitado se excluye automáticamente del orden de tabulación. Pero, en ocasiones, quizá quieras excluir un control del orden de tabulación incluso si no está deshabilitado. En este caso, puedes establecer la propiedad [**IsTabStop**](/uwp/api/windows.ui.xaml.controls.control.istabstop)**false** .
 
 Todos los elementos que pueden tener foco suelen estar en el orden de tabulación de manera predeterminada. La excepción es que es posible que ciertos tipos de presentación de texto como [**RichTextBlock**](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) tengan foco con el fin de que el portapapeles pueda acceder a ellos para seleccionar texto; sin embargo, no se encuentran en el orden de tabulación porque no se espera que los elementos de texto estático estén en el orden de tabulación. No suelen ser interactivos (pueden invocarse y no requieren entrada de texto, pero no admiten el [patrón de control de texto](/windows/desktop/WinAuto/uiauto-controlpatternsoverview) que admite la búsqueda y el ajuste de puntos de selección en el texto). El texto no debe dar a entender que, si se coloca el foco en él, pueda existir la posibilidad de realizar alguna actividad. Las tecnologías de asistencia seguirán detectando los elementos de texto y los lectores de pantalla los leerán en voz alta, pero esto dependerá de otro tipo de técnicas que no tienen que ver con encontrar estos elementos en el orden de tabulación práctico.
 
 Tanto si ajustas los valores [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex) como si usas el orden predeterminado, se aplicarán las siguientes reglas:
 
 * Los elementos de la interfaz de usuario con [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex) igual a 0 se añaden al orden de tabulación según el orden de declaración en XAML o colecciones secundarias.
-* Los elementos de la interfaz de usuario con una propiedad [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex) mayor que 0 se añaden al orden de tabulación según el valor **TabIndex**.
+* Los elementos de la interfaz de usuario con una propiedad [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex) mayor que 0 se añaden al orden de tabulación según el valor **TabIndex** .
 * Los elementos de la interfaz de usuario con una propiedad [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex) menor que 0 se añaden al orden de tabulación y aparecen antes de cualquier valor cero. Esto difiere potencialmente de la administración del atributo **tabindex** de HTML (y el **tabindex** negativo no se admitía en especificaciones HTML más antiguas).
 
 <span id="keyboard_navigation_within_a_UI_element"/>
@@ -155,7 +155,7 @@ Para obtener más información sobre la implementación de las teclas de método
 <span id="IMPLEMENTING_A_KEY_EVENT_HANDLER"/>
 
 ### <a name="implementing-a-key-event-handler"></a>Implementar un controlador de eventos de tecla  
-Los eventos de entrada como los eventos de tecla usan un concepto de evento denominado *eventos enrutados*. Un evento enrutado se puede propagar por los elementos secundarios de un control compuesto, lo que permite a un control primario controlar los eventos de varios elementos secundarios. Este modelo de evento es conveniente para definir acciones de teclas de método abreviado en un control que contenga varias partes compuestas que no estén diseñadas para admitir foco ni para formar parte del orden de tabulación.
+Los eventos de entrada como los eventos de tecla usan un concepto de evento denominado *eventos enrutados* . Un evento enrutado se puede propagar por los elementos secundarios de un control compuesto, lo que permite a un control primario controlar los eventos de varios elementos secundarios. Este modelo de evento es conveniente para definir acciones de teclas de método abreviado en un control que contenga varias partes compuestas que no estén diseñadas para admitir foco ni para formar parte del orden de tabulación.
 
 Para ver un ejemplo de código que muestra cómo escribir un controlador de eventos de clave que incluye la comprobación de modificadores como la tecla Ctrl, consulte [interacciones](../input/keyboard-interactions.md)con el teclado.
 
@@ -173,7 +173,7 @@ Por lo general, para implementar un control de teclas personalizado para control
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
 
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Un ejemplo de un estado visual para un indicador de foco  
-Ya hemos mencionado que los controles personalizados que el usuario habilite para que tengan el foco deben tener un indicador de foco visual. Normalmente, ese indicador de foco es tan simple como dibujar un rectángulo justo alrededor del rectángulo de límite normal del control. La clase [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) del foco visual es un elemento del mismo nivel que el resto de la composición del control en una plantilla de control, pero se establece inicialmente con un valor [**Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility) en **Collapsed** porque el control aún no tiene el foco. Después, cuando el control obtiene el foco, se invoca un estado visual que establece específicamente el valor de **Visibility** en **Visible**. Una vez que el foco se mueve en otro lugar, se llama a otro estado visual y se **contrae**la **visibilidad** .
+Ya hemos mencionado que los controles personalizados que el usuario habilite para que tengan el foco deben tener un indicador de foco visual. Normalmente, ese indicador de foco es tan simple como dibujar un rectángulo justo alrededor del rectángulo de límite normal del control. La clase [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) del foco visual es un elemento del mismo nivel que el resto de la composición del control en una plantilla de control, pero se establece inicialmente con un valor [**Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility) en **Collapsed** porque el control aún no tiene el foco. Después, cuando el control obtiene el foco, se invoca un estado visual que establece específicamente el valor de **Visibility** en **Visible** . Una vez que el foco se mueve en otro lugar, se llama a otro estado visual y se **contrae** la **visibilidad** .
 
 Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay distintos aspectos potenciales según el tema seleccionado por el usuario (en especial si el usuario usa un modo de contraste alto). Si usas los controles XAML en la interfaz de usuario y no reemplazas las plantillas de control, no tienes que hacer nada más para obtener indicadores de foco visual en los controles que se comportan y se muestran correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
 
@@ -232,7 +232,7 @@ XAML
 </ControlTemplate>
 ```
 
-Ten en cuenta que solo uno de los estados con nombre ajusta la propiedad [**Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility) directamente mientras que los demás están aparentemente vacíos. El funcionamiento de los estados visuales es que en cuanto el control usa otro estado del mismo [**VisualStateGroup**](/uwp/api/Windows.UI.Xaml.VisualStateGroup), se cancelan inmediatamente las animaciones aplicadas por el estado anterior. Debido a que el valor predeterminado de **Visibility** de la composición es **Collapsed**, el rectángulo no aparecerá. Esto se controla con la lógica de control, mediante la escucha de eventos de foco como [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) y la modificación de los estados a [**GoToState**](/uwp/api/windows.ui.xaml.visualstatemanager.gotostate). A menudo esto se realiza automáticamente si usas un control predeterminado o personalizado, basado en un control que ya tenga ese comportamiento.
+Ten en cuenta que solo uno de los estados con nombre ajusta la propiedad [**Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility) directamente mientras que los demás están aparentemente vacíos. El funcionamiento de los estados visuales es que en cuanto el control usa otro estado del mismo [**VisualStateGroup**](/uwp/api/Windows.UI.Xaml.VisualStateGroup), se cancelan inmediatamente las animaciones aplicadas por el estado anterior. Debido a que el valor predeterminado de **Visibility** de la composición es **Collapsed** , el rectángulo no aparecerá. Esto se controla con la lógica de control, mediante la escucha de eventos de foco como [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) y la modificación de los estados a [**GoToState**](/uwp/api/windows.ui.xaml.visualstatemanager.gotostate). A menudo esto se realiza automáticamente si usas un control predeterminado o personalizado, basado en un control que ya tenga ese comportamiento.
 
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>

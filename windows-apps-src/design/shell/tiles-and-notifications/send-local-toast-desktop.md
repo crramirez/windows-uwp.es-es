@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo las aplicaciones de C# de escritorio pueden enviar notificaciones del sistema local y controlar el usuario al hacer clic en la notificación del sistema.
+description: Obtenga información sobre cómo las aplicaciones de C# de escritorio pueden enviar notificaciones del sistema local y controlar el usuario al hacer clic en la notificación del sistema.
 title: Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Send a local toast notification from desktop C# apps
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: 'Windows 10, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar un sistema local, un puente de escritorio, msix, paquetes dispersos, C#, C Sharp, notificación del sistema, WPF, enviar notificación del sistema WPF, enviar notificación del sistema de notificaciones del sistema en c#, enviar notificaciones de notificación de #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fa6b23e775beee993051b23b828c59316ac1382
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: cb91a76db38623b533a925ea1df4728bc0fead78
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100303"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034478"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 
@@ -60,7 +60,7 @@ A continuación, debe registrarse con la plataforma de notificación. Hay pasos 
 
 #### <a name="msixsparse-packages"></a>[Paquetes MSIX/dispersos](#tab/msix-sparse)
 
-Si usa un paquete [MSIX](/windows/msix/desktop/source-code-overview) o [disperso](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest**, agregue:
+Si usa un paquete [MSIX](/windows/msix/desktop/source-code-overview) o [disperso](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest** , agregue:
 
 1. Declaración de **xmlns: com**
 2. Declaración de **xmlns: Desktop**
@@ -162,7 +162,7 @@ DesktopNotificationManagerCompat.RegisterActivator<MyNotificationActivator>();
 
 ## <a name="step-5-send-a-notification"></a>Paso 5: envío de una notificación
 
-El envío de una notificación es idéntico a las aplicaciones para UWP, salvo que usará la clase **DesktopNotificationManagerCompat** para crear un **ToastNotifier**. La biblioteca de compatibilidad controla automáticamente la diferencia entre el paquete MSIX/disperso y el escritorio clásico, por lo que no tiene que bifurcar el código. En el caso del escritorio clásico, la biblioteca de compatibilidad almacena en caché el AUMID que proporcionó al llamar a **RegisterAumidAndComServer** para que no tenga que preocuparse de Cuándo proporcionar o no el AUMID.
+El envío de una notificación es idéntico a las aplicaciones para UWP, salvo que usará la clase **DesktopNotificationManagerCompat** para crear un **ToastNotifier** . La biblioteca de compatibilidad controla automáticamente la diferencia entre el paquete MSIX/disperso y el escritorio clásico, por lo que no tiene que bifurcar el código. En el caso del escritorio clásico, la biblioteca de compatibilidad almacena en caché el AUMID que proporcionó al llamar a **RegisterAumidAndComServer** para que no tenga que preocuparse de Cuándo proporcionar o no el AUMID.
 
 > [!NOTE]
 > Instale la [biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para que pueda construir notificaciones mediante C#, tal y como se muestra a continuación, en lugar de usar XML sin formato.
@@ -351,7 +351,7 @@ Si ha instalado el paquete MSIX o disperso y la aplicación de escritorio clási
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-Problema **corregido: la aplicación no se centra después de hacer clic**en la notificación del sistema: en las compilaciones 15063 y anteriores, los derechos de primer plano no se transferían a la aplicación cuando se activa el servidor com. Por lo tanto, la aplicación simplemente parpadearía al intentar moverla a primer plano. No había ninguna solución para este problema. Este problema se ha corregido en las compilaciones 16299 y posteriores.
+Problema **corregido: la aplicación no se centra después de hacer clic** en la notificación del sistema: en las compilaciones 15063 y anteriores, los derechos de primer plano no se transferían a la aplicación cuando se activa el servidor com. Por lo tanto, la aplicación simplemente parpadearía al intentar moverla a primer plano. No había ninguna solución para este problema. Este problema se ha corregido en las compilaciones 16299 y posteriores.
 
 
 ## <a name="resources"></a>Recursos

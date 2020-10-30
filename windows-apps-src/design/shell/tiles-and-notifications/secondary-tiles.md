@@ -1,5 +1,5 @@
 ---
-Description: Los mosaicos secundarios permiten a los usuarios anclar contenido específico y vínculos profundos de la aplicación en el menú Inicio, lo que facilita el acceso futuro al contenido dentro de la aplicación.
+description: Los mosaicos secundarios permiten a los usuarios anclar contenido específico y vínculos profundos de la aplicación en el menú Inicio, lo que facilita el acceso futuro al contenido dentro de la aplicación.
 title: Iconos secundarios
 label: Secondary tiles
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, iconos secundarios
 ms.localizationpriority: medium
-ms.openlocfilehash: ecafd52be36b34c83d9b11757ccd733e796fd727
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 066a6dcb3683e2e55f7452b1f09bb834157aee62
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100343"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034508"
 ---
 # <a name="secondary-tiles"></a>Iconos secundarios
 
@@ -25,7 +25,7 @@ Por ejemplo, los usuarios pueden anclar el tiempo de varias ubicaciones específ
 
 Al agregar iconos secundarios a la aplicación, ayuda al usuario a volver a interactuar de forma rápida y eficaz con la aplicación, y anima a que devuelvan más a menudo gracias al sencillo acceso que proporcionan los mosaicos secundarios.
 
-**Solo los usuarios pueden anclar un icono secundario; las aplicaciones no pueden anclar iconos secundarios mediante programación sin la aprobación del usuario**. El usuario debe hacer clic explícitamente en un botón "anclar" dentro de la aplicación, momento en el que se usa la API para solicitar la creación de un icono secundario y, a continuación, el sistema muestra un cuadro de diálogo que pide al usuario que confirme si desea tener el icono anclado.
+**Solo los usuarios pueden anclar un icono secundario; las aplicaciones no pueden anclar iconos secundarios mediante programación sin la aprobación del usuario** . El usuario debe hacer clic explícitamente en un botón "anclar" dentro de la aplicación, momento en el que se usa la API para solicitar la creación de un icono secundario y, a continuación, el sistema muestra un cuadro de diálogo que pide al usuario que confirme si desea tener el icono anclado.
 
 ## <a name="quick-links"></a>Vínculos rápidos
 

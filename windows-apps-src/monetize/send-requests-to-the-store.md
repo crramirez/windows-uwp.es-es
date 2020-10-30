@@ -1,19 +1,19 @@
 ---
-Description: Puede usar el método SendRequestAsync para enviar solicitudes al Microsoft Store para las operaciones que aún no tienen una API disponible en el Windows SDK.
-title: Enviar solicitudes al Microsoft Store
+description: Puede usar el método SendRequestAsync para enviar solicitudes al Microsoft Store para las operaciones que aún no tienen una API disponible en el Windows SDK.
+title: 'Envío de solicitudes a Microsoft Store '
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows 10, UWP, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
-ms.openlocfilehash: a02be93a56d6066ebd4d9547c8cc9ea1a96c9e09
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 53b525617ac72aec67349645430bc5995253460f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164499"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034668"
 ---
-# <a name="send-requests-to-the-microsoft-store"></a>Enviar solicitudes al Microsoft Store
+# <a name="send-requests-to-the-microsoft-store"></a>Envío de solicitudes a Microsoft Store 
 
 A partir de Windows 10, versión 1607, el Windows SDK proporciona las API para las operaciones relacionadas con el almacén (como compras desde la aplicación) en el espacio de nombres [Windows. Services. Store](/uwp/api/windows.services.store) . Sin embargo, aunque los servicios que admiten la tienda se actualizan, se expanden y mejoran constantemente entre versiones del sistema operativo, las nuevas API normalmente se agregan a la Windows SDK solo durante las versiones principales del sistema operativo.
 
@@ -34,7 +34,7 @@ public async Task<bool> AddUserToFlightGroup()
 {
     StoreSendRequestResult result = await StoreRequestHelper.SendRequestAsync(
         StoreContext.GetDefault(), 8,
-        "{ \"type\": \"AddToFlightGroup\", \"parameters\": { \"flightGroupId\": \"your group ID\" } }");
+        "{ \"type\": \"AddToFlightGroup\", \"parameters\": { \"flightGroupId\": \"your group ID\" } }");
 
     if (result.ExtendedError == null)
     {
@@ -58,7 +58,7 @@ Puede iniciar mediante programación un cuadro de diálogo desde la aplicación 
 
 El método **SendRequestAsync** admite un conjunto de solicitudes para escenarios de grupo de vuelos, como agregar un usuario o un dispositivo a un grupo de vuelos. Para enviar estas solicitudes, pase el valor 7 u 8 al parámetro *requestKind* junto con una cadena con formato JSON al parámetro *parametersAsJson* que indica la solicitud que desea enviar junto con los argumentos relacionados. Estos valores de *requestKind* difieren de las siguientes maneras.
 
-|  Valor de la clase de solicitud  |  Descripción  |
+|  Valor de la clase de solicitud  |  Description  |
 |----------------------|---------------|
 |  7                   |  Las solicitudes se realizan en el contexto del dispositivo actual. Este valor solo se puede usar en Windows 10, versión 1703 o posterior.  |
 |  8                   |  Las solicitudes se realizan en el contexto del usuario que ha iniciado sesión actualmente en el almacén. Este valor se puede usar en Windows 10, versión 1607 o posterior.  |
@@ -72,23 +72,23 @@ Actualmente se implementan las siguientes solicitudes de grupo de vuelos.
 
 Esta solicitud recupera las variables remotas para el grupo de vuelos de mayor clasificación del usuario o dispositivo actual. Para enviar esta solicitud, pase la siguiente información a los parámetros *requestKind* y *ParametersAsJson* del método **SendRequestAsync** .
 
-|  Parámetro  |  Descripción  |
+|  Parámetro  |  Description  |
 |----------------------|---------------|
 |  *requestKind*                   |  Especifique 7 para devolver el grupo de vuelos de mayor rango para el dispositivo o especifique 8 para devolver el grupo de vuelos de mayor rango para el usuario y el dispositivo actuales. Se recomienda usar el valor 8 para el parámetro *requestKind* , ya que este valor devolverá el grupo de vuelos de mayor rango a través de la pertenencia para el usuario y el dispositivo actuales.  |
 |  *parametersAsJson*                   |  Pase una cadena con formato JSON que contenga los datos que se muestran en el ejemplo siguiente.  |
 
-En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson*. El campo de *tipo* debe asignarse a la cadena *GetRemoteVariables*. Asigne el campo *Projectid* al identificador del proyecto en el que definió las variables remotas en el centro de Partners.
+En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson* . El campo de *tipo* debe asignarse a la cadena *GetRemoteVariables* . Asigne el campo *Projectid* al identificador del proyecto en el que definió las variables remotas en el centro de Partners.
 
 ```json
-{ 
-    "type": "GetRemoteVariables", 
-    "parameters": "{ \"projectId\": \"your project ID\" }" 
+{ 
+    "type": "GetRemoteVariables", 
+    "parameters": "{ \"projectId\": \"your project ID\" }" 
 }
 ```
 
 Después de enviar esta solicitud, la propiedad [Response](/uwp/api/windows.services.store.storesendrequestresult.Response) del valor devuelto [StoreSendRequestResult](/uwp/api/windows.services.store.storesendrequestresult) contiene una cadena con formato JSON con los siguientes campos.
 
-|  Campo  |  Descripción  |
+|  Campo  |  Description  |
 |----------------------|---------------|
 |  *Anonymous*                   |  Un valor booleano, donde **true** indica que la identidad del usuario o del dispositivo no estaba presente en la solicitud, y **false** indica que la identidad del usuario o del dispositivo estaba presente en la solicitud.  |
 |  *name*                   |  Una cadena que contiene el nombre del grupo de vuelos de mayor rango al que pertenece el dispositivo o el usuario.  |
@@ -97,8 +97,8 @@ Después de enviar esta solicitud, la propiedad [Response](/uwp/api/windows.serv
 En el ejemplo siguiente se muestra un valor devuelto para esta solicitud.
 
 ```json
-{ 
-  "anonymous": false, 
+{ 
+  "anonymous": false, 
   "name": "Insider Slow",
   "settings":
   {
@@ -115,17 +115,17 @@ En el ejemplo siguiente se muestra un valor devuelto para esta solicitud.
 
 Para enviar esta solicitud, pase la siguiente información a los parámetros *requestKind* y *ParametersAsJson* del método **SendRequestAsync** .
 
-|  Parámetro  |  Descripción  |
+|  Parámetro  |  Description  |
 |----------------------|---------------|
 |  *requestKind*                   |  Especifique 7 para agregar el dispositivo a un grupo de vuelos o especifique 8 para agregar el usuario que ha iniciado sesión actualmente en la tienda a un grupo de vuelos.  |
 |  *parametersAsJson*                   |  Pase una cadena con formato JSON que contenga los datos que se muestran en el ejemplo siguiente.  |
 
-En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson*. El campo de *tipo* debe asignarse a la cadena *AddToFlightGroup*. Asigne el campo *flightGroupId* al ID. del grupo de vuelos al que desea agregar el dispositivo o el usuario.
+En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson* . El campo de *tipo* debe asignarse a la cadena *AddToFlightGroup* . Asigne el campo *flightGroupId* al ID. del grupo de vuelos al que desea agregar el dispositivo o el usuario.
 
 ```json
-{ 
-    "type": "AddToFlightGroup", 
-    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
+{ 
+    "type": "AddToFlightGroup", 
+    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
 }
 ```
 
@@ -138,17 +138,17 @@ Si se produce un error con la solicitud, la propiedad [HttpStatusCode](/uwp/api/
 
 Para enviar esta solicitud, pase la siguiente información a los parámetros *requestKind* y *ParametersAsJson* del método **SendRequestAsync** .
 
-|  Parámetro  |  Descripción  |
+|  Parámetro  |  Description  |
 |----------------------|---------------|
 |  *requestKind*                   |  Especifique 7 para quitar el dispositivo de un grupo de vuelos o especifique 8 para quitar el usuario que ha iniciado sesión actualmente en el almacén desde un grupo de vuelos.  |
 |  *parametersAsJson*                   |  Pase una cadena con formato JSON que contenga los datos que se muestran en el ejemplo siguiente.  |
 
-En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson*. El campo de *tipo* debe asignarse a la cadena *RemoveFromFlightGroup*. Asigne el campo *flightGroupId* al ID. del grupo de vuelos del que desea quitar el dispositivo o el usuario.
+En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson* . El campo de *tipo* debe asignarse a la cadena *RemoveFromFlightGroup* . Asigne el campo *flightGroupId* al ID. del grupo de vuelos del que desea quitar el dispositivo o el usuario.
 
 ```json
-{ 
-    "type": "RemoveFromFlightGroup", 
-    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
+{ 
+    "type": "RemoveFromFlightGroup", 
+    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
 }
 ```
 

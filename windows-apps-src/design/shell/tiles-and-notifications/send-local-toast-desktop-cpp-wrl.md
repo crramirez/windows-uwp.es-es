@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo las aplicaciones de la WRL de Win32 C++ pueden enviar notificaciones del sistema local y controlar el usuario al hacer clic en la notificación del sistema.
+description: Obtenga información sobre cómo las aplicaciones de la WRL de Win32 C++ pueden enviar notificaciones del sistema local y controlar el usuario al hacer clic en la notificación del sistema.
 title: Enviar una notificación del sistema local desde las aplicaciones de WRL de Win32 C++
 label: Send a local toast notification from Win32 C++ WRL apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificaciones locales, puente de escritorio, msix, paquete disperso, C++, CPP, CPlusPlus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: e1e8aedd867dfdcabd382ebde1dd4c96a94d1001
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 1913eef17ac768b8d7e1f047ac318da9aa1b2925
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100323"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034498"
 ---
 # <a name="send-a-local-toast-notification-from-win32-c-wrl-apps"></a>Enviar una notificación del sistema local desde las aplicaciones de WRL de Win32 C++
 
@@ -29,13 +29,13 @@ Si no ha habilitado el SDK de Windows 10 para su aplicación Win32, debe hacerlo
 1. Agregar `runtimeobject.lib` a **dependencias adicionales**
 2. Usar el SDK de Windows 10 como destino
 
-Haga clic con el botón derecho en el proyecto y seleccione **propiedades**.
+Haga clic con el botón derecho en el proyecto y seleccione **propiedades** .
 
 En el menú de **configuración** superior, seleccione **todas las configuraciones** para que se aplique el siguiente cambio tanto a la depuración como a la versión.
 
-En enlazador **: > entrada**, agregue `runtimeobject.lib` las **dependencias adicionales**.
+En enlazador **: > entrada** , agregue `runtimeobject.lib` las **dependencias adicionales** .
 
-En **General**, asegúrese de que la **versión de Windows SDK** está establecida en algo 10,0 o superior (no Windows 8.1).
+En **General** , asegúrese de que la **versión de Windows SDK** está establecida en algo 10,0 o superior (no Windows 8.1).
 
 
 ## <a name="step-2-copy-compat-library-code"></a>Paso 2: copiar el código de la biblioteca de compatibilidad
@@ -94,7 +94,7 @@ A continuación, debe registrarse con la plataforma de notificación. Hay pasos 
 
 ### <a name="msixsparse-package"></a>MSIX/paquete disperso
 
-Si usa [MSIX](/windows/msix/desktop/source-code-overview) o un [paquete disperso](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest**, agregue:
+Si usa [MSIX](/windows/msix/desktop/source-code-overview) o un [paquete disperso](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest** , agregue:
 
 1. Declaración de **xmlns: com**
 2. Declaración de **xmlns: Desktop**
@@ -193,7 +193,7 @@ hr = DesktopNotificationManagerCompat::RegisterActivator();
 
 ## <a name="step-7-send-a-notification"></a>Paso 7: envío de una notificación
 
-El envío de una notificación es idéntico a las aplicaciones para UWP, salvo que usará **DesktopNotificationManagerCompat** para crear un **ToastNotifier**. La biblioteca de compatibilidad controla automáticamente la diferencia entre el paquete MSIX/disperso y el modo Win32 clásico, por lo que no tiene que bifurcar el código. En el caso de Win32 clásico, la biblioteca de compatibilidad almacena en caché el AUMID que proporcionó al llamar a **RegisterAumidAndComServer** para que no tenga que preocuparse de Cuándo proporcionar o no el AUMID.
+El envío de una notificación es idéntico a las aplicaciones para UWP, salvo que usará **DesktopNotificationManagerCompat** para crear un **ToastNotifier** . La biblioteca de compatibilidad controla automáticamente la diferencia entre el paquete MSIX/disperso y el modo Win32 clásico, por lo que no tiene que bifurcar el código. En el caso de Win32 clásico, la biblioteca de compatibilidad almacena en caché el AUMID que proporcionó al llamar a **RegisterAumidAndComServer** para que no tenga que preocuparse de Cuándo proporcionar o no el AUMID.
 
 Asegúrese de usar el enlace **ToastGeneric** como se muestra a continuación, ya que las plantillas de notificación del sistema de Windows 8.1 heredadas no activarán el activador de notificación com que creó en el paso #4.
 
@@ -438,7 +438,7 @@ if (IsWindows10OrGreater())
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-Problema **corregido: la aplicación no se centra después de hacer clic**en la notificación del sistema: en las compilaciones 15063 y anteriores, los derechos de primer plano no se transferían a la aplicación cuando se activa el servidor com. Por lo tanto, la aplicación simplemente parpadearía al intentar moverla a primer plano. No había ninguna solución para este problema. Este problema se ha corregido en las compilaciones 16299 y posteriores.
+Problema **corregido: la aplicación no se centra después de hacer clic** en la notificación del sistema: en las compilaciones 15063 y anteriores, los derechos de primer plano no se transferían a la aplicación cuando se activa el servidor com. Por lo tanto, la aplicación simplemente parpadearía al intentar moverla a primer plano. No había ninguna solución para este problema. Este problema se ha corregido en las compilaciones 16299 y posteriores.
 
 
 ## <a name="resources"></a>Recursos
