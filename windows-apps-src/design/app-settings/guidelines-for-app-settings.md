@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09db3caefccfce3ff110cb034efa27ff53c4154a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3d4bb343f2a8535fae60e19cd417099a99ae852d
+ms.sourcegitcommit: 6c1d2dd99221242d5d09f17e99f87302143c6180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218228"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644323"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
@@ -82,7 +82,7 @@ Si la aplicación permite a los usuarios elegir el modo de color de la aplicaci�
 - Oscuro
 - Valor predeterminado de Windows
 
-También te recomendamos que agregues un hipervínculo a la página Colores de la aplicación Configuración de Windows, en que los usuarios puedan acceder al modo de aplicación predeterminado actual y modificarlo. Usa la cadena "Configuración de color de Windows" para el texto del hipervínculo.
+También te recomendamos que agregues un hipervínculo a la página Colores de la aplicación Configuración de Windows, en que los usuarios puedan acceder al modo de aplicación predeterminado actual y modificarlo. Usa la cadena "Configuración del color de Windows" para el texto del hipervínculo y `ms-settings:colors` para el URI.
 
 ![Sección "Elegir un modo"](images/appsettings_mode.png)
 
