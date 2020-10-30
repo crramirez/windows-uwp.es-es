@@ -1,17 +1,17 @@
 ---
-Description: El Microsoft Store exige ciertas reglas relacionadas con los números de versión, que funcionan de forma ligeramente diferente en diferentes versiones del sistema operativo.
+description: El Microsoft Store exige ciertas reglas relacionadas con los números de versión, que funcionan de forma ligeramente diferente en diferentes versiones del sistema operativo.
 title: Numeración de la versión del paquete
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b09c5688fd8a043d1a4ca1783af046398b504050
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 18b4d6b8a901e68ea1e8513b7076a951e939f028
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219738"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035038"
 ---
 # <a name="package-version-numbering"></a>Numeración de la versión del paquete
 
@@ -21,7 +21,7 @@ Cada paquete que proporciones debe tener un número de versión (proporcionado c
 > En este tema se hace referencia a "packages", pero a menos que se indique lo contrario, las mismas reglas se aplican a los números de versión de los archivos. msix/. appx y. msixbundle/. appxbundle.
 
 
-## <a name="version-numbering-for-windows10-packages"></a>Números de versión para paquetes de Windows 10
+## <a name="version-numbering-for-windows-10-packages"></a>Números de versión para paquetes de Windows 10
 
 > [!IMPORTANT]
 > En el caso de los paquetes de Windows 10 (UWP), la última sección (cuarta) del número de versión se reserva para el uso de la tienda y debe dejarse como 0 al compilar el paquete (aunque el almacén puede cambiar el valor de esta sección). Las demás secciones se deben establecer en un entero comprendido entre 0 y 65535 (excepto para la primera sección, que no puede ser 0).
@@ -47,10 +47,10 @@ Puedes usar las reglas de control de versiones de paquete para llevar gradualmen
 | 1          | -   Versión del paquete: 1.1.10.0 <br> -   Familia de dispositivos: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -   Versión del paquete: 1.1.0.0 <br> -   Familia de dispositivos: Windows.Mobile, minVersion 10.0.10240.0     | -   Los dispositivos de Windows 10 Desktop con la compilación 10.0.10240.0 o superior obtienen la versión 1.1.10.0 <br> -   Los dispositivos de Windows 10 Mobile con la compilación 10.0.10240.0 o superior obtienen la versión 1.1.0.0 <br> -   Las demás familias de dispositivos no podrán comprar e instalar la aplicación |
 | 2          | -   Versión del paquete: 1.1.10.0 <br> -   Familia de dispositivos: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -   Versión del paquete: 1.1.0.0 <br> -   Familia de dispositivos: Windows.Mobile, minVersion 10.0.10240.0 <br> <br> -   Versión del paquete: 1.0.0.0 <br> -   Familia de dispositivos: Windows.Universal, minVersion 10.0.10240.0    | -   Los dispositivos de Windows 10 Desktop con la compilación 10.0.10240.0 o superior obtienen la versión 1.1.10.0 <br> -   Los dispositivos de Windows 10 Mobile con la compilación 10.0.10240.0 o superior obtienen la versión 1.1.0.0 <br> -   Cuando otras familias de dispositivos (distintas de los tipos de escritorio y móvil) estén disponibles, obtendrán la versión 1.0.0.0 <br> -   Los dispositivos móviles y de escritorio que ya tengan instalada la aplicación no tendrán ninguna actualización (porque ya tienen la mejor versión disponible: 1.1.10.0 y 1.1.0.0 son mayores que 1.0.0.0) |
 | 3          | -   Versión del paquete: 1.1.10.0 <br> -   Familia de dispositivos: Windows.Desktop, minVersion 10.0.10240.0 <br> <br> -   Versión del paquete: 1.1.5.0 <br> -   Familia de dispositivos: Windows.Universal, minVersion 10.0.10250.0 <br> <br> -   Versión del paquete: 1.0.0.0 <br> -   Familia de dispositivos: Windows.Universal, minVersion 10.0.10240.0    | -   Los dispositivos de Windows 10 Desktop con la compilación 10.0.10240.0 o superior obtienen la versión 1.1.10.0 <br> -   Los dispositivos de Windows 10 Mobile con la compilación 10.0.10250.0 o superior obtienen la versión 1.1.5.0 <br> -   Los dispositivos de Windows 10 Mobile con número de compilación >=10.0.10240.0 y <10.010250.0 obtienen la versión 1.1.0.0 
-| 4          | -   Versión del paquete: 2.0.0.0 <br> -   Familia de dispositivos: Windows.Universal, minVersion 10.0.10240.0   | -   Todos los clientes de todas las familias de dispositivos de Windows 10 con la compilación v10.0.10240.0 o superior obtienen el paquete 2.0.0.0 | 
+| 4          | -   Versión del paquete: 2.0.0.0 <br> -   Familia de dispositivos: Windows.Universal, minVersion 10.0.10240.0   | -   Todos los clientes de todas las familias de dispositivos de Windows 10 con la compilación v10.0.10240.0 o superior obtienen el paquete 2.0.0.0 | 
 
 > [!NOTE]
->  En todos los casos, los dispositivos del cliente recibirán el paquete que tiene el número de versión más alto posible para el que se cumplan los requisitos. Por ejemplo, en el tercer envío antes descrito, todos los dispositivos de escritorio obtendrán la versión v1.1.10.0, aunque tengan la versión 10.0.10250.0 o superior del sistema operativo y, por lo tanto, también pudieran aceptar la versión v1.1.5.0. Dado que 1.1.10.0 es el número de versión más alto disponible para ellos, ese es el paquete que obtienen.
+>  En todos los casos, los dispositivos del cliente recibirán el paquete que tiene el número de versión más alto posible para el que se cumplan los requisitos. Por ejemplo, en el tercer envío antes descrito, todos los dispositivos de escritorio obtendrán la versión v1.1.10.0, aunque tengan la versión 10.0.10250.0 o superior del sistema operativo y, por lo tanto, también pudieran aceptar la versión v1.1.5.0. Dado que 1.1.10.0 es el número de versión más alto disponible para ellos, ese es el paquete que obtienen.
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>Usar el número de versión para revertir a un paquete distribuido anteriormente para las nuevas adquisiciones
 
@@ -61,7 +61,7 @@ Para ello, cree un nuevo [envío](app-submissions.md). Quita el paquete problem�
 Para solucionar el problema de los clientes que ya han recibido el paquete problemático, puede enviar un nuevo paquete de Windows 10 que tenga un número de versión superior al del paquete incorrecto en cuanto pueda. Cuando el envío supere el proceso de certificación, todos los clientes se actualizarán al nuevo paquete, ya que su número de versión es mayor.
 
 
-## <a name="version-numbering-for-windows81-and-earlier-and-windows-phone-81-packages"></a>Números de versión para Windows 8.1 (y versiones anteriores) y paquetes de Windows Phone 8.1
+## <a name="version-numbering-for-windows-81-and-earlier-and-windows-phone-81-packages"></a>Números de versión para Windows 8.1 (y versiones anteriores) y paquetes de Windows Phone 8.1
 
 > [!IMPORTANT]
 > Ya no se pueden cargar nuevos paquetes XAP compilados con los SDK de Windows Phone 8. x. Las aplicaciones que ya se encuentran en el almacén con paquetes XAP seguirán funcionando en dispositivos Windows 10 Mobile. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
@@ -79,10 +79,10 @@ Estos son algunos ejemplos de lo que sucede en los distintos escenarios de actua
 
 | Con esta versión de tu aplicación en la Tienda  | Y cargas esta versión | Una vez que la nueva versión se encuentra en el almacén, se instalará en una nueva adquisición. | Una vez que la nueva versión esté en el almacén, se actualizará si un cliente ya tiene la aplicación. |
 |---------------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------|----------|
-| Nothing                                     | x86, v1.0.0.0               | x86, v1.0.0.0 en ambos equipos, x86 y x64                                                | Nada. |
+| Nada                                     | x86, v1.0.0.0               | x86, v1.0.0.0 en ambos equipos, x86 y x64                                                | Nada. |
 | x86, v1.0.0.0                               | x64, v1.0.0.0               | v1.0.0.0 para la arquitectura del cliente                                                   | Nada. Los números de versión son los mismos. |
-| x86, v1.0.0.0 <br> x64, v1.0.0.0            | x64, v1.0.0.1               | v1.0.0.0 para clientes con x86 <br> v1.0.0.1 para clientes con x64                 | Nada para clientes que ejecutan la aplicación en un equipo x86. <br> v1.0.0.0 se actualizará a v1.0.0.1 para clientes que ejecuten la aplicación en un equipo x64. <br> **Nota:**    Si la versión x86 de la aplicación se ejecuta en un equipo x64, la aplicación no se actualizará a la versión x64 a menos que el cliente desinstale y vuelva a instalar. |
-| Nothing                                     | independiente, v1.0.0.1           | independiente, v1.0.0.1 en todos los equipos                                                         | Nada. |
+| x86, v1.0.0.0 <br> x64, v1.0.0.0            | x64, v1.0.0.1               | v1.0.0.0 para clientes con x86 <br> v1.0.0.1 para clientes con x64                 | Nada para clientes que ejecutan la aplicación en un equipo x86. <br> v1.0.0.0 se actualizará a v1.0.0.1 para clientes que ejecuten la aplicación en un equipo x64. <br> **Nota** Si la versión x86 de la aplicación se ejecuta en un equipo x64, la aplicación no se actualizará a la versión x64 a menos que el cliente la desinstale y la vuelva a instalar. |
+| Nada                                     | independiente, v1.0.0.1           | independiente, v1.0.0.1 en todos los equipos                                                         | Nada. |
 | independiente, v1.0.0.1                           | x86, v1.0.0.0 <br> x64, v1.0.0.0 <br> ARM, v1.0.0.0 | v1.0.0.0 para la arquitectura del equipo del cliente          | Nada. Aquellos que tengan la versión independiente v1.0.0.1 de la aplicación, podrán seguir usándola. |
 | independiente, v1.0.0.1 <br> x86, v1.0.0.0 <br> x64, v1.0.0.0 <br> ARM, v1.0.0.0 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | v1.0.0.1 para la arquitectura del equipo del cliente | Nada para clientes que ejecutan la versión independiente v1.0.0.1 de la aplicación. <br> v1.0.0.0 se actualizará a v1.0.0.1 para clientes que ejecutan la versión v1.0.0.0 de la aplicación desarrollada para las arquitecturas específicas de sus equipos. |
 | x86, v1.0.0.1 <br> x64, v1.0.0.1 <br> ARM, v1.0.0.1 | x86, v1.0.0.2 <br> x64, v1.0.0.2 <br> ARM, v1.0.0.2 | v1.0.0.2 para la arquitectura del equipo del cliente  | v1.0.0.1 se actualizará a v1.0.0.2 para los clientes que ejecuten la versión v1.0.0.1 de la aplicación compilada para la arquitectura específica de su equipo. |

@@ -1,5 +1,5 @@
 ---
-Description: Cree aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para touchpad, pero que sean funcionalmente coherentes en todos los dispositivos de entrada.
+description: Cree aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para touchpad, pero que sean funcionalmente coherentes en todos los dispositivos de entrada.
 title: Interacciones del panel táctil
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -8,19 +8,19 @@ keywords: panel táctil,PTP,táctil,función táctil,puntero,entrada,interacció
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 86c47a3a510f6ed0d865064e8d140c47c8dd9f78
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 6b0e0a7e45ee63d845a1d5b0057d00da11e01c18
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220438"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035098"
 ---
 # <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
 
 Diseña tu aplicación de modo que los usuarios puedan interactuar con ella a través de un panel táctil. Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como un mouse. Esta combinación hace que el panel táctil sea ideal tanto para una interfaz de usuario optimizada para entrada táctil como para los destinos de menor tamaño de las aplicaciones de productividad.
 
- 
+ 
 
 ![panel táctil](images/input-patterns/input-touchpad.jpg)
 
@@ -114,12 +114,12 @@ Estos son algunos ejemplos de gestos optimizados para panel táctil para realiza
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="hardware"></a>Hardware
 
 
-Consulta las funciones del dispositivo de mouse ([**MouseCapabilities**](/uwp/api/Windows.Devices.Input.MouseCapabilities)) para identificar cuáles son los aspectos de la interfaz de usuario de tu aplicación a los que el hardware del panel táctil puede acceder directamente. Te recomendamos que proporciones interfaces de usuario tanto para entrada táctil como para entrada del mouse.
+Consulta las funciones del dispositivo de mouse ( [**MouseCapabilities**](/uwp/api/Windows.Devices.Input.MouseCapabilities)) para identificar cuáles son los aspectos de la interfaz de usuario de tu aplicación a los que el hardware del panel táctil puede acceder directamente. Te recomendamos que proporciones interfaces de usuario tanto para entrada táctil como para entrada del mouse.
 
 Para obtener más información sobre cómo consultar las funciones de dispositivos, consulta [Identificar los dispositivos de entrada](identify-input-devices.md).
 

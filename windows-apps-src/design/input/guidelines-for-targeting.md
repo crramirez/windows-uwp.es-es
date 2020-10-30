@@ -1,5 +1,5 @@
 ---
-Description: En este tema se describe el uso de la geometría de contacto para la selección táctil del destino y se proporcionan procedimientos recomendados para la selección del destino en aplicaciones de Windows Runtime.
+description: En este tema se describe el uso de la geometría de contacto para la selección táctil del destino y se proporcionan procedimientos recomendados para la selección del destino en aplicaciones de Windows Runtime.
 title: Establecer destinos
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 64142b1ec35040ded890d837245ecae36e03fdc1
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: a8b6113294d3f3c0c98946f0fed407e36de8a563
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216988"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035068"
 ---
 # <a name="guidelines-for-touch-targets"></a>Directrices para destinos táctiles
 
@@ -25,7 +25,7 @@ Todos los controles de UWP se han diseñado con diseños y tamaños de destino t
 
 En este tema, se describen estos comportamientos predeterminados para que pueda diseñar su aplicación para obtener el máximo uso mediante controles de plataforma y controles personalizados (si la aplicación los necesita).
 
-> **API importantes**: [**Windows. UI. Core**](/uwp/api/Windows.UI.Core), [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input)
+> **API importantes** : [**Windows. UI. Core**](/uwp/api/Windows.UI.Core), [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="fluent-standard-sizing"></a>Tamaño Fluent Standard
 
@@ -38,7 +38,7 @@ El *tamaño Fluent Standard* se ha creado para proporcionar un equilibrio entre 
 
 ## <a name="fluent-compact-sizing"></a>Tamaño Fluent Compact
 
-Las aplicaciones pueden mostrar un nivel más alto de densidad de información con *ajuste de tamaño compacto fluida*. El ajuste de tamaño compacto alinea los elementos de la interfaz de usuario con un destino de 32x32 EPX, lo que permite que los elementos de la interfaz de usuario se alineen con una cuadrícula más estrecha y se escalen adecuadamente según el escalado del nivel
+Las aplicaciones pueden mostrar un nivel más alto de densidad de información con *ajuste de tamaño compacto fluida* . El ajuste de tamaño compacto alinea los elementos de la interfaz de usuario con un destino de 32x32 EPX, lo que permite que los elementos de la interfaz de usuario se alineen con una cuadrícula más estrecha y se escalen adecuadamente según el escalado del nivel
 
 ### <a name="examples"></a>Ejemplos
 
@@ -66,7 +66,7 @@ El ajuste de tamaño compacto se puede aplicar en el nivel de página o de cuadr
 
 En general, establezca el tamaño del destino táctil en un intervalo de cuadrados de 7,5 mm (40 x 40 píxeles en una pantalla de 135 PPP con un nivel de ajuste de escala de 1,0 x). Normalmente, los controles de UWP se alinean con un destino táctil de 7,5 mm (esto puede variar en función del control específico y de cualquier patrón de uso común). Consulte [control de tamaño y densidad](../style/spacing.md) para obtener más detalles.
 
-Estas recomendaciones del tamaño de destino pueden ajustarse según sea necesario para un escenario en particular. Estos son algunos aspectos que hay que tener en cuenta:
+Estas recomendaciones del tamaño de destino pueden ajustarse según sea necesario para un escenario en particular. Algunos aspectos que debe considerar:
 
 - Frecuencia de los toques: considere la posibilidad de hacer que los destinos se presionen de forma repetida o más grande que el tamaño mínimo.
 - Consecuencias de error: los destinos que tienen consecuencias graves si se tocan en un error deben tener un relleno mayor y colocarse más lejos del borde del área de contenido. Esto se aplica especialmente a destinos que se tocan con frecuencia.

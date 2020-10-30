@@ -1,17 +1,17 @@
 ---
-Description: Para comprender las consideraciones fiscales que debe tener en cuenta para la selección de precios, las implicaciones en el pago y la responsabilidad fiscal, consulte los países o regiones de distribución en las tablas siguientes.
+description: Para comprender las consideraciones fiscales que debe tener en cuenta para la selección de precios, las implicaciones en el pago y la responsabilidad fiscal, consulte los países o regiones de distribución en las tablas siguientes.
 title: Detalles fiscales
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 ms.date: 03/05/2019
 ms.topic: article
 keywords: Windows 10, UWP, impuestos, impuestos de aplicación, requisitos fiscales, expansión de comercio, tasa de impuestos
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d78a5a6af362a52b55830f279b3fffc1fb74346
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6f201cf62cdf01d9c39f01b91d5934da72dbc41f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170879"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034998"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalles de impuestos para desarrolladores de aplicaciones y juegos de Windows y publicadores de Azure Marketplace
 
@@ -32,7 +32,7 @@ Para comprender las consideraciones fiscales para la selección de precios y la 
 
 
 
- 
+ 
 
 | País/región                   | Consideración fiscal para la selección de precios                                                                                                             | Implicación en el pago                    | Responsabilidad fiscal |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------|
@@ -280,7 +280,7 @@ Lo siguiente se aplica solo a los publicadores de Azure Marketplace, con indepen
 ## <a name="mixed-remittance-countriesregions-for-windows-appgame-developers"></a>Países o regiones de remesas mixtas para desarrolladores de aplicaciones y juegos de Windows
 
 
-Algunos partners de facturación de Microsoft pueden recolectar y remitir los impuestos de ventas, uso, bienes y servicios, al valor añadido u otros similares, si los hubiera, aplicables a la adquisición por parte de los clientes de las aplicaciones o productos en la aplicación a través de Store en los países o regiones que se enumeran a continuación. Los [informes](payout-summary.md#export-data-page) que 0Microsoft pone a su disposición identificarán las transacciones para las que un asociado de facturación ha recopilado ventas, uso, bienes y servicios, valor añadido o impuestos similares aplicables a la adquisición de los clientes de las aplicaciones o productos en la aplicación a través de la tienda. A excepción de las transacciones descritas en estos informes, ni Microsoft ni sus proveedores de servicios de facturación remitirán ningún impuesto de ventas, uso, bienes y servicios, valor añadido u otro similar en relación con la adquisición por parte de los clientes de sus aplicaciones o productos en la aplicación en estos países. Usted es responsable de revisar los informes que se le proporcionan, así como de determinar y cumplir sus obligaciones, en caso de haberlas, de registro, recolección y remisión de impuestos en relación con las transacciones que impliquen a sus aplicaciones o los productos en la aplicación.
+Algunos partners de facturación de Microsoft pueden recolectar y remitir los impuestos de ventas, uso, bienes y servicios, al valor añadido u otros similares, si los hubiera, aplicables a la adquisición por parte de los clientes de las aplicaciones o productos en la aplicación a través de Store en los países o regiones que se enumeran a continuación. Los [informes](payout-summary.md#export-data-page) que 0Microsoft pone a su disposición identificarán las transacciones para las que un asociado de facturación ha recopilado ventas, uso, bienes y servicios, valor añadido o impuestos similares aplicables a la adquisición de los clientes de las aplicaciones o In-App productos a través de la tienda. A excepción de las transacciones descritas en estos informes, ni Microsoft ni sus proveedores de servicios de facturación remitirán ningún impuesto de ventas, uso, bienes y servicios, valor añadido u otro similar en relación con la adquisición por parte de los clientes de sus aplicaciones o productos en la aplicación en estos países. Usted es responsable de revisar los informes que se le proporcionan, así como de determinar y cumplir sus obligaciones, en caso de haberlas, de registro, recolección y remisión de impuestos en relación con las transacciones que impliquen a sus aplicaciones o los productos en la aplicación.
 
 | Países o regiones de remesas mixtas |
 |------------------------------------|
@@ -306,4 +306,4 @@ Lo siguiente se aplica solo a los publicadores de Azure Marketplace:
 | México (solo para las compras realizadas a través del escenario de compra del cliente de Contrato Enterprise) |
 
 
- 
+ 

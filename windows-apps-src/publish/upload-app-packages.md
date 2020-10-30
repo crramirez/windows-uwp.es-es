@@ -1,17 +1,17 @@
 ---
-Description: En la página paquetes se cargan todos los archivos de paquete (. appxupload,. appx,. appxbundle y/o. xap) de la aplicación que está enviando.
+description: En la página paquetes se cargan todos los archivos de paquete (. appxupload,. appx,. appxbundle y/o. xap) de la aplicación que está enviando.
 title: Cargar paquetes de la aplicación
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, paquetes, carga, carga de paquetes
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b4fc0c9dfeed1183a1653b525d0f8cc8a62a4c1
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c2e72a767b9d50f81fba548531965d75d4ce0b56
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220218"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034958"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de la aplicación
 
@@ -44,7 +44,7 @@ Para obtener más información, consulta [Disponibilidad de familias de disposit
 
 ## <a name="package-details"></a>Detalles del paquete
 
-Los paquetes cargados se enumeran aquí, agrupados por sistema operativo de destino. Se mostrará el nombre, la versión y la arquitectura del paquete. Para obtener más información como, por ejemplo, los idiomas admitidos, las capacidades de la aplicación y el tamaño de archivo de cada paquete, haz clic en **Mostrar detalles**.
+Los paquetes cargados se enumeran aquí, agrupados por sistema operativo de destino. Se mostrará el nombre, la versión y la arquitectura del paquete. Para obtener más información como, por ejemplo, los idiomas admitidos, las capacidades de la aplicación y el tamaño de archivo de cada paquete, haz clic en **Mostrar detalles** .
 
 Si necesitas quitar un paquete de tu envío, haz clic en el vínculo **Quitar** en la parte inferior de la sección **Detalles** de cada paquete.
 
@@ -58,18 +58,18 @@ Cuando detectemos paquetes redundantes, proporcionaremos una opción para quitar
 
 ## <a name="gradual-package-rollout"></a>Lanzamiento gradual del paquete
 
-Si el envío es una actualización de una aplicación publicada anteriormente, verás una casilla denominada **Lanzar gradualmente la actualización después de publicar este envío (solo a clientes de Windows 10)**. Esta opción te permitirá seleccionar un porcentaje de clientes a los que enviar los paquetes, y así podrás supervisar sus comentarios y los datos analíticos para asegurarte de que la actualización es correcta antes de realizar una distribución más amplia. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
+Si el envío es una actualización de una aplicación publicada anteriormente, verás una casilla denominada **Lanzar gradualmente la actualización después de publicar este envío (solo a clientes de Windows 10)** . Esta opción te permitirá seleccionar un porcentaje de clientes a los que enviar los paquetes, y así podrás supervisar sus comentarios y los datos analíticos para asegurarte de que la actualización es correcta antes de realizar una distribución más amplia. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
 
 Para obtener más información, consulta [Gradual package rollout (Lanzamiento gradual del paquete)](gradual-package-rollout.md).
 
 
 ## <a name="mandatory-update"></a>Actualización obligatoria
 
-Si el envío es una actualización de una aplicación publicada anteriormente, verás una casilla denominada **Hacer que esta actualización sea obligatoria**. Esto te permitirá establecer la fecha y hora para realizar una actualización obligatoria, siempre y cuando hayas usado las API de Windows.Services.Store para permitir que la aplicación, mediante programación, busque actualizaciones de paquetes, las descargue y las instale. La aplicación debe estar destinada a la versión 1607 (o posterior) de Windows 10 para poder usar esta opción.
+Si el envío es una actualización de una aplicación publicada anteriormente, verás una casilla denominada **Hacer que esta actualización sea obligatoria** . Esto te permitirá establecer la fecha y hora para realizar una actualización obligatoria, siempre y cuando hayas usado las API de Windows.Services.Store para permitir que la aplicación, mediante programación, busque actualizaciones de paquetes, las descargue y las instale. La aplicación debe estar destinada a la versión 1607 (o posterior) de Windows 10 para poder usar esta opción.
 
 Para obtener más información, consulta [Download and install package updates for your app (Descargar e instalar actualizaciones del paquete de la aplicación](../packaging/self-install-package-updates.md).
 
- 
+ 
 
 
 

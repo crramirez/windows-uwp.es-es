@@ -1,17 +1,17 @@
 ---
-Description: Obtén información sobre los formularios fiscales emitidos por Microsoft, incluido quién los recibirá y cuándo estarán disponibles.
+description: Obtén información sobre los formularios fiscales emitidos por Microsoft, incluido quién los recibirá y cuándo estarán disponibles.
 title: Descripción de los formularios fiscales del IRS emitidos por Microsoft
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, fiscal, IRS, servicio de ingresos internos, impuestos, impuestos, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 6493e20dbc0e38405a7cd30fc22acb9973098431
-ms.sourcegitcommit: 97002cc3e5942f43ab0f14f4ad70543a63db0c03
+ms.openlocfilehash: 05d038aca0670c31f1d8ed10250e3a905e6bfe3b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91128975"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034968"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -23,11 +23,11 @@ A continuación, explicaremos más sobre estos formularios, incluidos sus destin
 
 | Formulario fiscal del IRS | Descripción | Disponibilidad |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Se relacionan con la actividad de venta o los pagos realizados a raíz de la participación en los catálogos de soluciones de Microsoft. | Los formularios impresos se marcarán como o antes **del 31 de enero**y las copias de. pdf estarán disponibles en el centro de [Partners](https://partner.microsoft.com/dashboard) (en la configuración del desarrollador del **centro de partners** en **pagos e impuestos > los perfiles de pago y impuestos**) al mismo tiempo. |
-|1042-S | Relacionado con los pagos que se le han realizado y que están sujetos a Estados Unidos impuesto de retención | Los formularios impresos se postmarcarán el **15 de marzo**, y las copias de. pdf estarán disponibles en el centro de Partners (en la configuración del desarrollador del **centro de Partners** en **pagos e impuestos > los perfiles de pago y impuestos**) al mismo tiempo.  |
+|1099-MISC, 1099-K | Se relacionan con la actividad de venta o los pagos realizados a raíz de la participación en los catálogos de soluciones de Microsoft. | Los formularios impresos se marcarán como o antes **del 31 de enero** y las copias de. pdf estarán disponibles en el centro de [Partners](https://partner.microsoft.com/dashboard) (en la configuración del desarrollador del **centro de partners** en **pagos e impuestos > los perfiles de pago y impuestos** ) al mismo tiempo. |
+|1042-S | Relacionado con los pagos que se le han realizado y que están sujetos a Estados Unidos impuesto de retención | Los formularios impresos se postmarcarán el **15 de marzo** , y las copias de. pdf estarán disponibles en el centro de Partners (en la configuración del desarrollador del **centro de Partners** en **pagos e impuestos > los perfiles de pago y impuestos** ) al mismo tiempo.  |
 
 > [!NOTE]
-> La dirección que usamos en los formularios fiscales del IRS procede de la dirección del [perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Si ha cambiado tu dirección, asegúrate de actualizarla en tu **Perfil fiscal**.
+> La dirección que usamos en los formularios fiscales del IRS procede de la dirección del [perfil fiscal](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Si ha cambiado tu dirección, asegúrate de actualizarla en tu **Perfil fiscal** .
 
 Los formularios fiscales se le enviarán desde las siguientes direcciones:
 
@@ -70,7 +70,7 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
   </tr>
   <tr>
     <td valign="top">No se aplica ninguna de las anteriores.</td>
-    <td valign="top">None</td>
+    <td valign="top">Ninguno</td>
   </tr>
   <tr>
     <td valign="top">&nbsp;</td>
@@ -86,7 +86,7 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
   </tr>
   <tr> 
      <td valign="top">Recibí <b>menos de $600 en los pagos</b> de los anuncios de las aplicaciones en el año fiscal correspondiente</td>
-     <td valign="top">None</td>
+     <td valign="top">Ninguno</td>
   </tr>
 </table>
 
@@ -129,4 +129,4 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
 
 
 > [!NOTE]
-> Si tiene preguntas o inquietudes adicionales relacionadas con los **formularios fiscales de IRS**, cree una [incidencia de soporte técnico](https://developer.microsoft.com/windows/support). Microsoft no puede responder preguntas relacionadas con tus circunstancias fiscales específicas. Para tales preguntas, consulta a tu profesional en materia fiscal.
+> Si tiene preguntas o inquietudes adicionales relacionadas con los **formularios fiscales de IRS** , cree una [incidencia de soporte técnico](https://developer.microsoft.com/windows/support). Microsoft no puede responder preguntas relacionadas con tus circunstancias fiscales específicas. Para tales preguntas, consulta a tu profesional en materia fiscal.

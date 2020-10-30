@@ -1,16 +1,16 @@
 ---
-Description: Puede establecer la fecha y la hora precisas en las que la aplicación debe estar disponible en el almacén, lo que le ofrece mayor flexibilidad y la posibilidad de personalizar fechas para diferentes mercados.
+description: Puede establecer la fecha y la hora precisas en las que la aplicación debe estar disponible en el almacén, lo que le ofrece mayor flexibilidad y la posibilidad de personalizar fechas para diferentes mercados.
 title: Configurar la programación precisa del lanzamiento
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, programación, fecha de lanzamiento, fechas, Inicio
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ad59071b6a7298cbb6d896bb7dd60a9a5ee0451
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bf9fe34eb36cab57677ba8ef22397c9c345ecb40
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171149"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035178"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar la programación precisa del lanzamiento
 
@@ -34,7 +34,7 @@ Tenga en cuenta que no podrá configurar fechas en la sección **programación**
 
 Las selecciones que realice para la programación base se aplicarán a todos los mercados en los que esté disponible la aplicación, a menos que agregue posteriormente fechas para mercados específicos (o grupos de marketing) seleccionando [personalizar para mercados específicos](#customize-the-schedule-for-specific-markets).
 
-Aquí verá dos opciones: **liberar** y detener la **adquisición**.
+Aquí verá dos opciones: **liberar** y detener la **adquisición** .
 
 ## <a name="release"></a>Release
 
@@ -44,11 +44,11 @@ En el menú desplegable **versión** , puede establecer cuándo desea que la apl
 > Después de publicar la aplicación y de que esté disponible en el almacén, ya no podrá seleccionar una fecha de **lanzamiento** (ya que la aplicación ya se habrá lanzado).
 
 Estas son las opciones que puede configurar para la programación de **versión** de un producto:
-- lo **antes posible**: el producto se lanzará en cuanto se certifique y publique. Ésta es la opción predeterminada.
-- **en**: el producto se publicará en la fecha y hora que seleccione. Además, tiene dos opciones:
-   - **UTC**: la hora que seleccione será la hora universal coordinada (UTC), de modo que la aplicación se publique al mismo tiempo en todo el mundo.
-   - **Local**: la hora que seleccione será la usada en cada zona horaria asociada a un mercado. (Tenga en cuenta que para los mercados que incluyen más de una zona horaria, solo se utilizará una zona horaria en ese mercado. En el Estados Unidos, se usa la zona horaria oriental. En esta página se muestra una lista completa de zonas horarias.)
-- **no programado**: la aplicación no estará disponible en el almacén. Si elige esta opción, puede hacer que la aplicación esté disponible en la tienda más adelante creando un nuevo envío y eligiendo una de las otras opciones.
+- lo **antes posible** : el producto se lanzará en cuanto se certifique y publique. Ésta es la opción predeterminada.
+- **en** : el producto se publicará en la fecha y hora que seleccione. Además, tiene dos opciones:
+   - **UTC** : la hora que seleccione será la hora universal coordinada (UTC), de modo que la aplicación se publique al mismo tiempo en todo el mundo.
+   - **Local** : la hora que seleccione será la usada en cada zona horaria asociada a un mercado. (Tenga en cuenta que para los mercados que incluyen más de una zona horaria, solo se utilizará una zona horaria en ese mercado. En el Estados Unidos, se usa la zona horaria oriental. En esta página se muestra una lista completa de zonas horarias.)
+- **no programado** : la aplicación no estará disponible en el almacén. Si elige esta opción, puede hacer que la aplicación esté disponible en la tienda más adelante creando un nuevo envío y eligiendo una de las otras opciones.
 
 ## <a name="stop-acquisition"></a>Detener adquisición
 
@@ -59,17 +59,17 @@ De forma predeterminada, la opción **detener la adquisición** está establecid
 Es importante comprender que esta opción tiene el mismo impacto que seleccionar **hacer que esta aplicación se pueda detectar pero no estar disponible** en la sección de [visibilidad](choose-visibility-options.md#discoverability) y elegir **detener la adquisición: cualquier cliente con un vínculo directo puede ver la lista de la tienda del producto, pero solo puede descargarla si poseía el producto antes o tiene un código promocional y usa un dispositivo de Windows 10.** Para dejar de ofrecer una aplicación completamente a los clientes nuevos, haga clic en **crear aplicación no disponible** en la página de información general de la aplicación. Para obtener más información, consulta [Quitar una aplicación de la Tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
-> Si selecciona una fecha para **detener la adquisición**y más adelante decide que quiere que la aplicación vuelva a estar disponible, puede crear un nuevo envío y volver a cambiar la **adquisición de detenerla** a **nunca**. La aplicación volverá a estar disponible después de publicar el envío actualizado.
+> Si selecciona una fecha para **detener la adquisición** y más adelante decide que quiere que la aplicación vuelva a estar disponible, puede crear un nuevo envío y volver a cambiar la **adquisición de detenerla** a **nunca** . La aplicación volverá a estar disponible después de publicar el envío actualizado.
 
 ## <a name="customize-the-schedule-for-specific-markets"></a>Personalización de la programación para mercados específicos
 
-De forma predeterminada, las opciones seleccionadas anteriormente se aplicarán a todos los mercados en los que se ofrece la aplicación. Para personalizar el precio de mercados específicos, haga clic en **personalizar para mercados específicos**. Aparecerá la ventana emergente de **selección de mercado** , donde se muestran todos los mercados en los que ha elegido hacer que la aplicación esté disponible. Si ha excluido los mercados de la sección [mercados](./define-market-selection.md) , no se mostrarán esos mercados.
+De forma predeterminada, las opciones seleccionadas anteriormente se aplicarán a todos los mercados en los que se ofrece la aplicación. Para personalizar el precio de mercados específicos, haga clic en **personalizar para mercados específicos** . Aparecerá la ventana emergente de **selección de mercado** , donde se muestran todos los mercados en los que ha elegido hacer que la aplicación esté disponible. Si ha excluido los mercados de la sección [mercados](./define-market-selection.md) , no se mostrarán esos mercados.
 
-Para agregar una programación para un mercado, selecciónela y haga clic en **Guardar**. Verá las mismas opciones de **versión** y **detención de adquisición** descritas anteriormente, pero las selecciones que realice solo se aplicarán a ese mercado.
+Para agregar una programación para un mercado, selecciónela y haga clic en **Guardar** . Verá las mismas opciones de **versión** y **detención de adquisición** descritas anteriormente, pero las selecciones que realice solo se aplicarán a ese mercado.
 
-Para agregar una programación que se aplicará a varios mercados, creará un *grupo de marketing*. Para ello, seleccione los mercados que quiera incluir y, a continuación, escriba un nombre para el grupo. (Este nombre es solo para su referencia y no será visible para ningún cliente). Por ejemplo, si desea crear un grupo de marketing para Norteamérica, puede seleccionar **Canada**, **México**y **Estados Unidos**, y asignarle el nombre **Norteamérica** u otro nombre que elija. Cuando haya terminado de crear el grupo de marketing, haga clic en **Guardar**. Verá las mismas opciones de **versión** y **detención de adquisición** descritas anteriormente, pero las selecciones que realice solo se aplicarán a ese grupo de marketing.
+Para agregar una programación que se aplicará a varios mercados, creará un *grupo de marketing* . Para ello, seleccione los mercados que quiera incluir y, a continuación, escriba un nombre para el grupo. (Este nombre es solo para su referencia y no será visible para ningún cliente). Por ejemplo, si desea crear un grupo de marketing para Norteamérica, puede seleccionar **Canada** , **México** y **Estados Unidos** , y asignarle el nombre **Norteamérica** u otro nombre que elija. Cuando haya terminado de crear el grupo de marketing, haga clic en **Guardar** . Verá las mismas opciones de **versión** y **detención de adquisición** descritas anteriormente, pero las selecciones que realice solo se aplicarán a ese grupo de marketing.
 
-Para agregar una programación personalizada para un mercado adicional o un grupo de mercado adicional, solo tiene que hacer clic en **personalizar para mercados específicos** de nuevo y repetir estos pasos. Para cambiar los mercados incluidos en un grupo de mercado, seleccione su nombre. Para quitar la programación personalizada para un grupo de marketing (o mercado individual), haga clic en **quitar**.
+Para agregar una programación personalizada para un mercado adicional o un grupo de mercado adicional, solo tiene que hacer clic en **personalizar para mercados específicos** de nuevo y repetir estos pasos. Para cambiar los mercados incluidos en un grupo de mercado, seleccione su nombre. Para quitar la programación personalizada para un grupo de marketing (o mercado individual), haga clic en **quitar** .
 
 > [!NOTE]
 > Un mercado no puede pertenecer a más de uno de los grupos de marketing que se usan en la sección **programación** .

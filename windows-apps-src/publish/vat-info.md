@@ -1,17 +1,17 @@
 ---
-Description: Si se le pide que proporcione un número de identificación de IVA durante el proceso de registro del centro de Partners, aquí se muestra información para comenzar.
+description: Si se le pide que proporcione un número de identificación de IVA durante el proceso de registro del centro de Partners, aquí se muestra información para comenzar.
 title: Información sobre el IVA
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c8521ef2988e2108dbbd619812bfde26cecc81b
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.openlocfilehash: bd863210fad66d9494d9d71115966656ccbb8893
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81545085"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034928"
 ---
 # <a name="vat-info"></a>Información sobre el IVA
 
@@ -70,7 +70,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Ejemplo: 12345678, 123456789 o 0123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Checo</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Chequia</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 8, 9 o 10 dígitos</li>
 <li>Código de país/región: CZ</li>
@@ -98,7 +98,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Ejemplo: 12345678</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">France</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Francia</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 11 dígitos</li>
 <li>Código de país/región: FR</li>
@@ -106,7 +106,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Notas: Puede incluir cualquier carácter alfabético excepto I o Q como primer o segundo carácter, o bien como primer y segundo caracteres, seguido de 9 dígitos.</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Germany</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Alemania</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 9 dígitos</li>
 <li>Código de país/región: DE</li>
@@ -194,7 +194,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Ejemplo: 123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Rumania</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Rumanía</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 2 letras y 8-10 dígitos</li>
 <li>Código de país o región: RO</li>
@@ -245,9 +245,9 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 </table>
                                                                                                                                                                   
 
- 
+ 
 
- 
+ 
 
 
 

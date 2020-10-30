@@ -1,6 +1,6 @@
 ---
 title: Interacciones de mirada
-Description: Obtenga información sobre cómo diseñar y optimizar las aplicaciones de Windows para proporcionar la mejor experiencia posible a los usuarios que confían en la entrada de la mirada del ojo y del cabeza.
+description: Obtenga información sobre cómo diseñar y optimizar las aplicaciones de Windows para proporcionar la mejor experiencia posible a los usuarios que confían en la entrada de la mirada del ojo y del cabeza.
 label: Gaze interactions
 template: detail.hbs
 keywords: mira fijamente, seguimiento ocular, seguimiento del cabezal, punto de miración, entrada, interacción del usuario, accesibilidad, facilidad de uso
@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fa08cb65afc46069e48263344270e1e3b1a3d5f5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 7799c95642b412d67b69c87dba54bf5c68ab9761
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217028"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035138"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-windows-apps"></a>Interacciones de mirada y seguimiento ocular en aplicaciones de Windows
 
@@ -27,16 +27,16 @@ Proporcione soporte para realizar un seguimiento de la mirada, la atención y la
 > [!NOTE]
 > Para ver la entrada de mira en [Windows Mixed Reality](/windows/mixed-reality/), consulte [mira fijamente](/windows/mixed-reality/gaze).
 
-**API importantes**: [Windows. Devices. Input. preview](/uwp/api/windows.devices.input.preview), [GazeDevicePreview](/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
+**API importantes** : [Windows. Devices. Input. preview](/uwp/api/windows.devices.input.preview), [GazeDevicePreview](/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 La entrada de mirada es una manera eficaz de interactuar y usar aplicaciones Windows que es especialmente útil como tecnología de asistencia para los usuarios con enfermedades neuro-muscular (por ejemplo, ALS) y otras discapacidades que implican funciones no emparejadas de músculo o Nerve.
 
 Además, la entrada de mirada ofrece oportunidades igualmente atractivas para juegos (incluidos la adquisición y el seguimiento de destino) y las aplicaciones de productividad tradicionales, quioscos y otros escenarios interactivos en los que los dispositivos de entrada tradicionales (teclado, Mouse, Touch) no están disponibles, o en los que pueden resultar útiles o útiles para liberar las manos del usuario para otras tareas (por ejemplo,
 
 > [!NOTE]
-> La compatibilidad con el hardware de seguimiento de ojos se presentó en **Windows 10 Fall Creators Update** junto con el [control ocular](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control), una característica integrada que le permite usar los ojos para controlar el puntero en pantalla, escribir con el teclado en pantalla y comunicarse con personas que usan texto a voz. Un conjunto de API de Windows Runtime ([Windows. Devices. Input. preview](/uwp/api/windows.devices.input.preview)) para compilar aplicaciones que pueden interactuar con el hardware de seguimiento de ojos está disponible con la **actualización 2018 de abril de Windows 10 (versión 1803, compilación 17134)** y versiones más recientes.
+> La compatibilidad con el hardware de seguimiento de ojos se presentó en **Windows 10 Fall Creators Update** junto con el [control ocular](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control), una característica integrada que le permite usar los ojos para controlar el puntero en pantalla, escribir con el teclado en pantalla y comunicarse con personas que usan texto a voz. Un conjunto de API de Windows Runtime ( [Windows. Devices. Input. preview](/uwp/api/windows.devices.input.preview)) para compilar aplicaciones que pueden interactuar con el hardware de seguimiento de ojos está disponible con la **actualización 2018 de abril de Windows 10 (versión 1803, compilación 17134)** y versiones más recientes.
 
 ## <a name="privacy"></a>Privacidad
 
@@ -44,13 +44,13 @@ Debido a los datos personales potencialmente confidenciales recopilados por los 
 
 Además, si la aplicación recopila, almacena o transfiere datos de seguimiento ocular, debes describirlo en la declaración de privacidad de la aplicación y seguir todos los demás requisitos para obtener **información personal** en el [contrato para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement) y las directivas de [Microsoft Store](/legal/windows/agreements/store-policies).
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Configuración
 
 Para usar las API de entrada de fijamente en la aplicación de Windows, necesitará: 
 
 - Especifique la `gazeInput` funcionalidad en el manifiesto de la aplicación.
 
-    Abra el archivo **Package. appxmanifest** con el diseñador de manifiestos de Visual Studio o agregue la funcionalidad manualmente; para ello, seleccione **Ver código**e inserte lo siguiente `DeviceCapability` en el `Capabilities` nodo:
+    Abra el archivo **Package. appxmanifest** con el diseñador de manifiestos de Visual Studio o agregue la funcionalidad manualmente; para ello, seleccione **Ver código** e inserte lo siguiente `DeviceCapability` en el `Capabilities` nodo:
 
     ```xaml
     <Capabilities>

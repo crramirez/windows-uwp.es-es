@@ -1,5 +1,5 @@
 ---
-Description: En este tema se describe la nueva interfaz de usuario de Windows para la rotación y se proporcionan instrucciones para la experiencia del usuario que deben tenerse en cuenta al usar este nuevo mecanismo de interacción en la aplicación de Windows.
+description: En este tema se describe la nueva interfaz de usuario de Windows para la rotación y se proporcionan instrucciones para la experiencia del usuario que deben tenerse en cuenta al usar este nuevo mecanismo de interacción en la aplicación de Windows.
 title: Rotación
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 135f7773a94491e1e6470c84ad428265273bc79d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 755386b8cffa5c546d20cd561693da5d21b30799
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217008"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035108"
 ---
 # <a name="rotation"></a>Rotación
 
 
 En este artículo se describe la nueva interfaz de usuario de Windows para la rotación y se proporcionan instrucciones para la experiencia del usuario que deben tenerse en cuenta al usar este nuevo mecanismo de interacción en la aplicación de Windows.
 
-> **API importantes**: [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input)
+> **API importantes** : [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="dos-and-donts"></a>Consejos
 
@@ -44,7 +44,8 @@ Usa la rotación para ayudar a los usuarios a girar directamente elementos de la
 
 ![diagrama en el que se muestran varias posturas de los dedos admitidas por la rotación.](images/ux-rotate-positions.png)
 
-**Nota:**    De forma intuitiva, y en la mayoría de los casos, el punto de giro es uno de los dos puntos táctiles, a menos que el usuario pueda especificar un punto de rotación no relacionado con los puntos de contacto (por ejemplo, en una aplicación de dibujo o diseño). Las siguientes imágenes muestran cómo puede degradarse la experiencia del usuario si el punto de rotación no está restringido de esa manera.
+**Nota**  
+Intuitivamente, y en la mayoría de los casos, el punto de rotación es uno de los dos puntos de contacto táctil, a menos que el usuario pueda especificar un punto de rotación que no esté relacionado con esos puntos (por ejemplo, en una aplicación de dibujo o diseño). Las siguientes imágenes muestran cómo puede degradarse la experiencia del usuario si el punto de rotación no está restringido de esa manera.
 
 En la primera imagen se muestran los puntos de contacto táctil inicial (pulgar) y secundario (índice): el índice está tocando un árbol y el pulgar toca un tronco.
 
@@ -59,7 +60,7 @@ En esta última imagen, la aplicación (o el usuario) ha definido que el centro 
 
 ![imagen en la que se muestra una ilustración girada en la que el punto de rotación está restringido al centro del borde izquierdo de la ilustración en lugar de uno de los dos puntos táctiles iniciales.](images/ux-rotate-points4.png)
 
- 
+ 
 
 Windows 10 admite tres tipos de rotación: gratis, restringido y combinado.
 
@@ -71,7 +72,7 @@ Windows 10 admite tres tipos de rotación: gratis, restringido y combinado.
 <thead>
 <tr class="header">
 <th align="left">Tipo</th>
-<th align="left">Descripción</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -88,10 +89,10 @@ Windows 10 admite tres tipos de rotación: gratis, restringido y combinado.
 <td align="left">Rotación combinada</td>
 <td align="left"><p>La rotación combinada admite la rotación libre pero con zonas (similares a las guías de las <a href="guidelines-for-panning.md">Instrucciones del movimiento panorámico</a>) en cada uno de los puntos de acoplamiento situados cada 90 grados impuestos en la rotación restringida. Si el usuario libera el objeto fuera de una de las zonas de 90 grados, el objeto permanece en esa posición; de otro modo, el objeto gira de manera automática hasta un punto de acoplamiento.</p>
 <div class="alert">
-<strong>Nota:</strong>    Una guía de interfaz de usuario es una característica en la que un área alrededor de un destino limita el movimiento hacia algún valor o ubicación específicos para influir en su selección.
+<strong>Nota:</strong>  Una guía de interfaz de usuario es una característica en la que un área alrededor de un destino limita el movimiento hacia algún valor o ubicación específicos para influir en su selección.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 </tbody>

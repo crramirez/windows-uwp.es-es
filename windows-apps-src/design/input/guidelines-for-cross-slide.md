@@ -1,17 +1,17 @@
 ---
-Description: Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
+description: Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
 title: Instrucciones para el deslizamiento transversal
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b16c957991889cb5f39a775397de72ff56beffc
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: ad51e23e29b4fcdb3b1906054762a0e432b6612a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749982"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035168"
 ---
 # <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
@@ -56,7 +56,7 @@ Aquí encontrarás algunas directrices que debes tener en cuenta a la hora de in
 
 Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](/previous-versions/windows/apps/hh465382(v=win.10)).
 
-**Nota:**    En los casos en los que el área de contenido se puede desplazar en dos direcciones, como exploradores Web o lectores electrónicos, se debe usar la interacción con hora de mantener presionada para invocar el menú contextual para objetos como imágenes e hipervínculos.
+**Nota** En los casos en que el área de contenido pueda desplazarse lateralmente en dos direcciones; por ejemplo, en un explorador web o un lector de libros electrónicos, conviene usar la interacción sincronizada de pulsar y sostener para invocar el menú contextual para objetos, como imágenes e hipervínculos.
 
 :::row:::
    :::column:::
@@ -152,6 +152,6 @@ Si es necesario mover más de un objeto, deja que los usuarios seleccionen vario
 - [Entrada: muestra de gestos de Windows 8](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Entrada: ejemplo de manipulaciones y gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [Muestra de entrada táctil de DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
- 
+ 
 
- 
+ 

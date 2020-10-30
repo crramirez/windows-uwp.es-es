@@ -1,5 +1,5 @@
 ---
-Description: Aprende a adaptar la interfaz de usuario de la aplicación al mostrar u ocultar el teclado táctil.
+description: Aprende a adaptar la interfaz de usuario de la aplicación al mostrar u ocultar el teclado táctil.
 title: Responder a la presencia del teclado táctil
 ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: teclado, accesibilidad, navegación, enfoque, texto, entrada, interacciones de usuario
 ms.date: 09/24/2020
 ms.topic: article
-ms.openlocfilehash: 4af7e7533ebd985a22eedd2e11f35d8bf5f5dc8a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c3431fcafb86428ce5eddb8ea7a6b0187b64a5e5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216908"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035088"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder a la presencia del teclado táctil
 
@@ -54,7 +54,7 @@ Estas son algunas recomendaciones básicas para los controles de entrada de text
 
 - Muestra el teclado táctil manteniendo la plena interacción con el formulario.
 
-- Asegúrese de que los controles personalizados tienen el [AutomationControlType](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) de automatización de la interfaz de usuario adecuado para que el teclado se mantenga cuando el foco se mueve de un campo de entrada de texto en el contexto de la entrada de texto. Por ejemplo, si tienes un menú que se abre en medio de una situación de entrada de texto y quieres que se mantenga el teclado, el menú debe tener el menú **AutomationControlType**.
+- Asegúrate de que los controles personalizados tengan la automatización de la interfaz de usuario adecuada [AutomationControlType](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) para que el teclado se mantenga cuando el foco se mueve desde el campo de entrada de texto estando en el contexto de entrada de texto. Por ejemplo, si tienes un menú que se abre en medio de una situación de entrada de texto y quieres que se mantenga el teclado, el menú debe tener el menú **AutomationControlType** .
 
 - No manipules las propiedades de automatización de la interfaz de usuario para controlar el teclado táctil. Otras herramientas de accesibilidad dependen de la precisión de las propiedades de automatización de la interfaz de usuario.
 

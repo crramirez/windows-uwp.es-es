@@ -1,5 +1,5 @@
 ---
-Description: El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos.
+description: El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos.
 title: Movimiento panorámico
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 596a9f2f3f234ba90b799eae982523c3a9de9732
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 0a989a6a96ac42b1eb790b6ac0dd223bd55b1bb8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749941"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035128"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
 
 El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos.
 
-> **API importantes**: [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input)
+> **API importantes** : [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input)
 
 
 ## <a name="dos-and-donts"></a>Consejos
@@ -32,9 +32,9 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 -   Mostrar indicadores de movimiento panorámico y barras de desplazamiento para proporcionar indicaciones de ubicación y tamaño. Oculte si proporciona una característica de navegación personalizada.
 
-    **Nota:**    A diferencia de las barras de desplazamiento estándar, los indicadores de movimiento panorámico son meramente informativos. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
+    **Nota** A diferencia de las barras de desplazamiento estándares, los indicadores de desplazamiento lateral son meramente informativos. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
 
-     
+     
 
 **Movimiento panorámico en un solo eje (desbordamiento de una dimensión)**
 
@@ -115,9 +115,9 @@ Hay dos modos de visualización de movimiento panorámico en función del dispos
 -   Indicadores de movimiento panorámico para la entrada táctil.
 -   Barras de desplazamiento para otros dispositivos de entrada, como el mouse, el panel táctil, el teclado y el lápiz.
 
-**Nota:**    Los indicadores de movimiento panorámico solo están visibles cuando el contacto táctil está dentro de la región panorámica. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
+**Nota:** Los indicadores de movimiento panorámico solo se ven cuando el contacto táctil se encuentra dentro de la región desplazable. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
 
- 
+ 
 
 **Indicadores de movimiento panorámico** Los indicadores de movimiento panorámico son similares al cuadro de desplazamiento de una barra de desplazamiento. Indican la proporción del contenido visualizado respecto al área total que puede moverse panorámicamente, así como la posición relativa del contenido mostrado en el área desplazable.
 

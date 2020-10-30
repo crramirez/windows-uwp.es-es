@@ -1,18 +1,18 @@
 ---
-Description: Genera interacción y satisfacción en los clientes con características como las notificaciones, las ofertas dirigidas, las respuestas a valoraciones y comentarios y mucho más.
-title: Interactuar con tus clientes
+description: Impulse el compromiso y la satisfacción del cliente mediante el uso de características como notificaciones, ofertas de destino, respuesta a revisiones y comentarios, etc.
+title: Interactuar con los clientes
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e03e698a7c74dc6c3a9abec30d471a0a16427650
-ms.sourcegitcommit: 2dba9b4e81151d14ca90d36341274a3b59926197
+ms.openlocfilehash: 827001cda13b6335f9aaae06d8138c5223dbbb84
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057601"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034848"
 ---
-# <a name="engage-with-your-customers"></a>Interactuar con tus clientes
+# <a name="engage-with-your-customers"></a>Interactuar con los clientes
 
 Genera interacción y satisfacción en los clientes usando funciones como las notificaciones de inserción, las ofertas dirigidas y las respuestas a comentarios y valoraciones. El [centro de Partners](https://partner.microsoft.com/dashboard) incluye estas características y mucho más para ayudarle a impulsar el compromiso y la satisfacción del cliente.
 
@@ -53,7 +53,7 @@ Muestra contenido atractivo y personalizado a segmentos de clientes específicos
 
 Usa el panel para crear y enviar notificaciones push a segmentos de clientes de la aplicación, adaptando cada notificación para cada audiencia.
 
-[Enviar notificaciones](send-push-notifications-to-your-apps-customers.md)
+[Envío de notificaciones](send-push-notifications-to-your-apps-customers.md)
     :::column-end:::
 :::row-end:::
 
@@ -87,7 +87,7 @@ Invita a tus clientes de Windows 10 a contarte sus opiniones dirigiéndolos al C
 
 :::row:::
     :::column:::
-        ![Responder a valoraciones](images/ads-community-campaign.png)
+        ![Responder a las opiniones de los clientes](images/ads-community-campaign.png)
     :::column-end:::
     :::column span="2":::
 **Responder a las opiniones de los clientes**
@@ -106,5 +106,5 @@ Mantenga pestañas en las actividades de interacción con el cliente mediante el
 
 - [Crear grupos de clientes](create-customer-groups.md)
 - [Informe Críticas](reviews-report.md)
-- [Informe Comentarios](feedback-report.md)
+- [Informe de comentarios](feedback-report.md)
 - [Obtener datos de análisis mediante nuestra API de REST](../monetize/access-analytics-data-using-windows-store-services.md)

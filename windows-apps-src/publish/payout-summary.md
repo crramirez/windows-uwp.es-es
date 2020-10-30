@@ -1,23 +1,23 @@
 ---
-Description: Los informes de pago muestran los detalles sobre el dinero que ha obtenido con sus aplicaciones y complementos. También le permite saber cuándo recibirá los pagos y cuánto le pagarán.
+description: Los informes de pago muestran los detalles sobre el dinero que ha obtenido con sus aplicaciones y complementos. También le permite saber cuándo recibirá los pagos y cuánto le pagarán.
 title: Informes de pago
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.date: 08/02/2019
 ms.topic: article
 keywords: Windows 10, UWP, Resumen de pagos, declaración, pagos, ingresos, pagos, pago, continúa
 ms.localizationpriority: medium
-ms.openlocfilehash: 7eab86cc1856f5ad206aa8bbceb2f2e04f5410d2
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 11d83031702a642fa21a711edfdbaff69661c853
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763112"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035028"
 ---
 # <a name="payout-reports"></a>Informes de pago
 
 El **Resumen de pagos** muestra detalles sobre el dinero que ha obtenido con Microsoft. También le permite saber cuándo recibirá los pagos y cuánto le pagarán.
 
-Si vende productos en Azure Marketplace, también verá información sobre los pagos correctos en el **Resumen de pagos**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](/legal/marketplace/participation-policy) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3ypvt).
+Si vende productos en Azure Marketplace, también verá información sobre los pagos correctos en el **Resumen de pagos** . Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](/legal/marketplace/participation-policy) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3ypvt).
 
 > [!NOTE]
 > Para poder acceder a esta opción, sus ganancias deben alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) de 50 USD. Para más información sobre el umbral de pago, consulte esta página y revise el acuerdo para desarrolladores de aplicaciones.
@@ -225,5 +225,5 @@ El historial de transacciones anterior al 1 de julio de 2019 se administra por s
 | Moneda del pago        | Moneda en que se realiza el pago.                                                                                                                                       |
 | Pago convertido       | Importe del pago convertido a la moneda de pago con el tipo de cambio.                                                                                                         |
 | Modelo de remisión de impuestos         | Entidad responsable de la emisión de impuestos (ventas, uso o impuestos de IVA/GST).                                                                                                   |
-| Fecha y hora de la idoneidad   | La fecha y la hora en que las ganancias por la transacción se vuelven aptas para el pago (UTC). Cuando se crea un pago, incluye las ganancias de las transacciones que tienen una fecha y hora de elegibilidad anterior a la fecha de creación del pago. (Solo se incluye en el archivo .csv **Reservado**). |
-| Charges                 | Muestra un desglose de todos los detalles de los cargos agregados en la columna Importe de la transacción. (Solo se incluye para Azure Marketplace; no se incluye en el archivo .csv **Reservado**). |
+| Fecha y hora de la idoneidad   | La fecha y la hora en que las ganancias por la transacción se vuelven aptas para el pago (UTC). Cuando se crea un pago, incluye las ganancias de las transacciones que tienen una fecha y hora de elegibilidad anterior a la fecha de creación del pago. (Solo se incluye en el archivo .csv **Reservado** ). |
+| Charges                 | Muestra un desglose de todos los detalles de los cargos agregados en la columna Importe de la transacción. (Solo se incluye para Azure Marketplace; no se incluye en el archivo .csv **Reservado** ). |

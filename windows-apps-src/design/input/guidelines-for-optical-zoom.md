@@ -1,5 +1,5 @@
 ---
-Description: En este tema se describen las características de zoom y cambio de tamaño de elementos en Windows. También se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en tus aplicaciones.
+description: En este tema se describen las características de zoom y cambio de tamaño de elementos en Windows. También se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en tus aplicaciones.
 title: Instrucciones de zoom óptico y cambio de tamaño
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5864be7a4a7f80e376439e8db387e2b2853dfd7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1cf62546efd95c3a4d26ad3ca6f16990b832611c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172489"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035118"
 ---
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico y cambio de tamaño
 
@@ -21,7 +21,7 @@ ms.locfileid: "89172489"
 
 En este artículo se describen los elementos de zoom y cambio de tamaño de Windows. También se ofrecen instrucciones de experiencia de usuario para que uses estos nuevos mecanismos de interacción en las aplicaciones.
 
-> **API importantes**: [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Input (XAML)**](/uwp/api/Windows.UI.Xaml.Input)
+> **API importantes** : [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Input (XAML)**](/uwp/api/Windows.UI.Xaml.Input)
 
 El zoom óptico permite a los usuarios ampliar la vista del contenido dentro de un área de contenido (se ejecuta sobre la propia área de contenido), mientras que el cambio de tamaño permite cambiar el tamaño relativo de uno o varios objetos sin cambiar la vista del área de contenido (se ejecuta sobre los objetos que están dentro del área de contenido).
 
@@ -29,17 +29,18 @@ Tanto la interacción de zoom óptico como la de cambio de tamaño se ejecutan c
 
 Los siguientes diagramas muestran las diferencias entre cambio de tamaño y zoom óptico.
 
-**Zoom óptico**: el usuario selecciona un área y después acerca o aleja el área completa.
+**Zoom óptico** : el usuario selecciona un área y después acerca o aleja el área completa.
 
 ![juntar los dedos acerca el área de contenido, y separarlos la aleja.](images/areazoom.png)
 
-**Cambio de tamaño**: el usuario selecciona un objeto dentro de un área y cambia el tamaño del objeto.
+**Cambio de tamaño** : el usuario selecciona un objeto dentro de un área y cambia el tamaño del objeto.
 
 ![juntar los dedos reduce el objeto, y alejarlos lo amplía.](images/objectresize.png)
 
-**Nota:**    El zoom óptico no debe confundirse con el [zoom semántico](../controls-and-patterns/semantic-zoom.md). Aunque en las dos interacciones se usan los mismos gestos, el zoom semántico se refiere a la presentación y navegación de datos o contenido estructurados en una única vista (como la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos).
+**Nota**  
+El zoom óptico no debe confundirse con el [zoom semántico](../controls-and-patterns/semantic-zoom.md). Aunque en las dos interacciones se usan los mismos gestos, el zoom semántico se refiere a la presentación y navegación de datos o contenido estructurados en una única vista (como la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos).
 
- 
+ 
 
 ## <a name="dos-and-donts"></a>Consejos
 
@@ -55,7 +56,7 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
     -   Proximidad: después de levantar el dedo, se selecciona un punto de acoplamiento si la inercia se detiene dentro del umbral de distancia del punto de acoplamiento. Los puntos de acoplamiento en proximidad aún permiten que el zoom y el cambio de tamaño finalicen entre los puntos de acoplamiento.
     -   Obligatorio: el punto de acoplamiento seleccionado es el que precede o sigue inmediatamente al último punto de acoplamiento que se cruzó antes de levantar el contacto (en función de la dirección y velocidad del gesto). Una manipulación debe finalizar en un punto de acoplamiento obligatorio.
--   Usa física de inercia. Entre ellas, figuran:
+-   Usa física de inercia. Entre ellas, se incluyen las siguientes:
     -   Desaceleración: ocurre cuando el usuario deja de reducir o ampliar. Es similar a la acción de dejar de deslizarse en una superficie resbaladiza.
     -   Rebote: se produce un ligero efecto de rebote cuando se supera un límite o una restricción de cambio de tamaño.
 -   Distribuye los controles de acuerdo con las [directrices para destinos](guidelines-for-targeting.md).
@@ -65,7 +66,8 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
     -   Las aplicaciones de dibujo en las que pueden aparecer elementos redimensionables en un elemento canvas redimensionable.
     -   Las páginas web con un objeto incrustado, como por ejemplo un mapa.
 
-    **Nota:**    En todos los casos, se cambia el tamaño del área de contenido a menos que todos los puntos táctiles estén dentro del objeto de tamaño variable.
+    **Nota**  
+    En todos los casos, el área de contenido cambia de tamaño a menos que todos los puntos táctiles se encuentren dentro del objeto redimensionable.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

@@ -1,5 +1,5 @@
 ---
-Description: Cree aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para Touch, pero que sean funcionalmente coherentes en todos los dispositivos de entrada.
+description: Cree aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para Touch, pero que sean funcionalmente coherentes en todos los dispositivos de entrada.
 title: Interacciones táctiles
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -8,12 +8,12 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 302a1f39d85902b229642b60f483b40f51209a72
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 614d8c5340100ca5ba666493ccb23ec4d8ca8498
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750391"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035058"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -22,7 +22,7 @@ Diseña tu aplicación teniendo en mente que el principal método de entrada de 
 
 Pero ten presente que una interfaz de usuario optimizada para entrada táctil no es siempre mejor que una interfaz de usuario tradicional. Ambas ofrecen ventajas y desventajas exclusivas de la tecnología y la aplicación en cuestión. En el paso a una interfaz de usuario táctil, es importante comprender las diferencias principales entre el toque, el panel táctil, el lápiz/lápiz, el mouse y la entrada del teclado.
 
-> **API importantes**: [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input), [**Windows. UI. Core**](/uwp/api/Windows.UI.Core), [**Windows. Devices. Input**](/uwp/api/Windows.Devices.Input)
+> **API importantes** : [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Xaml.Input), [**Windows. UI. Core**](/uwp/api/Windows.UI.Core), [**Windows. Devices. Input**](/uwp/api/Windows.Devices.Input)
 
 
 Muchos dispositivos tienen pantallas multitoque que admiten el uso de uno o más dedos (o contactos táctiles) como entrada. Los contactos táctiles y su movimiento, se interpretan como gestos táctiles y manipulaciones para admitir distintas interacciones del usuario.
@@ -75,7 +75,7 @@ En la tabla siguiente se muestran algunas de las diferencias entre los dispositi
 > [!NOTE]
 > La entrada indirecta tiene la ventaja de más de 25 años de perfeccionamiento. Algunas funciones, como la información sobre herramientas desencadenada al mantener el mouse sobre un elemento, se diseñaron para explorar la interfaz de usuario específicamente con entrada de panel táctil, mouse, pluma o lápiz y teclado. Funciones de UI como esta se han rediseñado para lograr la experiencia completa que reporta la entrada táctil, sin poner en riesgo la experiencia de usuario de estos otros dispositivos.
 
- 
+ 
 
 ## <a name="use-touch-feedback"></a>Usar la información táctil
 
@@ -178,7 +178,7 @@ Para proporcionar compatibilidad táctil personalizada, puedes controlar diverso
 
 -   Los eventos de gestos estáticos se desencadenan una vez completada una interacción. Los eventos de gesto incluyen los de [**puntear**](/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](/uwp/api/windows.ui.xaml.uielement.doubletapped), [**RightTapped**](/uwp/api/windows.ui.xaml.uielement.righttapped)y [**Holding**](/uwp/api/windows.ui.xaml.uielement.holding).
 
-    Puede deshabilitar los eventos de gestos en elementos concretos estableciendo [**IsTapEnabled**](/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)y [**IsHoldingEnabled**](/uwp/api/windows.ui.xaml.uielement.isholdingenabled) en **false**.
+    Puede deshabilitar los eventos de gestos en elementos concretos estableciendo [**IsTapEnabled**](/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)y [**IsHoldingEnabled**](/uwp/api/windows.ui.xaml.uielement.isholdingenabled) en **false** .
 
 -   Los eventos de puntero como [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerMoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved) proporcionan detalles de bajo nivel para cada contacto táctil, incluido el movimiento del puntero y la capacidad de distinguir los eventos de presionar y soltar.
 
@@ -190,7 +190,7 @@ Para proporcionar compatibilidad táctil personalizada, puedes controlar diverso
 
 Este es el conjunto básico de gestos táctiles que admite la UWP.
 
-| Nombre           | Tipo                 | Descripción                                                                            |
+| Nombre           | Tipo                 | Description                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | Pulsar            | Gesto estático       | Un dedo toca la pantalla y se levanta.                                            |
 | Pulsar y sostener | Gesto estático       | Un dedo toca la pantalla y se queda en el lugar.                                      |
@@ -200,7 +200,7 @@ Este es el conjunto básico de gestos táctiles que admite la UWP.
 | Reducir          | Gesto de manipulación | Dos o más dedos tocan la pantalla y se acercan entre sí.                         |
 | Stretch        | Gesto de manipulación | Dos o más dedos tocan la pantalla y se alejan entre sí.                           |
 
- 
+ 
 
 <!-- mijacobs: Removing for now. We don't have a real page to link to yet. 
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
@@ -220,7 +220,7 @@ Los eventos de puntero se basan en un único punto de entrada (dedo, punta del l
 
 Esta es una lista de eventos de puntero y su argumento de evento relacionado.
 
-| Evento o clase                                                       | Descripción                                                   |
+| Evento o clase                                                       | Description                                                   |
 |----------------------------------------------------------------------|---------------------------------------------------------------|
 | [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed)             | Se produce cuando un dedo toca la pantalla.               |
 | [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)           | Se produce cuando ese mismo contacto táctil se levanta.                |
@@ -232,7 +232,7 @@ Esta es una lista de eventos de puntero y su argumento de evento relacionado.
 | [**PointerWheelChanged**](/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)   | Se produce cuando cambia el valor Delta de una rueda del mouse y cuando se gira el Touchpad.         |
 | [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) | Proporciona datos para todos los eventos de puntero.                         |
 
- 
+ 
 
 En el ejemplo siguiente se muestra cómo usar los eventos [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) y [**PointerExited**](/uwp/api/windows.ui.xaml.uielement.pointerexited) para controlar una interacción de presionar en un objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle).
 
@@ -417,7 +417,7 @@ Puedes usar los eventos de manipulación para detectar interacciones como, por e
 
 Esta es una lista de eventos de manipulación y los argumentos de evento relacionados.
 
-| Evento o clase                                                                                               | Descripción                                                                                                                               |
+| Evento o clase                                                                                               | Description                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Evento ManipulationStarting**](/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | Se produce cuando se crea por primera vez el procesador de manipulación.                                                                                  |
 | [**Evento ManipulationStarted**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | Se produce cuando un dispositivo de entrada comienza una manipulación en el [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement).                                            |
@@ -431,7 +431,7 @@ Esta es una lista de eventos de manipulación y los argumentos de evento relacio
 | [**ManipulationVelocities**](/uwp/api/Windows.UI.Input.ManipulationVelocities)                                              | Describe la velocidad a la que tienen lugar las manipulaciones.                                                                                         |
 | [**ManipulationCompletedRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)             | Proporciona datos para el evento [**ManipulationCompleted**](/uwp/api/windows.ui.xaml.uielement.manipulationcompleted).                                       |
 
- 
+ 
 
 Un gesto consiste en una serie de eventos de manipulación. Cada gesto se inicia con un evento [**ManipulationStarted**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted), por ejemplo, cuando un usuario toca la pantalla.
 
@@ -440,7 +440,7 @@ A continuación, se desencadenan uno o más eventos [**ManipulationDelta**](/uwp
 > [!NOTE]
 > Si no dispone de un monitor de pantalla táctil, puede probar el código de evento de manipulación en el simulador mediante una interfaz de mouse y rueda de mouse.
 
- 
+ 
 
 En el ejemplo siguiente se muestra cómo usar los eventos [**ManipulationDelta**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) para controlar una interacción de deslizamiento en un objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) y moverlo por la pantalla.
 
@@ -454,7 +454,7 @@ Primero, se crea un objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Recta
 </Grid>
 ```
 
-A continuación, se crea un objeto [**TranslateTransform**](/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) global denominado `dragTranslation` para traducir el objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). Un agente de escucha de eventos de [**ManipulationDelta**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) se especifica en el **rectángulo**y `dragTranslation` se agrega al [**RenderTransform**](/uwp/api/windows.ui.xaml.uielement.rendertransform) del **rectángulo**.
+A continuación, se crea un objeto [**TranslateTransform**](/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) global denominado `dragTranslation` para traducir el objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). Un agente de escucha de eventos de [**ManipulationDelta**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) se especifica en el **rectángulo** y `dragTranslation` se agrega al [**RenderTransform**](/uwp/api/windows.ui.xaml.uielement.rendertransform) del **rectángulo** .
 
 ```cpp
 // Global translation transform used for changing the position of 
@@ -572,7 +572,7 @@ End Sub
 ## <a name="routed-events"></a>Eventos enrutados
 
 
-Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados*. Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) o la raíz [**Page**](/uwp/api/Windows.UI.Xaml.Controls.Page) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a cómo se escriben los controladores para los eventos enrutados, vea [Introducción a eventos y eventos enrutados](/previous-versions/windows/apps/hh758286(v=win.10)).
+Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados* . Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) o la raíz [**Page**](/uwp/api/Windows.UI.Xaml.Controls.Page) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a cómo se escriben los controladores para los eventos enrutados, vea [Introducción a eventos y eventos enrutados](/previous-versions/windows/apps/hh758286(v=win.10)).
 
 ## <a name="dos-and-donts"></a>Consejos
 

@@ -1,17 +1,17 @@
 ---
-Description: Obtén información sobre qué hacer si crees que otra aplicación está infringiendo tus derechos de propiedad intelectual.
+description: Obtén información sobre qué hacer si crees que otra aplicación está infringiendo tus derechos de propiedad intelectual.
 title: Protección de marcas comerciales y derechos de autor
 ms.assetid: 61C4EEC0-AD4D-4828-ADEC-F18E99DD4FFC
 ms.date: 06/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 14dae80876e1e7a77151f4e814a8dcd06e039645
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d3ae8467143dd1c254db20c237316e3984573242
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259896"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034978"
 ---
 # <a name="trademark-and-copyright-protection"></a>Protección de marcas comerciales y derechos de autor
 
@@ -21,7 +21,7 @@ Obtén información sobre qué hacer si crees que otra aplicación está infring
 ### <a name="1-how-may-i-report-an-infringement-of-my-intellectual-property-rights-within-a-windows-app"></a>1. ¿Cómo puedo comunicar una infracción de mis derechos de propiedad intelectual relativos a una aplicación de Windows?
 
 
-Usa el siguiente [formulario](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&ln=EN-US&oaspworkflow=start_1.0.0.0&wfname=RAVCI&wf=0) para denunciar una infracción de derechos de publicidad, marca comercial o copyright relativos a una aplicación de Windows. Para infracciones de derechos de publicidad, marca comercial o copyright en múltiples aplicaciones, envía tu denuncia a mktlegal@microsoft.com. Si necesita más información sobre la Directiva de DMCA de Microsoft, visite: [https://www.microsoft.com/info/cpyrtInfrg.aspx](https://www.microsoft.com/info/cpyrtInfrg.aspx).
+Usa el siguiente [formulario](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&ln=EN-US&oaspworkflow=start_1.0.0.0&wfname=RAVCI&wf=0) para denunciar una infracción de derechos de publicidad, marca comercial o copyright relativos a una aplicación de Windows. En el caso de las infracciones de derechos de copyright, marca comercial o publicidad en varias aplicaciones, envíe su solicitud a mktlegal@microsoft.com . Si necesita información adicional acerca de la Directiva de DMCA de Microsoft, visite: [https://www.microsoft.com/info/cpyrtInfrg.aspx](https://www.microsoft.com/info/cpyrtInfrg.aspx) .
 
 ### <a name="2-i-created-my-app-to-work-with-a-microsoft-productservice-may-i-use-the-microsoft-productservice-name-in-the-name-of-my-app"></a>2. He creado la aplicación para que funcione con un servicio/producto de Microsoft. ¿Podría usar el nombre del producto/servicio de Microsoft en el nombre de la aplicación?
 
@@ -63,9 +63,9 @@ No, no si no tienes permiso para ello. El copyright no protege la idea de un jue
 
 Lee detenidamente el aviso de Microsoft y sigue las instrucciones. El aviso de Microsoft puede incluir determinados pasos específicos que debes seguir para comunicarnos qué has hecho para corregir el problema, informarnos de que no estás de acuerdo con el demandante y/o explicarnos que quieres reenviar la aplicación a la Tienda.
 
- 
+ 
 
- 
+ 
 
 
 

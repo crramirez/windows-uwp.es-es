@@ -1,17 +1,17 @@
 ---
-Description: Vea los detalles relacionados con la identidad única asignada a la aplicación por el Microsoft Store y obtenga un vínculo a la lista de la tienda de la aplicación.
+description: Vea los detalles relacionados con la identidad única asignada a la aplicación por el Microsoft Store y obtenga un vínculo a la lista de la tienda de la aplicación.
 title: Ver detalles de identidad de las aplicaciones
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9232acbf83659c661e1b1f3c35a7fb7ad546e819
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 11984d1aa5f8da20b529ab485615bd1f760cc2cd
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157929"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034908"
 ---
 # <a name="view-app-identity-details"></a>Ver detalles de identidad de las aplicaciones
 
@@ -38,8 +38,8 @@ Juntos, estos elementos declaran la identidad de la aplicación y establecen la 
 
 Los siguientes valores son valores adicionales que hacen referencia a la familia del paquete de la aplicación, pero que no se incluyen en el manifiesto.
 
--   **Nombre de familia de paquete (PFN)**: este valor se usa con ciertas API de Windows.
--   **Package SID**: necesitarás este valor para enviar notificaciones de WNS a la aplicación. Para más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
+-   **Nombre de familia de paquete (PFN)** : este valor se usa con ciertas API de Windows.
+-   **Package SID** : necesitarás este valor para enviar notificaciones de WNS a la aplicación. Para más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
 
 ## <a name="link-to-your-apps-listing"></a>Vincular a la descripción de la aplicación
@@ -52,6 +52,6 @@ El **vínculo del Protocolo de almacenamiento** se puede usar para vincular dire
 
 
 
- 
+ 
 
- 
+ 

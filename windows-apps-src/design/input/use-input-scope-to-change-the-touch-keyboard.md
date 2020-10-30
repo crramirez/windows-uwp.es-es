@@ -1,5 +1,5 @@
 ---
-Description: Para ayudar a los usuarios a escribir datos con el teclado táctil o con el panel de entrada de software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
+description: Para ayudar a los usuarios a escribir datos con el teclado táctil o con el panel de entrada de software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
 MS-HAID: dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -9,12 +9,12 @@ template: detail.hbs
 keywords: teclado,accesibilidad,navegación,foco,texto,entrada,interacción del usuario
 ms.date: 02/08/2017
 ms.topic: article
-ms.openlocfilehash: e6e140a1967ca3ffe7775f427ccae7a7e07c5ca6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9b274d7cafd179157571a51db1122153a33d846e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165819"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035078"
 ---
 # <a name="use-input-scope-to-change-the-touch-keyboard"></a>Usar el ámbito de entrada para cambiar el teclado táctil
 
@@ -25,9 +25,9 @@ Para ayudar a los usuarios a escribir datos con el teclado táctil o con el pane
 - [InputScopeNameValue](/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)
 
 
-El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario puntea en un campo de entrada modificable, como un **[cuadro de texto](/uwp/api/Windows.UI.Xaml.Controls.TextBox)** o un **[RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)**. Puede hacer que los usuarios puedan escribir datos en la aplicación de forma mucho más rápida y sencilla estableciendo el *ámbito de entrada* del control de texto para que coincida con el tipo de datos que espera que el usuario escriba. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar un diseño de táctil especializado para el tipo de entrada.
+El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario puntea en un campo de entrada modificable, como un **[cuadro de texto](/uwp/api/Windows.UI.Xaml.Controls.TextBox)** o un **[RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)** . Puede hacer que los usuarios puedan escribir datos en la aplicación de forma mucho más rápida y sencilla estableciendo el *ámbito de entrada* del control de texto para que coincida con el tipo de datos que espera que el usuario escriba. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar un diseño de táctil especializado para el tipo de entrada.
 
-Por ejemplo, si un cuadro de texto solo se usa para escribir un PIN de 4 dígitos, establezca la propiedad [**InputScope**](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) en **Number**. Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la entrada del PIN.
+Por ejemplo, si un cuadro de texto solo se usa para escribir un PIN de 4 dígitos, establezca la propiedad [**InputScope**](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) en **Number** . Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la entrada del PIN.
 
 > [!IMPORTANT]
 > - Esta información se aplica únicamente al SIP. No se aplica a teclados de hardware o al teclado en pantalla disponible en las opciones de accesibilidad de Windows.
@@ -35,7 +35,7 @@ Por ejemplo, si un cuadro de texto solo se usa para escribir un PIN de 4 dígito
 
 ## <a name="changing-the-input-scope-of-a-text-control"></a>Cambio del ámbito de entrada de un control de texto
 
-Los ámbitos de entrada que están disponibles para tu aplicación de Windows forman parte de la enumeración **[InputScopeNameValue](/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)**. Puedes establecer la propiedad **InputScope** de un **[TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)** o de un **[RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)** en uno de estos valores.
+Los ámbitos de entrada que están disponibles para tu aplicación de Windows forman parte de la enumeración **[InputScopeNameValue](/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)** . Puedes establecer la propiedad **InputScope** de un **[TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)** o de un **[RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)** en uno de estos valores.
 
 > [!IMPORTANT]
 > La propiedad **[InputScope](/uwp/api/windows.ui.xaml.controls.passwordbox.inputscope)** en **[PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)** solo admite los valores de **contraseña** y **NumericPin** . Se ignorará cualquier otro valor.
@@ -121,13 +121,13 @@ Los controles [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) y [**Rich
 
 -   [**IsSpellCheckEnabled**](/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled): cuando la revisión ortográfica está habilitada para un control de texto, el control interactúa con el motor de corrección ortográfica del sistema para marcar las palabras que no se reconocen. Puedes presionar una palabra para ver una lista de las correcciones sugeridas. La revisión ortográfica está habilitada de manera predeterminada.
 
-    Para el ámbito de entrada **Default**, esta propiedad también activa el uso de mayúsculas automático de la primera palabra de una frase y la corrección automática de palabras a medida que escribes. Estas funciones de corrección automática pueden estar deshabilitadas en otros ámbitos de entrada. Para obtener más información, consulta las tablas que figuran más adelante en este tema.
+    Para el ámbito de entrada **Default** , esta propiedad también activa el uso de mayúsculas automático de la primera palabra de una frase y la corrección automática de palabras a medida que escribes. Estas funciones de corrección automática pueden estar deshabilitadas en otros ámbitos de entrada. Para obtener más información, consulta las tablas que figuran más adelante en este tema.
 
 -   [**IsTextPredictionEnabled**](/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled): Cuando se habilita la predicción de texto para un control de texto, el sistema muestra una lista de palabras que es posible que estés empezando a escribir. Puedes seleccionarlas de la lista para no tener que escribir toda la palabra. La predicción está habilitada de manera predeterminada.
 
-    La predicción de texto puede estar deshabilitada si el ámbito de entrada es distinto de **Default**, incluso si la propiedad [**IsTextPredictionEnabled**](/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) es **true**. Para obtener más información, consulta las tablas que figuran más adelante en este tema.
+    La predicción de texto puede estar deshabilitada si el ámbito de entrada es distinto de **Default** , incluso si la propiedad [**IsTextPredictionEnabled**](/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) es **true** . Para obtener más información, consulta las tablas que figuran más adelante en este tema.
 
--   [**PreventKeyboardDisplayOnProgrammaticFocus**](/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus): cuando esta propiedad es **true**, impide que el sistema muestre el teclado táctil cuando el foco se establece mediante programación en un control de texto. En su lugar, el teclado se muestra únicamente cuando el usuario interactúa con el control.
+-   [**PreventKeyboardDisplayOnProgrammaticFocus**](/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus): cuando esta propiedad es **true** , impide que el sistema muestre el teclado táctil cuando el foco se establece mediante programación en un control de texto. En su lugar, el teclado se muestra únicamente cuando el usuario interactúa con el control.
 
 ## <a name="touch-keyboard-index-for-windows"></a>Índice de teclado táctil para Windows
 
@@ -143,10 +143,10 @@ En estas tablas se muestran los diseños del panel de entrada de software (SIP) 
 Teclado táctil de Windows predeterminado.
 
 ![Teclado táctil de Windows predeterminado](images/input-scopes/default.png)
-- Corrector ortográfico: habilitado si **IsSpellCheckEnabled**  =  **true**, deshabilitado si **IsSpellCheckEnabled**  =  **false**
-- Corrección automática: habilitada si **IsSpellCheckEnabled**  =  **true**, deshabilitado si **IsSpellCheckEnabled**  =  **false**
-- Capitalización automática: habilitada si **IsSpellCheckEnabled**  =  **true**, deshabilitada si **IsSpellCheckEnabled**  =  **false**
-- Predicción de texto: habilitada si **IsTextPredictionEnabled**  =  **true**, Disabled if **IsTextPredictionEnabled**  =  **false**
+- Corrector ortográfico: habilitado si **IsSpellCheckEnabled**  =  **true** , deshabilitado si **IsSpellCheckEnabled**  =  **false**
+- Corrección automática: habilitada si **IsSpellCheckEnabled**  =  **true** , deshabilitado si **IsSpellCheckEnabled**  =  **false**
+- Capitalización automática: habilitada si **IsSpellCheckEnabled**  =  **true** , deshabilitada si **IsSpellCheckEnabled**  =  **false**
+- Predicción de texto: habilitada si **IsTextPredictionEnabled**  =  **true** , Disabled if **IsTextPredictionEnabled**  =  **false**
 
 ### <a name="currencyamountandsymbol"></a>CurrencyAmountAndSymbol
 
@@ -168,8 +168,8 @@ La distribución de teclado de números y símbolos predeterminada.
 
 ![Teclado táctil de Windows para direcciones URL](images/input-scopes/url.png)
 
-- Incluye las teclas **.com** y ![go key](images/input-scopes/kbdgokey.png) (Ir). Mantenga presionada la tecla **. com** para mostrar opciones adicionales (**. org**, **.net**y sufijos específicos de la región)
-- Incluye las **claves:**, **-** y **/**
+- Incluye las teclas **.com** y ![go key](images/input-scopes/kbdgokey.png) (Ir). Mantenga presionada la tecla **. com** para mostrar opciones adicionales ( **. org** , **.net** y sufijos específicos de la región)
+- Incluye las **claves:** , **-** y **/**
 - Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar
 - Autocorrección: deshabilitada de manera predeterminada, se puede habilitar
 - Uso de mayúsculas automático: deshabilitado de manera predeterminada, se puede habilitar
@@ -181,7 +181,7 @@ La distribución de teclado de números y símbolos predeterminada.
 `<TextBox InputScope="EmailSmtpAddress"/>`
 
 ![Teclado táctil de Windows para direcciones de correo electrónico](images/input-scopes/emailsmtpaddress.png)
-- Incluye las **@** claves y **. com** . Mantenga presionada la tecla **. com** para mostrar opciones adicionales (**. org**, **.net**y sufijos específicos de la región)
+- Incluye las **@** claves y **. com** . Mantenga presionada la tecla **. com** para mostrar opciones adicionales ( **. org** , **.net** y sufijos específicos de la región)
 - Incluye las **teclas _** y **-**
 - Revisión ortográfica: deshabilitada de manera predeterminada, se puede habilitar
 - Autocorrección: deshabilitada de manera predeterminada, se puede habilitar
@@ -209,7 +209,7 @@ La distribución de teclado de números y símbolos predeterminada.
 - Uso de mayúsculas automático: siempre deshabilitado
 - Predicción de texto: habilitada de manera predeterminada, se puede deshabilitar
 
-### <a name="search"></a>Search
+### <a name="search"></a>Buscar
 
 `<TextBox InputScope="Search"/>`
 

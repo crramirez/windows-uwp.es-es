@@ -1,17 +1,17 @@
 ---
-Description: El tiempo estimado para transferir los pagos, los umbrales de pago aplicables y los Marketplace de Microsoft desde los que puede recibir pagos puede variar en función de su país o región, así como de su tipo de cuenta de pago.
+description: El tiempo estimado para transferir los pagos, los umbrales de pago aplicables y los Marketplace de Microsoft desde los que puede recibir pagos puede variar en función de su país o región, así como de su tipo de cuenta de pago.
 title: Umbrales, métodos y plazos de pago
 ms.date: 03/16/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 686ed66622efa9c73aa0ed7de64a719d7c441eb4
-ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
+ms.openlocfilehash: 2f9114b7f6dc80928c399fe4863bf6c95e0d916b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746765"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035018"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 
@@ -92,7 +92,7 @@ Para ver los países o regiones en los que se usan estos métodos de pago para c
 | Eritrea                          | Sí               | Sí                                      | Sí    | No              |
 | Estonia                          | Sí               | Sí                                      | Sí    | Sí             |
 | Etiopía                         | Sí               | Sí                                      | Sí    | No              |
-| Islas Fiyi                     | Sí               | Sí                                      | No     | Sin              |
+| Islas Fiyi                     | Sí               | Sí                                      | No     | No              |
 | Finlandia                          | Sí               | Sí                                      | Sí    | Sí             |
 | Francia                           | Sí               | Sí                                      | Sí    | Sí             |
 | Georgia                          | Sí               | Sí                                      | Sí    | Sí             |
@@ -108,7 +108,7 @@ Para ver los países o regiones en los que se usan estos métodos de pago para c
 | Islandia                          | Sí               | Sí                                      | Sí    | No              |
 | India                            | Sí               | Sí                                      | Sí    | Sí             |
 | Indonesia                        | Sí               | Sí                                      | Sí    | Sí             |
-| Iraq                             | Sí               | Sí                                      | No     | Sin              |
+| Iraq                             | Sí               | Sí                                      | No     | No              |
 | Irlanda                          | Sí               | Sí                                      | Sí    | Sí             |
 | Israel                           | Sí               | Sí                                      | Sí    | Sí             |
 | Italia                            | Sí               | Sí                                      | Sí    | Sí             |

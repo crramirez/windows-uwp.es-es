@@ -1,17 +1,17 @@
 ---
-Description: La página Propiedades de la aplicación del proceso de envío de aplicaciones te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones.
+description: La página Propiedades de la aplicación del proceso de envío de aplicaciones te permite definir la categoría de la aplicación e indicar las preferencias de hardware u otras declaraciones.
 title: Especificar las propiedades de la aplicación
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, configuración de juegos, modo de visualización, requisitos del sistema, requisitos de hardware, hardware mínimo, hardware recomendado, Directiva de privacidad, información de contacto de soporte técnico, sitio web de la aplicación, información de soporte técnico
 ms.localizationpriority: medium
-ms.openlocfilehash: f945b9908a86d660bde9713ca353f1f3a438bf90
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0e02e92d8ae005e5906179f96598805f64e7c7ff
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167409"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035148"
 ---
 # <a name="enter-app-properties"></a>Especificar las propiedades de la aplicación
 
@@ -33,10 +33,10 @@ Esta sección le permite proporcionar información para ayudar a los clientes a 
 
 Usted es responsable de garantizar que la aplicación cumple con las leyes y las regulaciones de privacidad, y para proporcionar una dirección URL válida de la Directiva de privacidad aquí si es necesario.
 
-En esta sección, debe indicar si la aplicación tiene acceso, recopila o transmite cualquier [información personal](/legal/windows/agreements/store-policies#105-personal-information). Si responde **sí**, se requiere una dirección URL de la Directiva de privacidad. De lo contrario, es opcional (pero si determinamos que la aplicación requiere una directiva de privacidad y no ha proporcionado ninguna, el envío puede producir un error de certificación).
+En esta sección, debe indicar si la aplicación tiene acceso, recopila o transmite cualquier [información personal](/legal/windows/agreements/store-policies#105-personal-information). Si responde **sí** , se requiere una dirección URL de la Directiva de privacidad. De lo contrario, es opcional (pero si determinamos que la aplicación requiere una directiva de privacidad y no ha proporcionado ninguna, el envío puede producir un error de certificación).
 
 > [!NOTE]
-> Si se detecta que los paquetes declaran [funcionalidades](../packaging/app-capability-declarations.md) que podrían permitir el acceso, la transmisión o la recopilación de información personal, esta pregunta se marcará como **sí**y se le pedirá que escriba una dirección URL de la Directiva de privacidad.
+> Si se detecta que los paquetes declaran [funcionalidades](../packaging/app-capability-declarations.md) que podrían permitir el acceso, la transmisión o la recopilación de información personal, esta pregunta se marcará como **sí** y se le pedirá que escriba una dirección URL de la Directiva de privacidad.
 
 Para ayudarle a determinar si la aplicación requiere una directiva de privacidad, revise el [contrato para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement) y las directivas de [Microsoft Store](/legal/windows/agreements/store-policies#105-personal-information). 
 
@@ -84,11 +84,11 @@ Para obtener más información, vea [declaraciones del producto](./product-decla
 
 ## <a name="system-requirements"></a>Requisitos del sistema
 
-En esta sección, tienes la opción de indicar si determinadas características de hardware son necesarias o recomendables para que la aplicación se ejecute correctamente y para interactuar con ella. Puedes marcar la casilla (o indicar la opción adecuada) para cada elemento de hardware donde quieras especificar **Requisitos mínimos de hardware** o **Hardware recomendado**.
+En esta sección, tienes la opción de indicar si determinadas características de hardware son necesarias o recomendables para que la aplicación se ejecute correctamente y para interactuar con ella. Puedes marcar la casilla (o indicar la opción adecuada) para cada elemento de hardware donde quieras especificar **Requisitos mínimos de hardware** o **Hardware recomendado** .
 
-Si haces selecciones para **Hardware recomendado**, esos elementos se mostrarán en la descripción de la Tienda del producto como hardware recomendado para los clientes de Windows 10, versión 1607 o posterior. Los clientes con versiones anteriores del sistema operativo no verán esta información.
+Si haces selecciones para **Hardware recomendado** , esos elementos se mostrarán en la descripción de la Tienda del producto como hardware recomendado para los clientes de Windows 10, versión 1607 o posterior. Los clientes con versiones anteriores del sistema operativo no verán esta información.
 
-Si haces selecciones para **Requisitos mínimos de hardware**, esos elementos se mostrarán en la descripción de la Tienda del producto como hardware requerido para los clientes de Windows 10, versión 1607 o posterior. Los clientes con versiones anteriores del sistema operativo no verán esta información. La Tienda también puede mostrar una advertencia a los clientes que vean la descripción de la aplicación en un dispositivo que no tenga el hardware necesario. Esto no impedirá que los usuarios descarguen la aplicación en dispositivos que no tengan el hardware apropiado, pero no podrán evaluarla ni opinar sobre ella desde esos dispositivos. 
+Si haces selecciones para **Requisitos mínimos de hardware** , esos elementos se mostrarán en la descripción de la Tienda del producto como hardware requerido para los clientes de Windows 10, versión 1607 o posterior. Los clientes con versiones anteriores del sistema operativo no verán esta información. La Tienda también puede mostrar una advertencia a los clientes que vean la descripción de la aplicación en un dispositivo que no tenga el hardware necesario. Esto no impedirá que los usuarios descarguen la aplicación en dispositivos que no tengan el hardware apropiado, pero no podrán evaluarla ni opinar sobre ella desde esos dispositivos. 
 
 El comportamiento para los clientes dependerá de los requisitos específicos y la versión del cliente de Windows:
 
@@ -97,9 +97,9 @@ El comportamiento para los clientes dependerá de los requisitos específicos y 
      - La Tienda buscará todos los requisitos mínimos y mostrará una advertencia a los clientes que usen un dispositivo que no cumpla los requisitos.
 - **Para los clientes de versiones anteriores de Windows 10:**
      - Para la mayoría de los clientes, todos los requisitos de hardware mínimos y recomendados se mostrarán en la descripción de la Tienda (aunque los clientes que visualicen una versión anterior de cliente de la Tienda solo verán los requisitos mínimos de hardware).
-     - La Tienda intentará comprobar los elementos que designes como **Requisitos mínimos de hardware**, con la excepción de **Memoria**, **DirectX**, **Memoria de vídeo**, **Gráficos** y **Procesador**. Estos no se comprobarán y los clientes no verán ninguna advertencia en los dispositivos que no cumplan estos requisitos. 
+     - La Tienda intentará comprobar los elementos que designes como **Requisitos mínimos de hardware** , con la excepción de **Memoria** , **DirectX** , **Memoria de vídeo** , **Gráficos** y **Procesador** . Estos no se comprobarán y los clientes no verán ninguna advertencia en los dispositivos que no cumplan estos requisitos. 
 - **Para los clientes de Windows 8.x y versiones anteriores, o de Windows Phone 8.x y versiones anteriores:**
-     - Si activas la casilla **Requisitos mínimos de hardware** para **Pantalla táctil**, este requisito se mostrará en la descripción de la Tienda de la aplicación y los clientes con dispositivos sin pantalla táctil verán una advertencia si intentan descargar la aplicación. No se comprobarán otros requisitos ni se mostrarán en la descripción de la Tienda.
+     - Si activas la casilla **Requisitos mínimos de hardware** para **Pantalla táctil** , este requisito se mostrará en la descripción de la Tienda de la aplicación y los clientes con dispositivos sin pantalla táctil verán una advertencia si intentan descargar la aplicación. No se comprobarán otros requisitos ni se mostrarán en la descripción de la Tienda.
 
 También recomendamos agregar a la aplicación comprobaciones en tiempo de ejecución para el hardware especificado, dado que la Tienda no siempre puede detectar si al dispositivo de un cliente le faltan las características seleccionadas. De todos modos, el cliente podrá descargar la aplicación, aunque se le muestre una advertencia. Si quiere evitar que la aplicación para UWP se descargue completamente en un dispositivo que no cumple los requisitos mínimos de memoria o de nivel de DirectX, puede designar los requisitos mínimos en un [archivo XML StoreManifest](/uwp/schemas/storemanifest/storemanifestschema2015/schema-root).
 
