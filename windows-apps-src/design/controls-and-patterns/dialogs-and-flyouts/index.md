@@ -1,5 +1,5 @@
 ---
-Description: Los cuadros de diálogo y los controles flotantes muestran elementos transitorios de la interfaz de usuario que aparecen cuando el usuario los solicita o cuando sucede algo que requiere notificación o aprobación.
+description: Los cuadros de diálogo y los controles flotantes muestran elementos transitorios de la interfaz de usuario que aparecen cuando el usuario los solicita o cuando sucede algo que requiere notificación o aprobación.
 title: Cuadros de diálogo y controles flotantes
 template: detail.hbs
 ms.date: 07/06/2018
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c61d1478c38df315a3fe3c20151de8c2bfbca4e2
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: bf4746a6d3a024fec31045bbf9c63d3b11315b8c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81123587"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033848"
 ---
 # <a name="dialogs-and-flyouts"></a>Cuadros de diálogo y controles flotantes
 
@@ -24,7 +24,7 @@ Los cuadros de diálogo y los controles flotantes son elementos transitorios de 
 
 > **API de plataforma:** [Clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [clase Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
-**cuadros de diálogo**
+**Diálogos**
 
 ![Ejemplo de un cuadro de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 

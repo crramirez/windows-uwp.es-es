@@ -1,17 +1,17 @@
 ---
-Description: Agrega interfaces de usuario modernas de XAML, crea paquetes MSIX e incorpora otros componentes actuales en la aplicación de escritorio.
+description: Agrega interfaces de usuario modernas de XAML, crea paquetes MSIX e incorpora otros componentes actuales en la aplicación de escritorio.
 title: Modernización de las aplicaciones de escritorio para Windows
 ms.topic: article
 ms.date: 10/02/2020
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b7c640e89f36dfcea6e0080cbbe3887e0231ddfc
-ms.sourcegitcommit: 27552ed7d3d889f50d8e01776a24b8d486a8d97c
+ms.openlocfilehash: 99bb68ff7d990b0b633df0c4efa2d8eafad759cd
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958728"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031068"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
@@ -55,7 +55,7 @@ Para obtener más información, consulta [Uso de API de Windows Runtime para apl
 
 ## <a name="host-winrt-xaml-controls-xaml-islands"></a>Hospedaje de controles XAML de WinRT (XAML Islands)
 
-A partir de Windows 10, versión 1903, puede agregar [controles XAML para UWP](/windows/uwp/design/controls-and-patterns/controls-by-function) directamente en cualquier elemento de la interfaz de usuario de una aplicación de WPF, Windows Forms o C++ Win32 que esté asociada a un identificador de ventana (HWND). Esto significa que puedes integrar totalmente las características más recientes de UWP como, por ejemplo, [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) y los controles que admiten [Fluent Design System](/windows/uwp/design/fluent-design-system/index) en ventanas y en otras superficies de presentación de las aplicaciones de escritorio. Este escenario para desarrolladores se denomina a veces *islas XAML*.
+A partir de Windows 10, versión 1903, puede agregar [controles XAML para UWP](/windows/uwp/design/controls-and-patterns/controls-by-function) directamente en cualquier elemento de la interfaz de usuario de una aplicación de WPF, Windows Forms o C++ Win32 que esté asociada a un identificador de ventana (HWND). Esto significa que puedes integrar totalmente las características más recientes de UWP como, por ejemplo, [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) y los controles que admiten [Fluent Design System](/windows/uwp/design/fluent-design-system/index) en ventanas y en otras superficies de presentación de las aplicaciones de escritorio. Este escenario para desarrolladores se denomina a veces *islas XAML* .
 
 Para obtener más información, consulte [Controles XAML de WinRT en aplicaciones de escritorio](xaml-islands.md).
 
@@ -82,7 +82,7 @@ Tanto si va a compilar una aplicación para UWP centrada exclusivamente en la fa
 
 | Control |  Descripción |
 |------ |--------------|
-| [MenuBar](/windows/uwp/design/controls-and-patterns/menus#create-a-menu-bar) | Proporciona una manera rápida y sencilla de exponer un conjunto de comandos para las aplicaciones que podrían necesitar una mayor organización o agrupación que las que permite un control **CommandBar**. |
+| [MenuBar](/windows/uwp/design/controls-and-patterns/menus#create-a-menu-bar) | Proporciona una manera rápida y sencilla de exponer un conjunto de comandos para las aplicaciones que podrían necesitar una mayor organización o agrupación que las que permite un control **CommandBar** . |
 | [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button) | Muestra un botón de contenido adicional como un indicador visual que tiene un control flotante asociado que contiene más opciones.  |
 | [SplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button) | Proporciona un botón que tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón estándar e invoca una acción inmediata. La otra parte invoca un control flotante que contiene opciones adicionales entre las que puede elegir el usuario.|
 | [ToggleSplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-toggle-split-button) | Proporciona un botón que tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón de alternancia que se puede activar o desactivar. La otra parte invoca un control flotante que contiene opciones adicionales entre las que puede elegir el usuario. |

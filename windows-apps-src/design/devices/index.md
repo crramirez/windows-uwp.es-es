@@ -1,5 +1,5 @@
 ---
-Description: El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
+description: El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
 title: Consideraciones sobre la interfaz de usuario para dispositivos Windows
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
@@ -8,12 +8,12 @@ keywords: dispositivo, entrada, interacción
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d32fd2ba2ee35c19aeaa66d2c6b2c1f81be2a59
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 2267a0a704d0f637b60e38cdaa50b1afa2ec3f9a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217838"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030548"
 ---
 #  <a name="ui-considerations-for-windows-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos Windows
 
@@ -94,7 +94,7 @@ Funcionalidades típicas del dispositivo
 
 ## <a name="xbox-and-tv"></a>Xbox y televisión
 
-La experiencia de estar sentado en tu sofá al otro lado de la sala, con un controlador para juegos o control remoto para interactuar con tu televisor, se llama la **experiencia de 10 pies**. Se denomina así porque el usuario generalmente está sentado aproximadamente a 10 pies de distancia de la pantalla. Esto proporciona desafíos que no están presentes, por ejemplo, en la experiencia de *2 pies* o interactuando con un PC. Si estás desarrollando una aplicación para Xbox One o cualquier otro dispositivo conectado a una pantalla de TV y que puede usar un controlador para juegos o un control remoto para la entrada, siempre debes tener esto en cuenta.
+La experiencia de estar sentado en tu sofá al otro lado de la sala, con un controlador para juegos o control remoto para interactuar con tu televisor, se llama la **experiencia de 10 pies** . Se denomina así porque el usuario generalmente está sentado aproximadamente a 10 pies de distancia de la pantalla. Esto proporciona desafíos que no están presentes, por ejemplo, en la experiencia de *2 pies* o interactuando con un PC. Si estás desarrollando una aplicación para Xbox One o cualquier otro dispositivo conectado a una pantalla de TV y que puede usar un controlador para juegos o un control remoto para la entrada, siempre debes tener esto en cuenta.
 
 Diseñar tu aplicación de Windows para la experiencia de 10 pies es muy diferente que diseñarla para cualquiera de las otras categorías de dispositivos mencionadas aquí. Para obtener más información, consulta [Diseño para Xbox y televisión](designing-for-tv.md).
 
@@ -131,7 +131,7 @@ Funcionalidades típicas del dispositivo
 
 Los más usados de todos los dispositivos informáticos, los teléfonos pueden hacer muchas cosas con la superficie de pantalla limitada y las entradas básicas. Los teléfonos están disponibles en una amplia variedad de tamaños; los teléfonos más grandes se denominan tabléfonos. Las experiencias de la aplicación en tabléfonos son similares a las de los teléfonos, pero debido a que la superficie de pantalla de los tabléfonos es mayor, se pueden producir algunos cambios clave en el consumo de contenido.
 
-Con Continuum para teléfonos, una nueva experiencia para dispositivos móviles Windows 10 compatibles, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](/windows-hardware/design/device-experiences/continuum-phone)).
+Con Continuum para teléfonos, una nueva experiencia de dispositivos móviles compatibles con Windows 10, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](/windows-hardware/design/device-experiences/continuum-phone)).
 
 Tamaños de pantalla
 -   Entre 4 y 5 pulgadas para teléfono
@@ -164,7 +164,7 @@ Funcionalidades típicas del dispositivo
 -   Sensores de movimiento
 -   Sensores de ubicación
 
- 
+ 
 
 ## <a name="surface-hub-devices"></a>Dispositivos de Surface Hub
 
@@ -197,7 +197,7 @@ Funcionalidades típicas del dispositivo
 -   Cámara
 -   Micrófono
 
- 
+ 
 
 ## <a name="windows-iot-devices"></a>Dispositivos de Windows IoT
 

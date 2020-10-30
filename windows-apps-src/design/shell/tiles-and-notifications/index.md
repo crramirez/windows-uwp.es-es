@@ -1,5 +1,5 @@
 ---
-Description: Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
+description: Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
 title: Iconos, distintivos y notificaciones
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 580edca578a0d518d89b5d2fdb30c9304be35cef
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: dbcc4138c0f09d3ad620e4d1c192dd63bb522052
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636625"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033688"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Iconos, distintivos y notificaciones para las aplicaciones de Windows
  
 
 Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
 
-> **API importantes**: [paquete NuGet de notificaciones del kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **API importantes** : [paquete NuGet de notificaciones del kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" alt="Screenshot of a static tile and a live tile displaying a notification and a badge." />
 Un icono es una representación de la aplicación en el menú Inicio. Cada aplicación de Windows tiene un icono. Asimismo, puedes habilitar distintos tamaños de icono (pequeño, mediano, grande y ancho).</p>
@@ -32,7 +32,7 @@ Un icono es una representación de la aplicación en el menú Inicio. Cada aplic
 <p>Una <em>notificación del sistema</em> es una notificación que la aplicación envía al usuario a través de un elemento emergente de la interfaz de usuario denominado <em>notificación del sistema</em> (o <em>mensaje emergente</em>). La notificación se puede ver esté el usuario en la aplicación o no.</p>
 <p>Una <em>notificación de inserción</em> o <em>notificación sin procesar</em> es una notificación enviada a tu aplicación desde Servicios de notificaciones de inserción de Windows (WNS) o desde una tarea en segundo plano. Tu aplicación puede responder a estas notificaciones notificándole al usuario de que ha sucedido algo interesante (mediante una actualización de distintivo, una actualización de icono o una notificación del sistema) o puede responder de la manera que elijas.</p>
 
- 
+ 
 ## <a name="tiles"></a>Iconos
 | Artículo | Descripción |
 | --- | --- |
