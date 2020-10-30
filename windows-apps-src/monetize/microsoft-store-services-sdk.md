@@ -1,17 +1,17 @@
 ---
-Description: Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a tus aplicaciones y que te ayudan a obtener más dinero y a ganar clientes.
+description: Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a tus aplicaciones y que te ayudan a obtener más dinero y a ganar clientes.
 title: Conectar con clientes con Microsoft Store Services SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ms.date: 08/21/2017
 ms.topic: article
 keywords: SDK de Windows 10, UWP, Microsoft Store Services
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b8544f6d4f60b2f4ca91af35ff922fcfe089380
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8356367b47242f7bda01da753cc8599aff9edd79
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155469"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030538"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Conectar con clientes con Microsoft Store Services SDK
 
@@ -72,7 +72,7 @@ Para instalar el Microsoft Store Services SDK mediante el instalador MSI:
 
 4.  Reinicie Visual Studio.
 
-5.  Si tiene un proyecto existente que hace referencia a las bibliotecas de cualquier versión anterior del SDK de Microsoft Store Services, Microsoft Advertising SDK, el SDK de cliente de Active Directory o el SDK de Microsoft Store Engagement y monetización, se recomienda que abra el proyecto en Visual Studio y que limpie y recompile el proyecto (en **Explorador de soluciones**, haga clic con el botón derecho en el nodo del proyecto y elija **limpiar**y, a continuación, vuelva a hacer clic con el botón secundario en el nodo del proyecto y elija **reconstruir**).
+5.  Si tiene un proyecto existente que hace referencia a las bibliotecas de cualquier versión anterior del SDK de Microsoft Store Services, Microsoft Advertising SDK, el SDK de cliente de Active Directory o el SDK de Microsoft Store Engagement y monetización, se recomienda que abra el proyecto en Visual Studio y que limpie y recompile el proyecto (en **Explorador de soluciones** , haga clic con el botón derecho en el nodo del proyecto y elija **limpiar** y, a continuación, vuelva a hacer clic con el botón secundario en el nodo del proyecto y elija **reconstruir** ).
 
   De lo contrario, si usa el SDK por primera vez en el proyecto, ahora está listo para [Agregar la referencia de ensamblado al proyecto](#references).
 
@@ -95,7 +95,7 @@ Para instalar las bibliotecas del SDK de Microsoft Store Services a través de N
     > [!NOTE]
     > Si el proyecto ya incluye referencias de biblioteca de una instalación de MSI anterior del SDK, quite estas referencias del proyecto. Esas referencias tendrán iconos de advertencia junto a ellas, porque las bibliotecas a las que hacen referencia se han eliminado en los pasos anteriores.
 
-4. En Visual Studio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
+4. En Visual Studio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet** .
 
 5. En el cuadro de búsqueda, escriba **Microsoft. Services. Store. Engagement** e instale el paquete Microsoft. Services. Store. Engagement. Cuando el paquete termine de instalarse, guarde la solución.
     > [!NOTE]
@@ -103,7 +103,7 @@ Para instalar las bibliotecas del SDK de Microsoft Store Services a través de N
 
 6. Cierre la solución de Visual Studio que contiene el proyecto y, a continuación, vuelva a abrir la solución.
 
-7.  Si tu proyecto ya hace referencia a bibliotecas de una versión anterior del Microsoft Store Services SDK que se haya instalado a través de NuGet y has actualizado tu proyecto a una versión más reciente del SDK, te recomendamos limpiar y recompilar el proyecto (en el **Explorador de soluciones**, haz clic con el botón secundario en el nodo del proyecto, elige **Limpiar**y, a continuación, haz clic de nuevo en el nodo del proyecto y elige **Recompilar**).
+7.  Si tu proyecto ya hace referencia a bibliotecas de una versión anterior del Microsoft Store Services SDK que se haya instalado a través de NuGet y has actualizado tu proyecto a una versión más reciente del SDK, te recomendamos limpiar y recompilar el proyecto (en el **Explorador de soluciones** , haz clic con el botón secundario en el nodo del proyecto, elige **Limpiar** y, a continuación, haz clic de nuevo en el nodo del proyecto y elige **Recompilar** ).
 
   De lo contrario, si usa el SDK por primera vez en el proyecto, ahora está listo para [Agregar la referencia de ensamblado al proyecto](#references).
 
@@ -115,13 +115,13 @@ Después de instalar el SDK de Microsoft Store Services mediante el instalador d
 
 1. Abra el proyecto en Visual Studio.
     > [!NOTE]
-    > Si el proyecto es una aplicación de JavaScript que tiene como destino **cualquier CPU**, actualice el proyecto para usar una salida de compilación específica de la arquitectura (por ejemplo, **x86**).
+    > Si el proyecto es una aplicación de JavaScript que tiene como destino **cualquier CPU** , actualice el proyecto para usar una salida de compilación específica de la arquitectura (por ejemplo, **x86** ).
 
-2. En el **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y selecciona **Agregar referencia...**
+2. En el **Explorador de soluciones** , haz clic con el botón secundario en **Referencias** y selecciona **Agregar referencia...**
 
-3. En **Administrador de referencias**, expanda **universal Windows**, haga clic en **extensiones**y, a continuación, active la casilla situada junto a **marco de trabajo de Microsoft Engagement**. Esto le permite usar las API en el espacio de nombres [Microsoft. Services. Store. Engagement](/uwp/api/microsoft.services.store.engagement) .
+3. En **Administrador de referencias** , expanda **universal Windows** , haga clic en **extensiones** y, a continuación, active la casilla situada junto a **marco de trabajo de Microsoft Engagement** . Esto le permite usar las API en el espacio de nombres [Microsoft. Services. Store. Engagement](/uwp/api/microsoft.services.store.engagement) .
 
-3. Haga clic en **Aceptar**.
+3. Haga clic en **Aceptar** .
 
 > [!NOTE]
 > Si instaló las bibliotecas de SDK a través de NuGet, el proyecto contendrá una referencia de **Microsoft. Services. Store. Engagement** . La referencia **Microsoft. Services. Store. Engagement** representa el paquete NuGet (en lugar de las bibliotecas que hay en él) y puede pasarlo por alto.
@@ -130,7 +130,7 @@ Después de instalar el SDK de Microsoft Store Services mediante el instalador d
 
 ## <a name="understanding-framework-packages-in-the-sdk"></a>Descripción de los paquetes de marcos en el SDK
 
-La biblioteca de Microsoft.Services.Store.Engagement.dll del SDK de Microsoft Store Services se configura como un *paquete de Framework*. Esta biblioteca contiene las API en el espacio de nombres [Microsoft.Services.Store.Engagement](/uwp/api/microsoft.services.store.engagement).
+La biblioteca de Microsoft.Services.Store.Engagement.dll del SDK de Microsoft Store Services se configura como un *paquete de Framework* . Esta biblioteca contiene las API en el espacio de nombres [Microsoft.Services.Store.Engagement](/uwp/api/microsoft.services.store.engagement).
 
 Dado que esta biblioteca es un paquete de marco, esto significa que, una vez que un usuario instala una versión de la aplicación que usa esta biblioteca, esta biblioteca se actualiza automáticamente en el dispositivo a través de Windows Update cada vez que se publica una nueva versión de la biblioteca con correcciones y mejoras de rendimiento. Esto ayuda a garantizar que los clientes siempre tengan la última versión disponible de la biblioteca instalada en sus dispositivos.
 

@@ -1,5 +1,5 @@
 ---
-Description: Use el reconocimiento de escritura a mano y el análisis de tinta para reconocer trazos de Windows Ink como texto y formas.
+description: Use el reconocimiento de escritura a mano y el análisis de tinta para reconocer trazos de Windows Ink como texto y formas.
 title: Reconocer trazos de Windows Ink como texto y formas
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
@@ -8,22 +8,22 @@ keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, I
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b5303d65e1fefbf3eb8a156ce4ca4c10afda96
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: ec0d3907f5f30ca224a6f2274422cdfec22c592d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220568"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032248"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Reconocer trazos de Windows Ink como texto y formas
 
 Convierta trazos de lápiz en texto y formas mediante las capacidades de reconocimiento integradas en Windows Ink.
 
-> **API importantes**: [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), [**Windows. UI. Input. inking**](/uwp/api/Windows.UI.Input.Inking)
+> **API importantes** : [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), [**Windows. UI. Input. inking**](/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="free-form-recognition-with-ink-analysis"></a>Reconocimiento de forma libre con análisis de tinta
 
-Aquí se muestra cómo usar el motor de análisis de tinta de Windows ([Windows. UI. Input. inking. Analysis](/uwp/api/windows.ui.input.inking.analysis)) para clasificar, analizar y reconocer un conjunto de trazos de forma libre en un [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) como texto o formas. (Además del reconocimiento de texto y forma, el análisis de tinta también se puede usar para reconocer la estructura del documento, las listas de viñetas y los dibujos genéricos).
+Aquí se muestra cómo usar el motor de análisis de tinta de Windows ( [Windows. UI. Input. inking. Analysis](/uwp/api/windows.ui.input.inking.analysis)) para clasificar, analizar y reconocer un conjunto de trazos de forma libre en un [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) como texto o formas. (Además del reconocimiento de texto y forma, el análisis de tinta también se puede usar para reconocer la estructura del documento, las listas de viñetas y los dibujos genéricos).
 
 > [!NOTE]
 > En el caso de escenarios de texto sin formato básicos, de una sola línea, como la entrada de formulario, vea [reconocimiento de escritura a mano restringido](#constrained-handwriting-recognition) más adelante en este tema.
@@ -78,7 +78,7 @@ En este ejemplo, el reconocimiento se inicia cuando el usuario hace clic en un b
    ```
 
 4. A continuación, se establecen algunos comportamientos básicos de entrada de lápiz:
-    - El [**objeto InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) se configura para interpretar los datos de entrada del lápiz, el mouse y el toque como trazos de entrada de lápiz ([**InputDeviceTypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). 
+    - El [**objeto InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) se configura para interpretar los datos de entrada del lápiz, el mouse y el toque como trazos de entrada de lápiz ( [**InputDeviceTypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). 
     - Los trazos de lápiz se representan en el [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con los [**InkDrawingAttributes**](/windows/desktop/tablet/inkdrawingattributes-class) especificados. 
     - También se declara un agente de escucha para el evento clic en el botón "Reconocer".
 
@@ -113,7 +113,7 @@ En este ejemplo, el reconocimiento se inicia cuando el usuario hace clic en un b
     - Si los trazos de lápiz están presentes, páselo en una llamada a [**AddDataForStrokes**](/uwp/api/windows.ui.input.inking.analysis.inkanalyzer#Windows_UI_Input_Inking_Analysis_InkAnalyzer_AddDataForStrokes_Windows_Foundation_Collections_IIterable_Windows_UI_Input_Inking_InkStroke__) de InkAnalyzer.
     - Estamos intentando reconocer los dibujos y el texto, pero puede usar el método [**SetStrokeDataKind**](/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) para especificar si solo le interesa el texto (incluidas la estructura del documento y las listas de viñetas) o solo en los dibujos (incluido el reconocimiento de formas).
     - Llame a [**AnalyzeAsync**](/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) para iniciar el análisis de tinta y obtener [**InkAnalysisResult**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult).
-    - Si [**Estado**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) devuelve un estado de **actualizado**, llame a [**FindNodes**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) para [**InkAnalysisNodeKind. InkWord**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) y [**InkAnalysisNodeKind. InkDrawing**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).
+    - Si [**Estado**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) devuelve un estado de **actualizado** , llame a [**FindNodes**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) para [**InkAnalysisNodeKind. InkWord**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind) y [**InkAnalysisNodeKind. InkDrawing**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).
     - Recorra en iteración ambos conjuntos de tipos de nodo y dibuje el texto o la forma correspondiente en el lienzo de reconocimiento (debajo del lienzo de tinta).
     - Por último, elimine los nodos reconocidos del InkAnalyzer y los trazos de tinta correspondientes del lienzo de tinta.
 
@@ -335,7 +335,7 @@ En este ejemplo, el reconocimiento se inicia cuando el usuario hace clic en un b
 
 3. A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
-    El [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ([**InputDeviceTypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). Los trazos de lápiz se representan en el [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con los [**InkDrawingAttributes**](/windows/desktop/tablet/inkdrawingattributes-class) especificados. También se declara un agente de escucha para el evento clic en el botón "Reconocer".
+    El [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ( [**InputDeviceTypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). Los trazos de lápiz se representan en el [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con los [**InkDrawingAttributes**](/windows/desktop/tablet/inkdrawingattributes-class) especificados. También se declara un agente de escucha para el evento clic en el botón "Reconocer".
 
     ```csharp
     public MainPage()
@@ -481,15 +481,16 @@ Vea el tema de la propiedad [**InkRecognizer.Name**](/uwp/api/windows.ui.input.i
 
 La aplicación puede consultar el conjunto de motores de reconocimiento de escritura a mano instalados y usar uno de ellos, o dejar que un usuario seleccione su idioma preferido.
 
-**Nota:**    Los usuarios pueden ver una lista de los idiomas instalados en **configuración- &gt; tiempo & idioma**. Los idiomas instalados se enumeran en **Idiomas**.
+**Nota**  
+Los usuarios pueden ver una lista de los idiomas instalados en **configuración- &gt; tiempo & idioma** . Los idiomas instalados se enumeran en **Idiomas** .
 
 Para instalar nuevos paquetes de idioma y habilitar el reconocimiento de escritura a mano para ese idioma:
 
-1. Ve a **Configuración &gt; Hora e idioma &gt; Región e idioma**.
-2. Selecciona **Agregar un idioma**.
-3. Selecciona un idioma de la lista y, después, elige la versión de la región. El idioma aparece ahora en la página **Región e idioma**.
-4. Haz clic en el idioma y selecciona **Opciones**.
-5. En la página **Opciones de idioma**, descarga el **motor de reconocimiento de escritura a mano** (aquí también se pueden descargar el paquete de idioma completo, el motor de reconocimiento de voz y la distribución del teclado).
+1. Ve a **Configuración &gt; Hora e idioma &gt; Región e idioma** .
+2. Selecciona **Agregar un idioma** .
+3. Selecciona un idioma de la lista y, después, elige la versión de la región. El idioma aparece ahora en la página **Región e idioma** .
+4. Haz clic en el idioma y selecciona **Opciones** .
+5. En la página **Opciones de idioma** , descarga el **motor de reconocimiento de escritura a mano** (aquí también se pueden descargar el paquete de idioma completo, el motor de reconocimiento de voz y la distribución del teclado).
 
 Aquí se muestra cómo usar el motor de reconocimiento de escritura a mano para interpretar un conjunto de trazos en un [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) según el reconocedor seleccionado.
 
@@ -543,7 +544,7 @@ Para iniciar el reconocimiento, el usuario debe hacer clic en un botón cuando t
 
 2. A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
-   El [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ([**InputDeviceTypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). Los trazos de lápiz se representan en el [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con los [**InkDrawingAttributes**](/windows/desktop/tablet/inkdrawingattributes-class) especificados.
+   El [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ( [**InputDeviceTypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). Los trazos de lápiz se representan en el [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con los [**InkDrawingAttributes**](/windows/desktop/tablet/inkdrawingattributes-class) especificados.
 
    Llamamos a una función `InitializeRecognizerList` para rellenar el cuadro combinado del reconocedor con una lista de reconocedores de escritura a mano instalados.
 
@@ -736,7 +737,7 @@ Para este ejemplo, usaremos la misma interfaz de usuario y la misma configuraci�
     DispatcherTimer recoTimer;
     ```
 
-2. En lugar de un botón para iniciar el reconocimiento, agregamos agentes de escucha para dos eventos de trazo de lápiz del [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) ([**StrokesCollected**](/uwp/api/windows.ui.input.inking.inkpresenter.strokescollected) y [**StrokeStarted**](/uwp/api/windows.ui.input.inking.inkstrokeinput.strokestarted)) y configuramos un temporizador básico ([**DispatcherTimer**](/uwp/api/Windows.UI.Xaml.DispatcherTimer)) con un segundo intervalo de [**Tick**](/uwp/api/windows.ui.xaml.dispatchertimer.tick).
+2. En lugar de un botón para iniciar el reconocimiento, agregamos agentes de escucha para dos eventos de trazo de lápiz del [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) ( [**StrokesCollected**](/uwp/api/windows.ui.input.inking.inkpresenter.strokescollected) y [**StrokeStarted**](/uwp/api/windows.ui.input.inking.inkstrokeinput.strokestarted)) y configuramos un temporizador básico ( [**DispatcherTimer**](/uwp/api/Windows.UI.Xaml.DispatcherTimer)) con un segundo intervalo de [**Tick**](/uwp/api/windows.ui.xaml.dispatchertimer.tick).
 
     ```csharp
     public MainPage()
@@ -769,7 +770,7 @@ Para este ejemplo, usaremos la misma interfaz de usuario y la misma configuraci�
 3. A continuación, se definen los controladores para los eventos de InkPresenter que se han declarado en el primer paso (también se invalida el evento de página [**OnNavigatingFrom**](/uwp/api/windows.ui.xaml.controls.page.onnavigatingfrom) para administrar nuestro temporizador).
 
     - [**StrokesCollected**](/uwp/api/windows.ui.input.inking.inkpresenter.strokescollected)  
-    Agregue trazos de entrada de lápiz ([**AddDataForStrokes**](/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) a InkAnalyzer e inicie el temporizador de reconocimiento cuando el usuario detenga la entrada manuscrita (levantando el lápiz o el dedo o soltando el botón del mouse). Después de un segundo sin ninguna entrada de lápiz, se inicia el reconocimiento.  
+    Agregue trazos de entrada de lápiz ( [**AddDataForStrokes**](/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.adddataforstrokes)) a InkAnalyzer e inicie el temporizador de reconocimiento cuando el usuario detenga la entrada manuscrita (levantando el lápiz o el dedo o soltando el botón del mouse). Después de un segundo sin ninguna entrada de lápiz, se inicia el reconocimiento.  
 
         Use el método [**SetStrokeDataKind**](/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.setstrokedatakind) para especificar si solo está interesado en el texto (incluidas las listas del procesador de la estructura de los documentos AMD) o solo en los dibujos (reconocimiento de la forma incluidos).
 
@@ -816,7 +817,7 @@ Para este ejemplo, usaremos la misma interfaz de usuario y la misma configuraci�
 
 4. Por último, se realiza el reconocimiento de escritura a mano. Para este ejemplo, usamos el controlador de eventos de [**Graduación**](/uwp/api/windows.ui.xaml.dispatchertimer.tick) de un [**DispatcherTimer**](/uwp/api/Windows.UI.Xaml.DispatcherTimer) para iniciar el reconocimiento de escritura a mano.
     - Llame a [**AnalyzeAsync**](/uwp/api/windows.ui.input.inking.analysis.inkanalyzer.AnalyzeAsync) para iniciar el análisis de tinta y obtener [**InkAnalysisResult**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult).
-    - Si [**Estado**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) devuelve un estado de **actualizado**, llame a [**FindNodes**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) para los tipos de nodo de  [**InkAnalysisNodeKind. InkWord**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).
+    - Si [**Estado**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisresult.Status) devuelve un estado de **actualizado** , llame a [**FindNodes**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisroot.findnodes) para los tipos de nodo de  [**InkAnalysisNodeKind. InkWord**](/uwp/api/windows.ui.input.inking.analysis.inkanalysisnodekind).
     - Recorrer en iteración los nodos y mostrar el texto reconocido.
     - Por último, elimine los nodos reconocidos del InkAnalyzer y los trazos de tinta correspondientes del lienzo de tinta.
 

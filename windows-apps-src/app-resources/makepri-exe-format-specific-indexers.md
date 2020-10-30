@@ -1,36 +1,36 @@
 ---
-Description: En este tema se describen los indizadores específicos de formato usados por la herramienta MakePri.exe para generar su índice de recursos.
+description: En este tema se describen los indizadores específicos de formato utilizados por la herramienta MakePri.exe para generar su índice de recursos.
 title: Indexadores específicos del formato de MakePri.exe
 template: detail.hbs
 ms.date: 10/18/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d30a0321de872dac11070c52dd0598b2276bcab
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 3794d369ae9d47cfc7aad1b24ca2768b04024581
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79200963"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031698"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Indexadores específicos del formato de MakePri.exe
 
-Este tema describe los indizadores específicos de formato usados por la herramienta [MakePri.exe](compile-resources-manually-with-makepri.md) para generar su índice de recursos.
+En este tema se describen los indizadores específicos de formato utilizados por la herramienta [MakePri.exe](compile-resources-manually-with-makepri.md) para generar su índice de recursos.
 
 > [!NOTE]
-> MakePri. exe se instala cuando se activa la opción **Windows SDK para aplicaciones administradas de UWP** al instalar el kit de desarrollo de software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe se instala al activar la opción **Windows SDK para aplicaciones administradas para UWP** al instalar el kit de desarrollo de software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
-MakePri.exe se suele usar con los comandos `new`, `versioned` o `resourcepack`. Consulta [Opciones de línea de comandos de MakePri.exe](makepri-exe-command-options.md). En esos casos indexa los archivos de origen para generar un índice de recursos. MakePri.exe usa diversos indizadores individuales para leer distintos archivos de recursos de origen o contenedores de recursos. El indexador más sencillo es el indizador de carpeta, que indiza el contenido de una carpeta, como imágenes `.jpg` o `.png`.
+Normalmente, MakePri.exe se usa con `new` los `versioned` comandos, o `resourcepack` . Consulte [MakePri.exe opciones de la línea de comandos](makepri-exe-command-options.md). En esos casos, indiza los archivos de código fuente para generar un índice de recursos. MakePri.exe usa varios indexadores individuales para leer diferentes archivos de recursos de origen o contenedores para los recursos. El indexador más sencillo es el indizador de carpetas, que indiza el contenido de una carpeta, como `.jpg` o `.png` imágenes.
 
-Pueden identificarse los indexadores específicos del formato especificando elementos `<indexer-config>` de un elemento `<index>` del [archivo de configuración MakePri.exe](makepri-exe-configuration.md). El atributo `type` identifica el indexador específico del formato que se usa.
+Los indizadores específicos de formato se identifican mediante `<indexer-config>` la especificación de elementos dentro `<index>` de un elemento del [ archivo de configuración deMakePri.exe](makepri-exe-configuration.md). El `type` atributo identifica el indizador específico del formato que se utiliza.
 
-Los contenedores de recursos detectados durante la indexación suelen obtener su contenido indizado en vez de agregarse al índice. Por ejemplo, los archivos `.resjson` que encuentra el indexador de carpeta se pueden indizar más con un indizador `.resjson`, en cuyo caso el propio archivo `.resjson` no aparece en el índice. **Nota** Un elemento `<indexer-config>` del indexador asociado a ese contenedor debe incluirse en el archivo de configuración para que esto ocurra.
+Los contenedores de recursos que se encuentran durante la indexación suelen obtener su contenido indizado en lugar de agregarse al propio índice. Por ejemplo, los `.resjson` archivos que encuentra el indexador de carpetas se pueden indexar más mediante un `.resjson` indexador, en cuyo caso el `.resjson` archivo no aparece en el índice. **Nota:** un `<indexer-config>` elemento para el indizador asociado a ese contenedor debe estar incluido en el archivo de configuración para que se produzca.
 
-Por lo general, los calificadores encontrados en una entidad contenedora, como una carpeta o un archivo &mdash; se aplican a todos los recursos que contengan, como los archivos de la carpeta o las cadenas del archivo `.resw`.
+Normalmente, los calificadores que se encuentran en una entidad contenedora, como &mdash; una carpeta o un `.resw` archivo, &mdash; se aplican a todos los recursos que contiene, como los archivos dentro de la carpeta o las cadenas del `.resw` archivo.
 
 ## <a name="folder"></a>Carpeta
 
-El indizador de carpeta se identifica por un atributo `type` de CARPETA. Indiza el contenido de una carpeta y determina los calificadores de recursos de la carpeta y los nombres de archivo. Su elemento de configuración se ajusta al siguiente esquema.
+El indizador de carpetas se identifica mediante un `type` atributo de carpeta. Indiza el contenido de una carpeta y determina los calificadores de recursos de la carpeta y los nombres de archivo. Su elemento de configuración se ajusta al esquema siguiente.
 
 ```xml
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -67,13 +67,13 @@ El indizador de carpeta se identifica por un atributo `type` de CARPETA. Indiza 
 </xs:schema>
 ```
 
-El atributo `qualifierDelimiter` especifica el carácter tras el cual se especifican los calificadores en un nombre de archivo, omitiendo la extensión. El valor predeterminado es ".".
+El `qualifierDelimiter` atributo especifica el carácter después del cual se especifican los calificadores en un nombre de archivo, omitiendo la extensión. El valor predeterminado es ".".
 
 ## <a name="pri"></a>PRI
 
-El indizador PRI se identifica por un atributo `type` de PRI. Indiza el contenido de un archivo PRI. Normalmente se usa al indizar el recurso contenido en otro ensamblado, DLL, SDK o biblioteca de clases en el PRI de la aplicación.
+El indexador PRI se identifica mediante un `type` atributo de PRI. Indiza el contenido de un archivo PRI. Normalmente, se usa al indizar el recurso contenido en otro ensamblado, DLL, SDK o biblioteca de clases en el PRI de la aplicación.
 
-Todos los valores, calificadores y nombres de recursos contenidos en el archivo PRI se mantienen directamente en el nuevo archivo PRI. Sin embargo, el mapa de recursos de nivel superior no se mantiene en el PRI final. Los mapas de recursos se combinan.
+Todos los nombres de recursos, calificadores y valores contenidos en el archivo PRI se mantienen directamente en el nuevo archivo PRI. El mapa de recursos de nivel superior, sin embargo, no se mantiene en la PRI final. Se combinan los mapas de recursos.
 
 ```xml
 <xs:schema id="prifile" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -92,7 +92,7 @@ Todos los valores, calificadores y nombres de recursos contenidos en el archivo 
 
 ## <a name="priinfo"></a>PriInfo
 
-El indizador PriInfo se identifica por un atributo `type` de PRIINFO. Indiza el contenido de un archivo de volcado detallado. Puedes generar un archivo de volcado detallado ejecutando `makepri dump` con la opción `/dt detailed`. El elemento de configuración del indizador se ajusta al siguiente esquema.
+El indizador PriInfo se identifica mediante un `type` atributo de PriInfo. Indiza el contenido de un archivo de volcado de memoria detallado. Para generar un archivo de volcado de memoria detallado, ejecute `makepri dump` con la `/dt detailed` opción. El elemento de configuración para el indizador se ajusta al esquema siguiente.
 
 ```xml
 <xs:schema id="priinfo" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -111,15 +111,15 @@ El indizador PriInfo se identifica por un atributo `type` de PRIINFO. Indiza el 
 </xs:schema>
 ```
 
-Este elemento de configuración permite que los atributos opcionales puedan configurar el comportamiento del indizador PriInfo. El valor predeterminado de `emitStrings` y `emitPaths` es `true`. Si `emitStrings`es `true`, en ese caso los candidatos de recursos con el atributo `type` establecido en "String" se incluirán en el índice, y en caso contrario se excluirán. Si 'emitPaths' es `true`, en ese caso los candidatos de recursos con el atributo `type` establecido en "Path" se incluirán en el índice, y en caso contrario se excluirán.
+Este elemento de configuración permite atributos opcionales para configurar el comportamiento del indexador PriInfo. El valor predeterminado de `emitStrings` y `emitPaths` es `true` . Si `emitStrings` es `true` , los candidatos de recurso con el `type` atributo establecido en "cadena" se incluyen en el índice, de lo contrario se excluyen. Si ' emitPaths ' es `true` , los candidatos de recurso con el `type` atributo establecido en "path" se incluyen en el índice, de lo contrario se excluyen.
 
-El siguiente es un ejemplo de configuración que incluye tipos de recurso String, pero omite tipos de recurso Path.
+Este es un ejemplo de configuración que incluye tipos de recursos de cadena, pero omite los tipos de recursos de ruta de acceso.
 
 ```xml
 <indexer-config type="priinfo" emitStrings="true" emitPaths="false" />
 ```
 
-Para indizarse, un archivo de volcado debe terminar con la extensión `.pri.xml` y debe ajustarse al siguiente esquema.
+Para indizar, un archivo de volcado de memoria debe terminar con la extensión `.pri.xml` y debe ajustarse al esquema siguiente.
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" >
@@ -213,11 +213,11 @@ Para indizarse, un archivo de volcado debe terminar con la extensión `.pri.xml`
 </xs:schema>
 ```
 
-MakePri.exe admite tipos de volcado 'Básico', 'Detallado', 'Esquema' y 'Resumen'. Para configurar MakePri.exe para que emita el tipo de volcado que puede leer el indizador PriInfo, incluye "/DumpType Detailed" al usar el comando `dump`.
+MakePri.exe admite los tipos de volcado ' Basic ', ' Detailed ', ' Schema ' y ' Summary '. Para configurar MakePri.exe para emitir el tipo de volcado de memoria que puede leer el indexador PriInfo, incluya "detailed" de/DumpType al usar el `dump` comando.
 
-MakePri.exe omite varios elementos del archivo `.pri.xml`. Estos elementos se calculan durante la indización o se especifican en el archivo de configuración MakePri.exe. Los valores, calificadores y nombres de recursos contenidos en el archivo de volcado se mantienen directamente en el nuevo archivo PRI. Sin embargo, el mapa de recursos de nivel superior no se mantiene en el PRI final. Los mapas de recursos se combinan como parte de la indización.
+MakePri.exe omite varios elementos del `.pri.xml` archivo. Estos elementos se calculan durante la indización o se especifican en el archivo de configuración MakePri.exe. Los nombres de los recursos, calificadores y valores contenidos en el archivo de volcado de memoria se mantienen directamente en el nuevo archivo PRI. El mapa de recursos de nivel superior, sin embargo, no se mantiene en la PRI final. Los mapas de recursos se combinan como parte de la indización.
 
-Este es un ejemplo de un recurso de tipo String válido de un archivo de volcado:
+Este es un ejemplo de un recurso de tipo cadena válido de un archivo de volcado de memoria.
 
 ```xml
 <NamedResource name="SampleString " index="96" uri="ms-resource://SampleApp/resources/SampleString ">
@@ -235,7 +235,7 @@ Este es un ejemplo de un recurso de tipo String válido de un archivo de volcado
 </NamedResource>
 ```
 
-Este es un ejemplo de un recurso de tipo Path válido con dos candidatos de un archivo de volcado.
+Este es un ejemplo de un recurso de tipo de ruta de acceso válido con dos candidatos de un archivo de volcado.
 
 ```xml
 <NamedResource name="Sample.png" index="77" uri="ms-resource://SampleApp/Files/Images/Sample.png">
@@ -264,7 +264,7 @@ Este es un ejemplo de un recurso de tipo Path válido con dos candidatos de un a
 
 ## <a name="resfiles"></a>ResFiles
 
-El indizador ResFiles se identifica por un atributo `type` de RESFILES. Indiza el contenido de un archivo `.resfiles`. Su elemento de configuración se ajusta al siguiente esquema.
+El indizador ResFiles se identifica mediante un `type` atributo de ResFiles. Indiza el contenido de un `.resfiles` archivo. Su elemento de configuración se ajusta al esquema siguiente.
 
 ```xml
 <xs:schema id="resx" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -282,7 +282,7 @@ El indizador ResFiles se identifica por un atributo `type` de RESFILES. Indiza e
 </xs:schema>
 ```
 
-Un archivo `.resfiles` es un archivo de texto que contiene una sencilla lista de rutas de archivos. Un archivo `.resfiles` puede contener comentarios "//". A continuación te mostramos un ejemplo.
+Un `.resfiles` archivo es un archivo de texto que contiene una lista plana de rutas de acceso de archivo. Un `.resfiles` archivo puede contener comentarios "//". Aquí tiene un ejemplo.
 
 <blockquote>
 <pre>
@@ -295,7 +295,7 @@ Images\logo.scale-180.png
 
 ## <a name="resjson"></a>ResJSON
 
-El indizador ResJSON se identifica por un atributo `type` de RESJSON. Indexa el contenido de un archivo `.resjson`, que es un archivo de recursos de cadena. Su elemento de configuración se ajusta al siguiente esquema.
+El indizador ResJSON se identifica mediante un `type` atributo de ResJSON. Indiza el contenido de un `.resjson` archivo, que es un archivo de recursos de cadena. Su elemento de configuración se ajusta al esquema siguiente.
 
 ```xml
 <xs:schema id="resjson" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -313,17 +313,17 @@ El indizador ResJSON se identifica por un atributo `type` de RESJSON. Indexa el 
 </xs:schema>
 ```
 
-Un archivo `.resjson` contiene el texto JSON (consulta [Tipo de medios aplicación/json para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt). El archivo debe contener un único objeto JSON con propiedades jerárquicas. Cada propiedad debe ser otro objeto JSON o un valor de cadena.
+Un `.resjson` archivo contiene texto JSON (consulte [el tipo de medio JSON o de aplicación para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt)). El archivo debe contener un único objeto JSON con propiedades jerárquicas. Cada propiedad debe ser otro objeto JSON o un valor de cadena.
 
-Las propiedades de JSON con nombres que comiencen por guión bajo ("_") no se compilan en el archivo PRI final, sino que se mantienen en el archivo de registro.
+Las propiedades JSON con nombres que comienzan por un carácter de subrayado ("_") no se compilan en el archivo PRI final, pero se mantienen en el archivo de registro.
 
 El archivo también puede contener comentarios "//" que se omiten durante el análisis.
 
-El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial anteponiéndolo al nombre del recurso. Normalmente esto lo usarías al indizar recursos a de bibliotecas de clases. La opción predeterminada es blank.
+El `initialPath` atributo coloca todos los recursos en esta ruta de acceso inicial anteponiéndole el nombre del recurso. Normalmente se usaría al indizar los recursos de la biblioteca de clases. El valor predeterminado es en blanco.
 
 ## <a name="resw"></a>ResW
 
-El indizador ResW se identifica por un atributo `type` de RESW. Indexa el contenido de un archivo `.resw`, que es un archivo de recursos de cadena. Su elemento de configuración se ajusta al siguiente esquema.
+El indexador ResW se identifica mediante un `type` atributo de ResW. Indiza el contenido de un `.resw` archivo, que es un archivo de recursos de cadena. Su elemento de configuración se ajusta al esquema siguiente.
 
 ```xml
 <xs:schema id="resw" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -342,7 +342,7 @@ El indizador ResW se identifica por un atributo `type` de RESW. Indexa el conten
 </xs:schema>
 ```
 
-Un archivo `.resw` es un archivo XML que se ajusta al siguiente esquema.
+Un `.resw` archivo es un archivo XML que se ajusta al esquema siguiente.
 
 ```xml
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
@@ -393,13 +393,13 @@ Un archivo `.resw` es un archivo XML que se ajusta al siguiente esquema.
   </xsd:schema>
 ```
 
-El atributo `convertDotsToSlashes` convierte todos los caracteres de punto (".") encontrados en los nombres de recursos (atributos de nombre de elemento de datos) en una barra diagonal "/", excepto cuando los caracteres de punto se encuentran entre "[" y "]".
+El `convertDotsToSlashes` atributo convierte todos los caracteres de punto (".") que se encuentran en los nombres de recursos (atributos de nombre de elemento de datos) en una barra diagonal "/", excepto cuando los caracteres de punto están entre "[" y "]".
 
-El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial anteponiéndolo al nombre del recurso. Normalmente esto lo usarías al indizar recursos de bibliotecas de clases. La opción predeterminada es blank.
+El `initialPath` atributo coloca todos los recursos en esta ruta de acceso inicial anteponiéndole el nombre del recurso. Normalmente se usa al indizar recursos de la biblioteca de clases. El valor predeterminado es en blanco.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Opciones de la línea de comandos de MakePri. exe](makepri-exe-command-options.md)
-* [Archivo de configuración MakePri. exe](makepri-exe-configuration.md)
+* [Opciones de línea de comandos de MakePri.exe](makepri-exe-command-options.md)
+* [Archivo de configuración de MakePri.exe](makepri-exe-configuration.md)
 * [El tipo de medio de aplicación/JSON para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt)

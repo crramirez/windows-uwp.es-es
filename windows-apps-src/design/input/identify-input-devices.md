@@ -1,5 +1,5 @@
 ---
-Description: Identifique los dispositivos de entrada conectados a un dispositivo de aplicación de Windows e identifique sus capacidades y atributos.
+description: Identifique los dispositivos de entrada conectados a un dispositivo de aplicación de Windows e identifique sus capacidades y atributos.
 title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
@@ -8,28 +8,28 @@ keywords: dispositivo, digitalizador, entrada, interacción
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ae1cc3132992ff13c5e599f7d5aa64a2f6fa151f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 51d5ea7bf6776c2c728fd000ffea63b79a4d7464
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219808"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030428"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
 
 Identifique los dispositivos de entrada conectados a un dispositivo de aplicación de Windows e identifique sus capacidades y atributos.
 
-> **API importantes**: [**Windows. Devices. Input**](/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](/uwp/api/Windows.UI.Core), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Input)
+> **API importantes** : [**Windows. Devices. Input**](/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](/uwp/api/Windows.UI.Core), [**Windows. UI. Xaml. Input**](/uwp/api/Windows.UI.Input)
 
 ## <a name="retrieve-mouse-properties"></a>Recuperar las propiedades del mouse
 
 
 El espacio de nombres [**Windows.Devices.Input**](/uwp/api/Windows.Devices.Input) contiene la clase [**MouseCapabilities**](/uwp/api/Windows.Devices.Input.MouseCapabilities) que se usa para recuperar las propiedades expuestas por uno o varios dispositivos mouse conectados. Solo es necesario crear un nuevo objeto **MouseCapabilities** y obtener las propiedades que te interesan.
 
-**Nota:**    Los valores devueltos por las propiedades que se describen aquí se basan en todos los ratones detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un mouse admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un mouse.
+**Nota:** Los valores que devuelven las propiedades que se describen aquí se basan en todos los dispositivos mouse detectados: las propiedades booleanas devuelven un valor distinto de cero si hay al menos un mouse que admite una funcionalidad específica. Por otro lado, las propiedades numéricas devuelven el valor máximo expuesto por cualquiera de los dispositivos mouse.
 
- 
+ 
 
 En el código siguiente se usa una serie de elementos [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para mostrar las propiedades y los valores de un mouse individual.
 
@@ -65,9 +65,9 @@ private void GetKeyboardProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](/uwp/api/Windows.Devices.Input) contiene la clase [**TouchCapabilities**](/uwp/api/Windows.Devices.Input.TouchCapabilities) que se usa para recuperar si hay algún digitalizador táctil conectado. Solo es necesario crear un nuevo objeto **TouchCapabilities** y obtener las propiedades que te interesan.
 
-**Nota:**    Los valores devueltos por las propiedades que se describen aquí se basan en todos los digitalizadores táctiles detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un digitalizador admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un digitalizador.
+**Nota:** Los valores que devuelven las propiedades que se describen aquí se basan en todos los digitalizadores táctiles detectados: las propiedades booleanas devuelven un valor distinto de cero si hay al menos un digitalizador que es compatible con una funcionalidad específica. Por otro lado, las propiedades numéricas devuelven el valor máximo expuesto por cualquiera de los digitalizadores.
 
- 
+ 
 
 En el código siguiente se usa una serie de elementos [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para mostrar las propiedades y los valores táctiles.
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](/uwp/api/Windows.Devices.Input) contiene la clase [**PointerDevice**](/uwp/api/Windows.Devices.Input.PointerDevice) que se usa para recuperar si hay dispositivos detectados compatibles con la entrada de puntero (táctil, teclado táctil, mouse o pluma). Solo tienes que crear un nuevo objeto **PointerDevice** y obtener las propiedades que te interesan.
 
-**Nota:**    Los valores devueltos por las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un dispositivo admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un dispositivo de puntero.
+**Nota** Los valores que devuelven las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven un valor distinto de cero si hay al menos un digitalizador que es compatible con una funcionalidad específica. Por otro lado, las propiedades numéricas devuelven el valor máximo expuesto por cualquiera de los dispositivos de puntero.
 
 En el código siguiente se usa una tabla para mostrar las propiedades y los valores correspondientes a cada dispositivo señalador.
 

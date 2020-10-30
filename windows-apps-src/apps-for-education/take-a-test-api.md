@@ -1,17 +1,17 @@
 ---
-Description: La API de JavaScript de la aplicación "Hacer un examen" de Microsoft, te permite proteger los exámenes. Gracias a "Hacer un examen", tendrás a mano un navegador seguro que evitará que los estudiantes usen otro equipo o Internet durante un examen.
+description: La API de JavaScript de la aplicación "Hacer un examen" de Microsoft, te permite proteger los exámenes. Gracias a "Hacer un examen", tendrás a mano un navegador seguro que evitará que los estudiantes usen otro equipo o Internet durante un examen.
 title: API de JavaScript "Hacer un examen".
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, education
 ms.localizationpriority: medium
-ms.openlocfilehash: 2eeb190fc95e46a95813affd432948d38c0328a4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 29a5d2749531e12ef7ce9b44cd6598c38cd089db
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218398"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031528"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
@@ -132,7 +132,7 @@ Windows 10, versión 1709
 
 <span id="close"/>
 
-### <a name="close"></a>cerrar
+### <a name="close"></a>close
 Cierra el explorador y se desbloquea el dispositivo. La aplicación de prueba debe invocar esto cuando el usuario elige salir del explorador.
 
 **Sintaxis**  
@@ -277,7 +277,7 @@ Comprueba si la sesión actual ha iniciado sesión de forma remota.
 `Boolean SecureBrowser.security.isRemoteSession();`
 
 **Valor devuelto**  
-**true** si la sesión actual es remota; de lo contrario, **false**.
+**true** si la sesión actual es remota; de lo contrario, **false** .
 
 **Requisitos**  
 Windows 10, versión 1709
@@ -293,7 +293,7 @@ Comprueba si la sesión actual se está ejecutando en una máquina virtual.
 `Boolean SecureBrowser.security.isVMSession();`
 
 **Valor devuelto**  
-**true** si la sesión actual se está ejecutando en una máquina virtual; en caso contrario, **false**.
+**true** si la sesión actual se está ejecutando en una máquina virtual; en caso contrario, **false** .
 
 **Comentarios:**  
 Esta comprobación de API solo puede detectar sesiones de máquinas virtuales que se ejecutan en ciertos hipervisores que implementan las API adecuadas.

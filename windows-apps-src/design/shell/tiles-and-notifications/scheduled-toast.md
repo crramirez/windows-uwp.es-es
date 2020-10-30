@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo programar una notificación del sistema local para que aparezca en otro momento.
+description: Obtenga información sobre cómo programar una notificación del sistema local para que aparezca en otro momento.
 title: Programar una notificación del sistema
 label: Schedule a toast notification
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 04/09/2020
 ms.topic: article
 keywords: Windows 10, UWP, notificación del sistema programada, scheduledtoastnotification, Inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ef849490df82d7677e19d1f1619d98111611be3
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 2a138458634f0246d7e6bed9d6d65c2479dac3c9
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100313"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030698"
 ---
 # <a name="schedule-a-toast-notification"></a>Programar una notificación del sistema
 
@@ -23,14 +23,14 @@ Tenga en cuenta que las notificaciones del sistema programadas tienen una ventan
 > [!IMPORTANT]
 > Las aplicaciones de escritorio (tanto los paquetes dispersos como MSIX y el escritorio clásico) tienen pasos ligeramente diferentes para enviar notificaciones y controlar la activación. Siga las instrucciones que se indican a continuación, pero reemplace `ToastNotificationManager` por la `DesktopNotificationManagerCompat` clase de la documentación de las [aplicaciones de escritorio](toast-desktop-apps.md) .
 
-> **API importantes**: [clase ScheduledToastNotification](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
+> **API importantes** : [clase ScheduledToastNotification](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para entender completamente este tema, le resultará útil lo siguiente...
 
-* Conocimiento práctico de los términos y conceptos de las notificaciones del sistema. Para obtener más información, consulte la información [General del sistema y del centro de actividades](/archive/blogs/tiles_and_toasts/toast-notification-and-action-center-overview-for-windows-10).
+* Conocimiento práctico de los términos y conceptos de las notificaciones del sistema. Para obtener más información, consulte la información [General del sistema y del centro de actividades](/archive/blogs/tiles_and_toasts/toast-notification-and-action-center-overview-for-windows-10).
 * Familiaridad con el contenido de las notificaciones del sistema de Windows 10. Para obtener más información, consulte [documentación del contenido del sistema](adaptive-interactive-toasts.md).
 * Un proyecto de aplicación para UWP de Windows 10
 

@@ -1,17 +1,17 @@
 ---
-Description: Puede generar códigos promocionales para una aplicación o un complemento que haya publicado en el Microsoft Store.
+description: Puede generar códigos promocionales para una aplicación o un complemento que haya publicado en el Microsoft Store.
 title: Generar códigos promocionales
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, código de promoción, códigos de promoción, token, tokens
 ms.localizationpriority: medium
-ms.openlocfilehash: 257e04dc70bd93fc262305f1ae0e4915b75bd159
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b9640ad9ddc00741677b8a1341c12d0489564368
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157979"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029648"
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos promocionales
 
@@ -38,7 +38,7 @@ Ten en cuenta las siguientes directivas para los códigos promocionales:
     - En cualquier período de seis meses, puede generar hasta 1600 códigos promocionales de un solo uso, o cualquier número de varios códigos de uso, de modo que el total de canjes permitidos no supere los 1600.
     - El período de 6 meses comienza cuando se genera el primer código promocional y dura 6 meses, independientemente de si se establece una fecha de expiración anterior en los códigos.
     - Los códigos creados durante un período de seis meses existente se contabilizarán en el número de códigos generados en ese período, incluso si expirarán una vez finalizado el período (por ejemplo, si genera un código el último día de la ventana de seis meses, seguirá siendo válido durante un total de 6 meses a partir de su creación).
--   Debes seguir los requisitos definidos en el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement), incluida la sección **3k. Códigos promocionales**.
+-   Debes seguir los requisitos definidos en el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement), incluida la sección **3k. Códigos promocionales** .
 
 > [!NOTE]
 > Puede usar códigos promocionales incluso si la aplicación no está disponible para los clientes (es decir, si ha seleccionado **hacer que este producto esté disponible pero no es reconocible en el almacén** con la detención de la **adquisición: cualquier cliente con un vínculo directo puede ver la lista de la tienda del producto, pero solo puede descargarla si poseía el producto antes, o tener un código promocional y usar una opción de dispositivo de Windows 10** en la sección [detectabilidad](choose-visibility-options.md#discoverability) del envío). Con esta opción, los clientes deben estar en Windows 10 (incluido Xbox) para poder adquirir el producto con un código promocional.
@@ -48,19 +48,19 @@ Ten en cuenta las siguientes directivas para los códigos promocionales:
 
 Para solicitar códigos promocionales para una aplicación o complemento:
 
-1.  En el menú de navegación izquierdo del [centro de Partners](https://partner.microsoft.com/dashboard), expanda **atraer** y seleccione códigos de **promoción**.
+1.  En el menú de navegación izquierdo del [centro de Partners](https://partner.microsoft.com/dashboard), expanda **atraer** y seleccione códigos de **promoción** .
 
-2.   En la página **Códigos promocionales**, haz clic en **Pedir códigos**.
+2.   En la página **Códigos promocionales** , haz clic en **Pedir códigos** .
 
-3.  En la página **Nuevo pedido de códigos promocionales**, escribe lo siguiente:
+3.  En la página **Nuevo pedido de códigos promocionales** , escribe lo siguiente:
     -   Selecciona la aplicación o complemento para el que quieras generar códigos. (Tenga en cuenta que no puede generar códigos promocionales para complementos de suscripción).
     -   Especifica un nombre para el pedido. Este nombre te servirá para diferenciar distintos pedidos de códigos cuando revises los datos de uso de los códigos promocionales.
     -   Selecciona el tipo de pedido. Puede optar por generar un conjunto de códigos de promoción que se pueden usar una vez, o bien puede optar por generar un código de promoción que se puede usar varias veces.
     -   Especifique el número de códigos para ordenar (si se genera un conjunto de códigos) o el número de veces que se puede canjear el código (si se genera un código que se va a usar varias veces).
-    -   Especifica cuándo deben activarse los códigos promocionales. Para elegir una determinada fecha y hora de inicio, desactiva la casilla **Los códigos están activos inmediatamente**. De lo contrario, los códigos se convertirán en activos de inmediato (aunque el producto debe haber completado el proceso de publicación para que un cliente pueda usar el código).
+    -   Especifica cuándo deben activarse los códigos promocionales. Para elegir una determinada fecha y hora de inicio, desactiva la casilla **Los códigos están activos inmediatamente** . De lo contrario, los códigos se convertirán en activos de inmediato (aunque el producto debe haber completado el proceso de publicación para que un cliente pueda usar el código).
     -   Especifica cuándo deben expirar los códigos promocionales. Para elegir una fecha y hora de expiración específicas anteriores a 6 meses, desactive la casilla los **códigos caducan después de 6 meses** .
 
-4.  Haz clic en **Pedir códigos**. A continuación, se le devolverá a la página **códigos promocionales** , donde podrá ver el nuevo pedido en la tabla de Resumen de pedidos de código promocional para esa aplicación.
+4.  Haz clic en **Pedir códigos** . A continuación, se le devolverá a la página **códigos promocionales** , donde podrá ver el nuevo pedido en la tabla de Resumen de pedidos de código promocional para esa aplicación.
 
 
 ## <a name="download-and-distribute-promotional-codes"></a>Descargar y distribuir códigos promocionales
@@ -73,17 +73,17 @@ Para descargar un pedido de código promocional entregado y distribuir los códi
 
     El archivo contiene las siguientes columnas de datos para cada código:
 
-    -   **Nombre del producto**: es el nombre de la aplicación o complemento con el que está asociado el código.
-    -   **Nombre del pedido**: el nombre del orden en el que se generó este código.
-    -   **Código promocional**: es el propio código. Se trata de una cadena de 5 x 5 caracteres alfanuméricos separados por guiones. Por ejemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
-    -   **URL canjeable**: la dirección URL que un cliente puede usar para canjear el código e instalar la aplicación o el complemento. La dirección URL tiene el siguiente formato: https://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt ;p romotional_code>
-    -   **Fecha de inicio**: la fecha en que este código estuvo activo.
-    -   **Fecha de expiración**: es la fecha de expiración de este código.
-    -   **Id. de código**: es un identificador único de este código.
-    -   **ID**. de pedido: un identificador único para el orden en el que se generó este código.
-    -   **Dado a**: un campo vacío que puede usar para realizar un seguimiento del cliente al que dio el código.
-    -   **Disponible**: el número de veces que el código todavía está disponible para canjear (en el momento en que se generó el archivo).
-    -   **Canjeado**: el número de veces que se ha canjeado el código (en el momento en que se generó el archivo).
+    -   **Nombre del producto** : es el nombre de la aplicación o complemento con el que está asociado el código.
+    -   **Nombre del pedido** : el nombre del orden en el que se generó este código.
+    -   **Código promocional** : es el propio código. Se trata de una cadena de 5 x 5 caracteres alfanuméricos separados por guiones. Por ejemplo: DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
+    -   **URL canjeable** : la dirección URL que un cliente puede usar para canjear el código e instalar la aplicación o el complemento. La dirección URL tiene el siguiente formato: https://go.microsoft.com/fwlink/?LinkId=532540&mstoken=&lt ;p romotional_code>
+    -   **Fecha de inicio** : la fecha en que este código estuvo activo.
+    -   **Fecha de expiración** : es la fecha de expiración de este código.
+    -   **Id. de código** : es un identificador único de este código.
+    -   **ID** . de pedido: un identificador único para el orden en el que se generó este código.
+    -   **Dado a** : un campo vacío que puede usar para realizar un seguimiento del cliente al que dio el código.
+    -   **Disponible** : el número de veces que el código todavía está disponible para canjear (en el momento en que se generó el archivo).
+    -   **Canjeado** : el número de veces que se ha canjeado el código (en el momento en que se generó el archivo).
 
 4.  Distribuya las direcciones URL canjeables a los clientes a través de cualquier formato de comunicación que prefiera (por ejemplo, notificaciones de destino, correo electrónico, mensajes SMS o tarjetas impresas). Te recomendamos que incluyas lo siguiente en la comunicación:
     -   Explicación de la aplicación o el complemento para el que se encuentra el código promocional y, opcionalmente, una descripción de por qué el cliente está recibiendo el código.
@@ -96,17 +96,17 @@ Para descargar un pedido de código promocional entregado y distribuir los códi
 Después de distribuir un código promocional (o su dirección URL canjeable) a un cliente, puede hacer clic en la dirección URL para obtener el producto de forma gratuita. Al hacer clic en la dirección URL canjeable se iniciará una página de **canje de código** autenticada en <https://account.microsoft.com/billing/redeem> . Esta página incluye una descripción de la aplicación que el usuario va a canjear. Si el cliente no ha iniciado sesión con su cuenta de Microsoft, es posible que se le pida que lo haga. El cliente también puede visitar <https://account.microsoft.com/billing/redeem> y escribir el código directamente.
 
 > [!IMPORTANT]
-> Le recomendamos que no distribuya códigos promocionales a los clientes hasta que el producto haya completado el proceso de publicación (incluso si ha seleccionado la opción **hacer que este producto esté disponible pero no es reconocible en el almacén**). Los clientes verán un error si intentan usar un código promocional para un producto que aún no se ha publicado.
+> Le recomendamos que no distribuya códigos promocionales a los clientes hasta que el producto haya completado el proceso de publicación (incluso si ha seleccionado la opción **hacer que este producto esté disponible pero no es reconocible en el almacén** ). Los clientes verán un error si intentan usar un código promocional para un producto que aún no se ha publicado.
 
-Una vez que el cliente hace clic en **canjear**, el Microsoft Store se abrirá en la página de información general de la aplicación (si se encuentran en un dispositivo Windows 10 o Windows 8.1), donde pueden hacer clic en **instalar** para descargar e instalar la aplicación de forma gratuita. Si el cliente está en un equipo o dispositivo que no tiene instalado el Microsoft Store, el vínculo iniciará la Página Web de Microsoft Store de la aplicación. El código se aplicará al cuenta de Microsoft del cliente, por lo que más adelante podrán descargar la aplicación en un dispositivo Windows (que está asociado al mismo cuenta de Microsoft) de forma gratuita.
+Una vez que el cliente hace clic en **canjear** , el Microsoft Store se abrirá en la página de información general de la aplicación (si se encuentran en un dispositivo Windows 10 o Windows 8.1), donde pueden hacer clic en **instalar** para descargar e instalar la aplicación de forma gratuita. Si el cliente está en un equipo o dispositivo que no tiene instalado el Microsoft Store, el vínculo iniciará la Página Web de Microsoft Store de la aplicación. El código se aplicará al cuenta de Microsoft del cliente, por lo que más adelante podrán descargar la aplicación en un dispositivo Windows (que está asociado al mismo cuenta de Microsoft) de forma gratuita.
 
 > [!NOTE]
-> En algunos casos, un cliente puede ver un botón **comprar** en lugar de **instalarlo**, aunque la aplicación se haya canjeado correctamente a través del código promocional. El cliente puede hacer clic en **comprar** para instalar la aplicación sin cargo alguno.
+> En algunos casos, un cliente puede ver un botón **comprar** en lugar de **instalarlo** , aunque la aplicación se haya canjeado correctamente a través del código promocional. El cliente puede hacer clic en **comprar** para instalar la aplicación sin cargo alguno.
 
 
 ## <a name="review-your-promotional-codes"></a>Revisar los códigos promocionales
 
-Para revisar un resumen detallado de los pedidos de código promocional de sus aplicaciones y complementos, vaya a la página de **códigos promocionales** (en el menú de navegación izquierdo del centro de Partners, expanda **atraer** y seleccione **códigos de promoción**). Puede revisar los detalles siguientes para todos los códigos promocionales actuales e inactivos:
+Para revisar un resumen detallado de los pedidos de código promocional de sus aplicaciones y complementos, vaya a la página de **códigos promocionales** (en el menú de navegación izquierdo del centro de Partners, expanda **atraer** y seleccione **códigos de promoción** ). Puede revisar los detalles siguientes para todos los códigos promocionales actuales e inactivos:
 -   Nombre del pedido
 -   Aplicación o complemento
 -   Fecha de inicio
@@ -116,4 +116,4 @@ Para revisar un resumen detallado de los pedidos de código promocional de sus a
 
 También puede [Descargar](#download-and-distribute-promotional-codes) un pedido de esta tabla.
 
- 
+ 

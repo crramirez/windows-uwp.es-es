@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información acerca de Cuándo y dónde debe usar iconos secundarios en la aplicación de Windows.
+description: Obtenga información acerca de Cuándo y dónde debe usar iconos secundarios en la aplicación de Windows.
 title: Guía de diseño de mosaicos secundarios
 label: Secondary tiles
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, iconos secundarios, instrucciones, instrucciones, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 5414c9d8437ee77e2a4a584dea26f7bf1fadef4a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f0114b4aac7dc590bb80cdfb2aef40f0e0efedcb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220238"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030618"
 ---
 # <a name="secondary-tile-guidance"></a>Guía de mosaicos secundarios
 

@@ -1,34 +1,34 @@
 ---
-Description: El informe de información en el centro de partners resalta los cambios significativos sobre sus aplicaciones.
-title: Informe de información
+description: El informe Insights del centro de Partners resalta cambios significativos sobre las aplicaciones.
+title: Informe de conocimientos
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, uwp, insight, tendencia, las anomalías, anomalías, los cambios de datos
+keywords: Windows 10, UWP, información, tendencias, anomalías, anomalías, cambios en los datos
 ms.localizationpriority: medium
-ms.openlocfilehash: ddd2238d8b3df51d5227e8027adac2a97fdbd52c
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 6f554adff312393e8e7e2fa62da2c9f1fd7400b1
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807393"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030358"
 ---
-# <a name="insights-report"></a>Informe de información
+# <a name="insights-report"></a>Informe de conocimientos
 
 
-El **Insights** notificar en [centro de partners](https://partner.microsoft.com/dashboard) resalta los cambios importantes (aumentos o disminuciones en una métrica específica) que detectamos durante los últimos 30 días en su adquisiciones, mantenimiento o uso datos. Esto le permite obtener una visión rápida de los cambios potencialmente importantes sin tener que ver todos los gráficos de cada uno de estos informes.
+El informe **Insights** del [centro de Partners](https://partner.microsoft.com/dashboard) resalta cambios significativos (aumentos o disminuciones en una métrica específica) detectados en los últimos 30 días en los datos de adquisición, mantenimiento o uso. Esto le permite obtener una visión rápida de los cambios potencialmente importantes sin tener que ver todos los gráficos de cada uno de estos informes.
 
 > [!NOTE]
-> Datos de este informe tratan los últimos 30 días. No puede seleccionar un período de tiempo diferente para este informe.
+> Los datos de este informe abarcan los últimos 30 días. No se puede seleccionar un período de tiempo diferente para este informe.
 
-El informe clasifica los datos en tres fichas: **Adquisiciones**, **mantenimiento**, y **uso**. Para ver los detalles de una de estas áreas, seleccione la ficha correspondiente.
+El informe ordena los datos en tres pestañas: **adquisiciones** , **mantenimiento** y **uso** . Para ver la información de una de estas áreas, seleccione su pestaña.
 
-Insights se muestran cuando detectamos un cambio significativo en los datos. Para cada insight, mostraremos lo siguiente:
-- **Tipo de información**: El área en la que se ha detectado la recomendación.
-- **Valor**: La métrica específica que se ha cambiado significativamente (o **todas** si el cambio se aplica a toda la **tipo Insight**).
-- **Fecha**: La fecha en la que hemos identificado que el cambio. Esta fecha representa el final de la semana en el que se ha detectado un significativo aumento o disminución en comparación con la semana antes de que.
-- **Impacto en general**: El porcentaje que el valor aumenta o disminuye a través de la base de clientes todo. Esto le ayudará a comprender cómo se extienden el impacto de un cambio determinado puede ser, especialmente cuando se compara con la información de porcentaje se muestra en **principales colaboradores.**
-- **Principales colaboradores**: Si procede, el segmento específico, el paquete o el otro factor de identificación para ayudar a comprender a qué clientes el cambio está relacionada con. Por ejemplo, es posible que se detecta un cambio principalmente con clientes de un mercado concreto o en un determinado tipo de dispositivo. Para **mantenimiento** datos, esto puede incluir valores hash concretos del error o las versiones del paquete. Si procede, también se muestran el porcentaje que el valor aumenta o disminuye para ese factor.
-- **Acción**:
-   - Seleccione **mostrar tendencia de 14 días** para ver un gráfico que muestra cómo cambia la métrica durante los días 14 todos que hicieron nacer a la fecha de la información.
-   - Seleccione **Díganos si es preciso** para enviarnos sus comentarios y háganos saber si la información que hemos proporcionado parecían correctas. Estos comentarios nos ayudarán a seguir mejorando los datos que se proporcionan aquí. 
+La información se muestra cuando se detecta un cambio significativo en los datos. Para cada información, mostraremos lo siguiente:
+- **Tipo de información** : el área en la que se detectó la información.
+- **Valor** : la métrica específica que cambió significativamente (o **todo** si el cambio se aplica a todo el **tipo de información** ).
+- **Fecha** : la fecha en la que se identificó el cambio. Esta fecha representa el final de la semana en el que se ha detectado un aumento o una disminución significativos en comparación con la semana anterior.
+- **Impacto global** : el porcentaje de aumento o disminución del valor en toda la base de clientes. Esto le ayudará a comprender la generalización del impacto de un cambio determinado, especialmente al compararlo con la información de porcentaje que se muestra en los **colaboradores principales.**
+- **Principales colaboradores** : si es aplicable, el segmento específico, el paquete u otro factor de identificación para ayudar a comprender a qué clientes está relacionado el cambio. Por ejemplo, un cambio puede detectarse principalmente con clientes de un mercado específico o en un tipo de dispositivo determinado. En el caso de los datos de **Estado** , esto puede incluir hashes de error específicos o versiones de paquete. Si procede, también mostraremos el porcentaje que el valor aumentó o disminuyó para ese factor.
+- **Acción** :
+   - Seleccione **Mostrar tendencia de 14 días** para ver un gráfico que muestra el cambio de la métrica en los 14 días que llevan hasta la fecha de la información.
+   - Seleccione **indíquenos si es preciso** que nos envíe sus comentarios y háganoslo saber si la información que hemos proporcionado es precisa. Estos comentarios nos ayudarán a seguir mejorando los datos que proporcionamos aquí. 
 

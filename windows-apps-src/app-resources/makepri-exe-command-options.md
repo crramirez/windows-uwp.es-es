@@ -1,17 +1,17 @@
 ---
-Description: MakePri.exe tiene el conjunto de comandos createconfig, dump, New, ResourcePack y versioned. En este tema se detalla su uso.
+description: MakePri.exe tiene el conjunto de comandos createconfig, dump, New, ResourcePack y versioned. En este tema se detalla su uso.
 title: Opciones de línea de comandos de MakePri.exe
 template: detail.hbs
 ms.date: 04/10/2018
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 638de4d2795b3b248edfdcc35dc72fa21d31fc3b
-ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
+ms.openlocfilehash: 7443efbb227bf3f9ea64db58902ebeb67b02f676
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92253787"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031738"
 ---
 # <a name="makepriexe-command-line-options"></a>Opciones de línea de comandos de MakePri.exe
 
@@ -115,7 +115,7 @@ Help:
 El `dump` comando genera un archivo XML con volcado que contiene una lista de todos los recursos de un archivo PRI especificado. Ejecute `MakePri.exe dump /?` para ver ayuda detallada para este comando.
 
 > [!NOTE]
-> Un paquete de recursos sin esquema es el que se creó con el modificador *omitSchemaFromResourcePacks* en el archivo de configuración de PRI. Para volcar un paquete de recursos sin esquemas, utilice el modificador `/es <main_package_PRI_file>` . Si no especifica el archivo principal, verá el mensaje de error "el archivo*Resources. PRI del paquete está dañado, por lo que se produjo un error de cifrado (error PRI222:0xdef0000f-error no especificado)*".
+> Un paquete de recursos sin esquema es el que se creó con el modificador *omitSchemaFromResourcePacks* en el archivo de configuración de PRI. Para volcar un paquete de recursos sin esquemas, utilice el modificador `/es <main_package_PRI_file>` . Si no especifica el archivo principal, verá el mensaje de error "el archivo *Resources. PRI del paquete está dañado, por lo que se produjo un error de cifrado (error PRI222:0xdef0000f-error no especificado)* ".
 
 ```console
 C:\>makepri dump /?
@@ -458,7 +458,7 @@ Y este es un ejemplo de contenido de un archivo de asignación de paquete de rec
 
 ## <a name="output-summary"></a>Resumen de salida
 
-Si se crean paquetes de recursos, el Resumen de salida de MakePRI.exe tiene un formato más detallado. A continuación se muestra un ejemplo.
+Si se crean paquetes de recursos, el Resumen de salida de MakePRI.exe tiene un formato más detallado. Aquí tiene un ejemplo.
 
 ```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack

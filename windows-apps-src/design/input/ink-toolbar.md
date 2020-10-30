@@ -1,6 +1,6 @@
 ---
-Description: Agregue un control InkToolbar predeterminado a una aplicación de entrada manuscrita de la aplicación de Windows, agregue un botón de lápiz personalizado al control InkToolbar y enlace el botón del lápiz personalizado a una definición de lápiz personalizada.
-title: Agregar un control InkToolbar a una aplicación de Windows
+description: Agregue un control InkToolbar predeterminado a una aplicación de entrada manuscrita de la aplicación de Windows, agregue un botón de lápiz personalizado al control InkToolbar y enlace el botón del lápiz personalizado a una definición de lápiz personalizada.
+title: 'Adición de un control InkToolbar a una aplicación de Windows '
 label: Add an InkToolbar to a Windows app
 template: detail.hbs
 keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, InkCanvas, InkToolbar, Plataforma universal de Windows, UWP, interacción del usuario, entrada
@@ -8,14 +8,14 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: 20446af1f0d62f0c6b18a0ff675818fe41db1740
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 78585f9734131531db5cfa429770ed8351459d8f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219748"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030208"
 ---
-# <a name="add-an-inktoolbar-to-a-windows-app"></a>Agregar un control InkToolbar a una aplicación de Windows
+# <a name="add-an-inktoolbar-to-a-windows-app"></a>Adición de un control InkToolbar a una aplicación de Windows 
 
 
 
@@ -35,7 +35,7 @@ Como una superposición completamente transparente, el control InkCanvas no prop
 
   El control InkToolbar se describe en este tema.
 
-> **API importantes**: [**clase InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas), clase [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar), [**clase InkPresenter**](/uwp/api/windows.ui.input.inking.inkpresenter), [**Windows. UI. Input. inking**](/uwp/api/Windows.UI.Input.Inking)
+> **API importantes** : [**clase InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas), clase [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar), [**clase InkPresenter**](/uwp/api/windows.ui.input.inking.inkpresenter), [**Windows. UI. Input. inking**](/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="default-inktoolbar"></a>Control InkToolbar predeterminado
 
@@ -87,7 +87,7 @@ Cuando agrega una barra de herramientas de entrada manuscrita a la aplicación, 
 
 Especifique explícitamente la ubicación y la orientación de la barra de herramientas a través de las propiedades [VerticalAlignment](/uwp/api/windows.ui.xaml.frameworkelement.VerticalAlignment), [HorizontalAlignment](/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment)y [Orientation](/uwp/api/windows.ui.xaml.controls.inktoolbar?branch=rs3.Orientation) .
 
-| Default | Explícita |
+| Valor predeterminado | Explícita |
 | --- | --- |
 | ![Ubicación y orientación de la barra de herramientas de entrada manuscrita predeterminada](./images/ink/location-default-small.png) | ![Ubicación y orientación de la barra de herramientas de tinta explícita](./images/ink/location-explicit-small.png) |
 | *Ubicación y orientación predeterminadas de la barra de herramientas de Windows Ink* | *Ubicación y orientación explícita de la barra de herramientas de Windows Ink* |
@@ -103,7 +103,7 @@ Este es el código para establecer explícitamente la ubicación y la orientaci�
 
 **Inicializar en función de las preferencias del usuario o el estado del dispositivo**
 
-En algunos casos, es posible que desee establecer la ubicación y la orientación de la barra de herramientas de la tinta en función de la preferencia del usuario o el estado del dispositivo. En el ejemplo siguiente se muestra cómo establecer la ubicación y la orientación de la barra de herramientas de entrada manuscrita en función de las preferencias de escritura de izquierda o derecha especificadas a través de la **configuración > dispositivos > lápiz & lápiz de > de Windows ink > elegir la mano con la que escribe**.
+En algunos casos, es posible que desee establecer la ubicación y la orientación de la barra de herramientas de la tinta en función de la preferencia del usuario o el estado del dispositivo. En el ejemplo siguiente se muestra cómo establecer la ubicación y la orientación de la barra de herramientas de entrada manuscrita en función de las preferencias de escritura de izquierda o derecha especificadas a través de la **configuración > dispositivos > lápiz & lápiz de > de Windows ink > elegir la mano con la que escribe** .
 
 ![Configuración de mano dominante](./images/ink/location-handedness-setting.png)  
 *Configuración de mano dominante*
@@ -134,13 +134,13 @@ También puede usar el enlace para buscar las actualizaciones de la interfaz de 
 **Descargar este ejemplo desde la ubicación de la [barra de herramientas de entrada y el ejemplo de orientación (dinámico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)**
 
 1. En primer lugar, vamos a agregar el ViewModel.
-    1. Agregue una nueva carpeta al proyecto y llámela **ViewModels**.
-    1. Agregue una nueva clase a la carpeta ViewModels (en este ejemplo, se le llamó **InkToolbarSnippetHostViewModel.CS**).
+    1. Agregue una nueva carpeta al proyecto y llámela **ViewModels** .
+    1. Agregue una nueva clase a la carpeta ViewModels (en este ejemplo, se le llamó **InkToolbarSnippetHostViewModel.CS** ).
         > [!NOTE] 
         > Usamos el [patrón singleton](/previous-versions/msp-n-p/ff650849(v=pandp.10)) , ya que solo necesitamos un objeto de este tipo para la vida útil de la aplicación.
 
     1. Agregue `using System.ComponentModel` el espacio de nombres al archivo.
-    1. Agregue una variable miembro estática denominada **instancia**y una propiedad estática de solo lectura denominada **instancia**. Haga que el constructor sea privado para asegurarse de que solo se puede tener acceso a esta clase a través de la propiedad de instancia.   
+    1. Agregue una variable miembro estática denominada **instancia** y una propiedad estática de solo lectura denominada **instancia** . Haga que el constructor sea privado para asegurarse de que solo se puede tener acceso a esta clase a través de la propiedad de instancia.   
         > [!NOTE] 
         > Esta clase hereda de la interfaz [INotifyPropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged) , que se usa para notificar a los clientes, normalmente los clientes de enlace, que un valor de propiedad ha cambiado. Vamos a usar esto para controlar los cambios en la orientación del dispositivo (expandiremos este código y explicaremos más adelante en un paso posterior).  
 
@@ -210,8 +210,8 @@ También puede usar el enlace para buscar las actualizaciones de la interfaz de 
         ```
 
 1. Ahora, vamos a agregar un par de clases de convertidor a nuestro proyecto. Cada clase contiene un objeto Convert que devuelve un valor de alineación ( [HorizontalAlignment](/uwp/api/windows.ui.xaml.horizontalalignment) o [VerticalAlignment](/uwp/api/windows.ui.xaml.verticalalignment)).
-    1. Agregue una nueva carpeta al proyecto y llámela **convertidores**.
-    1. Agregue dos clases nuevas a la carpeta Converters (en este ejemplo, se les llama **HorizontalAlignmentFromHandednessConverter.CS** y **VerticalAlignmentFromAppViewConverter.CS**).
+    1. Agregue una nueva carpeta al proyecto y llámela **convertidores** .
+    1. Agregue dos clases nuevas a la carpeta Converters (en este ejemplo, se les llama **HorizontalAlignmentFromHandednessConverter.CS** y **VerticalAlignmentFromAppViewConverter.CS** ).
     1. Agregue `using Windows.UI.Xaml` `using Windows.UI.Xaml.Data` espacios de nombres y a cada archivo.
     1. Cambie cada clase a `public` y especifique que implementa la interfaz [IValueConverter](/uwp/api/windows.ui.xaml.data.ivalueconverter) .
     1. Agregue los métodos [Convert](/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) y [ConvertBack](/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) a cada archivo, como se muestra aquí (se deja el método ConvertBack en modo no implementado).

@@ -1,17 +1,17 @@
 ---
-Description: Si has proporcionado paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción de la Tienda para cada sistema operativo de destino.
+description: Si has proporcionado paquetes destinados a diferentes sistemas operativos, tienes la opción de personalizar partes de la descripción de la Tienda para cada sistema operativo de destino.
 title: Creación de descripciones de la Tienda específicas de la plataforma
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
 ms.date: 09/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, personalizar, enumerar, descripción, anteriormente
 ms.localizationpriority: medium
-ms.openlocfilehash: b0008095ac027a1ef1d17b655610a3ad50a6596b
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 582b6dec3daf55eadfda4758523b196deac6577e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220508"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029798"
 ---
 # <a name="create-platform-specific-store-listings"></a>Creación de descripciones de la Tienda específicas de la plataforma
 
@@ -26,16 +26,16 @@ Los clientes de Windows 10 (incluido Xbox) siempre verán la [lista de tiendas](
 Las listas de tiendas específicas de la plataforma pueden ser útiles si desea mencionar características que solo aparecen en una versión del sistema operativo o desea proporcionar capturas de pantallas específicas de un sistema operativo determinado (independientemente del tipo de dispositivo).
 
 > [!NOTE]
-> Al crear una lista de almacenes específicos de la plataforma en un lenguaje no se crea una lista de almacenes específicos de la plataforma en otros idiomas que admite su aplicación. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma. Además, tenga en cuenta que no puede [importar y exportar datos](import-and-export-store-listings.md) de la lista de almacenes para listas específicas de la plataforma.
+> Al crear una lista de almacenes específicos de la plataforma en un lenguaje no se crea una lista de almacenes específicos de la plataforma en otros idiomas que admite su aplicación. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma. Además, tenga en cuenta que no puede [importar y exportar datos](import-and-export-store-listings.md) de la lista de almacenes para listas específicas de la plataforma.
 
 
 ## <a name="creating-a-platform-specific-store-listing"></a>Creación de una descripción de la Tienda específica de la plataforma
 
-Cerca de la parte superior de la página de la descripción de la **tienda** , si la aplicación publicada anteriormente incluye paquetes que admiten versiones anteriores del sistema operativo ((Windows 8. x o anterior y/o Windows Phone 8. x o anterior), puede seleccionar **crear una lista de App Store específica de la plataforma**. Después de seleccionar esta opción, se le pedirá que elija entre las versiones de sistema operativo de destino que admite el envío. Una vez que haya creado listas de tiendas específicas de la plataforma para todas las versiones anteriores del sistema operativo a las que se destina la aplicación, no podrá realizar otra selección.
+Cerca de la parte superior de la página de la descripción de la **tienda** , si la aplicación publicada anteriormente incluye paquetes que admiten versiones anteriores del sistema operativo ((Windows 8. x o anterior y/o Windows Phone 8. x o anterior), puede seleccionar **crear una lista de App Store específica de la plataforma** . Después de seleccionar esta opción, se le pedirá que elija entre las versiones de sistema operativo de destino que admite el envío. Una vez que haya creado listas de tiendas específicas de la plataforma para todas las versiones anteriores del sistema operativo a las que se destina la aplicación, no podrá realizar otra selección.
 
 Puede usar la lista de tiendas (Windows 10) predeterminada como punto de partida, lo que le llevará por el texto y las imágenes correspondientes que ha escrito para la lista de tiendas predeterminada. podrá realizar los cambios que quiera antes de guardar. También puedes empezar con una descripción de la Tienda completamente en blanco si lo prefieres.
 
-Después de hacer clic en **continuar**, la página de la tienda de **tiendas** incluirá ahora una sección para la lista de almacenes específicos de la plataforma que acaba de crear. En esta sección se incluye su propio conjunto de campos para la **Descripción** (obligatorio), las novedades **de esta versión**, las **capturas de pantallas**, el icono de icono de la **aplicación**, **las características**de la aplicación y **los requisitos del sistema adicionales**. Asegúrate de escribir en todos los campos de la descripción de la Tienda personalizada que quieres que muestren información, aunque sea la misma que la de la descripción de la Tienda predeterminada. Si dejas en blanco alguno de estos campos, no se mostrará información sobre ellos en la descripción de la Tienda personalizada.
+Después de hacer clic en **continuar** , la página de la tienda de **tiendas** incluirá ahora una sección para la lista de almacenes específicos de la plataforma que acaba de crear. En esta sección se incluye su propio conjunto de campos para la **Descripción** (obligatorio), las novedades **de esta versión** , las **capturas de pantallas** , el icono de icono de la **aplicación** , **las características** de la aplicación y **los requisitos del sistema adicionales** . Asegúrate de escribir en todos los campos de la descripción de la Tienda personalizada que quieres que muestren información, aunque sea la misma que la de la descripción de la Tienda predeterminada. Si dejas en blanco alguno de estos campos, no se mostrará información sobre ellos en la descripción de la Tienda personalizada.
 
 > [!IMPORTANT]
 > Los campos de la sección [información adicional](create-app-store-listings.md#additional-information) de la lista de tiendas no se pueden personalizar para diferentes versiones de sistema operativo.
@@ -49,10 +49,10 @@ Puede seguir editando los listados específicos de la plataforma según sea nece
 
 Si crea una lista de tiendas específica de la plataforma y más adelante decide que prefiere mostrar la lista de tiendas predeterminada a los clientes de ese sistema operativo, seleccione el vínculo **eliminar** junto a esa lista.
 
-Después de confirmar que le gustaría mostrar a los clientes la lista de tiendas predeterminada, seleccione **Aceptar**. La lista de almacenes específicos de la plataforma se quitará (para todos los idiomas en los que existía) y los clientes de esa versión del sistema operativo ahora verán la lista de tiendas predeterminada. Si cambia de opinión, puede crear otra lista de almacenes específicos de la plataforma para ese sistema operativo siguiendo los pasos indicados anteriormente.
- 
+Después de confirmar que le gustaría mostrar a los clientes la lista de tiendas predeterminada, seleccione **Aceptar** . La lista de almacenes específicos de la plataforma se quitará (para todos los idiomas en los que existía) y los clientes de esa versión del sistema operativo ahora verán la lista de tiendas predeterminada. Si cambia de opinión, puede crear otra lista de almacenes específicos de la plataforma para ese sistema operativo siguiendo los pasos indicados anteriormente.
+ 
 
- 
+ 
 
 
 

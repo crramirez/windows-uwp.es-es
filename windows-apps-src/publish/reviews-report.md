@@ -1,17 +1,17 @@
 ---
-Description: El informe de revisiones del centro de Partners le permite ver las revisiones (comentarios) que los clientes escribieron al clasificar la aplicación en la tienda.
+description: El informe de revisiones del centro de Partners le permite ver las revisiones (comentarios) que los clientes escribieron al clasificar la aplicación en la tienda.
 title: Informe Críticas
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.date: 08/16/2018
 ms.topic: article
 keywords: Windows 10, UWP, revisión, comentario, revisor
 ms.localizationpriority: medium
-ms.openlocfilehash: feec3577dde9144892ea1ff9f9755074d2af9429
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9ab086e3e54832703116ca8717660b382f3c1ffe
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167339"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030308"
 ---
 # <a name="reviews-report"></a>Informe Críticas
 
@@ -28,19 +28,19 @@ También puede responder a las opiniones de los clientes [directamente desde est
 
 ## <a name="apply-filters"></a>Aplicación de filtros
 
-Cerca de la parte superior de la página, puede seleccionar el período de tiempo para el que desea mostrar las revisiones. La selección predeterminada es **vigencia**, pero puede elegir que se muestren las revisiones durante 30 días, 3 meses, 6 meses o 12 meses, o para un intervalo de datos personalizado que especifique.
+Cerca de la parte superior de la página, puede seleccionar el período de tiempo para el que desea mostrar las revisiones. La selección predeterminada es **vigencia** , pero puede elegir que se muestren las revisiones durante 30 días, 3 meses, 6 meses o 12 meses, o para un intervalo de datos personalizado que especifique.
 
 Puede expandir los **filtros** para filtrar las revisiones que se muestran en esta página por las siguientes opciones. Estos filtros no se aplicarán a las **clasificaciones de desglose** y promedio de clasificación en los gráficos de **tiempo** .
 
--   **Clasificación**: de forma predeterminada, se comprueban las revisiones con todas las clasificaciones por estrellas, pero puede activar y desactivar las clasificaciones específicas (de 1 a 5 estrellas) si solo desea ver las revisiones asociadas a clasificaciones por estrellas determinadas.
-- **Revisar contenido**: la configuración predeterminada es **clasificaciones con contenido de revisión**, lo que significa que solo se mostrarán las clasificaciones con contenido de revisión. Puede seleccionar **todo** para mostrar todas las clasificaciones, incluso las que no incluyen ningún texto de revisión escrita. Tenga en cuenta que el gráfico de **desglose de clasificaciones** siempre mostrará todas las revisiones, independientemente de la selección.
--   **Versión del sistema operativo**: el valor predeterminado es **todos**. Puede elegir una versión específica del sistema operativo Si desea que esta página solo muestre las revisiones que hayan dejado los clientes en esa versión del sistema operativo.
--   **Versión del paquete**: el valor predeterminado es **Todas**. Si la aplicación incluye más de un paquete, puede elegir uno específico aquí para mostrar solo las revisiones que hayan dejado los clientes que tenían ese paquete cuando revisaron la aplicación.
--   **Respuestas**: el valor predeterminado es **Todas**. Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
--   **Actualizaciones**: el valor predeterminado es **Todas**. Puede elegir filtrar las revisiones para que solo se muestren las revisiones que ha actualizado el cliente desde que ha [respondido a una revisión](respond-to-customer-reviews.md)o solo las que el cliente aún no ha actualizado.
--   **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir un mercado específico si quieres que esta página solo muestre críticas de clientes en ese mercado.
--   **Tipo de dispositivo**: el filtro predeterminado es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre críticas aportadas por clientes que usen ese tipo de dispositivo.
--   **Nombre de categoría**: el filtro predeterminado es **todos**. Puede elegir una categoría de [información de revisión](#review-insight-categories) específica para mostrar solo las revisiones que hemos asociado a esa categoría. 
+-   **Clasificación** : de forma predeterminada, se comprueban las revisiones con todas las clasificaciones por estrellas, pero puede activar y desactivar las clasificaciones específicas (de 1 a 5 estrellas) si solo desea ver las revisiones asociadas a clasificaciones por estrellas determinadas.
+- **Revisar contenido** : la configuración predeterminada es **clasificaciones con contenido de revisión** , lo que significa que solo se mostrarán las clasificaciones con contenido de revisión. Puede seleccionar **todo** para mostrar todas las clasificaciones, incluso las que no incluyen ningún texto de revisión escrita. Tenga en cuenta que el gráfico de **desglose de clasificaciones** siempre mostrará todas las revisiones, independientemente de la selección.
+-   **Versión del sistema operativo** : el valor predeterminado es **todos** . Puede elegir una versión específica del sistema operativo Si desea que esta página solo muestre las revisiones que hayan dejado los clientes en esa versión del sistema operativo.
+-   **Versión del paquete** : el valor predeterminado es **Todas** . Si la aplicación incluye más de un paquete, puede elegir uno específico aquí para mostrar solo las revisiones que hayan dejado los clientes que tenían ese paquete cuando revisaron la aplicación.
+-   **Respuestas** : el valor predeterminado es **Todas** . Puedes optar por filtrar las críticas para mostrar solamente aquellas donde has [respondido a los clientes](respond-to-customer-reviews.md), o solo aquellas donde aún ha no ha respondido.
+-   **Actualizaciones** : el valor predeterminado es **Todas** . Puede elegir filtrar las revisiones para que solo se muestren las revisiones que ha actualizado el cliente desde que ha [respondido a una revisión](respond-to-customer-reviews.md)o solo las que el cliente aún no ha actualizado.
+-   **Mercado** : el valor predeterminado es **Todos los mercados** . Puedes elegir un mercado específico si quieres que esta página solo muestre críticas de clientes en ese mercado.
+-   **Tipo de dispositivo** : el filtro predeterminado es **Todos los dispositivos** . Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre críticas aportadas por clientes que usen ese tipo de dispositivo.
+-   **Nombre de categoría** : el filtro predeterminado es **todos** . Puede elegir una categoría de [información de revisión](#review-insight-categories) específica para mostrar solo las revisiones que hemos asociado a esa categoría. 
 
 > [!TIP]
 > Si no ve ninguna revisión en la página, asegúrese de que los filtros no hayan excluido todas sus revisiones. Por ejemplo, si filtras por un SO de destino que no es compatible con la aplicación, no verás ninguna crítica.
@@ -75,7 +75,7 @@ En el gráfico de **categorías de información** se agrupan las revisiones en f
 
 Cerca de la parte superior de la página, verá bloques en color que representan las revisiones por categoría. Seleccione una de estas categorías para ver solo las revisiones que hemos asociado a esa categoría. También puede usar los [filtros de página](#apply-filters) para filtrar por categoría.
 
-Para ver un desglose del número de revisiones por categoría, seleccione **Mostrar detalles**. 
+Para ver un desglose del número de revisiones por categoría, seleccione **Mostrar detalles** . 
 
 
 ## <a name="reviews"></a>Revisiones
@@ -93,7 +93,7 @@ Cada crítica del cliente contiene lo siguiente:
 
 Ten en cuenta que los clientes pueden dejar una clasificación de la aplicación sin agregar comentarios, por lo que normalmente verás menos críticas que clasificaciones.
 
-Puedes ordenar las críticas de la página por fecha o por clasificación en orden ascendente o descendente. Haga clic en el vínculo **ordenar por** para ver las opciones de ordenación por **fecha** y/o **clasificación**.
+Puedes ordenar las críticas de la página por fecha o por clasificación en orden ascendente o descendente. Haga clic en el vínculo **ordenar por** para ver las opciones de ordenación por **fecha** y/o **clasificación** .
 
 También puede usar el cuadro Buscar para buscar palabras o frases específicas en las revisiones de la aplicación. Tenga en cuenta que solo se busca en el texto de revisión original escrito por el cliente, incluso si la revisión se escribió en otro idioma. No se busca el texto de revisión traducido.
 
@@ -120,8 +120,8 @@ Estas son algunas acciones adicionales que puedes considerar según las crítica
 -   Si el promedio de la clasificación es alto, pero el nombre de descargas es bajo, quizás quieras buscar maneras de [exponer la aplicación a más personas](attract-customers-and-promote-your-apps.md), dado que es bien recibida por los usuarios que la han probado.
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

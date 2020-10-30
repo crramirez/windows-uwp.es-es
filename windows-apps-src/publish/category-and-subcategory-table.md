@@ -1,17 +1,17 @@
 ---
-Description: Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
+description: Describir la aplicación en la categoría y subcategoría correctas ayuda a los clientes a encontrarla y a entender mejor de qué se trata.
 title: Tabla de categoría y subcategoría
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.date: 03/21/2019
 ms.topic: article
 keywords: Windows 10, UWP, categoría, subcategoría, género, categorías, géneros
 ms.localizationpriority: medium
-ms.openlocfilehash: 49b22ceaf0f1cdefcc7f29f0a8ca79658aa15803
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b1d14f0b14ea97d9825dbdd44c78f62ac8ea2bd5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167429"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030398"
 ---
 # <a name="category-and-subcategory-table"></a>Tabla de categoría y subcategoría
 
@@ -51,11 +51,11 @@ El Microsoft Store organiza las aplicaciones en las siguientes categorías y sub
   </tr>
   <tr>
     <td>Herramientas para desarrolladores</td>
-    <td>Base de datos <br> Herramientas de diseño <br> Kits de desarrollo <br> Redes <br> Referencia y aprendizaje <br> Servidores <br> Sectores públicos <br> Hospedaje web</td>
+    <td>Base de datos <br> Herramientas de diseño <br> Kits de desarrollo <br> Redes <br> Referencia y aprendizaje <br> Servidores <br> Utilidades <br> Hospedaje web</td>
   </tr>
   <tr>
     <td>Education</td>
-    <td>Libros y referencia <br> Aprendizaje preescolar <br> Herramientas didácticas <br> Idioma <br> Apoyo en el estudio</td>
+    <td>Libros y referencia <br> Aprendizaje preescolar <br> Herramientas didácticas <br> Lenguaje <br> Apoyo en el estudio</td>
   </tr>
   <tr>
     <td>Entretenimiento</td>

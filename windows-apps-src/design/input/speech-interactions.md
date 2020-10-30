@@ -1,5 +1,5 @@
 ---
-Description: Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
+description: Incorpora la voz en las aplicaciones con síntesis de voz, reconocimiento de voz y los comandos de voz de Cortana.
 title: Interacciones de voz
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 94a93f9b1506d2b4dfcdad260bf86bf39c15d875
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d42802f4efb131f413b192f4e5f851f630ce4e57
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173349"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029868"
 ---
 # <a name="speech-interactions"></a>Interacciones de voz
 
@@ -24,7 +24,7 @@ Integra el reconocimiento de voz y texto a voz (también denominado TTS o sínte
 **TTS** TTS usa un motor de síntesis de voz (Voice) para convertir una cadena de texto en palabras pronunciadas. La cadena de entrada puede ser texto básico y sin adornos o Lenguaje de marcado de síntesis de voz (SSML) más complejo. SSML proporciona una forma estándar de controlar características de la salida de voz, como la pronunciación, el volumen, el tono, la velocidad o el énfasis.
 
 **Otros componentes relacionados con la voz:** 
- **Cortana** en aplicaciones Windows usa comandos de voz personalizados (hablados o con tipo) para iniciar la aplicación en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activar como un servicio en segundo plano (**Cortana** conserva el foco pero proporciona resultados de la aplicación). Consulte las [instrucciones del comando de voz de Cortana (VCD)](/cortana/voice-commands/vcd) si expone la funcionalidad de la aplicación en la interfaz de usuario de **Cortana** .
+ **Cortana** en aplicaciones Windows usa comandos de voz personalizados (hablados o con tipo) para iniciar la aplicación en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activar como un servicio en segundo plano ( **Cortana** conserva el foco pero proporciona resultados de la aplicación). Consulte las [instrucciones del comando de voz de Cortana (VCD)](/cortana/voice-commands/vcd) si expone la funcionalidad de la aplicación en la interfaz de usuario de **Cortana** .
 
 ## <a name="speech-interaction-design"></a>Diseño de la interacción mediante voz
 
@@ -80,21 +80,21 @@ Las pantallas varían en función de las restricciones especificadas:
 
 -   Gramática predefinida (dictado o búsqueda web)
 
-    -   La pantalla **Escucha**.
-    -   La pantalla **Procesando**.
+    -   La pantalla **Escucha** .
+    -   La pantalla **Procesando** .
     -   La pantalla **Te he oído** o la pantalla de error.
 -   Lista de palabras o frases o un archivo de gramática SRGS
 
-    -   La pantalla **Escucha**.
-    -   La pantalla **Has dicho**, si lo que el usuario ha dicho pudiera interpretarse como más de un posible resultado.
+    -   La pantalla **Escucha** .
+    -   La pantalla **Has dicho** , si lo que el usuario ha dicho pudiera interpretarse como más de un posible resultado.
     -   La pantalla **Te he oído** o la pantalla de error.
 
 En la pantalla **Escucha** puedes hacer lo siguiente:
 
 -   Personalizar el texto del título.
 -   Proporcionar un texto de ejemplo de lo que el usuario puede decir.
--   Especificar si se muestra la pantalla **Te he oído**.
--   Volver a leer la cadena reconocida al usuario en la pantalla **Te he oído**.
+-   Especificar si se muestra la pantalla **Te he oído** .
+-   Volver a leer la cadena reconocida al usuario en la pantalla **Te he oído** .
 
 Este es un ejemplo del flujo de reconocimiento integrado para un reconocedor de voz que usa una restricción definida por SRGS. En este ejemplo, el reconocimiento de voz es correcto.
 
@@ -209,8 +209,8 @@ Ambos problemas se pueden solucionar mediante el uso de SSML en lugar de texto s
 | [Reconocimiento de voz](speech-recognition.md) | Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas. |
 | [Especificar el idioma del reconocedor de voz](specify-the-speech-recognizer-language.md) | Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz. |
 | [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md) | Aprende a definir y usar restricciones personalizadas para el reconocimiento de voz. |
-| [Habilitar el dictado continuo](enable-continuous-dictation.md) |Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración. |
-| [Administrar los problemas con la entrada de audio](manage-issues-with-audio-input.md) | Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio. |
+| [Habilitar dictado continuo](enable-continuous-dictation.md) |Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración. |
+| [Administrar problemas con la entrada de audio](manage-issues-with-audio-input.md) | Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio. |
 | [Establecer tiempos de espera de reconocimiento de voz](set-speech-recognition-timeouts.md) | Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz. |
 
 ## <a name="related-articles"></a>Artículos relacionados
@@ -218,9 +218,9 @@ Ambos problemas se pueden solucionar mediante el uso de SSML en lugar de texto s
 * [Interacciones de voz]()
 * [Interacciones de Cortana](./cortana-interactions.md)
 
- **Muestras**
+ **Muestras**
 
 * [Muestra de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
- 
+ 
 
- 
+ 

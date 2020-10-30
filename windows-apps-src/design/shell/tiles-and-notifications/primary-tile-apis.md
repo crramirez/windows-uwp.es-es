@@ -1,5 +1,5 @@
 ---
-Description: Puede anclar el icono principal de la aplicación mediante programación para que se inicie, al igual que puede anclar iconos secundarios. También puede comprobar si está anclado actualmente.
+description: Puede anclar el icono principal de la aplicación mediante programación para que se inicie, al igual que puede anclar iconos secundarios. También puede comprobar si está anclado actualmente.
 title: API de iconos principales
 label: Primary tile API's
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP, StartScreenManager, icono principal de PIN, API de iconos principales, comprobar si el icono está anclado, icono dinámico
 ms.localizationpriority: medium
-ms.openlocfilehash: 569ef5de9298a0fb9da58e4aaa88689c35b98c72
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 83cf11d80ffcd03148cbe5e784aaad5836357796
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172349"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029698"
 ---
 # <a name="primary-tile-apis"></a>API de icono principal
  
@@ -20,9 +20,9 @@ ms.locfileid: "89172349"
 Las API de iconos principales permiten comprobar si la aplicación está anclada al inicio y solicitar anclar el icono principal de la aplicación.
 
 > [!IMPORTANT]
-> **Requiere Creators Update**: debe tener como destino el SDK 15063 y ejecutar la compilación 15063 o superior para usar las API del icono principal.
+> **Requiere Creators Update** : debe tener como destino el SDK 15063 y ejecutar la compilación 15063 o superior para usar las API del icono principal.
 
-> **API importantes**: [**clase StartScreenManager**](/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
+> **API importantes** : [**clase StartScreenManager**](/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
 
 
 ## <a name="when-to-use-primary-tile-apis"></a>Cuándo usar las API de iconos principales

@@ -1,17 +1,17 @@
 ---
-Description: Para recibir dinero de las ventas de las aplicaciones en el Microsoft Store, debe configurar la cuenta de pago y rellenar los formularios fiscales necesarios.
+description: Para recibir dinero de las ventas de las aplicaciones en el Microsoft Store, debe configurar la cuenta de pago y rellenar los formularios fiscales necesarios.
 title: Configuración de la cuenta de pago y los formularios de impuestos
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 ms.date: 1/17/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b7f7209d77e05453126f885e37a251e8b6511e95
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 563e8e5df010d869183fb0a3c734eaae521a759e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172879"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030278"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configuración de la cuenta de pago y los formularios de impuestos
 
@@ -47,8 +47,8 @@ Puede completar y enviar los formularios fiscales electrónicamente desde el Cen
 > [!IMPORTANT]
 > Los distintos países y regiones tienen requisitos fiscales diferentes. El importe exacto que debes pagar en impuestos depende de los países y las regiones donde vendas tus aplicaciones. Consulta el [Acuerdo de desarrollador de aplicaciones](/legal/windows/agreements/app-developer-agreement) para conocer en qué países o regiones Microsoft remite ventas e IVA de importación en tu nombre. En otros países o regiones, según el lugar donde te hayas registrado, es posible que debas remitir las ventas y el IVA de importación de tus ventas de aplicaciones directamente a la autoridad fiscal local. Además, los ingresos por ventas de la aplicación que recibe pueden estar sujetos a impuestos como ingresos. Le recomendamos encarecidamente que se ponga en contacto con la autoridad correspondiente de su país o región, que puede ayudarle a determinar la información fiscal adecuada para sus actividades de desarrollador de Microsoft Store.
 
-1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de configuración de la **cuenta** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador**.
-2. En el menú de navegación izquierdo, seleccione **Pago e impuestos** y, a continuación, seleccione **Asignaciones de perfiles fiscales y de pago**.
+1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de configuración de la **cuenta** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador** .
+2. En el menú de navegación izquierdo, seleccione **Pago e impuestos** y, a continuación, seleccione **Asignaciones de perfiles fiscales y de pago** .
 
     ![Asignación de Perfil de pago y de impuestos](images/payout-tax-profile-assignment.png)
 
@@ -56,7 +56,7 @@ Puede completar y enviar los formularios fiscales electrónicamente desde el Cen
 
     ![Pago-seleccionar ID. de vendedor](images/payout-select-seller-id.png)
 
-4. Si desea utilizar un perfil fiscal existente, selecciónelo en la lista desplegable. En caso contrario, seleccione **Crear nuevo perfil** y presione **Enviar**. Accederá a la página de perfiles fiscales.
+4. Si desea utilizar un perfil fiscal existente, selecciónelo en la lista desplegable. En caso contrario, seleccione **Crear nuevo perfil** y presione **Enviar** . Accederá a la página de perfiles fiscales.
 5. Haga clic en el botón **Editar** para editar la información fiscal.
 6. Seleccione el botón de radio adecuado, así como su país si se le solicita. Este paso determina la entidad empresarial de Microsoft que se usará para realizar pagos en su cuenta.
 
@@ -87,8 +87,8 @@ Una cuenta de pago es la cuenta bancaria a la que se envían los ingresos de sus
 
 ### <a name="create-a-payment-profile"></a>Creación de un perfil de pago
 
-1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje **configuración** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador**.
-2. Debajo del encabezado *Pago e impuestos* fiscal, seleccione **Asignación de perfiles fiscales y de pago**.
+1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje **configuración** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador** .
+2. Debajo del encabezado *Pago e impuestos* fiscal, seleccione **Asignación de perfiles fiscales y de pago** .
 
     > [!NOTE]
     > Dado que esta información es confidencial, es posible que se le pida que inicie sesión de nuevo.
@@ -115,7 +115,7 @@ Si ha elegido usar una cuenta bancaria para recibir pagos, deberá completar el 
     ![Información del Banco de pago](images/payout-bank-info.png)
 
 3. Proporcione los detalles del beneficiario.
-4. De nuevo en la página de *asignación de perfil*, seleccione la moneda que desea usar cuando emita sus pagos.
+4. De nuevo en la página de *asignación de perfil* , seleccione la moneda que desea usar cuando emita sus pagos.
 
     > [!WARNING]
     > Asegúrese de que el banco acepte la moneda de pago que seleccione.
@@ -127,11 +127,11 @@ Si ha elegido usar una cuenta bancaria para recibir pagos, deberá completar el 
 6. Haga clic en Enviar para guardar los cambios.
 
 > [!NOTE]
-> Microsoft puede tardar hasta 48 horas en validar la información de su perfil. Cuando se complete este proceso, *Estado de la comprobación* mostrará **Completado**.
+> Microsoft puede tardar hasta 48 horas en validar la información de su perfil. Cuando se complete este proceso, *Estado de la comprobación* mostrará **Completado** .
 
 Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
 
-- El **nombre del titular de la cuenta** especificado para su cuenta de pago en el Centro de partners debe ser exactamente el mismo nombre asociado a su cuenta bancaria. Por ejemplo, si el nombre de la cuenta bancaria contiene un segundo nombre, agregue este segundo nombre al **nombre del titular de la cuenta**.
+- El **nombre del titular de la cuenta** especificado para su cuenta de pago en el Centro de partners debe ser exactamente el mismo nombre asociado a su cuenta bancaria. Por ejemplo, si el nombre de la cuenta bancaria contiene un segundo nombre, agregue este segundo nombre al **nombre del titular de la cuenta** .
 - Los pagos se transfieren directamente de Microsoft a su cuenta bancaria en moneda USD.
 - La información bancaria introducida en el Centro de partners en caracteres latinos se traduce en caracteres cirílicos.
 
@@ -139,8 +139,8 @@ Para garantizar que el pago se realiza correctamente, ten en cuenta los siguient
 
 Puede editar los perfiles de pago existentes si necesita realizar cambios o corregir cualquier información incorrecta.
 
-1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje **configuración** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador**.
-2. Debajo del encabezado *Pago e impuestos* fiscal, seleccione **Perfiles fiscales y de pago**.
+1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje **configuración** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador** .
+2. Debajo del encabezado *Pago e impuestos* fiscal, seleccione **Perfiles fiscales y de pago** .
 3. Los perfiles de pago se mostrarán junto con su estado. Busque el perfil que desea editar y haga clic en **Editar** en el extremo derecho.
 
 > [!IMPORTANT]
@@ -182,7 +182,7 @@ Si eres un desarrollador que vive en Rusia, puede que tengas que proporcionar do
 
 Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
 
-- El **nombre del titular de la cuenta** especificado para su cuenta de pago en el Centro de partners debe ser exactamente el mismo nombre asociado a su cuenta bancaria. Por ejemplo, si el nombre de la cuenta bancaria contiene un segundo nombre, agregue este segundo nombre al **nombre del titular de la cuenta**.
+- El **nombre del titular de la cuenta** especificado para su cuenta de pago en el Centro de partners debe ser exactamente el mismo nombre asociado a su cuenta bancaria. Por ejemplo, si el nombre de la cuenta bancaria contiene un segundo nombre, agregue este segundo nombre al **nombre del titular de la cuenta** .
 - Los pagos se transfieren directamente de Microsoft a su cuenta bancaria en rublos (RUB).
 - La información bancaria introducida en el Centro de partners en caracteres latinos se traduce en caracteres cirílicos.
 - Los pagos deben realizarse en una cuenta bancaria y no en una tarjeta bancaria.
@@ -201,7 +201,7 @@ Microsoft proporciona los tres documentos cuando se va a realizar el primer pago
 
 Si ha elegido usar una cuenta bancaria para recibir pagos, deberá completar el siguiente proceso para configurar su cuenta.
 
-1. En la página de *PayPal*, proporcione la información necesaria sobre su cuenta de PayPal.
+1. En la página de *PayPal* , proporcione la información necesaria sobre su cuenta de PayPal.
 2. Proporcione los detalles de su cuenta de PayPal.
 
     > [!NOTE]
@@ -210,6 +210,6 @@ Si ha elegido usar una cuenta bancaria para recibir pagos, deberá completar el 
     ![Información de pago de PayPal](images/payout-paypal-info.png)
 
 3. Proporcione los detalles del beneficiario.
-4. De nuevo en la página de *asignación de perfil*, seleccione la moneda que desea usar cuando emita sus pagos.
+4. De nuevo en la página de *asignación de perfil* , seleccione la moneda que desea usar cuando emita sus pagos.
 5. Tendrá que seleccionar un perfil de pago para cada programa en el que participe, aunque puede usar el mismo perfil para varios programas.
 6. Haga clic en Enviar para guardar los cambios.

@@ -1,5 +1,5 @@
 ---
-Description: Las animaciones de transición de contenido permiten cambiar el contenido de un área de la pantalla sin cambiar ni el contenedor ni el fondo. El nuevo contenido hace un fundido de entrada. Si hay contenido existente para sustituir, el contenido realiza un fundido de salida.
+description: Las animaciones de transición de contenido permiten cambiar el contenido de un área de la pantalla sin cambiar ni el contenedor ni el fondo. El nuevo contenido hace un fundido de entrada. Si hay contenido existente para sustituir, el contenido realiza un fundido de salida.
 title: Directrices para animaciones de transición de contenido
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 template: detail.hbs
@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d498c3214effd64895c6a894802a9ccc82ff357
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ed70a100b4aec7a2c1490cfc48e4d2f6ceac950e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169269"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029788"
 ---
 # <a name="content-transition-animations"></a>Animaciones de transición de contenido
 
@@ -23,7 +23,7 @@ ms.locfileid: "89169269"
 
 Las animaciones de transición de contenido permiten cambiar el contenido de un área de la pantalla sin cambiar ni el contenedor ni el fondo. El nuevo contenido hace un fundido de entrada. Si hay contenido existente para sustituir, el contenido realiza un fundido de salida.
 
-> **API importantes**: [ **clase ContentThemeTransition (XAML)**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
+> **API importantes** : [ **clase ContentThemeTransition (XAML)**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
@@ -41,11 +41,11 @@ Las animaciones de transición de contenido permiten cambiar el contenido de un 
 ## <a name="related-articles"></a>Artículos relacionados
 
 **Para desarrolladores (XAML)**
-* [Introducción a las animaciones](./xaml-animation.md)
+* [Información general sobre animaciones](./xaml-animation.md)
 * [Animación de transiciones de contenido](/previous-versions/windows/apps/jj649426(v=win.10))
 * [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](/previous-versions/windows/apps/hh452703(v=win.10))
 * [**Clase ContentThemeTransition**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
- 
+ 
 
- 
+ 

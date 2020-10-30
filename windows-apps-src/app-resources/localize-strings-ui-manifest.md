@@ -1,5 +1,5 @@
 ---
-Description: Si quieres que tu aplicación admita diferentes idiomas de pantalla y tenga literales de cadena en el código, o bien marcado XAML o manifiesto de paquete de la aplicación, mueve esas cadenas a un archivo de recursos (.resw). A continuación, puedes hacer una copia traducida de ese archivo de recursos para cada idioma que admita la aplicación.
+description: Si quieres que tu aplicación admita diferentes idiomas de pantalla y tenga literales de cadena en el código, o bien marcado XAML o manifiesto de paquete de la aplicación, mueve esas cadenas a un archivo de recursos (.resw). A continuación, puedes hacer una copia traducida de ese archivo de recursos para cada idioma que admita la aplicación.
 title: Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Localize strings in your UI and app package manifest
@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 411ecb63189084ba83f9971ded2bbe02d899aabd
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 63e88322c7a85bba1ca1a4ff8ff5f2186c4da9f8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762866"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031838"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 
@@ -21,7 +21,7 @@ Para más información sobre la propuesta de valor de localizar la aplicación, 
 
 Si quieres que tu aplicación admita diferentes idiomas de pantalla y tenga literales de cadena en el código, o bien marcado XAML o manifiesto de paquete de la aplicación, mueve esas cadenas a un archivo de recursos (.resw). A continuación, puedes hacer una copia traducida de ese archivo de recursos para cada idioma que admita la aplicación.
 
-Los literales de cadena codificados de forma rígida pueden aparecer en código imperativo o en marcado XAML, por ejemplo, como la propiedad **Text** de un **TextBlock**. También pueden aparecer en el archivo de origen del manifiesto del paquete de la aplicación (el `Package.appxmanifest` archivo), por ejemplo, como el valor de nombre para mostrar en la pestaña aplicación del diseñador de manifiestos de Visual Studio. Mueva estas cadenas a un archivo de recursos (. resw) y reemplace los literales de cadena codificados de la aplicación y en el manifiesto por referencias a los identificadores de recursos.
+Los literales de cadena codificados de forma rígida pueden aparecer en código imperativo o en marcado XAML, por ejemplo, como la propiedad **Text** de un **TextBlock** . También pueden aparecer en el archivo de origen del manifiesto del paquete de la aplicación (el `Package.appxmanifest` archivo), por ejemplo, como el valor de nombre para mostrar en la pestaña aplicación del diseñador de manifiestos de Visual Studio. Mueva estas cadenas a un archivo de recursos (. resw) y reemplace los literales de cadena codificados de la aplicación y en el manifiesto por referencias a los identificadores de recursos.
 
 A diferencia de los recursos de imagen, donde solo un recurso de imagen está contenido en un archivo de recursos de imagen, *varios* recursos de cadena se encuentran en un archivo de recursos de cadena. Un archivo de recursos de cadena es un archivo de recursos (. resw) y normalmente se crea este tipo de archivo de recursos en una carpeta \Strings del proyecto. Para obtener información sobre cómo usar calificadores en los nombres de los archivos de recursos (. resw), consulte [adaptar los recursos para el idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md).
 
@@ -30,12 +30,12 @@ A diferencia de los recursos de imagen, donde solo un recurso de imagen está co
 1. Establezca el idioma predeterminado de la aplicación.
     1. Con la solución abierta en Visual Studio, Abra `Package.appxmanifest` .
     2. En la pestaña aplicación, confirme que el idioma predeterminado está establecido correctamente (por ejemplo, "en" o "en-US"). En los pasos restantes se supone que ha establecido el idioma predeterminado en "en-US".
-    <br>**Nota:**   Como mínimo, debe proporcionar recursos de cadena localizados para este idioma predeterminado. Estos son los recursos que se cargarán si no se encuentra ninguna coincidencia mejor para la configuración del idioma preferido del usuario o del idioma de la pantalla.
+    <br>**Nota:** Como mínimo, debe proporcionar recursos de cadena localizados para este idioma predeterminado. Estos son los recursos que se cargarán si no se encuentra ninguna coincidencia mejor para la configuración del idioma preferido del usuario o del idioma de la pantalla.
 2. Cree un archivo de recursos (. resw) para el idioma predeterminado.
     1. En el nodo del proyecto, cree una nueva carpeta y asígnele el nombre "strings".
     2. En `Strings` , cree una nueva subcarpeta y asígnele el nombre "en-US".
     3. En `en-US` , cree un nuevo archivo de recursos (. resw) y confirme que se llama "Resources. resw".
-    <br>**Nota:**   Si tiene archivos de recursos de .NET (. resx) que desea migrar, vea [portar XAML y UI](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization).
+    <br>**Nota:** Si tiene archivos de recursos de .NET (. resx) que desea migrar, vea [portar XAML y UI](../porting/wpsl-to-uwp-porting-xaml-and-ui.md#localization-and-globalization).
 3. Abra `Resources.resw` y agregue estos recursos de cadena.
 
     `Strings/en-US/Resources.resw`
@@ -56,13 +56,13 @@ Una [Directiva x:UID](../xaml-platform/x-uid-directive.md) se usa para asociar u
 <TextBlock x:Uid="Greeting"/>
 ```
 
-En tiempo de ejecución, `\Strings\en-US\Resources.resw` se carga (ya que ahora es el único archivo de recursos del proyecto). La directiva **x:UID** en el **TextBlock** hace que se produzca una búsqueda, para buscar los identificadores de propiedad dentro `Resources.resw` de que contienen el identificador de recurso de cadena "GREETING". Los identificadores de propiedad "GREETING. Text" y "GREETING. width" se encuentran y sus valores se aplican al **TextBlock**, invalidando los valores establecidos localmente en el marcado. También se aplicaría el valor "GREETING. Foreground", si lo agregó. Pero solo se usan identificadores de propiedad para establecer propiedades en elementos de marcado XAML, por lo que establecer **x:UID** en "despedida" en este TextBlock no tendría ningún efecto. `Resources.resw`*contiene el* identificador de recursos de cadena "despedida", pero no contiene ningún identificador de propiedad.
+En tiempo de ejecución, `\Strings\en-US\Resources.resw` se carga (ya que ahora es el único archivo de recursos del proyecto). La directiva **x:UID** en el **TextBlock** hace que se produzca una búsqueda, para buscar los identificadores de propiedad dentro `Resources.resw` de que contienen el identificador de recurso de cadena "GREETING". Los identificadores de propiedad "GREETING. Text" y "GREETING. width" se encuentran y sus valores se aplican al **TextBlock** , invalidando los valores establecidos localmente en el marcado. También se aplicaría el valor "GREETING. Foreground", si lo agregó. Pero solo se usan identificadores de propiedad para establecer propiedades en elementos de marcado XAML, por lo que establecer **x:UID** en "despedida" en este TextBlock no tendría ningún efecto. `Resources.resw`*contiene el* identificador de recursos de cadena "despedida", pero no contiene ningún identificador de propiedad.
 
-Al asignar un identificador de recurso de cadena a un elemento XAML, asegúrese de que *todos* los identificadores de propiedad de ese identificador sean adecuados para el elemento XAML. Por ejemplo, si establece `x:Uid="Greeting"` en un **TextBlock** , "GREETING. Text" se resolverá porque el tipo **TextBlock** tiene una propiedad Text. Pero si se establece `x:Uid="Greeting"` en un **botón** , "GREETING. Text" producirá un error en tiempo de ejecución porque el tipo de **botón** no tiene una propiedad Text. Una solución para ese caso es crear un identificador de propiedad denominado "ButtonGreeting. Content" y establecerlo `x:Uid="ButtonGreeting"` en el **botón**.
+Al asignar un identificador de recurso de cadena a un elemento XAML, asegúrese de que *todos* los identificadores de propiedad de ese identificador sean adecuados para el elemento XAML. Por ejemplo, si establece `x:Uid="Greeting"` en un **TextBlock** , "GREETING. Text" se resolverá porque el tipo **TextBlock** tiene una propiedad Text. Pero si se establece `x:Uid="Greeting"` en un **botón** , "GREETING. Text" producirá un error en tiempo de ejecución porque el tipo de **botón** no tiene una propiedad Text. Una solución para ese caso es crear un identificador de propiedad denominado "ButtonGreeting. Content" y establecerlo `x:Uid="ButtonGreeting"` en el **botón** .
 
 En lugar de establecer el **ancho** de un archivo de recursos, es probable que desee permitir que los controles se ajusten dinámicamente al contenido.
 
-**Nota:**   En el caso de [las propiedades adjuntas](../xaml-platform/attached-properties-overview.md), necesita una sintaxis especial en la columna Nombre de un archivo. resw. Por ejemplo, para establecer un valor para la propiedad adjunta [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) para el identificador de "saludo", esto es lo que escribiría en la columna nombre.
+**Nota:** En el caso de [las propiedades adjuntas](../xaml-platform/attached-properties-overview.md), necesita una sintaxis especial en la columna Nombre de un archivo. resw. Por ejemplo, para establecer un valor para la propiedad adjunta [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties.NameProperty) para el identificador de "saludo", esto es lo que escribiría en la columna nombre.
 
 ```xml
 Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
@@ -73,7 +73,7 @@ Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 Puede cargar explícitamente un recurso de cadena basándose en un identificador de recurso de cadena simple.
 
 > [!NOTE]
-> Si tiene una llamada a cualquier método **GetForCurrentView** que se *pueda* ejecutar en un subproceso de trabajo o de fondo, proteja esa llamada con una `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` prueba. La llamada a **GetForCurrentView** desde un subproceso de trabajo o en segundo plano produce la excepción "* &lt; &gt; no se puede crear TypeName en subprocesos que no tienen un CoreWindow".*
+> Si tiene una llamada a cualquier método **GetForCurrentView** que se *pueda* ejecutar en un subproceso de trabajo o de fondo, proteja esa llamada con una `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` prueba. La llamada a **GetForCurrentView** desde un subproceso de trabajo o en segundo plano produce la excepción " *&lt; &gt; no se puede crear TypeName en subprocesos que no tienen un CoreWindow".*
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
@@ -122,7 +122,7 @@ En caso de duda, puede usar [MakePri.exe](makepri-exe-command-options.md) para v
 
 1. Haga una copia del archivo de recursos (. resw) para otro idioma.
     1. En "cadenas", cree una nueva subcarpeta y asígnele el nombre "de-DE" para Deutsch (Deutschland).
-   <br>**Nota:**   En el nombre de la carpeta, puede usar cualquier [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47). Consulte [adaptar los recursos para el idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md) para obtener más información sobre el calificador de idioma y una lista de etiquetas de lenguaje común.
+   <br>**Nota:** En el nombre de la carpeta, puede usar cualquier [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47). Consulte [adaptar los recursos para el idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md) para obtener más información sobre el calificador de idioma y una lista de etiquetas de lenguaje común.
    2. Haga una copia de `Strings/en-US/Resources.resw` en la `Strings/de-DE` carpeta.
 2. Traduzca las cadenas.
     1. Abra `Strings/de-DE/Resources.resw` y traduzca los valores de la columna valor. No es necesario traducir los comentarios.
@@ -160,7 +160,7 @@ Solo tiene que agregar `/<resources-file-name>/` antes del identificador de recu
 En el ejemplo de código siguiente se da por supuesto que `ErrorMessages.resw` contiene un recurso cuyo nombre es "MismatchedPasswords" y cuyo valor describe el error.
 
 > [!NOTE]
-> Si tiene una llamada a cualquier método **GetForCurrentView** que se *pueda* ejecutar en un subproceso de trabajo o de fondo, proteja esa llamada con una `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` prueba. La llamada a **GetForCurrentView** desde un subproceso de trabajo o en segundo plano produce la excepción "* &lt; &gt; no se puede crear TypeName en subprocesos que no tienen un CoreWindow".*
+> Si tiene una llamada a cualquier método **GetForCurrentView** que se *pueda* ejecutar en un subproceso de trabajo o de fondo, proteja esa llamada con una `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)` prueba. La llamada a **GetForCurrentView** desde un subproceso de trabajo o en segundo plano produce la excepción " *&lt; &gt; no se puede crear TypeName en subprocesos que no tienen un CoreWindow".*
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ErrorMessages");
@@ -212,7 +212,7 @@ El uso de **QualifierValues** como en el ejemplo de código anterior funciona pa
 resourceContext.Languages = new string[] { "de-DE" };
 ```
 
-Para el mismo efecto en un nivel global, *puede* invalidar los valores de calificador en el valor predeterminado de **ResourceContext**. Pero en su lugar, se recomienda llamar a [**ResourceContext. SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_). Los valores se establecen una vez con una llamada a **SetGlobalQualifierValue** y, a continuación, esos valores están en vigor en el **ResourceContext** predeterminado cada vez que se usa para las búsquedas.
+Para el mismo efecto en un nivel global, *puede* invalidar los valores de calificador en el valor predeterminado de **ResourceContext** . Pero en su lugar, se recomienda llamar a [**ResourceContext. SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_). Los valores se establecen una vez con una llamada a **SetGlobalQualifierValue** y, a continuación, esos valores están en vigor en el **ResourceContext** predeterminado cada vez que se usa para las búsquedas.
 
 ```csharp
 Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue("Language", "de-DE");
@@ -228,9 +228,9 @@ Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "de-DE";
 
 ## <a name="updating-strings-in-response-to-qualifier-value-change-events"></a>Actualizar cadenas en respuesta a eventos de cambio de valor de calificador
 
-La aplicación en ejecución puede responder a los cambios en la configuración del sistema que afectan a los valores de calificador en el valor predeterminado de **ResourceContext**. Cualquiera de estas configuraciones del sistema invoca el evento [**MapChanged**](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live) en [**ResourceContext. QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
+La aplicación en ejecución puede responder a los cambios en la configuración del sistema que afectan a los valores de calificador en el valor predeterminado de **ResourceContext** . Cualquiera de estas configuraciones del sistema invoca el evento [**MapChanged**](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live) en [**ResourceContext. QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
 
-En respuesta a este evento, puede volver a cargar las cadenas desde el **ResourceContext**predeterminado.
+En respuesta a este evento, puede volver a cargar las cadenas desde el **ResourceContext** predeterminado.
 
 ```csharp
 public MainPage()
@@ -266,7 +266,7 @@ private void RefreshUIText()
 
 ## <a name="load-strings-from-a-class-library-or-a-windows-runtime-library"></a>Carga de cadenas de una biblioteca de clases o de una biblioteca de Windows Runtime
 
-Los recursos de cadena de una biblioteca de clases a la que se hace referencia (Windows universal) o de la [biblioteca de Windows Runtime (Windows universal)](../winrt-components/index.md) se suelen agregar en una subcarpeta del paquete en el que se incluyen durante el proceso de compilación. El identificador de recurso de una cadena de este tipo suele tomar la forma *nombrebiblioteca/Resources/ResourceIdentifier*.
+Los recursos de cadena de una biblioteca de clases a la que se hace referencia (Windows universal) o de la [biblioteca de Windows Runtime (Windows universal)](../winrt-components/index.md) se suelen agregar en una subcarpeta del paquete en el que se incluyen durante el proceso de compilación. El identificador de recurso de una cadena de este tipo suele tomar la forma *nombrebiblioteca/Resources/ResourceIdentifier* .
 
 Una biblioteca puede obtener un ResourceLoader para sus propios recursos. Por ejemplo, en el código siguiente se muestra cómo una biblioteca o una aplicación que hace referencia a ella puede obtener un ResourceLoader para los recursos de cadena de la biblioteca.
 
@@ -289,7 +289,7 @@ No es necesario hacerlo para una biblioteca de clases (Windows universal). En ca
 
 ## <a name="loading-strings-from-other-packages"></a>Cargar cadenas desde otros paquetes
 
-Los recursos de un paquete de la aplicación se administran y se obtiene acceso a ellos a través del [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) de nivel superior del paquete al que se puede acceder desde el [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)actual. Dentro de cada paquete, varios componentes pueden tener sus propios subárboles de ResourceMap, a los que se puede tener acceso a través de [**ResourceMap. GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
+Los recursos de un paquete de la aplicación se administran y se obtiene acceso a ellos a través del [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) de nivel superior del paquete al que se puede acceder desde el [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)actual. Dentro de cada paquete, varios componentes pueden tener sus propios subárboles de ResourceMap, a los que se puede tener acceso a través de [**ResourceMap. GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live).
 
 Un paquete de Framework puede tener acceso a sus propios recursos con un URI de identificador de recursos absoluto. Vea también [esquemas de URI](uri-schemes.md).
 
@@ -308,7 +308,7 @@ Para usar recursos en aplicaciones no empaquetadas, debe realizar algunas accion
     - &lt;Archivo priconfig &gt; debe contener todos los indizadores relevantes necesarios para combinar todos los recursos del proyecto en un único archivo resources. PRI. El [ archivo de configuración deMakePri.exe](./makepri-exe-configuration.md) predeterminado creado por [createconfig](./makepri-exe-command-options.md#createconfig-command) incluye todos los indizadores.
     - Si no usa la configuración predeterminada, asegúrese de que el indexador PRI está habilitado (Revise la configuración predeterminada para realizar esta tarea) para combinar la consulta de la carpeta de proyecto UWP, las referencias de NuGet, etc., que se encuentran en la raíz del proyecto.
         > [!NOTE]
-        > Al omitir `/IndexName` y el proyecto no tiene un manifiesto de aplicación, el espacio de nombres IndexName/root del archivo PRI se establece automáticamente en la *aplicación*, que el Runtime entiende para las aplicaciones no empaquetadas (esto quita la dependencia fuerte anterior en el identificador del paquete). Al especificar los URI de recurso, las referencias de MS-Resource:///que omiten la *aplicación* espacio de nombres raíz Infer como espacio de nombres raíz para aplicaciones no empaquetadas (o puede especificar la *aplicación* explícitamente como en MS-Resource://Application/).
+        > Al omitir `/IndexName` y el proyecto no tiene un manifiesto de aplicación, el espacio de nombres IndexName/root del archivo PRI se establece automáticamente en la *aplicación* , que el Runtime entiende para las aplicaciones no empaquetadas (esto quita la dependencia fuerte anterior en el identificador del paquete). Al especificar los URI de recurso, las referencias de MS-Resource:///que omiten la *aplicación* espacio de nombres raíz Infer como espacio de nombres raíz para aplicaciones no empaquetadas (o puede especificar la *aplicación* explícitamente como en MS-Resource://Application/).
 1. Copie el archivo PRI en el directorio de salida de la compilación del archivo. exe.
 1. Ejecutar el archivo. exe 
     > [!NOTE]

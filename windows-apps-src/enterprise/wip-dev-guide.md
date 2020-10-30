@@ -1,21 +1,21 @@
 ---
-Description: Esta guía te ayuda a optimizar tu aplicación para controlar los datos de empresa administrados por la directiva de Windows Information Protection (WIP) así como los datos personales.
+description: Esta guía te ayuda a optimizar tu aplicación para controlar los datos de empresa administrados por la directiva de Windows Information Protection (WIP) así como los datos personales.
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Guía del desarrollador de Windows Information Protection (WIP)
+title: 'Guía para desarrolladores sobre Windows Information Protection (WIP) '
 ms.date: 06/21/2017
 ms.topic: article
 keywords: Windows 10, UWP, WIP, Windows Information Protection, datos empresariales, protección de datos empresariales, un
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
-ms.openlocfilehash: d6454fdf63fb757c703ec31dba46a86e2a46aec6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a1afea58fd7fc7c7868103fc9c7a8510f9f81908
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163259"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032068"
 ---
-# <a name="windows-information-protection-wip-developer-guide"></a>Guía del desarrollador de Windows Information Protection (WIP)
+# <a name="windows-information-protection-wip-developer-guide"></a>Guía para desarrolladores sobre Windows Information Protection (WIP) 
 
 Una aplicación *habilitada* diferencia los datos corporativos y personales y sabe cuáles tiene que proteger en función de las directivas de Windows Information Protection (WIP) definidas por el administrador.
 
@@ -82,7 +82,7 @@ Para obtener instrucciones más generales sobre cómo usar esta herramienta, con
     ```xml
        <rescap:Capability Name="enterpriseDataPolicy"/>
     ```
-   >*Lectura opcional*: El prefijo "rescap" significa *Funcionalidad restringida*. Consulta [Funcionalidades especiales y restringidas](../packaging/app-capability-declarations.md).
+   >*Lectura opcional* : El prefijo "rescap" significa *Funcionalidad restringida* . Consulta [Funcionalidades especiales y restringidas](../packaging/app-capability-declarations.md).
 
 4. Agrega este espacio de nombres al archivo de manifiesto del paquete:
 
@@ -334,7 +334,7 @@ private static async Task<IBuffer> GetDataFromNetworkbyUsingHeaderHelperMethod(H
 
 En ocasiones, un servidor web redirigirá el tráfico hacia una versión más actual de un recurso.
 
-Para controlar esto, realiza solicitudes hasta que el estado de la respuesta de la solicitud tiene el valor **Aceptar**.
+Para controlar esto, realiza solicitudes hasta que el estado de la respuesta de la solicitud tiene el valor **Aceptar** .
 
 A continuación, usa el URI de la respuesta para obtener la identidad del punto de conexión. Esta es una forma de hacerlo:
 
@@ -445,7 +445,7 @@ private bool IsClipboardAllowedAsync()
 
 **Impedir a los usuarios que les aparezca un cuadro de diálogo de consentimiento**
 
-Un documento nuevo no es *personal* o *de empresa*. Es simplemente nuevo. Si un usuario pega los datos de empresa en él, Windows aplicará la directiva y se le mostrará al usuario un cuadro de diálogo de consentimiento. Este código impide que eso ocurra. En esta tarea no se trata de proteger los datos. Es más sobre cómo hacer que los usuarios reciban el cuadro de diálogo de consentimiento en los casos donde la aplicación crea un elemento nuevo.
+Un documento nuevo no es *personal* o *de empresa* . Es simplemente nuevo. Si un usuario pega los datos de empresa en él, Windows aplicará la directiva y se le mostrará al usuario un cuadro de diálogo de consentimiento. Este código impide que eso ocurra. En esta tarea no se trata de proteger los datos. Es más sobre cómo hacer que los usuarios reciban el cuadro de diálogo de consentimiento en los casos donde la aplicación crea un elemento nuevo.
 
 ```csharp
 private async void PasteText(bool isNewEmptyDocument)
@@ -489,7 +489,7 @@ private async void PasteText(bool isNewEmptyDocument)
 
 Cuando los empleados elijan tu aplicación para compartir su información, tu aplicación abrirá un nuevo elemento con ese contenido.
 
-Como ya hemos mencionado, un elemento nuevo no es ni *personal* ni *de empresa*. Es simplemente nuevo. Si tu código agrega contenido de empresa a dicho elemento, Windows aplicará la directiva y se le mostrará al usuario un cuadro de diálogo de consentimiento. Este código impide que eso ocurra.
+Como ya hemos mencionado, un elemento nuevo no es ni *personal* ni *de empresa* . Es simplemente nuevo. Si tu código agrega contenido de empresa a dicho elemento, Windows aplicará la directiva y se le mostrará al usuario un cuadro de diálogo de consentimiento. Este código impide que eso ocurra.
 
 ```csharp
 protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)

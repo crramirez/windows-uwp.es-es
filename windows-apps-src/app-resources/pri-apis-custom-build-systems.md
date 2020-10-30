@@ -1,17 +1,17 @@
 ---
-Description: Con las API de indexación de recursos de paquetes (PRI), puedes desarrollar un sistema de compilación personalizado para los recursos de la aplicación para UWP. El sistema de compilación podrá crear, versionar y volcar archivos PRI para cualquier nivel de complejidad que necesite tu aplicación para UWP.
+description: Con las API de indexación de recursos de paquetes (PRI), puedes desarrollar un sistema de compilación personalizado para los recursos de la aplicación para UWP. El sistema de compilación podrá crear, versionar y volcar archivos PRI para cualquier nivel de complejidad que necesite tu aplicación para UWP.
 title: Indexación de recursos de paquetes y sistemas de compilación personalizados
 template: detail.hbs
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 43162f13afd9a658c58d47d83ab71f49bdcfb70e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 84b6a05927e2106df136741a262c3af5ef08a575
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174079"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031668"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>API de indexación de recursos de paquetes (PRI) y sistemas de compilación personalizados
 Con las [API de indexación de recursos de paquetes (PRI)](/windows/desktop/menurc/pri-indexing-reference), puedes desarrollar un sistema de compilación personalizado para los recursos de la aplicación para UWP. El sistema de compilación podrá crear y volcar (como XML) archivos de índice de recursos del paquete (PRI), así como controlar sus versiones, en cualquier nivel de complejidad que necesite la aplicación para UWP. Si tiene un sistema de compilación personalizado que actualmente usa la herramienta de línea de comandos MakePri.exe (consulte [compilar recursos manualmente con MakePri.exe](makepri-exe-command-options.md)), para aumentar el rendimiento y el control, se recomienda cambiar a llamar a las API de PRI en lugar de llamar a MakePri.exe.
@@ -21,7 +21,7 @@ Las API de PRI se introdujeron en el Windows SDK para Windows 10, versión 1803.
 En los escenarios de este tema se muestra cómo llamar a las API de PRI desde un proyecto de aplicación de consola de Windows de Win32 Visual C++. Para obtener información general, consulte [sistema de administración de recursos](resource-management-system.md).
 
 > [!NOTE]
-> No es probable que esta advertencia sea un problema, ya que es probable que no desee enviar la aplicación del sistema de compilación personalizada al Microsoft Store. Sin embargo, si eliges la opción de desarrollar el sistema de compilación personalizado en forma de aplicación de UWP, será una aplicación de UWP inusual en la que no podrás enviarlo al Microsoft Store. Esto se debe a que una aplicación para UWP que usa la invocación de plataforma produce un error Microsoft Store certificación. Tenga en cuenta que, en este caso, las llamadas de invocación *de plataforma solo existirán en el sistema de compilación personalizado*; *no* en la aplicación para UWP de envío (en la que va a crear archivos PRI).
+> No es probable que esta advertencia sea un problema, ya que es probable que no desee enviar la aplicación del sistema de compilación personalizada al Microsoft Store. Sin embargo, si eliges la opción de desarrollar el sistema de compilación personalizado en forma de aplicación de UWP, será una aplicación de UWP inusual en la que no podrás enviarlo al Microsoft Store. Esto se debe a que una aplicación para UWP que usa la invocación de plataforma produce un error Microsoft Store certificación. Tenga en cuenta que, en este caso, las llamadas de invocación *de plataforma solo existirán en el sistema de compilación personalizado* ; *no* en la aplicación para UWP de envío (en la que va a crear archivos PRI).
 
 ## <a name="scenario-walkthroughs"></a>Tutoriales de escenarios
 |Tema|Descripción|

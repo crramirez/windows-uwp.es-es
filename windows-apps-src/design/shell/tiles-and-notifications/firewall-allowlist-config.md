@@ -1,22 +1,22 @@
 ---
-Description: Muchas empresas usan firewalls para bloquear el tráfico no deseado. Este documento describe cómo permitir que el tráfico de WNS pase a través de firewalls.
-title: Agregar tráfico de WNS a la lista de permitidos del firewall
+description: Muchas empresas usan firewalls para bloquear el tráfico no deseado. Este documento describe cómo permitir que el tráfico de WNS pase a través de firewalls.
+title: 'Adición de tráfico de WNS a la lista de permitidos del firewall '
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, servicio de notificaciones de Windows, notificación, Windows, firewall, solución de problemas, IP, tráfico, empresa, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: 4277b46728464630bf478b1f78008e92b4e3fe99
-ms.sourcegitcommit: 41dbee78d827107c224a9136c26f90be4dfe12ad
+ms.openlocfilehash: 6212111770ff61179eabf0f77e109d1a6d2235b3
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845534"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032048"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
-## <a name="background"></a>Fondo
+## <a name="background"></a>Información previa
 Muchas empresas usan firewalls para bloquear el tráfico de red y los puertos no deseados; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
 
 ## <a name="proxy-support"></a>Compatibilidad del proxy
@@ -38,7 +38,7 @@ A continuación se muestra una lista que contiene los FQDN, las VIP y los interv
 
 
 ### <a name="fqdns-vips-ips-and-ports"></a>FQDN, direcciones VIP, direcciones IP y puertos
-Independientemente del método que elija, deberá permitir el tráfico de red a los destinos enumerados a través del **puerto 443**. Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa desde el centro de descarga: [VIP e intervalos IP de servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después de cargarse**.
+Independientemente del método que elija, deberá permitir el tráfico de red a los destinos enumerados a través del **puerto 443** . Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa desde el centro de descarga: [VIP e intervalos IP de servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después de cargarse** .
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -73,9 +73,9 @@ A continuación se muestran explicaciones sobre las notaciones y los elementos u
 | Término | Explicación |
 |---|---|
 | **Notación de punto-decimal (es decir, 64.4.28.0/26)** | La notación punto-decimal es una manera de describir el intervalo de direcciones IP. Por ejemplo, 64.4.28.0/26 significa que los primeros 26 bits de 64.4.28.0 son constantes, mientras que los últimos 6 bits son variables.  En este caso, el intervalo IPv4 es 64.4.28.0-64.4.28.63. |
-| **ClientDNS** | Estos son los filtros de nombre de dominio completo (FQDN) para los dispositivos cliente (PC de Windows, equipos de escritorio) que reciben notificaciones de WNS. Deben permitirse a través del firewall para que los clientes de WNS usen la funcionalidad de WNS.  Se recomienda permitir la lista de los FQDN en lugar de los intervalos IP/VIP, ya que nunca cambiarán. |
+| **ClientDNS** | Estos son los filtros de nombre de dominio de Fully-Qualified (FQDN) para los dispositivos cliente (PC de Windows, equipos de escritorio) que reciben notificaciones de WNS. Deben permitirse a través del firewall para que los clientes de WNS usen la funcionalidad de WNS.  Se recomienda permitir la lista de los FQDN en lugar de los intervalos IP/VIP, ya que nunca cambiarán. |
 | **ClientIPsIPv4** | Estas son las direcciones IPv4 de los servidores a los que tienen acceso los dispositivos cliente (PC de Windows, equipos de escritorio) que reciben notificaciones de WNS. |
-| **CloudServiceDNS** | Estos son los filtros de nombre de dominio completo (FQDN) de los servidores WNS a los que se comunicará el servicio en la nube para enviar notificatios a WNS. Deben permitirse a través del firewall para que los servicios envíen notificaciones WNS.  Se recomienda permitir la lista de los FQDN en lugar de los intervalos IP/VIP, ya que nunca cambiarán.|
+| **CloudServiceDNS** | Estos son los filtros de nombre de dominio de Fully-Qualified (FQDN) de los servidores WNS a los que se comunicará el servicio en la nube para enviar notificatios a WNS. Deben permitirse a través del firewall para que los servicios envíen notificaciones WNS.  Se recomienda permitir la lista de los FQDN en lugar de los intervalos IP/VIP, ya que nunca cambiarán.|
 | **CloudServiceIPs** | CloudServiceIPs son las direcciones IPv4 de los servidores que se usan para que los servicios en la nube envíen notificaciones a WNS.  |
 
 
@@ -91,4 +91,4 @@ Si usa el servicio de notificación heredado, MPNS, los intervalos de direccione
 * [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](/previous-versions/windows/apps/hh465407(v=win.10))
 * [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](/previous-versions/windows/apps/hh465435(v=win.10))
 * [Directrices y lista de comprobación de notificaciones de inserción](./windows-push-notification-services--wns--overview.md)
- 
+ 

@@ -1,5 +1,5 @@
 ---
-Description: Desarrolle un editor de métodos de entrada (IME) personalizado para ayudar al usuario a escribir texto en un idioma que no se pueda representar fácilmente en un teclado QWERTY estándar.
+description: Desarrolle un editor de métodos de entrada (IME) personalizado para ayudar al usuario a escribir texto en un idioma que no se pueda representar fácilmente en un teclado QWERTY estándar.
 title: Requisitos del editor de métodos de entrada (IME)
 label: Input Method Editor (IME) requirements
 template: detail.hbs
@@ -7,12 +7,12 @@ keywords: IME, editor de métodos de entrada, entrada, interacción
 ms.date: 07/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a34c15826bff757b7c4277b87cc5fed53a6f109
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 74c223aefa525bb6109521c8b91a9a849e2f5586
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160009"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030138"
 ---
 # <a name="custom-input-method-editor-ime-requirements"></a>Requisitos del editor de métodos de entrada (IME) personalizados
 
@@ -22,13 +22,13 @@ Para obtener información general sobre los IME, consulte [Editor de métodos de
 
 ## <a name="default-ime"></a>IME predeterminado
 
-Un usuario puede seleccionar cualquiera de sus IME activos (**configuración-> tiempo & idioma > Language-> idiomas preferidos-> paquete de idioma-opciones**) para que sea el IME predeterminado para su idioma preferido.
+Un usuario puede seleccionar cualquiera de sus IME activos ( **configuración-> tiempo & idioma > Language-> idiomas preferidos-> paquete de idioma-opciones** ) para que sea el IME predeterminado para su idioma preferido.
 
 :::image type="content" source="images/IMEs/ime-preferred-languages.png" alt-text="Configuración de idioma preferido":::
 
 Seleccione el teclado predeterminado en la pantalla de configuración de opciones de idioma para el idioma preferido.
 
-:::image type="content" source="images/IMEs/ime-preferred-languages-keyboard.png" alt-text="Teclado de idioma preferido":::
+:::image type="content" source="images/IMEs/ime-preferred-languages-keyboard.png" alt-text="Configuración de idioma preferido":::
 
 > [!Important]
 > No se recomienda escribir directamente en el registro para establecer el teclado predeterminado para el IME personalizado.
@@ -147,37 +147,7 @@ if (ToUnicode(VK_PACKET, 0, abKbdState, &wch, 1, 0) == 1)
 
 Proporcione a los usuarios características de búsqueda a través del contrato de búsqueda y la integración con el panel de búsqueda.
 
-:::image type="content" source="images/IMEs/ime-search-pane.png" alt-text="Panel de búsqueda y sugerencias de IME":::<br/>
-*Panel de búsqueda y sugerencias de IME*
-
-El panel de búsqueda es una ubicación central para que los usuarios realicen búsquedas en todas sus aplicaciones. En el caso de los usuarios de IME, Windows proporciona una experiencia de búsqueda única que permite que los IMEs compatibles se integren con Windows para mayor eficacia y facilidad de uso.
-
-Los usuarios que escriben con un IME compatible con Search obtienen dos ventajas principales:
-
-- Interacción fluida entre el IME y la experiencia de búsqueda. Los candidatos de IME se muestran en línea bajo el cuadro de búsqueda sin las sugerencias de búsqueda de occluding. El usuario puede usar el teclado para navegar sin problemas entre el cuadro de búsqueda, los candidatos para la conversión del IME y las sugerencias de búsqueda.
-- Acceso más rápido a los resultados y sugerencias relevantes proporcionados por las aplicaciones. La aplicación tiene acceso a todos los candidatos de conversión actuales para proporcionar sugerencias más relevantes. Para priorizar mejor las sugerencias de búsqueda, se proporcionan conversiones a las aplicaciones en orden de relevancia. Los usuarios buscan y seleccionan el resultado que desean sin convertir, simplemente escribiendo en fonética.
-
-Un IME es compatible con la experiencia de búsqueda integrada si cumple los siguientes criterios:
-
-- Compatible con el shell de estilo de Windows.
-- Implemente las API de modo UILess de TSF. Para obtener más información, vea [información general sobre el modo UILess](/windows/win32/tsf/uiless-mode-overview).
-- Implemente las API de integración de búsqueda de TSF, [ITfFnSearchCandidateProvider](/windows/win32/api/ctffunc/nn-ctffunc-itffnsearchcandidateprovider) y [ITfIntegratableCandidateListUIElement](/windows/win32/api/ctffunc/nn-ctffunc-itfintegratablecandidatelistuielement).
-
-Cuando se activa en el panel de búsqueda, se coloca un IME compatible en modo UIless y no se puede mostrar su interfaz de usuario. En su lugar, envía candidatos de conversión a Windows, que los muestra en el control de lista de candidatos en línea, tal como se muestra en la captura de pantalla anterior.
-
-Además, el IME envía candidatos que deben usarse para ejecutar la búsqueda actual. Estos candidatos podrían ser los mismos que los candidatos de conversión, o bien se pueden personalizar para la búsqueda.
-
-Los buenos candidatos de búsqueda cumplen los criterios siguientes:
-
-- Sin superposición de prefijo. Por ejemplo, 北京大学 and北京 son redundantes porque uno es un prefijo del otro.
-- Sin candidatos redundantes. Cualquier candidato redundante no es útil para la búsqueda porque no ayuda a filtrar los resultados. Por ejemplo, cualquier resultado que coincida con 北京大学 también coincide con 北京.
-- Ningún candidato de predicción, solo conversión. Por ejemplo, si el usuario escribe "es", el IME puede devolver 北 como candidato, pero no 北京大学. Normalmente, los candidatos de predicción son demasiado restrictivos.
-
-Los IME que no cumplen los criterios no son compatibles con la presentación de la búsqueda de la misma manera que otros controles y no pueden aprovechar las ventajas de la integración de la interfaz de usuario y los candidatos de búsqueda. Las aplicaciones reciben consultas solo después de que el usuario haya terminado de redactarse.
-
-Cuando una aplicación que admite el contrato de búsqueda recibe una consulta, el evento de consulta contiene una matriz "queryTextAlternatives" que contiene todas las alternativas conocidas, clasificadas desde el más relevante (probablemente) hasta el menos relevante (improbable).
-
-Cuando se proporcionan alternativas, la aplicación debe tratar cada alternativa como una consulta y devolver todos los resultados que coincidan con cualquiera de las alternativas. La aplicación debe comportarse como si el usuario hubiera emitido varias consultas al mismo tiempo, en esencia emitir una consulta "or" para el servicio que proporciona los resultados. Por motivos de rendimiento, las aplicaciones a menudo limitan la coincidencia entre 5 y 20 de las alternativas más relevantes.
+:::image type="content" source="images/IMEs/ime-search-pane.png" alt-text="Configuración de idioma preferido" para el servicio que proporciona los resultados. Por motivos de rendimiento, las aplicaciones a menudo limitan la coincidencia entre 5 y 20 de las alternativas más relevantes.
 
 ## <a name="ui-design-guidelines"></a>Directrices de diseño de la interfaz de usuario
 
@@ -208,9 +178,9 @@ Los iconos del modo IME se definen mediante un glifo tipográfico blanco en un t
 
 | Icono | Descripción |
 | --- | --- |
-| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese.png" alt-text="Ejemplo de icono de marca IME para chino tradicional ChangeJie."::: | Ejemplo de icono de marca IME para chino tradicional ChangeJie. |
-| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese-new.png" alt-text="Ejemplo de icono de marca IME para chino tradicional nuevo ChangeJie."::: | Ejemplo de icono de marca IME para chino tradicional ChangeJie. |
-| :::image type="content" source="images/IMEs/ime-mode-icon-chinese.png" alt-text="Icono de modo chino"::: | Icono de modo IME de ejemplo. |
+| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese.png" alt-text="Configuración de idioma preferido"::: | Ejemplo de icono de marca IME para chino tradicional ChangeJie. |
+| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese-new.png" alt-text="Configuración de idioma preferido"::: | Ejemplo de icono de marca IME para chino tradicional ChangeJie. |
+| :::image type="content" source="images/IMEs/ime-mode-icon-chinese.png" alt-text="Configuración de idioma preferido"::: | Icono de modo IME de ejemplo. |
 
 ### <a name="owned-window"></a>Ventana propiedad
 
@@ -257,22 +227,22 @@ En los pasos siguientes se muestra cómo usar InstallShield para crear un proyec
 
 - Instale Visual Studio.
 - Inicie Visual Studio.
-- En el menú **archivo** , elija **nuevo** y seleccione **proyecto**. Se abrirá el cuadro de diálogo **nuevo proyecto** .
-- En el panel izquierdo, vaya a **plantillas > otros tipos de proyectos > instalación e implementación**, haga clic en **Habilitar InstallShield Limited Edition**y, a continuación, haga clic en **Aceptar**. Siga las instrucciones de instalación.
+- En el menú **archivo** , elija **nuevo** y seleccione **proyecto** . Se abre el cuadro de diálogo **Nuevo proyecto** .
+- En el panel izquierdo, vaya a **plantillas > otros tipos de proyectos > instalación e implementación** , haga clic en **Habilitar InstallShield Limited Edition** y, a continuación, haga clic en **Aceptar** . Siga las instrucciones de instalación.
 - Reinicie Visual Studio.
 - Abra el archivo de solución de IME (. sln).
-- En Explorador de soluciones, haga clic con el botón secundario en la solución, seleccione **Agregar**y, a continuación, seleccione **nuevo proyecto**. Se abre el cuadro de diálogo **Agregar nuevo proyecto** .
-- En el control de vista de árbol izquierdo, vaya a **plantillas > otros tipos de proyectos > InstallShield Limited Edition**.
-- En la ventana central, haga clic en **proyecto de InstallShield Limited Edition**.
-- En el cuadro de texto **nombre** , escriba "SetupIME" y haga clic en **Aceptar**.
-- En el cuadro de diálogo **Asistente para proyectos** , haga clic en información de la **aplicación**.
+- En Explorador de soluciones, haga clic con el botón secundario en la solución, seleccione **Agregar** y, a continuación, seleccione **nuevo proyecto** . Se abre el cuadro de diálogo **Agregar nuevo proyecto** .
+- En el control de vista de árbol izquierdo, vaya a **plantillas > otros tipos de proyectos > InstallShield Limited Edition** .
+- En la ventana central, haga clic en **proyecto de InstallShield Limited Edition** .
+- En el cuadro de texto **nombre** , escriba "SetupIME" y haga clic en **Aceptar** .
+- En el cuadro de diálogo **Asistente para proyectos** , haga clic en información de la **aplicación** .
 - Rellene el nombre de la empresa y los demás campos.
-- Haga clic en **archivos de aplicación**.
-- En el panel izquierdo, haga clic con el botón secundario en la carpeta **[INSTALLDIR]** y seleccione **nueva carpeta**. Asigne a la carpeta el nombre "plugins".
-- Haga clic en **Agregar archivos**. Desplácese hasta el archivo DLL de IME y agréguelo a la carpeta **plugins** . Repita este paso para el Diccionario IME.
-- Haga clic con el botón secundario en el archivo DLL de IME y seleccione **propiedades**. Se abrirá el cuadro de diálogo **propiedades** .
+- Haga clic en **archivos de aplicación** .
+- En el panel izquierdo, haga clic con el botón secundario en la carpeta **[INSTALLDIR]** y seleccione **nueva carpeta** . Asigne a la carpeta el nombre "plugins".
+- Haga clic en **Agregar archivos** . Desplácese hasta el archivo DLL de IME y agréguelo a la carpeta **plugins** . Repita este paso para el Diccionario IME.
+- Haga clic con el botón secundario en el archivo DLL de IME y seleccione **propiedades** . Se abrirá el cuadro de diálogo **propiedades** .
 - En el cuadro de diálogo **propiedades** , haga clic en la pestaña **configuración de com & .net** .
-- En **tipo de registro**, seleccione **auto-registro** y haga clic en **Aceptar**.
+- En **tipo de registro** , seleccione **auto-registro** y haga clic en **Aceptar** .
 - Compile la solución. La DLL de IME se compila y InstallShield crea un archivo setup.exe que permite a los usuarios instalar el IME en Windows.
 
 Para crear su propia experiencia de instalación, llame al método [ITfInputProcessorProfileMgr:: RegisterProfile](/windows/win32/api/msctf/nf-msctf-itfinputprocessorprofilemgr-registerprofile) para registrar el IME durante la instalación. No escriba directamente entradas del registro.
@@ -286,9 +256,9 @@ Si el IME debe ser utilizable inmediatamente después de la instalación, llame 
 Implemente la Convención siguiente para que sus IME cumplan los requisitos de accesibilidad y para trabajar con el narrador. Para que se pueda acceder a las listas de candidatos, los IME deben seguir esta Convención.
 
 - La lista de candidatos debe tener un **UIA_AutomationIdPropertyId** igual a "IME_Candidate_Window" para las listas de candidatos de conversión o "IME_Prediction_Window" para las listas de candidatos de predicción.
-- Cuando aparece y desaparece la lista de candidatos, genera eventos de tipo **UIA_MenuOpenedEventId** y **UIA_MenuClosedEventId**, respectivamente.
-- Cuando cambia el candidato seleccionado actualmente, la lista de candidatos genera una **UIA_SelectionItem_ElementSelectedEventId**. El elemento seleccionado debe tener una propiedad **UIA_SelectionItemIsSelectedPropertyId** igual a **true**.
-- El **UIA_NamePropertyId** de cada elemento de la lista de candidatos debe ser el nombre del candidato. Opcionalmente, puede proporcionar información adicional para eliminar la ambigüedad de los candidatos a través de **UIA_HelpTextPropertyId**.
+- Cuando aparece y desaparece la lista de candidatos, genera eventos de tipo **UIA_MenuOpenedEventId** y **UIA_MenuClosedEventId** , respectivamente.
+- Cuando cambia el candidato seleccionado actualmente, la lista de candidatos genera una **UIA_SelectionItem_ElementSelectedEventId** . El elemento seleccionado debe tener una propiedad **UIA_SelectionItemIsSelectedPropertyId** igual a **true** .
+- El **UIA_NamePropertyId** de cada elemento de la lista de candidatos debe ser el nombre del candidato. Opcionalmente, puede proporcionar información adicional para eliminar la ambigüedad de los candidatos a través de **UIA_HelpTextPropertyId** .
 
 ## <a name="related-topics"></a>Temas relacionados
 

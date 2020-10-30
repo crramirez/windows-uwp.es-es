@@ -1,43 +1,43 @@
 ---
-Description: Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El sistema de administración de recursos analizará todos los candidatos y determinará el mejor candidato para devolver. Este tema describe con detalle ese proceso y proporciona ejemplos.
-title: Cómo compara y elige recursos el sistema de administración
+description: Cuando se solicita un recurso, podría haber varios candidatos que coincidan hasta cierto punto con el contexto de recursos actual. El sistema de administración de recursos analizará todos los candidatos y determinará el mejor candidato para devolver. En este tema se describe con detalle ese proceso y se proporcionan ejemplos.
+title: Cómo el sistema de administración de recursos compara y elige recursos
 template: detail.hbs
 ms.date: 10/23/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d430aae696b0f021e2412a73f137ea6db826937b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593890"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031858"
 ---
-# <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Cómo compara y elige recursos el sistema de administración
-Cuando se solicita un recurso, puede ser que haya varios candidatos que coincidan en algún grado con el contexto de recurso actual. El Sistema de administración de recursos analizará todos los candidatos y determinará cuál es el mejor candidato a devolver. Para ello, se tienen en cuenta todos los calificadores para clasificar a todos los candidatos.
+# <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Cómo el sistema de administración de recursos compara y elige recursos
+Cuando se solicita un recurso, podría haber varios candidatos que coincidan hasta cierto punto con el contexto de recursos actual. El sistema de administración de recursos analizará todos los candidatos y determinará el mejor candidato para devolver. Para ello, se deben tener en cuenta todos los calificadores para clasificar a todos los candidatos.
 
-En este proceso de clasificación, se asignan prioridades diferentes a los distintos calificadores: el idioma tiene el mayor impacto en la clasificación global, seguido del contraste, la escala, etc. Para cada calificador, se comparan los calificadores de los candidatos con el valor del calificador de contexto para determinar una calidad de coincidencia. El modo en que se realiza la comparación depende del calificador.
+En este proceso de clasificación, a los diferentes calificadores se les asignan diferentes prioridades: el lenguaje tiene el mayor impacto en la clasificación general, seguido del contraste, de la escala, etc. Para cada calificador, los calificadores candidatos se comparan con el valor de calificador de contexto para determinar una calidad de coincidencia. La comparación se realiza según el calificador.
 
-Para conocer detalles más concretos sobre cómo se realiza la coincidencia de la etiqueta de idiomas, consulta [Cómo compara etiquetas de idioma el sistema de administración de recursos](how-rms-matches-lang-tags.md).
+Para obtener detalles específicos sobre cómo se realiza la coincidencia de etiquetas de idioma, vea [Cómo coincide el sistema de administración de recursos con las etiquetas de idioma](how-rms-matches-lang-tags.md).
 
-En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado para "escala 100" coincide con un contexto de "escalado-400" hasta cierto punto pequeño, aunque no así como un candidato calificado para "escalado-200" o (para una coincidencia perfecta) "escalado-400".
+En algunos calificadores, como la escala y el contraste, siempre hay un grado mínimo de coincidencia. Por ejemplo, un candidato calificado para "Scale-100" coincide con un contexto de "Scale-400" a cierto grado pequeño, aunque no así como a un candidato calificado para "Scale-200" o (para una coincidencia perfecta) "Scale-400".
 
-Sin embargo, en el resto de calificadores, como el idioma o la región principal, es posible que haya una comparación no coincidente (además de grados de coincidencia). Por ejemplo, un candidato con la calificación de idioma "en-US" representa una coincidencia parcial en un contexto "en-GB", pero un candidato con la calificación "fr" no es coincidente en modo alguno. De manera similar, un candidato con la calificación de región principal "155" (Europa occidental) coincide bien de alguna manera con un contexto de usuario cuya región principal esté definida en "FR", pero un candidato calificado como "US" no coincide en modo alguno.
+Sin embargo, en el caso de otros calificadores, como el idioma o la región principal, es posible tener una comparación no coincidente (así como los grados de coincidencia). Por ejemplo, un candidato calificado para el idioma como "en-US" es una coincidencia parcial para un contexto de "en-GB", pero un candidato calificado como "fr" no es una coincidencia. Del mismo modo, una candidata calificada para la región de inicio como "155" (Europa occidental) coincide en un contexto de un usuario con un valor de región principal de "FR", pero un candidato calificado como "EE. UU." no coincide.
 
-Cuando se evalúa un candidato, si hay una comparación no coincidente para cualquier calificador, dicho candidato obtendrá una clasificación no coincidente global y no se seleccionará. De este modo, los calificadores con mayor prioridad tendrán el mayor peso en la selección de la mejor coincidencia, pero incluso un calificador de prioridad baja puede eliminar un candidato debido a una falta de coincidencia.
+Cuando se evalúa un candidato, si hay una comparación sin coincidencia para un calificador, ese candidato obtendrá una clasificación no coincidente general y no se seleccionará. De esta manera, los calificadores de mayor prioridad pueden tener el mayor peso en la selección de la mejor coincidencia, pero incluso un calificador de prioridad baja puede eliminar a un candidato debido a una falta de coincidencia.
 
-Un candidato es independiente de un calificador si no está marcado para ese calificador en absoluto. Para cualquier calificador, un candidato neutro representa siempre una coincidencia con el valor de calificador de contexto, pero únicamente con una calidad de coincidencia inferior a cualquier candidato que se hubiera marcado para ese calificador y que tenga cierto grado de coincidencia (exacta o parcial). Por ejemplo, si tenemos candidatos con la calificación "en-US", "en" y "fr", y además un candidato neutro respecto del idioma, en ese caso, para un contexto con valor de calificador de idioma de "en-GB", los candidatos se clasificarán en el siguiente orden: "en", "en-US", neutro y "fr". En este caso, "fr" no coincide en modo alguno, mientras que los demás candidatos coinciden en cierto grado.
+Un candidato es neutro en relación con un calificador si no está marcado para ese calificador. En el caso de cualquier calificador, un candidato neutro siempre es una coincidencia para el valor del calificador de contexto, pero solo con una calidad de coincidencia inferior a cualquier candidato marcado para ese calificador y tiene cierto grado de coincidencia (exacta o parcial). Por ejemplo, si tenemos candidatos calificados para "en-US", "en", "fr" y también un candidato independiente del lenguaje, para un contexto con un valor de calificador de idioma de "en-GB", los candidatos se clasificarán en el siguiente orden: "en", "en-US", neutro y "fr". En este caso, "fr" no coincide, mientras que los demás candidatos coinciden con cierto grado.
 
-El proceso de clasificación global comienza mediante la evaluación de candidatos en relación con el calificador de mayor prioridad, que es el idioma. Las faltas de coincidencia se eliminan. Los candidatos restantes se clasifican en relación con su calidad de coincidencia por idioma. Si hay empates, se tiene en cuenta el siguiente calificador con mayor prioridad, el contraste, y se usa la calidad de coincidencia de contraste para diferencias entre los candidatos empatados. Después del contraste, se usa el calificador de escala para diferenciar el resto de empates y así sucesivamente con tantos calificadores como sea necesario para llegar a una clasificación bien ordenada.
+El proceso de clasificación general comienza por la evaluación de los candidatos en relación con el calificador de prioridad más alta, que es el idioma. Las no coincidencias se eliminan. Los candidatos restantes se clasifican en relación con su calidad de coincidencia para el idioma. Si hay algún valor de vinculación, se considera el calificador de mayor prioridad, contraste, con la calidad de la coincidencia para diferenciar entre los candidatos asociados. Después del cambio, el calificador de escala se usa para diferenciar los lazos restantes, y así sucesivamente a través de todos los calificadores que se necesitan para llegar a una clasificación bien ordenada.
 
-Si todos los candidatos se quitan de la consideración debido a calificadores que no coinciden con el contexto, el cargador de recursos realiza un segundo pase para que se muestre un candidato predeterminado. Los candidatos predeterminados se determinan durante la creación del archivo PRI y son necesarios para garantizar que siempre haya algún candidato que seleccionar en cualquier contexto de tiempo de ejecución. Si un candidato tiene calificadores que no coincidan y no sean predeterminados, ese candidato de recurso se dejará de tener en consideración permanentemente.
+Si no se tienen en cuenta todos los candidatos debido a que los calificadores no coinciden con el contexto, el cargador de recursos pasa por un segundo paso buscando un candidato predeterminado para mostrarlo. Los candidatos predeterminados se determinan durante la creación del archivo PRI y son necesarios para garantizar que siempre hay algún candidato para seleccionar en cualquier contexto de tiempo de ejecución. Si un candidato tiene algún calificador que no coincide y no es un valor predeterminado, ese candidato de recurso se inicia de forma permanente.
 
-Para todos los candidatos de recursos que sigan teniéndose en cuenta, el cargador de recursos busca el valor de calificador de contexto de mayor prioridad y elige el que coincida mejor o el que tenga mejor puntuación predeterminada. Cualquier coincidencia real se considerará mejor que una puntuación predeterminada.
+En el caso de todos los candidatos de recursos todavía en consideración, el cargador de recursos examina el valor de calificador de contexto de prioridad más alta y elige el que tiene la mejor coincidencia o la mejor puntuación predeterminada. Cualquier coincidencia real se considera mejor que una puntuación predeterminada.
 
-Si hay un empate, se inspeccionará el valor de calificador de contexto de mayor prioridad siguiente y el proceso continuará hasta que se encuentre la mejor coincidencia.
+Si hay un empate, se inspecciona el siguiente valor de calificador de contexto de prioridad más alto y el proceso continúa hasta que se encuentra una mejor coincidencia.
 
 ## <a name="example-of-choosing-a-resource-candidate"></a>Ejemplo de elección de un candidato de recurso
-Supónganse estos archivos.
+Tenga en cuenta estos archivos.
 
 ```console
 en/images/logo.scale-400.jpg
@@ -49,7 +49,7 @@ fr/images/contrast-high/logo.scale-100.jpg
 de/images/logo.jpg
 ```
 
-Y supóngase que esta sea la configuración en el contexto actual.
+Y Supongamos que se trata de la configuración del contexto actual.
 
 ```console
 Application language: en-US; fr-FR;
@@ -57,7 +57,7 @@ Scale: 400
 Contrast: Standard
 ```
 
-El Sistema de administración de recursos elimina tres de los archivos, porque el contraste alto y el idioma alemán no coinciden con el contexto definido por la configuración. Eso deja a estos candidatos.
+El sistema de administración de recursos elimina tres de los archivos, ya que el contraste alto y el idioma alemán no coinciden con el contexto definido por la configuración. Eso deja a estos candidatos.
 
 ```console
 en/images/logo.scale-400.jpg
@@ -66,7 +66,7 @@ en/images/logo.scale-100.jpg
 fr/images/logo.scale-100.jpg
 ```
 
-Para los candidatos restantes, el sistema de administración de recursos usa el calificador de contexto de prioridad más alta, que es el idioma. Los recursos de inglés son una mejor coincidencia que los de francés, porque el inglés aparece antes del francés en la configuración.
+En el caso de los candidatos restantes, el sistema de administración de recursos utiliza el calificador de contexto de prioridad más alta, que es el idioma. Los recursos en inglés están más cerca que los de francés, ya que el inglés se muestra antes que el francés en la configuración.
 
 ```console
 en/images/logo.scale-400.jpg
@@ -74,13 +74,13 @@ en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
 ```
 
-A continuación, el sistema de administración de recursos usa el calificador de contexto de mayor prioridad siguiente, la escala. Por ello, este será el recurso devuelto.
+Después, el sistema de administración de recursos utiliza el calificador de contexto de prioridad siguiente, escala. Por lo tanto, se devuelve el recurso.
 
 ```console
 en/images/logo.scale-400.jpg
 ```
 
-Puedes usar el método avanzado [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) para recuperar todos los candidatos en el orden en que coincidan con la configuración de contexto. Para el ejemplo en el que nos hemos desenvuelto, **ResolveAll** devuelve candidatos en este orden.
+Puede usar el método [**NamedResource. ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) avanzado para recuperar todos los candidatos en el orden en que coinciden con los valores de contexto. En el ejemplo que se acaba de recorrer, **ResolveAll** devuelve candidatos en este orden.
 
 ```console
 en/images/logo.scale-400.jpg
@@ -89,8 +89,8 @@ en/images/logo.scale-100.jpg
 fr/images/logo.scale-100.jpg
 ```
 
-## <a name="example-of-producing-a-fallback-choice"></a>Ejemplo de producción de una elección de reserva
-Supónganse estos archivos.
+## <a name="example-of-producing-a-fallback-choice"></a>Ejemplo de creación de una opción de reserva
+Tenga en cuenta estos archivos.
 
 ```console
 en/images/logo.scale-400.jpg
@@ -101,7 +101,7 @@ fr/images/contrast-standard/logo.scale-100.jpg
 de/images/contrast-standard/logo.jpg
 ```
 
-Y supóngase que esta sea la configuración en el contexto actual.
+Y Supongamos que se trata de la configuración del contexto actual.
 
 ```console
 User language: de-DE;
@@ -109,7 +109,7 @@ Scale: 400
 Contrast: High
 ```
 
-Todos los archivos se eliminan porque no coinciden con el contexto. De modo que entramos en un paso predeterminado, donde el valor predeterminado (véase [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)) durante la creación del archivo PRI era este.
+Se eliminan todos los archivos porque no coinciden con el contexto. Por lo tanto, se especifica una fase predeterminada, donde el valor predeterminado (consulte [compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)) durante la creación del archivo PRI fue este.
 
 ```console
 Language: fr-FR;
@@ -117,7 +117,7 @@ Scale: 400
 Contrast: Standard
 ```
 
-Esto deja todos los recursos que coincidan con el usuario actual o con el predeterminado.
+Esto deja todos los recursos que coinciden con el usuario actual o el predeterminado.
 
 ```console
 fr/images/contrast-standard/logo.scale-400.jpg
@@ -125,14 +125,14 @@ fr/images/contrast-standard/logo.scale-100.jpg
 de/images/contrast-standard/logo.jpg
 ```
 
-El sistema de administración de recursos usa el calificador de contexto de prioridad más alta, el idioma, para devolver el recurso con nombre que tenga la mayor puntuación.
+El sistema de administración de recursos utiliza el calificador de contexto de prioridad más alta, idioma, para devolver el recurso con nombre con la puntuación más alta.
 
 ```console
 de/images/contrast-standard/logo.jpg
 ```
 
 ## <a name="important-apis"></a>API importantes
-* [NamedResource.ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
+* [NamedResource. ResolveAll](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)

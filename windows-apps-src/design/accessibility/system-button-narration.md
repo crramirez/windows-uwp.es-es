@@ -1,5 +1,5 @@
 ---
-Description: ''
+description: 'Más información acerca de: lectores de pantalla y botones del sistema de hardware'
 title: Eventos de botón de hardware y lectores de pantalla
 label: Screen readers and hardware button events
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 02/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, accesibilidad, narrador, lector de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: 41c6ed531f21a922b407ff3ba5aae93afb8d917e
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: d4bf712c83b39a184247a4476db5a045f62a9482
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234938"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029858"
 ---
 # <a name="screen-readers-and-hardware-system-buttons"></a>Botones del sistema de hardware y lectores de pantalla
 
@@ -127,6 +127,6 @@ Es habitual que se active más de uno de los eventos compatibles cuando se presi
     }
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clase SystemButtonEventController](/uwp/api/windows.ui.input.systembuttoneventcontroller)

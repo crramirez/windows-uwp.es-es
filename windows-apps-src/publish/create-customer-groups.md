@@ -1,25 +1,25 @@
 ---
-Description: Crea grupos de clientes que puedes usar para dirigirte a un subconjunto de la base de clientes de tu aplicación para promociones, pruebas u otros fines.
+description: Cree grupos de clientes que puede usar para dirigirse a un subconjunto de la base de clientes de la aplicación para promociones, pruebas u otros fines.
 title: Crear grupos de clientes
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, grupos de clientes, segmento, grupo piloto, grupo de usuarios conocido
+keywords: Windows 10, UWP, grupos de clientes, segmento, grupo de vuelos, grupo de usuarios conocidos
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
-ms.openlocfilehash: d4e9f0742a5b478468320991f5689ee95ca13a0c
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: e3f4b7cba190929e2a5114e98956e19aa75ef831
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63811975"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029708"
 ---
 # <a name="create-customer-groups"></a>Crear grupos de clientes
 
-Puede crear *grupos de clientes* que incluyen un subconjunto de clientes de la aplicación. Estos grupos se pueden usar para los clientes de destino para las promociones, probar y otros fines.
+Puede crear *grupos de clientes* que incluyan un subconjunto de los clientes de la aplicación. Estos grupos se pueden usar para dirigirse a los clientes para promociones, pruebas y otros fines.
 
-Para ver y crear grupos de clientes, expanda **interactuar** en el menú de navegación izquierdo de [centro de partners](https://partner.microsoft.com/dashboard), a continuación, seleccione **grupos de clientes**.
+Para ver y crear grupos de clientes, expanda **participar** en el menú de navegación izquierdo del [centro de Partners](https://partner.microsoft.com/dashboard)y seleccione **grupos de clientes** .
 
 En este momento, se admiten dos tipos de grupos de clientes:
 
-- **Los segmentos.** Son grupos creados de forma dinámica de clientes de Windows 10 que cumplen con los criterios demográficos o de ingresos que elijas. Los segmentos suelen utilizarse con [notificaciones push](send-push-notifications-to-your-apps-customers.md) u [ofertas dirigidas](use-targeted-offers-to-maximize-engagement-and-conversions.md). Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
-- **Grupos de usuarios conocidos.** Son grupos de clientes específicos creados a partir de direcciones de correo electrónico asociadas a sus cuentas de Microsoft. Los grupos de usuarios conocidos se usan por lo general con [distribuciones de paquetes piloto](package-flights.md) para entregar paquetes específicos a los clientes de dichos grupos, o para distribución de un envío a una [audiencia privada](choose-visibility-options.md#audience). Para obtener más información, consulta [Crear grupos de usuarios conocidos](create-known-user-groups.md).
+- **Sectores.** Son grupos creados de forma dinámica de clientes de Windows 10 que cumplen con los criterios demográficos o de ingresos que elijas. Los segmentos suelen usarse con [notificaciones de envío](send-push-notifications-to-your-apps-customers.md) o [ofertas de destino](use-targeted-offers-to-maximize-engagement-and-conversions.md). Para obtener más información, consulta [Crear segmentos de clientes](create-customer-segments.md).
+- **Grupos de usuarios conocidos.** Son grupos de clientes específicos creados a partir de direcciones de correo electrónico asociadas a sus cuentas de Microsoft. Los grupos de usuarios conocidos se utilizan con más frecuencia con [paquetes piloto](package-flights.md) para ofrecer paquetes específicos a los clientes de ese grupo, o para la distribución de un envío a una [audiencia privada](choose-visibility-options.md#audience). Para obtener más información, consulte [crear grupos de usuarios conocidos](create-known-user-groups.md).

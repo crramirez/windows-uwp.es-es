@@ -1,17 +1,17 @@
 ---
-Description: Existen varios esquemas de URI (identificador uniforme de recursos) que puedes usar para hacer referencia a archivos que provienen del paquete de la aplicación, las carpetas de datos de la aplicación o la nube. También puedes usar un esquema de URI para hacer referencia a cadenas cargadas desde archivos de recursos (.resw) de la aplicación.
+description: Existen varios esquemas de URI (identificador uniforme de recursos) que puedes usar para hacer referencia a archivos que provienen del paquete de la aplicación, las carpetas de datos de la aplicación o la nube. También puedes usar un esquema de URI para hacer referencia a cadenas cargadas desde archivos de recursos (.resw) de la aplicación.
 title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f5bf063c12362fe26e3810e6153b857b7c1a2e4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8806992ebb7f4335ca0a748c1b2bce4a6de39fae
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170529"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031557"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -31,7 +31,7 @@ hier-part   = "//" authority path-abempty
             / path-empty
 ```
 
-Esto significa que hay esencialmente tres componentes en un URI. Inmediatamente después de las dos barras diagonales del *esquema* URI se encuentra un componente (que puede estar vacío) denominado *autoridad*. Y inmediatamente después es la *ruta de acceso*. Tomando el URI `http://www.contoso.com/welcome.png` como ejemplo, el esquema es " `http://` ", la autoridad es " `www.contoso.com` " y la ruta de acceso es " `/welcome.png` ". Otro ejemplo es el URI `ms-appx:///logo.png` , donde los componentes de la entidad están vacíos y toman un valor predeterminado.
+Esto significa que hay esencialmente tres componentes en un URI. Inmediatamente después de las dos barras diagonales del *esquema* URI se encuentra un componente (que puede estar vacío) denominado *autoridad* . Y inmediatamente después es la *ruta de acceso* . Tomando el URI `http://www.contoso.com/welcome.png` como ejemplo, el esquema es " `http://` ", la autoridad es " `www.contoso.com` " y la ruta de acceso es " `/welcome.png` ". Otro ejemplo es el URI `ms-appx:///logo.png` , donde los componentes de la entidad están vacíos y toman un valor predeterminado.
 
 El componente de fragmento se omite en el procesamiento específico de esquemas de los URI mencionados en este tema. Durante la comparación y la recuperación de recursos, el componente de fragmento no tiene ningún cojinete. Sin embargo, las capas por encima de la implementación específica pueden interpretar el fragmento para recuperar un recurso secundario.
 
@@ -41,7 +41,7 @@ La comparación tiene lugar byte para byte después de la normalización de todo
 
 Todos los esquemas de URI descritos en este tema siguen las reglas de URI típicas (RFC 3986) para la normalización y la recuperación de recursos para los esquemas. La forma normalizada de estos URI mantiene los caracteres no reservados de mayúsculas y minúsculas y porcentajes de la RFC 3986.
 
-En todos los esquemas de URI descritos en este tema, el *esquema*, la *autoridad*y la *ruta de acceso* no distinguen entre mayúsculas y minúsculas, o bien el sistema los procesa sin distinción entre mayúsculas y minúsculas. **Nota:** La única excepción a esa regla es la *autoridad* de `ms-resource` , que distingue entre mayúsculas y minúsculas.
+En todos los esquemas de URI descritos en este tema, el *esquema* , la *autoridad* y la *ruta de acceso* no distinguen entre mayúsculas y minúsculas, o bien el sistema los procesa sin distinción entre mayúsculas y minúsculas. **Nota:** La única excepción a esa regla es la *autoridad* de `ms-resource` , que distingue entre mayúsculas y minúsculas.
 
 ## <a name="ms-appx-and-ms-appx-web"></a>MS-appx y MS-appx-Web
 

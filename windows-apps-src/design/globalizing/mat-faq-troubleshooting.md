@@ -1,134 +1,134 @@
 ---
-Description: Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0.
-title: Solución de problemas y preguntas más frecuentes sobre el kit de herramientas para aplicaciones multilingües
+description: En este tema se proporcionan respuestas a preguntas y problemas frecuentes relacionados con el kit de herramientas de aplicaciones multilingües (PASPARTÚ) 4,0.
+title: Preguntas más frecuentes sobre el kit de herramientas de aplicaciones multilingües & solución
 template: detail.hbs
 ms.date: 11/13/2017
 ms.topic: article
-keywords: windows 10, uwp, globalización, localización
+keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 07e087dbb0cb2fcbd4dd1d098f84c49543f3a885
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 86c7805f92adf3551729783e2359c85103a0c13e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258145"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030758"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Preguntas frecuentes y solución de problemas del Kit de herramientas para aplicaciones multilingües 4.0
 
-Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0.
+En este tema se proporcionan respuestas a preguntas y problemas frecuentes relacionados con el kit de herramientas de aplicaciones multilingües (PASPARTÚ) 4,0.
 
-Consulta también [Utilizar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
+Consulte también [uso del kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md).
 
-**Nota** El kit de herramientas admite archivos .resw (XAML) y .resjson (JavaScript). Pero en este tema nos referiremos solo a los archivos .resw. Un archivo .resw se conoce como un archivo de recursos. Contiene cadenas, ya sea en el idioma predeterminado o traducidas a otro idioma. La carpeta que contiene un archivo .resw normalmente se denomina según el valor de una etiqueta de idioma.
+**Nota:** El kit de herramientas admite archivos. resw (XAML) y. resjson (JavaScript). Pero en este tema solo haremos referencia a los archivos. resw. Un archivo. resw se conoce como archivo de recursos. Contiene cadenas, ya sea en el idioma predeterminado o traducidas en otro lenguaje. La carpeta que contiene un archivo. resw normalmente se denomina para el valor de una etiqueta de idioma.
 
-## <a name="do-i-need-resw-files-in-multiple-languages"></a>¿Necesito archivos .resw en varios idiomas?
+## <a name="do-i-need-resw-files-in-multiple-languages"></a>¿Necesito archivos. resw en varios idiomas?
 
-No. Una de las ventajas clave del kit de herramientas es que no es necesario contar con los archivos .resw en varios idiomas. El kit de herramientas administra y sincroniza los recursos de la aplicación con archivos .xlf. Esto elimina las dificultades relacionadas con la sincronización del contenido en varios archivos .resw.
+No. Una de las principales ventajas del kit de herramientas es que los archivos. resw en varios idiomas no son necesarios. El kit de herramientas administra y sincroniza los recursos de la aplicación mediante el uso de archivos. xlf. Esto elimina los desafíos asociados al mantenimiento del contenido sincronizado entre varios archivos. resw.
 
-Los proyectos que contienen archivos .resw y .xlf coincidentes hacen que se omitan las traducciones del archivo .xlf. Cuando esto sucede, se muestra una advertencia durante la compilación para informar de que las traducciones del archivo .xlf no están incluidas en la aplicación final. Un archivo .resw y un archivo .xlf coinciden cuando tienen un idioma de destino con el mismo código de idioma. Un ejemplo de un par coincidente sería `Strings\de-DE\Resources.resw` y un archivo `<project-name>.de-DE.xlf` (que contiene `target-language="de-DE"`).
+Los proyectos que contienen archivos. resw y. xlf coincidentes provocan que se omitan las traducciones del archivo. xlf. Cuando esto sucede, se muestra una advertencia durante la compilación para indicar que las traducciones de. xlf no se incluyen en la aplicación final. Un archivo. resw y un archivo. xlf coinciden cuando tienen un idioma de destino con el mismo código de idioma. Un ejemplo de par coincidente sería `Strings\de-DE\Resources.resw` y un `<project-name>.de-DE.xlf` archivo (que contiene `target-language="de-DE"` ).
 
-## <a name="can-i-have-resw-files-in-multiple-languages"></a>¿Puedo tener archivos .resw en varios idiomas?
+## <a name="can-i-have-resw-files-in-multiple-languages"></a>¿Puedo tener archivos. resw en varios idiomas?
 
-Sí, pero no lo recomendamos. Si deseas incluir archivos .resw en varios idiomas en tu proyecto y utilizar el kit de herramientas, asegúrate de que no haya archivos .resw y .xlf coincidentes.
+Pero no se recomienda. Si quiere incluir archivos. resw en varios idiomas en el proyecto y usar el kit de herramientas, asegúrese de que no tiene archivos. resw y. xlf coincidentes.
 
-## <a name="i-dont-see-an-option-in-the-tools-menu-to-enable-the-multilingual-app-toolkit"></a>No veo ninguna opción en el menú Herramientas que permita habilitar el kit de herramientas para aplicaciones multilingües.
+## <a name="i-dont-see-an-option-in-the-tools-menu-to-enable-the-multilingual-app-toolkit"></a>No veo una opción en el menú herramientas para habilitar el kit de herramientas de aplicaciones multilingües
 
-Intenta hacerlo siguiendo estos pasos.
+Siga estos pasos.
 
-- Asegúrate de seleccionar el nodo del proyecto, no el de la solución, antes de abrir el menú **Herramientas**.
-- Confirma que esté instalada la extensión del kit de herramientas con el Administrador de extensiones de Visual Studio.
-- Confirma que tu proyecto sea un proyecto de UWP.
+- Asegúrese de seleccionar el nodo del proyecto, no el nodo de la solución, antes de abrir el menú **herramientas** .
+- Confirme que la extensión del kit de herramientas se instala con el administrador de extensiones de Visual Studio.
+- Confirme que el proyecto es un proyecto de UWP.
 
-## <a name="when-i-build-my-project-i-dont-see-a-message-saying-that-a-multilingual-app-toolkit-build-has-started"></a>Al compilar mi proyecto, no se ve un mensaje que indique que se ha iniciado una compilación del kit de herramientas para aplicaciones multilingües
+## <a name="when-i-build-my-project-i-dont-see-a-message-saying-that-a-multilingual-app-toolkit-build-has-started"></a>Al compilar mi proyecto, no veo un mensaje que indica que se ha iniciado una compilación multilingüe del kit de herramientas de aplicaciones
 
-Confirma que has habilitado la MAT para el proyecto. En el menú **Herramientas**, selecciona **Kit de herramientas para aplicaciones multilingües** > **Habilitar selección**. Si tu proyecto se habilitó con una versión anterior, deshabilita y vuelve a habilitar la MAT usando el menú **Herramientas**. De este modo, se actualiza el proyecto para que puedas trabajar con la nueva versión del kit de herramientas.
+Confirme que ha habilitado el PASPARTÚ para su proyecto. En el menú **herramientas** , seleccione **Multilingual App Toolkit**  >  **Habilitar selección** . Si el proyecto se ha habilitado con una versión anterior, deshabilite y vuelva a habilitar el PASPARTÚ mediante el menú **herramientas** . Esto actualiza el proyecto para que funcione con la nueva versión del kit de herramientas.
 
-Asegúrate de que esté instalado el componente "Tarea de compilación para todas las ediciones de Visual Studio". El componente de compilación se instala con la extensión, pero se puede anular su selección manualmente durante la instalación. Este componente es necesario para actualizar los archivos .xlf y agregar la traducción al archivo PRI. Cuando este componente esté instalado y funcione correctamente, verás estos mensajes de compilación.
+Asegúrese de que está instalado el componente "tarea de compilación para todas las ediciones de Visual Studio". Este componente de compilación se instala con la extensión, pero se puede anular manualmente la selección durante la instalación. Este componente es necesario para actualizar los archivos. xlf y agregar la traducción en el archivo PRI. Cuando este componente está instalado y funciona correctamente, verá estos mensajes de compilación.
 
 ```dosbatch
 1> Multilingual App Toolkit build started.
 1> Multilingual App Toolkit build completed successfully.
 ```
 
-## <a name="the-toolkit-is-reporting-that-it-didnt-locate-any-xliff-language-files-during-the-build"></a>El kit de herramientas notifica que no encontró ningún archivo de idioma XLIFF durante la compilación
+## <a name="the-toolkit-is-reporting-that-it-didnt-locate-any-xliff-language-files-during-the-build"></a>El kit de herramientas informa de que no encontró ningún archivo de idioma XLIFF durante la compilación
 
 ```dosbatch
 No XLIFF language files were found. The app will not contain any localized resources.
 ```
 
-Este mensaje se muestra cuando el kit de herramientas no encuentra ningún archivo con la extensión .xlf en el proyecto. El kit de herramientas genera y mantiene estos archivos en la carpeta `MultilingualResources` predeterminada. Se pueden mover, pero lo más conveniente es dejarlos en esa carpeta porque eso permite al editor multilingüe encontrar los archivos de metadatos relacionados.
+Este mensaje se muestra cuando el kit de herramientas no encuentra ningún archivo en el proyecto con la extensión. xlf. El kit de herramientas genera y mantiene estos archivos en la `MultilingualResources` carpeta de forma predeterminada. Se pueden migrar; pero es mejor dejarlos en esa carpeta, ya que permite que el editor multilingüe busque los archivos de metadatos relacionados.
 
-## <a name="my-xlf-file-is-not-included-in-the-list-of-files-processed-by-the-toolkit-during-build"></a>Mi archivo .xlf no está incluido en la lista de archivos procesados por el kit de herramientas durante la compilación
+## <a name="my-xlf-file-is-not-included-in-the-list-of-files-processed-by-the-toolkit-during-build"></a>El archivo my. xlf no se incluye en la lista de archivos procesados por el kit de herramientas durante la compilación
 
-Si se excluye un archivo .xlf manualmente desde el proyecto y después vuelve a incluirse, es posible que el elemento de tipo de archivo no esté correctamente configurado. Selecciona el archivo en Visual Studio y comprueba la ventana Propiedades. La acción de compilación del archivo debería establecerse en XliffResource y Copiar en el directorio de salida debería establecerse en No copiar. Este es el aspecto que debería tener la referencia en el archivo de proyecto.
+Si excluye manualmente un archivo. xlf del proyecto y, a continuación, lo vuelve a incluir, es posible que el elemento de tipo de archivo no se establezca correctamente. En Visual Studio, seleccione el archivo y compruebe el ventana Propiedades. La acción de compilación del archivo se debe establecer en XliffResource y copiar en el directorio de salida debe establecerse en no copiar. Este es el aspecto que debe tener la referencia en el archivo del proyecto.
 
 ```xml
 <XliffResource Include="MultilingualResources\<project-name>.fr-FR.xlf" />
 ```
 
-## <a name="ive-added-xlf-based-languages-where-are-my-strings"></a>Agregué idiomas basados en .xlf. ¿Dónde están mis cadenas?
+## <a name="ive-added-xlf-based-languages-where-are-my-strings"></a>He agregado lenguajes basados en XLF. ¿Dónde están mis cadenas?
 
-Tu archivo de recursos de idioma predeterminado (.resw) es tu "esquema" canónico de las cadenas que utiliza la aplicación. Los archivos de recursos traducidos pueden contener todas, o un subconjunto de, esas cadenas.
+El archivo de recursos de idioma predeterminado (. resw) es el "esquema" canónico de las cadenas que usa la aplicación. Los archivos de recursos traducidos pueden contener todas estas cadenas, o un subconjunto de ellas.
 
-Al compilar el proyecto, los archivos de recursos y los archivos .xlf están sincronizados.
+Al compilar el proyecto, los archivos de recursos y los archivos. xlf se sincronizan.
 
-- Los archivos .xlf se actualizan para reflejar cualquier cadena añadida o quitada, o cualquier archivo de recursos añadido o quitado.
-- Los archivos de recursos se actualizan para reflejar cualquier cadena traducida en los archivos .xlf.
+- Los archivos. xlf se actualizan para reflejar cualquier cadena agregada o eliminada, o archivos de recursos agregados o quitados.
+- Los archivos de recursos se actualizan para reflejar cualquier cadena traducida en los archivos. xlf.
 
-Esto se explica en detalle en [Usar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
+Esto se explica con más detalle en [usar el kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md).
 
-## <a name="when-i-build-my-project-the-xlf-files-remain-empty"></a>Cuando compilo mi proyecto, los archivos .xlf permanecen vacíos
+## <a name="when-i-build-my-project-the-xlf-files-remain-empty"></a>Al compilar el proyecto, los archivos. xlf permanecen vacíos
 
-Para poder usar la MAT eficazmente, la aplicación debe localizarse previamente. Esto se explica en detalle en [Usar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
+Antes de poder usar el PASPARTÚ de forma eficaz, la aplicación debe ser localizable. Esto se explica con más detalle en [usar el kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md).
 
-## <a name="what-is-microsoft-translator"></a>¿Qué es Microsoft Tanslator?
+## <a name="what-is-microsoft-translator"></a>¿Qué es Microsoft Translator?
 
-Microsoft Translator es un servicio basado en la nube que proporciona traducciones automáticas. La traducción automática es ideal para tener acceso a traducciones cuando no se pueden obtener traducciones realizadas por humanos. Puedes obtener más información en [Microsoft Translator](https://www.microsofttranslator.com/).
+Microsoft Translator es un servicio basado en la nube que proporciona traducción basada en equipo. La traducción automática es ideal para obtener acceso a la traducción cuando la traducción humana no es razonable obtener. Puede obtener más información en [Microsoft Translator](https://www.microsofttranslator.com/).
 
-El kit de herramientas usa el servicio Microsoft Translator para proporcionarte sugerencias de traducción. Puedes ver los idiomas que admite Microsoft Translator cuando el icono de Microsoft Translator aparece en el diálogo Idiomas de traducción.
+El kit de herramientas usa el servicio Microsoft Translator para proporcionar sugerencias de traducción. Puede ver qué idiomas son compatibles con Microsoft Translator cuando el icono de Microsoft Translator está presente en el cuadro de diálogo idiomas de traducción.
 
-Puedes traducir tu aplicación rápidamente con Microsoft Translator en el editor multilingüe seleccionando una cadena y haciendo clic en el botón **Traducir**.
+Puede traducir rápidamente la aplicación mediante Microsoft Translator desde el editor multilingüe seleccionando una cadena y haciendo clic en **traducir** .
 
-## <a name="what-is-pseudo-language-and-what-are-pseudo-resource-trackers"></a>¿Qué es pseudoidioma y cuáles son los seguidores de pseudorecursos?
+## <a name="what-is-pseudo-language-and-what-are-pseudo-resource-trackers"></a>¿Qué es un pseudo idioma y qué son los pseudo recursos?
 
-Pseudoidioma es una modificación artificial del producto de software que pretende simular la localización del idioma real. Puedes encontrar más detalles sobre pseudoidiomas y seguimiento de pseudorecursos en [Usar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
+Pseudo idioma es una modificación artificial del producto de software diseñado para simular la localización de idioma real. Puede encontrar más detalles sobre el pseudo idioma y los superusuarios de los superrecursos en [usar el kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md).
 
-## <a name="how-do-i-set-my-language-preference-to-pseudo-language-so-that-i-can-test-my-pseudo-locd-strings"></a>¿Cómo establezco el idioma de preferencia para pseudoidioma, de manera que pueda probar mis cadenas pseudolocalizadas?
+## <a name="how-do-i-set-my-language-preference-to-pseudo-language-so-that-i-can-test-my-pseudo-locd-strings"></a>Cómo establecer mi preferencia de idioma en un pseudo idioma para poder probar las cadenas de mis pseudo-Loc?
 
-Esto se explica en detalle en [Usar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
+Esto se explica en [uso del kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md).
 
-## <a name="what-kind-of-localizability-issues-can-i-find-using-pseudo-language"></a>¿Qué tipo de problemas de localización puedo tener al usar pseudoidioma?
+## <a name="what-kind-of-localizability-issues-can-i-find-using-pseudo-language"></a>¿Qué tipo de problemas de localizabilidad puedo encontrar con el pseudo idioma?
 
-Esto se explica en detalle en [Usar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
+Esto se explica en [uso del kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md).
 
-## <a name="im-not-seeing-any-translations-when-i-launch-my-app-or-my-app-is-only-partially-translated"></a>Cuando inicio la aplicación, no veo ninguna traducción o la aplicación está traducida solo parcialmente
+## <a name="im-not-seeing-any-translations-when-i-launch-my-app-or-my-app-is-only-partially-translated"></a>No veo ninguna traducción al iniciar la aplicación o la aplicación solo se ha traducido parcialmente
 
-Abre el archivo .xlf en el editor multilingüe para ver si están las traducciones. Cuando cambian las cadenas en el archivo .resw del idioma predeterminado explícitamente, se quita cualquier traducción de los archivos .xlf. Esto se hace para garantizar que las traducciones concuerdan con sus cadenas de origen. Traducir las cadenas de los archivos .xlf y volver a compilar para actualizar los archivos .resw de idioma no predeterminado.
+Abra el archivo. xlf en el editor multilingüe para ver si las traducciones están presentes. Cuando se cambian explícitamente las cadenas en el archivo default language. resw, se quitan las traducciones correspondientes de los archivos. xlf. Esto se hace para asegurarse de que una traducción coincide con su cadena de origen. Traduzca las cadenas en los archivos. xlf y vuelva a compilar para actualizar los archivos. resw de idioma no predeterminados.
 
-Si las cadenas están traducidas en los archivos .xlf, pero no aparecen en la aplicación, recompila el proyecto para actualizar los archivos .resw de idioma no predeterminado. Visual Studio optimiza el comando Compilar de modo que compile solamente los archivos que se modificaron desde la última vez que se usó Compilar.
+Si las cadenas se traducen en los archivos. xlf, pero no aparecen en la aplicación, vuelva a compilar el proyecto para actualizar los archivos. resw de idioma no predeterminados. Visual Studio optimiza el comando de compilación para compilar solo los archivos que han cambiado desde la última compilación.
 
-Revisa el orden de preferencias de idioma. Asegúrate de que el idioma que quieres probar está el primero en la lista de preferencias de idiomas en **Configuración**.
+Compruebe el orden de preferencia de idioma. Asegúrese de que el idioma que desea probar aparece en la parte superior de la lista de preferencias de idioma en **configuración** .
 
-## <a name="the-toolkit-is-reporting-error--0x80004004-in-the-build-output"></a>El kit de herramientas informa de un error 0x80004004 en el resultado de la compilación
+## <a name="the-toolkit-is-reporting-error--0x80004004-in-the-build-output"></a>El kit de herramientas informa de errores 0x80004004 en la salida de la compilación
 
 ```dosbatch
 Merge of Loc PRI file failed calling makepri.exe: "0x80004004"
 ```
 
-Este mensaje puede mostrarse cuando el formato de región entra en conflicto con la operación de compilación del kit de herramientas. La solución alternativa es cambiar el código de región a en-US durante la compilación en **Configuración**.
+Este mensaje se puede mostrar cuando el formato de región entra en conflicto con la operación de compilación del kit de herramientas. La solución alternativa es cambiar el idioma en **configuración** a en-US durante la compilación.
 
 
-## <a name="the-toolkit-is-reporting-error--0x80004005-in-the-build-output"></a>El kit de herramientas informa de un error 0x80004005 en el resultado de la compilación
+## <a name="the-toolkit-is-reporting-error--0x80004005-in-the-build-output"></a>El kit de herramientas informa del error 0x80004005 en la salida de la compilación
 
 ```dosbatch
 Merge of Loc PRI file failed calling makepri.exe: "0x80004005"
 ```
 
-Este mensaje puede mostrarse cuando el archivo .xlf contiene un idioma de destino no admitido. Por ejemplo, "zh-cht" es incorrecto (cámbialo a "zh-hant") y "zh-chs" es incorrecto (cámbialo a "zh-hans").
+Este mensaje se puede mostrar cuando el archivo. xlf contiene un idioma de destino no compatible. Por ejemplo, "ZH-CHT" es incorrecto (cámbielo a "ZH-hant") y "ZH-CHS" es incorrecto (cámbielo a "ZH-Hans").
 
-## <a name="is-there-a-way-to-find-out-more-information-about-the-errors-im-seeing"></a>¿Hay alguna forma de obtener más información sobre los errores que veo?
+## <a name="is-there-a-way-to-find-out-more-information-about-the-errors-im-seeing"></a>¿Hay alguna manera de obtener más información acerca de los errores que veo?
 
-Sí, puedes activar el registro detallado en Visual Studio. Haz clic en **Herramientas** > **Opciones** > **Proyectos y soluciones** > **Compilar y ejecutar**. Cambia **Contenido de los resultados de compilación del proyecto de MSBuild** de Mínimo a Normal o una opción superior.
+Sí, puede activar el registro detallado en Visual Studio. Haga clic en **herramientas**  >  **Opciones**  >  **proyectos y soluciones**  >  **compilar y ejecutar** . Cambiar el detalle de la salida de la **compilación del proyecto de MSBuild** de mínima a normal o superior.
 
 Ejecutar MSBuild desde la línea de comandos también puede generar mensajes adicionales.
 
@@ -136,47 +136,47 @@ Ejecutar MSBuild desde la línea de comandos también puede generar mensajes adi
 msbuild /t:rebuild <project-name>
 ```
 
-## <a name="import-translation-failed"></a>Error en la importación de la traducción
+## <a name="import-translation-failed"></a>Error al importar traducción
 
-El proceso de importación realiza una validación básica antes de la importación. Esto garantiza que la información de referencia cultural de destino en los archivos que se están importando coincida con la de los archivos .xlf existentes. Abre el archivo .xlf en el editor multilingüe y asegúrate de que la información de referencia cultural coincide.
+El proceso de importación realiza la validación básica antes de la importación. Esto garantiza que la información de la referencia cultural de destino de los archivos que se van a importar coincide con la de los archivos. xlf existentes. Abra los archivos. xlf en el editor multilingüe y asegúrese de que la información de la referencia cultural coincide.
 
-## <a name="what-if-my-translator-doesnt-have-windows-10-andor-visual-studio-andor-the-multilingual-app-toolkit-installed"></a>¿Qué sucede si el traductor no tiene instalado Windows 10, Visual Studio o el kit de herramientas para aplicaciones multilingües?
+## <a name="what-if-my-translator-doesnt-have-windows-10-andor-visual-studio-andor-the-multilingual-app-toolkit-installed"></a>¿Qué ocurre si mi traductor no tiene instalado Windows 10 o Visual Studio o el kit de herramientas de aplicaciones multilingües?
 
-Al seleccionar **Salida: destinatario de correo** en el cuadro de diálogo Exportar recursos de cadena, el correo electrónico incluirá un vínculo para descargar e instalar el kit de herramientas para aplicaciones multilingües (MAT) 4.0. El traductor puede instalar la herramienta independiente Editor multilingüe de MAT 4.0 incluso sin Windows 10 ni Visual Studio.
+Al seleccionar **salida: destinatario de correo** en el cuadro de diálogo exportar recursos de cadena, el correo electrónico incluye un vínculo para descargar e instalar el kit de herramientas de aplicaciones multilingües (paspartú) 4,0. El traductor todavía puede instalar la herramienta de editor multilingüe independiente del PASPARTÚ 4,0 incluso sin Windows 10 ni Visual Studio.
 
-Para obtener más detalles, consulta [Cómo usar el kit de herramientas para aplicaciones multilingües 4.0](use-mat.md).
+Para obtener más información, consulte [uso del kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md).
 
-## <a name="what-happened-to-the-markuprulesxml-and-resourceslocksxml-files"></a>¿Qué ha pasado con los archivos `MarkupRules.xml` y `ResourcesLocks.xml`?
+## <a name="what-happened-to-the-markuprulesxml-and-resourceslocksxml-files"></a>¿Qué ha ocurrido con los `MarkupRules.xml` `ResourcesLocks.xml` archivos y?
 
-El kit de herramientas para aplicaciones multilingües 4.0 no usa archivos de bloqueo de recursos propietarios. En su lugar, se agrega la etiqueta de XLIFF 1.2 `<mrk>` directamente en el archivo .xlf para identificar las cadenas que no se modifican durante la traducción automática. Esto permite que el archivo XLIFF esté autocontenido, así como el bloqueo de recursos por archivos individuales.
+El kit de herramientas de aplicaciones multilingües 4,0 no usa archivos de bloqueo de recursos de propietario. En su lugar, se agrega la etiqueta XLIFF 1,2 `<mrk>` directamente al archivo. xlf para identificar las cadenas que no se modifican durante la traducción del equipo. Esto permite que el archivo XLIFF sea independiente y permite el bloqueo de recursos por archivo.
 
-Estos archivos de compatibilidad adicionales ya no son necesarios y puedes eliminarlos de manera segura si los tienes.
+Estos archivos de compatibilidad adicionales ya no son necesarios y puede eliminarlos de forma segura si los tiene.
 
-## <a name="what-happened-to-the-tpx-file"></a>¿Qué ha pasado con el archivo .tpx?
+## <a name="what-happened-to-the-tpx-file"></a>¿Qué ha ocurrido con el archivo. TPX?
 
-El archivo .tpx proporcionaba una manera sencilla de incluir los archivos `MarkupRules.xml` y `ResourcesLocks.xml` al enviar el archivo .xlf para su traducción. Esta función ya no es necesaria.
+El archivo. TPX proporcionó una manera fácil de incluir `MarkupRules.xml` los `ResourcesLocks.xml` archivos y cuando el archivo. xlf se envió para su traducción. Esta funcionalidad ya no es necesaria.
 
-Si tienes traducciones en un archivo .tpx que quieres recuperar, tan solo cambia el nombre de la extensión del archivo .tpx a .zip. Esto permitirá que abras el contenido y lo extraigas con el Explorador de archivos o con cualquier herramienta compatible con .zip.
+Si tiene traducciones en un archivo. TPX que necesita recuperar, simplemente cambie el nombre de la extensión de archivo. TPX a. zip. Esto le permitirá abrir y extraer el contenido con el explorador de archivos o con cualquier herramienta compatible con. zip.
 
-## <a name="i-think-ive-done-everything-right-but-it-still-isnt-working"></a>Creo que lo he hecho todo bien, pero sigue sin funcionar
+## <a name="i-think-ive-done-everything-right-but-it-still-isnt-working"></a>Creo que he hecho todo bien, pero sigue sin funcionar
 
-Intenta hacerlo siguiendo estos pasos.
+Siga estos pasos.
 
-1. Agrega las traducciones con uno de los métodos ya descritos.
-2. Vuelca el archivo .pri (consulta [Opciones de la línea de comandos de MakePRI.exe](../../app-resources/makepri-exe-command-options.md)) para ver si las traducciones están en el archivo .pri. Las traducciones aparecerán con código de idioma y valor traducido así.
+1. Agregue traducciones con uno de los métodos ya descritos.
+2. Vuelque el archivo. PRI (consulte [MakePri.exe opciones de línea de comandos](../../app-resources/makepri-exe-command-options.md)) para ver si las traducciones están en el archivo. PRI. Las traducciones aparecerán con el código de idioma y el valor traducido de este modo.
    ```xml
    <Candidate qualifiers="Language-QPS-PLOC" type="String">
        <Value>[!!_Ŝéãřćĥ_!!]</Value>
    </Candidate>
    ```
-3. Compila desde el símbolo del sistema; el error que se genera puede contener más detalles que el resultado de la compilación.
+3. Compilar desde un símbolo del sistema; el error resultante puede tener más detalles de lo que se muestra en la salida de la compilación.
 
-## <a name="my-app-failed-certification-to-the-microsoft-store"></a>Mi aplicación no ha obtenido la certificación de Microsoft Store
+## <a name="my-app-failed-certification-to-the-microsoft-store"></a>La aplicación no pudo obtener la certificación del Microsoft Store
 
-Antes de iniciar el proceso de certificación de Microsoft Store, debes excluir el archivo `<project-name>.qps-ploc.xlf` del proyecto. Pseudoidioma se usa para detectar posibles problemas o errores de localización, pero no es un idioma válido para Microsoft Store. Si no se quita, la aplicación producirá un error durante el proceso de certificación de Microsoft Store.
+Antes de iniciar el proceso de certificación de Microsoft Store, debe excluir el `<project-name>.qps-ploc.xlf` archivo del proyecto. Pseudo Language se usa para detectar posibles problemas de localizabilidad o errores, pero no es un lenguaje Microsoft Store válido. Si no se quita, se producirá un error en la aplicación durante el proceso de certificación de Microsoft Store.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Usar el kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md)
+* [Usar el Kit de herramientas para aplicaciones multilingües 4.0](use-mat.md)
 * [Microsoft Translator](https://www.microsofttranslator.com/)
-* [Opciones de la línea de comandos de MakePri. exe](../../app-resources/makepri-exe-command-options.md)
+* [Opciones de línea de comandos de MakePri.exe](../../app-resources/makepri-exe-command-options.md)

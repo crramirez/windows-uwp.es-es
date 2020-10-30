@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo administrar mediante programación la navegación con el foco con el teclado, el controlador de juegos y las herramientas de accesibilidad en una aplicación de Windows.
+description: Obtenga información sobre cómo administrar mediante programación la navegación con el foco con el teclado, el controlador de juegos y las herramientas de accesibilidad en una aplicación de Windows.
 title: Navegación con foco mediante programación con teclado, controlador para juegos y herramientas de accesibilidad
 label: Programmatic focus navigation
 keywords: teclado, dispositivo de juego, control remoto, navegación, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ef2e62404766d822343537cea2aca8e512482093
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b64eeafda6abe146d05e29d491850da3b36a1999
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220538"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032178"
 ---
 # <a name="programmatic-focus-navigation"></a>Navegación con foco mediante programación
 

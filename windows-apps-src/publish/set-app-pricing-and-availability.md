@@ -1,17 +1,17 @@
 ---
-Description: La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes.
+description: La página Precios y disponibilidad del proceso de envío de la aplicación permite determinar cuánto costará tu aplicación, independientemente de si ofreces una prueba gratuita y cómo, cuándo y dónde estará disponible para los clientes.
 title: Establecer los precios y la disponibilidad de las aplicaciones
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, precio, disponible, reconocible, evaluación gratuita, pruebas, prueba, aplicaciones, fecha de lanzamiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 9956463471b310835aedf517817878d526cc810d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f7373ae49b867e9fb1b59f6d7fb18e32f4d7bf65
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164109"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029928"
 ---
 # <a name="set-app-pricing-and-availability"></a>Establecer los precios y la disponibilidad de las aplicaciones
 
@@ -55,9 +55,9 @@ Hay dos tipos de pruebas que puede elegir y tiene la opción de configurar la fe
 
 ### <a name="time-limited"></a>Limitado por tiempo
 
-Elija **tiempo limitado** para permitir que los clientes prueben su aplicación de forma gratuita durante un determinado número de días: **1 día**, **7 días**, **15 días**o **30 días**. Puede limitar las características agregando código para [excluir o limitar características en la versión de prueba](../monetize/in-app-purchases-and-trials.md), o puede permitir que los clientes tengan acceso a toda la funcionalidad durante ese período de tiempo. 
+Elija **tiempo limitado** para permitir que los clientes prueben su aplicación de forma gratuita durante un determinado número de días: **1 día** , **7 días** , **15 días** o **30 días** . Puede limitar las características agregando código para [excluir o limitar características en la versión de prueba](../monetize/in-app-purchases-and-trials.md), o puede permitir que los clientes tengan acceso a toda la funcionalidad durante ese período de tiempo. 
 > [!NOTE]
-> Las pruebas de tiempo limitado no se muestran a los clientes de Windows 10 Build 10.0.10586 o una versión anterior, o a los clientes de Windows Phone 8,1 y versiones anteriores.
+> Las pruebas de tiempo limitado no se muestran a los clientes de Windows 10 Build 10.0.10586 o una versión anterior, o a los clientes de Windows Phone 8,1 y versiones anteriores.
 
 ### <a name="unlimited"></a>Sin límite
 
@@ -70,7 +70,7 @@ De forma predeterminada, la versión de prueba estará disponible tan pronto com
 >[!NOTE]
 > Estas fechas solo se aplican a los clientes de Windows 10 (incluida Xbox). Si la aplicación está disponible para los clientes en versiones anteriores del sistema operativo, la evaluación se ofrecerá a los clientes durante el tiempo que esté disponible el producto. 
 
-Para establecer las fechas en las que se debe ofrecer la versión de evaluación a los clientes de Windows 10, cambie la lista desplegable **comienza en** y/o **finaliza en en** y, a **continuación, elija**la fecha y la hora. Si lo hace, puede elegir la hora **UTC** para que la hora seleccionada sea hora universal coordinada (UTC), o bien elegir **local** , de modo que estas horas se usen en cada zona horaria asociada a un mercado. (Tenga en cuenta que para los mercados que incluyen más de una zona horaria, solo se utilizará una zona horaria en ese mercado. En el Estados Unidos, se usa la zona horaria oriental). Puede seleccionar **personalizar para mercados específicos** si desea establecer fechas diferentes para cualquier mercado...
+Para establecer las fechas en las que se debe ofrecer la versión de evaluación a los clientes de Windows 10, cambie la lista desplegable **comienza en** y/o **finaliza en en** y, a **continuación, elija** la fecha y la hora. Si lo hace, puede elegir la hora **UTC** para que la hora seleccionada sea hora universal coordinada (UTC), o bien elegir **local** , de modo que estas horas se usen en cada zona horaria asociada a un mercado. (Tenga en cuenta que para los mercados que incluyen más de una zona horaria, solo se utilizará una zona horaria en ese mercado. En el Estados Unidos, se usa la zona horaria oriental). Puede seleccionar **personalizar para mercados específicos** si desea establecer fechas diferentes para cualquier mercado...
 
 
 ## <a name="sale-pricing"></a>Precio de oferta

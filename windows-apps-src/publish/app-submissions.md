@@ -1,22 +1,22 @@
 ---
-Description: Una vez que hayas creado tu aplicación reservando un nombre, puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un envío.
+description: Una vez que hayas creado tu aplicación reservando un nombre, puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un envío.
 title: Envíos de aplicaciones
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: lista de comprobación, Windows, UWP, envío, envío, juego, aplicación, envío
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 99b4d7412727e5f195c32d3f3c21fe82b284e658
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: d38cf2b8e134983ae73c909f7036603eadcd6289
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219980"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031298"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
 
-Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío**.
+Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío** .
 
 Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Las actualizaciones que realice en el envío se guardarán, por lo que puede volver y trabajar en ella siempre que esté listo.
 
@@ -44,9 +44,9 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 | **Audiencia**                | Valor predeterminado: público público | [Audiencia](choose-visibility-options.md#audience) |
 | **Detectabilidad**                | Valor predeterminado: hacer que esta aplicación esté disponible y reconocible en el almacén | [Detectabilidad](choose-visibility-options.md#discoverability) |
 | **Programación**                  | Valor predeterminado: liberar lo antes posible        | [Configurar la programación precisa del lanzamiento](configure-precise-release-scheduling.md) |
-| **Precio base**                | Obligatorio                                    | [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md)              |
+| **Precio base**                | Requerido                                    | [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md)              |
 | **Evaluación gratuita**                | Valor predeterminado: sin prueba gratuita                      | [Evaluación gratuita](set-app-pricing-and-availability.md#free-trial)              |
-| **Precio de oferta**              | Opcional                                    | [Poner aplicaciones y complementos en oferta](put-apps-and-add-ons-on-sale.md)           |
+| **Precio de oferta**              | Opcionales                                    | [Poner aplicaciones y complementos en oferta](put-apps-and-add-ons-on-sale.md)           |
 | **Licencias organizativas**    | Valor predeterminado: Permitir que las organizaciones adquieran licencias por volumen | [Opciones de licencia organizativas](organizational-licensing.md)        |
       |
 
@@ -55,14 +55,14 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 | Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Categoría y subcategoría**  | Obligatorio                                    | [Tabla de categoría y subcategoría](category-and-subcategory-table.md)       |
+| **Categoría y subcategoría**  | Requerido                                    | [Tabla de categoría y subcategoría](category-and-subcategory-table.md)       |
 | **Dirección URL de la directiva de privacidad**            | Necesario para muchas aplicaciones. Consulta el [contrato de desarrollador de aplicaciones](/legal/windows/agreements/app-developer-agreement) y las [directivas de Microsoft Store](store-policies.md#105-personal-information) | [Dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url)        |
-| **Sitio web**                   | Opcional                                    | [Sitio web](enter-app-properties.md#website)                   |
+| **Sitio web**                   | Opcionales                                    | [Sitio web](enter-app-properties.md#website)                   |
 | **Información de contacto de soporte técnico**      | Obligatorio si el producto está disponible en Xbox; de lo contrario, opcional (pero recomendado)                                   | [Información de contacto de soporte técnico](enter-app-properties.md#support-contact-info)              |
 | **Configuración del juego**             | Opcional (solo es aplicable a juegos)         | [Configuración del juego](enter-app-properties.md#game-settings) |
-| **Modo de pantalla**             | Opcional                   | [Modo de pantalla](enter-app-properties.md#display-mode) |
+| **Modo de presentación**             | Opcionales                   | [Modo de presentación](enter-app-properties.md#display-mode) |
 | **Declaraciones de producto**          | Valor predeterminado: Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble; Windows puede incluir datos de la aplicación en las copias de seguridad automáticas en OneDrive | [Declaraciones de producto](./product-declarations.md) |
-| **Requisitos del sistema**      | Opcional                                    | [Requisitos del sistema](enter-app-properties.md#system-requirements)      |
+| **Requisitos del sistema**      | Opcionales                                    | [Requisitos del sistema](enter-app-properties.md#system-requirements)      |
 
 <span/>
 
@@ -70,7 +70,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 | Nombre del campo                    | Notas                                       | Para obtener más información                          |
 |-------------------------------|---------------------------------------------|----------------------------------------|
-| **Clasificaciones por edades**               | Obligatorio                                    | [Clasificaciones por edades](age-ratings.md)          |
+| **Clasificaciones por edades**               | Requerido                                    | [Clasificaciones por edades](age-ratings.md)          |
 
 <span/>
 
@@ -91,18 +91,18 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | Nombre del campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Descripción**               | Obligatorio                                    | [Escribir una excelente descripción de la aplicación](write-a-great-app-description.md) |
-| **Novedades de esta versión**   | Opcional                                 | [Notas de la versión](create-app-store-listings.md#whats-new-in-this-version)       |
-| **Funciones de la aplicación**              | Opcional                                    | [Características del producto](create-app-store-listings.md#product-features)         |
+| **Novedades de esta versión**   | Opcionales                                 | [Notas de la versión](create-app-store-listings.md#whats-new-in-this-version)       |
+| **Funciones de la aplicación**              | Opcionales                                    | [Características del producto](create-app-store-listings.md#product-features)         |
 | **Capturas de pantalla**               | Obligatorio (al menos una captura de pantalla; se recomiendan cuatro o más)          | [Capturas de pantalla](app-screenshots-and-images.md#screenshots)          |
 | **Logotipos de Store**               | Recomendar necesario para algunas versiones del sistema operativo | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
-| **Clips finales**                  | Opcional                                    | [Clips finales](app-screenshots-and-images.md#trailers)                | 
+| **Clips finales**                  | Opcionales                                    | [Clips finales](app-screenshots-and-images.md#trailers)                | 
 | **Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)**     | Recomendado        | [Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imágenes de Xbox**     | Necesario para la presentación adecuada si se publica en Xbox        | [Imágenes de Xbox](app-screenshots-and-images.md#xbox-images) |
-| **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
-| **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
-| **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |
-| **Términos de licencia adicionales**  | Opcional                                    | [Términos de licencia adicionales](create-app-store-listings.md#additional-license-terms) |
-| **Desarrollado por**              | Opcional                                    | [Desarrollado por](create-app-store-listings.md#developed-by)                   |
+| **Campos adicionales**  | Opcionales                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
+| **Términos de búsqueda**              | Opcionales                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
+| **Información de copyright y marca comercial** | Opcionales                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |
+| **Términos de licencia adicionales**  | Opcionales                                    | [Términos de licencia adicionales](create-app-store-listings.md#additional-license-terms) |
+| **Desarrollado por**              | Opcionales                                    | [Desarrollado por](create-app-store-listings.md#developed-by)                   |
 
 
 <span/>

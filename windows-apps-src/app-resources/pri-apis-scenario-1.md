@@ -1,17 +1,17 @@
 ---
-Description: En este escenario, crearemos una nueva aplicación para representar nuestro sistema de compilación personalizado. Vamos a crear un indexador de recursos y agregarle cadenas y otros tipos de recursos. A continuación, generaremos y volcaremos un archivo PRI.
+description: En este escenario, crearemos una nueva aplicación para representar nuestro sistema de compilación personalizado. Vamos a crear un indexador de recursos y agregarle cadenas y otros tipos de recursos. A continuación, generaremos y volcaremos un archivo PRI.
 title: Escenario 1 generación de un archivo PRI a partir de recursos de cadena y archivos de recursos
 template: detail.hbs
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: 81ad50f5a23bbb660ba44709e0ba828cff2ae5ee
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 44f4b8297cc1a34a378af137f75babca64e4edf2
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174069"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031678"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Escenario 1: generar un archivo PRI a partir de recursos de cadena y archivos de recursos
 En este escenario, usaremos las [API de indexación de recursos de paquetes (PRI)](/windows/desktop/menurc/pri-indexing-reference) para crear una nueva aplicación que represente el sistema de compilación personalizado. El objetivo de este sistema de compilación personalizado es crear archivos PRI para una aplicación de UWP de destino. Por lo tanto, como parte de este tutorial, vamos a crear algunos archivos de recursos de ejemplo (que contienen cadenas y otros tipos de recursos) para representar los recursos de la aplicación UWP de destino.
@@ -30,7 +30,7 @@ Las API de PRI se declaran en el archivo de encabezado MrmResourceIndexer. h (qu
 #include <MrmResourceIndexer.h>
 ```
 
-Las API se implementan en MrmSupport.dll, a la que se tiene acceso vinculando a la biblioteca estática MrmSupport. lib. Abra **las propiedades**del proyecto, haga clic en entrada del **vinculador**  >  **Input**, edite **AdditionalDependencies** y agregue `MrmSupport.lib` .
+Las API se implementan en MrmSupport.dll, a la que se tiene acceso vinculando a la biblioteca estática MrmSupport. lib. Abra **las propiedades** del proyecto, haga clic en entrada del **vinculador**  >  **Input** , edite **AdditionalDependencies** y agregue `MrmSupport.lib` .
 
 Compile la solución y, a continuación, copie `MrmSupport.dll` desde `C:\Program Files (x86)\Windows Kits\10\bin\<WindowsTargetPlatformVersion>\x64\` a la carpeta de salida de la compilación (probablemente `C:\Users\%USERNAME%\source\repos\CBSConsoleApp\x64\Debug\` ).
 
@@ -131,7 +131,7 @@ MrmResourceIndexerHandle indexer;
     &indexer));
 ```
 
-A continuación se muestra una explicación de los argumentos que se pasan a **MrmCreateResourceIndexer**.
+A continuación se muestra una explicación de los argumentos que se pasan a **MrmCreateResourceIndexer** .
 
 - El nombre de familia de paquete de nuestra aplicación de UWP de destino, que se usará como nombre del mapa de recursos cuando se genere posteriormente un archivo PRI a partir de este indexador de recursos.
 - La raíz del proyecto de la aplicación de UWP de destino. En otras palabras, la ruta de acceso a los archivos de recursos. Lo especificamos para que podamos especificar las rutas de acceso relativas a esa raíz en las posteriores llamadas API al mismo indexador de recursos.
@@ -148,7 +148,7 @@ El siguiente paso consiste en agregar nuestros recursos al indizador de recursos
 ::ThrowIfFailed(::MrmIndexFile(indexer, L"ms-resource:///Files/sample-image.png", L"sample-image.png", L""));
 ```
 
-En la llamada a **MrmIndexFile**, el valor L "MS-Resource:///files/sample-image.png" es el URI del recurso. El primer segmento de la ruta de acceso es "files", y eso es lo que se usará como el nombre del subárbol del mapa de recursos cuando se genere posteriormente un archivo PRI a partir de este indexador de recursos.
+En la llamada a **MrmIndexFile** , el valor L "MS-Resource:///files/sample-image.png" es el URI del recurso. El primer segmento de la ruta de acceso es "files", y eso es lo que se usará como el nombre del subárbol del mapa de recursos cuando se genere posteriormente un archivo PRI a partir de este indexador de recursos.
 
 Una vez que se ha informado del indexador de recursos sobre nuestros archivos de recursos, es el momento de hacer que se genere un archivo PRI en el disco llamando a la función [**MrmCreateResourceFile**](/windows/desktop/menurc/mrmcreateresourcefile) .
 
@@ -168,7 +168,7 @@ Dado que un archivo PRI es binario, es más fácil ver lo que se acaba de genera
 ::ThrowIfFailed(::MrmDumpPriFile(filePathPRI.c_str(), nullptr, MrmDumpType::MrmDumpType_Basic, filePathPRIDumpBasic.c_str()));
 ```
 
-A continuación se muestra una explicación de los argumentos que se pasan a **MrmDumpPriFile**.
+A continuación se muestra una explicación de los argumentos que se pasan a **MrmDumpPriFile** .
 
 - Ruta de acceso al archivo PRI que se va a volcar. No usamos el indexador de recursos en esta llamada (acabamos de destruirlo), por lo que es necesario especificar una ruta de acceso completa al archivo.
 - No hay ningún archivo de esquema. Veremos qué es un esquema más adelante en el tema.
@@ -225,7 +225,7 @@ Esto es lo que el archivo PRI, volcado a XML aquí, contiene.
 
 La información comienza con un mapa de recursos, que se denomina con el nombre de familia de paquete de nuestra aplicación de UWP de destino. El mapa de recursos incluye dos subárboles de mapa de recursos: uno para los recursos de archivo indexados y otro para nuestros recursos de cadena. Observe cómo se ha insertado el nombre de familia de paquete en todos los URI de recurso.
 
-El primer recurso de cadena se *EnOnlyString* de `en-US\resources.resw` y tiene un solo candidato (que coincide con el calificador *Language-en-US* ). A continuación se incluye *LocalizedString1* de `resources.resw` y `en-US\resources.resw` . Por lo tanto, tiene dos candidatos: uno que coincide con *-en-US*y un candidato neutro de reserva que coincide con cualquier contexto. Del mismo modo, *LocalizedString2* tiene dos candidatos: *Language-de-de*y neutral. Y, por último, *NeutralOnlyString* solo existe en formato neutro. Le he dado ese nombre para que quede claro que no está diseñado para ser localizado.
+El primer recurso de cadena se *EnOnlyString* de `en-US\resources.resw` y tiene un solo candidato (que coincide con el calificador *Language-en-US* ). A continuación se incluye *LocalizedString1* de `resources.resw` y `en-US\resources.resw` . Por lo tanto, tiene dos candidatos: uno que coincide con *-en-US* y un candidato neutro de reserva que coincide con cualquier contexto. Del mismo modo, *LocalizedString2* tiene dos candidatos: *Language-de-de* y neutral. Y, por último, *NeutralOnlyString* solo existe en formato neutro. Le he dado ese nombre para que quede claro que no está diseñado para ser localizado.
 
 ## <a name="summary"></a>Resumen
 En este escenario, hemos mostrado cómo usar las [API de indexación de recursos de paquetes (PRI)](/windows/desktop/menurc/pri-indexing-reference) para crear un indizador de recursos. Hemos agregado recursos de cadena y archivos de recursos al indexador de recursos. Después, usamos el indexador de recursos para generar un archivo PRI binario. Finalmente, volcamos el archivo binario PRI en forma de XML para que se pueda confirmar que contiene la información que se esperaba.

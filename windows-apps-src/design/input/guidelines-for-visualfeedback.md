@@ -1,5 +1,5 @@
 ---
-Description: Use los comentarios visuales para mostrar a los usuarios Cuándo se detectan, interpretan y controlan sus interacciones con una aplicación de Windows.
+description: Use los comentarios visuales para mostrar a los usuarios Cuándo se detectan, interpretan y controlan sus interacciones con una aplicación de Windows.
 title: Información visual
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
@@ -8,18 +8,18 @@ keywords: información visual,información de foco,información táctil,informac
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1afc1c884a7a01ef1021f37476d1e29430c62e3c
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b82ff29de09766aa348a548c5bd484b7c46db31f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219838"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030518"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
 Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se controlan sus interacciones. La información visual puede ayudar a los usuarios al promover la interacción. Indica si una interacción se ha realizado correctamente, lo que mejora la sensación de control del usuario. También transmite los estados del sistema y reduce los errores.
 
-> **API importantes**:  [**Windows. Devices. Input**](/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Core**](/uwp/api/Windows.UI.Core)
+> **API importantes** :  [**Windows. Devices. Input**](/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Core**](/uwp/api/Windows.UI.Core)
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -58,7 +58,7 @@ Estos son algunos ejemplos de visualizaciones de contacto integradas en Windows.
 
 Todas las aplicaciones de Windows admiten elementos visuales de foco alrededor de controles interactivos más definidos en la aplicación. Estos nuevos elementos visuales de foco son totalmente personalizables y se pueden deshabilitar cuando sea necesario.
 
-En el caso de la **experiencia de 10 pies** típica del uso de Xbox y TV, Windows admite **revelar el foco**, un efecto de iluminación que anima el borde de los elementos que pueden recibir el foco, como un botón, cuando se centra a través de la entrada del teclado o del controlador de juegos.
+En el caso de la **experiencia de 10 pies** típica del uso de Xbox y TV, Windows admite **revelar el foco** , un efecto de iluminación que anima el borde de los elementos que pueden recibir el foco, como un botón, cuando se centra a través de la entrada del teclado o del controlador de juegos.
 
 ## <a name="color-branding--customizing"></a>Personalización de marca de color y personalización
 
@@ -67,7 +67,7 @@ En el caso de la **experiencia de 10 pies** típica del uso de Xbox y TV, Window
 Los elementos visuales de enfoque de alta visibilidad constan de dos partes: el borde principal y el borde secundario. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario.
 ![Contornos visuales de foco de alta visibilidad](images/FocusRectRedlines.png)
 
-Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVisualPrimaryThickness** o **FocusVisualSecondaryThickness**, respectivamente:
+Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVisualPrimaryThickness** o **FocusVisualSecondaryThickness** , respectivamente:
 ```XAML
 <Slider Width="200" FocusVisualPrimaryThickness="5" FocusVisualSecondaryThickness="2"/>
 ```
@@ -75,7 +75,7 @@ Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVis
 
 El margen es una propiedad de tipo [**Grosor**](/dotnet/api/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Vea a continuación: el ![ foco visual del margen visual de ancho de la visibilidad solo inferior](images/FocusThicknessSide.png)
 
-El margen es el espacio entre los límites visuales del control y el inicio del *borde secundario*de los objetos visuales de foco. El margen predeterminado se **1px** fuera de los límites del control. Puede editar este margen para cada control, cambiando la propiedad **FocusVisualMargin** :
+El margen es el espacio entre los límites visuales del control y el inicio del *borde secundario* de los objetos visuales de foco. El margen predeterminado se **1px** fuera de los límites del control. Puede editar este margen para cada control, cambiando la propiedad **FocusVisualMargin** :
 ```XAML
 <Slider Width="200" FocusVisualMargin="-5"/>
 ```
@@ -83,7 +83,7 @@ El margen es el espacio entre los límites visuales del control y el inicio del 
 
 *Un margen negativo alejará el borde del centro del control y un margen positivo acercará el borde hacia el centro del control.*
 
-Para desactivar elementos visuales de foco en el control por completo, simplemente se deshabilitó **UseSystemFocusVisuals**:
+Para desactivar elementos visuales de foco en el control por completo, simplemente se deshabilitó **UseSystemFocusVisuals** :
 ```XAML
 <Slider Width="200" UseSystemFocusVisuals="False"/>
 ```
@@ -133,6 +133,6 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 - [Entrada: muestra de gestos de Windows 8](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Entrada: ejemplo de manipulaciones y gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [Muestra de entrada táctil de DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
- 
+ 
 
- 
+ 

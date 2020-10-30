@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo desarrollar un diseño inclusivo con aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
+description: Obtenga información sobre cómo desarrollar un diseño inclusivo con aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
 ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Diseño de software inclusivo en Windows 10
 label: Designing inclusive software
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 795344a7a03344c5f8aeea26252e1e0610d9d8c3
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 20a168fa9073aaf09055481be836799b4a3f00e7
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219868"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029888"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Diseño de software inclusivo para Windows 10  
 
@@ -30,13 +30,13 @@ El diseño inclusivo crea mejores productos para todos. Se trata de considerar l
 ## <a name="inclusive-design-principles"></a>Principios de diseño inclusivo  
 Los siguientes 4 principios están impulsando el cambio de Microsoft hacia el diseño inclusivo:
 
-**Piensa de forma universal**: nos enfocamos en lo que unifica a las personas (motivaciones, relaciones y capacidades humanas). Esto nos lleva a tener en cuenta el impacto social más amplio de nuestro trabajo. El resultado es una experiencia que tiene una diversidad de formas para que todas las personas participen.
+**Piensa de forma universal** : nos enfocamos en lo que unifica a las personas (motivaciones, relaciones y capacidades humanas). Esto nos lleva a tener en cuenta el impacto social más amplio de nuestro trabajo. El resultado es una experiencia que tiene una diversidad de formas para que todas las personas participen.
 
-**Haz que sea personal**: a continuación, nos desafiamos a crear conexiones emocionales. Las interacciones de persona a persona pueden inspirar una mejor interacción de la persona con la tecnología. Las circunstancias particulares de una persona pueden mejorar el diseño para todos los usuarios. El resultado es una experiencia que parece creada especialmente para una persona.
+**Haz que sea personal** : a continuación, nos desafiamos a crear conexiones emocionales. Las interacciones de persona a persona pueden inspirar una mejor interacción de la persona con la tecnología. Las circunstancias particulares de una persona pueden mejorar el diseño para todos los usuarios. El resultado es una experiencia que parece creada especialmente para una persona.
 
-**Mantenlo simple**: Empezamos con la simplicidad como el unificador fundamental. Cuando se reduce el desorden, las personas saben qué hacer a continuación. Están inspiradas a avanzar hacia espacios que sean limpios, livianos y abiertos. El resultado es una experiencia realista e intemporal.
+**Mantenlo simple** : Empezamos con la simplicidad como el unificador fundamental. Cuando se reduce el desorden, las personas saben qué hacer a continuación. Están inspiradas a avanzar hacia espacios que sean limpios, livianos y abiertos. El resultado es una experiencia realista e intemporal.
 
-**Crea deleite**: las experiencias agradables provocan fascinación y descubrimiento. Algunas veces es mágico. Algunas veces es un detalle que es simplemente perfecto. Diseñamos estos momentos para que se sientan como un ansiado cambio de ritmo. El resultado es una experiencia que tiene impulso y flujo.
+**Crea deleite** : las experiencias agradables provocan fascinación y descubrimiento. Algunas veces es mágico. Algunas veces es un detalle que es simplemente perfecto. Diseñamos estos momentos para que se sientan como un ansiado cambio de ritmo. El resultado es una experiencia que tiene impulso y flujo.
 
 ## <a name="inclusive-design-users"></a>Usuarios de diseño inclusivo  
 Existen básicamente dos tipos de usuarios de la tecnología de asistencia (AT):

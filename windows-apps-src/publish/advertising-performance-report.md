@@ -1,24 +1,24 @@
 ---
-Description: Para ver los datos de rendimiento de las unidades de anuncios de las aplicaciones, use el informe de rendimiento de publicidad del centro de Partners.
+description: Para ver los datos de rendimiento de las unidades de anuncios de las aplicaciones, use el informe de rendimiento de publicidad del centro de Partners.
 title: Informe de rendimiento de la publicidad
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ea0fe6f29059a2b9ef8e5ce728d883d5349d0468
-ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
+ms.openlocfilehash: 2366b6828a1de379d0442f3b72366c091908ba22
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878428"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032008"
 ---
 # <a name="advertising-performance-report"></a>Informe de rendimiento de la publicidad
 
 
 El **Informe de rendimiento de publicidad** del [centro de Partners](https://partner.microsoft.com/dashboard) muestra el rendimiento de las [unidades de anuncios](in-app-ads.md) , incluidos los anuncios de la comunidad. Este informe incluye datos de varios proveedores de AD en aplicaciones UWP que usan la [mediación de anuncios](in-app-ads.md#mediation).
 
-Para ver este informe, expanda **analizar** en el menú de navegación izquierdo y, a continuación, seleccione **rendimiento de ad**. Puede ver estos datos en el centro de Partners o descargar los datos del informe para verlos sin conexión haciendo clic en los iconos de flecha de la página. Como alternativa, puede recuperar estos datos mediante programación con el método [Get ad performance Data](../monetize/get-ad-performance-data.md) en nuestra API de [REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
+Para ver este informe, expanda **analizar** en el menú de navegación izquierdo y, a continuación, seleccione **rendimiento de ad** . Puede ver estos datos en el centro de Partners o descargar los datos del informe para verlos sin conexión haciendo clic en los iconos de flecha de la página. Como alternativa, puede recuperar estos datos mediante programación con el método [Get ad performance Data](../monetize/get-ad-performance-data.md) en nuestra API de [REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
 Al ver los informes de rendimiento de anuncios, tenga en cuenta que los datos de informes de los últimos tres días pueden cambiar a medida que reciben y procesan datos nuevos de diversos orígenes. Además, las reactivaciones de datos pueden producir hasta 90 días en el pasado.
 
@@ -28,9 +28,9 @@ Cerca de la parte superior de la página, puede seleccionar el período de tiemp
 
 También puede expandir **filtros** para filtrar todos los datos de esta página por unidad de anuncio, aplicación, proveedor de AD y tipo de dispositivo. Puede elegir entre las siguientes opciones:
 
-* **Agregación**: elija cómo se agregan los datos del informe y cómo se pueden filtrar más. De forma predeterminada, este filtro se establece en **todas las unidades de anuncios**. Opcionalmente, puede cambiar este filtro a **todas las aplicaciones** o a **todos los proveedores de ad**, o bien puede optar por agregarlo por una aplicación específica en la que use anuncios.
-* **Proveedores de ad**: filtre el informe por los datos de rendimiento de determinados [proveedores de ad](in-app-ads.md#paid-networks). De forma predeterminada, el informe muestra los datos de todos los proveedores de ad. Esta opción se deshabilitará si selecciona **todos los proveedores de ad** en el menú desplegable **agregación** .
-* **Dispositivo**: filtre el informe por los datos de rendimiento de determinados tipos de dispositivos. De forma predeterminada, el informe muestra los datos de todos los tipos de dispositivos.
+* **Agregación** : elija cómo se agregan los datos del informe y cómo se pueden filtrar más. De forma predeterminada, este filtro se establece en **todas las unidades de anuncios** . Opcionalmente, puede cambiar este filtro a **todas las aplicaciones** o a **todos los proveedores de ad** , o bien puede optar por agregarlo por una aplicación específica en la que use anuncios.
+* **Proveedores de ad** : filtre el informe por los datos de rendimiento de determinados [proveedores de ad](in-app-ads.md#paid-networks). De forma predeterminada, el informe muestra los datos de todos los proveedores de ad. Esta opción se deshabilitará si selecciona **todos los proveedores de ad** en el menú desplegable **agregación** .
+* **Dispositivo** : filtre el informe por los datos de rendimiento de determinados tipos de dispositivos. De forma predeterminada, el informe muestra los datos de todos los tipos de dispositivos.
 
 ## <a name="overall-performance"></a>Rendimiento general
 
@@ -69,4 +69,4 @@ El informe de **rendimiento de publicidad** incluye datos de las siguientes mét
 * [Optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md)
 
 
- 
+ 

@@ -1,5 +1,5 @@
 ---
-Description: Las aplicaciones de escritorio pueden anclar iconos secundarios gracias al puente de escritorio.
+description: Las aplicaciones de escritorio pueden anclar iconos secundarios gracias al puente de escritorio.
 title: Anclar iconos secundarios de aplicaciones de escritorio
 label: Pin secondary tiles from desktop apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, puente de escritorio, iconos secundarios, PIN, anclaje, Inicio rápido, ejemplo de código, ejemplo, secondarytile, aplicación de escritorio, Win32, WinForms, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: f0b1e167b0ce2e91b00b7facbdd53709efdc4887
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 1c6451510816e36bed5574f0ae69254c9f4d34f6
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100273"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030658"
 ---
 # <a name="pin-secondary-tiles-from-desktop-apps"></a>Anclar iconos secundarios de aplicaciones de escritorio
 
@@ -22,7 +22,7 @@ Gracias al [puente de escritorio](https://developer.microsoft.com/windows/bridge
 ![Captura de pantalla de iconos secundarios](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Requiere Fall Creators Update**: debe tener como destino el SDK 16299 y ejecutar la compilación 16299 o posterior para anclar los iconos secundarios de las aplicaciones de puente de escritorio.
+> **Requiere Fall Creators Update** : debe tener como destino el SDK 16299 y ejecutar la compilación 16299 o posterior para anclar los iconos secundarios de las aplicaciones de puente de escritorio.
 
 Agregar un icono secundario desde la aplicación de WPF o WinForms es muy similar a una aplicación UWP pura. La única diferencia es que debe especificar el identificador de ventana principal (HWND). Esto se debe a que al anclar un icono, Windows muestra un cuadro de diálogo modal que pide al usuario que confirme si desea anclar el icono. Si la aplicación de escritorio no configura el objeto SecondaryTile con la ventana propietaria, Windows no sabrá dónde dibujar el cuadro de diálogo y se producirá un error en la operación.
 
@@ -46,7 +46,7 @@ public interface IInitializeWithWindow
 }
 ```
 
-Como alternativa, si usa C++, agregue una referencia al archivo de encabezado **shobjidl. h** en el código. Este archivo de encabezado contiene la declaración de la interfaz *IInitializeWithWindow*.
+Como alternativa, si usa C++, agregue una referencia al archivo de encabezado **shobjidl. h** en el código. Este archivo de encabezado contiene la declaración de la interfaz *IInitializeWithWindow* .
 
 
 ## <a name="initialize-the-secondary-tile"></a>Inicializar el icono secundario
@@ -90,7 +90,7 @@ bool isPinned = await tile.RequestCreateAsync();
 ## <a name="send-tile-notifications"></a>Enviar notificaciones de icono
 
 > [!IMPORTANT]
-> **Requiere la versión 17134,81 de abril de 2018 o posterior**: debe ejecutar la compilación 17134,81 o posterior para enviar notificaciones de icono o de distintivo a los mosaicos secundarios desde las aplicaciones de puente de escritorio. Antes de esta actualización de servicio. 81, se produciría una excepción 0x80070490 *elemento no encontrado* al enviar notificaciones de icono o distintivo a mosaicos secundarios desde aplicaciones de puente de escritorio.
+> **Requiere la versión 17134,81 de abril de 2018 o posterior** : debe ejecutar la compilación 17134,81 o posterior para enviar notificaciones de icono o de distintivo a los mosaicos secundarios desde las aplicaciones de puente de escritorio. Antes de esta actualización de servicio. 81, se produciría una excepción 0x80070490 *elemento no encontrado* al enviar notificaciones de icono o distintivo a mosaicos secundarios desde aplicaciones de puente de escritorio.
 
 El envío de notificaciones de icono o de distintivo es igual que las aplicaciones de UWP. Consulte [envío de una notificación de icono local](sending-a-local-tile-notification.md) para comenzar.
 

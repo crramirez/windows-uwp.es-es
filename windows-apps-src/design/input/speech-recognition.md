@@ -1,5 +1,5 @@
 ---
-Description: Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas.
+description: Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas.
 title: Reconocimiento de voz
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
@@ -8,19 +8,19 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 249af1260b261733454fa353adc695818d113afc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ad721bc64de87fc8bb1a56f687860738bebed56c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165899"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030058"
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 
 
 Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas.
 
-> **API importantes**: [ **Windows. Media. SpeechRecognition**](/uwp/api/Windows.Media.SpeechRecognition)
+> **API importantes** : [ **Windows. Media. SpeechRecognition**](/uwp/api/Windows.Media.SpeechRecognition)
 
 El reconocimiento de voz incluye un tiempo de ejecución de voz, varias API de reconocimiento para programar el tiempo de ejecución, gramáticas listas para usar para el dictado y la búsqueda en Internet, y una interfaz de usuario predeterminada del sistema que ayuda a los usuarios a descubrir y usar las funciones de reconocimiento de voz.
 
@@ -221,11 +221,11 @@ La gramática predeterminada de dictado de texto libre tiene la capacidad de rec
 La gramática de búsqueda web, como una gramática de dictado, contiene un gran número de palabras y frases que puede decir un usuario. Sin embargo, está optimizada para reconocer los términos que suelen usar las personas cuando buscan en la web.
 
 > [!NOTE]
-> Dado que las gramáticas de dictado predefinidas y de búsqueda web pueden ser grandes y, como están en línea (no en el dispositivo), es posible que el rendimiento no sea tan rápido como con una gramática personalizada instalada en el dispositivo.     
+> Debido a que las gramáticas predefinidas de dictado y búsqueda en Internet pueden ser grandes y se accede a ellas a través de Internet (no se encuentran en el dispositivo), su rendimiento puede no ser tan rápido como el de una gramática personalizada instalada en el dispositivo.     
 
 Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de entrada de voz y no requieren ningún esfuerzo de edición por su parte. Sin embargo, sí requieren una conexión a una red.
 
-Para usar restricciones de servicio Web, la compatibilidad con la entrada y la dictado de voz debe estar habilitada en la **configuración** activando la opción "ir a la información" en  **configuración-> privacidad-> voz, entrada manuscrita y escritura**.
+Para usar restricciones de servicio Web, la compatibilidad con la entrada y la dictado de voz debe estar habilitada en la **configuración** activando la opción "ir a la información" en  **configuración-> privacidad-> voz, entrada manuscrita y escritura** .
 
 Aquí se muestra cómo probar si la entrada de voz está habilitada y abrir la página Configuración-> privacidad-> voz, entrada manuscrita y escritura, si no lo está.
 
@@ -280,7 +280,7 @@ Usa un archivo XML de definición de comando de voz (VCD) para definir los coman
 
 Consulte [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint)/
 
-**Nota:**    El tipo de restricción que use dependerá de la complejidad de la experiencia de reconocimiento que desee crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
+**Nota:**  El tipo de restricción que use dependerá de la complejidad de la experiencia de reconocimiento que desee crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
 Para comenzar con las restricciones, consulta [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md).
 
 La gramática de dictado predefinida de la aplicación para Windows universal reconoce la mayoría de las palabras y frases cortas de un idioma. Se activa de manera predeterminada cuando se crea una instancia a un objeto reconocedor de voz sin restricciones personalizadas.
@@ -316,14 +316,14 @@ Cuando la aplicación intenta el reconocimiento de voz llamando a [**SpeechRecog
 
 Si usas una restricción basada en una gramática predefinida (de dictado o búsqueda web):
 
--   La pantalla **Escucha**.
--   La pantalla **Procesando**.
+-   La pantalla **Escucha** .
+-   La pantalla **Procesando** .
 -   La pantalla **Te he oído** o la pantalla de error.
 
 Si usas una restricción basada en una lista de palabras o frases, o bien una restricción basada en un archivo de gramática SRGS:
 
--   La pantalla **Escucha**.
--   La pantalla **Has dicho**, si lo que el usuario ha dicho pudiera interpretarse como más de un posible resultado.
+-   La pantalla **Escucha** .
+-   La pantalla **Has dicho** , si lo que el usuario ha dicho pudiera interpretarse como más de un posible resultado.
 -   La pantalla **Te he oído** o la pantalla de error.
 
 La siguiente imagen muestra un ejemplo del flujo entre pantallas de un reconocedor de voz que usa una restricción basada en un archivo de gramática SRGS. En este ejemplo, el reconocimiento de voz fue correcto.
@@ -334,7 +334,7 @@ La siguiente imagen muestra un ejemplo del flujo entre pantallas de un reconoced
 
 ![pantalla de reconocimiento final para una restricción basada en un archivo de gramática SGRS](images/speech-listening-complete.png)
 
-La pantalla **Escucha** puede proporcionar ejemplos de palabras o frases que la aplicación pueda reconocer. Aquí te mostramos cómo usar las propiedades de la clase [**SpeechRecognizerUIOptions**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions) (obtenida con una llamada a la propiedad [**SpeechRecognizer.UIOptions**](/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions)) para personalizar el contenido de la pantalla **Escucha**.
+La pantalla **Escucha** puede proporcionar ejemplos de palabras o frases que la aplicación pueda reconocer. Aquí te mostramos cómo usar las propiedades de la clase [**SpeechRecognizerUIOptions**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions) (obtenida con una llamada a la propiedad [**SpeechRecognizer.UIOptions**](/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions)) para personalizar el contenido de la pantalla **Escucha** .
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)

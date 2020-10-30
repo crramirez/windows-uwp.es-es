@@ -1,5 +1,5 @@
 ---
-Description: Un editor de métodos de entrada (IME) es un componente de software que permite al usuario escribir texto en un idioma que no se puede representar fácilmente en un teclado QWERTY estándar.
+description: Un editor de métodos de entrada (IME) es un componente de software que permite al usuario escribir texto en un idioma que no se puede representar fácilmente en un teclado QWERTY estándar.
 title: Editores de métodos de entrada (IME)
 label: Input Method Editors (IME)
 template: detail.hbs
@@ -7,12 +7,12 @@ keywords: IME, editor de métodos de entrada, entrada, interacción
 ms.date: 07/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e7782dea8cd634fd9fe3bac4a3e4c870cd680e9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1f70f08e61df1b609a0ab505e35ef314a90a91fd
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159949"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030088"
 ---
 # <a name="input-method-editors-ime"></a>Editores de métodos de entrada (IME)
 

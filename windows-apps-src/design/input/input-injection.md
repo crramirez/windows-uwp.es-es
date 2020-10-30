@@ -1,5 +1,5 @@
 ---
-Description: Simule y automatice la entrada desde dispositivos como el teclado, el mouse, el toque, el lápiz y el controlador para juegos en las aplicaciones de Windows.
+description: Simule y automatice la entrada desde dispositivos como el teclado, el mouse, el toque, el lápiz y el controlador para juegos en las aplicaciones de Windows.
 title: Simular la entrada del usuario a través de la inserción de entrada
 label: Input injection
 template: detail.hbs
@@ -7,30 +7,30 @@ keywords: dispositivo, digitalizador, entrada, interacción, inyección
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e4e1497ea30400c550cb0cbb2309801ff8145fd6
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 0cd1a56ca46c3e9ea401794ff5b9964545ce0c5d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219688"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030128"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>Simular la entrada del usuario a través de la inserción de entrada
 
 Simule y automatice los datos proporcionados por el usuario desde dispositivos como el teclado, el mouse, el toque, el lápiz y el controlador para juegos en las aplicaciones Windows.
 
-> **API importantes**: [ **Windows. UI. Input. preview. inyecciones**](/uwp/api/windows.ui.input.preview.injection)
+> **API importantes** : [ **Windows. UI. Input. preview. inyecciones**](/uwp/api/windows.ui.input.preview.injection)
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 La inserción de entradas permite a la aplicación Windows simular la entrada desde una variedad de dispositivos de entrada y dirigir esa entrada en cualquier parte, incluido fuera del área cliente de la aplicación (incluso en las aplicaciones que se ejecutan con privilegios de administrador, como el editor del registro).
 
 La inserción de entrada es útil para las aplicaciones y herramientas de Windows que necesitan proporcionar funcionalidad que incluye características de accesibilidad, pruebas (ad hoc, automatizadas) y acceso remoto y soporte técnico.
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Configuración
 
 Para usar las API de inserción de entrada en la aplicación de Windows, deberá agregar lo siguiente al manifiesto de la aplicación:
 
-1. Haga clic con el botón derecho en el archivo **Package. appxmanifest** y seleccione **Ver código**.
+1. Haga clic con el botón derecho en el archivo **Package. appxmanifest** y seleccione **Ver código** .
 1. Inserte lo siguiente en el `Package` nodo:
     - `xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"`
     - `IgnorableNamespaces="rescap"`
