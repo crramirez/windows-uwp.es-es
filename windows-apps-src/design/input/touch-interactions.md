@@ -8,12 +8,12 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 614d8c5340100ca5ba666493ccb23ec4d8ca8498
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: f173c90d43b7be795b8a87fe14dd3de9d6284da1
+ms.sourcegitcommit: da44cb95946440cd06ff36254d42ecefcdd87ce2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035058"
+ms.locfileid: "93063017"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -31,15 +31,15 @@ La aplicación de Windows incluye una serie de mecanismos distintos para control
 
 Las interacciones táctiles requieren tres cosas:
 
--   Una pantalla táctil.
--   El contacto directo (o la proximidad, si la pantalla dispone de sensores de proximidad y admite esta clase de detección) de uno o más dedos sobre dicha pantalla.
--   Movimiento de los contactos táctiles (o la falta de movimiento, según un umbral de tiempo).
+- Una pantalla táctil.
+- El contacto directo (o la proximidad, si la pantalla dispone de sensores de proximidad y admite esta clase de detección) de uno o más dedos sobre dicha pantalla.
+- Movimiento de los contactos táctiles (o la falta de movimiento, según un umbral de tiempo).
 
 Los datos de entrada proporcionados por el sensor táctil pueden ser:
 
--   Interpretados como un gesto físico para la manipulación directa de uno o más elementos de la interfaz de usuario (como el movimiento panorámico, girar, cambiar el tamaño o mover). Por el contrario, interactuar con un elemento a través de su ventana de propiedades, otro cuadro de diálogo u otra prestación de la interfaz de usuario se considera una manipulación indirecta.
--   Reconocidos como un método de entrada alternativo, como un mouse o un lápiz.
--   Usados para complementar o modificar aspectos de otros métodos de entrada, como difuminar un trazo de lápiz dibujado con un lápiz.
+- Interpretados como un gesto físico para la manipulación directa de uno o más elementos de la interfaz de usuario (como el movimiento panorámico, girar, cambiar el tamaño o mover). Por el contrario, interactuar con un elemento a través de su ventana de propiedades, otro cuadro de diálogo u otra prestación de la interfaz de usuario se considera una manipulación indirecta.
+- Reconocidos como un método de entrada alternativo, como un mouse o un lápiz.
+- Usados para complementar o modificar aspectos de otros métodos de entrada, como difuminar un trazo de lápiz dibujado con un lápiz.
 
 Normalmente, la entrada táctil implica la manipulación directa de un elemento en la pantalla. El elemento responde inmediatamente a cualquier contacto táctil dentro de su área de prueba de posicionamiento y reacciona correctamente a cualquier movimiento posterior de los contactos táctiles, incluso la eliminación.
 
@@ -88,19 +88,19 @@ La información visual es esencial cuando el usuario usa la entrada táctil para
 
 La selección de destinos se optimiza mediante:
 
--   Tamaños de destinos táctiles
+- Tamaños de destinos táctiles
 
     Unas directrices claras sobre el tamaño garantizan que las aplicaciones ofrecerán una interfaz de usuario cómoda que contenga objetos y controles cuyos destinos sean fáciles y seguros.
 
--   Geometría de contacto
+- Geometría de contacto
 
     Toda el área de contacto del dedo determina el objeto de destino más probable.
 
--   Scrubbing
+- Scrubbing
 
     La selección de destinos de los elementos dentro de un grupo se puede realizar fácilmente si se arrastra el dedo entre ellos (por ejemplo, los botones de radio). El elemento actual se activa cuando se libera el contacto táctil.
 
--   Inclinación de un lado a otro
+- Inclinación de un lado a otro
 
     Los elementos que se encuentra muy cerca unos de otros (por ejemplo, hipervínculos) se pueden seleccionar de nuevo presionando el dedo e inclinándolo de un lado a otro sobre los elementos, sin deslizarlo. Debido a la oclusión, el elemento actual se identifica mediante la información sobre herramientas o la barra de estado y se activa al liberar el contacto táctil.
 
@@ -108,26 +108,26 @@ La selección de destinos se optimiza mediante:
 
 Diseña teniendo en cuenta las interacciones descuidadas mediante:
 
--   Puntos de acoplamiento que permitan detenerse en las ubicaciones deseadas con mayor facilidad cuando los usuarios interactúan con el contenido.
--   "Raíles" direccional que pueden ayudar con el movimiento panorámico vertical u horizontal, incluso cuando la mano se mueve en un arco ligero. Para obtener más información, vea [instrucciones para la panorámica](guidelines-for-panning.md).
+- Puntos de acoplamiento que permitan detenerse en las ubicaciones deseadas con mayor facilidad cuando los usuarios interactúan con el contenido.
+- "Raíles" direccional que pueden ayudar con el movimiento panorámico vertical u horizontal, incluso cuando la mano se mueve en un arco ligero. Para obtener más información, vea [instrucciones para la panorámica](guidelines-for-panning.md).
 
 ## <a name="occlusion"></a>Oclusión
 
 La oclusión de dedos y manos se evita mediante:
 
--   El tamaño y la posición de la interfaz de usuario
+- El tamaño y la posición de la interfaz de usuario
 
     Crea los elementos de la interfaz de usuario lo suficientemente grandes, para que no se cubran por completo con el área de contacto del dedo.
 
     Coloca los menús y las ventanas emergentes sobre el área de contacto, siempre que sea posible.
 
--   Información sobre herramientas
+- Información sobre herramientas
 
     Muestra información sobre herramientas cuando un usuario mantiene el contacto sobre un objeto con el dedo. Sirve para describir las funciones de los objetos. El usuario puede retirar el dedo del objeto para evitar que se invoque la información sobre herramientas.
 
     Para objetos pequeños, desplaza la información de herramientas para que no quede cubierta por el área de contacto del dedo. Esto resulta útil para la selección de destinos.
 
--   Controladores para mayor precisión
+- Controladores para mayor precisión
 
     Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para obtener más información, vea [directrices para seleccionar texto e imágenes (aplicaciones Windows Runtime)](guidelines-for-textselection.md).
 
@@ -139,21 +139,21 @@ Una interacción temporal, en cambio, tiene lugar después de la interacción t�
 
 La manipulación directa ofrece una serie de ventajas sobre las interacciones temporales:
 
--   La información visual instantánea durante las interacciones hace que los usuarios se sientan más comprometidos, seguros de si mismos y con el control.
--   Las manipulaciones directas hacen que sea más seguro explorar un sistema porque son reversibles: los usuarios pueden deshacer fácilmente sus acciones de manera lógica e intuitiva.
--   Las interacciones que afectan directamente a los objetos y mimetizan las interacciones de la vida real son más intuitivas y fáciles de detectar y recordar. No dependen de interacciones oscuras o abstractas.
--   Las interacciones temporales pueden ser difíciles de realizar, ya que los usuarios deben alcanzar umbrales arbitrarios e invisibles.
+- La información visual instantánea durante las interacciones hace que los usuarios se sientan más comprometidos, seguros de si mismos y con el control.
+- Las manipulaciones directas hacen que sea más seguro explorar un sistema porque son reversibles: los usuarios pueden deshacer fácilmente sus acciones de manera lógica e intuitiva.
+- Las interacciones que afectan directamente a los objetos y mimetizan las interacciones de la vida real son más intuitivas y fáciles de detectar y recordar. No dependen de interacciones oscuras o abstractas.
+- Las interacciones temporales pueden ser difíciles de realizar, ya que los usuarios deben alcanzar umbrales arbitrarios e invisibles.
 
 Además, te recomendamos lo siguiente:
 
--   Las manipulaciones no deben distinguirse por el número de dedos usados.
--   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
--   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
+- Las manipulaciones no deben distinguirse por el número de dedos usados.
+- Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
+- Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
     > [!NOTE]
     > Una excepción a esto es el lugar en el que se usan interacciones de tiempo específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
 
--   Las descripciones y las indicaciones visuales adecuadas tienen un gran efecto sobre el uso de las interacciones avanzadas.
+- Las descripciones y las indicaciones visuales adecuadas tienen un gran efecto sobre el uso de las interacciones avanzadas.
 
 
 ## <a name="app-views"></a>Vistas de aplicación
@@ -176,15 +176,15 @@ Si implementas tu propia compatibilidad con la interacción, ten presente que lo
 
 Para proporcionar compatibilidad táctil personalizada, puedes controlar diversos eventos [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement). Estos eventos se agrupan en tres niveles de abstracción.
 
--   Los eventos de gestos estáticos se desencadenan una vez completada una interacción. Los eventos de gesto incluyen los de [**puntear**](/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](/uwp/api/windows.ui.xaml.uielement.doubletapped), [**RightTapped**](/uwp/api/windows.ui.xaml.uielement.righttapped)y [**Holding**](/uwp/api/windows.ui.xaml.uielement.holding).
+- Los eventos de gestos estáticos se desencadenan una vez completada una interacción. Los eventos de gesto incluyen los de [**puntear**](/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](/uwp/api/windows.ui.xaml.uielement.doubletapped), [**RightTapped**](/uwp/api/windows.ui.xaml.uielement.righttapped)y [**Holding**](/uwp/api/windows.ui.xaml.uielement.holding).
 
     Puede deshabilitar los eventos de gestos en elementos concretos estableciendo [**IsTapEnabled**](/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)y [**IsHoldingEnabled**](/uwp/api/windows.ui.xaml.uielement.isholdingenabled) en **false** .
 
--   Los eventos de puntero como [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerMoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved) proporcionan detalles de bajo nivel para cada contacto táctil, incluido el movimiento del puntero y la capacidad de distinguir los eventos de presionar y soltar.
+- Los eventos de puntero como [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerMoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved) proporcionan detalles de bajo nivel para cada contacto táctil, incluido el movimiento del puntero y la capacidad de distinguir los eventos de presionar y soltar.
 
     Un puntero es un tipo de entrada genérico con un mecanismo de eventos unificado. Expone información básica, como la posición de la pantalla, en el origen de entrada activo, que puede ser entrada táctil, panel táctil, mouse o lápiz.
 
--   Los eventos de gestos de manipulación, tal como [**ManipulationStarted**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted), indican una interacción continua del usuario. Estos eventos comienzan a desencadenarse cuando el usuario toca un elemento y continúan hasta que el usuario levanta el dedo (o los dedos) o se cancela la manipulación.
+- Los eventos de gestos de manipulación, tal como [**ManipulationStarted**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted), indican una interacción continua del usuario. Estos eventos comienzan a desencadenarse cuando el usuario toca un elemento y continúan hasta que el usuario levanta el dedo (o los dedos) o se cancela la manipulación.
 
     Entre los eventos de manipulación se incluyen las interacciones multitáctiles, tales como el zoom, el movimiento panorámico o la rotación, y las interacciones que usan datos de velocidad e inercia, como arrastrar. La información que proporcionan los eventos de manipulación no identifica la forma de la interacción que se hizo, sino que incluye datos sobre el contacto táctil, tales como posición, diferencia de traslación y velocidad. Puedes usar estos datos táctiles para determinar el tipo de interacción que se debería realizar.
 
@@ -571,19 +571,20 @@ End Sub
 
 ## <a name="routed-events"></a>Eventos enrutados
 
-
 Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados* . Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) o la raíz [**Page**](/uwp/api/Windows.UI.Xaml.Controls.Page) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a cómo se escriben los controladores para los eventos enrutados, vea [Introducción a eventos y eventos enrutados](/previous-versions/windows/apps/hh758286(v=win.10)).
 
-## <a name="dos-and-donts"></a>Consejos
+> [!Important]
+> Si necesita controlar los eventos de puntero para un elemento [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) en una vista desplazable (como ScrollViewer o ListView), debe deshabilitar explícitamente la compatibilidad con los eventos de manipulación en el elemento en la vista llamando a [UIElement. CancelDirectmanipulation ()](/uwp/api/windows.ui.xaml.uielement.canceldirectmanipulations). Para volver a habilitar los eventos de manipulación en la vista, llame a [UIElement. TryStartDirectManipulation ()](/uwp/api/windows.ui.xaml.uielement.trystartdirectmanipulation).
 
+## <a name="dos-and-donts"></a>Dos y don't's
 
--   Diseña aplicaciones en las que la interacción táctil sea el principal método de entrada que se espera.
--   Incluye información visual sobre todos los tipos de interacción (táctil, lápiz, pluma, mouse, etc.).
--   Optimiza la selección de destinos ajustando el tamaño, la geometría de contacto, la limpieza y la inclinación del destino táctil.
--   Optimiza la precisión usando puntos de acoplamiento y "guías" direccionales.
--   Incorpora información sobre herramientas y controladores para mejorar la precisión táctil de los elementos de UI con espacio muy reducido.
--   No uses interacciones temporales en la medida de lo posible (ejemplo de uso correcto: mantener pulsado).
--   No uses la cantidad de dedos para distinguir la manipulación en la medida de lo posible.
+- Diseña aplicaciones en las que la interacción táctil sea el principal método de entrada que se espera.
+- Incluye información visual sobre todos los tipos de interacción (táctil, lápiz, pluma, mouse, etc.).
+- Optimiza la selección de destinos ajustando el tamaño, la geometría de contacto, la limpieza y la inclinación del destino táctil.
+- Optimiza la precisión usando puntos de acoplamiento y "guías" direccionales.
+- Incorpora información sobre herramientas y controladores para mejorar la precisión táctil de los elementos de UI con espacio muy reducido.
+- No uses interacciones temporales en la medida de lo posible (ejemplo de uso correcto: mantener pulsado).
+- No uses la cantidad de dedos para distinguir la manipulación en la medida de lo posible.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
