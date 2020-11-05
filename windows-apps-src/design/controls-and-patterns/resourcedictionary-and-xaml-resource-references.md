@@ -1,5 +1,5 @@
 ---
-Description: Aquí se explica cómo definir un elemento ResourceDictionary y recursos con clave, y cómo los recursos XAML se relacionan con otros recursos que definas como parte de tu aplicación o paquete de la aplicación.
+description: Aquí se explica cómo definir un elemento ResourceDictionary y recursos con clave, y cómo los recursos XAML se relacionan con otros recursos que definas como parte de tu aplicación o paquete de la aplicación.
 MS-HAID: dev\_ctrl\_layout\_txt.resourcedictionary\_and\_xaml\_resource\_references
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -14,12 +14,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 6c8a9a7fd335d2b250215145b88513c6254b0116
-ms.sourcegitcommit: 465306045aeefb7d34703a9ae26235c638a445e8
+ms.openlocfilehash: 198da0517b5bc1a4d14851e2a2d2aecd072d1de5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91402068"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030168"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referencias a ResourceDictionary y a los recursos XAML
 
@@ -58,7 +58,7 @@ En este ejemplo:
 -   `<x:String>`: define el recurso con la clave "greeting".
 -   `{StaticResource greeting}`- Busca el recurso con la clave "greeting", que se asigna a la propiedad [Text](/uwp/api/windows.ui.xaml.controls.textblock.text) del objeto [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
 
-> **Nota**&nbsp;&nbsp;No confundas los conceptos relativos a [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) con la acción de compilación **Resource**, los archivos de recursos (.resw) u otros "recursos" que se describen en el contexto de la estructuración del proyecto de código que genera el paquete de la aplicación.
+> **Nota**&nbsp;&nbsp;No confundas los conceptos relativos a [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) con la acción de compilación **Resource** , los archivos de recursos (.resw) u otros "recursos" que se describen en el contexto de la estructuración del proyecto de código que genera el paquete de la aplicación.
 
 Los recursos no tienen que ser cadenas, pueden ser cualquier objeto susceptible de compartirse, como estilos, plantillas, pinceles y colores. Sin embargo, los controles, las formas y otros objetos [FrameworkElement](/uwp/api/Windows.UI.Xaml.FrameworkElement) no se pueden compartir, por lo que no se pueden declarar como recursos reutilizables. Para más información sobre el uso compartido, consulta la sección [Los recursos XAML deben ser compartibles](#xaml-resources-must-be-shareable), más adelante en este tema.
 
@@ -82,7 +82,7 @@ Aquí, un pincel y una cadena se declaran como recursos y los controles los usan
 
 Todos los recursos deben tener una clave. Por lo general, esa clave es una cadena definida con `x:Key="myString"`. Sin embargo, existen otras maneras de especificar una clave:
 
--   [Style](/uwp/api/Windows.UI.Xaml.Style) y [ControlTemplate](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) requieren un elemento **TargetType**, y usarán el elemento **TargetType** como clave si no se especifica [x:Key](../../xaml-platform/x-key-attribute.md). En este caso, la clave es el objeto Tipo en sí, no una cadena. (Ver ejemplos abajo)
+-   [Style](/uwp/api/Windows.UI.Xaml.Style) y [ControlTemplate](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) requieren un elemento **TargetType** , y usarán el elemento **TargetType** como clave si no se especifica [x:Key](../../xaml-platform/x-key-attribute.md). En este caso, la clave es el objeto Tipo en sí, no una cadena. (Ver ejemplos abajo)
 -   Los recursos [DataTemplate](/uwp/api/Windows.UI.Xaml.DataTemplate) que tengan un elemento **TargetType** usarán este elemento **TargetType** como clave si no se especifica [x:Key](../../xaml-platform/x-key-attribute.md). En este caso, la clave es el objeto Tipo en sí, no una cadena.
 -   [x:Name](../../xaml-platform/x-name-attribute.md) puede usarse en lugar de [x:Key](../../xaml-platform/x-key-attribute.md). Sin embargo, x:Name también genera un campo de código subyacente para el recurso. Como resultado, x:Name es menos eficiente que x:Key porque ese campo debe inicializarse cuando se carga la página.
 
@@ -117,7 +117,7 @@ El acceso a los miembros del diccionario de recursos es igual que el acceso a cu
 > [!WARNING]
 > Al realizar una búsqueda de recursos en el código, solo se busca en los recursos del diccionario `Page.Resources`. A diferencia de la [extensión de marcado StaticResource](../../xaml-platform/staticresource-markup-extension.md), el código no vuelve al diccionario `Application.Resources` si los recursos no se encuentran en el primer diccionario.
 
- 
+ 
 
 Este ejemplo muestra cómo recuperar el recurso `redButtonStyle` del diccionario de recursos de una página:
 
@@ -241,7 +241,7 @@ void App::OnLaunched(LaunchActivatedEventArgs const& e)
 
 [FrameworkElement](/uwp/api/Windows.UI.Xaml.FrameworkElement) es una clase base de la que heredan los controles y tiene una propiedad [Resources](/uwp/api/windows.ui.xaml.frameworkelement.resources). Por lo tanto, puedes agregar un diccionario de recursos locales a cualquier objeto **FrameworkElement**.
 
-En este apartado, tanto la clase [Page](/uwp/api/Windows.UI.Xaml.Controls.Page) como la clase [Border](/uwp/api/Windows.UI.Xaml.Controls.Border) tienen diccionarios de recursos, y ambos tienen un recurso denominado "greeting". El objeto [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) llamado "textBlock2" está dentro del objeto **Border**, de modo que la búsqueda de recursos se realiza primero en los recursos del objeto **Border**, luego en los recursos del objeto **Page** y finalmente en los del objeto [Application](/uwp/api/Windows.UI.Xaml.Application). En el objeto **TextBlock** se pondrá "Hola mundo".
+En este apartado, tanto la clase [Page](/uwp/api/Windows.UI.Xaml.Controls.Page) como la clase [Border](/uwp/api/Windows.UI.Xaml.Controls.Border) tienen diccionarios de recursos, y ambos tienen un recurso denominado "greeting". El objeto [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) llamado "textBlock2" está dentro del objeto **Border** , de modo que la búsqueda de recursos se realiza primero en los recursos del objeto **Border** , luego en los recursos del objeto **Page** y finalmente en los del objeto [Application](/uwp/api/Windows.UI.Xaml.Application). En el objeto **TextBlock** se pondrá "Hola mundo".
 
 Para acceder a los recursos de ese elemento desde el código, usa la propiedad [Resources](/uwp/api/windows.ui.xaml.frameworkelement.resources) de ese elemento. Al acceder a los recursos de un [FrameworkElement](/uwp/api/Windows.UI.Xaml.FrameworkElement) en el código, en lugar de XAML, solo buscará en ese diccionario, no en los diccionarios del elemento primario.
 
@@ -439,7 +439,7 @@ A continuación, la secuencia de búsqueda comprueba el siguiente objeto primari
 
 > **Nota**&nbsp;&nbsp;Es una práctica habitual definir todos los recursos inmediatos en el nivel raíz de una página, tanto para aprovechar este comportamiento de búsqueda de recursos como por una convención de estilo de marcado de XAML.
 
- 
+ 
 
 Si no se encuentra el recurso solicitado en los recursos inmediatos, el siguiente paso de la búsqueda es comprobar la propiedad [Application.Resources](/uwp/api/windows.ui.xaml.application.resources). **Application.Resources** es el mejor lugar para poner los recursos específicos de la aplicación a los que varias páginas de la estructura de navegación de tu aplicación hacen referencia.
 
@@ -485,15 +485,15 @@ Los tipos personalizados deben tener un constructor predeterminado, porque eso e
 ## <a name="usercontrol-usage-scope"></a>Ámbito de uso de UserControl
 
 
-Un elemento [UserControl](/uwp/api/Windows.UI.Xaml.Controls.UserControl) es un caso especial del comportamiento de la búsqueda de recursos porque tiene los conceptos inherentes de un ámbito de definición y un ámbito de uso. Un **UserControl** que hace referencia a un recurso XAML desde su ámbito de definición debe poder admitir la búsqueda de dicho recurso en su propia secuencia de búsqueda del ámbito de definición; es decir, no puede acceder a los recursos de la aplicación. Desde el ámbito de uso de un **UserControl**, la referencia a un recurso se trata como si se realizara desde dentro de la secuencia de búsqueda hacia la raíz de la página de uso (igual que cualquier otra referencia a recursos que se realiza desde un objeto en un árbol de objetos cargados) y puede acceder a los recursos de la aplicación.
+Un elemento [UserControl](/uwp/api/Windows.UI.Xaml.Controls.UserControl) es un caso especial del comportamiento de la búsqueda de recursos porque tiene los conceptos inherentes de un ámbito de definición y un ámbito de uso. Un **UserControl** que hace referencia a un recurso XAML desde su ámbito de definición debe poder admitir la búsqueda de dicho recurso en su propia secuencia de búsqueda del ámbito de definición; es decir, no puede acceder a los recursos de la aplicación. Desde el ámbito de uso de un **UserControl** , la referencia a un recurso se trata como si se realizara desde dentro de la secuencia de búsqueda hacia la raíz de la página de uso (igual que cualquier otra referencia a recursos que se realiza desde un objeto en un árbol de objetos cargados) y puede acceder a los recursos de la aplicación.
 
 ## <a name="resourcedictionary-and-xamlreaderload"></a>ResourceDictionary y XamlReader.Load
 
-Un [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) se puede usar como raíz o como parte de la entrada XAML para el método [XamlReader.Load](/uwp/api/windows.ui.xaml.markup.xamlreader.load). También puedes incluir referencias a recursos XAML en ese código XAML si todas estas referencias están completamente autocontenidas en el código XAML para su carga. **XamlReader.Load** analiza el código XAML en un contexto que no tiene constancia de otros objetos **ResourceDictionary**, ni siquiera de la propiedad [Application.Resources](/uwp/api/windows.ui.xaml.application.resources). Además, no uses `{ThemeResource}` desde el código XAML enviado a **XamlReader.Load**.
+Un [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) se puede usar como raíz o como parte de la entrada XAML para el método [XamlReader.Load](/uwp/api/windows.ui.xaml.markup.xamlreader.load). También puedes incluir referencias a recursos XAML en ese código XAML si todas estas referencias están completamente autocontenidas en el código XAML para su carga. **XamlReader.Load** analiza el código XAML en un contexto que no tiene constancia de otros objetos **ResourceDictionary** , ni siquiera de la propiedad [Application.Resources](/uwp/api/windows.ui.xaml.application.resources). Además, no uses `{ThemeResource}` desde el código XAML enviado a **XamlReader.Load**.
 
 ## <a name="using-a-resourcedictionary-from-code"></a>Usar ResourceDictionary desde el código
 
-La mayoría de los escenarios de una clase [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) se controlan exclusivamente en XAML. Declaras el contenedor **ResourceDictionary** y los recursos que incluye como un archivo XAML o un conjunto de nodos XAML en un archivo de definición de interfaz de usuario. Y, a continuación, usas referencias a recursos XAML para solicitar esos recursos de otras partes del código XAML. Aun así, hay ciertos casos en que tu aplicación podría querer ajustar el contenido de un **ResourceDictionary** con código que se ejecute mientras se ejecute la aplicación, o, al menos, consultar el contenido de un **ResourceDictionary** para ver si ya se definió un recurso. Las llamadas a este código se realizan en una instancia de **ResourceDictionary**, por lo que primero tienes que recuperar una, bien un **ResourceDictionary** inmediato en algún lugar del árbol de objetos mediante la obtención de [FrameworkElement.Resources](/uwp/api/windows.ui.xaml.frameworkelement.resources), o bien, `Application.Current.Resources`.
+La mayoría de los escenarios de una clase [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) se controlan exclusivamente en XAML. Declaras el contenedor **ResourceDictionary** y los recursos que incluye como un archivo XAML o un conjunto de nodos XAML en un archivo de definición de interfaz de usuario. Y, a continuación, usas referencias a recursos XAML para solicitar esos recursos de otras partes del código XAML. Aun así, hay ciertos casos en que tu aplicación podría querer ajustar el contenido de un **ResourceDictionary** con código que se ejecute mientras se ejecute la aplicación, o, al menos, consultar el contenido de un **ResourceDictionary** para ver si ya se definió un recurso. Las llamadas a este código se realizan en una instancia de **ResourceDictionary** , por lo que primero tienes que recuperar una, bien un **ResourceDictionary** inmediato en algún lugar del árbol de objetos mediante la obtención de [FrameworkElement.Resources](/uwp/api/windows.ui.xaml.frameworkelement.resources), o bien, `Application.Current.Resources`.
 
 En el código de C\# o Microsoft Visual Basic, puedes hacer referencia a un recurso en una clase [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) determinada, mediante el indexador ([Item](/dotnet/api/system.windows.resourcedictionary.item)). Un **ResourceDictionary** es un diccionario de claves de cadena, por lo que el indexador usa la clave de cadena en lugar de un índice de entero. En extensiones de componentes de Visual C++ (C++/CX), usa [Lookup](/uwp/api/windows.ui.xaml.resourcedictionary.lookup).
 
@@ -510,13 +510,13 @@ También puedes quitar elementos de un [ResourceDictionary](/uwp/api/Windows.UI.
 ## <a name="resourcedictionary-and-localization"></a>ResourceDictionary y localización
 
 
-Inicialmente, un [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) de XAML podría contener cadenas localizables. En este caso, guarda estas cadenas como recursos del proyecto en lugar de en un **ResourceDictionary**. Extrae las cadenas del código XAML y, en su lugar, asigna al elemento propietario un valor de [directiva x:Uid](../../xaml-platform/x-uid-directive.md). A continuación, define un recurso en un archivo de recursos. Proporciona un nombre de recurso con el formato *XUIDValue*.*PropertyName* y un valor de recurso de la cadena que debe localizarse.
+Inicialmente, un [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary) de XAML podría contener cadenas localizables. En este caso, guarda estas cadenas como recursos del proyecto en lugar de en un **ResourceDictionary**. Extrae las cadenas del código XAML y, en su lugar, asigna al elemento propietario un valor de [directiva x:Uid](../../xaml-platform/x-uid-directive.md). A continuación, define un recurso en un archivo de recursos. Proporciona un nombre de recurso con el formato *XUIDValue*. *PropertyName* y un valor de recurso de la cadena que debe localizarse.
 
 ## <a name="custom-resource-lookup"></a>Búsqueda de recursos personalizada
 
 Para los escenarios avanzados, puedes implementar una clase que pueda tener un comportamiento distinto que el comportamiento de búsqueda de referencias a recursos XAML descrito en este tema. Para ello, implementa la clase [CustomXamlResourceLoader](/uwp/api/Windows.UI.Xaml.Resources.CustomXamlResourceLoader) y, a continuación, podrás acceder a ese comportamiento mediante el uso de la [extensión de marcado CustomResource](../../xaml-platform/customresource-markup-extension.md) para referencias de recursos en vez de usar [StaticResource](../../xaml-platform/staticresource-markup-extension.md) o [ThemeResource](../../xaml-platform/themeresource-markup-extension.md). La mayoría de las aplicaciones no tendrán escenarios que requieran esto. Para obtener más información, consulta [CustomXamlResourceLoader](/uwp/api/Windows.UI.Xaml.Resources.CustomXamlResourceLoader).
 
- 
+ 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary)
@@ -527,6 +527,6 @@ Para los escenarios avanzados, puedes implementar una clase que pueda tener un c
 * [Controles de estilo](xaml-styles.md)
 * [Atributo x:Key](../../xaml-platform/x-key-attribute.md)
 
- 
+ 
 
- 
+ 

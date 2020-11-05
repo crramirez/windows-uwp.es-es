@@ -1,5 +1,5 @@
 ---
-Description: Aprende a integrar imágenes en la aplicación, así como a usar las API de las dos clases principales de XAML, Image e ImageBrush.
+description: Aprende a integrar imágenes en la aplicación, así como a usar las API de las dos clases principales de XAML, Image e ImageBrush.
 title: Imágenes y pinceles de imagen
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 753f17d73d82707d2283b4ae2ca64eeed7a04e45
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7cbe6de9f6c01ee2adca8e9aa716c92491c04e8a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160169"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033448"
 ---
 # <a name="images-and-image-brushes"></a>Imágenes y pinceles de imagen
 
 Para mostrar una imagen, puedes usar los objetos **Image** o **ImageBrush**. Un objeto Image representa una imagen y un objeto ImageBrush pinta otro objeto con una imagen. 
 
-> **API importantes**: [Clase Image](/uwp/api/Windows.UI.Xaml.Controls.Image), [Propiedad Source](/uwp/api/windows.ui.xaml.controls.image.source), [Clase ImageBrush](/uwp/api/Windows.UI.Xaml.Media.ImageBrush), [Propiedad ImageSource](/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)
+> **API importantes** : [Clase Image](/uwp/api/Windows.UI.Xaml.Controls.Image), [Propiedad Source](/uwp/api/windows.ui.xaml.controls.image.source), [Clase ImageBrush](/uwp/api/Windows.UI.Xaml.Media.ImageBrush), [Propiedad ImageSource](/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)
 
 ## <a name="are-these-the-right-elements"></a>¿Son estos los elementos adecuados?
 Usa un elemento **Image** para mostrar una imagen independiente en la aplicación.
@@ -78,12 +78,12 @@ Este es el elemento Ellipse que ha pintado ImageBrush.
 
 ### <a name="stretch-an-image"></a>Ajustar una imagen
 
-Si no establece los valores de [Width](/uwp/api/windows.ui.xaml.frameworkelement.width) o [Height](/uwp/api/windows.ui.xaml.frameworkelement.height) de un objeto **Image**, este se muestra con las dimensiones de la imagen que especificó **Source**. Cuando se establecen los valores **Width** y **Height**, se crea un área rectangular contenedora donde se muestra la imagen. Mediante la propiedad [Stretch](/uwp/api/windows.ui.xaml.controls.image.stretch) se puede especificar la forma en que la imagen rellena esta área contenedora. La propiedad Stretch acepta estos valores, que define la enumeración [Stretch](/uwp/api/Windows.UI.Xaml.Media.Stretch):
+Si no establece los valores de [Width](/uwp/api/windows.ui.xaml.frameworkelement.width) o [Height](/uwp/api/windows.ui.xaml.frameworkelement.height) de un objeto **Image** , este se muestra con las dimensiones de la imagen que especificó **Source**. Cuando se establecen los valores **Width** y **Height** , se crea un área rectangular contenedora donde se muestra la imagen. Mediante la propiedad [Stretch](/uwp/api/windows.ui.xaml.controls.image.stretch) se puede especificar la forma en que la imagen rellena esta área contenedora. La propiedad Stretch acepta estos valores, que define la enumeración [Stretch](/uwp/api/Windows.UI.Xaml.Media.Stretch):
 
--   **None**: la imagen no se ajusta para rellenar las dimensiones de salida. Ten cuidado con el valor de Stretch: si la imagen de origen es mayor que el área contenedora, se recortará, lo que no es deseable, ya que no tendrás control sobre la ventanilla, algo que tendrías con un elemento [Clip](/uwp/api/windows.ui.xaml.uielement.clip) intencionado.
--   **Uniform**: la imagen se escala para ajustarse a las dimensiones de salida. aunque la relación de aspecto del contenido se mantiene. Este es el valor predeterminado.
--   **UniformToFill**: la imagen se escala de forma que rellenar completamente el área de salida, pero mantiene su relación de aspecto original.
--   **Fill**: la imagen se escala para ajustarse a las dimensiones de salida. Como el alto y el ancho del contenido se escalan de forma independiente, la relación de aspecto original de la imagen quizás no se mantenga. En otras palabras, la imagen podría distorsionarse para rellenar completamente el área de salida.
+-   **None** : la imagen no se ajusta para rellenar las dimensiones de salida. Ten cuidado con el valor de Stretch: si la imagen de origen es mayor que el área contenedora, se recortará, lo que no es deseable, ya que no tendrás control sobre la ventanilla, algo que tendrías con un elemento [Clip](/uwp/api/windows.ui.xaml.uielement.clip) intencionado.
+-   **Uniform** : la imagen se escala para ajustarse a las dimensiones de salida. aunque la relación de aspecto del contenido se mantiene. Este es el valor predeterminado.
+-   **UniformToFill** : la imagen se escala de forma que rellenar completamente el área de salida, pero mantiene su relación de aspecto original.
+-   **Fill** : la imagen se escala para ajustarse a las dimensiones de salida. Como el alto y el ancho del contenido se escalan de forma independiente, la relación de aspecto original de la imagen quizás no se mantenga. En otras palabras, la imagen podría distorsionarse para rellenar completamente el área de salida.
 
 ![Ejemplo de las configuraciones de Stretch.](images/Image_Stretch.jpg)
 
@@ -139,7 +139,7 @@ Para obtener más información sobre los recursos de la aplicación y sobre cóm
 
 ### <a name="writeablebitmap"></a>WriteableBitmap
 
-[WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap) proporciona un objeto [BitmapSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapSource) que se puede modificar y que no usa la descodificación basada en archivo básica del WIC. Puedes modificar imágenes de forma dinámica y volver a representar la imagen actualizada. Para definir el contenido del búfer de **WriteableBitmap**, usa la propiedad [PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) para acceder al búfer y utiliza una secuencia o un tipo de búfer específico del lenguaje para rellenarlo. Para ver el código de ejemplo, consulta [WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap).
+[WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap) proporciona un objeto [BitmapSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapSource) que se puede modificar y que no usa la descodificación basada en archivo básica del WIC. Puedes modificar imágenes de forma dinámica y volver a representar la imagen actualizada. Para definir el contenido del búfer de **WriteableBitmap** , usa la propiedad [PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) para acceder al búfer y utiliza una secuencia o un tipo de búfer específico del lenguaje para rellenarlo. Para ver el código de ejemplo, consulta [WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap).
 
 ### <a name="rendertargetbitmap"></a>RenderTargetBitmap
 
@@ -147,7 +147,7 @@ La clase [RenderTargetBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.RenderTarge
 
 ### <a name="image-sources-and-scaling"></a>Orígenes y escala de las imágenes
 
-Deberías crear los orígenes de imágenes con varios tamaños recomendados para garantizar que la aplicación tenga una apariencia excelente cuando Windows cambie su escala. Cuando se especifica una propiedad **Source** para un elemento **Image**, puedes usar una convención de nomenclatura que haga referencia automáticamente al recurso correcto para la escala actual. Para ver información más específica acerca de la convención de nomenclatura y otros temas, consulta [Inicio rápido: usar recursos de archivo o imagen](/previous-versions/windows/apps/hh965325(v=win.10)).
+Deberías crear los orígenes de imágenes con varios tamaños recomendados para garantizar que la aplicación tenga una apariencia excelente cuando Windows cambie su escala. Cuando se especifica una propiedad **Source** para un elemento **Image** , puedes usar una convención de nomenclatura que haga referencia automáticamente al recurso correcto para la escala actual. Para ver información más específica acerca de la convención de nomenclatura y otros temas, consulta [Inicio rápido: usar recursos de archivo o imagen](/previous-versions/windows/apps/hh965325(v=win.10)).
 
 Para más información sobre cómo diseñar teniendo en cuenta la escala, consulta [Directrices sobre la experiencia del usuario para diseño y escalado](https://developer.microsoft.com/windows/apps/design).
 
@@ -155,7 +155,7 @@ Para más información sobre cómo diseñar teniendo en cuenta la escala, consul
 
 Es habitual especificar elementos Image e ImageBrush con XAML en lugar de código. Esto es así porque estos elementos suelen ser el resultado de herramientas de diseño como parte de una definición de interfaz de usuario de XAML.
 
-Si defines un elemento Image o ImageBrush mediante código, usa los constructores predeterminados y establece la propiedad de origen relevante ([Image.Source](/uwp/api/windows.ui.xaml.controls.image.source) o [ImageBrush.ImageSource](/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). Las propiedades de origen requieren un elemento [BitmapImage](/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (no un identificador URI) cuando se establecen mediante código. Si el origen es una secuencia, usa el método [SetSourceAsync](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para inicializar el valor. Si el origen es un identificador URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [BitmapImage](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que toma un URI. También puedes considerar la posibilidad de controlar el evento [ImageOpened](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) si hay problemas de temporización al recuperar o descodificar el origen de la imagen, ya que es posible que necesites que aparezca otro contenido hasta que el origen de la imagen esté disponible. Para código de ejemplo, consulte [XAML Controls Gallery](/samples/microsoft/xaml-controls-gallery/xaml-controls-gallery/).
+Si defines un elemento Image o ImageBrush mediante código, usa los constructores predeterminados y establece la propiedad de origen relevante ([Image.Source](/uwp/api/windows.ui.xaml.controls.image.source) o [ImageBrush.ImageSource](/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). Las propiedades de origen requieren un elemento [BitmapImage](/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (no un identificador URI) cuando se establecen mediante código. Si el origen es una secuencia, usa el método [SetSourceAsync](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para inicializar el valor. Si el origen es un identificador URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource** , utiliza el constructor [BitmapImage](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que toma un URI. También puedes considerar la posibilidad de controlar el evento [ImageOpened](/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) si hay problemas de temporización al recuperar o descodificar el origen de la imagen, ya que es posible que necesites que aparezca otro contenido hasta que el origen de la imagen esté disponible. Para código de ejemplo, consulte [XAML Controls Gallery](/samples/microsoft/xaml-controls-gallery/xaml-controls-gallery/).
 
 > [!NOTE]
 > Si estableces imágenes mediante código, puedes usar el control automático para obtener acceso a los recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [ResourceManager](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) y [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para obtener más información, consulta [Sistema de administración de recursos](/previous-versions/windows/apps/jj552947(v=win.10)).

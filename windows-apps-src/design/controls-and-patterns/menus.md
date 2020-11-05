@@ -1,5 +1,5 @@
 ---
-Description: Los menús y los menús contextuales muestran una lista de opciones o comandos cuando el usuario los solicita.
+description: Los menús y los menús contextuales muestran una lista de opciones o comandos cuando el usuario los solicita.
 title: Menús y menús contextuales
 label: Menus and context menus
 template: detail.hbs
@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 29f7f1420e8f4284f1a4ed0c835a70e15958f95f
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 1b93197288b165dbb7e8c79e90ca7a7abcf96ef2
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749931"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034518"
 ---
 # <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
@@ -40,7 +40,7 @@ Los menús y los menús contextuales muestran una lista de opciones o comandos c
    :::column-end:::
 :::row-end:::
 
-> **API de la biblioteca de interfaz de usuario de Windows**: [Clase MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar)
+> **API de la biblioteca de interfaz de usuario de Windows** : [Clase MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar)
 >
 > **API de plataforma:** [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [clase MenuBar](/uwp/api/windows.ui.xaml.controls.menubar), [propiedad ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propiedad FlyoutBase.AttachedFlyout](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties)
 
@@ -220,7 +220,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ### <a name="light-dismiss"></a>Cierre del elemento por cambio de foco
 
-Los controles de cierre del elemento por cambio de foco, tales como menús, menús contextuales y otros controles flotantes, capturan el foco del teclado y del controlador para juegos dentro de la interfaz de usuario transitoria hasta que se descartan. Para proporcionar una indicación visual para este comportamiento, los controles de cierre del elemento por cambio de foco de Xbox dibujarán una superposición que atenuará la visibilidad de la interfaz de usuario que está fuera del ámbito. Este comportamiento se puede modificar con la propiedad [LightDismissOverlayMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode). De manera predeterminada, las interfaces de usuario transitorias dibujarán la superposición del cierre del elemento por cambio de foco en Xbox (**Automático**), pero no en otras familias de dispositivos. Puedes elegir forzar la superposición para que siempre esté **Activado** o **Desactivado**.
+Los controles de cierre del elemento por cambio de foco, tales como menús, menús contextuales y otros controles flotantes, capturan el foco del teclado y del controlador para juegos dentro de la interfaz de usuario transitoria hasta que se descartan. Para proporcionar una indicación visual para este comportamiento, los controles de cierre del elemento por cambio de foco de Xbox dibujarán una superposición que atenuará la visibilidad de la interfaz de usuario que está fuera del ámbito. Este comportamiento se puede modificar con la propiedad [LightDismissOverlayMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode). De manera predeterminada, las interfaces de usuario transitorias dibujarán la superposición del cierre del elemento por cambio de foco en Xbox ( **Automático** ), pero no en otras familias de dispositivos. Puedes elegir forzar la superposición para que siempre esté **Activado** o **Desactivado**.
 
 ```xaml
 <MenuFlyout LightDismissOverlayMode="Off" />

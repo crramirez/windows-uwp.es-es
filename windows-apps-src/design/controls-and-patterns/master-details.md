@@ -1,5 +1,5 @@
 ---
-Description: El patrón de maestro y detalles muestra una lista maestra y los detalles del elemento seleccionado actual. Este patrón se usa con frecuencia para listas de contactos o libretas de direcciones y correo electrónico.
+description: El patrón de maestro y detalles muestra una lista maestra y los detalles del elemento seleccionado actual. Este patrón se usa con frecuencia para listas de contactos o libretas de direcciones y correo electrónico.
 title: Maestro/detalles
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 60cd7eaa9e5ef317641e105004f2456e82ee48ca
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 605d42417145b9f6ecc8f71a0191afe6049de9c5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219988"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034528"
 ---
 # <a name="masterdetails-pattern"></a>Patrón de master y detalles
 
@@ -21,7 +21,7 @@ ms.locfileid: "91219988"
 
 El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y correo electrónico.
 
-> **API importantes**: [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](/uwp/api/windows.ui.xaml.controls.splitview)
+> **API importantes** : [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
 
@@ -45,7 +45,7 @@ Al implementar el patrón de maestro y detalles, te recomendamos que uses el est
 | 320 epx - 640 epx        | Apilado           |
 | 641 epx o más ancho       | En paralelo      |
 
- 
+ 
 ## <a name="stacked-style"></a>Estilo apilado
 
 En el estilo apilado, solo hay un panel visible a la vez: el maestro o el de detalles.

@@ -1,5 +1,5 @@
 ---
-Description: En este tutorial se explica cómo crear la interfaz de usuario de una aplicación básica. Aquí se explica y se muestra el uso de Grid y StackPanel, dos de los elementos XAML más comunes.
+description: En este tutorial se explica cómo crear la interfaz de usuario de una aplicación básica. Aquí se explica y se muestra el uso de Grid y StackPanel, dos de los elementos XAML más comunes.
 title: Usa Grid y StackPanel para crear una aplicación sencilla.
 template: detail.hbs
 ms.date: 09/24/2020
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fa22f303f308b38a59a804604752712895b0ea0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 03b3a4342e4f464cb61cddc495ee5693570cd28b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219378"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034828"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Uso de Grid y StackPanel para crear una aplicación meteorológica sencilla
 
 Usa XAML para crear el diseño de una aplicación meteorológica sencilla con los elementos **Grid** y **StackPanel**. Con estas herramientas, puedes crear aplicaciones con un aspecto fantástico que funcionen en cualquier dispositivo que ejecute Windows 10. Este tutorial dura entre 10 y 20 minutos.
 
-> **API importantes**: [Clase Grid](/uwp/api/windows.ui.xaml.controls.grid), [clase StackPanel](/uwp/api/windows.ui.xaml.controls.stackpanel)
+> **API importantes** : [Clase Grid](/uwp/api/windows.ui.xaml.controls.grid), [clase StackPanel](/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>Requisitos previos
 - Windows 10 y Microsoft Visual Studio 2015 o posterior. (se recomienda usar la versión más reciente de Visual Studio para las actualizaciones de seguridad y desarrollo actuales). [Haz clic aquí para obtener información sobre cómo prepararse con Visual Studio](../../get-started/get-set-up.md).
@@ -26,15 +26,15 @@ Usa XAML para crear el diseño de una aplicación meteorológica sencilla con lo
 
 ## <a name="step-1-create-a-blank-app"></a>Paso 1: Creación de una aplicación vacía
 1. En el menú de Visual Studio, selecciona **Archivo** > **Nuevo proyecto**.
-2. En el panel izquierdo del cuadro de diálogo **Nuevo proyecto**, selecciona **Visual C#**  > **Windows** > **Universal** o **Visual C++**  > **Windows** > **Universal**.
+2. En el panel izquierdo del cuadro de diálogo **Nuevo proyecto** , selecciona **Visual C#**  > **Windows** > **Universal** o **Visual C++**  > **Windows** > **Universal**.
 3. En el panel central, selecciona **Aplicación vacía**.
-4. En el cuadro **Nombre**, escribe **WeatherPanel** y selecciona **Aceptar**.
+4. En el cuadro **Nombre** , escribe **WeatherPanel** y selecciona **Aceptar**.
 5. Para ejecutar el programa, selecciona **Depurar** > **Iniciar depuración** en el menú o presiona F5.
 
 ## <a name="step-2-define-a-grid"></a>Paso 2: Definición de un elemento Grid
-En XAML, un elemento **Grid** (una cuadrícula) se compone de una serie de filas y columnas. Al especificar la fila y la columna de un elemento incluido en un elemento **Grid**, puedes colocar y separar otros elementos dentro de una interfaz de usuario. Las filas y las columnas se definen con los elementos **RowDefinition** y **ColumnDefinition**.
+En XAML, un elemento **Grid** (una cuadrícula) se compone de una serie de filas y columnas. Al especificar la fila y la columna de un elemento incluido en un elemento **Grid** , puedes colocar y separar otros elementos dentro de una interfaz de usuario. Las filas y las columnas se definen con los elementos **RowDefinition** y **ColumnDefinition**.
 
-Para empezar a crear un diseño, abre **MainPage.xaml** mediante el uso del **Explorador de soluciones**y sustituye el elemento **Grid** generado automáticamente por este código.
+Para empezar a crear un diseño, abre **MainPage.xaml** mediante el uso del **Explorador de soluciones** y sustituye el elemento **Grid** generado automáticamente por este código.
 
 ```xml
 <Grid>
@@ -53,10 +53,10 @@ El nuevo elemento **Grid** crea un conjunto de 2 filas y columnas que define el 
 
 Para obtener información sobre otros métodos de definir el tamaño de las filas y columnas, consulta [Definir diseños de página con XAML](./layouts-with-xaml.md).
 
-Si ejecutas la aplicación ahora, no verás nada,excepto una página en blanco, porque ninguna de las áreas de **Grid** tienen ningún contenido. Para mostrar el elemento **Grid**, vamos a asignarle el color.
+Si ejecutas la aplicación ahora, no verás nada,excepto una página en blanco, porque ninguna de las áreas de **Grid** tienen ningún contenido. Para mostrar el elemento **Grid** , vamos a asignarle el color.
 
 ## <a name="step-3-color-the-grid"></a>Paso 3: Coloración de la cuadrícula
-Para dar color al elemento **Grid**, agregamos tres elementos **Border**, cada uno con un color de fondo diferente. Cada uno de ellos también se asigna a una fila y columna en el elemento primario **Grid** mediante el uso de los atributos **Grid.Row** y **Grid.Column**. De forma predeterminada, los valores de estos atributos son 0, por lo que no tienes que asignarlos al primer elemento **Border**. Agrega el siguiente código al elemento **Grid** después de las definiciones de fila y columna.
+Para dar color al elemento **Grid** , agregamos tres elementos **Border** , cada uno con un color de fondo diferente. Cada uno de ellos también se asigna a una fila y columna en el elemento primario **Grid** mediante el uso de los atributos **Grid.Row** y **Grid.Column**. De forma predeterminada, los valores de estos atributos son 0, por lo que no tienes que asignarlos al primer elemento **Border**. Agrega el siguiente código al elemento **Grid** después de las definiciones de fila y columna.
 
 ```xml
 <Border Background="#2f5cb6"/>
@@ -64,7 +64,7 @@ Para dar color al elemento **Grid**, agregamos tres elementos **Border**, cada u
 <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#152951"/>
 ```
 
-Ten en cuenta que para el tercer elemento **Border** usamos un atributo adicional, **Grid.ColumnSpan**, lo que hace que este **Border** ocupe ambas columnas en la fila inferior. Puedes usar **Grid.RowSpan** de la misma forma y, juntos, estos atributos te permiten extender un elemento sobre cualquier número de filas y columnas. La esquina superior izquierda de dicha expansión es siempre los atributos **Grid.Column** y **Grid.Row** especificados en los atributos del elemento.
+Ten en cuenta que para el tercer elemento **Border** usamos un atributo adicional, **Grid.ColumnSpan** , lo que hace que este **Border** ocupe ambas columnas en la fila inferior. Puedes usar **Grid.RowSpan** de la misma forma y, juntos, estos atributos te permiten extender un elemento sobre cualquier número de filas y columnas. La esquina superior izquierda de dicha expansión es siempre los atributos **Grid.Column** y **Grid.Row** especificados en los atributos del elemento.
 
 Si ejecutas la aplicación, el resultado será similar al siguiente.
 
@@ -89,7 +89,7 @@ En el siguiente código, crearemos dos elementos **StackPanel** y los rellenarem
 </StackPanel>
 ```
 
-En el primer **Stackpanel**, cada **TextBlock** se apila verticalmente debajo del siguiente. Este es el comportamiento predeterminado de un StackPanel, así que no necesitamos establecer el atributo **Orientation**. En el segundo StackPanel, queremos que los elementos secundarios se apilen horizontalmente de izquierda a derecha, por lo que establecemos el atributo **Orientation** en "Horizontal". También debemos establecer el atributo **Grid.ColumnSpan** en "2", para que el texto se centre en el elemento **Border** inferior.
+En el primer **Stackpanel** , cada **TextBlock** se apila verticalmente debajo del siguiente. Este es el comportamiento predeterminado de un StackPanel, así que no necesitamos establecer el atributo **Orientation**. En el segundo StackPanel, queremos que los elementos secundarios se apilen horizontalmente de izquierda a derecha, por lo que establecemos el atributo **Orientation** en "Horizontal". También debemos establecer el atributo **Grid.ColumnSpan** en "2", para que el texto se centre en el elemento **Border** inferior.
 
 Si ejecutas la aplicación ahora, verás algo parecido a esto.
 
@@ -103,15 +103,15 @@ Descarga la siguiente imagen y guárdala como un archivo PNG denominado "partial
 
 ![Parcialmente nuboso](images/partially-cloudy.PNG)
 
-En el **Explorador de soluciones**, haz clic con el botón derecho en la carpeta **Activos** y selecciona **Agregar** -> **Elemento existente**. Busca el archivo partially-cloudy.png en el explorador que aparece, selecciónalo y haz clic en **Agregar**.
+En el **Explorador de soluciones** , haz clic con el botón derecho en la carpeta **Activos** y selecciona **Agregar** -> **Elemento existente**. Busca el archivo partially-cloudy.png en el explorador que aparece, selecciónalo y haz clic en **Agregar**.
 
-A continuación, en **MainPage.xaml**, agrega el siguiente elemento **Image** debajo de los elementos StackPanel del paso 4.
+A continuación, en **MainPage.xaml** , agrega el siguiente elemento **Image** debajo de los elementos StackPanel del paso 4.
 
 ```xml
 <Image Margin="20" Source="Assets/partially-cloudy.png"/>
 ```
 
-Como queremos el elemento Image en la primera fila y la primera columna, no necesitamos establecer sus atributos **Grid.Row** o **Grid.Column**, por lo que podemos dejarlos en su valor predeterminado de "0".
+Como queremos el elemento Image en la primera fila y la primera columna, no necesitamos establecer sus atributos **Grid.Row** o **Grid.Column** , por lo que podemos dejarlos en su valor predeterminado de "0".
 
 Y eso es todo. Has creado correctamente el diseño de una aplicación meteorológica sencilla. Si presionas **F5** y ejecutas la aplicación, deberías ver algo parecido a esto:
 

@@ -1,5 +1,5 @@
 ---
-Description: Las características de diseño universal incluidas en la aplicación de UWP te ayudan a crear aplicaciones que se adaptan perfectamente a una gama de dispositivos.
+description: Las características de diseño universal incluidas en la aplicación de UWP te ayudan a crear aplicaciones que se adaptan perfectamente a una gama de dispositivos.
 title: Introducción al diseño de aplicaciones de Windows (aplicaciones de Windows)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.date: 09/24/2020
@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d3179a553e0d30bd009765ec55640989720628c2
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 78ccbe1f18167c318ffa38f3614cfab61782d147
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763092"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032448"
 ---
 # <a name="introduction-to-windows-app-design"></a>Introducción al diseño de aplicaciones de Windows
 

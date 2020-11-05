@@ -1,17 +1,17 @@
 ---
-Description: Usar propiedades de alineación, margen y espaciado interno para organizar el diseño de elementos en una página.
+description: Usar propiedades de alineación, margen y espaciado interno para organizar el diseño de elementos en una página.
 title: Alineación, margen y espaciado interno para el diseño
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1982bdd60ea8f14d19b9b29556b143abd8931127
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f2782118b2ed35578ac48f2996839ceefcf5b71b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165669"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034898"
 ---
 # <a name="alignment-margin-padding"></a>Alineación, margen, espaciado interno
 
@@ -36,8 +36,8 @@ La alineación hace que la apariencia de tu interfaz de usuario sea más interes
 ![diagrama que muestra la alineación](images/alignment.svg)
 
 - [**HorizontalAlignment**](/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) y [**VerticalAlignment**](/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) especifican cómo debe colocarse un elemento en su contenedor principal.
-    - Los valores de **HorizontalAlignment** son **Left**, **Center**, **Right** y **Stretch**.
-    - Los valores de **VerticalAlignment** son **Top**, **Center**, **Bottom** y **Stretch**.
+    - Los valores de **HorizontalAlignment** son **Left** , **Center** , **Right** y **Stretch**.
+    - Los valores de **VerticalAlignment** son **Top** , **Center** , **Bottom** y **Stretch**.
 
 - **Stretch** es el valor predeterminado para ambas propiedades, y los elementos ocupan todo el espacio que se les proporciona en el contenedor principal. Los valores de Height y Width con un número real anulan un valor Stretch, que en cambio actuará como un valor Center. Algunos controles, como Button, invalidan el valor predeterminado Stretch en su estilo predeterminado.
 
@@ -71,7 +71,7 @@ A diferencia del margen, el espaciado interno no es una propiedad de FrameworkEl
 -   [**Control.Padding**](/uwp/api/windows.ui.xaml.controls.control.padding): hereda en todas las clases derivadas de [**Control**](/uwp/api/windows.ui.xaml.controls). No todos los controles tienen contenido, de modo que, para algunos controles, establecer la propiedad no hace nada. Si el control tiene un borde, el espaciado interno se aplica dentro de dicho borde.
 -   [**Border.Padding**](/uwp/api/windows.ui.xaml.controls.border.padding): define el espacio entre la línea de rectángulo creada por los objetos [**BorderThickness**](/uwp/api/windows.ui.xaml.controls.border.borderthickness)/[**BorderBrush**](/uwp/api/windows.ui.xaml.controls.border.borderbrush) y el elemento [**Child**](/uwp/api/windows.ui.xaml.controls.border.child).
 -   [**ItemsPresenter.Padding**](/uwp/api/windows.ui.xaml.controls.itemspresenter.padding): contribuye a la apariencia de los efectos visuales generados para los elementos de los controles de elemento al colocar el espaciado interno especificado alrededor de cada elemento.
--   [**TextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.textblock.padding) y [**RichTextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.richtextblock.padding): amplían el rectángulo de selección alrededor del texto del elemento de texto. Estos elementos de texto no tienen ningún **Background**, por lo que puede resultar difícil verlos. Por ello, usa la configuración [**Margin**](/uwp/api/windows.ui.xaml.documents.block.margin) en contenedores [**Block**](/uwp/api/windows.ui.xaml.documents.block) en su lugar.
+-   [**TextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.textblock.padding) y [**RichTextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.richtextblock.padding): amplían el rectángulo de selección alrededor del texto del elemento de texto. Estos elementos de texto no tienen ningún **Background** , por lo que puede resultar difícil verlos. Por ello, usa la configuración [**Margin**](/uwp/api/windows.ui.xaml.documents.block.margin) en contenedores [**Block**](/uwp/api/windows.ui.xaml.documents.block) en su lugar.
 
 En cada uno de estos casos, los elementos también tienen una propiedad de margen. Si se aplica tanto el margen como el espaciado interno, se suman, es decir, la distancia aparente entre un contenedor externo y el contenido interno será el margen más el espaciado interno.
 

@@ -1,6 +1,6 @@
 ---
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
-Description: El control TextBox permite a un usuario escribir texto en una aplicación.
+description: El control TextBox permite a un usuario escribir texto en una aplicación.
 title: Cuadro de texto
 label: Text box
 template: detail.hbs
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 794bf6e99701dd73ee74b07c289fe9a2e5ca9744
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 542822b27f356c9471ec8a6c6f5bec0aac2144ce
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749782"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034758"
 ---
 # <a name="text-box"></a>Cuadro de texto
 
@@ -38,7 +38,7 @@ El control TextBox tiene varias características que pueden simplificar la entra
    :::column-end:::
 :::row-end:::
 
-> **API de plataforma**: [Clase de cuadro de texto](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Propiedad Text](/uwp/api/windows.ui.xaml.controls.textbox.text)
+> **API de plataforma** : [Clase de cuadro de texto](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Propiedad Text](/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 

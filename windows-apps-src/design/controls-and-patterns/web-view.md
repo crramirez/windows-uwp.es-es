@@ -1,5 +1,5 @@
 ---
-Description: Un control de vista web inserta una vista en la aplicación, que representa el contenido web mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
+description: Un control de vista web inserta una vista en la aplicación, que representa el contenido web mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
 title: Vista web
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 46fc3c0eb087891de4fe622f0770bc7f1b2955d7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f2f3bf022210e5b5f329cb5824cb36708154b977
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163309"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034388"
 ---
 # <a name="web-view"></a>Vista web
 
 Un control de vista web inserta una vista en la aplicación, que representa el contenido web mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
 
-> **API importantes**: [clase WebView](/uwp/api/Windows.UI.Xaml.Controls.WebView)
+> **API importantes** : [clase WebView](/uwp/api/Windows.UI.Xaml.Controls.WebView)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -88,9 +88,9 @@ webView1.Navigate("http://www.contoso.com");
 
 Para navegar a un URI con una solicitud POST y encabezados HTTP, usa el método [NavigateWithHttpRequestMessage](/uwp/api/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage). Este método solo admite [HttpMethod.Post](/uwp/api/windows.web.http.httpmethod.post) y [HttpMethod.Get](/uwp/api/windows.web.http.httpmethod.get) como valores de la propiedad [HttpRequestMessage.Method](/uwp/api/windows.web.http.httprequestmessage.method). 
 
-Para cargar contenido sin comprimir y sin cifrar desde los almacenes de datos [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) o [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) de la aplicación, usa el método **Navigate** con un **URI** que utilice [ms-appdata scheme](../../app-resources/uri-schemes.md). La compatibilidad de la vista web con este esquema requiere que coloques el contenido en una subcarpeta de la carpeta local o temporal. Esto permite la navegación a identificadores URI como ms-appdata:///local/*carpeta*/*archivo*.html y ms-appdata:///temp/*carpeta*/*archivo*.html. (Para cargar archivos comprimidos o cifrados, consulta [NavigateToLocalStreamUri](/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)). 
+Para cargar contenido sin comprimir y sin cifrar desde los almacenes de datos [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) o [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) de la aplicación, usa el método **Navigate** con un **URI** que utilice [ms-appdata scheme](../../app-resources/uri-schemes.md). La compatibilidad de la vista web con este esquema requiere que coloques el contenido en una subcarpeta de la carpeta local o temporal. Esto permite la navegación a identificadores URI como ms-appdata:///local/ *carpeta*/*archivo*.html y ms-appdata:///temp/ *carpeta*/*archivo*.html. (Para cargar archivos comprimidos o cifrados, consulta [NavigateToLocalStreamUri](/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)). 
 
-Cada una de estas subcarpetas de primer nivel está aislada del contenido de otras subcarpetas de primer nivel. Por ejemplo, puedes ir a ms-appdata:///temp/carpeta1/archivo.html, pero en este archivo no puedes tener un vínculo a ms-appdata:///temp/carpeta2/archivo.html. Sin embargo, sí puedes establecer un vínculo al contenido HTML del paquete de la aplicación mediante el **esquema ms-appx-web**, y al contenido web mediante los esquemas URI **http** y **https**.
+Cada una de estas subcarpetas de primer nivel está aislada del contenido de otras subcarpetas de primer nivel. Por ejemplo, puedes ir a ms-appdata:///temp/carpeta1/archivo.html, pero en este archivo no puedes tener un vínculo a ms-appdata:///temp/carpeta2/archivo.html. Sin embargo, sí puedes establecer un vínculo al contenido HTML del paquete de la aplicación mediante el **esquema ms-appx-web** , y al contenido web mediante los esquemas URI **http** y **https**.
 
 ```csharp
 webView1.Navigate("ms-appdata:///local/intro/welcome.html");
@@ -109,7 +109,7 @@ Puedes cargar contenido local a través de una resolución personalizada mediant
 El control de vista web proporciona varios eventos que puedes usar para responder a estados de carga de contenido y navegación. Para el contenido de vista web raíz los eventos se producen en el siguiente orden: [NavigationStarting](/uwp/api/windows.ui.xaml.controls.webview.navigationstarting), [ContentLoading](/uwp/api/windows.ui.xaml.controls.webview.contentloading), [DOMContentLoaded](/uwp/api/windows.ui.xaml.controls.webview.domcontentloaded), [NavigationCompleted](/uwp/api/windows.ui.xaml.controls.webview.navigationcompleted)
 
 
-**NavigationStarting**: se produce antes de que la vista web se desplace al nuevo contenido. Para cancelar la navegación en un controlador para este evento, establece la propiedad WebViewNavigationStartingEventArgs.Cancel en true. 
+**NavigationStarting** : se produce antes de que la vista web se desplace al nuevo contenido. Para cancelar la navegación en un controlador para este evento, establece la propiedad WebViewNavigationStartingEventArgs.Cancel en true. 
 
 ```csharp
 webView1.NavigationStarting += webView1_NavigationStarting;
@@ -122,7 +122,7 @@ private void webView1_NavigationStarting(object sender, WebViewNavigationStartin
 }
 ```
 
-**ContentLoading**: se produce cuando la vista web empieza a cargar contenido nuevo. 
+**ContentLoading** : se produce cuando la vista web empieza a cargar contenido nuevo. 
 
 ```csharp
 webView1.ContentLoading += webView1_ContentLoading;
@@ -137,7 +137,7 @@ private void webView1_ContentLoading(WebView sender, WebViewContentLoadingEventA
 }
 ```
 
-**DOMContentLoaded**: se produce cuando la vista web ha terminado de analizar el contenido HTML actual. 
+**DOMContentLoaded** : se produce cuando la vista web ha terminado de analizar el contenido HTML actual. 
 
 ```csharp
 webView1.DOMContentLoaded += webView1_DOMContentLoaded;
@@ -152,7 +152,7 @@ private void webView1_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEv
 }
 ```
 
-**NavigationCompleted**: se produce cuando la vista web ha terminado de cargar el contenido actual, o si se produce un error de navegación. Para determinar si se produjo un error en la navegación, comprueba las propiedades [IsSuccess](/uwp/api/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.issuccess) y [WebErrorStatus](/uwp/api/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.weberrorstatus) de la clase [WebViewNavigationCompletedEventArgs](/uwp/api/Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs). 
+**NavigationCompleted** : se produce cuando la vista web ha terminado de cargar el contenido actual, o si se produce un error de navegación. Para determinar si se produjo un error en la navegación, comprueba las propiedades [IsSuccess](/uwp/api/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.issuccess) y [WebErrorStatus](/uwp/api/windows.ui.xaml.controls.webviewnavigationcompletedeventargs.weberrorstatus) de la clase [WebViewNavigationCompletedEventArgs](/uwp/api/Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs). 
 
 ```csharp
 webView1.NavigationCompleted += webView1_NavigationCompleted;

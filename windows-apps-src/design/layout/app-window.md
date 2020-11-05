@@ -1,16 +1,16 @@
 ---
-Description: Usa la clase AppWindow para ver diferentes partes de la aplicación en ventanas independientes.
+description: Usa la clase AppWindow para ver diferentes partes de la aplicación en ventanas independientes.
 title: Uso de la clase AppWindow para mostrar las ventanas secundarias de una aplicación
 ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b89d9100157cf40266bb983e258aa187f65dc93
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a3f8644612954c4693ad28d3c1b41870855b37ca
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867461"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034888"
 ---
 # <a name="show-multiple-views-with-appwindow"></a>Mostrar varias vistas con AppWindow
 
@@ -34,7 +34,7 @@ Aquí se muestran algunos escenarios con ventanas múltiples con una aplicación
 
 > _Aplicación de ejemplo con un selector de colores desacoplado y una ventana secundaria_
 
-> **API importantes**: [Espacio de nombres Windows.UI.WindowManagement](/uwp/api/windows.ui.windowmanagement), [clase AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)
+> **API importantes** : [Espacio de nombres Windows.UI.WindowManagement](/uwp/api/windows.ui.windowmanagement), [clase AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)
 
 ## <a name="api-overview"></a>Introducción a API
 

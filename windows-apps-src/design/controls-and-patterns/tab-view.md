@@ -1,5 +1,5 @@
 ---
-Description: TabView es una manera flexible de organizar varios documentos en pestañas dinámicas.
+description: TabView es una manera flexible de organizar varios documentos en pestañas dinámicas.
 title: Vista de pestañas
 template: detail.hbs
 ms.date: 09/24/2020
@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3010feeb1a19f8c4d38883415cc315b8d863bb82
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: f34e2a882746ac833d2b78373a96496c1f079864
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749741"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034778"
 ---
 # <a name="tabview"></a>TabView
 
@@ -34,7 +34,7 @@ El control TabView es una manera de mostrar un conjunto de pestañas y su conten
    :::column-end:::
 :::row-end:::
 
-> **API de la biblioteca de interfaz de usuario de Windows**: [Clase TabView](/uwp/api/microsoft.ui.xaml.controls.tabview), [clase TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
+> **API de la biblioteca de interfaz de usuario de Windows** : [Clase TabView](/uwp/api/microsoft.ui.xaml.controls.tabview), [clase TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 > [!TIP]
 > En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
@@ -203,7 +203,7 @@ De manera predeterminada, [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)
 
 ### <a name="tab-and-cursor-key-behavior"></a>Comportamiento de las teclas de tabulación y de cursor
 
-Cuando el foco se desplaza al área de _TabStrip_, el elemento [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem) seleccionado recibe el foco. A continuación, el usuario puede usar las teclas de flecha izquierda y derecha para desplazar el foco (no la selección) a otras pestañas de TabStrip. El foco de las flechas queda atrapado en la franja de pestañas y el botón de agregar pestaña (+), si hay uno. Para sacar el foco del área de TabStrip, el usuario puede presionar la tecla TAB, que moverá el foco al siguiente elemento enfocable.
+Cuando el foco se desplaza al área de _TabStrip_ , el elemento [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem) seleccionado recibe el foco. A continuación, el usuario puede usar las teclas de flecha izquierda y derecha para desplazar el foco (no la selección) a otras pestañas de TabStrip. El foco de las flechas queda atrapado en la franja de pestañas y el botón de agregar pestaña (+), si hay uno. Para sacar el foco del área de TabStrip, el usuario puede presionar la tecla TAB, que moverá el foco al siguiente elemento enfocable.
 
 Desplazar el foco mediante TAB
 

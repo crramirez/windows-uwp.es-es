@@ -1,5 +1,5 @@
 ---
-Description: NumberBox es un control que se puede usar para mostrar y editar números.
+description: NumberBox es un control que se puede usar para mostrar y editar números.
 title: Cuadro de número
 template: detail.hbs
 ms.date: 09/24/2020
@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 42f37a2753cced0f53fab54af393af74c21f3597
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 4bba2f90d7240b454c4dbd5331251e306f946af7
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749761"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030918"
 ---
 # <a name="number-box"></a>Cuadro de número
 
@@ -32,7 +32,7 @@ Representa un control que se puede usar para mostrar y editar números. Admite l
    :::column-end:::
 :::row-end:::
 
-**API de la biblioteca de interfaz de usuario de Windows**: [Clase NumberBox](/uwp/api/microsoft.ui.xaml.controls.NumberBox)
+**API de la biblioteca de interfaz de usuario de Windows** : [Clase NumberBox](/uwp/api/microsoft.ui.xaml.controls.NumberBox)
 
 > [!TIP]
 > En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`

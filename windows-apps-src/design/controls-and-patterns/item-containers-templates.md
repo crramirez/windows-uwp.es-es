@@ -1,5 +1,5 @@
 ---
-Description: Usa plantillas para modificar la apariencia de los elementos en los controles ListView o GridView.
+description: Usa plantillas para modificar la apariencia de los elementos en los controles ListView o GridView.
 title: Plantillas y contenedores de elementos
 label: Item containers and templates
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 505e03124f345b8b32c6b3454ffa4aad32a72e29
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 74cacee6dc8ea7bec0af4e5ffab66b392a0f945c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172768"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034688"
 ---
 # <a name="item-containers-and-templates"></a>Plantillas y contenedores de elementos
 
@@ -25,7 +25,7 @@ ms.locfileid: "89172768"
 
 Los controles **ListView** y **GridView** administran la organización de sus elementos (horizontal, vertical, ajuste, etc.) y la interacción del usuario con los elementos, pero no la visualización de elementos individuales en la pantalla. Los contenedores de elementos administran la visualización de los elementos. Cuando agregas elementos a una vista de lista, estos se colocan automáticamente en un contenedor. El contenedor de elementos predeterminado de ListView es [ListViewItem](/uwp/api/Windows.UI.Xaml.Controls.ListViewItem); para GridView, es [GridViewItem](/uwp/api/Windows.UI.Xaml.Controls.GridViewItem).
 
-> **API importantes**: [Clase ListView](/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](/uwp/api/windows.ui.xaml.controls.gridview), [clase ListViewItem](/uwp/api/windows.ui.xaml.controls.listviewitem), [clase GridViewItem](/uwp/api/windows.ui.xaml.controls.gridviewitem), [propiedad ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [propiedad ItemContainerStyle](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
+> **API importantes** : [Clase ListView](/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](/uwp/api/windows.ui.xaml.controls.gridview), [clase ListViewItem](/uwp/api/windows.ui.xaml.controls.listviewitem), [clase GridViewItem](/uwp/api/windows.ui.xaml.controls.gridviewitem), [propiedad ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [propiedad ItemContainerStyle](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
 
 
 > [!NOTE]
@@ -34,14 +34,14 @@ Los controles **ListView** y **GridView** administran la organización de sus el
 ## <a name="listview-items-and-gridview-items"></a>Elementos ListView y elementos GridView
 Como se mencionó anteriormente, los elementos ListView se colocan automáticamente en el contenedor ListViewItem, y los elementos GridView se colocan en el contenedor GridViewItem. Estos contenedores de elementos son controles que tienen su propio estilo e interacción integrados, pero también pueden personalizarse en gran medida. Sin embargo, antes de la personalización, asegúrate de familiarizarte con el estilo y las directrices recomendados para ListViewItem y GridViewItem:
 
-- **ListViewItems**: Los elementos principalmente se enfocan en el texto y tienen una forma más alargada. Los iconos o las imágenes pueden aparecer a la izquierda del texto.
-- **GridViewItems**: Los elementos suelen tener una forma cuadrada o, al menos, una forma de rectángulo menos alargada. Los elementos se enfocan en la imagen y pueden tener texto alrededor de la imagen o superpuesto a esta. 
+- **ListViewItems** : Los elementos principalmente se enfocan en el texto y tienen una forma más alargada. Los iconos o las imágenes pueden aparecer a la izquierda del texto.
+- **GridViewItems** : Los elementos suelen tener una forma cuadrada o, al menos, una forma de rectángulo menos alargada. Los elementos se enfocan en la imagen y pueden tener texto alrededor de la imagen o superpuesto a esta. 
 
 ## <a name="introduction-to-customization"></a>Introducción a la personalización
 Los controles de contenedor (como ListViewItem y GridViewItem) constan de dos partes importantes que se combinan para crear los elementos visuales finales que se muestran para un elemento: la *plantilla de datos* y la *plantilla de control*.
 
-- **Plantilla de datos**: debes asignar una clase [DataTemplate](/uwp/api/Windows.UI.Xaml.DataTemplate) a la propiedad [ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de la vista de lista para especificar cómo se muestran los elementos de datos individuales.
-- **Plantilla de control**: la plantilla de control proporciona la parte de la visualización de elementos de la que el marco es responsable, como los estados visuales. Puedes usar la propiedad [ItemContainerStyle](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) para modificar la plantilla de control. Por lo general, se usa para modificar los colores de la vista de lista de modo que coincidan con tu personalización de marca, o bien para cambiar cómo se muestran los elementos seleccionados.
+- **Plantilla de datos** : debes asignar una clase [DataTemplate](/uwp/api/Windows.UI.Xaml.DataTemplate) a la propiedad [ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de la vista de lista para especificar cómo se muestran los elementos de datos individuales.
+- **Plantilla de control** : la plantilla de control proporciona la parte de la visualización de elementos de la que el marco es responsable, como los estados visuales. Puedes usar la propiedad [ItemContainerStyle](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) para modificar la plantilla de control. Por lo general, se usa para modificar los colores de la vista de lista de modo que coincidan con tu personalización de marca, o bien para cambiar cómo se muestran los elementos seleccionados.
 
 Esta imagen muestra cómo se combinan la plantilla de control y la plantilla de datos para crear la visualización final de un elemento.
 
@@ -156,7 +156,7 @@ namespace ColorsListApp
 
 Debes especificar una plantilla de datos para indicar a la vista de lista cómo debe mostrarse el elemento de datos. 
 
-De manera predeterminada, un elemento de datos se muestra en la vista de lista como una representación de cadena del objeto de datos al que está enlazado. Si muestras los datos de "NamedColors" en una vista de lista sin indicar a la vista de lista cómo deben mostrarse, solo muestra lo que devuelve el método **ToString**, como en el ejemplo siguiente.
+De manera predeterminada, un elemento de datos se muestra en la vista de lista como una representación de cadena del objeto de datos al que está enlazado. Si muestras los datos de "NamedColors" en una vista de lista sin indicar a la vista de lista cómo deben mostrarse, solo muestra lo que devuelve el método **ToString** , como en el ejemplo siguiente.
 
 **XAML**
 ```xaml
@@ -328,7 +328,7 @@ Como se mencionó anteriormente acerca de las plantillas de datos, el número de
 Los controles ListView y GridView están optimizados para reducir el número de elementos XAML creados por elemento. Los objetos visuales **ListViewItem** los crea la clase [ListViewItemPresenter](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter), que es un elemento XAML especial que muestra objetos visuales complejos de foco, selección y otros estados visuales, sin la sobrecarga de numerosas clases UIElement.
  
 > [!NOTE]
-> En las aplicaciones para UWP para Windows 10, ambos elementos **ListViewItem** y **GridViewItem** usan la clase **ListViewItemPresenter**; la clase GridViewItemPresenter está en desuso y no debes usarla. Los elementos ListViewItem y GridViewItem establecen diferentes valores de propiedad en la clase ListViewItemPresenter para conseguir distintas apariencias predeterminadas).
+> En las aplicaciones para UWP para Windows 10, ambos elementos **ListViewItem** y **GridViewItem** usan la clase **ListViewItemPresenter** ; la clase GridViewItemPresenter está en desuso y no debes usarla. Los elementos ListViewItem y GridViewItem establecen diferentes valores de propiedad en la clase ListViewItemPresenter para conseguir distintas apariencias predeterminadas).
 
 Para modificar la apariencia del contenedor de elementos, usa la propiedad [ItemContainerStyle](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) y proporciona una clase [Style](/uwp/api/windows.ui.xaml.style) con la propiedad [TargetType](/uwp/api/windows.ui.xaml.style.targettype) establecida en **ListViewItem** o **GridViewItem**.
 
@@ -361,7 +361,7 @@ Para modificar otras propiedades de ListViewItemPresenter que no están enlazada
 
 **Para crear una copia de la plantilla predeterminada en Visual Studio**
  
-1. Abre el panel Esquema del documento (**Ver > Otras ventanas > Esquema del documento**).
+1. Abre el panel Esquema del documento ( **Ver > Otras ventanas > Esquema del documento** ).
 2. Selecciona el elemento de lista o cuadrícula que quieres modificar. En este ejemplo, se modifica el elemento `colorsGridView`.
 3. Haz clic con el botón derecho y selecciona **Edit Additional Templates (Editar plantillas adicionales) > Edit Generated Item Container (ItemContainerStyle) [Editar contenedor de elementos generados (ItemContainerStyle)]> Editar una copia**.
     ![Editor de Visual Studio](images/listview-itemcontainerstyle-vs.png)
@@ -426,12 +426,12 @@ Ahora puedes modificar las propiedades de la clase ListViewItemPresenter para co
 
 ListView y GridView indican los elementos seleccionados de diferentes maneras según el control y la propiedad [SelectionMode](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode). Para obtener más información sobre la selección de la vista de lista, consulta [ListView y GridView](listview-and-gridview.md). 
 
-Si **SelectionMode** está establecido en **Multiple**, se muestra una casilla como parte de la plantilla de control del elemento. Puedes usar la propiedad [SelectionCheckMarkVisualEnabled](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled) para desactivar la casilla de selección en modo de selección múltiple. Sin embargo, esta propiedad se omite en otros modos de selección, por lo que no se puede activar la casilla en el modo de selección Extended o Single.
+Si **SelectionMode** está establecido en **Multiple** , se muestra una casilla como parte de la plantilla de control del elemento. Puedes usar la propiedad [SelectionCheckMarkVisualEnabled](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled) para desactivar la casilla de selección en modo de selección múltiple. Sin embargo, esta propiedad se omite en otros modos de selección, por lo que no se puede activar la casilla en el modo de selección Extended o Single.
 
 Puedes establecer la propiedad [CheckMode](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode) para especificar si la casilla se muestra con el estilo en línea o el estilo de superposición.
 
-- **Inline**: Este estilo muestra la casilla a la izquierda del contenido y agrega color al fondo del contenedor de elementos para indicar la selección. Este es el estilo predeterminado del control ListView.
-- **Overlay**: Este estilo muestra la casilla en la parte superior del contenido y solo agrega color al borde del contenedor de elementos para indicar la selección. Este es el estilo predeterminado del control GridView.
+- **Inline** : Este estilo muestra la casilla a la izquierda del contenido y agrega color al fondo del contenedor de elementos para indicar la selección. Este es el estilo predeterminado del control ListView.
+- **Overlay** : Este estilo muestra la casilla en la parte superior del contenido y solo agrega color al borde del contenedor de elementos para indicar la selección. Este es el estilo predeterminado del control GridView.
 
 En esta tabla se muestran los elementos visuales predeterminados usados para indicar la selección.
 

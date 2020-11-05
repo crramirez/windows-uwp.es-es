@@ -1,17 +1,17 @@
 ---
-Description: Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de Microsoft Store para Empresas y Microsoft Store para Educación en la sección Licencias organizativas de la página de envío de aplicación.
+description: Puedes especificar si la aplicación puede comprarse por volumen, y en qué condiciones, a través de Microsoft Store para Empresas y Microsoft Store para Educación en la sección Licencias organizativas de la página de envío de aplicación.
 title: Opciones de licencia organizativas
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, store para empresas, store para educación, organizativa, licencias por volumen, empresa, educación store, empresa store, compra por volumen, en masa
 localizationpriority: high
-ms.openlocfilehash: f572a09c488cfff391fead603612148b6a85bc02
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dbaf44409e387d15225e701ef5c64fc2cb198ece
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174749"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034628"
 ---
 # <a name="organizational-licensing-options"></a>Opciones de licencia organizativas
 

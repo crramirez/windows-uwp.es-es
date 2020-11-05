@@ -1,5 +1,5 @@
 ---
-Description: Puedes usar un control RichEditBox para escribir y editar documentos de texto enriquecido que contengan texto con formato, hipervínculos e imágenes. Puedes hacer que RichEditBox sea de solo lectura si estableces la propiedad IsReadOnly en true.
+description: Puedes usar un control RichEditBox para escribir y editar documentos de texto enriquecido que contengan texto con formato, hipervínculos e imágenes. Puedes hacer que RichEditBox sea de solo lectura si estableces la propiedad IsReadOnly en true.
 title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ff0b8cc337c8afe3d7c06ffabca4eb0fa0d5a8d
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: bb5ee48152b96c430e3b6ab8cf320b3055620865
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750331"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035218"
 ---
 # <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 
@@ -36,7 +36,7 @@ Puedes usar un control RichEditBox para escribir y editar documentos de texto en
    :::column-end:::
 :::row-end:::
 
-> **API de plataforma**: [Clase RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Propiedad Document](/uwp/api/windows.ui.xaml.controls.richeditbox.document), [Propiedad IsReadOnly](/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [Propiedad IsSpellCheckEnabled](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
+> **API de plataforma** : [Clase RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Propiedad Document](/uwp/api/windows.ui.xaml.controls.richeditbox.document), [Propiedad IsReadOnly](/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [Propiedad IsSpellCheckEnabled](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 

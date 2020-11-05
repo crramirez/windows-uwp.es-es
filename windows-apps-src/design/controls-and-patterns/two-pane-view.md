@@ -1,17 +1,17 @@
 ---
-Description: TwoPaneView es un control de diseño que te ayuda a administrar la presentación de aplicaciones que tienen dos áreas de contenido distintas.
+description: TwoPaneView es un control de diseño que te ayuda a administrar la presentación de aplicaciones que tienen dos áreas de contenido distintas.
 title: Vista de dos paneles
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 681405694880024e158b4ef5798ca2862a38fde2
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 76a6264a8ce1704e9bd209a6246c81ba9665265f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750231"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034438"
 ---
 # <a name="two-pane-view"></a>Vista de dos paneles
 
@@ -102,7 +102,7 @@ No es necesario que [TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopanevie
 
 Cada panel de una vista de dos paneles puede contener un único `UIElement` de XAML. Para agregar contenido, normalmente colocas un panel de diseño XAML en cada panel y, luego, agregas otros controles y contenido al panel. Los paneles pueden cambiar el tamaño y cambiar entre los modos Wide y Tall, por lo que debes asegurarte de que el contenido de cada panel puede adaptarse a estos cambios. Para más información sobre la creación de una interfaz de usuario adaptable, consulta [Diseños adaptativos con XAML](../layout/layouts-with-xaml.md) y [Paneles de diseño](../layout/layout-panels.md).
 
-En este ejemplo, se crea la UI de la aplicación sencilla de imagen/información que se muestra anteriormente en la sección _Ejemplos_. Cuando la aplicación se amplía a dos pantallas, la imagen y la información se muestran en pantallas independientes. En una sola pantalla, el contenido se puede mostrar en dos paneles o combinarse en un solo panel, en función de la cantidad de espacio disponible. (Cuando solo hay espacio para un panel, se mueve el contenido de Pane2 a Pane1, y se permite al usuario desplazarse para ver cualquier contenido oculto. Verás el código más adelante en la sección _Responder a los cambios de modo_).
+En este ejemplo, se crea la UI de la aplicación sencilla de imagen/información que se muestra anteriormente en la sección _Ejemplos_. Cuando la aplicación se amplía a dos pantallas, la imagen y la información se muestran en pantallas independientes. En una sola pantalla, el contenido se puede mostrar en dos paneles o combinarse en un solo panel, en función de la cantidad de espacio disponible. (Cuando solo hay espacio para un panel, se mueve el contenido de Pane2 a Pane1, y se permite al usuario desplazarse para ver cualquier contenido oculto. Verás el código más adelante en la sección _Responder a los cambios de modo_ ).
 
 ![Pequeña imagen de la aplicación de ejemplo distribuida en dos pantallas](images/two-pane-view/tpv-left-right.png)
 
@@ -198,7 +198,7 @@ MyTwoPaneView.PanePriority = Microsoft.UI.Xaml.Controls.TwoPaneViewPriority.Pane
 
 ### <a name="pane-sizing"></a>Cambio de tamaño de los paneles
 
-En una única pantalla, el tamaño de los paneles está determinado por las propiedades [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) y [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length). Usan valores [GridLength](/uwp/api/windows.ui.xaml.gridlength) que admiten el ajuste de tamaño _auto_ y _star_(\*). Consulta la sección _Propiedades de diseño_ de [Diseños adaptativos con XAML](../layout/layouts-with-xaml.md#layout-properties) para ver una explicación de los ajustes de tamaño auto y star.
+En una única pantalla, el tamaño de los paneles está determinado por las propiedades [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) y [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length). Usan valores [GridLength](/uwp/api/windows.ui.xaml.gridlength) que admiten el ajuste de tamaño _auto_ y _star_ (\*). Consulta la sección _Propiedades de diseño_ de [Diseños adaptativos con XAML](../layout/layouts-with-xaml.md#layout-properties) para ver una explicación de los ajustes de tamaño auto y star.
 
 De manera predeterminada, `Pane1Length` se establece en `Auto` y su tamaño se ajusta a su contenido. `Pane2Length` se establece en `*` y usa todo el espacio restante.
 

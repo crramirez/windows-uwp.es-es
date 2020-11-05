@@ -1,22 +1,22 @@
 ---
-Description: Usa la clase ApplicationView para ver diferentes partes de la aplicación en ventanas independientes.
+description: Usa la clase ApplicationView para ver diferentes partes de la aplicación en ventanas independientes.
 title: Uso de la clase ApplicationView para mostrar las ventanas secundarias de una aplicación
 ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2005f254118c44b386879f771cc4e5c0ae2cadc4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2cdee3c0844fc5a01d0749e4e6219d92cd8178a0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165629"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034858"
 ---
 # <a name="show-multiple-views-with-applicationview"></a>Mostrar varias vistas con ApplicationView
 
 Ayuda a tus usuarios a ser más productivos al permitirles ver partes independientes de la aplicación en ventanas distintas. Si creas varias ventanas para una aplicación, cada una de ellas se comporta de manera independiente. La barra de tareas muestra cada ventana por separado. Los usuarios pueden mover, cambiar de tamaño, mostrar y ocultar ventanas de la aplicación de manera independiente, así como cambiar entre ventanas de la aplicación como si usaran aplicaciones distintas. Cada ventana funciona en su propio subproceso.
 
-> **API importantes**: [**ApplicationViewSwitcher**](/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [**CreateNewView**](/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
+> **API importantes** : [**ApplicationViewSwitcher**](/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [**CreateNewView**](/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
 
 ## <a name="what-is-a-view"></a>¿Qué es una vista?
 
@@ -24,7 +24,7 @@ Una vista de la aplicación es el emparejamiento 1:1 de un subproceso y una vent
 
 Las vistas las administra el objeto [**CoreApplication**](/uwp/api/Windows.ApplicationModel.Core.CoreApplication). Llama al método [**CoreApplication.CreateNewView**](/uwp/api/windows.applicationmodel.core.coreapplication.createnewview) para crear un objeto [**CoreApplicationView**](/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView). LA **CoreApplicationView** reúne una [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) y un [**CoreDispatcher**](/uwp/api/Windows.UI.Core.CoreDispatcher) (almacenado en la [**CoreWindow**](/uwp/api/windows.applicationmodel.core.coreapplicationview.corewindow) y las propiedades de [**Dispatcher**](/uwp/api/windows.applicationmodel.core.coreapplicationview.dispatcher)). Puedes considerar la **CoreApplicationView** como el objeto que Windows Runtime usa para interactuar con el sistema Windows principal.
 
-Normalmente, no trabajas directamente con la [**CoreApplicationView**](/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView). En su lugar, Windows Runtime proporciona la clase [**ApplicationView**](/uwp/api/Windows.UI.ViewManagement.ApplicationView) en el espacio de nombres [**Windows.UI.ViewManagement**](/uwp/api/Windows.UI.ViewManagement). Esta clase ofrece propiedades, métodos y eventos que usas cuando tu aplicación interactúa con el sistema de ventanas. Para trabajar con una **ApplicationView**, llama al método [**ApplicationView.GetForCurrentView**](/uwp/api/windows.ui.viewmanagement.applicationview.getforcurrentview) estático, que obtiene una instancia **ApplicationView** vinculada a la conversación actual de la **CoreApplicationView**.
+Normalmente, no trabajas directamente con la [**CoreApplicationView**](/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView). En su lugar, Windows Runtime proporciona la clase [**ApplicationView**](/uwp/api/Windows.UI.ViewManagement.ApplicationView) en el espacio de nombres [**Windows.UI.ViewManagement**](/uwp/api/Windows.UI.ViewManagement). Esta clase ofrece propiedades, métodos y eventos que usas cuando tu aplicación interactúa con el sistema de ventanas. Para trabajar con una **ApplicationView** , llama al método [**ApplicationView.GetForCurrentView**](/uwp/api/windows.ui.viewmanagement.applicationview.getforcurrentview) estático, que obtiene una instancia **ApplicationView** vinculada a la conversación actual de la **CoreApplicationView**.
 
 De igual modo, el marco XAML encapsula el objeto [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) en un objeto [**Windows.UI.XAML.Window**](/uwp/api/Windows.UI.Xaml.Window). En una aplicación XAML, sueles interactuar con el objeto **Ventana** en lugar de trabajar directamente con la **CoreWindow**.
 

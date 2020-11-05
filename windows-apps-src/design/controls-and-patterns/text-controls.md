@@ -1,5 +1,5 @@
 ---
-Description: Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos, un letrero en un poste de la calle.
+description: Analiza con qué frecuencia leemos el texto en nuestras vidas diarias, en correo electrónico, un libro, una señal de tráfico, los precios en una carta, la presión de los neumáticos, un letrero en un poste de la calle.
 title: Controles de texto
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b06767e5009a4d7654fa7937498319a1bbed671
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ca8facaa63f0eb4c99e518c2fafb0e87208b759d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173889"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033008"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -25,7 +25,7 @@ Los controles de texto constan de cuadros de entrada de texto, cuadros de contra
 - Los controles para mostrar texto de solo lectura son [TextBlock](text-block.md) y [RichTextBlock](rich-text-block.md).
 - Los controles de entrada de texto y edición son: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md) y [PasswordBox](password-box.md).
 
-> **API importantes**: [Clase TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [Clase RichTextBlock](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [Clase TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Clase RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Clase AutoSuggestBox ](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) y [Clase PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+> **API importantes** : [Clase TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [Clase RichTextBlock](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [Clase TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Clase RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Clase AutoSuggestBox](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) y [Clase PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 

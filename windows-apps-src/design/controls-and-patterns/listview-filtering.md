@@ -1,5 +1,5 @@
 ---
-Description: Filtrado de los elementos de la colección a través de los datos proporcionados por el usuario.
+description: Filtrado de los elementos de la colección a través de los datos proporcionados por el usuario.
 title: Filtrado de colecciones
 label: Filtering collections
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 12/3/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: b1ffa6374753343321f34d388eb994a62614cb15
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a62ec52fe2b8f6caac2ac27cfc4d002ec44a5b32
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172609"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034538"
 ---
 # <a name="filtering-collections-and-lists-through-user-input"></a>Filtrado de colecciones y listas mediante la entrada del usuario
 Si la colección muestra muchos elementos o está estrechamente vinculada con la interacción del usuario, el filtrado es una característica que resulta útil implementar. El filtrado mediante el método descrito en este artículo se puede implementar en la mayoría de los controles de colección, incluidos [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView](/uwp/api/windows.ui.xaml.controls.gridview) e [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2). Se pueden usar muchos tipos de entrada de usuario para filtrar una colección (como las casillas de verificación, los botones de radio y los controles deslizantes), pero este artículo se centrará en tomar la entrada del usuario basada en texto y usarla para actualizar un control ListView en tiempo real, de acuerdo con la búsqueda del usuario. 

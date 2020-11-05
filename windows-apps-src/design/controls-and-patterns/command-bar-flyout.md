@@ -1,5 +1,5 @@
 ---
-Description: Los controles flotantes de las barras de comandos proporcionan a los usuarios acceso en línea a las tareas más comunes de tu app.
+description: Los controles flotantes de las barras de comandos proporcionan a los usuarios acceso en línea a las tareas más comunes de tu app.
 title: Control flotante de la barra de comandos
 label: Command bar flyout
 template: detail.hbs
@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a2f6e61373ae343d8d683d6e5f9169cc399f1594
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 3ca79795264fd0629c19877f22bdc3eb332fa69f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750551"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031498"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de la barra de comandos
 
@@ -25,7 +25,7 @@ El control flotante de la barra de comandos permite proporcionar a los usuarios 
 
 ![Un control flotante de la barra de comandos de texto expandido](images/command-bar-flyout-text-full.png)
 
-Al igual que [CommandBar](app-bars.md), CommandBarFlyout tiene las propiedades **PrimaryCommands** y **SecondaryCommands**, que puedes utilizar para agregar comandos. Puedes colocar los comandos en una de las colecciones o en ambas. La forma y el momento en que se muestran los comandos principales y secundarios dependen del modo de presentación.
+Al igual que [CommandBar](app-bars.md), CommandBarFlyout tiene las propiedades **PrimaryCommands** y **SecondaryCommands** , que puedes utilizar para agregar comandos. Puedes colocar los comandos en una de las colecciones o en ambas. La forma y el momento en que se muestran los comandos principales y secundarios dependen del modo de presentación.
 
 El control flotante de la barra de comandos tiene dos modos de presentación: *contraído* y *expandido*.
 
@@ -46,9 +46,9 @@ El control flotante de la barra de comandos tiene dos modos de presentación: *c
    :::column-end:::
 :::row-end:::
 
->**API de la biblioteca de interfaz de usuario de Windows**: [Clase CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
+>**API de la biblioteca de interfaz de usuario de Windows** : [Clase CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 >
->**API de plataforma**: [Clase CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [clase AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
+>**API de plataforma** : [Clase CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [clase AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
 >
 > CommandBarFlyout requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o la [Biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/).
 
@@ -415,8 +415,8 @@ En esta tabla se muestran los comandos incluidos en un elemento TextCommandBarFl
 
 No se puede personalizar TextCommandBarFlyout y cada control de texto lo administra automáticamente. Sin embargo, puedes sustituir el elemento TextCommandBarFlyout predeterminado con comandos personalizados.
 
-- Para sustituir el valor de TextCommandBarFlyout predeterminado que se muestra en la selección de texto, puedes crear un elemento CommandBarFlyout personalizado (u otro tipo de control flotante) y asignarlo a la propiedad **SelectionFlyout**. Si estableces SelectionFlyout en **null**, no se muestran comandos en la selección.
-- Para sustituir el valor de TextCommandBarFlyout predeterminado que se muestra como el menú contextual, asigna un elemento CommandBarFlyout personalizado (u otro tipo de control flotante) a la propiedad **ContextFlyout** en un control de texto. Si estableces ContextFlyout en **null**, se muestra el control flotante del menú que aparece en versiones anteriores del control de texto en lugar de TextCommandBarFlyout.
+- Para sustituir el valor de TextCommandBarFlyout predeterminado que se muestra en la selección de texto, puedes crear un elemento CommandBarFlyout personalizado (u otro tipo de control flotante) y asignarlo a la propiedad **SelectionFlyout**. Si estableces SelectionFlyout en **null** , no se muestran comandos en la selección.
+- Para sustituir el valor de TextCommandBarFlyout predeterminado que se muestra como el menú contextual, asigna un elemento CommandBarFlyout personalizado (u otro tipo de control flotante) a la propiedad **ContextFlyout** en un control de texto. Si estableces ContextFlyout en **null** , se muestra el control flotante del menú que aparece en versiones anteriores del control de texto en lugar de TextCommandBarFlyout.
 
 ## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 

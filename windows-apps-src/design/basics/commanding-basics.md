@@ -1,5 +1,5 @@
 ---
-Description: En una aplicación de Windows, los elementos de comandos son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario.
+description: En una aplicación de Windows, los elementos de comandos son los elementos interactivos de la interfaz de usuario que permiten al usuario realizar acciones como enviar un correo electrónico, eliminar un elemento o enviar un formulario.
 title: Conceptos básicos de diseño de comandos para aplicaciones de Windows
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dfd744bd2ab9c7909eec0c62af1939261a5a3bb7
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 5b6bfac1c27a857b38c2995200590afd81576d0d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218278"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032458"
 ---
 # <a name="command-design-basics-for-windows-apps"></a>Conceptos básicos de diseño de comandos para aplicaciones de Windows
 

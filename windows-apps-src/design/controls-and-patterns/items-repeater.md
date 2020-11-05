@@ -1,5 +1,5 @@
 ---
-Description: ItemsRepeater es un control ligero para generar y presentar una colección de elementos.
+description: ItemsRepeater es un control ligero para generar y presentar una colección de elementos.
 title: ItemsRepeater
 label: ItemsRepeater
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 52938a03e7e0287a200cedc5b8edb98169483425
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 43434a0354a39ae37798e959a9eb919465989dba
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750671"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034578"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -36,7 +36,7 @@ En términos conceptuales, [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.i
    :::column-end:::
 :::row-end:::
 
-> **API de la biblioteca de interfaz de usuario de Windows**: [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
+> **API de la biblioteca de interfaz de usuario de Windows** : [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
 >
 > **API de plataforma:** [Clase ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
 
@@ -73,7 +73,7 @@ Tanto [ItemsControl](/uwp/api/windows.ui.xaml.controls.itemscontrol) como ItemsR
 
 [**ItemsRepeater**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) no se deriva de [**Control**](/uwp/api/windows.ui.xaml.controls.control), por lo que no tiene una plantilla de control. Por lo tanto, no tiene desplazamiento integrado, a diferencia de ListView o de otros controles de colección.
 
-Cuando uses **ItemsRepeater**, debes proporcionar funcionalidad de desplazamiento. Para ello, inclúyela en un control [**ScrollViewer**](/uwp/api/windows.ui.xaml.controls.scrollviewer).
+Cuando uses **ItemsRepeater** , debes proporcionar funcionalidad de desplazamiento. Para ello, inclúyela en un control [**ScrollViewer**](/uwp/api/windows.ui.xaml.controls.scrollviewer).
 
 > [!NOTE]
 > Si la aplicación se va a ejecutar en versiones anteriores de Windows (publicadas *antes* de Windows 10, versión 1809), también tendrás que hospedar el control **ScrollViewer** dentro de [**ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost). 
@@ -119,7 +119,7 @@ Pero seguramente te interese mostrar una presentación más enriquecida de los d
 En este ejemplo, el objeto de datos es una cadena simple. La clase **DataTemplate** incluye una imagen a la izquierda del texto y aplica estilo al **TextBlock** para mostrar la cadena en un color verde azulado.
 
 > [!NOTE]
-> Cuando uses la [extensión de marcado x:Bind](../../xaml-platform/x-bind-markup-extension.md) en **DataTemplate**, debes especificar DataType (`x:DataType`) en DataTemplate.
+> Cuando uses la [extensión de marcado x:Bind](../../xaml-platform/x-bind-markup-extension.md) en **DataTemplate** , debes especificar DataType (`x:DataType`) en DataTemplate.
 
 ```xaml
 <DataTemplate x:DataType="x:String">
@@ -153,7 +153,7 @@ El número de elementos que se usan en la clase **DataTemplate** para un element
 > ```
 
 > [!TIP]
-> A diferencia de **ListView** y otros controles de colección, **ItemsRepeater** no encapsula los elementos de **DataTemplate** con un contenedor de elementos adicionales que incluya la directiva predeterminada, como los márgenes, el relleno, los objetos visuales de selección o un puntero encima del estado visual. En su lugar, **ItemsRepeater** solo presenta lo que se define en la clase **DataTemplate**. Si quieres que los elementos tengan el mismo aspecto que un elemento de la vista de lista, puedes incluir explícitamente un contenedor, como **ListViewItem**, en la plantilla de datos. **ItemsRepeater** mostrará los objetos visuales de **ListViewItem**, pero no usará automáticamente otras funcionalidades, como la selección o la visualización de la casilla de selección múltiple.
+> A diferencia de **ListView** y otros controles de colección, **ItemsRepeater** no encapsula los elementos de **DataTemplate** con un contenedor de elementos adicionales que incluya la directiva predeterminada, como los márgenes, el relleno, los objetos visuales de selección o un puntero encima del estado visual. En su lugar, **ItemsRepeater** solo presenta lo que se define en la clase **DataTemplate**. Si quieres que los elementos tengan el mismo aspecto que un elemento de la vista de lista, puedes incluir explícitamente un contenedor, como **ListViewItem** , en la plantilla de datos. **ItemsRepeater** mostrará los objetos visuales de **ListViewItem** , pero no usará automáticamente otras funcionalidades, como la selección o la visualización de la casilla de selección múltiple.
 >
 > De forma similar, si la colección de datos es una colección de controles reales, como **Button** (`List<Button>`), puedes colocar un **ContentPresenter** en la clase **DataTemplate** para mostrar el control.
 
@@ -172,7 +172,7 @@ En este ejemplo se da por supuesto que se ha definido una clase **DataTemplateSe
 </ItemsRepeater>
 ```
 
-Al definir una clase **DataTemplateSelector** para usarla con **ItemsRepeater**, solo tienes que implementar una invalidación para el método [**SelectTemplateCore(Object)** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector.selecttemplatecore#Windows_UI_Xaml_Controls_DataTemplateSelector_SelectTemplateCore_System_Object_). Para obtener más información y ejemplos, consulta [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector).
+Al definir una clase **DataTemplateSelector** para usarla con **ItemsRepeater** , solo tienes que implementar una invalidación para el método [**SelectTemplateCore(Object)**](/uwp/api/windows.ui.xaml.controls.datatemplateselector.selecttemplatecore#Windows_UI_Xaml_Controls_DataTemplateSelector_SelectTemplateCore_System_Object_). Para obtener más información y ejemplos, consulta [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector).
 
 > [!NOTE]
 > Una alternativa a las clases **DataTemplate** para administrar la creación de elementos en escenarios más avanzados consiste en implementar tu propio [**Windows.UI.Xaml.Controls.IElementFactory**](/uwp/api/windows.ui.xaml.controls.ielementfactory) para usarlo como **ItemTemplate**.  Se encargará de generar contenido cuando se solicite.
@@ -201,7 +201,7 @@ En esta lista se muestran las interfaces disponibles y cuándo se debe considera
 
     Permite al control acceder a los elementos por índice y evita la copia interna redundante.
 
-    **Advertencia**: Los cambios realizados en la lista/vector sin implementar [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged) no se reflejarán en la interfaz de usuario.
+    **Advertencia** : Los cambios realizados en la lista/vector sin implementar [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged) no se reflejarán en la interfaz de usuario.
 
 - [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged)(.NET)
 
@@ -213,9 +213,9 @@ En esta lista se muestran las interfaces disponibles y cuándo se debe considera
 
   - Admite la notificación de cambios.
 
-    Al igual que la interfaz **INotifyCollectionChanged**, permite al control observar los cambios en el origen de datos y reaccionar ante ellos.
+    Al igual que la interfaz **INotifyCollectionChanged** , permite al control observar los cambios en el origen de datos y reaccionar ante ellos.
 
-    **Advertencia**: Windows.Foundation.IObservableVector\<T> no es compatible con una acción de tipo "Mover". Esto puede hacer que la interfaz de usuario de un elemento pierda su estado visual.  Por ejemplo, un elemento que actualmente está seleccionado o que tiene el foco donde el movimiento se consigue mediante una acción "Eliminar" seguida de una acción "Agregar" perderá el foco y dejará de estar seleccionado.
+    **Advertencia** : Windows.Foundation.IObservableVector\<T> no es compatible con una acción de tipo "Mover". Esto puede hacer que la interfaz de usuario de un elemento pierda su estado visual.  Por ejemplo, un elemento que actualmente está seleccionado o que tiene el foco donde el movimiento se consigue mediante una acción "Eliminar" seguida de una acción "Agregar" perderá el foco y dejará de estar seleccionado.
 
     Platform.Collections.Vector\<T> usa IObservableVector\<T> y tiene esta misma limitación. Si es necesaria la compatibilidad con una acción de tipo "Mover", usa la interfaz **INotifyCollectionChanged**.  La clase ObservableCollection\<T> de .NET usa **INotifyCollectionChanged**.
 
@@ -312,24 +312,24 @@ Puedes establecer la propiedad [ItemsStretch](/uwp/api/microsoft.ui.xaml.control
 
 En esta lista se muestran los valores disponibles. Las definiciones dan por supuesto que el valor predeterminado de **Orientation** es **Horizontal**.
 
-- **None**: el espacio adicional se deja sin usar al final de la fila. Este es el valor predeterminado.
-- **Fill**: los elementos obtienen un ancho adicional para usar el espacio disponible (en caso de orientación vertical, obtienen un alto adicional).
-- **Uniform**: los elementos obtienen un ancho adicional para usar el espacio disponible y un alto adicional para mantener la relación de aspecto (el alto y el ancho se intercambian en caso de orientación vertical).
+- **None** : el espacio adicional se deja sin usar al final de la fila. Este es el valor predeterminado.
+- **Fill** : los elementos obtienen un ancho adicional para usar el espacio disponible (en caso de orientación vertical, obtienen un alto adicional).
+- **Uniform** : los elementos obtienen un ancho adicional para usar el espacio disponible y un alto adicional para mantener la relación de aspecto (el alto y el ancho se intercambian en caso de orientación vertical).
 
 En esta imagen se muestra el efecto de los valores de **ItemsStretch** en un diseño horizontal.
 
 ![Ampliación de los elementos de cuadrícula uniforme](images/uniform-grid-item-stretch.png)
 
-Cuando **ItemsStretch** es **None**, puedes establecer la propiedad [ItemsJustification](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsjustification) para especificar cómo se usa el espacio adicional para alinear los elementos.
+Cuando **ItemsStretch** es **None** , puedes establecer la propiedad [ItemsJustification](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsjustification) para especificar cómo se usa el espacio adicional para alinear los elementos.
 
 En esta lista se muestran los valores disponibles. Las definiciones dan por supuesto que el valor predeterminado de **Orientation** es **Horizontal**.
 
-- **Start**: los elementos se alinean con el inicio de la fila. El espacio adicional se deja sin usar al final de la fila. Este es el valor predeterminado.
-- **Center**: los elementos se alinean en el centro de la fila. El espacio adicional se reparte por igual al principio y al final de la fila.
-- **End**: los elementos se alinean con el final de la fila. El espacio adicional se deja sin usar al principio de la fila.
-- **SpaceAround**: los elementos se distribuyen de manera uniforme. Se agrega la misma cantidad de espacio antes y después de cada elemento.
-- **SpaceBetween**: los elementos se distribuyen de manera uniforme. Se agrega la misma cantidad de espacio entre cada elemento. No se agrega espacio ni al principio ni al final de la fila.
-- **SpaceEvenly**: los elementos se distribuyen de manera uniforme con la misma cantidad de espacio entre cada elemento, así como al principio y al final de la fila.
+- **Start** : los elementos se alinean con el inicio de la fila. El espacio adicional se deja sin usar al final de la fila. Este es el valor predeterminado.
+- **Center** : los elementos se alinean en el centro de la fila. El espacio adicional se reparte por igual al principio y al final de la fila.
+- **End** : los elementos se alinean con el final de la fila. El espacio adicional se deja sin usar al principio de la fila.
+- **SpaceAround** : los elementos se distribuyen de manera uniforme. Se agrega la misma cantidad de espacio antes y después de cada elemento.
+- **SpaceBetween** : los elementos se distribuyen de manera uniforme. Se agrega la misma cantidad de espacio entre cada elemento. No se agrega espacio ni al principio ni al final de la fila.
+- **SpaceEvenly** : los elementos se distribuyen de manera uniforme con la misma cantidad de espacio entre cada elemento, así como al principio y al final de la fila.
 
 En esta imagen se muestra el efecto de los valores de **ItemsStretch** en un diseño vertical (se aplica a columnas en lugar de a filas).
 
@@ -578,7 +578,7 @@ public class MyItemsSource : IReadOnlyList<ItemBase>, IKeyIndexMapping, INotifyC
 Puedes usar la clase [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) para crear un control de colección personalizado con su propio tipo de control para presentar cada elemento.
 
 > [!NOTE]
-> Esto es similar al uso de **ItemsControl**, pero en lugar de derivar de **ItemsControl** y colocar un elemento **ItemsPresenter** en la plantilla de control, derivas de **Control** e insertas una clase **ItemsRepeater** en la plantilla de control. El control de colección personalizado "tiene" una clase **ItemsRepeater**, no "es" una clase **ItemsControl**. Esto implica que debes elegir explícitamente qué propiedades se exponen, en lugar de seleccionar qué propiedades heredadas no se admiten.
+> Esto es similar al uso de **ItemsControl** , pero en lugar de derivar de **ItemsControl** y colocar un elemento **ItemsPresenter** en la plantilla de control, derivas de **Control** e insertas una clase **ItemsRepeater** en la plantilla de control. El control de colección personalizado "tiene" una clase **ItemsRepeater** , no "es" una clase **ItemsControl**. Esto implica que debes elegir explícitamente qué propiedades se exponen, en lugar de seleccionar qué propiedades heredadas no se admiten.
 
 En este ejemplo se muestra cómo se coloca una clase [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) en la plantilla de un control personalizado denominado _MediaCollectionView_ y cómo se exponen sus propiedades.
 
@@ -796,9 +796,9 @@ La clase ItemsRepeater se asegura automáticamente de que el orden de tabulació
 > [!NOTE]
 > ItemsRepeater no recuerda automáticamente el último elemento enfocado.  Esto significa que, cuando un usuario usa Mayús+Tab, es posible que se le lleve al último elemento ejecutado.
 
-### <a name="announcing-item-_x_-of-_y_-in-screen-readers"></a>Anuncio de "Elemento _X_ de _Y_" en lectores de pantalla
+### <a name="announcing-item-_x_-of-_y_-in-screen-readers"></a>Anuncio de "Elemento _X_ de _Y_ " en lectores de pantalla
 
-Debes administrar el establecimiento de las propiedades de automatización adecuadas, como los valores de **PositionInSet** y **SizeOfSet**, y asegurarte de que permanecen actualizadas al agregar elementos, moverlos, quitarlos, etc.
+Debes administrar el establecimiento de las propiedades de automatización adecuadas, como los valores de **PositionInSet** y **SizeOfSet** , y asegurarte de que permanecen actualizadas al agregar elementos, moverlos, quitarlos, etc.
 
 En algunos diseños personalizados podría no haber una secuencia obvia para el orden visual.  Los usuarios esperan como mínimo que los valores de las propiedades PositionInSet y SizeOfSet usadas por los lectores de pantalla coincidan con el orden en que los elementos aparecen en los datos (desplazamiento de 1 para que coincidan con el recuento natural, frente al basado en 0).
 

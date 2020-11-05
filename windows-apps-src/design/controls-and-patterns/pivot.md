@@ -1,5 +1,5 @@
 ---
-Description: El control Pivot permite el deslizamiento táctil rápido entre un pequeño conjunto de secciones de contenido.
+description: El control Pivot permite el deslizamiento táctil rápido entre un pequeño conjunto de secciones de contenido.
 title: Pivot
 template: detail.hbs
 ms.date: 09/24/2020
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 12b6662eb7bbfc08563dd9f7313aa0ea7d0a0e18
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: eaef3bb57eb8719ac4183f21b764ece98cae22fe
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749711"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030858"
 ---
 # <a name="pivot"></a>Pivot
 
@@ -37,7 +37,7 @@ El control [Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite el deslizami
    :::column-end:::
 :::row-end:::
 
-> **API de plataforma**: [Clase Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot), [Clase NavigationView](/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **API de plataforma** : [Clase Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot), [Clase NavigationView](/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>Ejemplos
 

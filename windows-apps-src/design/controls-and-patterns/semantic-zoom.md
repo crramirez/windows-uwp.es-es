@@ -1,5 +1,5 @@
 ---
-Description: Un control de zoom semántico permite que el usuario haga zoom entre dos vistas semánticas distintas del mismo conjunto de datos.
+description: Un control de zoom semántico permite que el usuario haga zoom entre dos vistas semánticas distintas del mismo conjunto de datos.
 title: Zoom semántico
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f2fea27bf44e2e7f199c6c04f045f2cda6663315
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c945fe25807dcdfa556d7dc9b971b5429b4bcfc8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174449"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035188"
 ---
 # <a name="semantic-zoom"></a>Zoom semántico
 
@@ -29,9 +29,9 @@ El zoom semántico permite que el usuario cambie entre dos vistas distintas del 
 
 Por ejemplo, al ver una libreta de direcciones, el usuario puede alejarse para pasar rápidamente a la letra "W" y ampliar para ver los nombres con esa letra. 
 
-> **API importantes**: [Clase SemanticZoom](/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [Clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [Clase GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView)
+> **API importantes** : [Clase SemanticZoom](/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [Clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [Clase GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView)
 
-**Funciones**:
+**Funciones** :
 
 -   El tamaño de la vista alejada está restringido por los límites del control del zoom semántico.
 -   Al pulsar en un encabezado de grupo, se alterna entre las vistas. Se puede habilitar el gesto de reducir como una forma de alternar entre las vistas.

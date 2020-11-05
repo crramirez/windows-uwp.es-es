@@ -1,5 +1,5 @@
 ---
-Description: Una sugerencia de enseñanza es un control flotante parcialmente persistente y con mucho contenido que proporciona información contextual.
+description: Una sugerencia de enseñanza es un control flotante parcialmente persistente y con mucho contenido que proporciona información contextual.
 title: Sugerencias de enseñanza
 template: detail.hbs
 ms.date: 09/24/2020
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: fbe23101861429f3aef9298f854a600521d20613
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 8d4322e5d5dcdfad768b9c87b555093e42becd7e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750531"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033318"
 ---
 # <a name="teaching-tip"></a>Sugerencia de enseñanza
 
@@ -171,10 +171,10 @@ Una sugerencia de enseñanza no dirigida que tenga la propiedad PreferredPlaceme
 ![Una aplicación de ejemplo con una sugerencia de enseñanza en la esquina inferior izquierda. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-non-targeted-preferred-placement.png)
 
 El siguiente diagrama muestra el resultado de los 13 modos de PreferredPlacement que se pueden establecer para las sugerencias de enseñanza dirigidas.
-![Ilustración que contiene 13 sugerencias de enseñanza, cada una es una demostración de un modo de selección de ubicación dirigida distinto. Cada sugerencia de enseñanza tiene una etiqueta con el modo que representa. La primera palabra de un modo de selección de ubicación indica el lado del destino en el que la sugerencia de enseñanza se mostrará centrada. La delta de la sugerencia de enseñanza siempre se colocará centrada en ese lado del destino, y apuntará hacia el destino. Si hay una segunda palabra en el modo de selección de ubicación, el cuerpo de la sugerencia de enseñanza no estará centrado, sino que se desplazará en la dirección especificada. Por ejemplo, el modo de selección de ubicación "TopRight" hará que la sugerencia de enseñanza se muestre arriba del destino y esté desplazada a la derecha, con la delta apuntando hacia abajo al centro del borde superior del destino. Dado que el cuerpo está desplazado hacia la derecha, la delta se encuentra en el borde izquierdo del cuerpo de la sugerencia de enseñanza, y la sugerencia de enseñanza se extiende más allá del borde derecho del destino. El modo de selección de ubicación "Center" es único y hace que la punta de la delta de la sugerencia de enseñanza se coloque en el centro del destino. Además, la delta de la sugerencia de enseñanza se centra sobre la mitad superior del destino.](../images/teaching-tip-targeted-preferred-placement-modes.png)
+![Ilustración que contiene 13 sugerencias de enseñanza, cada una es una demostración de un modo de selección de ubicación dirigida distinto. Cada sugerencia de enseñanza tiene una etiqueta con el modo que representa.  La primera palabra de un modo de selección de ubicación indica el lado del destino en el que la sugerencia de enseñanza se mostrará centrada. La delta de la sugerencia de enseñanza siempre se colocará centrada en ese lado del destino, y apuntará hacia el destino. Si hay una segunda palabra en el modo de selección de ubicación, el cuerpo de la sugerencia de enseñanza no estará centrado, sino que se desplazará en la dirección especificada. Por ejemplo, el modo de selección de ubicación "TopRight" hará que la sugerencia de enseñanza se muestre arriba del destino y esté desplazada a la derecha, con la delta apuntando hacia abajo al centro del borde superior del destino. Dado que el cuerpo está desplazado hacia la derecha, la delta se encuentra en el borde izquierdo del cuerpo de la sugerencia de enseñanza, y la sugerencia de enseñanza se extiende más allá del borde derecho del destino. El modo de selección de ubicación "Center" es único y hace que la punta de la delta de la sugerencia de enseñanza se coloque en el centro del destino. Además, la delta de la sugerencia de enseñanza se centra sobre la mitad superior del destino.](../images/teaching-tip-targeted-preferred-placement-modes.png)
 
 El siguiente diagrama muestra el resultado de los 13 modos de PreferredPlacement que se pueden establecer para las sugerencias de enseñanza no dirigidas.
-![Ilustración que contiene nueve sugerencias de enseñanza, cada una es una demostración de un modo de selección de ubicación no dirigida distinto. Cada sugerencia de enseñanza tiene una etiqueta con el modo que representa. La primera palabra de un modo de selección de ubicación indica el lado de la raíz de XAML en la que la sugerencia de enseñanza se mostrará centrada. Si hay una segunda palabra en el modo de selección de ubicación, la sugerencia de enseñanza se colocará hacia ese esquina especificada de la raíz de XAML. Por ejemplo, el modo de selección de ubicación "TopRight" hará que la sugerencia de enseñanza se muestre en la esquina superior derecha de la raíz de XAML. Para los modos de selección de ubicación no dirigidos, el orden de las dos palabras no afecta a la selección de ubicación. TopRight es equivalente a RightTop. El modo de selección de ubicación "Center" es único y hace que la sugerencia de enseñanza se muestre en el centro vertical y horizontal de la raíz de XAML.](../images/teaching-tip-non-targeted-preferred-placement-modes.png)
+![Ilustración que contiene nueve sugerencias de enseñanza, cada una es una demostración de un modo de selección de ubicación no dirigida distinto. Cada sugerencia de enseñanza tiene una etiqueta con el modo que representa.  La primera palabra de un modo de selección de ubicación indica el lado de la raíz de XAML en la que la sugerencia de enseñanza se mostrará centrada.  Si hay una segunda palabra en el modo de selección de ubicación, la sugerencia de enseñanza se colocará hacia ese esquina especificada de la raíz de XAML. Por ejemplo, el modo de selección de ubicación "TopRight" hará que la sugerencia de enseñanza se muestre en la esquina superior derecha de la raíz de XAML. Para los modos de selección de ubicación no dirigidos, el orden de las dos palabras no afecta a la selección de ubicación. TopRight es equivalente a RightTop.  El modo de selección de ubicación "Center" es único y hace que la sugerencia de enseñanza se muestre en el centro vertical y horizontal de la raíz de XAML.](../images/teaching-tip-non-targeted-preferred-placement-modes.png)
 
 ### <a name="add-a-placement-margin"></a>Agregar un margen de ubicación
 

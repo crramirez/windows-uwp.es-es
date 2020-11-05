@@ -1,5 +1,5 @@
 ---
-Description: Un cuadro de contraseña es un cuadro de entrada de texto que oculta los caracteres escritos para asegurar la privacidad.
+description: Un cuadro de contraseña es un cuadro de entrada de texto que oculta los caracteres escritos para asegurar la privacidad.
 title: Directrices para cuadros de contraseña
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ba2df600e294aab959a090d8b5a5f8645a40d55
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: cb5bce63243869db0f8d9ae46a4c3c2b3844086c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749731"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030888"
 ---
 # <a name="password-box"></a>Cuadro de contraseña
 
@@ -39,7 +39,7 @@ De manera predeterminada, el cuadro de contraseña proporciona un método para q
    :::column-end:::
 :::row-end:::
 
-> **API de plataforma**: [Clase PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Propiedad Password](/uwp/api/windows.ui.xaml.controls.passwordbox.password), [Propiedad PasswordChar](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [Propiedad PasswordRevealMode](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode) y [Evento PasswordChanged](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
+> **API de plataforma** : [Clase PasswordBox](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Propiedad Password](/uwp/api/windows.ui.xaml.controls.passwordbox.password), [Propiedad PasswordChar](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [Propiedad PasswordRevealMode](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode) y [Evento PasswordChanged](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -151,7 +151,7 @@ El valor de la propiedad [PasswordRevealMode](/uwp/api/windows.ui.xaml.controls.
 
 ### <a name="hidden-and-visible-modes"></a>Modos Oculta y Visible
 
-Otros valores de enumeración de la propiedad [PasswordRevealMode](/uwp/api/Windows.UI.Xaml.Controls.PasswordRevealMode), como **Oculta** y **Visible**, ocultan el botón para mostrar la contraseña y te permiten decidir mediante programación si la contraseña debe permanecer oculta.
+Otros valores de enumeración de la propiedad [PasswordRevealMode](/uwp/api/Windows.UI.Xaml.Controls.PasswordRevealMode), como **Oculta** y **Visible** , ocultan el botón para mostrar la contraseña y te permiten decidir mediante programación si la contraseña debe permanecer oculta.
 
 Para ocultar siempre la contraseña, debes establecer la propiedad PasswordRevealMode en Oculta. A menos que necesites que la contraseña siempre esté oculta, puedes proporcionar una interfaz de usuario personalizada para permitir que el usuario cambie la propiedad PasswordRevealMode entre las opciones Oculta y Visible. Por ejemplo, puede usar una casilla para alternar si la contraseña está oculta, tal y como se muestra en el ejemplo siguiente. Asimismo, también puedes usar otros controles, como [ToggleButton](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton), para permitir al usuario cambiar de modo.
 

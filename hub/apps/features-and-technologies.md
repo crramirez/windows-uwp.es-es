@@ -1,17 +1,17 @@
 ---
-Description: Esta sección te ayuda a comprender cómo se admiten determinadas características clave de Windows en diferentes plataformas de aplicaciones y cómo puedes empezar a usarlas en tu código.
+description: Esta sección te ayuda a comprender cómo se admiten determinadas características clave de Windows en diferentes plataformas de aplicaciones y cómo puedes empezar a usarlas en tu código.
 title: Características y tecnologías
 ms.topic: article
 ms.date: 05/08/2019
 ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: eef7ffd2e84e05bb127120ea7dfa56764782bee9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bf8e6797339d7d14542fe310d62606ef55f3d08b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174169"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031078"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Características y tecnologías de las aplicaciones de Windows
 

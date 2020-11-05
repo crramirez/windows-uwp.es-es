@@ -1,5 +1,5 @@
 ---
-Description: Los cuadros de diálogo y los controles flotantes muestran elementos transitorios de la interfaz de usuario que aparecen cuando el usuario los solicita o cuando sucede algo que requiere notificación o aprobación.
+description: Los cuadros de diálogo y los controles flotantes muestran elementos transitorios de la interfaz de usuario que aparecen cuando el usuario los solicita o cuando sucede algo que requiere notificación o aprobación.
 title: Controles de cuadro de diálogo
 label: Dialogs
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c9d374a53fc28150d18ed644792d9b6b3a69983
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 05b472efe65b57359a398c6a2405b499ff062d73
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750501"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034458"
 ---
 # <a name="dialog-controls"></a>Controles de cuadro de diálogo
 

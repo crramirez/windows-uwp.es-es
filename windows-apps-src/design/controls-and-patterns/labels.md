@@ -1,5 +1,5 @@
 ---
-Description: Usa una etiqueta para indicar al usuario lo que debe escribir en un control adyacente. También puedes etiquetar un grupo de controles relacionados o mostrar un texto de instrucciones junto a un grupo de controles relacionados.
+description: Usa una etiqueta para indicar al usuario lo que debe escribir en un control adyacente. También puedes etiquetar un grupo de controles relacionados o mostrar un texto de instrucciones junto a un grupo de controles relacionados.
 title: Etiquetas
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 68b062dc4bd70c81b1b8b57808fad8e9c7498d75
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9c1dc878280b24424aa4bb20d5a1d6324838b127
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172619"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034548"
 ---
 # <a name="labels"></a>Etiquetas
 
@@ -24,7 +24,7 @@ ms.locfileid: "89172619"
 
 Una etiqueta es el nombre o título de un control o un grupo de controles relacionados.
 
-> **API importantes**: propiedad Header, [Clase TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+> **API importantes** : propiedad Header, [Clase TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
 En XAML, muchos controles tienen una propiedad Header integrada que sirve para mostrar la etiqueta. En los controles sin una propiedad Header, o para etiquetar grupos de controles, puedes usar un [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) en su lugar.
 
@@ -53,6 +53,6 @@ En XAML, muchos controles tienen una propiedad Header integrada que sirve para m
 * [Propiedad RichEditBox.Header](/uwp/api/windows.ui.xaml.controls.richeditbox.header)
 * [Clase TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
- 
+ 
 
- 
+ 

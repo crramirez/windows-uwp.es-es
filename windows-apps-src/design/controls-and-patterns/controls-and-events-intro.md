@@ -1,5 +1,5 @@
 ---
-Description: Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación.
+description: Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario. Aquí te mostramos cómo agregar controles a la aplicación.
 title: Introducción a los controles y patrones
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
@@ -11,18 +11,18 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: bfbb50668b7270dc39353a7526878d7b48d9dfd5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 507286445e4ebb5ebf4f9e88596a648709c56cfb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217308"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031028"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
 En el desarrollo de aplicaciones de Windows, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
 
-> **API importantes**: [espacio de nombres Windows.UI.Xaml.Controls](/uwp/api/windows.ui.xaml.controls)
+> **API importantes** : [espacio de nombres Windows.UI.Xaml.Controls](/uwp/api/windows.ui.xaml.controls)
 
 Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el patrón de [maestro y detalles](master-details.md) es una manera de usar un control [SplitView](split-view.md) para la navegación de la aplicación. Del mismo modo, puedes personalizar la plantilla de un control de [NavigationView](navigationview.md) para implementar el patrón de la pestaña.
 

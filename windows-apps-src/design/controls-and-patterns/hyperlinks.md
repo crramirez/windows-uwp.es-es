@@ -1,5 +1,5 @@
 ---
-Description: Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente.
+description: Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente.
 title: Hipervínculos
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 471e17199d6a1858625ce418ea756d79cf8600f9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 90dfaa44205ac8eebfcb21227368e2daa492d3c4
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160139"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030568"
 ---
 # <a name="hyperlinks"></a>Hipervínculos
 
 Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente. Existen dos formas mediante las que se puede agregar un hipervínculo a una aplicación XAML: el elemento de texto **Hyperlink** y el control **HyperlinkButton**.
 
-> **API de plataforma**: [Elemento de texto Hyperlink](/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [Control HyperlinkButton](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
+> **API de plataforma** : [Elemento de texto Hyperlink](/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [Control HyperlinkButton](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![Botón de hipervínculo](images/controls/hyperlink-button.png)
 
@@ -71,7 +71,7 @@ El hipervínculo aparece en línea y fluye con el texto que le rodea:
 
 ![Ejemplo de un hipervínculo como elemento de texto](images/controls_hyperlink-element.png) 
 
-> **Sugerencia**&nbsp;&nbsp;Cuando uses una clase Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor[Span](/uwp/api/windows.ui.xaml.documents.span) y aplica el atributo `xml:space="preserve"` a dicho contenedor para mantener el espacio en blanco entre Hyperlink y otros elementos.
+> **Sugerencia**&nbsp;&nbsp;Cuando uses una clase Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](/uwp/api/windows.ui.xaml.documents.span) y aplica el atributo `xml:space="preserve"` a dicho contenedor para mantener el espacio en blanco entre Hyperlink y otros elementos.
 
 ## <a name="create-a-hyperlinkbutton"></a>Crear un elemento HyperlinkButton
 

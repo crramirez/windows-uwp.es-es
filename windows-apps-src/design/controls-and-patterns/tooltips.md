@@ -1,5 +1,5 @@
 ---
-Description: Usa información sobre herramientas para ofrecer más información sobre un control antes de pedir al usuario que realice una acción.
+description: Usa información sobre herramientas para ofrecer más información sobre un control antes de pedir al usuario que realice una acción.
 title: Información sobre herramientas
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a9a5c6deb2ad7ea2b4dad8e7db3e9513700c2c3e
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 0c9d2f26acfe431eb1be895f1021d544f78b52fb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750631"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030808"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 
@@ -39,7 +39,7 @@ La información sobre herramientas es una breve descripción que está vinculada
    :::column-end:::
 :::row-end:::
 
-> **API de plataforma**: [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice)
+> **API de plataforma** : [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 

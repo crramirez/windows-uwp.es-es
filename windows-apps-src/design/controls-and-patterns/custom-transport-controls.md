@@ -1,5 +1,5 @@
 ---
-Description: El reproductor multimedia tiene controles de transporte en XAML personalizados para administrar el control de contenido de audio y vídeo
+description: El reproductor multimedia tiene controles de transporte en XAML personalizados para administrar el control de contenido de audio y vídeo
 title: Crear controles de transporte de contenido multimedia personalizados
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fc68410a0e68d1c642057664bc9641669282bd7f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3329ea23c831b1bd91955013f0bdedcbbd08aa34
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219548"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032938"
 ---
 # <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
@@ -21,7 +21,7 @@ ms.locfileid: "91219548"
 
 La clase MediaPlayerElement tiene controles de transporte de XAML personalizables para administrar el control del contenido de audio y vídeo dentro de una aplicación de Windows. Aquí te mostramos cómo personalizar la platilla MediaTransportControls. Te mostraremos cómo trabajar con el menú de desbordamiento, agregar un botón personalizado y modificar el control deslizante.
 
-> **API importantes**: [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement), [MediaPlayerElement.AreTransportControlsEnabled](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled), [MediaTransportControls](/uwp/api/Windows.Media.SystemMediaTransportControls)
+> **API importantes** : [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement), [MediaPlayerElement.AreTransportControlsEnabled](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled), [MediaTransportControls](/uwp/api/Windows.Media.SystemMediaTransportControls)
 
 Antes de empezar, debes estar familiarizado con las clases MediaPlayerElement y MediaTransportControls. Para obtener más información, consulta la guía de control de MediaPlayerElement.
 
@@ -57,7 +57,7 @@ Puedes personalizar el aspecto del control al modificar la plantilla predetermin
 - En la tercera sección se incluye [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid), que contiene los distintos elementos MediaTransportControls juntos y define la distribución de los componentes.
 
 > [!NOTE]
-> Para más información sobre cómo modificar las plantillas de control, consulta [Plantillas de control](./control-templates.md). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
+> Para más información sobre cómo modificar las plantillas de control, consulta [Plantillas de control](./control-templates.md). Puedes usar un editor de texto o un editor similar en el IDE para abrir los archivos XAML en \(*Program Files* )\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\( *SDK version* )\Generic. El estilo predeterminado y la plantilla para cada control se definen en el archivo **generic.xaml**. Puedes encontrar la plantilla MediaTransportControls en generic.xaml si buscas "MediaTransportControls".
 
 En las siguientes secciones se muestra cómo personalizar muchos de los elementos principales de los controles de transporte:
 - [**Slider**](/uwp/api/Windows.UI.Xaml.Controls.Slider): permite que un usuario arrastre a través de sus elementos multimedia y también muestra el progreso.

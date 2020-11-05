@@ -1,5 +1,5 @@
 ---
-Description: Obtén información sobre cómo conceder identidades a aplicaciones de escritorio no empaquetadas para poder usar las características modernas de Windows 10 en esas aplicaciones.
+description: Obtén información sobre cómo conceder identidades a aplicaciones de escritorio no empaquetadas para poder usar las características modernas de Windows 10 en esas aplicaciones.
 title: Concesión de identidad a aplicaciones de escritorio no empaquetadas
 ms.date: 04/23/2020
 ms.topic: article
@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6c2adc41fd33692d3cc3deb78ed8dd0659709a11
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 30fab5da3727153b8e1f33924ffcb6177843eb4e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172709"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031168"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Concesión de identidad a aplicaciones de escritorio no empaquetadas
 

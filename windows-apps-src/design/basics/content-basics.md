@@ -1,5 +1,5 @@
 ---
-Description: Introducción a los patrones de página y elementos de interfaz de usuario comunes para mostrar el contenido en tu aplicación de Windows.
+description: Introducción a los patrones de página y elementos de interfaz de usuario comunes para mostrar el contenido en tu aplicación de Windows.
 title: Conceptos básicos de diseño de contenido para aplicaciones de Windows
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
@@ -9,12 +9,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d46f987ef9eb74c4d0aa4585c3c0cce5e5ca4fd
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3933910d77249476e76c4d87dfd96af66bd418a8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220558"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031579"
 ---
 # <a name="content-design-basics-for-windows-apps"></a>Conceptos básicos de diseño de contenido para aplicaciones de Windows
 

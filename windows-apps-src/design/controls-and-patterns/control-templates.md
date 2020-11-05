@@ -1,5 +1,5 @@
 ---
-Description: Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML.
+description: Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML.
 MS-HAID: dev\_ctrl\_layout\_txt.control\_templates
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -11,22 +11,22 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c1d712e9d4a12800542184cf37fb504d6f7d20d7
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 720104c9dc27e258307b307a466477a5ca14f3e3
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750511"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033434"
 ---
 # <a name="control-templates"></a>Plantillas de control
 
 Puedes personalizar la estructura y el comportamiento visual de un control al crear una plantilla de control en el marco XAML. Los controles tienen muchas propiedades, como [**Background**](/uwp/api/windows.ui.xaml.controls.control.background), [**Foreground**](/uwp/api/windows.ui.xaml.controls.control.foreground) y [**FontFamily**](/uwp/api/windows.ui.xaml.controls.control.fontfamily), que puedes establecer para especificar diferentes aspectos de la apariencia del control. Sin embargo, los cambios que puedes realizar estableciendo estas propiedades son limitados. Puedes especificar personalizaciones adicionales al crear una plantilla con la clase [**ControlTemplate**](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate). A continuación te mostramos cómo crear una clase **ControlTemplate** para personalizar la apariencia de un control de [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox).
 
-> **API importantes**: [**Clase ControlTemplate**](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate), [**Propiedad Control.Template**](/uwp/api/windows.ui.xaml.controls.control.template)
+> **API importantes** : [**Clase ControlTemplate**](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate), [**Propiedad Control.Template**](/uwp/api/windows.ui.xaml.controls.control.template)
 
 ## <a name="custom-control-template-example"></a>Ejemplo de plantilla de control personalizada
 
-De manera predeterminada, un control de [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) coloca su contenido (la cadena u objeto junto a la clase **CheckBox**) a la derecha del cuadro de selección y una marca de verificación indica que el usuario seleccionó la clase **CheckBox**. Estas características representan la estructura visual y el comportamiento visual de la clase **CheckBox**.
+De manera predeterminada, un control de [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) coloca su contenido (la cadena u objeto junto a la clase **CheckBox** ) a la derecha del cuadro de selección y una marca de verificación indica que el usuario seleccionó la clase **CheckBox**. Estas características representan la estructura visual y el comportamiento visual de la clase **CheckBox**.
 
 Esta es una clase [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) que usa la clase [**ControlTemplate**](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) predeterminada que se muestra con los estados `Unchecked`, `Checked` e `Indeterminate`.
 
@@ -48,12 +48,12 @@ Este es el aspecto de la clase [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.
 
 Al crear una clase [**ControlTemplate**](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate), combinas objetos [**FrameworkElement**](/uwp/api/Windows.UI.Xaml.FrameworkElement) para crear un único control. Una clase **ControlTemplate** debe tener solo una clase **FrameworkElement** como elemento raíz. Normalmente, el elemento raíz contiene otros objetos **FrameworkElement**. La combinación de objetos conforma la estructura visual del control.
 
-Este código XAML crea una clase [**ControlTemplate**](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) para una clase [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) que especifica que el contenido del control se sitúa debajo del cuadro de selección. El elemento raíz es una clase [**Border**](/uwp/api/Windows.UI.Xaml.Controls.Border). El ejemplo especifica una clase [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) para crear una **X** que indica que un usuario seleccionó la clase **CheckBox** y una clase [**Elipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) que indica que está en estado indeterminado. Observa que la [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) se estableció en 0 en la clase **Path** y **Ellipse**, por lo que, de manera predeterminada, no aparece ninguna de ellos.
+Este código XAML crea una clase [**ControlTemplate**](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) para una clase [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) que especifica que el contenido del control se sitúa debajo del cuadro de selección. El elemento raíz es una clase [**Border**](/uwp/api/Windows.UI.Xaml.Controls.Border). El ejemplo especifica una clase [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) para crear una **X** que indica que un usuario seleccionó la clase **CheckBox** y una clase [**Elipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) que indica que está en estado indeterminado. Observa que la [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) se estableció en 0 en la clase **Path** y **Ellipse** , por lo que, de manera predeterminada, no aparece ninguna de ellos.
 
 Un [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) es un enlace especial que vincula el valor de una propiedad de una plantilla de control al valor de otra propiedad expuesta en el control basado en modelo. TemplateBinding solo se puede usar dentro de una definición de ControlTemplate en XAML. Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 > [!NOTE]
-> A partir de Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), puedes usar las extensiones de marcado [**x:Bind**](../../xaml-platform/x-bind-markup-extension.md) allí donde utilices [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
+> A partir de Windows 10, versión 1809 ( [SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)), puedes usar las extensiones de marcado [**x:Bind**](../../xaml-platform/x-bind-markup-extension.md) allí donde utilices [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Consulta [Extensión de revisión de TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) para obtener más información.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -91,7 +91,7 @@ Un [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) es
 
 ## <a name="specify-the-visual-behavior-of-a-control"></a>Especificar el comportamiento visual de un control
 
-Un comportamiento visual especifica la apariencia de un control cuando tiene un estado determinado. El control de [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) tiene tres estados de selección: `Checked`, `Unchecked` e `Indeterminate`. El valor de la propiedad [**IsChecked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) determina el estado de **CheckBox**, y su estado determina lo que aparece en el cuadro.
+Un comportamiento visual especifica la apariencia de un control cuando tiene un estado determinado. El control de [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) tiene tres estados de selección: `Checked`, `Unchecked` e `Indeterminate`. El valor de la propiedad [**IsChecked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) determina el estado de **CheckBox** , y su estado determina lo que aparece en el cuadro.
 
 Esta tabla enumera los posibles valores de [**IsChecked**](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked), los estados correspondientes de [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) y la apariencia de **CheckBox**.
 
@@ -176,7 +176,7 @@ Para comprender mejor cómo funcionan los objetos [**VisualState**](/uwp/api/Win
 | De `Checked` a `Indeterminate`.   | Se aplica el valor [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) del objeto [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState) `Indeterminate`. Por lo tanto, el valor de [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` es 1. Se quita el valor **Setter** del objeto **VisualState** `Checked`. Por lo tanto, el valor de [**Opacity**](/uwp/api/windows.ui.xaml.media.brush.opacity) de `CheckGlyph` es 0. | Se muestra un círculo.                            |
 | De `Indeterminate` a `Unchecked`. | Se quita el valor [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) del objeto [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState) `Indeterminate`. Por lo tanto, el valor de [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) de `IndeterminateGlyph` es 0.                                                                                                                                           | No se muestra nada.                             |
 
- 
+ 
 Para obtener más información sobre cómo crear estados visuales para los controles (y, más en concreto, sobre cómo usar la clase [**Storyboard**](/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) y los tipos de animación), consulta [Animaciones de guion gráfico para estados visuales](/previous-versions/windows/apps/jj819808(v=win.10)).
 
 ## <a name="use-tools-to-work-with-themes-easily"></a>Usar herramientas para facilitar el trabajo con temas

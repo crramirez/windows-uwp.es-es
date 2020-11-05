@@ -1,5 +1,5 @@
 ---
-Description: Usa los selectores de plantillas de datos para personalizar los estilos de los elementos en función de las propiedades de estos.
+description: Usa los selectores de plantillas de datos para personalizar los estilos de los elementos en función de las propiedades de estos.
 title: Selección de plantillas de datos
 label: Data template selection
 template: detail.hbs
@@ -7,18 +7,18 @@ ms.date: 10/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: 382e28b38347a4901e781a12637423260c4bd3e3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5b10afc03a1936c033977a53bd12effdae1c2ead
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160389"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032338"
 ---
 # <a name="data-template-selection-styling-items-based-on-their-properties"></a>Selección de plantillas de datos: aplicación de estilos a los elementos según sus propiedades
 
 El diseño personalizado de los controles de colección se administra mediante una plantilla [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate). Las plantillas de datos definen cómo se debe diseñar y aplicar el estilo a cada elemento, y el marcado que se aplica a todos los elementos de la colección. En este artículo se explica cómo usar [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector) para aplicar diferentes plantillas de datos en una colección y seleccionar cuál de ellas se va a usar en función de ciertas propiedades de elementos o valores de tu elección.
 
-> **API importantes**: [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector), [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate)
+> **API importantes** : [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector), [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate)
 
 [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector) es una clase que habilita la lógica de selección de plantillas personalizada. Permite definir reglas que especifican la plantilla de datos que se va a usar para determinados elementos de una colección. Para implementar esta lógica, se crea una subclase de DataTemplateSelector en el código subyacente y se define la lógica que determina la plantilla de datos que se va a usar para cada categoría de elementos (por ejemplo, elementos de un determinado tipo o elementos con un determinado valor de propiedad, etc.). Puedes declarar una instancia de esta clase en la sección de recursos del archivo XAML junto con las definiciones de las plantillas de datos que vas a usar. Puedes identificar estos recursos con un valor `x:Key`, lo que te permitirá hacer referencia a ellos en el código XAML.
 
@@ -130,7 +130,7 @@ Una vez que se compila el código, cada elemento de la colección se ejecutará 
 
 Cuando se usa un control ListView o GridView con una colección de datos grande, el rendimiento del desplazamiento y el movimiento panorámico pueden ser un problema. Para que el rendimiento de las colecciones grandes sea el adecuado, hay algunos pasos que puedes seguir para mejorar el rendimiento de las plantillas de datos. Estos se describen con más detalle en [Optimización de la interfaz de usuario de ListView y GridView](../../debug-test-perf/optimize-gridview-and-listview.md).
 
-- _Reducción de objetos por elemento_: mantén el número de objetos de interfaz de usuario de una plantilla de datos en un mínimo razonable.
+- _Reducción de objetos por elemento_ : mantén el número de objetos de interfaz de usuario de una plantilla de datos en un mínimo razonable.
 - Reciclaje de contenedores con colecciones heterogéneas
-  - Uso _del evento ChoosingItemContainer_: este evento es una buena manera de utilizar diferentes plantillas de datos para distintos elementos. Para lograr el mejor rendimiento, debes optimizar el almacenamiento en caché y seleccionar plantillas de datos para tus datos concretos.
-  - Uso de un _selector de plantillas de elementos_: debe evitarse un selector de plantillas de elementos (`DataTemplateSelector`) en algunos casos debido a su impacto en el rendimiento.
+  - Uso _del evento ChoosingItemContainer_ : este evento es una buena manera de utilizar diferentes plantillas de datos para distintos elementos. Para lograr el mejor rendimiento, debes optimizar el almacenamiento en caché y seleccionar plantillas de datos para tus datos concretos.
+  - Uso de un _selector de plantillas de elementos_ : debe evitarse un selector de plantillas de elementos (`DataTemplateSelector`) en algunos casos debido a su impacto en el rendimiento.

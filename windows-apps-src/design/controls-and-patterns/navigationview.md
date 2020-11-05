@@ -1,5 +1,5 @@
 ---
-Description: NavigationView es un control adaptable que implementa patrones de navegación de nivel superior para la aplicación.
+description: NavigationView es un control adaptable que implementa patrones de navegación de nivel superior para la aplicación.
 title: Vista de navegación
 template: detail.hbs
 ms.date: 09/24/2020
@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5c5a880cc7291e15e71315d4977b6a28f22b2f00
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 689f55393df5fc7af59af6ce1e51fb002f49b713
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749851"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031138"
 ---
 # <a name="navigation-view"></a>Vista de navegación
 
@@ -39,11 +39,11 @@ _La vista de navegación admite el panel de navegación superior e izquierdo o e
    :::column-end:::
 :::row-end:::
 
-> **API de plataforma**: [clase Windows.UI.Xaml.Controls.NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview)
+> **API de plataforma** : [clase Windows.UI.Xaml.Controls.NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview)
 >
-> **API de la biblioteca de interfaz de usuario de Windows**: [clase Microsoft.UI.Xaml.Controls.NavigationView](/uwp/api/microsoft.ui.xaml.controls.navigationview)
+> **API de la biblioteca de interfaz de usuario de Windows** : [clase Microsoft.UI.Xaml.Controls.NavigationView](/uwp/api/microsoft.ui.xaml.controls.navigationview)
 >
-> Algunas características de NavigationView, como la navegación _superior_ y _jerárquica_, requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o la [biblioteca de interfaz de usuario de Windows](/uwp/toolkits/winui/).
+> Algunas características de NavigationView, como la navegación _superior_ y _jerárquica_ , requieren Windows 10, versión 1809 ( [SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o la [biblioteca de interfaz de usuario de Windows](/uwp/toolkits/winui/).
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -266,7 +266,7 @@ De manera predeterminada, la vista de navegación cambia automáticamente su mod
 
 ### <a name="default"></a>Valor predeterminado
 
-Cuando PaneDisplayMode está establecido en su valor predeterminado de **Auto**, el comportamiento adaptable es mostrar:
+Cuando PaneDisplayMode está establecido en su valor predeterminado de **Auto** , el comportamiento adaptable es mostrar:
 
 - Un panel izquierdo expandido en anchos de ventana grandes (1008 px o mayor).
 - Un panel de navegación izquierdo solo con iconos (LeftCompact) en anchos de ventana medios (de 641 px a 1007 px).
@@ -324,7 +324,7 @@ _Vista de navegación con PaneDisplayMode establecido en LeftMinimal_
 <NavigationView PaneDisplayMode="LeftMinimal" />
 ```
 
-Como se describió anteriormente en la sección _Modos de pantalla_, puedes configurar el panel para que siempre esté arriba, siempre expandido, siempre compacto o siempre mínimo. También puedes administrar los modos de pantalla por tu cuenta en el código de la aplicación. En la sección siguiente se muestra un ejemplo de esto.
+Como se describió anteriormente en la sección _Modos de pantalla_ , puedes configurar el panel para que siempre esté arriba, siempre expandido, siempre compacto o siempre mínimo. También puedes administrar los modos de pantalla por tu cuenta en el código de la aplicación. En la sección siguiente se muestra un ejemplo de esto.
 
 ### <a name="top-to-left-navigation"></a>Navegación de arriba hacia la izquierda
 
@@ -411,7 +411,7 @@ En este ejemplo se muestra cómo puede usar **NavigationView** con un panel de n
 
 En el ejemplo se muestra una manera recomendada de configurar los datos de navegación que funciona en muchos escenarios comunes. También se muestra cómo implementar la navegación hacia atrás con el botón Atrás de **NavigationView** y la navegación con el teclado.
 
-Este código supone que la aplicación contiene páginas con los nombres siguientes para ir a: *HomePage*, *AppsPage*, *GamesPage*, *MusicPage*, *MyContentPage* y *SettingsPage*. No se muestra el código de estas páginas.
+Este código supone que la aplicación contiene páginas con los nombres siguientes para ir a: *HomePage* , *AppsPage* , *GamesPage* , *MusicPage* , *MyContentPage* y *SettingsPage*. No se muestra el código de estas páginas.
 
 > [!IMPORTANT]
 > La información sobre las páginas de la aplicación se almacena en una instancia de [ValueTuple](/dotnet/api/system.valuetuple). Esta estructura requiere que la versión mínima del proyecto de aplicación sea SDK 17763 o superior. Si usas la versión WinUI de NavigationView para dirigirte a versiones anteriores de Windows 10, puedes usar el [paquete System.ValueTuple NuGet](https://www.nuget.org/packages/System.ValueTuple/) en su lugar.
@@ -1667,7 +1667,7 @@ En este ejemplo se muestra cómo invalidar los recursos de tema en App.xaml. Cua
 
 > La propiedad `IsTitleBarAutoPaddingEnabled` requiere la [biblioteca de interfaz de usuario de Windows](/uwp/toolkits/winui/) versión 2.2 o posterior.
 
-Algunas aplicaciones permiten [personalizar la barra de título de sus ventanas](../shell/title-bar.md). Esto permite extender el contenido de la aplicación al área de la barra de título. Cuando NavigationView es el elemento raíz de las aplicaciones que se pueden extender a la barra de título  **mediante [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**, el control ajusta automáticamente la posición de los elementos interactivos para evitar la superposición con [la región arrastrable](../shell/title-bar.md#draggable-regions).
+Algunas aplicaciones permiten [personalizar la barra de título de sus ventanas](../shell/title-bar.md). Esto permite extender el contenido de la aplicación al área de la barra de título. Cuando NavigationView es el elemento raíz de las aplicaciones que se pueden extender a la barra de título  **mediante [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API** , el control ajusta automáticamente la posición de los elementos interactivos para evitar la superposición con [la región arrastrable](../shell/title-bar.md#draggable-regions).
 
 ![Una aplicación que se extiende a la barra de título](images/navigation-view-with-titlebar-padding.png)
 
