@@ -1,5 +1,5 @@
 ---
-Description: Puedes definir diseños adjunto para su uso con contenedores como el control ItemsRepeater.
+description: Puedes definir diseños adjunto para su uso con contenedores como el control ItemsRepeater.
 title: AttachedLayout
 label: AttachedLayout
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5be16e22a30f0b366ad55f323a0f3f2aa2b7b837
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 62ecc21d3ed9835ae7360d0c0dfdfa0b09cbdced
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220308"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034868"
 ---
 # <a name="attached-layouts"></a>Diseños adjuntos
 
@@ -24,7 +24,7 @@ En este tema, trataremos lo que implica la creación de un diseño adjunto (con 
 | - |
 | Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/). |
 
-> **API importantes**:
+> **API importantes** :
 
 > * [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
 > * [ItemsRepeater](../controls-and-patterns/items-repeater.md)
@@ -40,9 +40,9 @@ En este tema, trataremos lo que implica la creación de un diseño adjunto (con 
 
 Para disponer un diseño es necesario responder a dos preguntas para cada elemento:
 
-1. ¿Qué ***tamaño*** tendrá este elemento?
+1. ¿Qué * **tamaño** _ tendrá este elemento?
 
-2. ¿Cuál será la ***posición*** de este elemento?
+2. ¿Cuál será la _*_posición_*_ de este elemento?
 
 El sistema de diseño de XAML, que responde a estas preguntas, se trata brevemente en el marco de los [paneles personalizados](./custom-panels-overview.md).
 
@@ -58,7 +58,7 @@ Por esta razón, un panel de XAML se ha asociado tradicionalmente al diseño, pe
 El elemento [ItemsRepeater](../controls-and-patterns/items-repeater.md) también se comporta como el panel pero, a diferencia de este, no expone una propiedad secundaria que permita agregar o quitar mediante programación elementos secundarios de UIElement.  En su lugar, el marco administra automáticamente la vigencia de sus elementos secundarios para que se correspondan con una colección de elementos de datos.  Aunque no se deriva del panel, se comporta como un panel y así lo trata el marco.
 
 > [!NOTE]
-> El elemento [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) es un contenedor, derivado del panel, que delega su lógica en el objeto [Layout](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) adjunto.  LayoutPanel se encuentra en *versión preliminar* y actualmente solo está disponible en la *versión preliminar* del paquete WinUI.
+> El elemento [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) es un contenedor, derivado del panel, que delega su lógica en el objeto [Layout](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) adjunto.  LayoutPanel se encuentra en _versión preliminar* y actualmente solo está disponible en la *versión preliminar* del paquete WinUI.
 
 #### <a name="containers"></a>Contenedores
 
@@ -149,10 +149,10 @@ El enfoque para crear un diseño sin virtualización debe ser familiar para cual
 
 1. Deriva del tipo base [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout) (en lugar del panel).
 2. *(Opcional)* Define las propiedades de dependencia que cuando cambien invalidarán el diseño.
-3. _(**Nuevo**/Opcional)_ Inicializa cualquier objeto de estado requerido por el diseño como parte de [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore). Guárdalo con el contenedor host mediante la clase [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) proporcionada con el contexto.
+3. _( **Nuevo** /Opcional)_ Inicializa cualquier objeto de estado requerido por el diseño como parte de [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore). Guárdalo con el contenedor host mediante la clase [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) proporcionada con el contexto.
 4. Invalida el valor [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.measureoverride) y llama al método [Measure](/uwp/api/windows.ui.xaml.uielement.measure) en todos los elementos secundarios.
 5. Invalida el valor [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.arrangeoverride) y llama al método [Arrange](/uwp/api/windows.ui.xaml.uielement.arrange) en todos los elementos secundarios.
-6. *(**Nuevo**/Opcional)* Limpia cualquier estado guardado como parte de [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
+6. *( **Nuevo** /Opcional)* Limpia cualquier estado guardado como parte de [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
 
 ### <a name="example-a-simple-stack-layout-varying-sized-items"></a>Ejemplo: Un diseño de pila simple (elementos de tamaño variable)
 
@@ -272,7 +272,7 @@ VirtualizingLayoutContext proporciona dos propiedades adicionales diseñadas par
 
 ## <a name="data-dependent-virtualizing-layouts"></a>Diseños con virtualización dependientes de datos
 
-Un diseño con virtualización resulta más fácil si sabes cuál debe ser el tamaño de cada elemento sin necesidad de medir el contenido que se va a mostrar.  En este documento, nos referiremos simplemente a esta categoría de diseños con virtualización como **diseños de datos**, ya que normalmente implican inspeccionar los datos.  En función de los datos, una aplicación puede elegir una representación visual con un tamaño conocido, quizás por su parte de los datos o porque se determinó previamente por diseño.
+Un diseño con virtualización resulta más fácil si sabes cuál debe ser el tamaño de cada elemento sin necesidad de medir el contenido que se va a mostrar.  En este documento, nos referiremos simplemente a esta categoría de diseños con virtualización como **diseños de datos** , ya que normalmente implican inspeccionar los datos.  En función de los datos, una aplicación puede elegir una representación visual con un tamaño conocido, quizás por su parte de los datos o porque se determinó previamente por diseño.
 
 El enfoque general es para que el diseño:
 
@@ -311,13 +311,13 @@ El código siguiente te guía por lo que podría ser una interfaz de usuario con
 #### <a name="implementation"></a>Implementación
 
 ```csharp
-/// <summary>
-///  This is a custom layout that displays elements in two different sizes
-///  wide (w) and narrow (n). There are two types of rows 
-///  odd rows - narrow narrow wide
-///  even rows - wide narrow narrow
-///  This pattern repeats.
-/// </summary>
+/// <summary>
+///  This is a custom layout that displays elements in two different sizes
+///  wide (w) and narrow (n). There are two types of rows 
+///  odd rows - narrow narrow wide
+///  even rows - wide narrow narrow
+///  This pattern repeats.
+/// </summary>
 
 public class ActivityFeedLayout : VirtualizingLayout // STEP #1 Inherit from base attached layout
 {

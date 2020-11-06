@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 5acf1a017a55ddf75520eccf22b1a3b00ee8084b
-ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
+ms.openlocfilehash: fcad3bfeb5c31a6b3af85e5fd9a0ea72f11d65da
+ms.sourcegitcommit: caf4dba6bdfc3c6d9685d10aa9924b170b00bed8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92253599"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049516"
 ---
 # <a name="host-a-standard-winrt-xaml-control-in-a-c-win32-app"></a>Hospedaje de un control XAML estándar de WinRT en una aplicación Win32 de C++
 
@@ -26,17 +26,17 @@ En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](usi
 
 1. En Visual Studio 2019 con el SDK de Windows 10, versión 1903 (versión 10.0.18362) o una versión posterior instalada, crea un nuevo proyecto de **aplicación de escritorio de Windows** y asígnale el nombre **MyDesktopWin32App**. Este tipo de proyecto está disponible en los filtros de proyecto **C++** , **Windows** y **Escritorio**.
 
-2. En el **Explorador de soluciones**, haz clic con el botón derecho en el nodo de la solución, haz clic en **Redestinar solución**, selecciona la versión **10.0.18362.0** del SDK o una posterior y después haz clic en **Aceptar**.
+2. En el **Explorador de soluciones** , haz clic con el botón derecho en el nodo de la solución, haz clic en **Redestinar solución** , selecciona la versión **10.0.18362.0** del SDK o una posterior y después haz clic en **Aceptar**.
 
 3. Instala el paquete NuGet [Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) para incluir compatibilidad con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis) en el proyecto:
 
     1. Haz clic con el botón derecho en el proyecto en el **Explorador de soluciones** y elige **Administrar paquetes NuGet**.
-    2. Selecciona la pestaña **Examinar**, busca el paquete [Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) e instala la última versión de dicho paquete.
+    2. Selecciona la pestaña **Examinar** , busca el paquete [Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) e instala la última versión de dicho paquete.
 
     > [!NOTE]
     > En el caso de los proyectos nuevos, puedes instalar la [extensión de Visual Studio para C++/WinRT (VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) y usar una de las plantillas de proyecto de C+/WinRT incluidas en esa extensión. Para obtener más información, consulta [este artículo](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
-4. En la pestaña **Examinar** de la ventana **Administrador de paquetes NuGet**, busque el paquete [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) de NuGet e instale la versión estable más reciente de dicho paquete. Este paquete incluye varios recursos de compilación y tiempo de ejecución que permiten que las islas XAML funcionen en la aplicación.
+4. En la pestaña **Examinar** de la ventana **Administrador de paquetes NuGet** , busque el paquete [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) de NuGet e instale la versión estable más reciente de dicho paquete. Este paquete incluye varios recursos de compilación y tiempo de ejecución que permiten que las islas XAML funcionen en la aplicación.
 
 5. Establece el valor de `maxVersionTested` en el [manifiesto de aplicación](/windows/desktop/SbsCs/application-manifests) para especificar que la aplicación es compatible con Windows 10, versión 1903 o posterior.
 
@@ -55,6 +55,12 @@ En este artículo se muestra cómo usar la [API de hospedaje de XAML de UWP](usi
             </compatibility>
         </assembly>
         ```
+
+6. Agregue una referencia a los metadatos de Windows Runtime:
+   1. En el **Explorador de soluciones** , haga clic con el botón derecho en el nodo **Referencias** del proyecto y seleccione **Agregar referencia**.
+   2. Haga clic en el botón **Examinar** situado en la parte inferior de la página y navegue hasta la carpeta UnionMetadata en la ruta de instalación del SDK. De forma predeterminada, el SDK se instalará en `C:\Program Files (x86)\Windows Kits\10\UnionMetadata`. 
+   3. A continuación, seleccione la carpeta con el nombre de la versión de Windows de destino (por ejemplo, 10.0.18362.0) y, dentro de esa carpeta, seleccione el archivo `Windows.winmd`.
+   4. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Agregar referencia**.
 
 ## <a name="use-the-xaml-hosting-api-to-host-a-winrt-xaml-control"></a>Uso de la API de hospedaje de XAML para hospedar un control XAML de WinRT
 
@@ -79,7 +85,7 @@ El proceso básico para usar la API de hospedaje de XAML para hospedar un contro
 
     2. Llama al método **AttachToWindow** de la interfaz **IDesktopWindowXamlSourceNative** o **IDesktopWindowXamlSourceNative2** y pasa el identificador de ventana del elemento principal de la interfaz de usuario de la aplicación.
 
-    3. Establece el tamaño inicial de la ventana secundaria interna contenida en el objeto **DesktopWindowXamlSource**. De forma predeterminada, esta ventana secundaria interna tiene configurado un ancho y un alto de 0. Si no establece el tamaño de la ventana, los controles XAML de WinRT que agregue al objeto **DesktopWindowXamlSource** no serán visibles. Para acceder a la ventana secundaria interna en **DesktopWindowXamlSource**, utiliza la propiedad **WindowHandle** de la interfaz **IDesktopWindowXamlSourceNative** o **IDesktopWindowXamlSourceNative2**.
+    3. Establece el tamaño inicial de la ventana secundaria interna contenida en el objeto **DesktopWindowXamlSource**. De forma predeterminada, esta ventana secundaria interna tiene configurado un ancho y un alto de 0. Si no establece el tamaño de la ventana, los controles XAML de WinRT que agregue al objeto **DesktopWindowXamlSource** no serán visibles. Para acceder a la ventana secundaria interna en **DesktopWindowXamlSource** , utiliza la propiedad **WindowHandle** de la interfaz **IDesktopWindowXamlSourceNative** o **IDesktopWindowXamlSourceNative2**.
 
 3. Por último, asigna el elemento **Windows.UI.Xaml.UIElement** que quieres hospedar a la propiedad [Content](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) del objeto **DesktopWindowXamlSource**.
 

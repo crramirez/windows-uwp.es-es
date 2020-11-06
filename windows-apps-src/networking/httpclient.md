@@ -6,12 +6,12 @@ ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb97e58e914da1982066d9cf150f5c8b18ef884a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c937a0cacd0dc198c3ad2bd979850efafcb2aa05
+ms.sourcegitcommit: aa444aff3371f73243c2544cf6afaf8e58875ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155449"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93298258"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -27,7 +27,7 @@ Usa [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) y el resto de la API 
 
 Las clases del espacio de nombres [**Windows.Web.Http**](/uwp/api/Windows.Web.Http) y los espacios de nombres [**Windows.Web.Http.Headers**](/uwp/api/Windows.Web.Http.Headers) y [**Windows.Web.Http.Filters**](/uwp/api/Windows.Web.Http.Filters) relacionados proporcionan una interfaz de programación para aplicaciones para la Plataforma universal de Windows (UWP) que actúan como un cliente HTTP para realizar solicitudes GET básicas o implementar funcionalidades más avanzadas de HTTP que se indican a continuación.
 
--   Métodos para verbos comunes (**DELETE**, **GET**, **PUT** y **POST**). Cada una de estas solicitudes se envía como una operación asincrónica.
+-   Métodos para verbos comunes ( **DELETE** , **GET** , **PUT** y **POST** ). Cada una de estas solicitudes se envía como una operación asincrónica.
 
 -   Compatibilidad con diseños y configuraciones de autenticación comunes.
 
@@ -45,8 +45,8 @@ El espacio de nombres [**Windows.Web.Http**](/uwp/api/Windows.Web.Http) represen
 
 -   [**HttpBufferContent**](/uwp/api/Windows.Web.Http.HttpBufferContent). Contenido como un búfer
 -   [**HttpFormUrlEncodedContent**](/uwp/api/Windows.Web.Http.HttpFormUrlEncodedContent). Contenido como tuplas de nombre y valor codificadas con el tipo MIME **application/x-www-form-urlencoded**.
--   [**HttpMultipartContent**](/uwp/api/Windows.Web.Http.HttpMultipartContent). Contenido con el formato del tipo MIME **multipart/\*** .
--   [**HttpMultipartFormDataContent**](/uwp/api/Windows.Web.Http.HttpMultipartFormDataContent). Contenido que se codifica como el tipo MIME **multipart/form-data**.
+-   [**HttpMultipartContent**](/uwp/api/Windows.Web.Http.HttpMultipartContent). Contenido con el formato del tipo MIME * *multipart/\** _.
+-   [_ *HttpMultipartFormDataContent**](/uwp/api/Windows.Web.Http.HttpMultipartFormDataContent). Contenido que se codifica como el tipo MIME **multipart/form-data**.
 -   [**HttpStreamContent**](/uwp/api/Windows.Web.Http.HttpStreamContent). Contenido como un flujo (el tipo interno lo usan el método HTTP GET para recibir datos y el método HTTP POST para cargar datos).
 -   [**HttpStringContent**](/uwp/api/Windows.Web.Http.HttpStringContent). Contenido como una cadena.
 -   [**IHttpContent**](/uwp/api/Windows.Web.Http.IHttpContent): una interfaz base para que los desarrolladores creen sus propios objetos de contenido
@@ -329,7 +329,7 @@ int main()
 
 Se inicia una excepción cuando se pasa una cadena no válida del identificador uniforme de recursos (URI) al constructor del objeto [**Windows.Foundation.Uri**](/uwp/api/Windows.Foundation.Uri).
 
-**.NET:**   el tipo[**Windows.Foundation.Uri**](/uwp/api/Windows.Foundation.Uri) aparece como [**System.Uri**](/dotnet/api/system.uri) en C# y VB.
+**.NET:**  El tipo [**Windows.Foundation.Uri**](/uwp/api/Windows.Foundation.Uri) aparece como [**System.Uri**](/dotnet/api/system.uri) en C# y VB.
 
 En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](/dotnet/api/system.uri) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](/dotnet/api/system.uri.trycreate#overloads) para probar la cadena recibida del usuario antes de que se cree el URI.
 
@@ -337,8 +337,12 @@ En C++, no hay ningún método para probar y analizar una cadena en un URI. Si u
 
 [  **Windows.Web.Http**](/uwp/api/Windows.Web.Http) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
 
-En las aplicaciones que usan .NET Framework 4.5 en C#, VB.NET, [System.Exception](/dotnet/api/system.exception) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](/dotnet/api/system.exception.hresult#System_Exception_HResult) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](/dotnet/api/system.exception.message#System_Exception_Message) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+En las aplicaciones que usan [C++ /WinRT](/windows/uwp/cpp-and-winrt-apis/), el elemento struct [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) representa una excepción generada durante la ejecución de la aplicación. La función [winrt::hresult_error::code](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorcode-function) devuelve el valor **HRESULT** asignado a la excepción específica. La función [winrt::hresult_error::message](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errormessage-function) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Para más información, consulte [Control de errores con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/error-handling).
 
-En las aplicaciones que usan C++ administrado, [Platform::Exception](/cpp/cppcx/platform-exception-class) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [Platform::Exception::HResult](/cpp/cppcx/platform-exception-class#hresult) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [Platform::Exception::Message](/cpp/cppcx/platform-exception-class#message) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. La aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+
+En las aplicaciones que usan .NET Framework 4.5 en C#, VB.NET, [System.Exception](/dotnet/api/system.exception) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](/dotnet/api/system.exception.hresult#System_Exception_HResult) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](/dotnet/api/system.exception.message#System_Exception_Message) devuelve el mensaje que describe la excepción.
+
+C++/CX se ha reemplazado por [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/). No obstante, en las aplicaciones que usan C++/CX, [Platform::Exception](/cpp/cppcx/platform-exception-class) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [Platform::Exception::HResult](/cpp/cppcx/platform-exception-class#hresult) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [Platform::Exception::Message](/cpp/cppcx/platform-exception-class#message) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**.
 
 Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.

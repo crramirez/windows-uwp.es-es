@@ -1,5 +1,5 @@
 ---
-Description: El movimiento panorámico y el desplazamiento permiten a los usuarios acceder a contenido que va más allá de los límites de la pantalla.
+description: El movimiento panorámico y el desplazamiento permiten a los usuarios acceder a contenido que va más allá de los límites de la pantalla.
 title: Controles del visor de desplazamiento
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scrollbars
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f4fb37250817087bf7b8a41144bf9e4841a9048
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 60a8e8f204591e455e2ccf52b09684a878b67452
+ms.sourcegitcommit: da44cb95946440cd06ff36254d42ecefcdd87ce2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174469"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063037"
 ---
 # <a name="scroll-viewer-controls"></a>Controles del visor de desplazamiento
 
@@ -25,7 +25,7 @@ ms.locfileid: "89174469"
 
 Cuando la interfaz de usuario tenga más contenido que el que se pueda mostrar en un área, usa el control del visor de desplazamiento.
 
-> **API importantes**: [Clase ScrollViewer](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [Clase ScrollBar](/uwp/api/windows.ui.xaml.controls.primitives.scrollbar)
+> **API importantes** : [Clase ScrollViewer](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [Clase ScrollBar](/uwp/api/windows.ui.xaml.controls.primitives.scrollbar)
 
 Los visores de desplazamiento permiten que el contenido se extienda más allá de los límites de la ventanilla (área visible). Para acceder a dicho contenido, los usuario manipulan la superficie del visor de desplazamiento mediante entrada táctil, la rueda del mouse, el teclado o un controlador para juegos, o bien mediante el uso del cursor del ratón o del lápiz óptico para interactuar con la barra de desplazamiento del visor de desplazamiento. Esta imagen muestra varios ejemplos de controles del visor de desplazamiento.
 
@@ -144,6 +144,9 @@ En los casos donde un ScrollViewer es explícito en el XAML, como se muestra en 
 - Si el usuario va a desplazarse sobre un fragmento de texto largo, configura el visor para un desplazamiento solamente vertical.
 - El visor de desplazamiento que uses debe contener un solo objeto. Ten en cuenta que ese objeto puede ser un panel de diseño que contenga a su vez cualquier número de objetos.
 - No coloques un control [dinámico](pivot.md) dentro de un visor de desplazamiento para evitar conflictos con la lógica de desplazamiento del control dinámico.
+- Si necesita controlar los eventos de puntero para una clase [UIElement](/uwp/api/Windows.UI.Xaml.UIElement) en una vista desplazable (como ScrollViewer o ListView), debe deshabilitar explícitamente la compatibilidad con los eventos de manipulación en el elemento de la vista mediante una llamada a [UIElement.CancelDirectmanipulation()](/uwp/api/windows.ui.xaml.uielement.canceldirectmanipulations). Para volver a habilitar los eventos de manipulación en la vista, llame a [UIElement.TryStartDirectManipulation()](/uwp/api/windows.ui.xaml.uielement.trystartdirectmanipulation).
+
+
 
 ## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 

@@ -1,5 +1,5 @@
 ---
-description: Obtenga información sobre las colecciones y listas como representaciones de varios elementos de datos relacionados que aparecen juntos. 
+description: Obtenga información sobre las colecciones y listas como representaciones de varios elementos de datos relacionados que aparecen juntos.
 title: Colecciones y listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Collections and Lists
@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 764d2d769a1455ff6a0815a6716866c055edf291
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3fd6cfb7fb0ffd7102f32d7159aba2b4c1042b76
+ms.sourcegitcommit: da44cb95946440cd06ff36254d42ecefcdd87ce2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220028"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063027"
 ---
 # <a name="collections-and-lists"></a>Colecciones y listas
 
 Las colecciones y listas hacen referencia a la representación de varios elementos de datos relacionados que aparecen juntos. Las colecciones se pueden representar de varias maneras, mediante diferentes controles de colección (también se pueden denominar vistas de colección). Los controles de colección muestran y permiten las interacciones con el contenido basado de la colección, como una lista de contactos, una lista de fechas, una colección de imágenes, etc.
 
-> **API importantes**: [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView), [clase FlipView](/uwp/api/windows.ui.xaml.controls.flipview), [clase TreeView](/uwp/api/windows.ui.xaml.controls.treeview) y [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
+> **API importantes** : [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView), [clase FlipView](/uwp/api/windows.ui.xaml.controls.flipview), [clase TreeView](/uwp/api/windows.ui.xaml.controls.treeview) y [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
 
 Los controles tratados en este artículo son:
 
@@ -74,7 +74,9 @@ Usa una vista de lista para:
     - Crear una lista de mensajes o un registro de mensajes.
     - Crear una lista de contactos.
     - Crear el panel maestro en la [vista maestro y detalles](master-details.md). Maestro y detalles es el patrón que se suele usar en aplicaciones de correo electrónico, en las que un panel (el maestro) tiene una lista de elementos seleccionables, mientras que el otro panel tiene una vista detallada del elemento seleccionado.
-    
+
+> [!NOTE]
+> Si necesita controlar los eventos de puntero para una clase [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) en una vista desplazable (como ScrollViewer o ListView), debe deshabilitar explícitamente la compatibilidad con los eventos de manipulación en el elemento de la vista mediante una llamada a [UIElement.CancelDirectmanipulation()](/uwp/api/windows.ui.xaml.uielement.canceldirectmanipulations). Para volver a habilitar los eventos de manipulación en la vista, llame a [UIElement.TryStartDirectManipulation()](/uwp/api/windows.ui.xaml.uielement.trystartdirectmanipulation).
 
 ### <a name="examples"></a>Ejemplos
 
@@ -140,6 +142,9 @@ Usa una vista de cuadrícula para:
 - Acomodar una variedad de casos de uso, incluidos los casos comunes siguientes:
     - Interfaz de usuario de tipo escaparate (es decir, exploración de aplicaciones, canciones, productos)
     - Bibliotecas fotográficas interactivas
+
+> [!NOTE]
+> Si necesita controlar los eventos de puntero para una clase [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) en una vista desplazable (como ScrollViewer o ListView), debe deshabilitar explícitamente la compatibilidad con los eventos de manipulación en el elemento de la vista mediante una llamada a [UIElement.CancelDirectmanipulation()](/uwp/api/windows.ui.xaml.uielement.canceldirectmanipulations). Para volver a habilitar los eventos de manipulación en la vista, llame a [UIElement.TryStartDirectManipulation()](/uwp/api/windows.ui.xaml.uielement.trystartdirectmanipulation).
 
 ### <a name="examples"></a>Ejemplos
 
@@ -277,7 +282,7 @@ Usa un control ItemsRepeater si:
 
 ### <a name="examples"></a>Ejemplos
 
-Los tres ejemplos siguientes son controles ItemsRepeater que están enlazados al mismo origen de datos (una colección de números). La colección de números se representa de tres maneras y cada uno de los controles ItemsRepeaters siguientes usa una clase [Layout](/uwp/api/microsoft.ui.xaml.controls.layout) personalizada distinta y una propiedad [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2) personalizada diferente.
+Los tres ejemplos siguientes son controles ItemsRepeater que están enlazados al mismo origen de datos (una colección de números). La colección de números se representa de tres maneras y cada uno de los controles ItemsRepeaters siguientes usa una clase [Layout](/uwp/api/microsoft.ui.xaml.controls.layout) personalizada distinta y una propiedad [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) personalizada diferente.
 
 ![ItemsRepeater con barras horizontales](images/itemsrepeater-1.png)
 ![ItemsRepeater con barras verticales](images/itemsrepeater-2.png)

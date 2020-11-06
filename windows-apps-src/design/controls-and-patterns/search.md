@@ -1,5 +1,5 @@
 ---
-Description: Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
+description: Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 title: Búsqueda y buscar en la página
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 61334cc4d8d91347dac7fa477cc5d508ea8ab5d1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 660b2cdff321bbdbb0fd20b84a95ba410794b83a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174489"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035238"
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
@@ -24,26 +24,26 @@ ms.locfileid: "89174489"
 
 Buscar es una de las formas principales en que los usuarios pueden buscar contenido en tu aplicación. Las instrucciones de este artículo tratan los elementos de la experiencia de búsqueda, los ámbitos de búsqueda, la implementación y los ejemplos de la búsqueda en contexto.
 
-> **API importantes**: [Clase AutoSuggestBox](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
+> **API importantes** : [Clase AutoSuggestBox](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
 
 ## <a name="elements-of-the-search-experience"></a>Elementos de la experiencia de búsqueda
 
 
-**Entrada.**   Texto es el modo más común de la entrada de búsqueda y es el objetivo de estas instrucciones. Entre otros modos de entrada comunes se incluyen la voz y la cámara, pero estos por lo general requieren la capacidad de interactuar con el hardware del dispositivo y es posible que necesiten controles adicionales o una interfaz de usuario personalizada en la aplicación.
+**Entrada.**  Texto es el modo más común de la entrada de búsqueda y es el objetivo de estas instrucciones. Entre otros modos de entrada comunes se incluyen la voz y la cámara, pero estos por lo general requieren la capacidad de interactuar con el hardware del dispositivo y es posible que necesiten controles adicionales o una interfaz de usuario personalizada en la aplicación.
 
-**Entrada cero.**   Una vez que el usuario ha activado el campo de entrada, pero antes de que haya escrito texto, puedes mostrar lo que se denomina un "lienzo de entrada cero". El lienzo de entrada cero aparecerá comúnmente en el lienzo de la aplicación para que [sugerencia automática](auto-suggest-box.md) sustituya este contenido cuando el usuario empiece a escribir su consulta. Historial de búsquedas recientes, tendencias de búsquedas, sugerencias de búsquedas contextuales, consejos y sugerencias son todos buenos candidatos para el estado de entrada cero.
+**Entrada cero.**  Una vez que el usuario ha activado el campo de entrada, pero antes de que haya escrito texto, puedes mostrar lo que se denomina un "lienzo de entrada". El lienzo de entrada cero aparecerá comúnmente en el lienzo de la aplicación para que [sugerencia automática](auto-suggest-box.md) sustituya este contenido cuando el usuario empiece a escribir su consulta. Historial de búsquedas recientes, tendencias de búsquedas, sugerencias de búsquedas contextuales, consejos y sugerencias son todos buenos candidatos para el estado de entrada cero.
 
 ![Ejemplo de Cortana en un lienzo de entrada cero](images/search-cortana-example.png)
 
- 
+ 
 
-**Formulación de consulta/sugerencia automática.**   Formulación de la consulta reemplaza el contenido de entrada cero en cuanto el usuario comienza a escribir. En cuando el usuario escribe una cadena de consulta, se le proporciona un conjunto de opciones de desambiguación o de sugerencias de consulta actualizadas continuamente que los ayudan a acelerar el proceso de entrada y a formular una consulta eficaz. Este comportamiento de sugerencias de consulta está integrado en el [control de sugerencias automáticas](auto-suggest-box.md)y también es una forma de mostrar el icono dentro de la búsqueda (como un micrófono o un icono de confirmación). Cualquier comportamiento distinto entra en la aplicación.
+**Formulación de consulta/sugerencia automática.**  Formulación de la consulta reemplaza el contenido de entrada cero en cuanto el usuario comienza a escribir. En cuando el usuario escribe una cadena de consulta, se le proporciona un conjunto de opciones de desambiguación o de sugerencias de consulta actualizadas continuamente que los ayudan a acelerar el proceso de entrada y a formular una consulta eficaz. Este comportamiento de sugerencias de consulta está integrado en el [control de sugerencias automáticas](auto-suggest-box.md)y también es una forma de mostrar el icono dentro de la búsqueda (como un micrófono o un icono de confirmación). Cualquier comportamiento distinto entra en la aplicación.
 
 ![ejemplo de consulta/formulación de sugerencia automática](images/search-autosuggest-example.png)
 
- 
+ 
 
-**Conjunto de resultados.**   Los resultados de búsqueda suelen aparecer directamente en el campo de entrada de búsqueda. Aunque esto no es un requisito, la yuxtaposición de la entrada y los resultados mantiene el contexto y proporciona al usuario acceso inmediato para editar la consulta anterior o escribir una consulta nueva. Esta conexión se puede comunicar reemplazando el texto de la sugerencia por la consulta que creó el conjunto de resultados.
+**Conjunto de resultados.**  Los resultados de búsqueda suelen aparecer directamente en el campo de entrada de búsqueda. Aunque esto no es un requisito, la yuxtaposición de la entrada y los resultados mantiene el contexto y proporciona al usuario acceso inmediato para editar la consulta anterior o escribir una consulta nueva. Esta conexión se puede comunicar reemplazando el texto de la sugerencia por la consulta que creó el conjunto de resultados.
 
 Un método para habilitar el acceso eficaz tanto a la edición de consultas previas como a la creación de una nueva consulta es resaltar la consulta anterior cuando se reactiva el campo. De este modo, cualquier pulsación de tecla reemplazará a la cadena anterior, pero se mantiene la cadena de forma que el usuario pueda colocar un cursor para editar o anexar la cadena anterior.
 
@@ -56,11 +56,11 @@ La búsqueda es una función común y los usuarios encontrarán la interfaz de u
 
 Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
-**Global** y **contextual o refinar.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
+**Global** y **contextual o refinar.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
-**Web.**   Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
+**Web.**  Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
-**Mis cosas.**   Búsqueda en dispositivos, en la nube, en gráficos sociales, etc. Los resultados son variados, pero están limitados por la conexión a cuentas de usuario.
+**Mis cosas.**  Búsqueda en dispositivos, en la nube, en gráficos sociales, etc. Los resultados son variados, pero están limitados por la conexión a cuentas de usuario.
 
 Usa el texto de la sugerencia para comunicar el ámbito de búsqueda. Algunos ejemplos son:
 
@@ -76,7 +76,7 @@ Usa el texto de la sugerencia para comunicar el ámbito de búsqueda. Algunos ej
 
 ![Ejemplo de texto de la sugerencia de búsqueda](images/search-windowsandweb.png)
 
- 
+ 
 
 Mediante una comunicación eficaz del ámbito de un punto de entrada de búsqueda, puedes ayudar a garantizar que se cumplirán las expectativas del usuario mediante las funcionalidades de la búsqueda que estás realizando y reducir la posibilidad de frustración a la hora de cumplir las expectativas del usuario.
 
@@ -94,7 +94,7 @@ Después de hacer clic en el icono de búsqueda:
 
 ![Ejemplo de búsqueda en un menú de navegación](images/search-icon-expanded-maps.png)
 
- 
+ 
 
 La búsqueda siempre usa un glifo de lupa orientado hacia la derecha para el punto de entrada. El glifo que se debe usar es Segoe UI Symbol, el código de carácter hexadecimal 0xE0094, y normalmente con un tamaño de fuente de 15 epx.
 
@@ -115,19 +115,19 @@ Buscar como una acción en la barra de herramientas de Windows:
 
 ![Ejemplo de búsqueda como una acción en la barra de herramientas de Windows](images/search-toolbar-action.png)
 
- 
+ 
 
 Búsqueda como entrada en el lienzo de la aplicación:
 
 ![Ejemplo de búsqueda en un lienzo de la aplicación](images/search-app-canvas.png)
 
- 
+ 
 
 Búsqueda en un panel de navegación en la aplicación Mapas:
 
 ![Ejemplo de búsqueda en un menú de navegación](images/search-icon-expanded-maps.png)
 
- 
+ 
 
 Búsqueda en línea se reserva para casos en los que se accede con poca frecuencia a la búsqueda o es muy contextual:
 
@@ -158,7 +158,7 @@ Buscar en la página permite que los usuarios encuentren coincidencias de texto 
         -   Botones Anterior y Siguiente
         -   Un contador de coincidencias
         -   Cerrar (solo escritorio)
-    -   La vista debe resaltar coincidencias y desplazarse para mostrar la siguiente coincidencia en pantalla. Los usuarios pueden moverse rápidamente por el documento mediante el uso de los botones **Anterior** y **Siguiente**, y mediante el uso de las barras de desplazamiento o la manipulación directa con la funcionalidad táctil.
+    -   La vista debe resaltar coincidencias y desplazarse para mostrar la siguiente coincidencia en pantalla. Los usuarios pueden moverse rápidamente por el documento mediante el uso de los botones **Anterior** y **Siguiente** , y mediante el uso de las barras de desplazamiento o la manipulación directa con la funcionalidad táctil.
 
     -   La funcionalidad de buscar y reemplazar debe funcionar conjuntamente con la funcionalidad básica de buscar en la página. Para las aplicaciones que tienen buscar y reemplazar, asegúrate de que buscar en la página no interfiera con dicha funcionalidad.
 
@@ -172,25 +172,25 @@ Proporciona una manera sencilla de acceder a la función de búsqueda en la pág
 
 ![Ejemplo de Buscar en la página 1](images/findinpage-01.png)
 
- 
+ 
 
 Después de seleccionar Buscar en la página, el usuario escribe un término de búsqueda. Pueden aparecer sugerencias de texto mientras se escribe el término de búsqueda:
 
 ![Ejemplo de Buscar en la página 2](images/findinpage-02.png)
 
- 
+ 
 
 Si no hay una coincidencia de texto en la búsqueda, debería aparecer en el cuadro de texto una cadena del tipo "No hay resultados":
 
 ![Ejemplo de Buscar en la página 3](images/findinpage-03.png)
 
- 
+ 
 
 Si hay coincidencia de texto en la búsqueda, el primer término debería resaltarse en un color distinto y las coincidencias posteriores en un tono más sutil de la misma paleta de colores, como se muestra en este ejemplo:
 
 ![Ejemplo de Buscar en la página 4](images/findinpage-04.png)
 
- 
+ 
 
 Buscar en la página tiene un contador de coincidencias:
 
@@ -214,6 +214,6 @@ Para obtener más información sobre cómo agregar comandos a la barra de comand
 * [Cuadro de sugerencias automáticas](auto-suggest-box.md)
 
 
- 
+ 
 
- 
+ 
