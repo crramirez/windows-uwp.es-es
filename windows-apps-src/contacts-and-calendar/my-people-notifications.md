@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e00e3de9445a8b7c63ebaead70173c29b637b54
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9fa73c6fdd0a0cac69cb485d3426ddfc327591bd
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166329"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339673"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -20,10 +20,10 @@ Las notificaciones de mis personas proporcionan una nueva forma para que los usu
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2019. Para obtener información detallada sobre la instalación, vea [configurar con Visual Studio](../get-started/get-set-up.md).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener información detallada sobre la instalación, vea [configurar con Visual Studio](/windows/apps/get-started/get-set-up).
 + Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para empezar a trabajar con C#, vea [crear una aplicación "Hello, World"](../get-started/create-a-hello-world-app-xaml-universal.md).
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 Como alternativa a las notificaciones del sistema genéricas, ahora puede enviar notificaciones a través de la característica mis personas para ofrecer una experiencia más personal a los usuarios. Se trata de un nuevo tipo de notificación del sistema, enviado desde un contacto anclado en la barra de tareas del usuario con la característica mis personas. Cuando se reciba la notificación, la imagen del contacto del remitente se animará en la barra de tareas y se reproducirá un sonido, indicando que se está iniciando la notificación. La animación o imagen especificada en la carga se mostrará en 5 segundos (o, si la carga es una animación de menos de 5 segundos de duración, se repetirá hasta que transcurran 5 segundos).
 

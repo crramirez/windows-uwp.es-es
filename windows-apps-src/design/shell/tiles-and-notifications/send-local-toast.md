@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, procedimientos, Inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: b532e041ffbbcf4a2ecac0e3386430b65d833f2d
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 4142fb3d036bb19eb652ca9048a70325eb64b17d
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93034488"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339813"
 ---
 # <a name="send-a-local-toast-notification-from-uwp-apps"></a>Envío de una notificación del sistema local desde aplicaciones para UWP
 
@@ -262,7 +262,7 @@ La activación de los botones de primer plano se administra de la misma manera q
 
 Cuando se especifica la activación en segundo plano en el sistema (o en un botón dentro de la notificación del sistema), se ejecutará la tarea en segundo plano en lugar de activar la aplicación en primer plano.
 
-Para obtener más información sobre las tareas en segundo plano, consulte [soporte técnico de la aplicación con tareas en segundo plano](/windows/uwp/launch-resume/support-your-app-with-background-tasks).
+Para obtener más información sobre las tareas en segundo plano, consulte [soporte técnico de la aplicación con tareas en segundo plano](../../../launch-resume/support-your-app-with-background-tasks.md).
 
 Si tiene como destino la compilación 14393 o posterior, puede usar tareas en segundo plano en proceso, que simplifican considerablemente las cosas. Tenga en cuenta que las tareas en segundo plano en proceso no podrán ejecutarse en versiones anteriores de Windows. Usaremos una tarea en segundo plano en proceso en este ejemplo de código.
 
@@ -348,9 +348,9 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 
 Si desea quitar o reemplazar la notificación que envía mediante programación, debe usar la propiedad de etiqueta (y, opcionalmente, la propiedad de grupo) para proporcionar una clave principal para la notificación. Después, puede usar esta clave principal en el futuro para quitar o reemplazar la notificación.
 
-Para ver más detalles sobre cómo reemplazar o quitar notificaciones del sistema ya entregadas, consulte [Inicio rápido: administrar notificaciones del sistema en el centro de actividades (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10)).
+Para ver más detalles sobre cómo reemplazar o quitar notificaciones del sistema ya entregadas, consulte [Inicio rápido: administrar notificaciones del sistema en el centro de actividades (XAML)](/previous-versions/windows/apps/dn631260(v=win.10)).
 
-Etiqueta y grupo combinados actúan como clave principal compuesta. Grupo es el identificador más genérico, donde puede asignar grupos como "wallPosts", "Messages", "friendRequests", etc. Y, a continuación, la etiqueta debe identificar de forma única la notificación en el grupo. Mediante el uso de un grupo genérico, puede quitar todas las notificaciones de ese grupo mediante la [API de RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_).
+Etiqueta y grupo combinados actúan como clave principal compuesta. Grupo es el identificador más genérico, donde puede asignar grupos como "wallPosts", "Messages", "friendRequests", etc. Y, a continuación, la etiqueta debe identificar de forma única la notificación en el grupo. Mediante el uso de un grupo genérico, puede quitar todas las notificaciones de ese grupo mediante la [API de RemoveGroup](/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_).
 
 ```csharp
 // Create toast content
@@ -381,10 +381,10 @@ A continuación se muestra un ejemplo de lo que debe hacer una aplicación de me
 
 1. El usuario recibe varias notificaciones del sistema sobre nuevos mensajes en una conversación
 2. El usuario pulsa una de esas notificaciones del sistema para abrir la conversación
-3. La aplicación abre la conversación y borra todas las notificaciones del sistema de esa conversación (mediante [RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) en el grupo proporcionado por la aplicación para esa conversación).
+3. La aplicación abre la conversación y borra todas las notificaciones del sistema de esa conversación (mediante [RemoveGroup](/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) en el grupo proporcionado por la aplicación para esa conversación).
 4. El centro de actividades del usuario ahora refleja correctamente el estado de la notificación, ya que no hay ninguna notificación obsoleta para esa conversación en el centro de actividades.
 
-Para obtener información sobre cómo borrar todas las notificaciones o quitar notificaciones específicas, consulte [Inicio rápido: administrar notificaciones del sistema en el centro de actividades (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10)).
+Para obtener información sobre cómo borrar todas las notificaciones o quitar notificaciones específicas, consulte [Inicio rápido: administrar notificaciones del sistema en el centro de actividades (XAML)](/previous-versions/windows/apps/dn631260(v=win.10)).
 
 ```csharp
 ToastNotificationManager.History.Clear();

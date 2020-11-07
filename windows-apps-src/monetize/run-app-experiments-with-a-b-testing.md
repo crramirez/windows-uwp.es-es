@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: SDK de Windows 10, UWP, Microsoft Store Services, pruebas A/B, experimentos
 ms.localizationpriority: medium
-ms.openlocfilehash: c38eee9e3be7d6ea85b56fd5ad3aa3d62ae751b9
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 7cc63c1bdf5f3357bed596e5afcf03681eeb513a
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93029787"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339751"
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>Ejecuta experimentos para aplicaciones con pruebas A/B
 
@@ -36,7 +36,7 @@ Las pruebas A/B en el centro de Partners solo se admiten para aplicaciones UWP.
 
 Para poder ejecutar experimentos con pruebas A/B, debes configurar el equipo de desarrollo:
 
-* Sigue [estas](../get-started/get-set-up.md) instrucciones para configurar el equipo para el desarrollo para UWP.
+* Sigue [estas](/windows/apps/get-started/get-set-up) instrucciones para configurar el equipo para el desarrollo para UWP.
 * [Instale el SDK de Microsoft Store Services](microsoft-store-services-sdk.md#install-the-sdk). Además de la API para los experimentos, este SDK también proporciona API para otras características, como mostrar anuncios y dirigir a los clientes al Centro de opiniones para recopilar los comentarios sobre la aplicación.
 
 ## <a name="best-practices"></a>Procedimientos recomendados

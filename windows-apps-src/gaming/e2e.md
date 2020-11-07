@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, desarrollo de juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: c6cae9e2416eb992815f098649d6b02ee472da14
-ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
+ms.openlocfilehash: be63c7ec1e682924e2364a2c6ea8e4d2d81dee3f
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192975"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339513"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -209,7 +209,7 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
     </tr>
     <tr>
         <td>Ejemplos de juegos de Xbox One (XGD)</td>
-        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Muestras</a></td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Ejemplos</a></td>
     </tr>
     <tr>
         <td>Ejemplos de juegos de Windows (Galería de código de MSDN)</td>
@@ -217,15 +217,15 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
     </tr>
     <tr>
         <td>Ejemplo de juego 2D de JavaScript</td>
-        <td><a href="../get-started/get-started-tutorial-game-js2d.md">Crear un juego para UWP en JavaScript</a></td>
+        <td><a href="/windows/uwp/get-started/">Crear un juego para UWP en JavaScript</a></td>
     </tr>
     <tr>
         <td>Ejemplo de juego 3D de JavaScript</td>
-        <td><a href="../get-started/get-started-tutorial-game-js3d.md">Crear un juego en 3D en JavaScript con three.js</a></td>
+        <td><a href="/windows/uwp/get-started/">Crear un juego en 3D en JavaScript con three.js</a></td>
     </tr>
     <tr>
         <td>Ejemplo de juego Multigame 2D para UWP</td>
-        <td><a href="../get-started/get-started-tutorial-game-mg2d.md">Crear un juego para UWP en MonoGame 2D</a></td>
+        <td><a href="/windows/uwp/get-started/">Crear un juego para UWP en MonoGame 2D</a></td>
     </tr>
 </table>
 
@@ -752,7 +752,7 @@ MonoGame es un marco de trabajo de código abierto para el desarrollo de juegos 
     </tr>
     <tr>
         <td>Ejemplo de juego Multigame 2D para UWP</td>
-        <td><a href="../get-started/get-started-tutorial-game-mg2d.md">Crear un juego para UWP en MonoGame 2D</a></td>
+        <td><a href="/windows/uwp/get-started/">Crear un juego para UWP en MonoGame 2D</a></td>
     </tr>
 </table>
 
@@ -970,7 +970,7 @@ Si empiezas a dar tus primeros pasos en la programación para la UWP y estás co
     </tr>
 </table>
 
-### <a name="windows-desktop-apisto-uwp"></a>API de escritorio de Windows para UWP
+### <a name="windows-desktop-apis-to-uwp"></a>API de escritorio de Windows para UWP
 
 Estos son algunos vínculos que le ayudarán a migrar el juego de escritorio de Windows a UWP.
 

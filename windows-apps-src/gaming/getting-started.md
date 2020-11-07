@@ -6,12 +6,12 @@ ms.date: 01/25/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, introducción
 localizationpriority: medium
-ms.openlocfilehash: 7d3e50f5d32cd8c6a497ff3de67005972d3a0f7f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3368186fdf860df48d7ae49e08d47e1abf667aa3
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175319"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339453"
 ---
 # <a name="getting-started"></a>Introducción
 
@@ -37,7 +37,7 @@ Si planea usar un motor de juegos y otro middleware, consulte la sección [puent
 
 ### <a name="step-2-prepare-your-hardware-for-development"></a>Paso 2: preparar el hardware para el desarrollo
 
-Si va a realizar el desarrollo por primera vez, deberá habilitar el modo de Desarrollador en el dispositivo. Para más información, consulte [Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
+Si va a realizar el desarrollo por primera vez, deberá habilitar el modo de Desarrollador en el dispositivo. Para más información, consulte [Habilitar el dispositivo para el desarrollo](/windows/apps/get-started/enable-your-device-for-development).
 
 Para aquellos que planean desarrollar un juego de Xbox con la consola Xbox de venta directa, también debe activar y habilitar el modo de Desarrollador en él. Para obtener más información, consulte [activación del modo de desarrollador de Xbox One](../xbox-apps/devkit-activation.md) e introducción al [desarrollo de aplicaciones para UWP en Xbox](../xbox-apps/getting-started.md). 
 

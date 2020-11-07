@@ -6,23 +6,23 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7075f0de1ce01e9157c520f28b0b0dd70260498
-ms.sourcegitcommit: bc8add1675070506371c1881b41c3727f1b55720
+ms.openlocfilehash: 4726f2169750cf69bba91f2494c0d01e609d6715
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90093127"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339713"
 ---
 # <a name="create-an-nfc-smart-card-app"></a>Crear una aplicación de tarjeta NFC inteligente
 
 > [!Important]
 > Este tema se aplica solo a Windows 10 Mobile.
 
-Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC mediante el uso de un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO). Esto limitaba la variedad de soluciones de pago posibles por otros comerciantes o desarrolladores que no estaban unidos a MNO. En Windows 10 Mobile, se ha incluido una nueva tecnología de emulación de tarjetas denominada Emulación de tarjeta de host (HCE). La tecnología HCE permite a tu aplicación comunicarse directamente con un lector de tarjetas NFC. En este tema se muestra cómo funciona la Emulación de tarjeta de host (HCE) en dispositivos Windows 10 Mobile y cómo se desarrolla una aplicación HCE para que los clientes puedan acceder a los servicios mediante su teléfono en lugar de con una tarjeta física sin colaboración con un MNO.
+Windows Phone 8.1 admitía las aplicaciones de emulación de tarjeta NFC mediante el uso de un elemento seguro basado en SIM, pero ese modelo requería que las aplicaciones de pago seguro estuvieran estrechamente unidas a los operadores de redes móviles (MNO). Esto limitaba la variedad de soluciones de pago posibles por otros comerciantes o desarrolladores que no estaban unidos a MNO. En Windows 10 Mobile, se ha incluido una nueva tecnología de emulación de tarjetas denominada Emulación de tarjeta de host (HCE). La tecnología HCE permite a tu aplicación comunicarse directamente con un lector de tarjetas NFC. En este tema se muestra cómo funciona la emulación de tarjeta de host (HCE) en dispositivos Windows 10 Mobile y cómo se desarrolla una aplicación HCE para que los clientes puedan acceder a los servicios a través de su teléfono en lugar de con una tarjeta física sin colaboración con un MNO.
 
 ## <a name="what-you-need-to-develop-an-hce-app"></a>Qué necesitas para desarrollar una aplicación HCE
 
-Para desarrollar una aplicación de emulación de tarjeta HCE para Windows 10 Mobile, debes obtener la configuración del entorno de desarrollo. Puedes realizar la configuración instalando Microsoft Visual Studio 2015, que incluye las herramientas de desarrollo de Windows y el emulador de Windows 10 Mobile con compatibilidad con la emulación de NFC. Para más información sobre cómo obtener la configuración, consulta [Preparación](../get-started/get-set-up.md)
+Para desarrollar una aplicación de emulación de tarjeta HCE para Windows 10 Mobile, debes obtener la configuración del entorno de desarrollo. Puedes realizar la configuración instalando Microsoft Visual Studio 2015, que incluye las herramientas de desarrollo de Windows y el emulador de Windows 10 Mobile con compatibilidad con la emulación de NFC. Para más información sobre cómo obtener la configuración, consulta [Preparación](/windows/apps/get-started/get-set-up)
 
 Opcionalmente, si quieres hacer pruebas con un dispositivo real de Windows 10 Mobile en lugar de con el emulador de Windows 10 Mobile incluido, también necesitarás los elementos siguientes.
 
@@ -110,8 +110,8 @@ Ten en cuenta que el desencadenador de tareas se establece en [**SmartCardTrigge
 
 Cuando hay una APDU destinada a la aplicación, el sistema iniciará la tarea en segundo plano. La tarea en segundo plano recibe la APDU pasada a través de la propiedad [**CommandApdu**](/uwp/api/windows.devices.smartcards.smartcardemulatorapdureceivedeventargs.commandapdu) del objeto [**SmartCardEmulatorApduReceivedEventArgs**](/uwp/api/Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs) y responde a la APDU mediante el método [**TryRespondAsync**](/uwp/api/windows.devices.smartcards.smartcardemulatorapdureceivedeventargs.tryrespondwithcryptogramsasync) del mismo objeto. Considera la posibilidad de mantener la tarea en segundo plano para operaciones ligeras por motivos de rendimiento. Por ejemplo, responde a las APDU inmediatamente y sal de la tarea en segundo plano cuando se complete todo el procesamiento. Debido a la naturaleza de las transacciones NFC, los usuarios tienden a mantener su dispositivo con el lector solo un período muy breve de tiempo. La tarea en segundo plano seguirá recibiendo tráfico del lector hasta que se desactive la conexión, en cuyo caso se recibirá un objeto [**SmartCardEmulatorConnectionDeactivatedEventArgs**](/uwp/api/Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs). Se puede desactivar la conexión por los siguientes motivos, como se indica en la propiedad [**SmartCardEmulatorConnectionDeactivatedEventArgs.Reason**](/uwp/api/windows.devices.smartcards.smartcardemulatorconnectiondeactivatedeventargs.reason).
 
-- Si se desactiva la conexión con el valor **ConnectionLost**, significa que el usuario ha alejado el dispositivo del lector. Si la aplicación necesita que el usuario pulse en el terminal más tiempo, puede que tengas que pedirle comentarios. Debes finalizar la tarea en segundo plano rápidamente (completando el aplazamiento) para asegurarte de que si pulsa otra vez, no tenga que esperar a que se salga de la tarea en segundo plano anterior.
-- Si se desactiva la conexión con el valor **ConnectionRedirected**, significa que el terminal envió un nuevo comando SELECT AID de APDU dirigido a un AID diferente. En este caso, la aplicación debe salir de la tarea en segundo plano inmediatamente (completando el aplazamiento) para permitir que otra tarea en segundo plano se ejecute.
+- Si se desactiva la conexión con el valor **ConnectionLost** , significa que el usuario ha alejado el dispositivo del lector. Si la aplicación necesita que el usuario pulse en el terminal más tiempo, puede que tengas que pedirle comentarios. Debes finalizar la tarea en segundo plano rápidamente (completando el aplazamiento) para asegurarte de que si pulsa otra vez, no tenga que esperar a que se salga de la tarea en segundo plano anterior.
+- Si se desactiva la conexión con el valor **ConnectionRedirected** , significa que el terminal envió un nuevo comando SELECT AID de APDU dirigido a un AID diferente. En este caso, la aplicación debe salir de la tarea en segundo plano inmediatamente (completando el aplazamiento) para permitir que otra tarea en segundo plano se ejecute.
 
 También se debe registrar la tarea en segundo plano para el [**evento Canceled**](/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled) en la [**interfaz IBackgroundTaskInstance**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) y, de igual forma, salir rápidamente de la tarea en segundo plano (completando el aplazamiento) porque el sistema desencadena este evento cuando termina con la tarea en segundo plano. A continuación se proporciona el código que muestra una tarea en segundo plano de una aplicación HCE.
 
@@ -153,7 +153,7 @@ void BgTask::HandleHceActivation()
         // You must complete this deferal immediately after you have done processing the current transaction
         m_deferral = m_taskInstance->GetDeferral();
 
-        DebugLog(L"*** HCE Activation Background Task Started ***");
+        DebugLog(L"**_ HCE Activation Background Task Started _*_");
 
         // Set up a handler for if the background task is cancelled, we must immediately complete our deferral
         m_taskInstance->Canceled += ref new Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler(
@@ -213,7 +213,7 @@ Durante el primer inicio de la aplicación, una vez aprovisionada la tarjeta, cr
 
 La mayor parte de las tarjetas de pago se registran para el mismo AID (que es PPSE AID) junto con los AID específicos de la tarjeta de red de pago adicional. Cada grupo de AID representa una tarjeta y, cuando el usuario habilita la tarjeta, se habilitan todos los AID del grupo. De forma similar, cuando el usuario desactiva la tarjeta, se deshabilitan todos los AID del grupo.
 
-Para registrar un grupo de AID, necesitas crear un objeto [**SmartCardAppletIdGroup**](/uwp/api/Windows.Devices.SmartCards.SmartCardAppletIdGroup) y establecer sus propiedades para reflejar que se trata de una tarjeta de pago basada en HCE. El nombre para mostrar debe ser descriptivo para el usuario, ya que se mostrará en el menú de Configuración de NFC, además de los avisos al usuario. Para las tarjetas de pago HCE, la propiedad [**SmartCardEmulationCategory**](/uwp/api/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationcategory) debería establecerse en **Payment** y la propiedad [**SmartCardEmulationType**](/uwp/api/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationtype) se debería establecer en **Host**.
+Para registrar un grupo de Aid, debe crear un objeto [_ *SmartCardAppletIdGroup* *](/uwp/api/Windows.Devices.SmartCards.SmartCardAppletIdGroup) y establecer sus propiedades para reflejar que se trata de una tarjeta de pago basada en HCE. El nombre para mostrar debe ser descriptivo para el usuario, ya que se mostrará en el menú de Configuración de NFC, además de los avisos al usuario. Para las tarjetas de pago HCE, la propiedad [**SmartCardEmulationCategory**](/uwp/api/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationcategory) debería establecerse en **Payment** y la propiedad [**SmartCardEmulationType**](/uwp/api/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationtype) se debería establecer en **Host**.
 
 ```cppcx
 public static byte[] AID_PPSE =
@@ -256,7 +256,7 @@ Usa el método [**RegisterAppletIdGroupAsync**](/uwp/api/windows.devices.smartca
 reg = await SmartCardEmulator.RegisterAppletIdGroupAsync(appletIdGroup);
 ```
 
-Puedes habilitar las tarjetas registradas (grupos de AID) mediante el método [**RequestActivationPolicyChangeAsync**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de la clase [**SmartCardAppletIdGroupRegistration**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) como se muestra a continuación. Como solo se puede habilitar una tarjeta de pago única a la vez en el sistema, si establece el elemento [**ActivationPolicy**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de un grupo de AID de pago en **Enabled**, se obtiene el mismo resultado que si se establece la tarjeta de pago predeterminada. Se pedirá al usuario que permita esta tarjeta como una tarjeta de pago predeterminada, independientemente de si hay una tarjeta de pago predeterminada ya seleccionada o no. Esta declaración no corresponde si la aplicación ya es la aplicación de pago predeterminada y está cambiando simplemente entre sus propios grupos de AID. Puedes registrar hasta 10 grupos de AID por aplicación.
+Puedes habilitar las tarjetas registradas (grupos de AID) mediante el método [**RequestActivationPolicyChangeAsync**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de la clase [**SmartCardAppletIdGroupRegistration**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) como se muestra a continuación. Como solo se puede habilitar una tarjeta de pago única a la vez en el sistema, si establece el elemento [**ActivationPolicy**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de un grupo de AID de pago en **Enabled** , se obtiene el mismo resultado que si se establece la tarjeta de pago predeterminada. Se pedirá al usuario que permita esta tarjeta como una tarjeta de pago predeterminada, independientemente de si hay una tarjeta de pago predeterminada ya seleccionada o no. Esta declaración no corresponde si la aplicación ya es la aplicación de pago predeterminada y está cambiando simplemente entre sus propios grupos de AID. Puedes registrar hasta 10 grupos de AID por aplicación.
 
 ```cppcx
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.Enabled);
@@ -264,7 +264,7 @@ reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.Enabled);
 
 Puedes consultar grupos de AID de la aplicación registrados con el sistema operativo y comprobar su directiva de activación con el método [**GetAppletIdGroupRegistrationsAsync**](/uwp/api/windows.devices.smartcards.smartcardemulator.getappletidgroupregistrationsasync).
 
-Se notificará a los usuarios cuando se cambie la directiva de activación de una tarjeta de pago de **Disabled** a **Enabled**, solo si la aplicación no es ya la aplicación de pago predeterminada. Solo se notificará a los usuarios cuando se cambie la directiva de activación de una tarjeta no de pago de **Disabled** a **Enabled** si hay un conflicto de AID.
+Se notificará a los usuarios cuando se cambie la directiva de activación de una tarjeta de pago de **Disabled** a **Enabled** , solo si la aplicación no es ya la aplicación de pago predeterminada. Solo se notificará a los usuarios cuando se cambie la directiva de activación de una tarjeta no de pago de **Disabled** a **Enabled** si hay un conflicto de AID.
 
 ```cppcx
 var registrations = await SmartCardEmulator.GetAppletIdGroupRegistrationsAsync();
@@ -288,7 +288,7 @@ bgTask = taskBuilder.Register();
 
 ## <a name="foreground-override-behavior"></a>Comportamiento de reemplazo de primer plano
 
-Puedes cambiar el elemento [**ActivationPolicy**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de cualquiera de los registros de grupos de AID a **ForegroundOverride** mientras la aplicación está en primer plano sin pedir confirmación al usuario. Cuando el usuario pulsa en un terminal desde su dispositivo mientras la aplicación está en primer plano, el tráfico se enruta a la aplicación incluso si el usuario no ha elegido ninguna de las tarjetas de pago como su tarjeta de pago predeterminada. Cuando se cambia la directiva de activación de la tarjeta a **ForegroundOverride**, este cambio es solo temporal hasta que la aplicación deje de estar en primer plano y no afectará a la tarjeta de pago predeterminada establecida por el usuario. Puedes cambiar el elemento **ActivationPolicy** de tus tarjetas de pago o no de pago desde la aplicación en primer plano de la siguiente manera. Ten en cuenta que solo es posible llamar al método [**RequestActivationPolicyChangeAsync**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) desde una aplicación en primer plano y no se puede llamar desde una tarea en segundo plano.
+Puedes cambiar el elemento [**ActivationPolicy**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) de cualquiera de los registros de grupos de AID a **ForegroundOverride** mientras la aplicación está en primer plano sin pedir confirmación al usuario. Cuando el usuario pulsa en un terminal desde su dispositivo mientras la aplicación está en primer plano, el tráfico se enruta a la aplicación incluso si el usuario no ha elegido ninguna de las tarjetas de pago como su tarjeta de pago predeterminada. Cuando se cambia la directiva de activación de la tarjeta a **ForegroundOverride** , este cambio es solo temporal hasta que la aplicación deje de estar en primer plano y no afectará a la tarjeta de pago predeterminada establecida por el usuario. Puedes cambiar el elemento **ActivationPolicy** de tus tarjetas de pago o no de pago desde la aplicación en primer plano de la siguiente manera. Ten en cuenta que solo es posible llamar al método [**RequestActivationPolicyChangeAsync**](/uwp/api/windows.devices.smartcards.smartcardappletidgroupregistration) desde una aplicación en primer plano y no se puede llamar desde una tarea en segundo plano.
 
 ```cppcx
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.ForegroundOverride);

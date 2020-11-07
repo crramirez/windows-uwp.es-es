@@ -1,17 +1,17 @@
 ---
 ms.assetid: ''
-title: Compatibilidad con Surface Dial (y otros dispositivos de rueda) en su aplicación de Windows
+title: 'Compatibilidad con Surface Dial (y otros dispositivos de rueda) en su aplicación de Windows '
 description: Un tutorial paso a paso para agregar compatibilidad con Surface dial (y otros dispositivos de rueda) a la aplicación de Windows.
 keywords: dial, radial, tutorial
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cc1618432d35687fe1bfa619396bc2b798dd40bf
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: d6da91818abcf140c7d381f9d481fc92ba2feb56
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216928"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339703"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-windows-app"></a>Tutorial: compatibilidad con el marcado de Surface (y otros dispositivos de rueda) en la aplicación de Windows
 
@@ -45,13 +45,13 @@ El marcado admite tres gestos básicos:
 * [SDK de Windows 10 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Un dispositivo de rueda (solo el [marcado de Surface](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116) en este momento)
 * Si no está familiarizado con el desarrollo de aplicaciones de Windows con Visual Studio, consulte estos temas antes de empezar este tutorial:  
-    * [Prepárate](../../get-started/get-set-up.md)
+    * [Prepárate](/windows/apps/get-started/get-set-up)
     * [Creación de una aplicación "Hello, world" (XAML)](../../get-started/create-a-hello-world-app-xaml-universal.md)
 
 ## <a name="set-up-your-devices"></a>Configuración de los dispositivos
 
 1. Asegúrese de que el dispositivo Windows esté encendido.
-2. Vaya a **Inicio**, seleccione **configuración**  >  **dispositivos**  >  **Bluetooth & otros dispositivos**y, a continuación, Active **Bluetooth** .
+2. Vaya a **Inicio** , seleccione **configuración**  >  **dispositivos**  >  **Bluetooth & otros dispositivos** y, a continuación, Active **Bluetooth** .
 3. Quite la parte inferior del dial de Surface para abrir el compartimiento de la batería y asegúrese de que haya dos baterías AAA dentro.
 4. Si la pestaña batería está presente en la parte inferior del dial, quítela.
 5. Mantenga presionado el pequeño botón de bajorrelieve junto a las baterías hasta que parpadee la luz de Bluetooth.
@@ -87,7 +87,7 @@ Estos objetos proporcionan la mayor parte de la experiencia del dispositivo de r
 
 | Componente | Descripción |
 | --- | --- |
-| [Clase **RadialController** ](/uwp/api/Windows.UI.Input.RadialController) y relacionada | Representa un dispositivo de entrada de rueda o accesorio, como el marcado de Surface. |
+| [Clase **RadialController**](/uwp/api/Windows.UI.Input.RadialController) y relacionada | Representa un dispositivo de entrada de rueda o accesorio, como el marcado de Surface. |
 | [**IRadialControllerConfigurationInterop**](/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop)  /  [ **IRadialControllerInterop**](/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>Aquí no tratamos esta funcionalidad. para obtener más información, consulte el [ejemplo de escritorio clásico de Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController). | Habilita la interoperabilidad con una aplicación de Windows. |
 
 ## <a name="step-1-run-the-sample"></a>Paso 1: ejecutar el ejemplo
@@ -617,7 +617,7 @@ Enhorabuena, ha completado el tutorial de introducción *: compatibilidad con Su
 
 [Interacciones de Surface Dial](windows-wheel-interactions.md)
 
-### <a name="api-reference"></a>Referencia de API
+### <a name="api-reference"></a>referencia de API
 
 - [Clase **RadialController**](/uwp/api/Windows.UI.Input.RadialController)
 - [Clase **RadialControllerButtonClickedEventArgs**](/uwp/api/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
@@ -638,7 +638,7 @@ Enhorabuena, ha completado el tutorial de introducción *: compatibilidad con Su
 
 [Personalización de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
 
-#### <a name="other-samples"></a>Otras muestras
+#### <a name="other-samples"></a>Otros ejemplos
 [Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
 [Muestras de la Plataforma universal de Windows (C# y C++)](https://github.com/Microsoft/Windows-universal-samples/tree/b78d95134ce2d57c848e0a8dc339fc362748fb9c/Samples/RadialController)

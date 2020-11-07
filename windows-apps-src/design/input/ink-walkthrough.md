@@ -1,17 +1,17 @@
 ---
 ms.assetid: ''
-title: Compatibilidad con entrada de lápiz en la aplicación de Windows
+title: 'Compatibilidad con entrada de lápiz en la aplicación de Windows '
 description: Obtenga información sobre cómo admitir la escritura y el dibujo con Windows Ink en una aplicación básica de Plataforma universal de Windows (UWP) siguiendo este tutorial paso a paso.
 keywords: tinta, entrada manuscrita, tutorial
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f726f4ab4a422cc94f00493261620ddff8b6122b
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: fb74b5d15b731a6b08a0adcec20a801b7e133a7f
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860199"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339823"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>Tutorial: compatibilidad con la entrada manuscrita en la aplicación de Windows
 
@@ -40,7 +40,7 @@ Con Windows Ink, puede proporcionar a los clientes el equivalente digital de cas
 * [SDK de Windows 10 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * En función de la configuración, es posible que tenga que instalar el paquete de NuGet [Microsoft. NETCore. UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) y habilitar el **modo de desarrollador** en la configuración del sistema (configuración-> actualización & seguridad-> para desarrolladores-> usar características de desarrollador).
 * Si no está familiarizado con el desarrollo de aplicaciones de Windows con Visual Studio, consulte estos temas antes de empezar este tutorial:  
-    * [Prepárate](../../get-started/get-set-up.md)
+    * [Prepárate](/windows/apps/get-started/get-set-up)
     * [Creación de una aplicación "Hello, world" (XAML)](../../get-started/create-a-hello-world-app-xaml-universal.md)
 * **[Opcional]** Un lápiz digital y un equipo con una pantalla que admita la entrada de esa plumilla digital.
 
@@ -328,7 +328,7 @@ Con el análisis de tinta, la aplicación también puede reconocer un conjunto d
 - Circle
 - Diamond
 - Dibujo
-- Ellipse
+- Elipse
 - EquilateralTriangle
 - Tuerca
 - IsoscelesTriangle

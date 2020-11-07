@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2eea2d228ddf5ad6dfaef227bfaeb0bafb071490
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8c0e174613357ad9e4e45d2776f3fbc618535b30
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170499"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339463"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
 
@@ -23,7 +23,7 @@ La característica mis personas permite a los usuarios anclar contactos de una a
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2019. Para obtener información detallada sobre la instalación, vea [configurar con Visual Studio](../get-started/get-set-up.md).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener información detallada sobre la instalación, vea [configurar con Visual Studio](/windows/apps/get-started/get-set-up).
 + Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para empezar a trabajar con C#, vea [crear una aplicación "Hello, World"](../get-started/create-a-hello-world-app-xaml-universal.md).
 
 ## <a name="overview"></a>Información general
@@ -38,7 +38,7 @@ Cuando lo haya hecho, la aplicación aparecerá en el panel de contactos para lo
 
 ## <a name="declaring-support-for-the-contract"></a>Declarar la compatibilidad del contrato
 
-Para declarar la compatibilidad con el contrato mis personas, abra la aplicación en Visual Studio. En el **Explorador de soluciones**, haga clic con el botón derecho en **Package. Appxmanifest** y seleccione **abrir con**. En el menú, seleccione **Editor XML (texto))** y haga clic en **Aceptar**. Realice los siguientes cambios en el manifiesto:
+Para declarar la compatibilidad con el contrato mis personas, abra la aplicación en Visual Studio. En el **Explorador de soluciones** , haga clic con el botón derecho en **Package. Appxmanifest** y seleccione **abrir con**. En el menú, seleccione **Editor XML (texto))** y haga clic en **Aceptar**. Realice los siguientes cambios en el manifiesto:
 
 **Antes**
 
@@ -76,7 +76,7 @@ Para declarar la compatibilidad con el contrato mis personas, abra la aplicació
 
 ```
 
-Con esta adición, la aplicación ahora se puede iniciar a través de **Windows. ** Contrato de ContactPanel, que permite interactuar con los paneles de contacto.
+Con esta adición, la aplicación ahora se puede iniciar a través de **Windows.** Contrato de ContactPanel, que permite interactuar con los paneles de contacto.
 
 ## <a name="annotating-contacts"></a>Anotar contactos
 
@@ -220,7 +220,7 @@ PinnedContactManager pinnedContactManager = PinnedContactManager.GetDefault();
 ```
 
 ## <a name="pinning-and-unpinning-contacts"></a>Anclar y desanclar contactos
-Ahora puede anclar y desanclar contactos con el PinnedContactManager que acaba de crear. Los métodos **RequestPinContactAsync** y **RequestUnpinContactAsync** proporcionan al usuario cuadros de diálogo de confirmación, por lo que deben llamarse desde el subproceso de la aplicación de contenedor uniproceso (asta o IU).
+Ahora puede anclar y desanclar contactos con el PinnedContactManager que acaba de crear. Los métodos **RequestPinContactAsync** y **RequestUnpinContactAsync** proporcionan al usuario cuadros de diálogo de confirmación, por lo que se les debe llamar desde la aplicación Single-Threaded subproceso de contenedor (asta o IU).
 
 ```Csharp
 async void PinContact (Contact contact)

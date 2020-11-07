@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c7f0e1ba5c78ce41a5326d3643b5afe80f380b3c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d343b2da4bdfee73479c3b5f3c45fd56a92ada35
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155179"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339793"
 ---
 # <a name="walkthrough-of-creating-a-ccx-windows-runtime-component-and-calling-it-from-javascript-or-c"></a>Tutorial para crear un componente de Windows Runtime en C++/CX y llamarlo desde JavaScript o C#
 
@@ -28,14 +28,14 @@ Ten en cuenta que la clase principal del componente contiene ejemplos de definic
 ### <a name="to-create-the-c-component-project"></a>**Para crear el proyecto de componente de C++**
 1. En la barra de menús de Visual Studio, elija **archivo, nuevo, proyecto**.
 
-2. En el cuadro de diálogo **Nuevo proyecto**, en el panel izquierdo, expande **Visual C++** y, a continuación, selecciona el nodo para las aplicaciones universales de Windows.
+2. En el cuadro de diálogo **Nuevo proyecto** , en el panel izquierdo, expande **Visual C++** y, a continuación, selecciona el nodo para las aplicaciones universales de Windows.
 
 3. En el panel central, seleccione **Windows Runtime componente** y, a continuación, asigne al proyecto el nombre WinRT \_ CPP.
 
 4. Elija el botón **Aceptar** .
 
 ## <a name="to-add-an-activatable-class-to-the-component"></a>**Para agregar una clase activable al componente**
-Una clase activable es la que puede crear el código de cliente mediante una **nueva** expresión (**Nuevo** en Visual Basic, o **ref new** en C++). En tu componente, debe declararse como **public ref class sealed**. De hecho, los archivos Class1.h y .cpp ya tienen una clase de referencia. Puedes cambiar el nombre, pero en este ejemplo, usaremos el nombre predeterminado: Class1. Puedes definir clases de referencia adicionales o normales en tu componente si son necesarias. Para obtener más información sobre las clases de referencia, consulta [Sistema de tipo (C++/CX)](/cpp/cppcx/type-system-c-cx).
+Una clase activable es la que puede crear el código de cliente mediante una **nueva** expresión ( **Nuevo** en Visual Basic, o **ref new** en C++). En tu componente, debe declararse como **public ref class sealed**. De hecho, los archivos Class1.h y .cpp ya tienen una clase de referencia. Puedes cambiar el nombre, pero en este ejemplo, usaremos el nombre predeterminado: Class1. Puedes definir clases de referencia adicionales o normales en tu componente si son necesarias. Para obtener más información sobre las clases de referencia, consulta [Sistema de tipo (C++/CX)](/cpp/cppcx/type-system-c-cx).
 
 Agregue estas \# directivas Include a Class1. h:
 
@@ -277,7 +277,7 @@ Si desea crear un cliente de C#, puede omitir esta sección.
 ### <a name="to-create-a-javascript-project"></a>Para crear un proyecto de JavaScript
 1. En Explorador de soluciones (en Visual Studio 2017; vea la **Nota** anterior), abra el menú contextual del nodo de la solución y elija **Agregar, nuevo proyecto**.
 
-2. Expande JavaScript (puede estar anidado en **Otros lenguajes**) y elige **Aplicación vacía (Windows Universal)**.
+2. Expande JavaScript (puede estar anidado en **Otros lenguajes** ) y elige **Aplicación vacía (Windows Universal)**.
 
 3. Acepte el nombre predeterminado &mdash; app1 &mdash; eligiendo el botón **Aceptar** .
 
@@ -426,7 +426,7 @@ function ButtonClear_Click() {
 }
 ```
 
-Agrega código para agregar los agentes de escucha de eventos mediante el reemplazo de la llamada existente a WinJS.UI.processAll en app.onactivated en el archivo default.js por el siguiente código que implementa el registro de eventos en un bloque después. Para obtener una explicación detallada de esto, vea [creación de una aplicación "Hello, World" (JS)](../get-started/create-a-hello-world-app-js-uwp.md).
+Agrega código para agregar los agentes de escucha de eventos mediante el reemplazo de la llamada existente a WinJS.UI.processAll en app.onactivated en el archivo default.js por el siguiente código que implementa el registro de eventos en un bloque después. Para obtener una explicación detallada de esto, vea [creación de una aplicación "Hello, World" (JS)](/windows/apps/get-started/).
 
 ```JavaScript
 args.setPromise(WinJS.UI.processAll().then( function completed() {
@@ -448,7 +448,7 @@ Presione F5 para ejecutar la aplicación.
 ### <a name="to-create-a-c-project"></a>Para crear un proyecto C#
 1. En Explorador de soluciones, abre el menú contextual para el nodo Solución y, a continuación, elige **Agregar, Nuevo proyecto**.
 
-2. Expande Visual C# (puede estar anidado en **Otros lenguajes**), selecciona **Windows** y después **Universal** en el panel izquierdo y, a continuación, selecciona **Aplicación vacía** en el panel central.
+2. Expande Visual C# (puede estar anidado en **Otros lenguajes** ), selecciona **Windows** y después **Universal** en el panel izquierdo y, a continuación, selecciona **Aplicación vacía** en el panel central.
 
 3. Dale el nombre de CS_Client a esta aplicación y, a continuación, elige el botón **Aceptar**.
 
@@ -600,7 +600,7 @@ Para una mejor experiencia de depuración, descarga los símbolos de depuración
 ### <a name="to-download-debugging-symbols"></a>**Para descargar los símbolos de depuración**
 1. En la barra de menús, elija **herramientas, opciones**.
 
-2. En el cuadro de diálogo de **Opciones**, expande **Depuración** y selecciona **Símbolos**.
+2. En el cuadro de diálogo de **Opciones** , expande **Depuración** y selecciona **Símbolos**.
 
 3. Selecciona **Servidores de símbolos de Microsoft** y, a continuación, selecciona el botón **Aceptar**.
 

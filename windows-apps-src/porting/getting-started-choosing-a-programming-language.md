@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f9da8025936698ab7d72cd8b3d69896d8ec74da0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2e4613b565545bfb7807c98fa74495b4b60b57bb
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174889"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339544"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Introducción: Elección de un lenguaje de programación
 
@@ -26,10 +26,10 @@ Aunque en este artículo nos centramos en C#, los otros lenguajes ofrecen ventaj
 -   [Crear una aplicación "Hello, World!" con C# o Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Creación de una aplicación "Hola mundo" mediante XAML con C++/WinRT](../get-started/create-a-basic-windows-10-app-in-cppwinrt.md)
 -   [Crear una aplicación "Hello, World!" con C++/CX](../get-started/create-a-basic-windows-10-app-in-cpp.md)
--   [Crear una aplicación "Hello, World!" mediante JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
+-   [Crear una aplicación "Hello, World!" mediante JavaScript](/windows/apps/get-started/)
 
-**Nota:**    En el caso de las aplicaciones que usan gráficos 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para obtener más información, consulte:
--   [Angulo](https://bugs.chromium.org/p/angleproject/)
+**Nota:**  Para las aplicaciones que usen gráficos 3D, los estándares OpenGL y OpenGL ES no están disponibles de forma nativa para las aplicaciones para UWP. Si no quieres reescribir el código OpenGL ES en Microsoft DirectX, tal vez te interese informarte sobre **Angle**. Angle es un proyecto actualmente en curso diseñado para convertir OpenGL a DirectX mediante la traducción de llamadas de la API de OpenGL a llamadas de la API de DirectX. Para obtener más información, consulte:
+-   [Ángulo](https://bugs.chromium.org/p/angleproject/)
 -   [Creación de la primera aplicación de UWP con DirectX](/previous-versions/windows/apps/br229580(v=win.10))
 -   [Ejemplos de aplicaciones para UWP que usan DirectX](/samples/browse/?expanded=windows&products=windows-uwp&terms=directx)
 -   [¿Dónde está el SDK de DirectX?](/windows/desktop/directx-sdk--august-2009-)
@@ -40,7 +40,7 @@ Como desarrollador de iOS, estás acostumbrado a Objective-C y Swift. El lenguaj
 
 -   [Cree su primera aplicación de UWP con C# o Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Ejemplos de aplicaciones para UWP que usan C #](/samples/browse/?expanded=windows&languages=csharp&products=windows-uwp)
--   [Visual C #](/dotnet/csharp/)
+-   [Visual C#](/dotnet/csharp/)
 
 A continuación se muestra una clase escrita en Objective-C y C#. Primero se muestra la versión en Objective-C, seguida de la versión en C#.
 

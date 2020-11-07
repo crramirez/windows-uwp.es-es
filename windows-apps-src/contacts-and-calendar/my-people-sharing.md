@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 76d52fe3ed7e7fb74ae5338e589ab34751bedebe
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8cbf82592e91b82e2d9d34d116d00aecf2ddd021
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173669"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339413"
 ---
 # <a name="my-people-sharing"></a>Uso compartido de Mis allegados
 
@@ -20,7 +20,7 @@ La característica mis personas permite a los usuarios anclar contactos a su bar
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2019. Para obtener información detallada sobre la instalación, vea [configurar con Visual Studio](../get-started/get-set-up.md).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener información detallada sobre la instalación, vea [configurar con Visual Studio](/windows/apps/get-started/get-set-up).
 + Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para empezar a trabajar con C#, vea [crear una aplicación "Hello, World"](../get-started/create-a-hello-world-app-xaml-universal.md).
 
 ## <a name="overview"></a>Información general
@@ -37,7 +37,7 @@ Cuando lo haya hecho, la aplicación aparecerá como un destino de recurso compa
 
 ## <a name="declaring-support-for-the-share-contract"></a>Declarar la compatibilidad con el contrato de recurso compartido
 
-Para declarar la compatibilidad con la aplicación como destino de recurso compartido, abra primero la aplicación en Visual Studio. En el **Explorador de soluciones**, haga clic con el botón derecho en **Package. Appxmanifest** y seleccione **abrir con**. En el menú, seleccione **Editor XML (texto)** y haga clic en **Aceptar**. Después, realice los siguientes cambios en el manifiesto:
+Para declarar la compatibilidad con la aplicación como destino de recurso compartido, abra primero la aplicación en Visual Studio. En el **Explorador de soluciones** , haga clic con el botón derecho en **Package. Appxmanifest** y seleccione **abrir con**. En el menú, seleccione **Editor XML (texto)** y haga clic en **Aceptar**. Después, realice los siguientes cambios en el manifiesto:
 
 
 **Antes**
