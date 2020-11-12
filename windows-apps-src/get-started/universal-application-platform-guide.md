@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: contperfq1
 keywords: Windows 10, UWP, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: f435631b575a06daae9cb4d34c5419e93ba8063f
-ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
+ms.openlocfilehash: 3c6fd1f2ebee2e4e3a7d3ceb028f5def19e932c6
+ms.sourcegitcommit: 733d422fa1e3433cde842e2f200d3ef202767cc1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011357"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94333290"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?
 
@@ -115,7 +115,6 @@ Las aplicaciones para UWP usan Windows Runtime, la API nativa proporcionada por
 - Interfaz de usuario DirectX y C++
 - JavaScript y HTML
 - WinUI
--
 
 ## <a name="links-to-help-you-get-going"></a>Vínculos que te ayudan a empezar
 

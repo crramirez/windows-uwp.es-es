@@ -6,12 +6,12 @@ ms.date: 10/13/2020
 ms.topic: article
 keywords: windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a5491ef0e57399c9465697f933aa8fff92664cd
-ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
+ms.openlocfilehash: fe802fca1b17b49c11bf74b54f74d3b3107e6a9c
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011379"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339773"
 ---
 # <a name="create-your-first-app"></a>Creación de la primera aplicación
 
@@ -41,7 +41,7 @@ Obtenga más información sobre C++/WinRT.
 
 * [C++/WinRT](../cpp-and-winrt-apis/index.md)
 
-## <a name="visualc-component-extensions-ccx-and-xaml"></a>Extensiones de componentes de Visual C++ (C++/CX) y XAML
+## <a name="visual-c-component-extensions-ccx-and-xaml"></a>Extensiones de componentes de Visual C++ (C++/CX) y XAML
 
 Aproveche sus conocimientos de programación en C++ para compilar aplicaciones utilizando las extensiones de componentes de Visual C++ (C++/CX) con lenguaje XAML.
 
@@ -57,7 +57,7 @@ Obtenga más información sobre C++ aquí.
 Cuando esté listo para intentar algo un poco más divertido que "Hola mundo", pruebe estos tutoriales.
 
 * [Tutorial: Crear una interfaz de usuario](../design/basics/xaml-basics-ui.md)
-* [Aplicaciones Windows en Microsoft Learn](https://docs.microsoft.com/learn/browse/?products=windows)
+* [Aplicaciones Windows en Microsoft Learn](/learn/browse/?products=windows)
 
 ## <a name="see-also"></a>Consulte también
 

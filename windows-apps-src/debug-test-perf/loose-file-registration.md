@@ -5,12 +5,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, portal de dispositivos, administrador de aplicaciones, implementación, SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fd5bf6be691974d956de0c71f4a1d11aa1a229f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7006d32777e7b3ece5c5b6ed066bd23265b0bbb7
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166099"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339623"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implementar una aplicación mediante el registro de archivos dinámico 
 
@@ -25,16 +25,16 @@ El diseño de archivos dinámicos simplemente es el acto de colocar el contenido
 
 ## <a name="advantages-of-loose-file-registration"></a>Ventajas del registro de archivos dinámicos
 
-- **Validación rápida**: dado que los archivos de la aplicación ya están desempaquetados, los usuarios pueden registrar rápidamente el diseño de archivos dinámicos e iniciar la aplicación. Al igual que una aplicación normal, el usuario podrá usar la aplicación tal y como estaba diseñada. 
-- **Distribución sencilla en la red**: si los archivos dinámicos se encuentran en un recurso compartido de red en lugar de en una unidad local, los desarrolladores pueden enviar la ubicación del recurso compartido de red a otros usuarios que tengan acceso a la red, así como registrar el diseño de archivos dinámicos y ejecutar la aplicación. Esto permite que varios usuarios validen la aplicación simultáneamente. 
-- **Colaboración**: el registro de archivos dinámicos permite a los desarrolladores y diseñadores seguir trabajando en recursos visuales mientras se registra la aplicación. Los usuarios verán estos cambios cuando inicien la aplicación. Ten en cuenta que solo puedes cambiar los recursos estáticos de esta manera. Si necesitas modificar código o contenido creado de forma dinámica, debes volver a compilar la aplicación.
+- **Validación rápida** : dado que los archivos de la aplicación ya están desempaquetados, los usuarios pueden registrar rápidamente el diseño de archivos dinámicos e iniciar la aplicación. Al igual que una aplicación normal, el usuario podrá usar la aplicación tal y como estaba diseñada. 
+- **Distribución sencilla en la red** : si los archivos dinámicos se encuentran en un recurso compartido de red en lugar de en una unidad local, los desarrolladores pueden enviar la ubicación del recurso compartido de red a otros usuarios que tengan acceso a la red, así como registrar el diseño de archivos dinámicos y ejecutar la aplicación. Esto permite que varios usuarios validen la aplicación simultáneamente. 
+- **Colaboración** : el registro de archivos dinámicos permite a los desarrolladores y diseñadores seguir trabajando en recursos visuales mientras se registra la aplicación. Los usuarios verán estos cambios cuando inicien la aplicación. Ten en cuenta que solo puedes cambiar los recursos estáticos de esta manera. Si necesitas modificar código o contenido creado de forma dinámica, debes volver a compilar la aplicación.
 
 ## <a name="how-to-register-a-loose-file-layout"></a>Cómo registrar un diseño de archivos dinámicos
 
 Windows proporciona varias herramientas de desarrollo para registrar diseños de archivos dinámicos en dispositivos locales y remotos. Puedes elegir entre `WinDeployAppCmd` (herramienta Windows SDK), Portal de dispositivos Windows, PowerShell y [Visual Studio](./deploying-and-debugging-uwp-apps.md#register-layout-from-network). A continuación, veremos cómo registrar archivos dinámicos con estas herramientas. Pero primero asegúrate de que tienes la siguiente configuración:
 
 - Los dispositivos deben contar con Windows 10 Creators Update, compilación 14965 o posterior.
-- Tendrás que habilitar el [modo de desarrollador](../get-started/enable-your-device-for-development.md) y la [detección de dispositivos](../get-started/enable-your-device-for-development.md#device-discovery) en todos los dispositivos.
+- Tendrás que habilitar el [modo de desarrollador](/windows/apps/get-started/enable-your-device-for-development) y la [detección de dispositivos](/windows/apps/get-started/enable-your-device-for-development#device-discovery) en todos los dispositivos.
 
 > [!IMPORTANT]
 > El registro de archivos dinámicos solo está disponible en los dispositivos que admiten el protocolo de recurso compartido de red (SMB): escritorio y Xbox. 
@@ -47,11 +47,11 @@ Si usa las herramientas de SDK correspondientes a Windows 10 Creators Update, c
 WinAppDeployCmd.exe registerfiles -remotedeploydir <Network Path> -ip <IP Address> -pin <target machine PIN>
 ```
 
-**Ruta de acceso de red**: ruta de acceso a los archivos dinámicos de la aplicación.
+**Ruta de acceso de red** : ruta de acceso a los archivos dinámicos de la aplicación.
 
-**Dirección IP**: dirección IP del equipo de destino.
+**Dirección IP** : dirección IP del equipo de destino.
 
-**PIN de la máquina de destino**: PIN, en caso de que sea necesario, para establecer una conexión con el dispositivo de destino. Se te pedirá que vuelvas a intentarlo con la opción `-pin` si se requiere autenticación. Consulta [Detección de dispositivo](../get-started/enable-your-device-for-development.md#device-discovery) para obtener información sobre cómo obtener un PIN.
+**PIN de la máquina de destino** : PIN, en caso de que sea necesario, para establecer una conexión con el dispositivo de destino. Se te pedirá que vuelvas a intentarlo con la opción `-pin` si se requiere autenticación. Consulta [Detección de dispositivo](/windows/apps/get-started/enable-your-device-for-development#device-discovery) para obtener información sobre cómo obtener un PIN.
 
 ### <a name="windows-device-portal"></a>Portal de dispositivos Windows
 

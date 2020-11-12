@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f0a91dd0370b8eda8763b63034d7c3ffaa1acd5
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 29a6f85dfb13e47617138e401c8444cb5b5f6809
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762997"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339583"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal para dispositivos móviles
 
 A partir de Windows 10, versión 1511, hay funciones para desarrollador adicionales disponibles para la familia de dispositivos móviles. Estas funciones están disponibles únicamente si el modo de desarrollador está habilitado en el dispositivo.
 
-Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
+Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Habilitar el dispositivo para el desarrollo](/windows/apps/get-started/enable-your-device-for-development).
 
 ![Captura de pantalla de las opciones Detección de dispositivo y Portal de dispositivos.](images/device-portal/mob-dev-mode-options.png)
 

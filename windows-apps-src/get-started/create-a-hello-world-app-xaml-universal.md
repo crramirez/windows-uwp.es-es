@@ -6,16 +6,16 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10;uwp;first app;hello world;primera aplicación;hola mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: dda1c0f9a7b61c13965ff2f71c8100a8e771bd7d
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: b602970b2b1f37a4511e2a87eb1be72fba7f5423
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860079"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339843"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Creación de una aplicación "Hola mundo" (XAML)
 
-Este tutorial te enseña a usar XAML y C# para crear una sencilla aplicación "Hola mundo" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10.
+Este tutorial te enseña a usar XAML y C# para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puedes compilar una aplicación que se ejecute en cualquier dispositivo de Windows 10.
 
 Aquí aprenderás a:
 
@@ -28,7 +28,7 @@ Aquí aprenderás a:
 ## <a name="before-you-start"></a>Antes de comenzar...
 
 -   [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
--   [Descarga Visual Studio 2017 (y Windows 10)](https://developer.microsoft.com/windows/downloads). Si necesitas un poco de ayuda, obtén información sobre cómo [prepararte](get-set-up.md).
+-   [Descarga Visual Studio 2017 (y Windows 10)](https://developer.microsoft.com/windows/downloads). Si necesitas un poco de ayuda, obtén información sobre cómo [prepararte](/windows/apps/get-started/get-set-up).
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
 > [!NOTE]
@@ -42,11 +42,11 @@ Aquí aprenderás a:
 
 1.  Inicia Visual Studio.
 
-2.  En el menú **Archivo**, selecciona **Nuevo > Proyecto...** para abrir el cuadro de diálogo *Nuevo proyecto*.
+2.  En el menú **Archivo** , selecciona **Nuevo > Proyecto...** para abrir el cuadro de diálogo *Nuevo proyecto*.
 
 3.  En la lista de plantillas del lado izquierdo, abre **Instalado > Visual C# > Windows Universal** para ver la lista de plantillas de proyecto para UWP.
 
-    (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP al hacer clic en **Abrir el instalador de Visual Studio** en el cuadro de diálogo *Nuevo proyecto*. Consulta [Preparación](get-set-up.md).
+    (Si no ves ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP. Puedes repetir el proceso de instalación y agregar compatibilidad con UWP al hacer clic en **Abrir el instalador de Visual Studio** en el cuadro de diálogo *Nuevo proyecto*. Consulta [Preparación](/windows/apps/get-started/get-set-up).
 
     ![Procedimiento para repetir el proceso de instalación](images/win10-cs-install.png)
 
@@ -55,7 +55,7 @@ Aquí aprenderás a:
     ![La ventana Nuevo proyecto](images/win10-cs-01.png)
 
 > [!NOTE]
-> Si es la primera vez que usa Visual Studio, es posible que se le solicite habilitar el **Modo desarrollador** en el diálogo de configuración. El modo de desarrollador es una opción de configuración especial que habilita determinadas funciones, como permiso para ejecutar aplicaciones directamente, en lugar de solo desde la Store. Para obtener más información, lea [Habilitar el dispositivo para el desarrollo](enable-your-device-for-development.md). Para continuar con esta guía, seleccione **Modo desarrollador**, haga clic en **Sí** y cierre el diálogo.
+> Si es la primera vez que usa Visual Studio, es posible que se le solicite habilitar el **Modo desarrollador** en el diálogo de configuración. El modo de desarrollador es una opción de configuración especial que habilita determinadas funciones, como permiso para ejecutar aplicaciones directamente, en lugar de solo desde la Store. Para obtener más información, lea [Habilitar el dispositivo para el desarrollo](/windows/apps/get-started/enable-your-device-for-development). Para continuar con esta guía, seleccione **Modo desarrollador** , haga clic en **Sí** y cierre el diálogo.
 
  ![Diálogo para activar el modo de desarrollador.](images/win10-cs-00.png)
 
@@ -116,7 +116,7 @@ Vamos a agregar un botón a nuestra página. En este tutorial, trabajas con solo
 
     ![Captura de pantalla del panel Cuadro de herramientas con una flecha roja que apunta al icono de anclaje.](images/win10-cs-05.png)
 
-3.  Expande **Controles de XAML comunes**y arrastra el **Botón** hacia el centro del lienzo de diseño.
+3.  Expande **Controles de XAML comunes** y arrastra el **Botón** hacia el centro del lienzo de diseño.
 
     ![Captura de pantalla del panel Cuadro de herramientas y la vista Diseño X A M L de la página principal en la que se muestra la opción Botón resaltada en el panel Cuadro de herramientas y un botón en la vista Diseño.](images/win10-cs-06.png)
 
@@ -155,12 +155,12 @@ De forma predeterminada, la aplicación se ejecuta en el equipo local. El menú 
 
 **Para empezar la depuración en el equipo local**
 
-1.  En el menú del dispositivo de destino (![menú Iniciar depuración](images/startdebug-full.png)) de la barra de herramientas **Estándar**, asegúrate de que **Equipo local** esté seleccionado. (Es la selección predeterminada).
+1.  En el menú del dispositivo de destino (![menú Iniciar depuración](images/startdebug-full.png)) de la barra de herramientas **Estándar** , asegúrate de que **Equipo local** esté seleccionado. (Es la selección predeterminada).
 2.  Haz clic en el botón **Iniciar depuración** (![botón Iniciar depuración](images/startdebug-sm.png)) en la barra de herramientas.
 
    -o bien-
 
-   En el menú **Depurar**, haz clic en **Iniciar depuración**.
+   En el menú **Depurar** , haz clic en **Iniciar depuración**.
 
    -o bien-
 
@@ -182,7 +182,7 @@ No hace muchas cosas (todavía), pero te felicitamos, has compilado tu primera a
 
    -o bien-
 
-   En el menú **Depurar**, haz clic en **Detener depuración**.
+   En el menú **Depurar** , haz clic en **Detener depuración**.
 
    -o bien-
 
@@ -198,7 +198,7 @@ Un "controlador de eventos" suena complicado, pero es simplemente otra forma de 
 
   Por supuesto, también puedes crear todo el código manualmente. O puedes hacer clic en el botón para seleccionarlo y buscar en el panel **Propiedades** en la esquina inferior derecha. Si cambias a **Eventos** (el pequeño relámpago) puedes agregar el nombre del controlador de eventos.
 
-3.  Edita el código del controlador de eventos en *MainPage.xaml.cs*, la página de código subyacente. Aquí es cuando se pone interesante. El controlador de eventos predeterminado tiene este aspecto:
+3.  Edita el código del controlador de eventos en *MainPage.xaml.cs* , la página de código subyacente. Aquí es cuando se pone interesante. El controlador de eventos predeterminado tiene este aspecto:
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)
@@ -220,7 +220,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Asegúrate de que la firma del método ahora incluya la palabra clave **async**, o se producirá un error cuando se intente ejecutar la aplicación.
+Asegúrate de que la firma del método ahora incluya la palabra clave **async** , o se producirá un error cuando se intente ejecutar la aplicación.
 
 ### <a name="what-did-we-just-do"></a>¿Qué acabamos de hacer?
 
@@ -242,4 +242,4 @@ Para aprender a usar XAML el diseño de los controles que usará la aplicación,
 * [Artículos sobre el desarrollo de aplicaciones para UWP](../develop/index.md)
 * [Ejemplos de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
-* [Registrarse para obtener una cuenta de Windows](sign-up.md)
+* [Registrarse para obtener una cuenta de Windows](/windows/apps/get-started/sign-up)

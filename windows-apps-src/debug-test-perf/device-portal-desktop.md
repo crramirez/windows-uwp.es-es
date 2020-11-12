@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: contperfq1
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
-ms.openlocfilehash: f06a3c933060a7309604ae8dec49455ac3bd02ab
-ms.sourcegitcommit: 41dbee78d827107c224a9136c26f90be4dfe12ad
+ms.openlocfilehash: 1618b2de1f0db96989a7aedf5b53805fd70f535e
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845574"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339573"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de dispositivos para dispositivos de escritorio Windows
 
@@ -32,10 +32,10 @@ Puedes usar Device Portal para lo siguiente:
 
 ### <a name="turn-on-developer-mode"></a>Activar el modo de desarrollador
 
-A partir de Windows 10, versión 1607, algunas de las características más recientes para equipos de escritorio solo están disponibles cuando se habilita el modo de desarrollador. Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
+A partir de Windows 10, versión 1607, algunas de las características más recientes para equipos de escritorio solo están disponibles cuando se habilita el modo de desarrollador. Para obtener información sobre cómo habilitar el modo de desarrollador, consulta [Habilitar el dispositivo para el desarrollo](/windows/apps/get-started/enable-your-device-for-development).
 
 > [!IMPORTANT]
-> En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instala correctamente en el dispositivo. Consulta la [sección correspondiente de Habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md#failure-to-install-developer-mode-package) con el fin de obtener ayuda para solucionar estos problemas.
+> En ocasiones, debido a problemas de compatibilidad o de red, el modo de desarrollador no se instala correctamente en el dispositivo. Consulta la [sección correspondiente de Habilitar el dispositivo para el desarrollo](/windows/apps/get-started/enable-your-device-for-development#failure-to-install-developer-mode-package) con el fin de obtener ayuda para solucionar estos problemas.
 
 ### <a name="turn-on-device-portal"></a>Activación del Portal de dispositivos
 
@@ -132,7 +132,7 @@ A continuación se muestran algunos errores comunes que pueden surgir al configu
 
 Puedes obtener este error al intentar instalar los paquetes para desarrolladores en una versión preliminar de Windows 10. Estos paquetes de características a petición (FoD) se hospedan en Windows Update y su descarga en versiones preliminares requiere tu participación en la distribución de paquetes piloto. Si la instalación no participa en la distribución de paquetes piloto para la combinación correcta de compilación y anillo, la carga no se podrá descargar. Comprueba lo siguiente:
 
-1. Ve a **Configuración > Actualización y seguridad > Programa Windows Insider** y confirma que la información de la sección **Cuenta de Windows Insider** sea correcta. Si no ves esa sección, selecciona **Vincular una cuenta de Windows Insider**, agrega tu cuenta de correo electrónico y confirma que aparece en el encabezado **Cuenta de Windows Insider** (puede que tengas que seleccionar **Vincular una cuenta de Windows Insider** una segunda vez para vincular una cuenta recién agregada).
+1. Ve a **Configuración > Actualización y seguridad > Programa Windows Insider** y confirma que la información de la sección **Cuenta de Windows Insider** sea correcta. Si no ves esa sección, selecciona **Vincular una cuenta de Windows Insider** , agrega tu cuenta de correo electrónico y confirma que aparece en el encabezado **Cuenta de Windows Insider** (puede que tengas que seleccionar **Vincular una cuenta de Windows Insider** una segunda vez para vincular una cuenta recién agregada).
  
 2. En **¿Qué tipo de contenido te gustaría recibir?** , comprueba que la opción **Active development of Windows** (Desarrollo activo de Windows) esté seleccionada.
  

@@ -4,12 +4,12 @@ description: Si quiere enviar un paquete de software al repositorio del Administ
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a3a1acebf2b48e767fbd16998967145976305434
-ms.sourcegitcommit: 94841d1d59703897b42b11597c28a9d966626f47
+ms.openlocfilehash: c0c01d87dc7e02b356a4fba20b01519e3361b28a
+ms.sourcegitcommit: 36ae65013da22930c8e838fc65a63564a0bafee2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110568"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94377801"
 ---
 # <a name="create-your-package-manifest"></a>Creación de un manifiesto de paquete
 
@@ -31,7 +31,7 @@ El formato YAML se eligió para los manifiestos de paquete debido a la facilidad
 En este artículo se usan las convenciones siguientes:
 
 * A la izquierda de `:` hay una palabra clave literal que se usa en las definiciones del manifiesto.
-* A la derecha de `:` hay un tipo de datos. El tipo de datos puede ser de un tipo primitivo, como **string**, o una referencia a una estructura enriquecida definida en otra parte de este artículo.
+* A la derecha de `:` hay un tipo de datos. El tipo de datos puede ser de un tipo primitivo, como **string** , o una referencia a una estructura enriquecida definida en otra parte de este artículo.
 * La notación `[` *datatype* `]` indica una matriz del tipo de datos mencionado. Por ejemplo, `[ string ]` es una matriz de cadenas.
 * La notación `{` *datatype* `:` *datatype* `}` indica una asignación de un tipo de datos a otro. Por ejemplo, `{ string: string }` es una asignación de cadenas a cadenas.
 
@@ -166,7 +166,7 @@ ManifestVersion: 0.1.0
 
 ## <a name="installer-switches"></a>Cambios del instalador
 
-A menudo, puede averiguar qué elementos `Switches` silenciosos están disponibles para un instalador al pasar `-?` al instalador desde la línea de comandos. Estos son algunos de los elementos `Swtiches` silenciosos habituales que se pueden usar para distintos tipos de instalador.
+A menudo, puede averiguar qué elementos `Switches` silenciosos están disponibles para un instalador al pasar `-?` al instalador desde la línea de comandos. Estos son algunos de los elementos `Switches` silenciosos habituales que se pueden usar para distintos tipos de instalador.
 
 | Instalador | Comando  | Documentación |  
 | :--- | :-- | :--- |  
@@ -177,7 +177,7 @@ A menudo, puede averiguar qué elementos `Switches` silenciosos están disponibl
 
 ## <a name="tips-and-best-practices"></a>Sugerencias y procedimientos recomendados
 
-* Para ofrecer la mejor experiencia del cliente al buscar e instalar tu software, te recomendamos incluir la mayor cantidad posible de elementos opcionales más allá del esquema obligatorio. Por ejemplo, el campo `AppMoniker` es opcional. Sin embargo, si incluyes este campo, los clientes verán los resultados asociados con el valor de la `AppMoniker` al ejecutar el comando [search](../winget/search.md) (por ejemplo, **vscode** para **Visual Studio Code**). Si solo hay una aplicación con el valor `AppMoniker` especificado, los clientes podrán instalar la aplicación si escriben el moniker en lugar del identificador completo.
+* Para ofrecer la mejor experiencia del cliente al buscar e instalar tu software, te recomendamos incluir la mayor cantidad posible de elementos opcionales más allá del esquema obligatorio. Por ejemplo, el campo `AppMoniker` es opcional. Sin embargo, si incluyes este campo, los clientes verán los resultados asociados con el valor de la `AppMoniker` al ejecutar el comando [search](../winget/search.md) (por ejemplo, **vscode** para **Visual Studio Code** ). Si solo hay una aplicación con el valor `AppMoniker` especificado, los clientes podrán instalar la aplicación si escriben el moniker en lugar del identificador completo.
 * `Id` debe ser único. No puedes hacer varios envíos con el mismo identificador de paquete. Evita los espacios, ya que esto obligará a los usuarios a colocar comillas alrededor de `Id` al usar el cliente de [winget](../index.md).
 * Evite crear varias carpetas de editor. Por ejemplo, no crees "Contoso Ltd" si ya existe una carpeta "Contoso". Evita también los espacios al crear las carpetas.
 * De ser posible, todos los paquetes se deben enviar con una instalación silenciosa. Si tienes un archivo ejecutable que no admite la instalación silenciosa, la experiencia del usuario se verá disminuida.
