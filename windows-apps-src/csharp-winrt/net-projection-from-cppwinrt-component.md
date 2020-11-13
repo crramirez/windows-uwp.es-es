@@ -1,16 +1,16 @@
 ---
 description: En este tutorial se muestra cómo usar C#/WinRT para generar una proyección de .NET 5 para un componente/WinRT de C++.
 title: Tutorial para generar una proyección de .NET 5 desde un componente/WinRT de C++ y distribuir NuGet
-ms.date: 10/12/2020
+ms.date: 11/12/2020
 ms.topic: article
 keywords: Windows 10, c#, winrt, cswinrt, proyección
 ms.localizationpriority: medium
-ms.openlocfilehash: 817c4ec364040cbe64f8ab466a5bdf059d8c2dda
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: 552eee6ab3f6f4f875202392c9aa3e3c848dbdb6
+ms.sourcegitcommit: 23bd1ef67dcb637b9ac7833e1b6a0c0dd56bd445
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339653"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94572807"
 ---
 # <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>Tutorial: generación de una proyección de .NET 5 desde un componente/WinRT de C++ y distribución de NuGet
 
@@ -18,15 +18,12 @@ En este tutorial se muestra cómo usar [C#/WinRT](index.md) para generar una pro
 
 Puede descargar el ejemplo completo de este tutorial en GitHub [aquí](https://github.com/microsoft/CsWinRT/tree/master/Samples/Net5ProjectionSample).
 
-> [!NOTE]
-> Este tutorial está escrito para la versión preliminar más reciente de C#/WinRT (RC2). Esperamos que la próxima versión 1,0 tenga más actualizaciones y mejoras en la experiencia del desarrollador.
-
 ## <a name="prerequisites"></a>Requisitos previos
 
 Este tutorial y el ejemplo correspondiente requieren las herramientas y los componentes siguientes:
 
-- [Visual Studio 16,8 Preview 3](https://visualstudio.microsoft.com/vs/preview/) (o posterior) con la carga de trabajo de desarrollo de plataforma universal de Windows instalada. En **detalles de la instalación**  >  **plataforma universal de Windows desarrollo** , active la opción de **herramientas de plataforma universal de Windows de C++ (v14x)** .
-- [SDK de .net 5,0 RC2](https://github.com/dotnet/installer).
+- [Visual Studio 16,8](https://visualstudio.microsoft.com/downloads/) (o posterior) con la carga de trabajo de desarrollo de plataforma universal de Windows instalada. En **detalles de la instalación**  >  **plataforma universal de Windows desarrollo** , active la opción de **herramientas de plataforma universal de Windows de C++ (v14x)** .
+- [SDK de .net 5,0](https://dotnet.microsoft.com/download/dotnet/5.0).
 - [Extensión VSIX de c++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) para plantillas de proyecto de/WinRT de c++.
 
 ## <a name="create-a-simple-cwinrt-runtime-component"></a>Crear un componente de tiempo de ejecución de C++/WinRT simple
@@ -75,26 +72,6 @@ Si ha clonado el ejemplo del repositorio, elimine primero el proyecto **SimpleMa
 
 4. Agregue una referencia de proyecto al proyecto **SimpleMathComponent** . En **Explorador de soluciones** , haga clic con el botón secundario en el nodo **dependencias** en el proyecto **SimpleMathProjection** , seleccione **Agregar referencia de proyecto** y seleccione el proyecto **SimpleMathComponent** .
 
-    > [!NOTE]
-    > Si usa Visual Studio 16,8 Preview 4 o una versión posterior, ha terminado con esta sección después de completar el paso 4. Si usa Visual Studio 16,8 Preview 3, también debe completar el paso 5.
-
-5. Si usa Visual Studio 16,8 Preview 3: en **Explorador de soluciones** , haga doble clic en el nodo **SimpleMathProjection** para abrir el archivo de proyecto en el editor, agregue los siguientes elementos al archivo y, a continuación, guarde y cierre el archivo.
-
-    ```xml
-    <ItemGroup>
-      <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="3.8.0-4.20472.6" />
-    </ItemGroup>
-
-    <PropertyGroup>
-      <RestoreSources>
-        https://api.nuget.org/v3/index.json;
-        https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
-      </RestoreSources>
-    </PropertyGroup>
-    ```
-
-    Estos elementos instalan la versión necesaria del paquete de NuGet **Microsoft.net. compiladores. Toolset** , que incluye el último compilador de C#. En este tutorial se instala este paquete NuGet a través de estas referencias de archivo de proyecto porque es posible que la versión requerida de este paquete no esté disponible en la fuente de NuGet pública predeterminada.
-
 Después de estos pasos, el **Explorador de soluciones** debe ser similar a este.
 
 ![Explorador de soluciones que muestra las dependencias del proyecto de proyección](images/projection-dependencies.png)
@@ -128,10 +105,17 @@ Antes de poder invocar **cswinrt.exe** y generar el ensamblado de proyección, d
     - La `CsWinRTIncludes` propiedad especifica los espacios de nombres que se van a proyectar.
     - La `CsWinRTGeneratedFilesDir` propiedad establece el directorio de salida donde se generan los archivos de la proyección, que se establecen en la sección siguiente sobre la creación fuera del origen.
 
-4. La versión más reciente de C#/WinRT en este tutorial puede requerir la especificación de los metadatos de Windows. Esto se corregirá en una versión futura de C#/WinRT. Esto se puede proporcionar con cualquiera de las siguientes opciones:
+4. La versión más reciente de C#/WinRT en este tutorial puede requerir la especificación de los metadatos de Windows. Esto se puede proporcionar con cualquiera de las siguientes opciones:
 
-    - Una referencia de paquete, como a [Microsoft. Windows. SDK. Contracts]( https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts/), o
-    - Un valor explícito establece con la `CsWinRTWindowsMetadata` propiedad:
+    - Una referencia de paquete NuGet, como a [Microsoft. Windows. SDK. Contracts]( https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts/):
+
+      ```xml
+      <ItemGroup>
+        <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" />
+      </ItemGroup>
+      ```
+
+    - Otra opción consiste en agregar la siguiente `CsWinRTWindowsMetadata` propiedad al `PropertyGroup` del paso 3:
 
       ```xml
       <CsWinRTWindowsMetadata>10.0.19041.0</CsWinRTWindowsMetadata>
@@ -189,7 +173,7 @@ Para distribuir y usar el ensamblado de interoperabilidad, puede crear automáti
           <group targetFramework="UAP10.0" />
           <group targetFramework=".NETFramework4.6" />
           <group targetFramework="net5.0">
-            <dependency id="Microsoft.Windows.CsWinRT" version="0.8.0" exclude="Build,Analyzers" />
+            <dependency id="Microsoft.Windows.CsWinRT" version="1.0.1" exclude="Build,Analyzers" />
           </group>
         </dependencies>
       </metadata>
@@ -234,14 +218,14 @@ Para consumir el **SimpleMathComponent** proyectado, puede simplemente agregar u
     ```xml
     <PropertyGroup>
       <RestoreSources>
-          https://api.nuget.org/v3/index.json;
-          ../../CppWinRTProjectionSample/SimpleMathProjection/nuget
+        https://api.nuget.org/v3/index.json;
+        ../../CppWinRTProjectionSample/SimpleMathProjection/nuget
       </RestoreSources>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
-        <PackageReference Include="SimpleMathComponent" Version="0.1.0-prerelease" />
+      <PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
+      <PackageReference Include="SimpleMathComponent" Version="0.1.0-prerelease" />
     </ItemGroup>
     ```
 
