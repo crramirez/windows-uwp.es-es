@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ce223d4d70f883545114507ec49fcd9d7084d2a5
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 166a498ba7323869fe60f7d3392b93ac501dd331
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363908"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691553"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproducir audio y vídeo con MediaPlayer
 
@@ -214,7 +214,7 @@ En el controlador de eventos **VideoTracksChanged** , obtenga las propiedades de
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaPlayer_RS1/cs/MainPage.xaml.cs" id="SnippetSphericalTracksChanged":::
 
 ## <a name="use-mediaplayer-in-frame-server-mode"></a>Usar MediaPlayer en modo de servidor de marco
-A partir de Windows 10, versión 1703, puede usar **MediaPlayer** en modo de servidor de marco. En este modo, el objeto **MediaPlayer** no representa automáticamente fotogramas en un objeto **MediaPlayerElement**asociado. En su lugar, la aplicación copia el marco actual de **MediaPlayer** en un objeto que implementa [**IDirect3DSurface**](/uwp/api/windows.graphics.directx.direct3d11.idirect3dsurface). El escenario principal que esta característica permite es usar sombreadores de píxeles para procesar fotogramas de vídeo proporcionados por el **MediaPlayer**. La aplicación es responsable de mostrar cada fotograma después del procesamiento, como mostrar el marco en un control de [**imagen**](/uwp/api/windows.ui.xaml.controls.image) XAML.
+A partir de Windows 10, versión 1703, puede usar **MediaPlayer** en modo de servidor de marco. En este modo, el objeto **MediaPlayer** no representa automáticamente fotogramas en un objeto **MediaPlayerElement** asociado. En su lugar, la aplicación copia el marco actual de **MediaPlayer** en un objeto que implementa [**IDirect3DSurface**](/uwp/api/windows.graphics.directx.direct3d11.idirect3dsurface). El escenario principal que esta característica permite es usar sombreadores de píxeles para procesar fotogramas de vídeo proporcionados por el **MediaPlayer**. La aplicación es responsable de mostrar cada fotograma después del procesamiento, como mostrar el marco en un control de [**imagen**](/uwp/api/windows.ui.xaml.controls.image) XAML.
 
 En el ejemplo siguiente, se inicializa un nuevo **MediaPlayer** y se carga el contenido de vídeo. A continuación, se registra un controlador de [**VideoFrameAvailable**](/uwp/api/windows.media.playback.mediaplayer.VideoFrameAvailable) . El modo de servidor de trama se habilita estableciendo la propiedad [**IsVideoFrameServerEnabled**](/uwp/api/windows.media.playback.mediaplayer.IsVideoFrameServerEnabled) del objeto **MediaPlayer** en **true**. Por último, la reproducción multimedia se inicia con una llamada a [**Play**](/uwp/api/windows.media.playback.mediaplayer.Play).
 
@@ -222,7 +222,7 @@ En el ejemplo siguiente, se inicializa un nuevo **MediaPlayer** y se carga el co
 
 En el ejemplo siguiente se muestra un controlador para **VideoFrameAvailable** que usa [Win2D](https://github.com/Microsoft/Win2D) para agregar un efecto de desenfoque simple a cada fotograma de un vídeo y, a continuación, muestra los marcos procesados en un control de [imagen](/uwp/api/windows.ui.xaml.controls.image) XAML.
 
-Cada vez que se llama al controlador **VideoFrameAvailable** , se usa el método [**CopyFrameToVideoSurface**](/uwp/api/windows.media.playback.mediaplayer.copyframetovideosurface) para copiar el contenido del marco en una [**IDirect3DSurface**](/uwp/api/windows.graphics.directx.direct3d11.idirect3dsurface). También puede usar [**CopyFrameToStereoscopicVideoSurfaces**](/uwp/api/windows.media.playback.mediaplayer.copyframetostereoscopicvideosurfaces) para copiar contenido 3D en dos superficies, para procesar el contenido del ojo izquierdo y el ojo secundario por separado. Para obtener un objeto que implementa **IDirect3DSurface**  en este ejemplo, se crea un objeto [**SoftwareBitmap**](/uwp/api/windows.graphics.imaging.softwarebitmap) y, a continuación, se usa para crear un **CanvasBitmap**de Win2D, que implementa la interfaz necesaria. Un **CanvasImageSource** es un objeto Win2D que se puede usar como origen para un control de **imagen** , por lo que se crea uno nuevo y se establece como el origen de la **imagen** en la que se mostrará el contenido. A continuación, se crea un **CanvasDrawingSession** . Win2D lo usa para presentar el efecto de desenfoque.
+Cada vez que se llama al controlador **VideoFrameAvailable** , se usa el método [**CopyFrameToVideoSurface**](/uwp/api/windows.media.playback.mediaplayer.copyframetovideosurface) para copiar el contenido del marco en una [**IDirect3DSurface**](/uwp/api/windows.graphics.directx.direct3d11.idirect3dsurface). También puede usar [**CopyFrameToStereoscopicVideoSurfaces**](/uwp/api/windows.media.playback.mediaplayer.copyframetostereoscopicvideosurfaces) para copiar contenido 3D en dos superficies, para procesar el contenido del ojo izquierdo y el ojo secundario por separado. Para obtener un objeto que implementa **IDirect3DSurface**  en este ejemplo, se crea un objeto [**SoftwareBitmap**](/uwp/api/windows.graphics.imaging.softwarebitmap) y, a continuación, se usa para crear un **CanvasBitmap** de Win2D, que implementa la interfaz necesaria. Un **CanvasImageSource** es un objeto Win2D que se puede usar como origen para un control de **imagen** , por lo que se crea uno nuevo y se establece como el origen de la **imagen** en la que se mostrará el contenido. A continuación, se crea un **CanvasDrawingSession** . Win2D lo usa para presentar el efecto de desenfoque.
 
 Una vez que se han creado instancias de todos los objetos necesarios, se llama a **CopyFrameToVideoSurface** , que copia el marco actual del objeto **MediaPlayer** en el **CanvasBitmap**. A continuación, se crea un **GaussianBlurEffect** de Win2D, con el **CanvasBitmap** establecido como el origen de la operación. Por último, se llama a **CanvasDrawingSession. drawImage** para dibujar la imagen de origen, con el efecto de desenfoque aplicado, en el **CanvasImageSource** que se ha asociado con el control de **imagen** , lo que provoca que se dibuje en la interfaz de usuario.
 
@@ -235,12 +235,12 @@ Para obtener más información sobre Win2D, vea el [repositorio de github de win
 1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Administrar paquetes NuGet**.
 2.  En la parte superior de la ventana, selecciona la pestaña **Examinar**.
 3.  En el cuadro de búsqueda, escribe **Win2D**.
-4.  Selecciona **Win2D.uwp**y luego selecciona **Instalar** en el panel derecho.
+4.  Selecciona **Win2D.uwp** y luego selecciona **Instalar** en el panel derecho.
 5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haga clic en **OK**.
 6.  Acepta la licencia del paquete.
 
 ## <a name="detect-and-respond-to-audio-level-changes-by-the-system"></a>Detectar y responder a los cambios de nivel de audio por parte del sistema
-A partir de la versión 1803 de Windows 10, la aplicación puede detectar cuándo el sistema reduce o silencia el nivel de audio de un **MediaPlayer**actualmente en reproducción. Por ejemplo, el sistema puede reducir o "pato" el nivel de reproducción de audio cuando se produce un timbre de alarma. El sistema silenciará la aplicación cuando pase a segundo plano si la aplicación no ha declarado la funcionalidad *backgroundMediaPlayback* en el manifiesto de la aplicación. La clase [**AudioStateMonitor**](./uwp/api/windows.media.audio.audiostatemonitor) permite registrarse para recibir un evento cuando el sistema modifica el volumen de una secuencia de audio. Acceda a la propiedad **AudioStateMonitor** de un control **MediaPlayer** y registre un controlador para que se notifique al evento [**SoundLevelChanged**](/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged) cuando el sistema cambie el nivel de audio de ese **MediaPlayer** .
+A partir de la versión 1803 de Windows 10, la aplicación puede detectar cuándo el sistema reduce o silencia el nivel de audio de un **MediaPlayer** actualmente en reproducción. Por ejemplo, el sistema puede reducir o "pato" el nivel de reproducción de audio cuando se produce un timbre de alarma. El sistema silenciará la aplicación cuando pase a segundo plano si la aplicación no ha declarado la funcionalidad *backgroundMediaPlayback* en el manifiesto de la aplicación. La clase [**AudioStateMonitor**](/uwp/api/windows.media.audio.audiostatemonitor) permite registrarse para recibir un evento cuando el sistema modifica el volumen de una secuencia de audio. Acceda a la propiedad **AudioStateMonitor** de un control **MediaPlayer** y registre un controlador para que se notifique al evento [**SoundLevelChanged**](/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged) cuando el sistema cambie el nivel de audio de ese **MediaPlayer** .
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaPlayer_RS1/cs/MainPage.xaml.cs" id="SnippetRegisterAudioStateMonitor":::
 
@@ -263,12 +263,12 @@ El usuario puede decidir que desea pausar o continuar la reproducción, incluso 
 * [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md)
 * [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md)
 * [Crear, programar y administrar interrupciones multimedia](create-schedule-and-manage-media-breaks.md)
-* [Reproducir elementos multimedia en segundo plano](background-audio.md)
+* [Reproducir contenido multimedia en segundo plano](background-audio.md)
 
 
 
 
 
- 
+ 
 
- 
+ 

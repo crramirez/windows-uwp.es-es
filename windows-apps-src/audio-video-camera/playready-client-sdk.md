@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a444b8af0121c6012bc90adda075c161111838b3
-ms.sourcegitcommit: 4fffc66fac18fc4c80281e2a4afa9c4f2e1f7551
+ms.openlocfilehash: be670dfab9e7bd27c4c380e9b00ec8a655704885
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94513664"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691533"
 ---
 # <a name="playready-drm"></a>DRM de PlayReady
 
@@ -77,7 +77,7 @@ Se agregaron a la tecnología DRM de PlayReady las siguientes nuevas interfaces,
 -   Clase [**PlayReadySecureStopIterator**](/uwp/api/Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator)
 -   Enumerador [**PlayReadyHardwareDRMFeatures**](/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures)
 
-Se ha creado una nueva muestra para mostrar cómo usar las nuevas características de la tecnología DRM de PlayReady. El ejemplo se puede descargar desde el [Explorador de ejemplos de código](samples/microsoft/windows-universal-samples/playready/).
+Se ha creado una nueva muestra para mostrar cómo usar las nuevas características de la tecnología DRM de PlayReady. El ejemplo se puede descargar desde el [Explorador de ejemplos de código](/samples/microsoft/windows-universal-samples/playready/).
 
 ## <a name="things-to-consider"></a>Aspectos que se deben tener en cuenta:
 
@@ -87,7 +87,7 @@ Se ha creado una nueva muestra para mostrar cómo usar las nuevas característic
 -   Para aprovechar las ventajas de determinadas características nuevas de PlayReady 3.0 (lo que incluye, entre otras cosas, SL3000 para los clientes basados en hardware, la adquisición de varias licencias no persistentes en un mensaje de adquisición de licencia y restricciones basadas en el tiempo o licencias no persistentes); asimismo, es necesario que el servidor PlayReady sea la versión de lanzamiento del Kit de desarrollo de Software del servidor de Microsoft PlayReady v3.0.2769 o posterior.
 -   En función de la directiva sobre protección de salida especificada en la licencia de contenido, los usuarios finales podrían encontrarse con errores en la reproducción de multimedia si la salida conectada no es compatible con estos requisitos. La siguiente tabla enumera el conjunto de errores comunes que se producen como consecuencia de lo anterior. Para obtener más información, consulte las [reglas de cumplimiento y solidez de PlayReady](https://www.microsoft.com/playready/licensing/compliance/).
 
-| Error                                                   | Value      | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Error                                                   | Valor      | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | el resultado de los gráficos de ERROR \_ \_ OPM \_ no es \_ \_ \_ compatible con \_ HDCP  | 0xC0262513 | La Directiva de protección de salida de la licencia requiere que el monitor active la especificación HDCP, pero no se pudo activar.                                                                                                                                                                                                                                                                                                                                                                                              |
 | \_Directiva MF \_ E \_ no admitida                              | 0xC00D7159 | La Directiva de protección de salida de la licencia requiere que el monitor active la especificación HDCP de tipo 1, pero no se pudo activar.                                                                                                                                                                                                                                                                                                                                                                                |
@@ -164,7 +164,7 @@ En la siguiente tabla se muestran las asignaciones entre varios OPL en la licenc
                 **Cuando la restricción de tipo HDCP NO está definida:** pasa contenido con HDCP. Si no se puede usar HDCP, se bloquea la reproducción en los puertos HDMI/DVI.
             </p>
             <p>
-                **Cuando se define la restricción de tipo de HDCP** : pasa el contenido con HDCP 2,2 y el tipo de flujo de contenido establecido en 1. Si no se puede usar HDCP o el tipo de secuencia de contenido no se puede establecer en 1, se bloquea la reproducción a los puertos HDMI/DVI.
+                **Cuando se define la restricción de tipo de HDCP**: pasa el contenido con HDCP 2,2 y el tipo de flujo de contenido establecido en 1. Si no se puede usar HDCP o el tipo de secuencia de contenido no se puede establecer en 1, se bloquea la reproducción a los puertos HDMI/DVI.
             </p>
         </td>
     </tr>
@@ -393,7 +393,7 @@ En la siguiente tabla se describe la implementación de DRM de PlayReady para Wi
 </table>
 <br/>
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de empezar a crear la aplicación para UWP protegida con PlayReady, es necesario instalar el siguiente software en el sistema:
 
@@ -507,7 +507,7 @@ Hay dos escenarios principales para el envío de un desafío de detención segur
 -   Cuando se detiene la presentación multimedia porque se ha alcanzado el final del contenido o cuando el usuario detiene la presentación multimedia en algún lugar en mitad del proceso.
 -   Cuando la sesión anterior termina inesperadamente (por ejemplo, debido a un bloqueo del sistema o la aplicación). La aplicación tendrá que consultar, ya sea al inicio o apagado, las sesiones de detención segura pendientes y enviar los desafíos independientemente de otras reproducciones de multimedia.
 
-Para ver una implementación de ejemplo de la detención segura, vea el archivo **securestop.CS** en el ejemplo de PlayReady ubicado en el [Explorador de ejemplo de código](samples/microsoft/windows-universal-samples/playready//).
+Para ver una implementación de ejemplo de la detención segura, vea el archivo **securestop.CS** en el ejemplo de PlayReady ubicado en el [Explorador de ejemplo de código](/samples/microsoft/windows-universal-samples/playready/).
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Usar DRM de PlayReady en Xbox One
 
@@ -519,7 +519,7 @@ Para usar DRM de PlayReady en una aplicación de UWP en Xbox One, primero deber�
 Una vez que recibas la autorización, tendrás que agregar un elemento `<DeviceCapability>` adicional en el manifiesto de la aplicación. Tendrás que hacerlo de forma manual porque actualmente no hay ninguna opción disponible en el Diseñador de manifiestos de aplicaciones. Sigue estos pasos para configurarlo:
 
 1. Con el proyecto abierto en Visual Studio, abre el **Explorador de soluciones** y haz clic en **Package.appxmanifest**.
-2. Selecciona **Abrir con...** , elige **Editor XML (texto)** y haz clic en **Aceptar**.
+2. Selecciona **Abrir con...**, elige **Editor XML (texto)** y haz clic en **Aceptar**.
 3. Entre las etiquetas `<Capabilities>`, agrega la siguiente `<DeviceCapability>`:
 
     ```xml
