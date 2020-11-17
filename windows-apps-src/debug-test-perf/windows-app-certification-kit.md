@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 06ac1525a91426f6d39e20c9a9416154ad3d6f3e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: be02f9b049a1beb1866d21c97f11fe3efeb815f3
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174029"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339353"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
@@ -21,9 +21,9 @@ Para que tu aplicación obtenga la [certificación de Windows](/windows/win32/wi
 
 Requisitos previos para probar una aplicación universal de Windows:
 
-- Debes instalar y ejecutar Windows 10.
-- Debes instalar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/downloads/app-certification-kit/), que se incluye en el Kit de desarrollo de software de Windows (SDK) para Windows 10.
-- Debes [habilitar el dispositivo para el desarrollo](../get-started/enable-your-device-for-development.md).
+- Debes instalar y ejecutar Windows 10.
+- Debe instalar el [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/downloads/app-certification-kit/), que se incluye en el kit de desarrollo de software de Windows (SDK) para Windows 10.
+- Debes [habilitar el dispositivo para el desarrollo](/windows/apps/get-started/enable-your-device-for-development).
 - Debes implementar la aplicación de Windows que deseas probar en tu equipo.
 
 > [!NOTE]
@@ -59,7 +59,7 @@ Requisitos previos para probar una aplicación universal de Windows:
 
 1. En la ventana de comandos, navega hacia el directorio que contiene el Kit para la certificación de aplicaciones en Windows.
 
-    **Nota**   La ruta predeterminada es C:\\Archivos de programa\\Windows Kits\\10\\App certificación Kit\\.
+    **Nota**: La ruta predeterminada es C:\\Program Files\\Windows Kits\\10\\App Certification Kit\\.
 
 2. Escribe los siguientes comandos en este orden para probar una aplicación que ya está instalada en el equipo de prueba:
 
@@ -75,9 +75,9 @@ Requisitos previos para probar una aplicación universal de Windows:
 
 3. Una vez que finalice la prueba, abre el archivo del informe `[report file name]` y revisa los resultados de la prueba.
 
-**Nota**  El Kit para la certificación de aplicaciones en Windows se puede ejecutar desde un servicio, pero este debe iniciar el proceso del kit en una sesión de usuario activa y no se puede ejecutar en Session0.
+**Note**  El Kit para la certificación de aplicaciones en Windows se puede ejecutar desde un servicio, pero este debe iniciar el proceso del kit dentro de una sesión de usuario activa y no se puede ejecutar en Session0.
 
-**Nota**  Para obtener más información sobre la línea de comandos del Kit para la certificación de aplicaciones en Windows, escribe el comando `appcert.exe /?`.
+**Note**   Para obtener más información sobre la línea de comandos del Kit para la certificación de aplicaciones en Windows, escribe el comando `appcert.exe /?`
 
 ## <a name="testing-with-a-low-power-computer"></a>Prueba de un equipo de bajo consumo
 

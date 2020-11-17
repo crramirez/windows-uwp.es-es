@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 2b0d6bb305490e05c2670f0e0a326601c51a8373
-ms.sourcegitcommit: 609441402c17d92e7bfac83a6056909bb235223c
+ms.openlocfilehash: bf460b8c05f1dbb274aa9015e6b892339df9f634
+ms.sourcegitcommit: 21a76fc02ae261f609a2dbb7a56c5de25844c068
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90837820"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93381395"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>Llamada a las a API de Windows Runtime en aplicaciones de escritorio
 
@@ -33,7 +33,7 @@ Hay varias opciones para los proyectos de .NET:
 
 ### <a name="net-5-preview-8-and-later-use-the-target-framework-moniker-option"></a>.NET 5 Versión preliminar 8 y versiones posteriores: Uso de la opción Moniker de la plataforma de destino 
 
-Esta opción solo se admite en proyectos que usan .NET 5 Versión preliminar 8 (o una versión anterior) y tengan como destino Windows 10, versión 1809 o una versión posterior del sistema operativo. Para más información general, consulte [esta entrada de blog](https://blogs.windows.com/windowsdeveloper/2020/09/03/calling-windows-apis-in-net5/).
+Esta opción solo se admite en proyectos que usan .NET 5, versión preliminar 8 (o una versión posterior), y tengan como destino Windows 10, versión 1809 o una versión posterior del sistema operativo. Para más información general, consulte [esta entrada de blog](https://blogs.windows.com/windowsdeveloper/2020/09/03/calling-windows-apis-in-net5/).
 
 1. Con el proyecto abierto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y elija **Editar archivo de proyecto**. El archivo de proyecto debería tener un aspecto similar al siguiente.
 
@@ -63,7 +63,7 @@ Esta opción solo se admite en proyectos que usan .NET 5 Versión preliminar 8
 
 ### <a name="earlier-versions-of-net-install-the-microsoftwindowssdkcontracts-nuget-package"></a>Versiones anteriores de .NET: Instale el paquete NuGet Microsoft.Windows.SDK.Contracts.
 
-Utilice esta opción si la aplicación usa .NET Core 3.x, .NET 5 Versión preliminar 7 (o anterior) o .NET Framework. Esta opción se admite en proyectos que tienen como destino Windows 10, versión 1803 o una versión posterior del sistema operativo.
+Utilice esta opción si la aplicación usa .NET Core 3.x, .NET 5, versión preliminar 7 (o anterior), o .NET Framework. Esta opción se admite en proyectos que tienen como destino Windows 10, versión 1803 o una versión posterior del sistema operativo.
 
 1. Asegúrate de que las [referencias de paquete](/nuget/consume-packages/package-references-in-project-files) están habilitadas:
 
@@ -85,7 +85,7 @@ Utilice esta opción si la aplicación usa .NET Core 3.x, .NET 5 Versión prel
 
 ### <a name="configure-projects-that-multi-target-different-versions-of-net"></a>Configuración de proyectos que tienen como destino diferentes versiones de .NET
 
-Si el proyecto tiene varios destinos de .NET 5 Versión preliminar 8 (o posterior) y versiones anteriores (incluidos .NET Core 3.x y .NET Framework), puede configurar el archivo de proyecto para que use el moniker de la plataforma de destino para extraer automáticamente las referencias de la API de WinRT para .NET 5 Versión preliminar 8 (o posterior) y usar el paquete NuGet `Microsoft.Windows.SDK.Contracts` para versiones anteriores.
+Si el proyecto tiene varios destinos de .NET 5, versión preliminar 8 (o posterior) y versiones anteriores (incluidos .NET Core 3.x y .NET Framework), puede configurar el archivo de proyecto para que use el moniker de la plataforma de destino a fin de extraer automáticamente las referencias de la API de WinRT para .NET 5 y usar el paquete NuGet `Microsoft.Windows.SDK.Contracts` para versiones anteriores.
 
 1. Con el proyecto abierto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y elija **Editar archivo de proyecto**. En el ejemplo siguiente se muestra un archivo de proyecto para una aplicación que usa .NET Core 3.1.
 
@@ -342,7 +342,7 @@ El compilador compila ese código solo si esa constante está definida en la con
 
 Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación solo llama a las API de Windows Runtime si el usuario ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
-La forma más fácil de agregar comprobaciones en tiempo de ejecución al código es instalar este paquete NuGet: [Aplicaciones auxiliares de Puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el método ``IsRunningAsUWP()`` para desactivar todo el código que llama a las API de Windows Runtime. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identifica el contexto de la aplicación](/archive/blogs/appconsult/desktop-bridge-identify-the-applications-context).
+La forma más fácil de agregar comprobaciones en tiempo de ejecución al código es instalar este paquete NuGet: [Aplicaciones auxiliares de Puente de dispositivo de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usa el método ``IsRunningAsUWP()`` para desactivar todo el código que llama a las API de Windows Runtime. Consulte esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identifica el contexto de la aplicación](/archive/blogs/appconsult/desktop-bridge-identify-the-applications-context).
 
 ## <a name="related-samples"></a>Ejemplos relacionados
 
