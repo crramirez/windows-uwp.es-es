@@ -90,7 +90,7 @@
       items:
         - name: Introducción
           href: winui/index.md
-        - name: "Biblioteca de interfaz de usuario de Windows\_3.0, versión preliminar\_2"
+        - name: "Biblioteca de interfaz de usuario de Windows\_3, versión preliminar\_3"
           items:
             - name: Introducción y notas de la versión
               href: winui/winui3/index.md

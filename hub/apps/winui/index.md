@@ -4,12 +4,12 @@ description: Bibliotecas de WinUI para el desarrollo de aplicaciones de Windows.
 ms.topic: article
 ms.date: 07/15/2020
 keywords: Windows 10, UWP, SDK del kit de herramientas, WinUI, biblioteca de interfaz de usuario de Windows
-ms.openlocfilehash: eb87744ed5d3eb5882b4ebae75b8dcf295d89f10
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 932b3c898737426db6d62d6699b11c8f8c1b484b
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166760"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691513"
 ---
 # <a name="windows-ui-library-winui"></a>Biblioteca de interfaz de usuario de Windows (WinUI)
 
@@ -46,7 +46,7 @@ Al mantener la compatibilidad de nivel inferior con versiones anteriores de Wind
 - [Código fuente](https://aka.ms/winui)
 - [Aplicación XAML Controls Gallery](https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt)
 
-## <a name="windows-ui-3-library-preview-2"></a>Biblioteca de Windows UI 3 (versión preliminar 2)
+## <a name="windows-ui-3-library-preview-3"></a>Biblioteca de Windows UI 3 (versión preliminar 3)
 
 WinUI 3 es la versión siguiente de WinUI, una plataforma nativa de la interfaz de usuario de Windows 10 que está completamente desacoplada del [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk/).
 
@@ -69,8 +69,8 @@ Tenga en cuenta que la Plataforma universal de Windows contiene algo más que ta
 
 ### <a name="related-links-for-winui-3"></a>Vínculos relacionados de WinUI 3
 
-- [Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)](winui3/index.md)
-- [Aplicación XAML Controls Gallery (WinUI 3, versión preliminar 2)](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview)
+- [Biblioteca de interfaz de usuario de Windows 3, versión preliminar 3 (noviembre de 2020)](winui3/index.md)
+- [Aplicación XAML Controls Gallery (WinUI 3, versión preliminar 3)](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview)
 
 ## <a name="winui-resources"></a>Recursos de WinUI
 

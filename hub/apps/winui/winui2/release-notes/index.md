@@ -3,12 +3,12 @@ title: Notas de la versión de WinUI
 description: Índice de notas de la versión de WinUI.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 33d4b9dfb497017f446549d4f3daf737a8fa5ebb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2055ba69566a901ea1491a36d742455fc13b5cb3
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166699"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691543"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Notas de la versión de la biblioteca de interfaz de usuario de Windows UI 2.x
 
@@ -52,6 +52,6 @@ Historial de versiones del [paquete NuGet Microsoft.UI.Xaml](https://www.nuget.o
 | [2.1](winui-2.1.md) | Estable | Abril de 2019 | [Notas de la versión](winui-2.1.md) | **Primera versión de código abierto** de [GitHub](https://github.com/microsoft/microsoft-ui-xaml). Incluye [ItemsRepeater](winui-2.1.md#itemsrepeater), [AnimatedVisualPlayer](winui-2.1.md#animatedvisualplayer), [TeachingTip](winui-2.1.md#teachingtip), [RadioMenuFlyoutItem](winui-2.1.md#radiomenuflyoutitem), [CompactDensity](winui-2.1.md#compactdensity) y [Shadows](winui-2.1.md#shadows). |
 | [2.0](winui-2.0.md) | Estable | Octubre de 2018 | [Notas de la versión](winui-2.0.md) | **Versión inicial**. Incluye las características y los controles de Fluent nativos para las aplicaciones para UWP de Windows.  |
 
-### <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
+### <a name="windows-ui-library-3-preview-3-november-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 3 (noviembre de 2020)
 
-Para información sobre la prueba de versiones preliminares de WinUI 3, consulte [Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)](../../winui3/index.md).
+Para información sobre la prueba de versiones preliminares de WinUI 3, consulte [Biblioteca de interfaz de usuario de Windows 3, versión preliminar 3 (noviembre de 2020)](../../winui3/index.md).
