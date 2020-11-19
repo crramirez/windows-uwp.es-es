@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 3 (noviembre de 2020)
 description: Introducción a WinUI 3, versión preliminar 3.
 ms.date: 11/17/2020
 ms.topic: article
-ms.openlocfilehash: d2ff1646c431ef1f79455260a61027d0a84f77ca
-ms.sourcegitcommit: f723edbe3dc846c1988d721f6e8078aaec371899
+ms.openlocfilehash: f6c8b8730aeea12534c0e6595d220c837c0852dd
+ms.sourcegitcommit: 60638c0403ff67eadda994d82c5c851bc1271bc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94701971"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810102"
 ---
 # <a name="windows-ui-library-3-preview-3-november-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 3 (noviembre de 2020)
 
@@ -43,15 +43,19 @@ WinUI 3 versión preliminar 3 incluye plantillas de proyecto de Visual Studio
     Para compilar aplicaciones de C++, también debe incluir las siguientes cargas de trabajo:
     - Desarrollo de escritorio con C++
     - El componente opcional *Herramientas de la Plataforma universal de Windows para C++ (v142)* para la carga de trabajo de la Plataforma universal de Windows (vea "Detalles de la instalación" en la sección "Desarrollo con la Plataforma universal de Windows", en el panel derecho).
-3. Asegúrese de que el sistema tiene un origen de paquete NuGet habilitado para **nuget.org**. Para obtener más información, consulte las [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior).
+3. Asegúrese de que el sistema tiene un origen de paquete NuGet habilitado para **nuget.org**. Para obtener más información, consulte [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior).[Windows Community Toolkit](#windows-community-toolkit)
 
 4. Descargue e instale el [paquete VSIX de WinUI 3, versión preliminar 3](https://aka.ms/winui3/preview3-download). Con ello, se agregan las plantillas de proyecto WinUI 3 y el paquete NuGet que contiene las bibliotecas de WinUI 3 a Visual Studio 2019.
 
     Para obtener instrucciones sobre cómo agregar el paquete VSIX a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](/visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box).
 
-5. Si usa el control WebView2 en la aplicación, instale la versión del canal de desarrollo del explorador Microsoft Edge desde [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/en-us/download). Asegúrese de desinstalar todas las instancias existentes de Microsoft Edge Beta, Microsoft Edge Dev y Microsoft Edge WebView2 Runtime.
+#### <a name="webview2"></a>WebView2
 
-6. Si usa Windows Community Toolkit, [descargue la versión más reciente](https://aka.ms/wct-winui3).
+Si usa el control WebView2 en la aplicación, instale la **versión del canal de desarrollo del explorador Microsoft Edge** desde [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/en-us/download). Asegúrese de desinstalar todas las instancias existentes de Microsoft Edge Beta, Microsoft Edge Dev y Microsoft Edge WebView2 Runtime.
+
+#### <a name="windows-community-toolkit"></a>Kit de la comunidad de Windows
+
+Si usa Windows Community Toolkit, [descargue la versión más reciente](https://aka.ms/wct-winui3).
 
 ## <a name="create-winui-projects"></a>Creación de proyectos WinUI
 

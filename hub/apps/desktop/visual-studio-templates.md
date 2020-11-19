@@ -1,18 +1,18 @@
 ---
 description: En este artículo se proporciona información general sobre las plantillas de proyecto y de elementos de Visual Studio para aplicaciones de Windows.
 title: Plantillas de proyecto Visual Studio para aplicaciones de Windows
-ms.date: 07/02/2020
+ms.date: 11/17/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
-ms.openlocfilehash: 7e8500aab3c6eeaa1552dc61a95ea7404bf4d5d5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f84bd251bbae9c3f1a1326ab3ac3c7cf0fce3938
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174209"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691603"
 ---
 # <a name="visual-studio-project-and-item-templates-for-windows-apps"></a>Plantillas de proyecto Visual Studio para aplicaciones de Windows
 
@@ -25,7 +25,7 @@ Visual Studio 2019 proporciona muchas plantillas de proyecto y de elementos que 
 
 La [Biblioteca de interfaz de usuario de Windows (WinUI)](../winui/index.md) es la plataforma moderna de la interfaz de usuario (UI) nativa para aplicaciones de Windows en plataformas de escritorio (.NET y Win32 nativo) y de aplicaciones para UWP. [WinUI 3](../winui/winui3/index.md) (actualmente disponible en versión preliminar para desarrolladores) es la versión importante más reciente de WinUI y transforma WinUI en un marco completo de experiencia de usuario para aplicaciones de escritorio de Windows.
 
-WinUI 3 incluye un paquete VSIX para Visual Studio 2019 que proporciona plantillas de proyecto y de elementos que le ayudarán a empezar a crear aplicaciones con una interfaz basada en WinUI. Para obtener más información sobre el paquete VSIX de WinUI 3 y las plantillas de proyecto que proporciona, consulte [esta sección](../winui/winui3/index.md#install-winui-3-preview-2).
+WinUI 3 incluye un paquete VSIX para Visual Studio 2019 que proporciona plantillas de proyecto y de elementos que le ayudarán a empezar a crear aplicaciones con una interfaz basada en WinUI. Para obtener más información sobre el paquete VSIX de WinUI 3 y las plantillas de proyecto que proporciona, consulte [esta sección](../winui/winui3/index.md#install-winui-3-preview-3).
 
 > [!IMPORTANT]
 > WinUI 3, incluidas las plantillas relacionadas de Visual Studio, están disponibles actualmente como versión preliminar para desarrolladores pensada para la evaluación temprana y para recopilar comentarios de la comunidad de desarrolladores. No debe usarse para aplicaciones de producción en este momento.
