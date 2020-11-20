@@ -5,12 +5,12 @@ ms.topic: article
 ms.date: 07/15/2020
 keywords: Windows 10, UWP, SDK del kit de herramientas, WinUI, biblioteca de interfaz de usuario de Windows
 ms.custom: RS5
-ms.openlocfilehash: c7baa8fe74a45d1f7ba7f829f6d9f1228c70d44f
-ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
+ms.openlocfilehash: 92a546dcd177639b8c9bc7d2fd3dd6ca1fc7d3e5
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94691563"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933120"
 ---
 # <a name="windows-ui-library-2x"></a>Biblioteca de interfaz de usuario de Windows 2.x
 
@@ -47,7 +47,7 @@ https://github.com/Microsoft/Xaml-Controls-Gallery).
 
 Se incluyen artículos sobre procedimientos para los controles de la biblioteca de interfaz de usuario de Windows con la [documentación sobre controles de la Plataforma universal de Windows](/windows/uwp/design/controls-and-patterns/).
 
-Los documentos de referencia de API se encuentran aquí: [API de la biblioteca de interfaz de usuario de Windows](/uwp/api/overview/winui/).
+Los documentos de referencia de API se encuentran aquí: [API de la biblioteca de interfaz de usuario de Windows](/windows/winui/api/).
 
 ## <a name="install-and-use-the-windows-ui-library"></a>Instalación y uso de la biblioteca de interfaz de usuario de Windows
 

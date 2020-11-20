@@ -3,12 +3,12 @@ title: Notas de la versión de WinUI
 description: Índice de notas de la versión de WinUI.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 2055ba69566a901ea1491a36d742455fc13b5cb3
-ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
+ms.openlocfilehash: 4c89209868c1478f34de79f8b243fbe0e3dc80a3
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94691543"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933110"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Notas de la versión de la biblioteca de interfaz de usuario de Windows UI 2.x
 
@@ -38,7 +38,7 @@ https://github.com/Microsoft/Xaml-Controls-Gallery).
 
 Se incluyen artículos sobre procedimientos para los controles de la biblioteca de interfaz de usuario de Windows con la [documentación sobre controles de la Plataforma universal de Windows](/windows/uwp/design/controls-and-patterns/).
 
-Los documentos de referencia de API se encuentran aquí: [API de la biblioteca de interfaz de usuario de Windows](/uwp/api/overview/winui/).
+Los documentos de referencia de API se encuentran aquí: [API de la biblioteca de interfaz de usuario de Windows](/windows/winui/api/).
 
 ## <a name="version-history"></a>Historial de versiones
 

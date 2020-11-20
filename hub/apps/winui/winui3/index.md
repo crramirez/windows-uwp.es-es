@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 3 (noviembre de 2020)
 description: Introducción a WinUI 3, versión preliminar 3.
 ms.date: 11/17/2020
 ms.topic: article
-ms.openlocfilehash: f6c8b8730aeea12534c0e6595d220c837c0852dd
-ms.sourcegitcommit: 60638c0403ff67eadda994d82c5c851bc1271bc5
+ms.openlocfilehash: d91d957434b2a39182e2c764aecf49fc43f7a601
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810102"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933180"
 ---
 # <a name="windows-ui-library-3-preview-3-november-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 3 (noviembre de 2020)
 
@@ -70,7 +70,7 @@ Para obtener más información sobre cómo empezar a trabajar con las plantillas
 
 Además de las [limitaciones y los problemas conocidos](#preview-3-limitations-and-known-issues), compilar una aplicación con los proyectos WinUI es similar a compilar una aplicación para UWP con XAML y WinUI 2.x. Por lo tanto, se pueden aplicar la mayor parte de la [documentación sobre las instrucciones](/windows/uwp/design/) de las aplicaciones para UWP y los espacios de nombres de WinRT de **Windows.UI** de Windows SDK.
 
-En esta versión, también hemos agregado [documentación de referencia de API de WinUI 3](/uwp/api/overview/winui/) para todas las API de WinRT que se han trasladado a WinUI 3.
+En esta versión, también hemos agregado [documentación de referencia de API de WinUI 3](/windows/winui/api/) para todas las API de WinRT que se han trasladado a WinUI 3.
 
 Si ha creado un proyecto con WinUI 3, versión preliminar 2, puede actualizarlo para que use la versión preliminar 3. Consulte el [repositorio de GitHub sobre WinUI](https://aka.ms/winui3/upgrade-instructions) para las instrucciones detalladas.
 
