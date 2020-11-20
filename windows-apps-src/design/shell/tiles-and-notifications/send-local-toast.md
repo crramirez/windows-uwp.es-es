@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, procedimientos, Inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: 4142fb3d036bb19eb652ca9048a70325eb64b17d
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: 0a2e8c25aa7efcb96166b741a073122e3c077c08
+ms.sourcegitcommit: 2a23972e9a0807256954d6da5cf21d0bbe7afb0a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339813"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94941831"
 ---
 # <a name="send-a-local-toast-notification-from-uwp-apps"></a>Envío de una notificación del sistema local desde aplicaciones para UWP
 
@@ -23,7 +23,7 @@ Una notificación del sistema es un mensaje que una aplicación puede crear y en
 > [!IMPORTANT]
 > Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones de escritorio clásicas no empaquetadas) tienen diferentes pasos para enviar notificaciones y controlar la activación. Consulte la documentación de las [aplicaciones de escritorio](toast-desktop-apps.md) para obtener información sobre cómo implementar notificaciones del sistema.
 
-> **API importantes** : [clase ToastNotification](/uwp/api/Windows.UI.Notifications.ToastNotification), [clase ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
+> **API importantes**: [clase ToastNotification](/uwp/api/Windows.UI.Notifications.ToastNotification), [clase ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
 
 
@@ -62,7 +62,7 @@ var content = new ToastContentBuilder()
 var notif = new ToastNotification(content.GetXml());
 
 // And show it!
-ToastNotificationManager.CreateToastNotifier().Show();
+ToastNotificationManager.CreateToastNotifier().Show(notif);
 ```
 
 ## <a name="step-4-handling-activation"></a>Paso 4: control de la activación
@@ -89,7 +89,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 ```
 
 > [!IMPORTANT]
-> Debe inicializar el marco y activar la ventana del mismo modo que el código **onlaunched** . **No se llama a onlaunched si el usuario hace clic en la notificación del sistema** , incluso si la aplicación se cerró y se inicia por primera vez. A menudo se recomienda combinar **onlaunched** y **onactivated** en su propio `OnLaunchedOrActivated` método, ya que la misma inicialización debe realizarse en ambos.
+> Debe inicializar el marco y activar la ventana del mismo modo que el código **onlaunched** . **No se llama a onlaunched si el usuario hace clic en la notificación del sistema**, incluso si la aplicación se cerró y se inicia por primera vez. A menudo se recomienda combinar **onlaunched** y **onactivated** en su propio `OnLaunchedOrActivated` método, ya que la misma inicialización debe realizarse en ambos.
 
 
 ## <a name="activation-in-depth"></a>Activación en profundidad
