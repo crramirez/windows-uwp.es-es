@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 00717a64135ef32a99b06c61b31e2ff59a587878
-ms.sourcegitcommit: b66796c73f14da63794efa66c8ded2caa25da0f7
+ms.openlocfilehash: b73568c5fb4bae6392051fedcd6ca3dea078a98d
+ms.sourcegitcommit: 4491da3f509b1126601990a816c6eb301d35ecc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285456"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95416622"
 ---
 # <a name="guidelines-for-background-tasks"></a>Directrices para tareas en segundo plano
 
@@ -47,7 +47,7 @@ Como alternativa, solicita un solo aplazamiento y usa **async/await** para compl
 
 Si tiene varias tareas en segundo plano, considere si deben ejecutarse en el mismo proceso de host o separarse en procesos de host diferentes. Colóquelos en procesos de host independientes si le preocupa que un error en una tarea en segundo plano desactive otras tareas en segundo plano.  Use la entrada del **grupo de recursos** en el diseñador de manifiestos para agrupar las tareas en segundo plano en procesos de host diferentes. 
 
-Para establecer el **grupo de recursos**, abra el diseñador package. appxmanifest, elija **declaraciones**y agregue una declaración de **App Service** :
+Para establecer el **grupo de recursos**, abra el diseñador package. appxmanifest, elija **declaraciones** y agregue una declaración de **App Service** :
 
 ![Configuración del grupo de recursos](images/resourcegroup.png)
 
@@ -59,11 +59,11 @@ Las tareas en segundo plano que se ejecutan en el mismo proceso que la aplicaci�
 
 **Solicitar la ejecución de tareas en segundo plano:**
 
-> **Importante**    A partir de Windows 10, ya no es necesario que las aplicaciones estén en la pantalla de bloqueo como requisito previo para ejecutar tareas en segundo plano.
+> **Importante:**  a partir de Windows 10, ya no es necesario que las aplicaciones estén en la pantalla de bloqueo como un requisito previo para ejecutar tareas en segundo plano.
 
 Todas las aplicaciones para la Plataforma universal de Windows (UWP) pueden ejecutar tipos de tareas admitidos sin necesidad de que se anclen en la pantalla de bloqueo. Sin embargo, las aplicaciones deben llamar a [**GetAccessState**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) y comprobar que no se deniegue la ejecución de la aplicación en segundo plano. Asegúrese de que **GetAccessStatus** no devuelve una de las enumeraciones [**BackgroundAccessStatus**](/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) denegadas. Por ejemplo, este método devolverá **BackgroundAccessStatus. DeniedByUser** si el usuario ha denegado explícitamente permisos de tarea en segundo plano para la aplicación en la configuración del dispositivo.
 
-Si se deniega la ejecución de la aplicación en segundo plano, la aplicación debe llamar a [**RequestAccessAsync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) y asegurarse de que la respuesta no se deniega antes de registrar las tareas en segundo plano.
+Si se deniega la ejecución de la aplicación en segundo plano, la aplicación debe llamar a [**RequestAccessAsync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) y asegurarse de que la respuesta no se deniega antes de registrar las tareas en segundo plano.
 
 Para obtener más información sobre la elección del usuario alrededor de la actividad en segundo plano y el ahorro de batería, consulte [optimizar la actividad en segundo plano](../debug-test-perf/optimize-background-activity.md). 
 ## <a name="background-task-checklist"></a>Lista de comprobación de tareas en segundo plano
@@ -89,15 +89,23 @@ Para obtener más información sobre la elección del usuario alrededor de la ac
 *Se aplica solo a las tareas en segundo plano dentro de proceso.*
 
 - Al cancelar una tarea, asegúrate de que el controlador de eventos `BackgroundActivated` existe antes de que se produzca la cancelación o la finalización de todo el proceso.
--   Escribe tareas en segundo plano de corta duración. Las tareas en segundo plano se limitan a 30 segundos de uso.
--   No confíes en la interacción con el usuario en las tareas en segundo plano.
+-   Escribe tareas en segundo plano de corta duración. La mayoría de las tareas en segundo plano se limitan a 30 segundos de uso de reloj.
+
+
+*Cosas que hay que evitar*
+- Minimice el uso de la comunicación entre procesos a través de COM o RPC.
+-   Es posible que el proceso con el que intenta comunicarse no esté en un estado en ejecución, lo que puede dar lugar a un bloqueo.
+-   Se puede dedicar una cantidad considerable de tiempo a facilitar la comunicación entre procesos y contará con el tiempo asignado para ejecutar la tarea en segundo plano.
+- No confíes en la interacción con el usuario en las tareas en segundo plano.
+
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Cree y registre una tarea en segundo plano en proceso](create-and-register-an-inproc-background-task.md).
+* [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md)
 * [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-a-background-task.md)
+* [Crear y registrar una tarea en segundo plano COM de WinMain](create-and-register-a-winmain-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
-* [Reproducir elementos multimedia en segundo plano](../audio-video-camera/background-audio.md)
+* [Reproducir contenido multimedia en segundo plano](../audio-video-camera/background-audio.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
@@ -109,6 +117,6 @@ Para obtener más información sobre la elección del usuario alrededor de la ac
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones UWP (durante la depuración)](/previous-versions/hh974425(v=vs.110))
 
- 
+ 
 
- 
+ 
