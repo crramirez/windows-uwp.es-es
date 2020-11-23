@@ -4,12 +4,12 @@ description: Cómo instalar la biblioteca de interfaz de usuario de Windows.
 ms.topic: reference
 ms.date: 07/15/2020
 keywords: windows 10, uwp, sdk del kit de herramientas
-ms.openlocfilehash: 7b7b248ce166368d315dce42f27075d3933c0781
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: e3b0daae3f053daabe153f8a0058953ff76e3b90
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762849"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691573"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Introducción a la biblioteca de interfaz de usuario de Windows 2.x
 
@@ -18,7 +18,7 @@ ms.locfileid: "91762849"
 La biblioteca está disponibles como un paquete NuGet que se puede agregar a cualquier proyecto de Visual Studio nuevo o existente.
 
 > [!NOTE]
-> Para información sobre la prueba de versiones preliminares de WinUI 3, consulte [Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)](../winui3/index.md).
+> Para obtener información sobre la prueba de versiones preliminares anticipadas de WinUI 3, consulte [Biblioteca de interfaz de usuario de Windows 3, versión preliminar 3 (noviembre de 2020)](../winui3/index.md).
 
 ## <a name="download-and-install-the-windows-ui-library"></a>Descarga e instalación de la biblioteca de interfaz de usuario de Windows
 

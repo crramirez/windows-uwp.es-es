@@ -1,21 +1,21 @@
 ---
-description: Cuando quieres crear una nueva aplicación de escritorio, la primera decisión que tomas es si emplear Win32 API y COM API o .NET.
+description: Cuando quieres crear una nueva aplicación de escritorio de Windows, la primera decisión que tomas es si emplear las API Win32 y COM o .NET.
 ms.assetid: 82705644-F1F0-40F3-99B1-7A97BFB32831
-title: Elección de la plataforma de aplicaciones
+title: Elección de la plataforma de aplicaciones de Windows
 ms.topic: article
 ms.date: 11/04/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, desarrollo de escritorio
-ms.openlocfilehash: 46cf8a8e9a57384b85b3156b87697f898ff08ee8
-ms.sourcegitcommit: 37f570c7425a3fa953a0c375c19381bf9cf2b6a2
+ms.openlocfilehash: cdd21279e987f329024c53434e47777e427b95ab
+ms.sourcegitcommit: b69edc6d73370923f31df61c7e42b53de6c928ee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93191906"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870911"
 ---
-# <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
+# <a name="choose-your-windows-app-platform"></a>Elección de la plataforma de aplicaciones de Windows
 
 Cuando quieres crear una nueva aplicación de escritorio para equipos Windows, la primera decisión que debes tomar es la plataforma de aplicaciones que vas a usar. Windows ofrece cuatro plataformas de aplicaciones principales, cada una de ellas con ventajas diferentes:
 
